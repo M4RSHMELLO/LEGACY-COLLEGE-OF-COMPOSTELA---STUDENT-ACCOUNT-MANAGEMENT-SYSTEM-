@@ -37,7 +37,7 @@ Public Class frm_slists
 
             Case 1
                 _loadToCombobox(eSelect_SY, cbo_eSYName)
-                _loadToCombobox(eSelect_GL, cbo_eGradeLevel)
+                _loadToCombobox(eSelect_GL, cbo_eg)
                 cbo_eSearchBY.SelectedIndex = 1
                 txtb_eStudID.Clear()
                 txtb_eStudFname.Clear()

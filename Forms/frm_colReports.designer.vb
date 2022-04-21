@@ -28,6 +28,10 @@ Partial Class frm_colReports
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.BunifuFlatButton3 = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.BunifuFlatButton2 = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.BunifuFlatButton1 = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.btn_save = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.BunifuCustomDataGrid2 = New Bunifu.Framework.UI.BunifuCustomDataGrid()
@@ -35,10 +39,6 @@ Partial Class frm_colReports
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.BunifuThinButton22 = New Bunifu.Framework.UI.BunifuThinButton2()
-        Me.btn_save = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.BunifuFlatButton1 = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.BunifuFlatButton2 = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.BunifuFlatButton3 = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.BunifuCustomDataGrid1 = New Bunifu.Framework.UI.BunifuCustomDataGrid()
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -64,6 +64,158 @@ Partial Class frm_colReports
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1167, 87)
         Me.Panel1.TabIndex = 0
+        '
+        'BunifuFlatButton3
+        '
+        Me.BunifuFlatButton3.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
+        Me.BunifuFlatButton3.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.BunifuFlatButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BunifuFlatButton3.BorderRadius = 0
+        Me.BunifuFlatButton3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.BunifuFlatButton3.ButtonText = "Senior-High Dept"
+        Me.BunifuFlatButton3.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BunifuFlatButton3.DisabledColor = System.Drawing.Color.Gray
+        Me.BunifuFlatButton3.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!)
+        Me.BunifuFlatButton3.ForeColor = System.Drawing.Color.SeaGreen
+        Me.BunifuFlatButton3.Iconcolor = System.Drawing.Color.Transparent
+        Me.BunifuFlatButton3.Iconimage = Nothing
+        Me.BunifuFlatButton3.Iconimage_right = Nothing
+        Me.BunifuFlatButton3.Iconimage_right_Selected = Nothing
+        Me.BunifuFlatButton3.Iconimage_Selected = Nothing
+        Me.BunifuFlatButton3.IconMarginLeft = 0
+        Me.BunifuFlatButton3.IconMarginRight = 0
+        Me.BunifuFlatButton3.IconRightVisible = False
+        Me.BunifuFlatButton3.IconRightZoom = 0R
+        Me.BunifuFlatButton3.IconVisible = False
+        Me.BunifuFlatButton3.IconZoom = 90.0R
+        Me.BunifuFlatButton3.IsTab = False
+        Me.BunifuFlatButton3.Location = New System.Drawing.Point(885, 24)
+        Me.BunifuFlatButton3.Margin = New System.Windows.Forms.Padding(3, 8, 3, 8)
+        Me.BunifuFlatButton3.Name = "BunifuFlatButton3"
+        Me.BunifuFlatButton3.Normalcolor = System.Drawing.SystemColors.ButtonFace
+        Me.BunifuFlatButton3.OnHovercolor = System.Drawing.Color.Goldenrod
+        Me.BunifuFlatButton3.OnHoverTextColor = System.Drawing.Color.White
+        Me.BunifuFlatButton3.selected = False
+        Me.BunifuFlatButton3.Size = New System.Drawing.Size(158, 33)
+        Me.BunifuFlatButton3.TabIndex = 53
+        Me.BunifuFlatButton3.Text = "Senior-High Dept"
+        Me.BunifuFlatButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.BunifuFlatButton3.Textcolor = System.Drawing.Color.SeaGreen
+        Me.BunifuFlatButton3.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        '
+        'BunifuFlatButton2
+        '
+        Me.BunifuFlatButton2.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
+        Me.BunifuFlatButton2.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.BunifuFlatButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BunifuFlatButton2.BorderRadius = 0
+        Me.BunifuFlatButton2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.BunifuFlatButton2.ButtonText = "Junior-High Dept"
+        Me.BunifuFlatButton2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BunifuFlatButton2.DisabledColor = System.Drawing.Color.Gray
+        Me.BunifuFlatButton2.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!)
+        Me.BunifuFlatButton2.ForeColor = System.Drawing.Color.SeaGreen
+        Me.BunifuFlatButton2.Iconcolor = System.Drawing.Color.Transparent
+        Me.BunifuFlatButton2.Iconimage = Nothing
+        Me.BunifuFlatButton2.Iconimage_right = Nothing
+        Me.BunifuFlatButton2.Iconimage_right_Selected = Nothing
+        Me.BunifuFlatButton2.Iconimage_Selected = Nothing
+        Me.BunifuFlatButton2.IconMarginLeft = 0
+        Me.BunifuFlatButton2.IconMarginRight = 0
+        Me.BunifuFlatButton2.IconRightVisible = False
+        Me.BunifuFlatButton2.IconRightZoom = 0R
+        Me.BunifuFlatButton2.IconVisible = False
+        Me.BunifuFlatButton2.IconZoom = 90.0R
+        Me.BunifuFlatButton2.IsTab = False
+        Me.BunifuFlatButton2.Location = New System.Drawing.Point(720, 24)
+        Me.BunifuFlatButton2.Margin = New System.Windows.Forms.Padding(3, 8, 3, 8)
+        Me.BunifuFlatButton2.Name = "BunifuFlatButton2"
+        Me.BunifuFlatButton2.Normalcolor = System.Drawing.SystemColors.ButtonFace
+        Me.BunifuFlatButton2.OnHovercolor = System.Drawing.Color.Goldenrod
+        Me.BunifuFlatButton2.OnHoverTextColor = System.Drawing.Color.White
+        Me.BunifuFlatButton2.selected = False
+        Me.BunifuFlatButton2.Size = New System.Drawing.Size(158, 33)
+        Me.BunifuFlatButton2.TabIndex = 53
+        Me.BunifuFlatButton2.Text = "Junior-High Dept"
+        Me.BunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.BunifuFlatButton2.Textcolor = System.Drawing.Color.SeaGreen
+        Me.BunifuFlatButton2.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        '
+        'BunifuFlatButton1
+        '
+        Me.BunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
+        Me.BunifuFlatButton1.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.BunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BunifuFlatButton1.BorderRadius = 0
+        Me.BunifuFlatButton1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.BunifuFlatButton1.ButtonText = "Elementary Dept"
+        Me.BunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray
+        Me.BunifuFlatButton1.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!)
+        Me.BunifuFlatButton1.ForeColor = System.Drawing.Color.SeaGreen
+        Me.BunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent
+        Me.BunifuFlatButton1.Iconimage = Nothing
+        Me.BunifuFlatButton1.Iconimage_right = Nothing
+        Me.BunifuFlatButton1.Iconimage_right_Selected = Nothing
+        Me.BunifuFlatButton1.Iconimage_Selected = Nothing
+        Me.BunifuFlatButton1.IconMarginLeft = 0
+        Me.BunifuFlatButton1.IconMarginRight = 0
+        Me.BunifuFlatButton1.IconRightVisible = False
+        Me.BunifuFlatButton1.IconRightZoom = 0R
+        Me.BunifuFlatButton1.IconVisible = False
+        Me.BunifuFlatButton1.IconZoom = 90.0R
+        Me.BunifuFlatButton1.IsTab = False
+        Me.BunifuFlatButton1.Location = New System.Drawing.Point(552, 24)
+        Me.BunifuFlatButton1.Margin = New System.Windows.Forms.Padding(3, 8, 3, 8)
+        Me.BunifuFlatButton1.Name = "BunifuFlatButton1"
+        Me.BunifuFlatButton1.Normalcolor = System.Drawing.SystemColors.ButtonFace
+        Me.BunifuFlatButton1.OnHovercolor = System.Drawing.Color.Goldenrod
+        Me.BunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White
+        Me.BunifuFlatButton1.selected = False
+        Me.BunifuFlatButton1.Size = New System.Drawing.Size(158, 33)
+        Me.BunifuFlatButton1.TabIndex = 53
+        Me.BunifuFlatButton1.Text = "Elementary Dept"
+        Me.BunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.BunifuFlatButton1.Textcolor = System.Drawing.Color.SeaGreen
+        Me.BunifuFlatButton1.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        '
+        'btn_save
+        '
+        Me.btn_save.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
+        Me.btn_save.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.btn_save.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btn_save.BorderRadius = 0
+        Me.btn_save.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.btn_save.ButtonText = "College Dept"
+        Me.btn_save.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_save.DisabledColor = System.Drawing.Color.Gray
+        Me.btn_save.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!)
+        Me.btn_save.ForeColor = System.Drawing.Color.SeaGreen
+        Me.btn_save.Iconcolor = System.Drawing.Color.Transparent
+        Me.btn_save.Iconimage = Nothing
+        Me.btn_save.Iconimage_right = Nothing
+        Me.btn_save.Iconimage_right_Selected = Nothing
+        Me.btn_save.Iconimage_Selected = Nothing
+        Me.btn_save.IconMarginLeft = 0
+        Me.btn_save.IconMarginRight = 0
+        Me.btn_save.IconRightVisible = False
+        Me.btn_save.IconRightZoom = 0R
+        Me.btn_save.IconVisible = False
+        Me.btn_save.IconZoom = 90.0R
+        Me.btn_save.IsTab = False
+        Me.btn_save.Location = New System.Drawing.Point(384, 24)
+        Me.btn_save.Margin = New System.Windows.Forms.Padding(3, 8, 3, 8)
+        Me.btn_save.Name = "btn_save"
+        Me.btn_save.Normalcolor = System.Drawing.SystemColors.ButtonFace
+        Me.btn_save.OnHovercolor = System.Drawing.Color.Goldenrod
+        Me.btn_save.OnHoverTextColor = System.Drawing.Color.White
+        Me.btn_save.selected = False
+        Me.btn_save.Size = New System.Drawing.Size(158, 33)
+        Me.btn_save.TabIndex = 53
+        Me.btn_save.Text = "College Dept"
+        Me.btn_save.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btn_save.Textcolor = System.Drawing.Color.SeaGreen
+        Me.btn_save.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
         'Label8
         '
@@ -156,166 +308,6 @@ Partial Class frm_colReports
         Me.BunifuThinButton22.Size = New System.Drawing.Size(93, 73)
         Me.BunifuThinButton22.TabIndex = 9
         Me.BunifuThinButton22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'btn_save
-        '
-        Me.btn_save.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
-        Me.btn_save.Anchor = System.Windows.Forms.AnchorStyles.Right
-        Me.btn_save.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.btn_save.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btn_save.BorderRadius = 0
-        Me.btn_save.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.btn_save.ButtonText = "College Dept"
-        Me.btn_save.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_save.DisabledColor = System.Drawing.Color.Gray
-        Me.btn_save.Enabled = False
-        Me.btn_save.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!)
-        Me.btn_save.ForeColor = System.Drawing.Color.SeaGreen
-        Me.btn_save.Iconcolor = System.Drawing.Color.Transparent
-        Me.btn_save.Iconimage = Nothing
-        Me.btn_save.Iconimage_right = Nothing
-        Me.btn_save.Iconimage_right_Selected = Nothing
-        Me.btn_save.Iconimage_Selected = Nothing
-        Me.btn_save.IconMarginLeft = 0
-        Me.btn_save.IconMarginRight = 0
-        Me.btn_save.IconRightVisible = False
-        Me.btn_save.IconRightZoom = 0.0R
-        Me.btn_save.IconVisible = False
-        Me.btn_save.IconZoom = 90.0R
-        Me.btn_save.IsTab = False
-        Me.btn_save.Location = New System.Drawing.Point(384, 15)
-        Me.btn_save.Margin = New System.Windows.Forms.Padding(3, 8, 3, 8)
-        Me.btn_save.Name = "btn_save"
-        Me.btn_save.Normalcolor = System.Drawing.SystemColors.ButtonFace
-        Me.btn_save.OnHovercolor = System.Drawing.Color.Goldenrod
-        Me.btn_save.OnHoverTextColor = System.Drawing.Color.White
-        Me.btn_save.selected = False
-        Me.btn_save.Size = New System.Drawing.Size(158, 54)
-        Me.btn_save.TabIndex = 53
-        Me.btn_save.Text = "College Dept"
-        Me.btn_save.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.btn_save.Textcolor = System.Drawing.Color.SeaGreen
-        Me.btn_save.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        '
-        'BunifuFlatButton1
-        '
-        Me.BunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
-        Me.BunifuFlatButton1.Anchor = System.Windows.Forms.AnchorStyles.Right
-        Me.BunifuFlatButton1.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.BunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BunifuFlatButton1.BorderRadius = 0
-        Me.BunifuFlatButton1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.BunifuFlatButton1.ButtonText = "Elementary Dept"
-        Me.BunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray
-        Me.BunifuFlatButton1.Enabled = False
-        Me.BunifuFlatButton1.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!)
-        Me.BunifuFlatButton1.ForeColor = System.Drawing.Color.SeaGreen
-        Me.BunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent
-        Me.BunifuFlatButton1.Iconimage = Nothing
-        Me.BunifuFlatButton1.Iconimage_right = Nothing
-        Me.BunifuFlatButton1.Iconimage_right_Selected = Nothing
-        Me.BunifuFlatButton1.Iconimage_Selected = Nothing
-        Me.BunifuFlatButton1.IconMarginLeft = 0
-        Me.BunifuFlatButton1.IconMarginRight = 0
-        Me.BunifuFlatButton1.IconRightVisible = False
-        Me.BunifuFlatButton1.IconRightZoom = 0.0R
-        Me.BunifuFlatButton1.IconVisible = False
-        Me.BunifuFlatButton1.IconZoom = 90.0R
-        Me.BunifuFlatButton1.IsTab = False
-        Me.BunifuFlatButton1.Location = New System.Drawing.Point(552, 15)
-        Me.BunifuFlatButton1.Margin = New System.Windows.Forms.Padding(3, 8, 3, 8)
-        Me.BunifuFlatButton1.Name = "BunifuFlatButton1"
-        Me.BunifuFlatButton1.Normalcolor = System.Drawing.SystemColors.ButtonFace
-        Me.BunifuFlatButton1.OnHovercolor = System.Drawing.Color.Goldenrod
-        Me.BunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White
-        Me.BunifuFlatButton1.selected = False
-        Me.BunifuFlatButton1.Size = New System.Drawing.Size(158, 54)
-        Me.BunifuFlatButton1.TabIndex = 53
-        Me.BunifuFlatButton1.Text = "Elementary Dept"
-        Me.BunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.BunifuFlatButton1.Textcolor = System.Drawing.Color.SeaGreen
-        Me.BunifuFlatButton1.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        '
-        'BunifuFlatButton2
-        '
-        Me.BunifuFlatButton2.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
-        Me.BunifuFlatButton2.Anchor = System.Windows.Forms.AnchorStyles.Right
-        Me.BunifuFlatButton2.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.BunifuFlatButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BunifuFlatButton2.BorderRadius = 0
-        Me.BunifuFlatButton2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.BunifuFlatButton2.ButtonText = "Junior-High Dept"
-        Me.BunifuFlatButton2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BunifuFlatButton2.DisabledColor = System.Drawing.Color.Gray
-        Me.BunifuFlatButton2.Enabled = False
-        Me.BunifuFlatButton2.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!)
-        Me.BunifuFlatButton2.ForeColor = System.Drawing.Color.SeaGreen
-        Me.BunifuFlatButton2.Iconcolor = System.Drawing.Color.Transparent
-        Me.BunifuFlatButton2.Iconimage = Nothing
-        Me.BunifuFlatButton2.Iconimage_right = Nothing
-        Me.BunifuFlatButton2.Iconimage_right_Selected = Nothing
-        Me.BunifuFlatButton2.Iconimage_Selected = Nothing
-        Me.BunifuFlatButton2.IconMarginLeft = 0
-        Me.BunifuFlatButton2.IconMarginRight = 0
-        Me.BunifuFlatButton2.IconRightVisible = False
-        Me.BunifuFlatButton2.IconRightZoom = 0.0R
-        Me.BunifuFlatButton2.IconVisible = False
-        Me.BunifuFlatButton2.IconZoom = 90.0R
-        Me.BunifuFlatButton2.IsTab = False
-        Me.BunifuFlatButton2.Location = New System.Drawing.Point(720, 15)
-        Me.BunifuFlatButton2.Margin = New System.Windows.Forms.Padding(3, 8, 3, 8)
-        Me.BunifuFlatButton2.Name = "BunifuFlatButton2"
-        Me.BunifuFlatButton2.Normalcolor = System.Drawing.SystemColors.ButtonFace
-        Me.BunifuFlatButton2.OnHovercolor = System.Drawing.Color.Goldenrod
-        Me.BunifuFlatButton2.OnHoverTextColor = System.Drawing.Color.White
-        Me.BunifuFlatButton2.selected = False
-        Me.BunifuFlatButton2.Size = New System.Drawing.Size(158, 54)
-        Me.BunifuFlatButton2.TabIndex = 53
-        Me.BunifuFlatButton2.Text = "Junior-High Dept"
-        Me.BunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.BunifuFlatButton2.Textcolor = System.Drawing.Color.SeaGreen
-        Me.BunifuFlatButton2.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        '
-        'BunifuFlatButton3
-        '
-        Me.BunifuFlatButton3.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
-        Me.BunifuFlatButton3.Anchor = System.Windows.Forms.AnchorStyles.Right
-        Me.BunifuFlatButton3.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.BunifuFlatButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BunifuFlatButton3.BorderRadius = 0
-        Me.BunifuFlatButton3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.BunifuFlatButton3.ButtonText = "Senior-High Dept"
-        Me.BunifuFlatButton3.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BunifuFlatButton3.DisabledColor = System.Drawing.Color.Gray
-        Me.BunifuFlatButton3.Enabled = False
-        Me.BunifuFlatButton3.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!)
-        Me.BunifuFlatButton3.ForeColor = System.Drawing.Color.SeaGreen
-        Me.BunifuFlatButton3.Iconcolor = System.Drawing.Color.Transparent
-        Me.BunifuFlatButton3.Iconimage = Nothing
-        Me.BunifuFlatButton3.Iconimage_right = Nothing
-        Me.BunifuFlatButton3.Iconimage_right_Selected = Nothing
-        Me.BunifuFlatButton3.Iconimage_Selected = Nothing
-        Me.BunifuFlatButton3.IconMarginLeft = 0
-        Me.BunifuFlatButton3.IconMarginRight = 0
-        Me.BunifuFlatButton3.IconRightVisible = False
-        Me.BunifuFlatButton3.IconRightZoom = 0.0R
-        Me.BunifuFlatButton3.IconVisible = False
-        Me.BunifuFlatButton3.IconZoom = 90.0R
-        Me.BunifuFlatButton3.IsTab = False
-        Me.BunifuFlatButton3.Location = New System.Drawing.Point(885, 15)
-        Me.BunifuFlatButton3.Margin = New System.Windows.Forms.Padding(3, 8, 3, 8)
-        Me.BunifuFlatButton3.Name = "BunifuFlatButton3"
-        Me.BunifuFlatButton3.Normalcolor = System.Drawing.SystemColors.ButtonFace
-        Me.BunifuFlatButton3.OnHovercolor = System.Drawing.Color.Goldenrod
-        Me.BunifuFlatButton3.OnHoverTextColor = System.Drawing.Color.White
-        Me.BunifuFlatButton3.selected = False
-        Me.BunifuFlatButton3.Size = New System.Drawing.Size(158, 54)
-        Me.BunifuFlatButton3.TabIndex = 53
-        Me.BunifuFlatButton3.Text = "Senior-High Dept"
-        Me.BunifuFlatButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.BunifuFlatButton3.Textcolor = System.Drawing.Color.SeaGreen
-        Me.BunifuFlatButton3.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
         'BunifuCustomDataGrid1
         '
