@@ -41,8 +41,8 @@ Module lccsams
 
 
     ''#################################Elementary PUBLIC VARIABLE#################################################################################################
-    Public eSelect_SY As String = ""
-    Public eSelect_GL As String = ""
+    Public eSelect_SY As String = "select * from tbl_elem_sy"
+    Public eSelect_GL As String = "select * from tbl_elem_gradelevel"
     Public eSelect_studRec As String = "select * from tbl_elem_students order by estud_lname asc,estud_fname asc"
 
     Public eStud_id As String

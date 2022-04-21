@@ -36,6 +36,8 @@ Public Class frm_slists
                 cbo_SearchBy.SelectedIndex = 1
 
             Case 1
+                _loadToCombobox(eSelect_SY, cbo_eSYName)
+                _loadToCombobox(eSelect_GL, cbo_eGradeLevel)
                 cbo_eSearchBY.SelectedIndex = 1
                 txtb_eStudID.Clear()
                 txtb_eStudFname.Clear()
@@ -483,8 +485,8 @@ Public Class frm_slists
                 txtb_estudLname.Text = .Item("col_estud_lname", i).Value.ToString.ToUpper
                 txtb_estudMI.Text = .Item("col_estud_mi", i).Value.ToString.ToUpper
 
-                '_selectComboBoxText(querry, cbo_course)
-                '_selectComboBoxText(querry2, cbo_yearlevel)
+                _selectComboBoxText(querry, cbo_eSYName)
+                _selectComboBoxText(querry2, cbo_eGradeLevel)
 
             End With
 
