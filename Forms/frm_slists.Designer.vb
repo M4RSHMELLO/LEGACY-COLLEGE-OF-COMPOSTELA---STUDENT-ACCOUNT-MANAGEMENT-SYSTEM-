@@ -84,6 +84,12 @@ Partial Class frm_slists
         Me.RadioButton5 = New System.Windows.Forms.RadioButton()
         Me.RadioButton6 = New System.Windows.Forms.RadioButton()
         Me.dg_eStudRecords = New Bunifu.Framework.UI.BunifuCustomDataGrid()
+        Me.col_estud_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.col_estud_fname = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.col_estud_lname = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.col_estud_mi = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.col_esy_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.col_egl_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.btn_eCancel = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.btn_eViewAccount = New Bunifu.Framework.UI.BunifuFlatButton()
@@ -113,36 +119,30 @@ Partial Class frm_slists
         Me.BunifuFlatButton6 = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.RadioButton3 = New System.Windows.Forms.RadioButton()
         Me.RadioButton4 = New System.Windows.Forms.RadioButton()
-        Me.BunifuCustomDataGrid1 = New Bunifu.Framework.UI.BunifuCustomDataGrid()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dg_sStudRec = New Bunifu.Framework.UI.BunifuCustomDataGrid()
         Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.BunifuFlatButton1 = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.BunifuFlatButton2 = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.BunifuFlatButton3 = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.BunifuFlatButton4 = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.BunifuFlatButton5 = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.btn_sCancel = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.btn_sViewAccount = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.btn_sSave = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.btn_sUpdateStud = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.btn_sAddStud = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.cbo_sSY = New System.Windows.Forms.ComboBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.ComboBox4 = New System.Windows.Forms.ComboBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.cbo_sGL = New System.Windows.Forms.ComboBox()
+        Me.txtb_sFname = New System.Windows.Forms.TextBox()
+        Me.txtb_smi = New System.Windows.Forms.TextBox()
+        Me.txtb_sLname = New System.Windows.Forms.TextBox()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.txtb_sStud_id = New System.Windows.Forms.TextBox()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.Label22 = New System.Windows.Forms.Label()
         Me.Label24 = New System.Windows.Forms.Label()
         Me.Label25 = New System.Windows.Forms.Label()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.cbo_sSearchBy = New System.Windows.Forms.ComboBox()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtb_sSearch = New System.Windows.Forms.TextBox()
         Me.juniorHigh_dept = New System.Windows.Forms.TabPage()
         Me.Panel11 = New System.Windows.Forms.Panel()
         Me.Panel12 = New System.Windows.Forms.Panel()
@@ -179,12 +179,12 @@ Partial Class frm_slists
         Me.Label17 = New System.Windows.Forms.Label()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.col_estud_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.col_estud_fname = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.col_estud_lname = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.col_estud_mi = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.col_esy_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.col_egl_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.col_sStud_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.col_sStud_fname = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.col_sStud_lanme = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.col_sStud_mi = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.col_sSY = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.col_sGL = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TabControl1.SuspendLayout()
         Me.college_dept.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -201,7 +201,7 @@ Partial Class frm_slists
         Me.seniorHigh_dept.SuspendLayout()
         Me.Panel5.SuspendLayout()
         Me.Panel6.SuspendLayout()
-        CType(Me.BunifuCustomDataGrid1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dg_sStudRec, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel4.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.juniorHigh_dept.SuspendLayout()
@@ -1027,6 +1027,50 @@ Partial Class frm_slists
         Me.dg_eStudRecords.Size = New System.Drawing.Size(776, 561)
         Me.dg_eStudRecords.TabIndex = 47
         '
+        'col_estud_id
+        '
+        Me.col_estud_id.DataPropertyName = "estud_id"
+        Me.col_estud_id.HeaderText = "Stud. id"
+        Me.col_estud_id.Name = "col_estud_id"
+        Me.col_estud_id.ReadOnly = True
+        '
+        'col_estud_fname
+        '
+        Me.col_estud_fname.DataPropertyName = "estud_fname"
+        Me.col_estud_fname.HeaderText = "First Name"
+        Me.col_estud_fname.Name = "col_estud_fname"
+        Me.col_estud_fname.ReadOnly = True
+        '
+        'col_estud_lname
+        '
+        Me.col_estud_lname.DataPropertyName = "estud_Lname"
+        Me.col_estud_lname.HeaderText = "Last Name"
+        Me.col_estud_lname.Name = "col_estud_lname"
+        Me.col_estud_lname.ReadOnly = True
+        '
+        'col_estud_mi
+        '
+        Me.col_estud_mi.DataPropertyName = "estud_mi"
+        Me.col_estud_mi.HeaderText = "Middle Initial"
+        Me.col_estud_mi.Name = "col_estud_mi"
+        Me.col_estud_mi.ReadOnly = True
+        '
+        'col_esy_id
+        '
+        Me.col_esy_id.DataPropertyName = "esy_id"
+        Me.col_esy_id.HeaderText = "S/Y"
+        Me.col_esy_id.Name = "col_esy_id"
+        Me.col_esy_id.ReadOnly = True
+        Me.col_esy_id.Visible = False
+        '
+        'col_egl_id
+        '
+        Me.col_egl_id.DataPropertyName = "egl_id"
+        Me.col_egl_id.HeaderText = "GL"
+        Me.col_egl_id.Name = "col_egl_id"
+        Me.col_egl_id.ReadOnly = True
+        Me.col_egl_id.Visible = False
+        '
         'Panel7
         '
         Me.Panel7.Controls.Add(Me.btn_eCancel)
@@ -1434,7 +1478,7 @@ Partial Class frm_slists
         'Panel5
         '
         Me.Panel5.Controls.Add(Me.Panel6)
-        Me.Panel5.Controls.Add(Me.BunifuCustomDataGrid1)
+        Me.Panel5.Controls.Add(Me.dg_sStudRec)
         Me.Panel5.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel5.Location = New System.Drawing.Point(370, 70)
         Me.Panel5.Margin = New System.Windows.Forms.Padding(3, 3, 10, 3)
@@ -1516,16 +1560,16 @@ Partial Class frm_slists
         Me.RadioButton4.Text = "INACTIVE STUDENTS"
         Me.RadioButton4.UseVisualStyleBackColor = True
         '
-        'BunifuCustomDataGrid1
+        'dg_sStudRec
         '
-        Me.BunifuCustomDataGrid1.AllowUserToAddRows = False
-        Me.BunifuCustomDataGrid1.AllowUserToDeleteRows = False
+        Me.dg_sStudRec.AllowUserToAddRows = False
+        Me.dg_sStudRec.AllowUserToDeleteRows = False
         DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.BunifuCustomDataGrid1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle5
-        Me.BunifuCustomDataGrid1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.BunifuCustomDataGrid1.BackgroundColor = System.Drawing.Color.Gainsboro
-        Me.BunifuCustomDataGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.BunifuCustomDataGrid1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.dg_sStudRec.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle5
+        Me.dg_sStudRec.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dg_sStudRec.BackgroundColor = System.Drawing.Color.Gainsboro
+        Me.dg_sStudRec.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.dg_sStudRec.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle6.BackColor = System.Drawing.Color.SeaGreen
         DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -1533,82 +1577,38 @@ Partial Class frm_slists
         DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.BunifuCustomDataGrid1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle6
-        Me.BunifuCustomDataGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.BunifuCustomDataGrid1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6})
-        Me.BunifuCustomDataGrid1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.BunifuCustomDataGrid1.DoubleBuffered = True
-        Me.BunifuCustomDataGrid1.EnableHeadersVisualStyles = False
-        Me.BunifuCustomDataGrid1.HeaderBgColor = System.Drawing.Color.SeaGreen
-        Me.BunifuCustomDataGrid1.HeaderForeColor = System.Drawing.Color.White
-        Me.BunifuCustomDataGrid1.Location = New System.Drawing.Point(0, 0)
-        Me.BunifuCustomDataGrid1.Name = "BunifuCustomDataGrid1"
-        Me.BunifuCustomDataGrid1.ReadOnly = True
-        Me.BunifuCustomDataGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        Me.BunifuCustomDataGrid1.RowHeadersVisible = False
-        Me.BunifuCustomDataGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.BunifuCustomDataGrid1.Size = New System.Drawing.Size(776, 561)
-        Me.BunifuCustomDataGrid1.TabIndex = 47
-        '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "estud_id"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "Stud. id"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        Me.DataGridViewTextBoxColumn1.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "estud_fname"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "First Name"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        Me.DataGridViewTextBoxColumn2.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "estud_Lname"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "Last Name"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        Me.DataGridViewTextBoxColumn3.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn4
-        '
-        Me.DataGridViewTextBoxColumn4.DataPropertyName = "estud_mi"
-        Me.DataGridViewTextBoxColumn4.HeaderText = "Middle Initial"
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        Me.DataGridViewTextBoxColumn4.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn5
-        '
-        Me.DataGridViewTextBoxColumn5.DataPropertyName = "esy_id"
-        Me.DataGridViewTextBoxColumn5.HeaderText = "S/Y"
-        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
-        Me.DataGridViewTextBoxColumn5.ReadOnly = True
-        Me.DataGridViewTextBoxColumn5.Visible = False
-        '
-        'DataGridViewTextBoxColumn6
-        '
-        Me.DataGridViewTextBoxColumn6.DataPropertyName = "egl_id"
-        Me.DataGridViewTextBoxColumn6.HeaderText = "YL"
-        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
-        Me.DataGridViewTextBoxColumn6.ReadOnly = True
-        Me.DataGridViewTextBoxColumn6.Visible = False
+        Me.dg_sStudRec.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle6
+        Me.dg_sStudRec.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dg_sStudRec.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.col_sStud_id, Me.col_sStud_fname, Me.col_sStud_lanme, Me.col_sStud_mi, Me.col_sSY, Me.col_sGL})
+        Me.dg_sStudRec.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dg_sStudRec.DoubleBuffered = True
+        Me.dg_sStudRec.EnableHeadersVisualStyles = False
+        Me.dg_sStudRec.HeaderBgColor = System.Drawing.Color.SeaGreen
+        Me.dg_sStudRec.HeaderForeColor = System.Drawing.Color.White
+        Me.dg_sStudRec.Location = New System.Drawing.Point(0, 0)
+        Me.dg_sStudRec.Name = "dg_sStudRec"
+        Me.dg_sStudRec.ReadOnly = True
+        Me.dg_sStudRec.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.dg_sStudRec.RowHeadersVisible = False
+        Me.dg_sStudRec.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dg_sStudRec.Size = New System.Drawing.Size(776, 561)
+        Me.dg_sStudRec.TabIndex = 47
         '
         'Panel4
         '
-        Me.Panel4.Controls.Add(Me.BunifuFlatButton1)
-        Me.Panel4.Controls.Add(Me.BunifuFlatButton2)
-        Me.Panel4.Controls.Add(Me.BunifuFlatButton3)
-        Me.Panel4.Controls.Add(Me.BunifuFlatButton4)
-        Me.Panel4.Controls.Add(Me.BunifuFlatButton5)
-        Me.Panel4.Controls.Add(Me.ComboBox1)
+        Me.Panel4.Controls.Add(Me.btn_sCancel)
+        Me.Panel4.Controls.Add(Me.btn_sViewAccount)
+        Me.Panel4.Controls.Add(Me.btn_sSave)
+        Me.Panel4.Controls.Add(Me.btn_sUpdateStud)
+        Me.Panel4.Controls.Add(Me.btn_sAddStud)
+        Me.Panel4.Controls.Add(Me.cbo_sSY)
         Me.Panel4.Controls.Add(Me.Label7)
-        Me.Panel4.Controls.Add(Me.ComboBox4)
-        Me.Panel4.Controls.Add(Me.TextBox1)
-        Me.Panel4.Controls.Add(Me.TextBox4)
-        Me.Panel4.Controls.Add(Me.TextBox5)
+        Me.Panel4.Controls.Add(Me.cbo_sGL)
+        Me.Panel4.Controls.Add(Me.txtb_sFname)
+        Me.Panel4.Controls.Add(Me.txtb_smi)
+        Me.Panel4.Controls.Add(Me.txtb_sLname)
         Me.Panel4.Controls.Add(Me.Label14)
-        Me.Panel4.Controls.Add(Me.TextBox6)
+        Me.Panel4.Controls.Add(Me.txtb_sStud_id)
         Me.Panel4.Controls.Add(Me.Label19)
         Me.Panel4.Controls.Add(Me.Label22)
         Me.Panel4.Controls.Add(Me.Label24)
@@ -1620,212 +1620,212 @@ Partial Class frm_slists
         Me.Panel4.Size = New System.Drawing.Size(370, 561)
         Me.Panel4.TabIndex = 49
         '
-        'BunifuFlatButton1
+        'btn_sCancel
         '
-        Me.BunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
-        Me.BunifuFlatButton1.Anchor = System.Windows.Forms.AnchorStyles.Right
-        Me.BunifuFlatButton1.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.BunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BunifuFlatButton1.BorderRadius = 0
-        Me.BunifuFlatButton1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.BunifuFlatButton1.ButtonText = "CANCEL"
-        Me.BunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray
-        Me.BunifuFlatButton1.Enabled = False
-        Me.BunifuFlatButton1.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!)
-        Me.BunifuFlatButton1.ForeColor = System.Drawing.Color.SeaGreen
-        Me.BunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent
-        Me.BunifuFlatButton1.Iconimage = Nothing
-        Me.BunifuFlatButton1.Iconimage_right = Nothing
-        Me.BunifuFlatButton1.Iconimage_right_Selected = Nothing
-        Me.BunifuFlatButton1.Iconimage_Selected = Nothing
-        Me.BunifuFlatButton1.IconMarginLeft = 0
-        Me.BunifuFlatButton1.IconMarginRight = 0
-        Me.BunifuFlatButton1.IconRightVisible = False
-        Me.BunifuFlatButton1.IconRightZoom = 0R
-        Me.BunifuFlatButton1.IconVisible = False
-        Me.BunifuFlatButton1.IconZoom = 90.0R
-        Me.BunifuFlatButton1.IsTab = False
-        Me.BunifuFlatButton1.Location = New System.Drawing.Point(43, 457)
-        Me.BunifuFlatButton1.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
-        Me.BunifuFlatButton1.Name = "BunifuFlatButton1"
-        Me.BunifuFlatButton1.Normalcolor = System.Drawing.SystemColors.ButtonFace
-        Me.BunifuFlatButton1.OnHovercolor = System.Drawing.Color.Goldenrod
-        Me.BunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White
-        Me.BunifuFlatButton1.selected = False
-        Me.BunifuFlatButton1.Size = New System.Drawing.Size(136, 35)
-        Me.BunifuFlatButton1.TabIndex = 54
-        Me.BunifuFlatButton1.Text = "CANCEL"
-        Me.BunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.BunifuFlatButton1.Textcolor = System.Drawing.Color.SeaGreen
-        Me.BunifuFlatButton1.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_sCancel.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
+        Me.btn_sCancel.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.btn_sCancel.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.btn_sCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btn_sCancel.BorderRadius = 0
+        Me.btn_sCancel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.btn_sCancel.ButtonText = "CANCEL"
+        Me.btn_sCancel.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_sCancel.DisabledColor = System.Drawing.Color.Gray
+        Me.btn_sCancel.Enabled = False
+        Me.btn_sCancel.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!)
+        Me.btn_sCancel.ForeColor = System.Drawing.Color.SeaGreen
+        Me.btn_sCancel.Iconcolor = System.Drawing.Color.Transparent
+        Me.btn_sCancel.Iconimage = Nothing
+        Me.btn_sCancel.Iconimage_right = Nothing
+        Me.btn_sCancel.Iconimage_right_Selected = Nothing
+        Me.btn_sCancel.Iconimage_Selected = Nothing
+        Me.btn_sCancel.IconMarginLeft = 0
+        Me.btn_sCancel.IconMarginRight = 0
+        Me.btn_sCancel.IconRightVisible = False
+        Me.btn_sCancel.IconRightZoom = 0R
+        Me.btn_sCancel.IconVisible = False
+        Me.btn_sCancel.IconZoom = 90.0R
+        Me.btn_sCancel.IsTab = False
+        Me.btn_sCancel.Location = New System.Drawing.Point(43, 457)
+        Me.btn_sCancel.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
+        Me.btn_sCancel.Name = "btn_sCancel"
+        Me.btn_sCancel.Normalcolor = System.Drawing.SystemColors.ButtonFace
+        Me.btn_sCancel.OnHovercolor = System.Drawing.Color.Goldenrod
+        Me.btn_sCancel.OnHoverTextColor = System.Drawing.Color.White
+        Me.btn_sCancel.selected = False
+        Me.btn_sCancel.Size = New System.Drawing.Size(136, 35)
+        Me.btn_sCancel.TabIndex = 54
+        Me.btn_sCancel.Text = "CANCEL"
+        Me.btn_sCancel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btn_sCancel.Textcolor = System.Drawing.Color.SeaGreen
+        Me.btn_sCancel.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
-        'BunifuFlatButton2
+        'btn_sViewAccount
         '
-        Me.BunifuFlatButton2.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
-        Me.BunifuFlatButton2.Anchor = System.Windows.Forms.AnchorStyles.Right
-        Me.BunifuFlatButton2.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.BunifuFlatButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BunifuFlatButton2.BorderRadius = 0
-        Me.BunifuFlatButton2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.BunifuFlatButton2.ButtonText = "VIEW ACCOUNT"
-        Me.BunifuFlatButton2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BunifuFlatButton2.DisabledColor = System.Drawing.Color.Gray
-        Me.BunifuFlatButton2.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!)
-        Me.BunifuFlatButton2.ForeColor = System.Drawing.Color.SeaGreen
-        Me.BunifuFlatButton2.Iconcolor = System.Drawing.Color.Transparent
-        Me.BunifuFlatButton2.Iconimage = Nothing
-        Me.BunifuFlatButton2.Iconimage_right = Nothing
-        Me.BunifuFlatButton2.Iconimage_right_Selected = Nothing
-        Me.BunifuFlatButton2.Iconimage_Selected = Nothing
-        Me.BunifuFlatButton2.IconMarginLeft = 0
-        Me.BunifuFlatButton2.IconMarginRight = 0
-        Me.BunifuFlatButton2.IconRightVisible = False
-        Me.BunifuFlatButton2.IconRightZoom = 0R
-        Me.BunifuFlatButton2.IconVisible = False
-        Me.BunifuFlatButton2.IconZoom = 90.0R
-        Me.BunifuFlatButton2.IsTab = False
-        Me.BunifuFlatButton2.Location = New System.Drawing.Point(43, 350)
-        Me.BunifuFlatButton2.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
-        Me.BunifuFlatButton2.Name = "BunifuFlatButton2"
-        Me.BunifuFlatButton2.Normalcolor = System.Drawing.SystemColors.ButtonFace
-        Me.BunifuFlatButton2.OnHovercolor = System.Drawing.Color.Goldenrod
-        Me.BunifuFlatButton2.OnHoverTextColor = System.Drawing.Color.White
-        Me.BunifuFlatButton2.selected = False
-        Me.BunifuFlatButton2.Size = New System.Drawing.Size(283, 35)
-        Me.BunifuFlatButton2.TabIndex = 53
-        Me.BunifuFlatButton2.Text = "VIEW ACCOUNT"
-        Me.BunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.BunifuFlatButton2.Textcolor = System.Drawing.Color.SeaGreen
-        Me.BunifuFlatButton2.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_sViewAccount.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
+        Me.btn_sViewAccount.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.btn_sViewAccount.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.btn_sViewAccount.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btn_sViewAccount.BorderRadius = 0
+        Me.btn_sViewAccount.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.btn_sViewAccount.ButtonText = "VIEW ACCOUNT"
+        Me.btn_sViewAccount.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_sViewAccount.DisabledColor = System.Drawing.Color.Gray
+        Me.btn_sViewAccount.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!)
+        Me.btn_sViewAccount.ForeColor = System.Drawing.Color.SeaGreen
+        Me.btn_sViewAccount.Iconcolor = System.Drawing.Color.Transparent
+        Me.btn_sViewAccount.Iconimage = Nothing
+        Me.btn_sViewAccount.Iconimage_right = Nothing
+        Me.btn_sViewAccount.Iconimage_right_Selected = Nothing
+        Me.btn_sViewAccount.Iconimage_Selected = Nothing
+        Me.btn_sViewAccount.IconMarginLeft = 0
+        Me.btn_sViewAccount.IconMarginRight = 0
+        Me.btn_sViewAccount.IconRightVisible = False
+        Me.btn_sViewAccount.IconRightZoom = 0R
+        Me.btn_sViewAccount.IconVisible = False
+        Me.btn_sViewAccount.IconZoom = 90.0R
+        Me.btn_sViewAccount.IsTab = False
+        Me.btn_sViewAccount.Location = New System.Drawing.Point(43, 350)
+        Me.btn_sViewAccount.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
+        Me.btn_sViewAccount.Name = "btn_sViewAccount"
+        Me.btn_sViewAccount.Normalcolor = System.Drawing.SystemColors.ButtonFace
+        Me.btn_sViewAccount.OnHovercolor = System.Drawing.Color.Goldenrod
+        Me.btn_sViewAccount.OnHoverTextColor = System.Drawing.Color.White
+        Me.btn_sViewAccount.selected = False
+        Me.btn_sViewAccount.Size = New System.Drawing.Size(283, 35)
+        Me.btn_sViewAccount.TabIndex = 53
+        Me.btn_sViewAccount.Text = "VIEW ACCOUNT"
+        Me.btn_sViewAccount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btn_sViewAccount.Textcolor = System.Drawing.Color.SeaGreen
+        Me.btn_sViewAccount.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
-        'BunifuFlatButton3
+        'btn_sSave
         '
-        Me.BunifuFlatButton3.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
-        Me.BunifuFlatButton3.Anchor = System.Windows.Forms.AnchorStyles.Right
-        Me.BunifuFlatButton3.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.BunifuFlatButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BunifuFlatButton3.BorderRadius = 0
-        Me.BunifuFlatButton3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.BunifuFlatButton3.ButtonText = "SAVE"
-        Me.BunifuFlatButton3.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BunifuFlatButton3.DisabledColor = System.Drawing.Color.Gray
-        Me.BunifuFlatButton3.Enabled = False
-        Me.BunifuFlatButton3.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!)
-        Me.BunifuFlatButton3.ForeColor = System.Drawing.Color.SeaGreen
-        Me.BunifuFlatButton3.Iconcolor = System.Drawing.Color.Transparent
-        Me.BunifuFlatButton3.Iconimage = Nothing
-        Me.BunifuFlatButton3.Iconimage_right = Nothing
-        Me.BunifuFlatButton3.Iconimage_right_Selected = Nothing
-        Me.BunifuFlatButton3.Iconimage_Selected = Nothing
-        Me.BunifuFlatButton3.IconMarginLeft = 0
-        Me.BunifuFlatButton3.IconMarginRight = 0
-        Me.BunifuFlatButton3.IconRightVisible = False
-        Me.BunifuFlatButton3.IconRightZoom = 0R
-        Me.BunifuFlatButton3.IconVisible = False
-        Me.BunifuFlatButton3.IconZoom = 90.0R
-        Me.BunifuFlatButton3.IsTab = False
-        Me.BunifuFlatButton3.Location = New System.Drawing.Point(191, 457)
-        Me.BunifuFlatButton3.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
-        Me.BunifuFlatButton3.Name = "BunifuFlatButton3"
-        Me.BunifuFlatButton3.Normalcolor = System.Drawing.SystemColors.ButtonFace
-        Me.BunifuFlatButton3.OnHovercolor = System.Drawing.Color.Goldenrod
-        Me.BunifuFlatButton3.OnHoverTextColor = System.Drawing.Color.White
-        Me.BunifuFlatButton3.selected = False
-        Me.BunifuFlatButton3.Size = New System.Drawing.Size(136, 35)
-        Me.BunifuFlatButton3.TabIndex = 52
-        Me.BunifuFlatButton3.Text = "SAVE"
-        Me.BunifuFlatButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.BunifuFlatButton3.Textcolor = System.Drawing.Color.SeaGreen
-        Me.BunifuFlatButton3.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_sSave.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
+        Me.btn_sSave.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.btn_sSave.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.btn_sSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btn_sSave.BorderRadius = 0
+        Me.btn_sSave.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.btn_sSave.ButtonText = "SAVE"
+        Me.btn_sSave.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_sSave.DisabledColor = System.Drawing.Color.Gray
+        Me.btn_sSave.Enabled = False
+        Me.btn_sSave.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!)
+        Me.btn_sSave.ForeColor = System.Drawing.Color.SeaGreen
+        Me.btn_sSave.Iconcolor = System.Drawing.Color.Transparent
+        Me.btn_sSave.Iconimage = Nothing
+        Me.btn_sSave.Iconimage_right = Nothing
+        Me.btn_sSave.Iconimage_right_Selected = Nothing
+        Me.btn_sSave.Iconimage_Selected = Nothing
+        Me.btn_sSave.IconMarginLeft = 0
+        Me.btn_sSave.IconMarginRight = 0
+        Me.btn_sSave.IconRightVisible = False
+        Me.btn_sSave.IconRightZoom = 0R
+        Me.btn_sSave.IconVisible = False
+        Me.btn_sSave.IconZoom = 90.0R
+        Me.btn_sSave.IsTab = False
+        Me.btn_sSave.Location = New System.Drawing.Point(191, 457)
+        Me.btn_sSave.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
+        Me.btn_sSave.Name = "btn_sSave"
+        Me.btn_sSave.Normalcolor = System.Drawing.SystemColors.ButtonFace
+        Me.btn_sSave.OnHovercolor = System.Drawing.Color.Goldenrod
+        Me.btn_sSave.OnHoverTextColor = System.Drawing.Color.White
+        Me.btn_sSave.selected = False
+        Me.btn_sSave.Size = New System.Drawing.Size(136, 35)
+        Me.btn_sSave.TabIndex = 52
+        Me.btn_sSave.Text = "SAVE"
+        Me.btn_sSave.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btn_sSave.Textcolor = System.Drawing.Color.SeaGreen
+        Me.btn_sSave.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
-        'BunifuFlatButton4
+        'btn_sUpdateStud
         '
-        Me.BunifuFlatButton4.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
-        Me.BunifuFlatButton4.Anchor = System.Windows.Forms.AnchorStyles.Right
-        Me.BunifuFlatButton4.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.BunifuFlatButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BunifuFlatButton4.BorderRadius = 0
-        Me.BunifuFlatButton4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.BunifuFlatButton4.ButtonText = "UPDATE STUDENT"
-        Me.BunifuFlatButton4.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BunifuFlatButton4.DisabledColor = System.Drawing.Color.Gray
-        Me.BunifuFlatButton4.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!)
-        Me.BunifuFlatButton4.ForeColor = System.Drawing.Color.SeaGreen
-        Me.BunifuFlatButton4.Iconcolor = System.Drawing.Color.Transparent
-        Me.BunifuFlatButton4.Iconimage = Nothing
-        Me.BunifuFlatButton4.Iconimage_right = Nothing
-        Me.BunifuFlatButton4.Iconimage_right_Selected = Nothing
-        Me.BunifuFlatButton4.Iconimage_Selected = Nothing
-        Me.BunifuFlatButton4.IconMarginLeft = 0
-        Me.BunifuFlatButton4.IconMarginRight = 0
-        Me.BunifuFlatButton4.IconRightVisible = False
-        Me.BunifuFlatButton4.IconRightZoom = 0R
-        Me.BunifuFlatButton4.IconVisible = False
-        Me.BunifuFlatButton4.IconZoom = 90.0R
-        Me.BunifuFlatButton4.IsTab = False
-        Me.BunifuFlatButton4.Location = New System.Drawing.Point(191, 401)
-        Me.BunifuFlatButton4.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
-        Me.BunifuFlatButton4.Name = "BunifuFlatButton4"
-        Me.BunifuFlatButton4.Normalcolor = System.Drawing.SystemColors.ButtonFace
-        Me.BunifuFlatButton4.OnHovercolor = System.Drawing.Color.Goldenrod
-        Me.BunifuFlatButton4.OnHoverTextColor = System.Drawing.Color.White
-        Me.BunifuFlatButton4.selected = False
-        Me.BunifuFlatButton4.Size = New System.Drawing.Size(136, 35)
-        Me.BunifuFlatButton4.TabIndex = 51
-        Me.BunifuFlatButton4.Text = "UPDATE STUDENT"
-        Me.BunifuFlatButton4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.BunifuFlatButton4.Textcolor = System.Drawing.Color.SeaGreen
-        Me.BunifuFlatButton4.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_sUpdateStud.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
+        Me.btn_sUpdateStud.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.btn_sUpdateStud.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.btn_sUpdateStud.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btn_sUpdateStud.BorderRadius = 0
+        Me.btn_sUpdateStud.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.btn_sUpdateStud.ButtonText = "UPDATE STUDENT"
+        Me.btn_sUpdateStud.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_sUpdateStud.DisabledColor = System.Drawing.Color.Gray
+        Me.btn_sUpdateStud.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!)
+        Me.btn_sUpdateStud.ForeColor = System.Drawing.Color.SeaGreen
+        Me.btn_sUpdateStud.Iconcolor = System.Drawing.Color.Transparent
+        Me.btn_sUpdateStud.Iconimage = Nothing
+        Me.btn_sUpdateStud.Iconimage_right = Nothing
+        Me.btn_sUpdateStud.Iconimage_right_Selected = Nothing
+        Me.btn_sUpdateStud.Iconimage_Selected = Nothing
+        Me.btn_sUpdateStud.IconMarginLeft = 0
+        Me.btn_sUpdateStud.IconMarginRight = 0
+        Me.btn_sUpdateStud.IconRightVisible = False
+        Me.btn_sUpdateStud.IconRightZoom = 0R
+        Me.btn_sUpdateStud.IconVisible = False
+        Me.btn_sUpdateStud.IconZoom = 90.0R
+        Me.btn_sUpdateStud.IsTab = False
+        Me.btn_sUpdateStud.Location = New System.Drawing.Point(191, 401)
+        Me.btn_sUpdateStud.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
+        Me.btn_sUpdateStud.Name = "btn_sUpdateStud"
+        Me.btn_sUpdateStud.Normalcolor = System.Drawing.SystemColors.ButtonFace
+        Me.btn_sUpdateStud.OnHovercolor = System.Drawing.Color.Goldenrod
+        Me.btn_sUpdateStud.OnHoverTextColor = System.Drawing.Color.White
+        Me.btn_sUpdateStud.selected = False
+        Me.btn_sUpdateStud.Size = New System.Drawing.Size(136, 35)
+        Me.btn_sUpdateStud.TabIndex = 51
+        Me.btn_sUpdateStud.Text = "UPDATE STUDENT"
+        Me.btn_sUpdateStud.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btn_sUpdateStud.Textcolor = System.Drawing.Color.SeaGreen
+        Me.btn_sUpdateStud.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
-        'BunifuFlatButton5
+        'btn_sAddStud
         '
-        Me.BunifuFlatButton5.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
-        Me.BunifuFlatButton5.Anchor = System.Windows.Forms.AnchorStyles.Right
-        Me.BunifuFlatButton5.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.BunifuFlatButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BunifuFlatButton5.BorderRadius = 0
-        Me.BunifuFlatButton5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.BunifuFlatButton5.ButtonText = "ADD NEW STUDENT"
-        Me.BunifuFlatButton5.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BunifuFlatButton5.DisabledColor = System.Drawing.Color.Gray
-        Me.BunifuFlatButton5.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!)
-        Me.BunifuFlatButton5.ForeColor = System.Drawing.Color.SeaGreen
-        Me.BunifuFlatButton5.Iconcolor = System.Drawing.Color.Transparent
-        Me.BunifuFlatButton5.Iconimage = Nothing
-        Me.BunifuFlatButton5.Iconimage_right = Nothing
-        Me.BunifuFlatButton5.Iconimage_right_Selected = Nothing
-        Me.BunifuFlatButton5.Iconimage_Selected = Nothing
-        Me.BunifuFlatButton5.IconMarginLeft = 0
-        Me.BunifuFlatButton5.IconMarginRight = 0
-        Me.BunifuFlatButton5.IconRightVisible = False
-        Me.BunifuFlatButton5.IconRightZoom = 0R
-        Me.BunifuFlatButton5.IconVisible = False
-        Me.BunifuFlatButton5.IconZoom = 90.0R
-        Me.BunifuFlatButton5.IsTab = False
-        Me.BunifuFlatButton5.Location = New System.Drawing.Point(44, 401)
-        Me.BunifuFlatButton5.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
-        Me.BunifuFlatButton5.Name = "BunifuFlatButton5"
-        Me.BunifuFlatButton5.Normalcolor = System.Drawing.SystemColors.ButtonFace
-        Me.BunifuFlatButton5.OnHovercolor = System.Drawing.Color.Goldenrod
-        Me.BunifuFlatButton5.OnHoverTextColor = System.Drawing.Color.White
-        Me.BunifuFlatButton5.selected = False
-        Me.BunifuFlatButton5.Size = New System.Drawing.Size(136, 35)
-        Me.BunifuFlatButton5.TabIndex = 49
-        Me.BunifuFlatButton5.Text = "ADD NEW STUDENT"
-        Me.BunifuFlatButton5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.BunifuFlatButton5.Textcolor = System.Drawing.Color.SeaGreen
-        Me.BunifuFlatButton5.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_sAddStud.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
+        Me.btn_sAddStud.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.btn_sAddStud.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.btn_sAddStud.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btn_sAddStud.BorderRadius = 0
+        Me.btn_sAddStud.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.btn_sAddStud.ButtonText = "ADD NEW STUDENT"
+        Me.btn_sAddStud.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_sAddStud.DisabledColor = System.Drawing.Color.Gray
+        Me.btn_sAddStud.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!)
+        Me.btn_sAddStud.ForeColor = System.Drawing.Color.SeaGreen
+        Me.btn_sAddStud.Iconcolor = System.Drawing.Color.Transparent
+        Me.btn_sAddStud.Iconimage = Nothing
+        Me.btn_sAddStud.Iconimage_right = Nothing
+        Me.btn_sAddStud.Iconimage_right_Selected = Nothing
+        Me.btn_sAddStud.Iconimage_Selected = Nothing
+        Me.btn_sAddStud.IconMarginLeft = 0
+        Me.btn_sAddStud.IconMarginRight = 0
+        Me.btn_sAddStud.IconRightVisible = False
+        Me.btn_sAddStud.IconRightZoom = 0R
+        Me.btn_sAddStud.IconVisible = False
+        Me.btn_sAddStud.IconZoom = 90.0R
+        Me.btn_sAddStud.IsTab = False
+        Me.btn_sAddStud.Location = New System.Drawing.Point(44, 401)
+        Me.btn_sAddStud.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
+        Me.btn_sAddStud.Name = "btn_sAddStud"
+        Me.btn_sAddStud.Normalcolor = System.Drawing.SystemColors.ButtonFace
+        Me.btn_sAddStud.OnHovercolor = System.Drawing.Color.Goldenrod
+        Me.btn_sAddStud.OnHoverTextColor = System.Drawing.Color.White
+        Me.btn_sAddStud.selected = False
+        Me.btn_sAddStud.Size = New System.Drawing.Size(136, 35)
+        Me.btn_sAddStud.TabIndex = 49
+        Me.btn_sAddStud.Text = "ADD NEW STUDENT"
+        Me.btn_sAddStud.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btn_sAddStud.Textcolor = System.Drawing.Color.SeaGreen
+        Me.btn_sAddStud.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
-        'ComboBox1
+        'cbo_sSY
         '
-        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox1.Enabled = False
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(117, 191)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(223, 29)
-        Me.ComboBox1.TabIndex = 50
+        Me.cbo_sSY.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbo_sSY.Enabled = False
+        Me.cbo_sSY.FormattingEnabled = True
+        Me.cbo_sSY.Location = New System.Drawing.Point(117, 191)
+        Me.cbo_sSY.Name = "cbo_sSY"
+        Me.cbo_sSY.Size = New System.Drawing.Size(223, 29)
+        Me.cbo_sSY.TabIndex = 50
         '
         'Label7
         '
@@ -1837,42 +1837,42 @@ Partial Class frm_slists
         Me.Label7.TabIndex = 49
         Me.Label7.Text = "SCH-YEAR"
         '
-        'ComboBox4
+        'cbo_sGL
         '
-        Me.ComboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox4.Enabled = False
-        Me.ComboBox4.FormattingEnabled = True
-        Me.ComboBox4.Location = New System.Drawing.Point(116, 236)
-        Me.ComboBox4.Name = "ComboBox4"
-        Me.ComboBox4.Size = New System.Drawing.Size(223, 29)
-        Me.ComboBox4.TabIndex = 46
+        Me.cbo_sGL.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbo_sGL.Enabled = False
+        Me.cbo_sGL.FormattingEnabled = True
+        Me.cbo_sGL.Location = New System.Drawing.Point(116, 236)
+        Me.cbo_sGL.Name = "cbo_sGL"
+        Me.cbo_sGL.Size = New System.Drawing.Size(223, 29)
+        Me.cbo_sGL.TabIndex = 46
         '
-        'TextBox1
+        'txtb_sFname
         '
-        Me.TextBox1.BackColor = System.Drawing.Color.White
-        Me.TextBox1.Enabled = False
-        Me.TextBox1.Location = New System.Drawing.Point(117, 65)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(222, 26)
-        Me.TextBox1.TabIndex = 45
+        Me.txtb_sFname.BackColor = System.Drawing.Color.White
+        Me.txtb_sFname.Enabled = False
+        Me.txtb_sFname.Location = New System.Drawing.Point(117, 65)
+        Me.txtb_sFname.Name = "txtb_sFname"
+        Me.txtb_sFname.Size = New System.Drawing.Size(222, 26)
+        Me.txtb_sFname.TabIndex = 45
         '
-        'TextBox4
+        'txtb_smi
         '
-        Me.TextBox4.BackColor = System.Drawing.Color.White
-        Me.TextBox4.Enabled = False
-        Me.TextBox4.Location = New System.Drawing.Point(117, 149)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(222, 26)
-        Me.TextBox4.TabIndex = 43
+        Me.txtb_smi.BackColor = System.Drawing.Color.White
+        Me.txtb_smi.Enabled = False
+        Me.txtb_smi.Location = New System.Drawing.Point(117, 149)
+        Me.txtb_smi.Name = "txtb_smi"
+        Me.txtb_smi.Size = New System.Drawing.Size(222, 26)
+        Me.txtb_smi.TabIndex = 43
         '
-        'TextBox5
+        'txtb_sLname
         '
-        Me.TextBox5.BackColor = System.Drawing.Color.White
-        Me.TextBox5.Enabled = False
-        Me.TextBox5.Location = New System.Drawing.Point(117, 107)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(222, 26)
-        Me.TextBox5.TabIndex = 34
+        Me.txtb_sLname.BackColor = System.Drawing.Color.White
+        Me.txtb_sLname.Enabled = False
+        Me.txtb_sLname.Location = New System.Drawing.Point(117, 107)
+        Me.txtb_sLname.Name = "txtb_sLname"
+        Me.txtb_sLname.Size = New System.Drawing.Size(222, 26)
+        Me.txtb_sLname.TabIndex = 34
         '
         'Label14
         '
@@ -1884,14 +1884,14 @@ Partial Class frm_slists
         Me.Label14.TabIndex = 39
         Me.Label14.Text = "M.I."
         '
-        'TextBox6
+        'txtb_sStud_id
         '
-        Me.TextBox6.BackColor = System.Drawing.Color.White
-        Me.TextBox6.Enabled = False
-        Me.TextBox6.Location = New System.Drawing.Point(117, 23)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(222, 26)
-        Me.TextBox6.TabIndex = 28
+        Me.txtb_sStud_id.BackColor = System.Drawing.Color.White
+        Me.txtb_sStud_id.Enabled = False
+        Me.txtb_sStud_id.Location = New System.Drawing.Point(117, 23)
+        Me.txtb_sStud_id.Name = "txtb_sStud_id"
+        Me.txtb_sStud_id.Size = New System.Drawing.Size(222, 26)
+        Me.txtb_sStud_id.TabIndex = 28
         '
         'Label19
         '
@@ -1935,10 +1935,10 @@ Partial Class frm_slists
         '
         'GroupBox3
         '
-        Me.GroupBox3.Controls.Add(Me.ComboBox2)
+        Me.GroupBox3.Controls.Add(Me.cbo_sSearchBy)
         Me.GroupBox3.Controls.Add(Me.Label15)
         Me.GroupBox3.Controls.Add(Me.Label16)
-        Me.GroupBox3.Controls.Add(Me.TextBox2)
+        Me.GroupBox3.Controls.Add(Me.txtb_sSearch)
         Me.GroupBox3.Dock = System.Windows.Forms.DockStyle.Top
         Me.GroupBox3.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox3.Location = New System.Drawing.Point(0, 0)
@@ -1948,15 +1948,15 @@ Partial Class frm_slists
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "SEARCH FOR STUDENT"
         '
-        'ComboBox2
+        'cbo_sSearchBy
         '
-        Me.ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Items.AddRange(New Object() {"ID Number", "Name"})
-        Me.ComboBox2.Location = New System.Drawing.Point(328, 19)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(142, 33)
-        Me.ComboBox2.TabIndex = 15
+        Me.cbo_sSearchBy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbo_sSearchBy.FormattingEnabled = True
+        Me.cbo_sSearchBy.Items.AddRange(New Object() {"ID Number", "Name"})
+        Me.cbo_sSearchBy.Location = New System.Drawing.Point(328, 19)
+        Me.cbo_sSearchBy.Name = "cbo_sSearchBy"
+        Me.cbo_sSearchBy.Size = New System.Drawing.Size(142, 33)
+        Me.cbo_sSearchBy.TabIndex = 15
         '
         'Label15
         '
@@ -1978,13 +1978,13 @@ Partial Class frm_slists
         Me.Label16.TabIndex = 14
         Me.Label16.Text = "SEARCH"
         '
-        'TextBox2
+        'txtb_sSearch
         '
-        Me.TextBox2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
-        Me.TextBox2.Location = New System.Drawing.Point(497, 20)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(425, 30)
-        Me.TextBox2.TabIndex = 13
+        Me.txtb_sSearch.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
+        Me.txtb_sSearch.Location = New System.Drawing.Point(497, 20)
+        Me.txtb_sSearch.Name = "txtb_sSearch"
+        Me.txtb_sSearch.Size = New System.Drawing.Size(425, 30)
+        Me.txtb_sSearch.TabIndex = 13
         '
         'juniorHigh_dept
         '
@@ -2553,49 +2553,49 @@ Partial Class frm_slists
         Me.TextBox3.Size = New System.Drawing.Size(425, 30)
         Me.TextBox3.TabIndex = 13
         '
-        'col_estud_id
+        'col_sStud_id
         '
-        Me.col_estud_id.DataPropertyName = "estud_id"
-        Me.col_estud_id.HeaderText = "Stud. id"
-        Me.col_estud_id.Name = "col_estud_id"
-        Me.col_estud_id.ReadOnly = True
+        Me.col_sStud_id.DataPropertyName = "estud_id"
+        Me.col_sStud_id.HeaderText = "Stud. id"
+        Me.col_sStud_id.Name = "col_sStud_id"
+        Me.col_sStud_id.ReadOnly = True
         '
-        'col_estud_fname
+        'col_sStud_fname
         '
-        Me.col_estud_fname.DataPropertyName = "estud_fname"
-        Me.col_estud_fname.HeaderText = "First Name"
-        Me.col_estud_fname.Name = "col_estud_fname"
-        Me.col_estud_fname.ReadOnly = True
+        Me.col_sStud_fname.DataPropertyName = "estud_fname"
+        Me.col_sStud_fname.HeaderText = "First Name"
+        Me.col_sStud_fname.Name = "col_sStud_fname"
+        Me.col_sStud_fname.ReadOnly = True
         '
-        'col_estud_lname
+        'col_sStud_lanme
         '
-        Me.col_estud_lname.DataPropertyName = "estud_Lname"
-        Me.col_estud_lname.HeaderText = "Last Name"
-        Me.col_estud_lname.Name = "col_estud_lname"
-        Me.col_estud_lname.ReadOnly = True
+        Me.col_sStud_lanme.DataPropertyName = "estud_Lname"
+        Me.col_sStud_lanme.HeaderText = "Last Name"
+        Me.col_sStud_lanme.Name = "col_sStud_lanme"
+        Me.col_sStud_lanme.ReadOnly = True
         '
-        'col_estud_mi
+        'col_sStud_mi
         '
-        Me.col_estud_mi.DataPropertyName = "estud_mi"
-        Me.col_estud_mi.HeaderText = "Middle Initial"
-        Me.col_estud_mi.Name = "col_estud_mi"
-        Me.col_estud_mi.ReadOnly = True
+        Me.col_sStud_mi.DataPropertyName = "estud_mi"
+        Me.col_sStud_mi.HeaderText = "Middle Initial"
+        Me.col_sStud_mi.Name = "col_sStud_mi"
+        Me.col_sStud_mi.ReadOnly = True
         '
-        'col_esy_id
+        'col_sSY
         '
-        Me.col_esy_id.DataPropertyName = "esy_id"
-        Me.col_esy_id.HeaderText = "S/Y"
-        Me.col_esy_id.Name = "col_esy_id"
-        Me.col_esy_id.ReadOnly = True
-        Me.col_esy_id.Visible = False
+        Me.col_sSY.DataPropertyName = "esy_id"
+        Me.col_sSY.HeaderText = "S/Y"
+        Me.col_sSY.Name = "col_sSY"
+        Me.col_sSY.ReadOnly = True
+        Me.col_sSY.Visible = False
         '
-        'col_egl_id
+        'col_sGL
         '
-        Me.col_egl_id.DataPropertyName = "egl_id"
-        Me.col_egl_id.HeaderText = "GL"
-        Me.col_egl_id.Name = "col_egl_id"
-        Me.col_egl_id.ReadOnly = True
-        Me.col_egl_id.Visible = False
+        Me.col_sGL.DataPropertyName = "egl_id"
+        Me.col_sGL.HeaderText = "G/L"
+        Me.col_sGL.Name = "col_sGL"
+        Me.col_sGL.ReadOnly = True
+        Me.col_sGL.Visible = False
         '
         'frm_slists
         '
@@ -2627,7 +2627,7 @@ Partial Class frm_slists
         Me.Panel5.ResumeLayout(False)
         Me.Panel6.ResumeLayout(False)
         Me.Panel6.PerformLayout()
-        CType(Me.BunifuCustomDataGrid1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dg_sStudRec, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
@@ -2684,10 +2684,10 @@ Partial Class frm_slists
     Friend WithEvents txtb_Search As System.Windows.Forms.TextBox
     Friend WithEvents seniorHigh_dept As System.Windows.Forms.TabPage
     Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
-    Friend WithEvents ComboBox2 As System.Windows.Forms.ComboBox
+    Friend WithEvents cbo_sSearchBy As System.Windows.Forms.ComboBox
     Friend WithEvents Label15 As System.Windows.Forms.Label
     Friend WithEvents Label16 As System.Windows.Forms.Label
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
+    Friend WithEvents txtb_sSearch As System.Windows.Forms.TextBox
     Friend WithEvents juniorHigh_dept As System.Windows.Forms.TabPage
     Friend WithEvents GroupBox4 As System.Windows.Forms.GroupBox
     Friend WithEvents ComboBox3 As System.Windows.Forms.ComboBox
@@ -2726,19 +2726,19 @@ Partial Class frm_slists
     Friend WithEvents Label21 As System.Windows.Forms.Label
     Friend WithEvents txtb_eSearch As System.Windows.Forms.TextBox
     Friend WithEvents Panel4 As System.Windows.Forms.Panel
-    Friend WithEvents BunifuFlatButton1 As Bunifu.Framework.UI.BunifuFlatButton
-    Friend WithEvents BunifuFlatButton2 As Bunifu.Framework.UI.BunifuFlatButton
-    Friend WithEvents BunifuFlatButton3 As Bunifu.Framework.UI.BunifuFlatButton
-    Friend WithEvents BunifuFlatButton4 As Bunifu.Framework.UI.BunifuFlatButton
-    Friend WithEvents BunifuFlatButton5 As Bunifu.Framework.UI.BunifuFlatButton
-    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
+    Friend WithEvents btn_sCancel As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents btn_sViewAccount As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents btn_sSave As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents btn_sUpdateStud As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents btn_sAddStud As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents cbo_sSY As System.Windows.Forms.ComboBox
     Friend WithEvents Label7 As System.Windows.Forms.Label
-    Friend WithEvents ComboBox4 As System.Windows.Forms.ComboBox
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
+    Friend WithEvents cbo_sGL As System.Windows.Forms.ComboBox
+    Friend WithEvents txtb_sFname As System.Windows.Forms.TextBox
+    Friend WithEvents txtb_smi As System.Windows.Forms.TextBox
+    Friend WithEvents txtb_sLname As System.Windows.Forms.TextBox
     Friend WithEvents Label14 As System.Windows.Forms.Label
-    Friend WithEvents TextBox6 As System.Windows.Forms.TextBox
+    Friend WithEvents txtb_sStud_id As System.Windows.Forms.TextBox
     Friend WithEvents Label19 As System.Windows.Forms.Label
     Friend WithEvents Label22 As System.Windows.Forms.Label
     Friend WithEvents Label24 As System.Windows.Forms.Label
@@ -2748,13 +2748,7 @@ Partial Class frm_slists
     Friend WithEvents BunifuFlatButton6 As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents RadioButton3 As System.Windows.Forms.RadioButton
     Friend WithEvents RadioButton4 As System.Windows.Forms.RadioButton
-    Friend WithEvents BunifuCustomDataGrid1 As Bunifu.Framework.UI.BunifuCustomDataGrid
-    Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn5 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn6 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents dg_sStudRec As Bunifu.Framework.UI.BunifuCustomDataGrid
     Friend WithEvents Panel11 As System.Windows.Forms.Panel
     Friend WithEvents Panel12 As System.Windows.Forms.Panel
     Friend WithEvents BunifuFlatButton13 As Bunifu.Framework.UI.BunifuFlatButton
@@ -2799,4 +2793,10 @@ Partial Class frm_slists
     Friend WithEvents col_estud_mi As DataGridViewTextBoxColumn
     Friend WithEvents col_esy_id As DataGridViewTextBoxColumn
     Friend WithEvents col_egl_id As DataGridViewTextBoxColumn
+    Friend WithEvents col_sStud_id As DataGridViewTextBoxColumn
+    Friend WithEvents col_sStud_fname As DataGridViewTextBoxColumn
+    Friend WithEvents col_sStud_lanme As DataGridViewTextBoxColumn
+    Friend WithEvents col_sStud_mi As DataGridViewTextBoxColumn
+    Friend WithEvents col_sSY As DataGridViewTextBoxColumn
+    Friend WithEvents col_sGL As DataGridViewTextBoxColumn
 End Class

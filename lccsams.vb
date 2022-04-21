@@ -54,6 +54,20 @@ Module lccsams
     Public esy_sDate As String
     Public esy_eDate As String
 
+    '#############################################################Senior-High PUBLIC VARIABLE#########################################################
+    Public sSelect_SY As String = "select * from tbl_elem_sy"
+    Public sSelect_GL As String = "select * from tbl_elem_gradelevel"
+    Public sSelect_studRec As String = "select * from tbl_elem_students order by estud_lname asc,estud_fname asc"
+
+    Public sStud_id As String
+    Public sFname As String
+    Public sLname As String
+    Public sStudname As String
+    Public sStudGL As String
+    Public sStudSY As String
+    Public sSy_sDate As String
+    Public sSy_eDate As String
+
     '######################################################### Module & function class ##############################################################################
     Public Sub _dbConnection(ByVal dbName As String)
         Try

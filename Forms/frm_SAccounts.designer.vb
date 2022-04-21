@@ -29,12 +29,12 @@ Partial Class frm_SAccounts
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.college_dept = New System.Windows.Forms.TabPage()
         Me.BunifuThinButton23 = New Bunifu.Framework.UI.BunifuThinButton2()
@@ -123,8 +123,6 @@ Partial Class frm_SAccounts
         Me.TextBox8 = New System.Windows.Forms.TextBox()
         Me.Label22 = New System.Windows.Forms.Label()
         Me.jh_dept = New System.Windows.Forms.TabPage()
-        Me.sh_dept = New System.Windows.Forms.TabPage()
-        Me.sp_balance = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox10 = New System.Windows.Forms.GroupBox()
         Me.BunifuCustomDataGrid2 = New Bunifu.Framework.UI.BunifuCustomDataGrid()
         Me.DataGridViewTextBoxColumn13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -160,6 +158,7 @@ Partial Class frm_SAccounts
         Me.Label32 = New System.Windows.Forms.Label()
         Me.TextBox14 = New System.Windows.Forms.TextBox()
         Me.Label33 = New System.Windows.Forms.Label()
+        Me.sh_dept = New System.Windows.Forms.TabPage()
         Me.GroupBox14 = New System.Windows.Forms.GroupBox()
         Me.BunifuCustomDataGrid3 = New Bunifu.Framework.UI.BunifuCustomDataGrid()
         Me.DataGridViewTextBoxColumn25 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -195,6 +194,7 @@ Partial Class frm_SAccounts
         Me.Label41 = New System.Windows.Forms.Label()
         Me.TextBox21 = New System.Windows.Forms.TextBox()
         Me.Label42 = New System.Windows.Forms.Label()
+        Me.sp_balance = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TabControl1.SuspendLayout()
         Me.college_dept.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -214,7 +214,6 @@ Partial Class frm_SAccounts
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.jh_dept.SuspendLayout()
-        Me.sh_dept.SuspendLayout()
         Me.GroupBox10.SuspendLayout()
         CType(Me.BunifuCustomDataGrid2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox11.SuspendLayout()
@@ -222,6 +221,7 @@ Partial Class frm_SAccounts
         Me.GroupBox12.SuspendLayout()
         CType(Me.DataGridView4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox13.SuspendLayout()
+        Me.sh_dept.SuspendLayout()
         Me.GroupBox14.SuspendLayout()
         CType(Me.BunifuCustomDataGrid3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox15.SuspendLayout()
@@ -235,8 +235,8 @@ Partial Class frm_SAccounts
         '
         Me.TabControl1.Controls.Add(Me.college_dept)
         Me.TabControl1.Controls.Add(Me.elem_dept)
-        Me.TabControl1.Controls.Add(Me.jh_dept)
         Me.TabControl1.Controls.Add(Me.sh_dept)
+        Me.TabControl1.Controls.Add(Me.jh_dept)
         Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TabControl1.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TabControl1.Location = New System.Drawing.Point(0, 0)
@@ -1188,24 +1188,6 @@ Partial Class frm_SAccounts
         Me.jh_dept.Text = "Junior-High Dept"
         Me.jh_dept.UseVisualStyleBackColor = True
         '
-        'sh_dept
-        '
-        Me.sh_dept.Controls.Add(Me.GroupBox14)
-        Me.sh_dept.Controls.Add(Me.GroupBox15)
-        Me.sh_dept.Controls.Add(Me.GroupBox16)
-        Me.sh_dept.Controls.Add(Me.GroupBox17)
-        Me.sh_dept.Location = New System.Drawing.Point(4, 30)
-        Me.sh_dept.Name = "sh_dept"
-        Me.sh_dept.Size = New System.Drawing.Size(1035, 559)
-        Me.sh_dept.TabIndex = 3
-        Me.sh_dept.Text = "Senior-High Dept"
-        Me.sh_dept.UseVisualStyleBackColor = True
-        '
-        'sp_balance
-        '
-        Me.sp_balance.HeaderText = "Balance"
-        Me.sp_balance.Name = "sp_balance"
-        '
         'GroupBox10
         '
         Me.GroupBox10.Controls.Add(Me.BunifuCustomDataGrid2)
@@ -1221,20 +1203,20 @@ Partial Class frm_SAccounts
         '
         Me.BunifuCustomDataGrid2.AllowUserToAddRows = False
         Me.BunifuCustomDataGrid2.AllowUserToDeleteRows = False
-        DataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.BunifuCustomDataGrid2.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.BunifuCustomDataGrid2.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle10
         Me.BunifuCustomDataGrid2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.BunifuCustomDataGrid2.BackgroundColor = System.Drawing.Color.Gainsboro
         Me.BunifuCustomDataGrid2.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.BunifuCustomDataGrid2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle8.BackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.BunifuCustomDataGrid2.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle11.BackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle11.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle11.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.BunifuCustomDataGrid2.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle11
         Me.BunifuCustomDataGrid2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.BunifuCustomDataGrid2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn13, Me.DataGridViewTextBoxColumn14, Me.DataGridViewTextBoxColumn15, Me.DataGridViewTextBoxColumn16, Me.DataGridViewTextBoxColumn17, Me.DataGridViewTextBoxColumn18})
         Me.BunifuCustomDataGrid2.Dock = System.Windows.Forms.DockStyle.Fill
@@ -1269,9 +1251,9 @@ Partial Class frm_SAccounts
         'DataGridViewTextBoxColumn15
         '
         Me.DataGridViewTextBoxColumn15.DataPropertyName = "stdacct_tDate"
-        DataGridViewCellStyle9.Format = "yyyy-MM-dd"
-        DataGridViewCellStyle9.NullValue = Nothing
-        Me.DataGridViewTextBoxColumn15.DefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle12.Format = "yyyy-MM-dd"
+        DataGridViewCellStyle12.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn15.DefaultCellStyle = DataGridViewCellStyle12
         Me.DataGridViewTextBoxColumn15.HeaderText = "DATE"
         Me.DataGridViewTextBoxColumn15.Name = "DataGridViewTextBoxColumn15"
         Me.DataGridViewTextBoxColumn15.ReadOnly = True
@@ -1570,6 +1552,19 @@ Partial Class frm_SAccounts
         Me.Label33.TabIndex = 7
         Me.Label33.Text = "FULL NAME"
         '
+        'sh_dept
+        '
+        Me.sh_dept.Controls.Add(Me.GroupBox14)
+        Me.sh_dept.Controls.Add(Me.GroupBox15)
+        Me.sh_dept.Controls.Add(Me.GroupBox16)
+        Me.sh_dept.Controls.Add(Me.GroupBox17)
+        Me.sh_dept.Location = New System.Drawing.Point(4, 30)
+        Me.sh_dept.Name = "sh_dept"
+        Me.sh_dept.Size = New System.Drawing.Size(1035, 559)
+        Me.sh_dept.TabIndex = 3
+        Me.sh_dept.Text = "Senior-High Dept"
+        Me.sh_dept.UseVisualStyleBackColor = True
+        '
         'GroupBox14
         '
         Me.GroupBox14.Controls.Add(Me.BunifuCustomDataGrid3)
@@ -1585,20 +1580,20 @@ Partial Class frm_SAccounts
         '
         Me.BunifuCustomDataGrid3.AllowUserToAddRows = False
         Me.BunifuCustomDataGrid3.AllowUserToDeleteRows = False
-        DataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.BunifuCustomDataGrid3.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle10
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.BunifuCustomDataGrid3.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle7
         Me.BunifuCustomDataGrid3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.BunifuCustomDataGrid3.BackgroundColor = System.Drawing.Color.Gainsboro
         Me.BunifuCustomDataGrid3.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.BunifuCustomDataGrid3.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle11.BackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle11.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle11.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.BunifuCustomDataGrid3.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle11
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.BunifuCustomDataGrid3.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle8
         Me.BunifuCustomDataGrid3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.BunifuCustomDataGrid3.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn25, Me.DataGridViewTextBoxColumn26, Me.DataGridViewTextBoxColumn27, Me.DataGridViewTextBoxColumn28, Me.DataGridViewTextBoxColumn29, Me.DataGridViewTextBoxColumn30})
         Me.BunifuCustomDataGrid3.Dock = System.Windows.Forms.DockStyle.Fill
@@ -1633,9 +1628,9 @@ Partial Class frm_SAccounts
         'DataGridViewTextBoxColumn27
         '
         Me.DataGridViewTextBoxColumn27.DataPropertyName = "stdacct_tDate"
-        DataGridViewCellStyle12.Format = "yyyy-MM-dd"
-        DataGridViewCellStyle12.NullValue = Nothing
-        Me.DataGridViewTextBoxColumn27.DefaultCellStyle = DataGridViewCellStyle12
+        DataGridViewCellStyle9.Format = "yyyy-MM-dd"
+        DataGridViewCellStyle9.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn27.DefaultCellStyle = DataGridViewCellStyle9
         Me.DataGridViewTextBoxColumn27.HeaderText = "DATE"
         Me.DataGridViewTextBoxColumn27.Name = "DataGridViewTextBoxColumn27"
         Me.DataGridViewTextBoxColumn27.ReadOnly = True
@@ -1934,6 +1929,11 @@ Partial Class frm_SAccounts
         Me.Label42.TabIndex = 7
         Me.Label42.Text = "FULL NAME"
         '
+        'sp_balance
+        '
+        Me.sp_balance.HeaderText = "Balance"
+        Me.sp_balance.Name = "sp_balance"
+        '
         'frm_SAccounts
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1967,7 +1967,6 @@ Partial Class frm_SAccounts
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.jh_dept.ResumeLayout(False)
-        Me.sh_dept.ResumeLayout(False)
         Me.GroupBox10.ResumeLayout(False)
         CType(Me.BunifuCustomDataGrid2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox11.ResumeLayout(False)
@@ -1978,6 +1977,7 @@ Partial Class frm_SAccounts
         CType(Me.DataGridView4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox13.ResumeLayout(False)
         Me.GroupBox13.PerformLayout()
+        Me.sh_dept.ResumeLayout(False)
         Me.GroupBox14.ResumeLayout(False)
         CType(Me.BunifuCustomDataGrid3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox15.ResumeLayout(False)
