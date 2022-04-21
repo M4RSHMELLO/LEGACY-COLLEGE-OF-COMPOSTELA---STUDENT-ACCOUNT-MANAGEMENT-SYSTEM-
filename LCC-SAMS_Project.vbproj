@@ -1,0 +1,418 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5DB365DC-E417-4438-9053-58F3DEA73D65}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>LCC_SAMS_ProtoType.My.MyApplication</StartupObject>
+    <RootNamespace>LCC_SAMS_ProtoType</RootNamespace>
+    <AssemblyName>LCC-SAMS_ProtoType</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>LCC-SAMS_ProtoType.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>LCC-SAMS_ProtoType.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.6.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files (x86)\MySQL\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Entity.Design" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dashboard.Designer.vb">
+      <DependentUpon>Dashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlg_savesuccessfully.designer.vb">
+      <DependentUpon>dlg_savesuccessfully.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlg_savesuccessfully.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_slists.Designer.vb">
+      <DependentUpon>frm_slists.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_slists.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControl1.Designer.vb">
+      <DependentUpon>UserControl1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControl1.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LoginError.Designer.vb">
+      <DependentUpon>LoginError.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LoginError.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_colReports.designer.vb">
+      <DependentUpon>frm_colReports.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_colReports.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_Mpayments.designer.vb">
+      <DependentUpon>frm_Mpayments.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_Mpayments.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_MSY.designer.vb">
+      <DependentUpon>frm_MSY.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_MSY.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_SAccounts.designer.vb">
+      <DependentUpon>frm_SAccounts.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_SAccounts.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_SPayments.designer.vb">
+      <DependentUpon>frm_SPayments.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_SPayments.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_sSG.designer.vb">
+      <DependentUpon>frm_sSG.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_sSG.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_user.designer.vb">
+      <DependentUpon>frm_user.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_user.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="form_login.Designer.vb">
+      <DependentUpon>form_login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lccsams.vb" />
+    <Compile Include="loginSuccessfully.designer.vb">
+      <DependentUpon>loginSuccessfully.vb</DependentUpon>
+    </Compile>
+    <Compile Include="loginSuccessfully.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Form1.vb" />
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="UpdatedSuccessfully.designer.vb">
+      <DependentUpon>UpdatedSuccessfully.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UpdatedSuccessfully.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlg_savesuccessfully.resx">
+      <DependentUpon>dlg_savesuccessfully.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_slists.resx">
+      <DependentUpon>frm_slists.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserControl1.resx">
+      <DependentUpon>UserControl1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginError.resx">
+      <DependentUpon>LoginError.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_colReports.resx">
+      <DependentUpon>frm_colReports.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_Mpayments.resx">
+      <DependentUpon>frm_Mpayments.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_MSY.resx">
+      <DependentUpon>frm_MSY.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_SAccounts.resx">
+      <DependentUpon>frm_SAccounts.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_SPayments.resx">
+      <DependentUpon>frm_SPayments.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_sSG.resx">
+      <DependentUpon>frm_sSG.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_user.resx">
+      <DependentUpon>frm_user.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_login.resx">
+      <DependentUpon>form_login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="loginSuccessfully.resx">
+      <DependentUpon>loginSuccessfully.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdatedSuccessfully.resx">
+      <DependentUpon>UpdatedSuccessfully.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\lcc-logo-11-3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arrow_Left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right_arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arrow_right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-chevron-right-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-chevron-right-481.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-chevron-right-482.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\output-onlinepngtools.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\output-onlinepngtools %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\v1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\v2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NicePng_maintenance-icon-png_4125155.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NicePng_maintenance-icon-png_4125155 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NicePng_maintenance-icon-png_4125155 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arrow_Left1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NicePng_maintenance-icon-png_4125155 %282%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\600.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\340px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\users.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\500x500.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\490.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4901.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4902.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-sign-check-mark-clip-art-holding-a-red-fork-of-employees-5a72b18e2d47b9.9374129515174659981855.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-sign-check-mark-clip-art-holding-a-red-fork-of-employees-5a72b18e2d47b9.93741295151746599818551.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\erroricon_man.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1111111111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wewsssss.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\500x5001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\500x5002.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\500X500px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\500X500px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pewpew.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\achup.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loginerroricon.png" />
+    <Content Include="Resources\savesuccessfully.png" />
+    <None Include="Resources\savesuccessfully1.png" />
+    <None Include="Resources\savesuccessfully2.png" />
+    <Content Include="Resources\success.png" />
+    <Content Include="Resources\updatedsuccessfully.png" />
+    <None Include="Resources\success1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
