@@ -38,6 +38,14 @@ Partial Class frm_slists
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
         Me.dg_studR = New Bunifu.Framework.UI.BunifuCustomDataGrid()
+        Me.s_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.s_fName = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.s_lName = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.s_Midi = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.sy_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.sem_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.yl_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.crs_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btn_cancel = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.btn_gotoAcct = New Bunifu.Framework.UI.BunifuFlatButton()
@@ -171,20 +179,12 @@ Partial Class frm_slists
         Me.Label17 = New System.Windows.Forms.Label()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.crs_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.yl_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.sem_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.sy_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.s_Midi = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.s_lName = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.s_fName = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.s_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.col_estud_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.col_estud_fname = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.col_estud_lname = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.col_estud_mi = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.col_esy_name = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.col_egl_name = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.col_esy_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.col_egl_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TabControl1.SuspendLayout()
         Me.college_dept.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -282,7 +282,7 @@ Partial Class frm_slists
         Me.btn_backStudAcct.IconMarginLeft = 0
         Me.btn_backStudAcct.IconMarginRight = 0
         Me.btn_backStudAcct.IconRightVisible = False
-        Me.btn_backStudAcct.IconRightZoom = 0.0R
+        Me.btn_backStudAcct.IconRightZoom = 0R
         Me.btn_backStudAcct.IconVisible = False
         Me.btn_backStudAcct.IconZoom = 90.0R
         Me.btn_backStudAcct.IsTab = False
@@ -358,6 +358,66 @@ Partial Class frm_slists
         Me.dg_studR.Size = New System.Drawing.Size(770, 555)
         Me.dg_studR.TabIndex = 47
         '
+        's_id
+        '
+        Me.s_id.DataPropertyName = "stud_id"
+        Me.s_id.HeaderText = "Stud. id"
+        Me.s_id.Name = "s_id"
+        Me.s_id.ReadOnly = True
+        '
+        's_fName
+        '
+        Me.s_fName.DataPropertyName = "stud_fname"
+        Me.s_fName.HeaderText = "First Name"
+        Me.s_fName.Name = "s_fName"
+        Me.s_fName.ReadOnly = True
+        '
+        's_lName
+        '
+        Me.s_lName.DataPropertyName = "stud_Lname"
+        Me.s_lName.HeaderText = "Last Name"
+        Me.s_lName.Name = "s_lName"
+        Me.s_lName.ReadOnly = True
+        '
+        's_Midi
+        '
+        Me.s_Midi.DataPropertyName = "stud_midI"
+        Me.s_Midi.HeaderText = "Middle Initial"
+        Me.s_Midi.Name = "s_Midi"
+        Me.s_Midi.ReadOnly = True
+        '
+        'sy_id
+        '
+        Me.sy_id.DataPropertyName = "sy_id"
+        Me.sy_id.HeaderText = "S/Y"
+        Me.sy_id.Name = "sy_id"
+        Me.sy_id.ReadOnly = True
+        Me.sy_id.Visible = False
+        '
+        'sem_id
+        '
+        Me.sem_id.DataPropertyName = "sem_id"
+        Me.sem_id.HeaderText = "sem"
+        Me.sem_id.Name = "sem_id"
+        Me.sem_id.ReadOnly = True
+        Me.sem_id.Visible = False
+        '
+        'yl_id
+        '
+        Me.yl_id.DataPropertyName = "yl_id"
+        Me.yl_id.HeaderText = "YL"
+        Me.yl_id.Name = "yl_id"
+        Me.yl_id.ReadOnly = True
+        Me.yl_id.Visible = False
+        '
+        'crs_id
+        '
+        Me.crs_id.DataPropertyName = "crs_id"
+        Me.crs_id.HeaderText = "course"
+        Me.crs_id.Name = "crs_id"
+        Me.crs_id.ReadOnly = True
+        Me.crs_id.Visible = False
+        '
         'Panel1
         '
         Me.Panel1.Controls.Add(Me.btn_cancel)
@@ -414,7 +474,7 @@ Partial Class frm_slists
         Me.btn_cancel.IconMarginLeft = 0
         Me.btn_cancel.IconMarginRight = 0
         Me.btn_cancel.IconRightVisible = False
-        Me.btn_cancel.IconRightZoom = 0.0R
+        Me.btn_cancel.IconRightZoom = 0R
         Me.btn_cancel.IconVisible = False
         Me.btn_cancel.IconZoom = 90.0R
         Me.btn_cancel.IsTab = False
@@ -453,7 +513,7 @@ Partial Class frm_slists
         Me.btn_gotoAcct.IconMarginLeft = 0
         Me.btn_gotoAcct.IconMarginRight = 0
         Me.btn_gotoAcct.IconRightVisible = False
-        Me.btn_gotoAcct.IconRightZoom = 0.0R
+        Me.btn_gotoAcct.IconRightZoom = 0R
         Me.btn_gotoAcct.IconVisible = False
         Me.btn_gotoAcct.IconZoom = 90.0R
         Me.btn_gotoAcct.IsTab = False
@@ -493,7 +553,7 @@ Partial Class frm_slists
         Me.btn_save.IconMarginLeft = 0
         Me.btn_save.IconMarginRight = 0
         Me.btn_save.IconRightVisible = False
-        Me.btn_save.IconRightZoom = 0.0R
+        Me.btn_save.IconRightZoom = 0R
         Me.btn_save.IconVisible = False
         Me.btn_save.IconZoom = 90.0R
         Me.btn_save.IsTab = False
@@ -532,7 +592,7 @@ Partial Class frm_slists
         Me.btn_updtStud.IconMarginLeft = 0
         Me.btn_updtStud.IconMarginRight = 0
         Me.btn_updtStud.IconRightVisible = False
-        Me.btn_updtStud.IconRightZoom = 0.0R
+        Me.btn_updtStud.IconRightZoom = 0R
         Me.btn_updtStud.IconVisible = False
         Me.btn_updtStud.IconZoom = 90.0R
         Me.btn_updtStud.IsTab = False
@@ -571,7 +631,7 @@ Partial Class frm_slists
         Me.btn_addNstud.IconMarginLeft = 0
         Me.btn_addNstud.IconMarginRight = 0
         Me.btn_addNstud.IconRightVisible = False
-        Me.btn_addNstud.IconRightZoom = 0.0R
+        Me.btn_addNstud.IconRightZoom = 0R
         Me.btn_addNstud.IconVisible = False
         Me.btn_addNstud.IconZoom = 90.0R
         Me.btn_addNstud.IsTab = False
@@ -891,7 +951,7 @@ Partial Class frm_slists
         Me.BunifuFlatButton11.IconMarginLeft = 0
         Me.BunifuFlatButton11.IconMarginRight = 0
         Me.BunifuFlatButton11.IconRightVisible = False
-        Me.BunifuFlatButton11.IconRightZoom = 0.0R
+        Me.BunifuFlatButton11.IconRightZoom = 0R
         Me.BunifuFlatButton11.IconVisible = False
         Me.BunifuFlatButton11.IconZoom = 90.0R
         Me.BunifuFlatButton11.IsTab = False
@@ -952,7 +1012,7 @@ Partial Class frm_slists
         DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dg_eStudRecords.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.dg_eStudRecords.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dg_eStudRecords.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.col_estud_id, Me.col_estud_fname, Me.col_estud_lname, Me.col_estud_mi, Me.col_esy_name, Me.col_egl_name})
+        Me.dg_eStudRecords.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.col_estud_id, Me.col_estud_fname, Me.col_estud_lname, Me.col_estud_mi, Me.col_esy_id, Me.col_egl_id})
         Me.dg_eStudRecords.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dg_eStudRecords.DoubleBuffered = True
         Me.dg_eStudRecords.EnableHeadersVisualStyles = False
@@ -1015,7 +1075,7 @@ Partial Class frm_slists
         Me.btn_eCancel.IconMarginLeft = 0
         Me.btn_eCancel.IconMarginRight = 0
         Me.btn_eCancel.IconRightVisible = False
-        Me.btn_eCancel.IconRightZoom = 0.0R
+        Me.btn_eCancel.IconRightZoom = 0R
         Me.btn_eCancel.IconVisible = False
         Me.btn_eCancel.IconZoom = 90.0R
         Me.btn_eCancel.IsTab = False
@@ -1054,7 +1114,7 @@ Partial Class frm_slists
         Me.btn_eViewAccount.IconMarginLeft = 0
         Me.btn_eViewAccount.IconMarginRight = 0
         Me.btn_eViewAccount.IconRightVisible = False
-        Me.btn_eViewAccount.IconRightZoom = 0.0R
+        Me.btn_eViewAccount.IconRightZoom = 0R
         Me.btn_eViewAccount.IconVisible = False
         Me.btn_eViewAccount.IconZoom = 90.0R
         Me.btn_eViewAccount.IsTab = False
@@ -1094,7 +1154,7 @@ Partial Class frm_slists
         Me.btn_eSave.IconMarginLeft = 0
         Me.btn_eSave.IconMarginRight = 0
         Me.btn_eSave.IconRightVisible = False
-        Me.btn_eSave.IconRightZoom = 0.0R
+        Me.btn_eSave.IconRightZoom = 0R
         Me.btn_eSave.IconVisible = False
         Me.btn_eSave.IconZoom = 90.0R
         Me.btn_eSave.IsTab = False
@@ -1133,7 +1193,7 @@ Partial Class frm_slists
         Me.btn_eUpdateNewStud.IconMarginLeft = 0
         Me.btn_eUpdateNewStud.IconMarginRight = 0
         Me.btn_eUpdateNewStud.IconRightVisible = False
-        Me.btn_eUpdateNewStud.IconRightZoom = 0.0R
+        Me.btn_eUpdateNewStud.IconRightZoom = 0R
         Me.btn_eUpdateNewStud.IconVisible = False
         Me.btn_eUpdateNewStud.IconZoom = 90.0R
         Me.btn_eUpdateNewStud.IsTab = False
@@ -1172,7 +1232,7 @@ Partial Class frm_slists
         Me.btn_eAddNewStud.IconMarginLeft = 0
         Me.btn_eAddNewStud.IconMarginRight = 0
         Me.btn_eAddNewStud.IconRightVisible = False
-        Me.btn_eAddNewStud.IconRightZoom = 0.0R
+        Me.btn_eAddNewStud.IconRightZoom = 0R
         Me.btn_eAddNewStud.IconVisible = False
         Me.btn_eAddNewStud.IconZoom = 90.0R
         Me.btn_eAddNewStud.IsTab = False
@@ -1414,7 +1474,7 @@ Partial Class frm_slists
         Me.BunifuFlatButton6.IconMarginLeft = 0
         Me.BunifuFlatButton6.IconMarginRight = 0
         Me.BunifuFlatButton6.IconRightVisible = False
-        Me.BunifuFlatButton6.IconRightZoom = 0.0R
+        Me.BunifuFlatButton6.IconRightZoom = 0R
         Me.BunifuFlatButton6.IconVisible = False
         Me.BunifuFlatButton6.IconZoom = 90.0R
         Me.BunifuFlatButton6.IsTab = False
@@ -1582,7 +1642,7 @@ Partial Class frm_slists
         Me.BunifuFlatButton1.IconMarginLeft = 0
         Me.BunifuFlatButton1.IconMarginRight = 0
         Me.BunifuFlatButton1.IconRightVisible = False
-        Me.BunifuFlatButton1.IconRightZoom = 0.0R
+        Me.BunifuFlatButton1.IconRightZoom = 0R
         Me.BunifuFlatButton1.IconVisible = False
         Me.BunifuFlatButton1.IconZoom = 90.0R
         Me.BunifuFlatButton1.IsTab = False
@@ -1621,7 +1681,7 @@ Partial Class frm_slists
         Me.BunifuFlatButton2.IconMarginLeft = 0
         Me.BunifuFlatButton2.IconMarginRight = 0
         Me.BunifuFlatButton2.IconRightVisible = False
-        Me.BunifuFlatButton2.IconRightZoom = 0.0R
+        Me.BunifuFlatButton2.IconRightZoom = 0R
         Me.BunifuFlatButton2.IconVisible = False
         Me.BunifuFlatButton2.IconZoom = 90.0R
         Me.BunifuFlatButton2.IsTab = False
@@ -1661,7 +1721,7 @@ Partial Class frm_slists
         Me.BunifuFlatButton3.IconMarginLeft = 0
         Me.BunifuFlatButton3.IconMarginRight = 0
         Me.BunifuFlatButton3.IconRightVisible = False
-        Me.BunifuFlatButton3.IconRightZoom = 0.0R
+        Me.BunifuFlatButton3.IconRightZoom = 0R
         Me.BunifuFlatButton3.IconVisible = False
         Me.BunifuFlatButton3.IconZoom = 90.0R
         Me.BunifuFlatButton3.IsTab = False
@@ -1700,7 +1760,7 @@ Partial Class frm_slists
         Me.BunifuFlatButton4.IconMarginLeft = 0
         Me.BunifuFlatButton4.IconMarginRight = 0
         Me.BunifuFlatButton4.IconRightVisible = False
-        Me.BunifuFlatButton4.IconRightZoom = 0.0R
+        Me.BunifuFlatButton4.IconRightZoom = 0R
         Me.BunifuFlatButton4.IconVisible = False
         Me.BunifuFlatButton4.IconZoom = 90.0R
         Me.BunifuFlatButton4.IsTab = False
@@ -1739,7 +1799,7 @@ Partial Class frm_slists
         Me.BunifuFlatButton5.IconMarginLeft = 0
         Me.BunifuFlatButton5.IconMarginRight = 0
         Me.BunifuFlatButton5.IconRightVisible = False
-        Me.BunifuFlatButton5.IconRightZoom = 0.0R
+        Me.BunifuFlatButton5.IconRightZoom = 0R
         Me.BunifuFlatButton5.IconVisible = False
         Me.BunifuFlatButton5.IconZoom = 90.0R
         Me.BunifuFlatButton5.IsTab = False
@@ -1981,7 +2041,7 @@ Partial Class frm_slists
         Me.BunifuFlatButton13.IconMarginLeft = 0
         Me.BunifuFlatButton13.IconMarginRight = 0
         Me.BunifuFlatButton13.IconRightVisible = False
-        Me.BunifuFlatButton13.IconRightZoom = 0.0R
+        Me.BunifuFlatButton13.IconRightZoom = 0R
         Me.BunifuFlatButton13.IconVisible = False
         Me.BunifuFlatButton13.IconZoom = 90.0R
         Me.BunifuFlatButton13.IsTab = False
@@ -2149,7 +2209,7 @@ Partial Class frm_slists
         Me.BunifuFlatButton7.IconMarginLeft = 0
         Me.BunifuFlatButton7.IconMarginRight = 0
         Me.BunifuFlatButton7.IconRightVisible = False
-        Me.BunifuFlatButton7.IconRightZoom = 0.0R
+        Me.BunifuFlatButton7.IconRightZoom = 0R
         Me.BunifuFlatButton7.IconVisible = False
         Me.BunifuFlatButton7.IconZoom = 90.0R
         Me.BunifuFlatButton7.IsTab = False
@@ -2188,7 +2248,7 @@ Partial Class frm_slists
         Me.BunifuFlatButton8.IconMarginLeft = 0
         Me.BunifuFlatButton8.IconMarginRight = 0
         Me.BunifuFlatButton8.IconRightVisible = False
-        Me.BunifuFlatButton8.IconRightZoom = 0.0R
+        Me.BunifuFlatButton8.IconRightZoom = 0R
         Me.BunifuFlatButton8.IconVisible = False
         Me.BunifuFlatButton8.IconZoom = 90.0R
         Me.BunifuFlatButton8.IsTab = False
@@ -2228,7 +2288,7 @@ Partial Class frm_slists
         Me.BunifuFlatButton9.IconMarginLeft = 0
         Me.BunifuFlatButton9.IconMarginRight = 0
         Me.BunifuFlatButton9.IconRightVisible = False
-        Me.BunifuFlatButton9.IconRightZoom = 0.0R
+        Me.BunifuFlatButton9.IconRightZoom = 0R
         Me.BunifuFlatButton9.IconVisible = False
         Me.BunifuFlatButton9.IconZoom = 90.0R
         Me.BunifuFlatButton9.IsTab = False
@@ -2267,7 +2327,7 @@ Partial Class frm_slists
         Me.BunifuFlatButton10.IconMarginLeft = 0
         Me.BunifuFlatButton10.IconMarginRight = 0
         Me.BunifuFlatButton10.IconRightVisible = False
-        Me.BunifuFlatButton10.IconRightZoom = 0.0R
+        Me.BunifuFlatButton10.IconRightZoom = 0R
         Me.BunifuFlatButton10.IconVisible = False
         Me.BunifuFlatButton10.IconZoom = 90.0R
         Me.BunifuFlatButton10.IsTab = False
@@ -2306,7 +2366,7 @@ Partial Class frm_slists
         Me.BunifuFlatButton12.IconMarginLeft = 0
         Me.BunifuFlatButton12.IconMarginRight = 0
         Me.BunifuFlatButton12.IconRightVisible = False
-        Me.BunifuFlatButton12.IconRightZoom = 0.0R
+        Me.BunifuFlatButton12.IconRightZoom = 0R
         Me.BunifuFlatButton12.IconVisible = False
         Me.BunifuFlatButton12.IconZoom = 90.0R
         Me.BunifuFlatButton12.IsTab = False
@@ -2493,66 +2553,6 @@ Partial Class frm_slists
         Me.TextBox3.Size = New System.Drawing.Size(425, 30)
         Me.TextBox3.TabIndex = 13
         '
-        'crs_id
-        '
-        Me.crs_id.DataPropertyName = "crs_id"
-        Me.crs_id.HeaderText = "course"
-        Me.crs_id.Name = "crs_id"
-        Me.crs_id.ReadOnly = True
-        Me.crs_id.Visible = False
-        '
-        'yl_id
-        '
-        Me.yl_id.DataPropertyName = "yl_id"
-        Me.yl_id.HeaderText = "YL"
-        Me.yl_id.Name = "yl_id"
-        Me.yl_id.ReadOnly = True
-        Me.yl_id.Visible = False
-        '
-        'sem_id
-        '
-        Me.sem_id.DataPropertyName = "sem_id"
-        Me.sem_id.HeaderText = "sem"
-        Me.sem_id.Name = "sem_id"
-        Me.sem_id.ReadOnly = True
-        Me.sem_id.Visible = False
-        '
-        'sy_id
-        '
-        Me.sy_id.DataPropertyName = "sy_id"
-        Me.sy_id.HeaderText = "S/Y"
-        Me.sy_id.Name = "sy_id"
-        Me.sy_id.ReadOnly = True
-        Me.sy_id.Visible = False
-        '
-        's_Midi
-        '
-        Me.s_Midi.DataPropertyName = "stud_midI"
-        Me.s_Midi.HeaderText = "Middle Initial"
-        Me.s_Midi.Name = "s_Midi"
-        Me.s_Midi.ReadOnly = True
-        '
-        's_lName
-        '
-        Me.s_lName.DataPropertyName = "stud_Lname"
-        Me.s_lName.HeaderText = "Last Name"
-        Me.s_lName.Name = "s_lName"
-        Me.s_lName.ReadOnly = True
-        '
-        's_fName
-        '
-        Me.s_fName.DataPropertyName = "stud_fname"
-        Me.s_fName.HeaderText = "First Name"
-        Me.s_fName.Name = "s_fName"
-        Me.s_fName.ReadOnly = True
-        '
-        's_id
-        '
-        Me.s_id.DataPropertyName = "stud_id"
-        Me.s_id.HeaderText = "Stud. id"
-        Me.s_id.Name = "s_id"
-        Me.s_id.ReadOnly = True
-        '
         'col_estud_id
         '
         Me.col_estud_id.DataPropertyName = "estud_id"
@@ -2581,21 +2581,21 @@ Partial Class frm_slists
         Me.col_estud_mi.Name = "col_estud_mi"
         Me.col_estud_mi.ReadOnly = True
         '
-        'col_esy_name
+        'col_esy_id
         '
-        Me.col_esy_name.DataPropertyName = "esy_id"
-        Me.col_esy_name.HeaderText = "S/Y"
-        Me.col_esy_name.Name = "col_esy_name"
-        Me.col_esy_name.ReadOnly = True
-        Me.col_esy_name.Visible = False
+        Me.col_esy_id.DataPropertyName = "esy_id"
+        Me.col_esy_id.HeaderText = "S/Y"
+        Me.col_esy_id.Name = "col_esy_id"
+        Me.col_esy_id.ReadOnly = True
+        Me.col_esy_id.Visible = False
         '
-        'col_egl_name
+        'col_egl_id
         '
-        Me.col_egl_name.DataPropertyName = "egl_id"
-        Me.col_egl_name.HeaderText = "GL"
-        Me.col_egl_name.Name = "col_egl_name"
-        Me.col_egl_name.ReadOnly = True
-        Me.col_egl_name.Visible = False
+        Me.col_egl_id.DataPropertyName = "egl_id"
+        Me.col_egl_id.HeaderText = "GL"
+        Me.col_egl_id.Name = "col_egl_id"
+        Me.col_egl_id.ReadOnly = True
+        Me.col_egl_id.Visible = False
         '
         'frm_slists
         '
@@ -2793,11 +2793,10 @@ Partial Class frm_slists
     Friend WithEvents sem_id As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents yl_id As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents crs_id As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents col_estud_id As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents col_estud_fname As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents col_estud_lname As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents col_estud_mi As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents col_esy_name As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents col_egl_name As System.Windows.Forms.DataGridViewTextBoxColumn
-
+    Friend WithEvents col_estud_id As DataGridViewTextBoxColumn
+    Friend WithEvents col_estud_fname As DataGridViewTextBoxColumn
+    Friend WithEvents col_estud_lname As DataGridViewTextBoxColumn
+    Friend WithEvents col_estud_mi As DataGridViewTextBoxColumn
+    Friend WithEvents col_esy_id As DataGridViewTextBoxColumn
+    Friend WithEvents col_egl_id As DataGridViewTextBoxColumn
 End Class

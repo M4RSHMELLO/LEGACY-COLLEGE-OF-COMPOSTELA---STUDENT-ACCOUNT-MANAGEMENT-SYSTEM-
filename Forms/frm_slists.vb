@@ -470,8 +470,8 @@ Public Class frm_slists
             Dim i = e.RowIndex
             With dg_eStudRecords
 
-                Dim querry As String = "Select c.crs_name from tbl_student s inner join tbl_coll_course c on s.crs_id=c.crs_id where s.stud_id = '" & txtb_studId.Text & "'"
-                Dim querry2 As String = "Select y.yl_name from tbl_student s inner join tbl_year_level y on s.yl_id=y.yl_id where s.stud_id = '" & txtb_studId.Text & "'"
+                Dim querry As String = "Select esy_name from tbl_elem_sy where esy_id='" & .Item("col_esy_id", i).Value & "'"
+                Dim querry2 As String = "Select egl_name from tbl_elem_gradelevel where egl_id='" & .Item("col_egl_id", i).Value & "'"
                 _dbConnection("db_lccsams")
                 eStud_id = .Item("col_estud_id", i).Value
                 eStudname = .Item("col_estud_fname", i).Value.ToString.ToUpper + " " + .Item("col_estud_mi", i).Value.ToString.ToUpper + " " + .Item("col_estud_lname", i).Value.ToString.ToUpper
