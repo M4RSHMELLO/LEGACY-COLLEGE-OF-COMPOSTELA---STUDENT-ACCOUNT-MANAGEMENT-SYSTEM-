@@ -25,7 +25,7 @@ Module lccsams
     'shared stud_data
     Public fname As String
     Public lname As String
-    Public stud_id As String
+    Public stud_id As Integer
     Public stud_name As String
     Public stud_crs As String
     Public stud_sem As String
@@ -45,7 +45,7 @@ Module lccsams
     Public eSelect_GL As String = "select * from tbl_elem_gradelevel"
     Public eSelect_studRec As String = "select * from tbl_elem_students order by estud_lname asc,estud_fname asc"
 
-    Public eStud_id As String
+    Public eStud_id As Integer
     Public eFname As String
     Public eLname As String
     Public eStudname As String

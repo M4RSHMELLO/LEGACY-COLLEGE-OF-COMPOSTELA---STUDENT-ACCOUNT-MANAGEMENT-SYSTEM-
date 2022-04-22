@@ -266,7 +266,7 @@ Public Class frm_slists
     End Sub
     Private Sub btn_gotoAcct_Click(sender As Object, e As EventArgs) Handles btn_gotoAcct.Click
         Try
-            If stud_id = "" Then
+            If txtb_studId.Text = "" Then
                 MessageBox.Show("Pag select sag estudyanto bago ka mo proceed")
             Else
                 current_menu = 2
@@ -364,7 +364,7 @@ Public Class frm_slists
 
     Private Sub btn_eViewAccount_Click(sender As Object, e As EventArgs) Handles btn_eViewAccount.Click
         Try
-            If eStud_id = "" Then
+            If txtb_eStudID.Text = "" Then
                 MessageBox.Show("please select a student before you proceed")
             Else
                 current_menu = 2
@@ -392,7 +392,7 @@ Public Class frm_slists
 
             Select Case b
                 Case 1
-                    Dim insertStudData = "Insert into tbl_elem_students values (estud_id='" & txtb_eStudID.Text & "',estud_fname='" & txtb_eStudFname.Text & "',estud_lname='" & txtb_estudLname.Text & "',estud_mi='" & txtb_estudMI.Text & "',esy_id='" & cbo_eSYName.SelectedValue & "',egl_id='" & cbo_eGradeLevel.SelectedValue & "')"
+                    Dim insertStudData = "Insert into tbl_elem_students values ('" & txtb_eStudID.Text & "','" & txtb_eStudFname.Text & "','" & txtb_estudLname.Text & "','" & txtb_estudMI.Text & "','" & cbo_eSYName.SelectedValue & "','" & cbo_eGradeLevel.SelectedValue & "')"
                     _dbConnection("db_lccsams")
                     _insertData(insertStudData)
                     dlg_savesuccessfully.ShowDialog()
