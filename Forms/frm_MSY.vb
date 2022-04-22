@@ -142,11 +142,8 @@
     Private Sub btn_egl_update_Click(sender As Object, e As EventArgs) Handles btn_egl_update.Click
         If MessageBox.Show("Do you want to update this year level? " & vbNewLine & "Name: " & lbo_eglRec.Text, "", MessageBoxButtons.YesNo) = DialogResult.Yes Then
             egl_name = InputBox("Enter a new name ")
-<<<<<<< HEAD
             _updateData("Update tbl_elem_gradelevel  set yl_name='" & egl_name & "' where yl_id='" & lbo_eglRec.SelectedValue & "'")
-=======
             _updateData("Update tbl_year_level  set yl_name='" & egl_name & "' where yl_id='" & lbo_eglRec.SelectedValue & "'")
->>>>>>> afd393cbde2df89d90312264cf9164f11f2897ae
             _loadToListBox(eSelect_GL, lbo_eglRec)
         End If
     End Sub
