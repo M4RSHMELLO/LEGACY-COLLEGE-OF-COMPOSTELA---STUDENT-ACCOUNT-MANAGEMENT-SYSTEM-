@@ -49,6 +49,22 @@ Public Class frm_slists
                 _displayRecords(eSelect_studRec, dg_eStudRecords)
                 cbo_eSearchBY.SelectedIndex = 1
 
+            Case 3
+                _loadToCombobox(sSelect_SY, cbo_sSY)
+                _loadToCombobox(sSelect_GL, cbo_sGL)
+                cbo_sSearchBy.SelectedIndex = 1
+                txtb_sFname.Clear()
+                txtb_sLname.Clear()
+                txtb_smi.Clear()
+                cbo_sSY.SelectedIndex = -1
+                cbo_sGL.SelectedIndex = -1
+                _dbConnection("db_lccsams")
+                _displayRecords(sSelect_studRec, dg_sStudRec)
+
+
+
+
+
         End Select
     End Sub
     '######################################################College Dept Section#####################################################################
@@ -331,7 +347,7 @@ Public Class frm_slists
     End Sub
 
 
-    ''Elementary Section ########################################################################################################################################################
+    ''###########################################################Elementary Section ################################################################################
     Dim b As Integer
     Private Sub txtb_eSearch_KeyUp(sender As Object, e As KeyEventArgs) Handles txtb_eSearch.KeyUp
         Select Case cbo_SearchBy.SelectedItem.ToString
@@ -349,7 +365,7 @@ Public Class frm_slists
     Private Sub btn_eViewAccount_Click(sender As Object, e As EventArgs) Handles btn_eViewAccount.Click
         Try
             If eStud_id = "" Then
-                MessageBox.Show("Pag select sag estudyanto bago ka mo proceed")
+                MessageBox.Show("please select a student before you proceed")
             Else
                 current_menu = 2
                 Dashboard.btn_menuStudentsAccount_click(sender, e)
@@ -376,13 +392,15 @@ Public Class frm_slists
 
             Select Case b
                 Case 1
-                    _insertdataOfStudents()
+                    Dim querry1 As String = "Insert into tbl_elem_students values (estud_id='" & txtb_eStudID.Text & "',estud_fname='" & txtb_eStudFname.Text & "',estud_lname='" & txtb_estudLname.Text & "',estud_mi='" & txtb_estudMI.Text & "',esy_id='" & cbo_eSYName.SelectedValue & "',egl_id='" & cbo_eGradeLevel.SelectedValue & "')"
+                    _dbConnection("db_lccsams")
+                    _insertData(querry1)
                     dlg_savesuccessfully.ShowDialog()
                     _displayRecords(sStudR, dg_eStudRecords)
                 Case 2
-                    Dim querry3 = " "
+                    Dim querry2 = "update tbl_elem_students set estud_fname='" & txtb_eStudFname.Text & "',estud_lname='" & txtb_estudLname.Text & "',estud_mi='" & txtb_estudMI.Text & "',esy_id='" & cbo_eSYName.SelectedValue & "',egl_id='" & cbo_eGradeLevel.SelectedValue & "' where estud_id='" & txtb_eStudID.Text & "' "
                     _dbConnection("db_lccsams")
-                    _updateData(querry3)
+                    _updateData(querry2)
                     _displayRecords(sStudR, dg_eStudRecords)
                     UpdatedSuccessfully.ShowDialog()
             End Select
@@ -503,6 +521,19 @@ Public Class frm_slists
                 _dbConnection("db_lccsams")
                 _displayRecords("select * from tbl_elem_students where estud_id Like '" & txtb_eSearch.Text & "%' ", dg_eStudRecords)
         End Select
+    End Sub
+
+    Private Sub btn_sViewAccount_Click(sender As Object, e As EventArgs) Handles btn_sViewAccount.Click
+        Try
+            If sStud_id = "" Then
+                MessageBox.Show("Pag select sag estudyanto bago ka mo proceed")
+            Else
+                current_menu = 3
+                Dashboard.btn_menuStudentsAccount_click(sender, e)
+            End If
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
     End Sub
 
     Private Sub btn_sAddStud_Click(sender As Object, e As EventArgs) Handles btn_sAddStud.Click
@@ -626,7 +657,6 @@ Public Class frm_slists
                 txtb_sFname.Text = .Item("col_estud_fname", i).Value.ToString.ToUpper
                 txtb_sLname.Text = .Item("col_estud_lname", i).Value.ToString.ToUpper
                 txtb_smi.Text = .Item("col_estud_mi", i).Value.ToString.ToUpper
-
                 _selectComboBoxText(querry, cbo_sSY)
                 _selectComboBoxText(querry2, cbo_sGL)
 
@@ -637,4 +667,162 @@ Public Class frm_slists
         End Try
     End Sub
 
+    '####################################################Junior-High department Section##################################################################
+    Dim d As Integer = 0
+    Private Sub txtb_jSearch_KeyUp(sender As Object, e As KeyEventArgs) Handles txtb_jSearch.KeyUp
+        Select Case cbo_jSearchBy.SelectedItem.ToString
+            Case "Name"
+                _dbConnection("db_lccsams")
+                _displayRecords(" select * from tbl_elem_students where estud_fname Like '%" & txtb_eSearch.Text & "%' or estud_lname  Like '%" & txtb_eSearch.Text & "%' ", dg_eStudRecords)
+
+            Case "ID Number"
+                _dbConnection("db_lccsams")
+                _displayRecords("select * from tbl_elem_students where estud_id Like '" & txtb_eSearch.Text & "%' ", dg_eStudRecords)
+        End Select
+    End Sub
+
+    Private Sub btn_jViewAcct_Click(sender As Object, e As EventArgs) Handles btn_jViewAcct.Click
+        Try
+            If sStud_id = "" Then
+                MessageBox.Show("Pag select sag estudyanto bago ka mo proceed")
+            Else
+                current_menu = 4
+                Dashboard.btn_menuStudentsAccount_click(sender, e)
+            End If
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
+
+    Private Sub btn_jAddStud_Click(sender As Object, e As EventArgs) Handles btn_jAddStud.Click
+        If MessageBox.Show("", "Do You want to add new student", MessageBoxButtons.YesNo) = DialogResult.Yes Then
+            txtb_jStudFname.Enabled = True
+            txtb_jStudLname.Enabled = True
+            txtb_jStudMI.Enabled = True
+
+            cbo_jSY.Enabled = True
+            cbo_jGL.Enabled = True
+            dg_jStudRec.Enabled = False
+
+
+            'clear selection
+            txtb_jStudFname.Clear()
+            txtb_jStudLname.Clear()
+            txtb_jStudMI.Clear()
+            cbo_jSY.SelectedIndex = -1
+            cbo_jGL.SelectedIndex = -1
+            random()
+            txtb_jStud_id.Text = randomNumber
+
+            btn_jAddStud.Enabled = False
+            btn_jCancel.Enabled = True
+            btn_jSave.Enabled = True
+            btn_jUpdateStud.Enabled = False
+            btn_jViewAcct.Enabled = False
+            d = 1
+
+        End If
+    End Sub
+
+    Private Sub btn_jUpdateStud_Click(sender As Object, e As EventArgs) Handles btn_jUpdateStud.Click
+        If MessageBox.Show("", "Do You want to Update a Student?", MessageBoxButtons.YesNo) = DialogResult.Yes Then
+            txtb_jStudFname.Enabled = True
+            txtb_jStudLname.Enabled = True
+            txtb_jStudMI.Enabled = True
+            cbo_jSY.Enabled = True
+            cbo_jGL.Enabled = True
+            dg_jStudRec.Enabled = False
+
+            btn_jUpdateStud.Enabled = False
+            btn_jSave.Enabled = True
+            btn_jAddStud.Enabled = False
+            dg_jStudRec.Enabled = False
+            btn_jViewAcct.Enabled = False
+            btn_jCancel.Enabled = True
+            d = 2
+
+
+        End If
+    End Sub
+
+    Private Sub btn_jSave_Click(sender As Object, e As EventArgs) Handles btn_jSave.Click
+        If txtb_jStudFname.Text = "" Or txtb_jStudLname.Text = "" Or cbo_jGL.Text = "" Or cbo_jSY.Text = "" Then
+            MessageBox.Show("Please fill-up all fields!")
+        Else
+            txtb_jStudFname.Enabled = False
+            txtb_jStudLname.Enabled = False
+            txtb_jStudMI.Enabled = False
+            cbo_jSY.Enabled = False
+            cbo_jGL.Enabled = False
+
+
+            btn_jAddStud.Enabled = True
+            btn_jUpdateStud.Enabled = True
+            dg_jStudRec.Enabled = True
+            btn_jViewAcct.Enabled = True
+            btn_jCancel.Enabled = False
+            btn_jSave.Enabled = False
+            Select Case d
+                Case 1
+                    _insertdataOfStudents()
+                    dlg_savesuccessfully.ShowDialog()
+                    _displayRecords(sStudR, dg_jStudRec)
+                Case 2
+                    Dim querry3 = " "
+                    _dbConnection("db_lccsams")
+                    _updateData(querry3)
+                    _displayRecords(sStudR, dg_jStudRec)
+                    UpdatedSuccessfully.ShowDialog()
+            End Select
+        End If
+    End Sub
+
+    Private Sub btn_jCancel_Click(sender As Object, e As EventArgs) Handles btn_jCancel.Click
+        'disabled
+        txtb_jStudFname.Enabled = False
+        txtb_jStudLname.Enabled = False
+        txtb_jStudMI.Enabled = False
+        cbo_jSY.Enabled = False
+        cbo_jGL.Enabled = False
+        'clear selection
+        txtb_jStudFname.Clear()
+        txtb_jStudLname.Clear()
+        txtb_jStudMI.Clear()
+        cbo_jSY.SelectedIndex = -1
+        cbo_jGL.SelectedIndex = -1
+
+        btn_jSave.Enabled = False
+        btn_jAddStud.Enabled = True
+        btn_jUpdateStud.Enabled = True
+        dg_jStudRec.Enabled = True
+        btn_jViewAcct.Enabled = True
+        btn_jCancel.Enabled = False
+    End Sub
+
+    Private Sub dg_jStudRec_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dg_jStudRec.CellClick
+        Try
+            Dim i = e.RowIndex
+            With dg_jStudRec
+
+                Dim querry As String = "Select esy_name from tbl_elem_sy where esy_id='" & .Item("col_sSY_id", i).Value & "'"
+                Dim querry2 As String = "Select egl_name from tbl_elem_gradelevel where egl_id='" & .Item("col_sGl_id", i).Value & "'"
+                _dbConnection("db_lccsams")
+                sStud_id = .Item("col_sStud_id", i).Value
+                sStudname = .Item("col_estud_fname", i).Value.ToString.ToUpper + " " + .Item("col_estud_mi", i).Value.ToString.ToUpper + " " + .Item("col_estud_lname", i).Value.ToString.ToUpper
+                sStudSY = .Item("col_estud_id", i).Value
+                sStudGL = .Item("col_estud_id", i).Value
+
+                txtb_sStud_id.Text = .Item("col_estud_id", i).Value
+                txtb_sFname.Text = .Item("col_estud_fname", i).Value.ToString.ToUpper
+                txtb_sLname.Text = .Item("col_estud_lname", i).Value.ToString.ToUpper
+                txtb_smi.Text = .Item("col_estud_mi", i).Value.ToString.ToUpper
+                _selectComboBoxText(querry, cbo_sSY)
+                _selectComboBoxText(querry2, cbo_sGL)
+
+            End With
+
+        Catch ex As Exception
+            MessageBox.Show("Error: " & ex.Message)
+        End Try
+    End Sub
 End Class

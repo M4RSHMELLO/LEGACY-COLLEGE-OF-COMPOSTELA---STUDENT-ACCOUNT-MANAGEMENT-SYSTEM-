@@ -83,7 +83,7 @@ Partial Class dlg_savesuccessfully
         '
         'PictureBox1
         '
-        Me.PictureBox1.Image = Global.LCC_SAMS_ProtoType.My.Resources.Resources.savesuccessfully1
+        Me.PictureBox1.Image = Global.LCC_SAMS_Project.My.Resources.Resources.savesuccessfully1
         Me.PictureBox1.Location = New System.Drawing.Point(1, 12)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(228, 178)

@@ -77,7 +77,7 @@ Partial Class MessageError_Dialog
         '
         'PictureBox1
         '
-        Me.PictureBox1.Image = Global.LCC_SAMS_ProtoType.My.Resources.Resources.loginerroricon
+        Me.PictureBox1.Image = Global.LCC_SAMS_Project.My.Resources.Resources.loginerroricon
         Me.PictureBox1.Location = New System.Drawing.Point(-15, 19)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(228, 178)

@@ -55,29 +55,28 @@ Partial Class frm_MSY
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.elem_dep = New System.Windows.Forms.TabPage()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.ListBox1 = New System.Windows.Forms.ListBox()
-        Me.Button5 = New System.Windows.Forms.Button()
+        Me.btn_egl_update = New System.Windows.Forms.Button()
+        Me.lbo_eglRec = New System.Windows.Forms.ListBox()
+        Me.btn_egl_new = New System.Windows.Forms.Button()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
+        Me.dp_esy_endDate = New System.Windows.Forms.DateTimePicker()
+        Me.txtb_esy_start = New System.Windows.Forms.TextBox()
+        Me.dp_esy_startDate = New System.Windows.Forms.DateTimePicker()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtb_esy_end = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.btn_esy_New = New System.Windows.Forms.Button()
+        Me.btn_esy_save = New System.Windows.Forms.Button()
+        Me.btn_esy_update = New System.Windows.Forms.Button()
+        Me.dg_esyRec = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.sh_dept = New System.Windows.Forms.TabPage()
+        Me.jh_dept = New System.Windows.Forms.TabPage()
         Me.PrintDialog1 = New System.Windows.Forms.PrintDialog()
         Me.TabControl1.SuspendLayout()
         Me.college_dept.SuspendLayout()
@@ -91,16 +90,15 @@ Partial Class frm_MSY
         Me.GroupBox3.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.Panel5.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dg_esyRec, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TabControl1
         '
         Me.TabControl1.Controls.Add(Me.college_dept)
         Me.TabControl1.Controls.Add(Me.elem_dep)
-        Me.TabControl1.Controls.Add(Me.TabPage1)
-        Me.TabControl1.Controls.Add(Me.TabPage2)
-        Me.TabControl1.Controls.Add(Me.TabPage3)
+        Me.TabControl1.Controls.Add(Me.sh_dept)
+        Me.TabControl1.Controls.Add(Me.jh_dept)
         Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TabControl1.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TabControl1.Location = New System.Drawing.Point(0, 0)
@@ -451,9 +449,9 @@ Partial Class frm_MSY
         '
         'GroupBox3
         '
-        Me.GroupBox3.Controls.Add(Me.Button4)
-        Me.GroupBox3.Controls.Add(Me.ListBox1)
-        Me.GroupBox3.Controls.Add(Me.Button5)
+        Me.GroupBox3.Controls.Add(Me.btn_egl_update)
+        Me.GroupBox3.Controls.Add(Me.lbo_eglRec)
+        Me.GroupBox3.Controls.Add(Me.btn_egl_new)
         Me.GroupBox3.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox3.Location = New System.Drawing.Point(596, 6)
         Me.GroupBox3.Name = "GroupBox3"
@@ -462,48 +460,48 @@ Partial Class frm_MSY
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Grade Level"
         '
-        'Button4
+        'btn_egl_update
         '
-        Me.Button4.BackColor = System.Drawing.Color.FromArgb(CType(CType(108, Byte), Integer), CType(CType(105, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button4.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(80, 189)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(68, 33)
-        Me.Button4.TabIndex = 21
-        Me.Button4.Text = "UPDATE"
-        Me.Button4.UseVisualStyleBackColor = False
+        Me.btn_egl_update.BackColor = System.Drawing.Color.FromArgb(CType(CType(108, Byte), Integer), CType(CType(105, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.btn_egl_update.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_egl_update.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_egl_update.Location = New System.Drawing.Point(80, 189)
+        Me.btn_egl_update.Name = "btn_egl_update"
+        Me.btn_egl_update.Size = New System.Drawing.Size(68, 33)
+        Me.btn_egl_update.TabIndex = 21
+        Me.btn_egl_update.Text = "UPDATE"
+        Me.btn_egl_update.UseVisualStyleBackColor = False
         '
-        'ListBox1
+        'lbo_eglRec
         '
-        Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.ItemHeight = 25
-        Me.ListBox1.Location = New System.Drawing.Point(6, 29)
-        Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(289, 154)
-        Me.ListBox1.TabIndex = 23
+        Me.lbo_eglRec.FormattingEnabled = True
+        Me.lbo_eglRec.ItemHeight = 25
+        Me.lbo_eglRec.Location = New System.Drawing.Point(6, 29)
+        Me.lbo_eglRec.Name = "lbo_eglRec"
+        Me.lbo_eglRec.Size = New System.Drawing.Size(289, 154)
+        Me.lbo_eglRec.TabIndex = 23
         '
-        'Button5
+        'btn_egl_new
         '
-        Me.Button5.BackColor = System.Drawing.Color.FromArgb(CType(CType(108, Byte), Integer), CType(CType(105, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button5.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button5.Location = New System.Drawing.Point(6, 189)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(68, 33)
-        Me.Button5.TabIndex = 20
-        Me.Button5.Text = "NEW"
-        Me.Button5.UseVisualStyleBackColor = False
+        Me.btn_egl_new.BackColor = System.Drawing.Color.FromArgb(CType(CType(108, Byte), Integer), CType(CType(105, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.btn_egl_new.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_egl_new.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_egl_new.Location = New System.Drawing.Point(6, 189)
+        Me.btn_egl_new.Name = "btn_egl_new"
+        Me.btn_egl_new.Size = New System.Drawing.Size(68, 33)
+        Me.btn_egl_new.TabIndex = 20
+        Me.btn_egl_new.Text = "NEW"
+        Me.btn_egl_new.UseVisualStyleBackColor = False
         '
         'Panel4
         '
         Me.Panel4.BackColor = System.Drawing.SystemColors.Control
         Me.Panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Panel4.Controls.Add(Me.Panel5)
-        Me.Panel4.Controls.Add(Me.Button1)
-        Me.Panel4.Controls.Add(Me.Button2)
-        Me.Panel4.Controls.Add(Me.Button3)
-        Me.Panel4.Controls.Add(Me.DataGridView1)
+        Me.Panel4.Controls.Add(Me.btn_esy_New)
+        Me.Panel4.Controls.Add(Me.btn_esy_save)
+        Me.Panel4.Controls.Add(Me.btn_esy_update)
+        Me.Panel4.Controls.Add(Me.dg_esyRec)
         Me.Panel4.Location = New System.Drawing.Point(3, 6)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(576, 505)
@@ -513,11 +511,11 @@ Partial Class frm_MSY
         '
         Me.Panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Panel5.Controls.Add(Me.Label6)
-        Me.Panel5.Controls.Add(Me.DateTimePicker1)
-        Me.Panel5.Controls.Add(Me.TextBox1)
-        Me.Panel5.Controls.Add(Me.DateTimePicker2)
+        Me.Panel5.Controls.Add(Me.dp_esy_endDate)
+        Me.Panel5.Controls.Add(Me.txtb_esy_start)
+        Me.Panel5.Controls.Add(Me.dp_esy_startDate)
         Me.Panel5.Controls.Add(Me.Label7)
-        Me.Panel5.Controls.Add(Me.TextBox2)
+        Me.Panel5.Controls.Add(Me.txtb_esy_end)
         Me.Panel5.Controls.Add(Me.Label9)
         Me.Panel5.Controls.Add(Me.Label10)
         Me.Panel5.Location = New System.Drawing.Point(24, 27)
@@ -536,34 +534,34 @@ Partial Class frm_MSY
         Me.Label6.TabIndex = 17
         Me.Label6.Text = "TO"
         '
-        'DateTimePicker1
+        'dp_esy_endDate
         '
-        Me.DateTimePicker1.CustomFormat = "yyyy-MM-dd"
-        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.DateTimePicker1.Location = New System.Drawing.Point(294, 67)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(108, 26)
-        Me.DateTimePicker1.TabIndex = 19
-        Me.DateTimePicker1.Value = New Date(2022, 4, 30, 0, 0, 0, 0)
+        Me.dp_esy_endDate.CustomFormat = "yyyy-MM-dd"
+        Me.dp_esy_endDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.dp_esy_endDate.Location = New System.Drawing.Point(294, 67)
+        Me.dp_esy_endDate.Name = "dp_esy_endDate"
+        Me.dp_esy_endDate.Size = New System.Drawing.Size(108, 26)
+        Me.dp_esy_endDate.TabIndex = 19
+        Me.dp_esy_endDate.Value = New Date(2022, 4, 30, 0, 0, 0, 0)
         '
-        'TextBox1
+        'txtb_esy_start
         '
-        Me.TextBox1.Enabled = False
-        Me.TextBox1.Location = New System.Drawing.Point(149, 19)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(108, 24)
-        Me.TextBox1.TabIndex = 3
+        Me.txtb_esy_start.Enabled = False
+        Me.txtb_esy_start.Location = New System.Drawing.Point(149, 19)
+        Me.txtb_esy_start.Multiline = True
+        Me.txtb_esy_start.Name = "txtb_esy_start"
+        Me.txtb_esy_start.Size = New System.Drawing.Size(108, 24)
+        Me.txtb_esy_start.TabIndex = 3
         '
-        'DateTimePicker2
+        'dp_esy_startDate
         '
-        Me.DateTimePicker2.CustomFormat = "yyyy-MM-dd"
-        Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.DateTimePicker2.Location = New System.Drawing.Point(149, 67)
-        Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(108, 26)
-        Me.DateTimePicker2.TabIndex = 18
-        Me.DateTimePicker2.Value = New Date(2022, 2, 24, 0, 0, 0, 0)
+        Me.dp_esy_startDate.CustomFormat = "yyyy-MM-dd"
+        Me.dp_esy_startDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.dp_esy_startDate.Location = New System.Drawing.Point(149, 67)
+        Me.dp_esy_startDate.Name = "dp_esy_startDate"
+        Me.dp_esy_startDate.Size = New System.Drawing.Size(108, 26)
+        Me.dp_esy_startDate.TabIndex = 18
+        Me.dp_esy_startDate.Value = New Date(2022, 2, 24, 0, 0, 0, 0)
         '
         'Label7
         '
@@ -575,14 +573,14 @@ Partial Class frm_MSY
         Me.Label7.TabIndex = 14
         Me.Label7.Text = "DATE"
         '
-        'TextBox2
+        'txtb_esy_end
         '
-        Me.TextBox2.Enabled = False
-        Me.TextBox2.Location = New System.Drawing.Point(294, 19)
-        Me.TextBox2.Multiline = True
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(108, 24)
-        Me.TextBox2.TabIndex = 11
+        Me.txtb_esy_end.Enabled = False
+        Me.txtb_esy_end.Location = New System.Drawing.Point(294, 19)
+        Me.txtb_esy_end.Multiline = True
+        Me.txtb_esy_end.Name = "txtb_esy_end"
+        Me.txtb_esy_end.Size = New System.Drawing.Size(108, 24)
+        Me.txtb_esy_end.TabIndex = 11
         '
         'Label9
         '
@@ -604,58 +602,58 @@ Partial Class frm_MSY
         Me.Label10.TabIndex = 2
         Me.Label10.Text = "TO"
         '
-        'Button1
+        'btn_esy_New
         '
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(108, Byte), Integer), CType(CType(105, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(25, 454)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(68, 33)
-        Me.Button1.TabIndex = 8
-        Me.Button1.Text = "NEW"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btn_esy_New.BackColor = System.Drawing.Color.FromArgb(CType(CType(108, Byte), Integer), CType(CType(105, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.btn_esy_New.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_esy_New.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_esy_New.Location = New System.Drawing.Point(25, 454)
+        Me.btn_esy_New.Name = "btn_esy_New"
+        Me.btn_esy_New.Size = New System.Drawing.Size(68, 33)
+        Me.btn_esy_New.TabIndex = 8
+        Me.btn_esy_New.Text = "NEW"
+        Me.btn_esy_New.UseVisualStyleBackColor = False
         '
-        'Button2
+        'btn_esy_save
         '
-        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(108, Byte), Integer), CType(CType(105, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.Button2.Enabled = False
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(173, 454)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(68, 33)
-        Me.Button2.TabIndex = 9
-        Me.Button2.Text = "SAVE"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.btn_esy_save.BackColor = System.Drawing.Color.FromArgb(CType(CType(108, Byte), Integer), CType(CType(105, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.btn_esy_save.Enabled = False
+        Me.btn_esy_save.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_esy_save.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_esy_save.Location = New System.Drawing.Point(173, 454)
+        Me.btn_esy_save.Name = "btn_esy_save"
+        Me.btn_esy_save.Size = New System.Drawing.Size(68, 33)
+        Me.btn_esy_save.TabIndex = 9
+        Me.btn_esy_save.Text = "SAVE"
+        Me.btn_esy_save.UseVisualStyleBackColor = False
         '
-        'Button3
+        'btn_esy_update
         '
-        Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(108, Byte), Integer), CType(CType(105, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(99, 454)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(68, 33)
-        Me.Button3.TabIndex = 10
-        Me.Button3.Text = "UPDATE"
-        Me.Button3.UseVisualStyleBackColor = False
+        Me.btn_esy_update.BackColor = System.Drawing.Color.FromArgb(CType(CType(108, Byte), Integer), CType(CType(105, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.btn_esy_update.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_esy_update.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_esy_update.Location = New System.Drawing.Point(99, 454)
+        Me.btn_esy_update.Name = "btn_esy_update"
+        Me.btn_esy_update.Size = New System.Drawing.Size(68, 33)
+        Me.btn_esy_update.TabIndex = 10
+        Me.btn_esy_update.Text = "UPDATE"
+        Me.btn_esy_update.UseVisualStyleBackColor = False
         '
-        'DataGridView1
+        'dg_esyRec
         '
-        Me.DataGridView1.AllowUserToAddRows = False
-        Me.DataGridView1.AllowUserToDeleteRows = False
-        Me.DataGridView1.AllowUserToOrderColumns = True
-        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4})
-        Me.DataGridView1.Location = New System.Drawing.Point(24, 187)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(525, 261)
-        Me.DataGridView1.TabIndex = 13
+        Me.dg_esyRec.AllowUserToAddRows = False
+        Me.dg_esyRec.AllowUserToDeleteRows = False
+        Me.dg_esyRec.AllowUserToOrderColumns = True
+        Me.dg_esyRec.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dg_esyRec.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.dg_esyRec.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dg_esyRec.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4})
+        Me.dg_esyRec.Location = New System.Drawing.Point(24, 187)
+        Me.dg_esyRec.Name = "dg_esyRec"
+        Me.dg_esyRec.ReadOnly = True
+        Me.dg_esyRec.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dg_esyRec.Size = New System.Drawing.Size(525, 261)
+        Me.dg_esyRec.TabIndex = 13
         '
         'DataGridViewTextBoxColumn1
         '
@@ -678,32 +676,23 @@ Partial Class frm_MSY
         Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
         Me.DataGridViewTextBoxColumn4.ReadOnly = True
         '
-        'TabPage1
+        'sh_dept
         '
-        Me.TabPage1.Location = New System.Drawing.Point(4, 30)
-        Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Size = New System.Drawing.Size(916, 537)
-        Me.TabPage1.TabIndex = 2
-        Me.TabPage1.Text = "TabPage1"
-        Me.TabPage1.UseVisualStyleBackColor = True
+        Me.sh_dept.Location = New System.Drawing.Point(4, 30)
+        Me.sh_dept.Name = "sh_dept"
+        Me.sh_dept.Size = New System.Drawing.Size(916, 537)
+        Me.sh_dept.TabIndex = 2
+        Me.sh_dept.Text = "Senior-High Dept"
+        Me.sh_dept.UseVisualStyleBackColor = True
         '
-        'TabPage2
+        'jh_dept
         '
-        Me.TabPage2.Location = New System.Drawing.Point(4, 30)
-        Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Size = New System.Drawing.Size(916, 537)
-        Me.TabPage2.TabIndex = 3
-        Me.TabPage2.Text = "TabPage2"
-        Me.TabPage2.UseVisualStyleBackColor = True
-        '
-        'TabPage3
-        '
-        Me.TabPage3.Location = New System.Drawing.Point(4, 30)
-        Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Size = New System.Drawing.Size(916, 537)
-        Me.TabPage3.TabIndex = 4
-        Me.TabPage3.Text = "TabPage3"
-        Me.TabPage3.UseVisualStyleBackColor = True
+        Me.jh_dept.Location = New System.Drawing.Point(4, 30)
+        Me.jh_dept.Name = "jh_dept"
+        Me.jh_dept.Size = New System.Drawing.Size(916, 537)
+        Me.jh_dept.TabIndex = 3
+        Me.jh_dept.Text = "Junior-High Dept"
+        Me.jh_dept.UseVisualStyleBackColor = True
         '
         'PrintDialog1
         '
@@ -731,7 +720,7 @@ Partial Class frm_MSY
         Me.Panel4.ResumeLayout(False)
         Me.Panel5.ResumeLayout(False)
         Me.Panel5.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dg_esyRec, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -770,27 +759,26 @@ Partial Class frm_MSY
     Friend WithEvents Panel4 As System.Windows.Forms.Panel
     Friend WithEvents Panel5 As System.Windows.Forms.Panel
     Friend WithEvents Label6 As System.Windows.Forms.Label
-    Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
-    Friend WithEvents DateTimePicker2 As System.Windows.Forms.DateTimePicker
+    Friend WithEvents dp_esy_endDate As System.Windows.Forms.DateTimePicker
+    Friend WithEvents txtb_esy_start As System.Windows.Forms.TextBox
+    Friend WithEvents dp_esy_startDate As System.Windows.Forms.DateTimePicker
     Friend WithEvents Label7 As System.Windows.Forms.Label
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
+    Friend WithEvents txtb_esy_end As System.Windows.Forms.TextBox
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents Label10 As System.Windows.Forms.Label
-    Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents Button3 As System.Windows.Forms.Button
-    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents btn_esy_New As System.Windows.Forms.Button
+    Friend WithEvents btn_esy_save As System.Windows.Forms.Button
+    Friend WithEvents btn_esy_update As System.Windows.Forms.Button
+    Friend WithEvents dg_esyRec As System.Windows.Forms.DataGridView
     Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents PrintDialog1 As System.Windows.Forms.PrintDialog
     Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
-    Friend WithEvents Button4 As System.Windows.Forms.Button
-    Friend WithEvents ListBox1 As System.Windows.Forms.ListBox
-    Friend WithEvents Button5 As System.Windows.Forms.Button
-    Friend WithEvents TabPage1 As System.Windows.Forms.TabPage
-    Friend WithEvents TabPage2 As System.Windows.Forms.TabPage
-    Friend WithEvents TabPage3 As System.Windows.Forms.TabPage
+    Friend WithEvents btn_egl_update As System.Windows.Forms.Button
+    Friend WithEvents lbo_eglRec As System.Windows.Forms.ListBox
+    Friend WithEvents btn_egl_new As System.Windows.Forms.Button
+    Friend WithEvents sh_dept As System.Windows.Forms.TabPage
+    Friend WithEvents jh_dept As System.Windows.Forms.TabPage
 
 End Class

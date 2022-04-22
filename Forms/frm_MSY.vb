@@ -41,27 +41,10 @@
 
     End Sub
 
-    Private Sub lbo_courses_SelectedIndexChanged(sender As Object, e As EventArgs)
-
-    End Sub
 
 
 
-    Private Sub btn_save_Click(sender As Object, e As EventArgs) Handles btn_save.Click
-        Select Case a
-            Case 1
-                Dim syN As String = txtb_syS.Text + "-" + " " + txtb_syE.Text
-                Dim strQueery6 As String = "Insert Into tbl_sch_year values(0,'" & syN & "','" & dp_Start.Text & "','" & dp_End.Text & "','" & cbo_semester.SelectedValue & "')"
-                _dbConnection("db_lccsams")
-                _insertData(strQueery6)
-                _displayRecords(s_msyR, dg_syR)
-            Case 2
-                Dim syName As String = txtb_syS.Text & "-" & txtb_syE.Text
-                _dbConnection("db_lccsams")
-                _updateData("update tbl_sch_year  set sy_name='" & syName & "',ssy_sDate='" & dp_Start.Text & "',sy_eDate='" & dp_End.Text & "',sem_id='" & cbo_semester.SelectedValue & "' where sy_id ='" & sy_id & "' ")
-                _displayRecords(s_msyR, dg_syR)
-        End Select
-    End Sub
+
 
     Private Sub btn_nYearlevel_Click_1(sender As Object, e As EventArgs) Handles btn_nYearlevel.Click
         inputedV = InputBox("Input New Year Level")
@@ -88,10 +71,69 @@
         a = 2
     End Sub
 
-    Private Sub btn_new_Click_1(sender As Object, e As EventArgs) Handles btn_new.Click
+    Private Sub btn_new_Click(sender As Object, e As EventArgs) Handles btn_new.Click
         txtb_syS.Enabled = True
         txtb_syE.Enabled = True
         btn_save.Enabled = True
         a = 1
+    End Sub
+
+    Private Sub btn_save_Click(sender As Object, e As EventArgs) Handles btn_save.Click
+        Select Case a
+            Case 1
+                Dim syN As String = txtb_syS.Text & "-" & txtb_syE.Text
+                Dim strQueery6 As String = "Insert Into tbl_sch_year values(0,'" & syN & "','" & dp_Start.Text & "','" & dp_End.Text & "','" & cbo_semester.SelectedValue & "')"
+                _dbConnection("db_lccsams")
+                _insertData(strQueery6)
+                _displayRecords(s_msyR, dg_syR)
+            Case 2
+                Dim syName As String = txtb_syS.Text & "-" & txtb_syE.Text
+                _dbConnection("db_lccsams")
+                _updateData("update tbl_sch_year  set sy_name='" & syName & "',ssy_sDate='" & dp_Start.Text & "',sy_eDate='" & dp_End.Text & "',sem_id='" & cbo_semester.SelectedValue & "' where sy_id ='" & sy_id & "' ")
+                _displayRecords(s_msyR, dg_syR)
+        End Select
+    End Sub
+    ''###########################################################Elementary Section ################################################################################
+    Dim b As Integer = 0
+    Dim esy_id As Integer
+
+    Private Sub btn_esy_New_Click(sender As Object, e As EventArgs) Handles btn_esy_New.Click
+        txtb_esy_start.Enabled = True
+        txtb_esy_end.Enabled = True
+        btn_esy_save.Enabled = True
+        b = 1
+    End Sub
+
+    Private Sub btn_esy_update_Click(sender As Object, e As EventArgs) Handles btn_esy_update.Click
+        If MessageBox.Show("", "Do You want to Update a School Year ?", MessageBoxButtons.YesNo) = DialogResult.Yes Then
+            txtb_esy_start.Enabled = True
+            txtb_esy_end.Enabled = True
+            btn_esy_save.Enabled = True
+        End If
+        b = 2
+    End Sub
+
+    Private Sub btn_esy_save_Click(sender As Object, e As EventArgs) Handles btn_esy_save.Click
+        Select Case b
+            Case 1
+                Dim esyN As String = txtb_esy_start.Text & "-" & txtb_esy_end.Text
+                Dim strQueery6 As String = "Insert Into tbl_elem_sy values(0,'" & esyN & "','" & dp_esy_startDate.Text & "','" & dp_esy_endDate.Text & "')"
+                _dbConnection("db_lccsams")
+                _insertData(strQueery6)
+                _displayRecords(s_msyR, dg_esyRec)
+            Case 2
+                Dim esyName As String = txtb_esy_start.Text & "-" & txtb_esy_end.Text
+                _dbConnection("db_lccsams")
+                _updateData("update tbl_elem_sy  set sy_name='" & esyName & "',ssy_sDate='" & dp_Start.Text & "',sy_eDate='" & dp_End.Text & "' where esy_id ='" & esy_id & "' ")
+                _displayRecords(s_msyR, dg_esyRec)
+        End Select
+    End Sub
+
+    Private Sub btn_egl_new_Click(sender As Object, e As EventArgs) Handles btn_egl_new.Click
+
+    End Sub
+
+    Private Sub btn_egl_update_Click(sender As Object, e As EventArgs) Handles btn_egl_update.Click
+
     End Sub
 End Class

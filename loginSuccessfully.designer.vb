@@ -75,7 +75,7 @@ Partial Class loginSuccessfully
         '
         'PictureBox1
         '
-        Me.PictureBox1.Image = Global.LCC_SAMS_ProtoType.My.Resources.Resources.success
+        Me.PictureBox1.Image = Global.LCC_SAMS_Project.My.Resources.Resources.success
         Me.PictureBox1.Location = New System.Drawing.Point(-6, 12)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(228, 178)
