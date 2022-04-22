@@ -96,6 +96,7 @@
     ''###########################################################Elementary Section ################################################################################
     Dim b As Integer = 0
     Dim esy_id As Integer
+    Dim egl_name as String
 
     Private Sub btn_esy_New_Click(sender As Object, e As EventArgs) Handles btn_esy_New.Click
         txtb_esy_start.Enabled = True
@@ -120,20 +121,29 @@
                 Dim strQueery6 As String = "Insert Into tbl_elem_sy values(0,'" & esyN & "','" & dp_esy_startDate.Text & "','" & dp_esy_endDate.Text & "')"
                 _dbConnection("db_lccsams")
                 _insertData(strQueery6)
-                _displayRecords(s_msyR, dg_esyRec)
+                _displayRecords(eSelect_SY, dg_esyRec)
             Case 2
                 Dim esyName As String = txtb_esy_start.Text & "-" & txtb_esy_end.Text
                 _dbConnection("db_lccsams")
                 _updateData("update tbl_elem_sy  set sy_name='" & esyName & "',ssy_sDate='" & dp_Start.Text & "',sy_eDate='" & dp_End.Text & "' where esy_id ='" & esy_id & "' ")
-                _displayRecords(s_msyR, dg_esyRec)
+                _displayRecords(eSelect_SY, dg_esyRec)
         End Select
     End Sub
 
     Private Sub btn_egl_new_Click(sender As Object, e As EventArgs) Handles btn_egl_new.Click
+            egl_name = InputBox("Input New Year Level")
+        strQuerry5 = "Insert into tbl_elem_gradelevel values ('0','" & egl_name & "')"
+        _dbConnection("db_lccsams")
+        _insertData(strQuerry5)
+        _loadToListBox(eSelect_GL, lbo_eglRec)
 
     End Sub
 
     Private Sub btn_egl_update_Click(sender As Object, e As EventArgs) Handles btn_egl_update.Click
-
+        If MessageBox.Show("Do you want to update this year level? " & vbNewLine & "Name: " & lbo_yearL.Text, "", MessageBoxButtons.YesNo) = DialogResult.Yes Then
+            egl_name = InputBox("Enter a new name ")
+            _updateData("Update tbl_year_level  set yl_name='" & egl_name & "' where yl_id='" & lbo_egl.SelectedValue & "'")
+            _loadToListBox(eSelect_GL, lbo_eglRec)
+        End If
     End Sub
 End Class
