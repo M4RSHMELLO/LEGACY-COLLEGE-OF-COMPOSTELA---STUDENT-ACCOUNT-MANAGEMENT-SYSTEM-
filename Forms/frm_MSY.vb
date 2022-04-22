@@ -3,14 +3,28 @@
     Dim strQuery3 As String
     Dim strQuerry5 As String
     Dim a As Integer = 0
-    Dim sy_id As String
+    Dim sy_id As Integer
     Private Sub frm_MYear_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         _dbConnection("db_lccsams")
         _loadToCombobox(slctS, cbo_semester)
         _loadToListBox(slctC, lbo_courses)
         _loadToListBox(slctYL, lbo_yearL)
         _displayRecords(s_msyR, dg_syR)
-        dg_syR.Columns("sy_id").Visible = False
+
+    End Sub
+
+    Private Sub TabControl1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles TabControl1.SelectedIndexChanged
+        Select Case TabControl1.SelectedIndex
+            Case 0
+                _dbConnection("db_lccsams")
+                _loadToCombobox(slctS, cbo_semester)
+                _loadToListBox(slctC, lbo_courses)
+                _loadToListBox(slctYL, lbo_yearL)
+                _displayRecords(s_msyR, dg_syR)
+            Case 1
+
+        End Select
+
     End Sub
 
     Private Sub btn_nCourse_Click(sender As Object, e As EventArgs) Handles btn_nCourse.Click
@@ -23,28 +37,21 @@
     End Sub
 
 
-    Private Sub dg_syR_CellClick(sender As Object, e As DataGridViewCellEventArgs)
+    Private Sub dg_syR_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dg_syR.CellClick
         Dim i = e.RowIndex
         With dg_syR
-            sy_id = .Item(0, i).Value
+            sy_id = .Item("col_sy_id", i).Value
         End With
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs)
+    Private Sub btn_Ucourse_Click(sender As Object, e As EventArgs) Handles btn_Ucourse.Click
         If MessageBox.Show("Do you want to update this course? " & vbNewLine & "Name: " & lbo_courses.Text, "", MessageBoxButtons.YesNo) = DialogResult.Yes Then
             inputedV = InputBox("Enter a new name ")
             _updateData("Update tbl_course set crs_name='" & inputedV & "' where crs_id='" & lbo_courses.SelectedValue & "'")
 
             _loadToListBox(slctC, lbo_courses)
         End If
-
-
     End Sub
-
-
-
-
-
 
     Private Sub btn_nYearlevel_Click_1(sender As Object, e As EventArgs) Handles btn_nYearlevel.Click
         inputedV = InputBox("Input New Year Level")
@@ -125,7 +132,7 @@
             Case 2
                 Dim esyName As String = txtb_esy_start.Text & "-" & txtb_esy_end.Text
                 _dbConnection("db_lccsams")
-                _updateData("update tbl_elem_sy  set sy_name='" & esyName & "',ssy_sDate='" & dp_Start.Text & "',sy_eDate='" & dp_End.Text & "' where esy_id ='" & esy_id & "' ")
+                _updateData("update tbl_elem_sy  set esy_name='" & esyName & "',esy_sdate='" & dp_Start.Text & "',esy_edate='" & dp_End.Text & "' where esy_id ='" & esy_id & "' ")
                 _displayRecords(eSelect_SY, dg_esyRec)
         End Select
     End Sub
@@ -142,9 +149,17 @@
     Private Sub btn_egl_update_Click(sender As Object, e As EventArgs) Handles btn_egl_update.Click
         If MessageBox.Show("Do you want to update this year level? " & vbNewLine & "Name: " & lbo_eglRec.Text, "", MessageBoxButtons.YesNo) = DialogResult.Yes Then
             egl_name = InputBox("Enter a new name ")
-            _updateData("Update tbl_elem_gradelevel  set yl_name='" & egl_name & "' where yl_id='" & lbo_eglRec.SelectedValue & "'")
-            _updateData("Update tbl_year_level  set yl_name='" & egl_name & "' where yl_id='" & lbo_eglRec.SelectedValue & "'")
+            _updateData("Update tbl_elem_gradelevel  set esy_eglname='" & egl_name & "' where egl_id='" & lbo_eglRec.SelectedValue & "'")
             _loadToListBox(eSelect_GL, lbo_eglRec)
         End If
     End Sub
+
+    Private Sub dg_esyRec_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dg_esyRec.CellClick
+        Dim i = e.RowIndex
+        With dg_esyRec
+            esy_id = .Item(0, i).Value
+        End With
+    End Sub
+
+
 End Class

@@ -49,6 +49,7 @@ Partial Class frm_MSY
         Me.btn_save = New System.Windows.Forms.Button()
         Me.btn_updateSchY = New System.Windows.Forms.Button()
         Me.dg_syR = New System.Windows.Forms.DataGridView()
+        Me.col_sy_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -72,12 +73,12 @@ Partial Class frm_MSY
         Me.btn_esy_save = New System.Windows.Forms.Button()
         Me.btn_esy_update = New System.Windows.Forms.Button()
         Me.dg_esyRec = New System.Windows.Forms.DataGridView()
+        Me.sh_dept = New System.Windows.Forms.TabPage()
+        Me.jh_dept = New System.Windows.Forms.TabPage()
+        Me.col_esy_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.sh_dept = New System.Windows.Forms.TabPage()
-        Me.jh_dept = New System.Windows.Forms.TabPage()
-        Me.PrintDialog1 = New System.Windows.Forms.PrintDialog()
         Me.TabControl1.SuspendLayout()
         Me.college_dept.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -399,13 +400,22 @@ Partial Class frm_MSY
         Me.dg_syR.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dg_syR.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.dg_syR.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dg_syR.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4})
+        Me.dg_syR.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.col_sy_id, Me.Column1, Me.Column2, Me.Column3, Me.Column4})
         Me.dg_syR.Location = New System.Drawing.Point(24, 187)
         Me.dg_syR.Name = "dg_syR"
         Me.dg_syR.ReadOnly = True
+        Me.dg_syR.RowHeadersVisible = False
         Me.dg_syR.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dg_syR.Size = New System.Drawing.Size(525, 261)
         Me.dg_syR.TabIndex = 13
+        '
+        'col_sy_id
+        '
+        Me.col_sy_id.DataPropertyName = "sy_id"
+        Me.col_sy_id.HeaderText = "ID"
+        Me.col_sy_id.Name = "col_sy_id"
+        Me.col_sy_id.ReadOnly = True
+        Me.col_sy_id.Visible = False
         '
         'Column1
         '
@@ -647,34 +657,13 @@ Partial Class frm_MSY
         Me.dg_esyRec.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dg_esyRec.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.dg_esyRec.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dg_esyRec.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4})
+        Me.dg_esyRec.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.col_esy_id, Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4})
         Me.dg_esyRec.Location = New System.Drawing.Point(24, 187)
         Me.dg_esyRec.Name = "dg_esyRec"
         Me.dg_esyRec.ReadOnly = True
         Me.dg_esyRec.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dg_esyRec.Size = New System.Drawing.Size(525, 261)
         Me.dg_esyRec.TabIndex = 13
-        '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "sy_name"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "SCH YEAR"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        Me.DataGridViewTextBoxColumn1.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "ssy_sDate"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "START DATE"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        Me.DataGridViewTextBoxColumn3.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn4
-        '
-        Me.DataGridViewTextBoxColumn4.DataPropertyName = "sy_eDate"
-        Me.DataGridViewTextBoxColumn4.HeaderText = "END DATE"
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        Me.DataGridViewTextBoxColumn4.ReadOnly = True
         '
         'sh_dept
         '
@@ -694,9 +683,34 @@ Partial Class frm_MSY
         Me.jh_dept.Text = "Junior-High Dept"
         Me.jh_dept.UseVisualStyleBackColor = True
         '
-        'PrintDialog1
+        'col_esy_id
         '
-        Me.PrintDialog1.UseEXDialog = True
+        Me.col_esy_id.DataPropertyName = "esy_id"
+        Me.col_esy_id.HeaderText = "Id"
+        Me.col_esy_id.Name = "col_esy_id"
+        Me.col_esy_id.ReadOnly = True
+        Me.col_esy_id.Visible = False
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "esy_name"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "SCH YEAR"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "esy_sdate"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "START DATE"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.DataPropertyName = "esy_edate"
+        Me.DataGridViewTextBoxColumn4.HeaderText = "END DATE"
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        Me.DataGridViewTextBoxColumn4.ReadOnly = True
         '
         'frm_MSY
         '
@@ -751,10 +765,6 @@ Partial Class frm_MSY
     Friend WithEvents btn_save As System.Windows.Forms.Button
     Friend WithEvents btn_updateSchY As System.Windows.Forms.Button
     Friend WithEvents dg_syR As System.Windows.Forms.DataGridView
-    Friend WithEvents Column1 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Column2 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Column3 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Column4 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents elem_dep As System.Windows.Forms.TabPage
     Friend WithEvents Panel4 As System.Windows.Forms.Panel
     Friend WithEvents Panel5 As System.Windows.Forms.Panel
@@ -770,15 +780,19 @@ Partial Class frm_MSY
     Friend WithEvents btn_esy_save As System.Windows.Forms.Button
     Friend WithEvents btn_esy_update As System.Windows.Forms.Button
     Friend WithEvents dg_esyRec As System.Windows.Forms.DataGridView
-    Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents PrintDialog1 As System.Windows.Forms.PrintDialog
     Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
     Friend WithEvents btn_egl_update As System.Windows.Forms.Button
     Friend WithEvents lbo_eglRec As System.Windows.Forms.ListBox
     Friend WithEvents btn_egl_new As System.Windows.Forms.Button
     Friend WithEvents sh_dept As System.Windows.Forms.TabPage
     Friend WithEvents jh_dept As System.Windows.Forms.TabPage
-
+    Friend WithEvents col_sy_id As DataGridViewTextBoxColumn
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents Column3 As DataGridViewTextBoxColumn
+    Friend WithEvents Column4 As DataGridViewTextBoxColumn
+    Friend WithEvents col_esy_id As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
 End Class

@@ -392,16 +392,16 @@ Public Class frm_slists
 
             Select Case b
                 Case 1
-                    Dim querry1 As String = "Insert into tbl_elem_students values (estud_id='" & txtb_eStudID.Text & "',estud_fname='" & txtb_eStudFname.Text & "',estud_lname='" & txtb_estudLname.Text & "',estud_mi='" & txtb_estudMI.Text & "',esy_id='" & cbo_eSYName.SelectedValue & "',egl_id='" & cbo_eGradeLevel.SelectedValue & "')"
+                    Dim insertStudData = "Insert into tbl_elem_students values (estud_id='" & txtb_eStudID.Text & "',estud_fname='" & txtb_eStudFname.Text & "',estud_lname='" & txtb_estudLname.Text & "',estud_mi='" & txtb_estudMI.Text & "',esy_id='" & cbo_eSYName.SelectedValue & "',egl_id='" & cbo_eGradeLevel.SelectedValue & "')"
                     _dbConnection("db_lccsams")
-                    _insertData(querry1)
+                    _insertData(insertStudData)
                     dlg_savesuccessfully.ShowDialog()
-                    _displayRecords(sStudR, dg_eStudRecords)
+                    _displayRecords(eSelect_studRec, dg_eStudRecords)
                 Case 2
                     Dim querry2 = "update tbl_elem_students set estud_fname='" & txtb_eStudFname.Text & "',estud_lname='" & txtb_estudLname.Text & "',estud_mi='" & txtb_estudMI.Text & "',esy_id='" & cbo_eSYName.SelectedValue & "',egl_id='" & cbo_eGradeLevel.SelectedValue & "' where estud_id='" & txtb_eStudID.Text & "' "
                     _dbConnection("db_lccsams")
                     _updateData(querry2)
-                    _displayRecords(sStudR, dg_eStudRecords)
+                    _displayRecords(eSelect_studRec, dg_eStudRecords)
                     UpdatedSuccessfully.ShowDialog()
             End Select
         End If
@@ -426,7 +426,7 @@ Public Class frm_slists
             cbo_eSYName.SelectedIndex = -1
             cbo_eGradeLevel.SelectedIndex = -1
             random()
-            txtb_studId.Text = randomNumber
+            txtb_eStudID.Text = randomNumber
 
             btn_eAddNewStud.Enabled = False
             btn_eCancel.Enabled = True
