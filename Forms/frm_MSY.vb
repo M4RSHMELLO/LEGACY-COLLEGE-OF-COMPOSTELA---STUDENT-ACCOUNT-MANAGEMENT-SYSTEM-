@@ -131,7 +131,7 @@
     End Sub
 
     Private Sub btn_egl_new_Click(sender As Object, e As EventArgs) Handles btn_egl_new.Click
-            egl_name = InputBox("Input New Year Level")
+        egl_name = InputBox("Input New Year Level")
         strQuerry5 = "Insert into tbl_elem_gradelevel values ('0','" & egl_name & "')"
         _dbConnection("db_lccsams")
         _insertData(strQuerry5)
