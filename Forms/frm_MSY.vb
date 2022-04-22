@@ -96,7 +96,7 @@
     ''###########################################################Elementary Section ################################################################################
     Dim b As Integer = 0
     Dim esy_id As Integer
-    Dim egl_name as String
+    Dim egl_name As String
 
     Private Sub btn_esy_New_Click(sender As Object, e As EventArgs) Handles btn_esy_New.Click
         txtb_esy_start.Enabled = True
@@ -142,7 +142,7 @@
     Private Sub btn_egl_update_Click(sender As Object, e As EventArgs) Handles btn_egl_update.Click
         If MessageBox.Show("Do you want to update this year level? " & vbNewLine & "Name: " & lbo_yearL.Text, "", MessageBoxButtons.YesNo) = DialogResult.Yes Then
             egl_name = InputBox("Enter a new name ")
-            _updateData("Update tbl_year_level  set yl_name='" & egl_name & "' where yl_id='" & lbo_egl.SelectedValue & "'")
+            _updateData("Update tbl_year_level  set yl_name='" & egl_name & "' where yl_id='" & lbo_eglRec.SelectedValue & "'")
             _loadToListBox(eSelect_GL, lbo_eglRec)
         End If
     End Sub
