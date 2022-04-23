@@ -30,6 +30,7 @@ Partial Class frm_slists
         Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.college_dept = New System.Windows.Forms.TabPage()
         Me.Panel2 = New System.Windows.Forms.Panel()
@@ -120,12 +121,6 @@ Partial Class frm_slists
         Me.RadioButton3 = New System.Windows.Forms.RadioButton()
         Me.RadioButton4 = New System.Windows.Forms.RadioButton()
         Me.dg_sStudRec = New Bunifu.Framework.UI.BunifuCustomDataGrid()
-        Me.col_sStud_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.col_sStud_fname = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.col_sStud_lanme = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.col_sStud_mi = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.col_sSY = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.col_sGL = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.btn_sCancel = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.btn_sViewAccount = New Bunifu.Framework.UI.BunifuFlatButton()
@@ -185,6 +180,12 @@ Partial Class frm_slists
         Me.Label17 = New System.Windows.Forms.Label()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.txtb_jSearch = New System.Windows.Forms.TextBox()
+        Me.col_sStud_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.col_sStud_fname = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.col_sStud_lname = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.col_sStud_mi = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.col_sSY = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.col_sGL = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TabControl1.SuspendLayout()
         Me.college_dept.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -328,6 +329,7 @@ Partial Class frm_slists
         '
         Me.dg_studR.AllowUserToAddRows = False
         Me.dg_studR.AllowUserToDeleteRows = False
+        Me.dg_studR.AllowUserToResizeRows = False
         DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.dg_studR.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.dg_studR.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
@@ -338,7 +340,7 @@ Partial Class frm_slists
         DataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen
         DataGridViewCellStyle2.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SeaGreen
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dg_studR.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
@@ -902,9 +904,9 @@ Partial Class frm_slists
         Me.elem_dept.Controls.Add(Me.Panel8)
         Me.elem_dept.Controls.Add(Me.Panel7)
         Me.elem_dept.Controls.Add(Me.GroupBox5)
-        Me.elem_dept.Location = New System.Drawing.Point(4, 29)
+        Me.elem_dept.Location = New System.Drawing.Point(4, 30)
         Me.elem_dept.Name = "elem_dept"
-        Me.elem_dept.Size = New System.Drawing.Size(1146, 631)
+        Me.elem_dept.Size = New System.Drawing.Size(1146, 630)
         Me.elem_dept.TabIndex = 4
         Me.elem_dept.Text = "Elementary Dept."
         '
@@ -916,7 +918,7 @@ Partial Class frm_slists
         Me.Panel8.Location = New System.Drawing.Point(370, 70)
         Me.Panel8.Margin = New System.Windows.Forms.Padding(3, 3, 10, 3)
         Me.Panel8.Name = "Panel8"
-        Me.Panel8.Size = New System.Drawing.Size(776, 561)
+        Me.Panel8.Size = New System.Drawing.Size(776, 560)
         Me.Panel8.TabIndex = 49
         '
         'Panel9
@@ -925,7 +927,7 @@ Partial Class frm_slists
         Me.Panel9.Controls.Add(Me.RadioButton5)
         Me.Panel9.Controls.Add(Me.RadioButton6)
         Me.Panel9.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel9.Location = New System.Drawing.Point(0, 504)
+        Me.Panel9.Location = New System.Drawing.Point(0, 503)
         Me.Panel9.Name = "Panel9"
         Me.Panel9.Size = New System.Drawing.Size(776, 57)
         Me.Panel9.TabIndex = 48
@@ -1007,7 +1009,7 @@ Partial Class frm_slists
         DataGridViewCellStyle4.BackColor = System.Drawing.Color.SeaGreen
         DataGridViewCellStyle4.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle4.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.SeaGreen
         DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dg_eStudRecords.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
@@ -1024,7 +1026,7 @@ Partial Class frm_slists
         Me.dg_eStudRecords.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.dg_eStudRecords.RowHeadersVisible = False
         Me.dg_eStudRecords.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dg_eStudRecords.Size = New System.Drawing.Size(776, 561)
+        Me.dg_eStudRecords.Size = New System.Drawing.Size(776, 560)
         Me.dg_eStudRecords.TabIndex = 47
         '
         'col_estud_id
@@ -1094,7 +1096,7 @@ Partial Class frm_slists
         Me.Panel7.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Panel7.Location = New System.Drawing.Point(0, 70)
         Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(370, 561)
+        Me.Panel7.Size = New System.Drawing.Size(370, 560)
         Me.Panel7.TabIndex = 48
         '
         'btn_eCancel
@@ -1469,9 +1471,9 @@ Partial Class frm_slists
         Me.seniorHigh_dept.Controls.Add(Me.Panel5)
         Me.seniorHigh_dept.Controls.Add(Me.Panel4)
         Me.seniorHigh_dept.Controls.Add(Me.GroupBox3)
-        Me.seniorHigh_dept.Location = New System.Drawing.Point(4, 29)
+        Me.seniorHigh_dept.Location = New System.Drawing.Point(4, 30)
         Me.seniorHigh_dept.Name = "seniorHigh_dept"
-        Me.seniorHigh_dept.Size = New System.Drawing.Size(1146, 631)
+        Me.seniorHigh_dept.Size = New System.Drawing.Size(1146, 630)
         Me.seniorHigh_dept.TabIndex = 2
         Me.seniorHigh_dept.Text = "Senior-High Dept."
         '
@@ -1483,7 +1485,7 @@ Partial Class frm_slists
         Me.Panel5.Location = New System.Drawing.Point(370, 70)
         Me.Panel5.Margin = New System.Windows.Forms.Padding(3, 3, 10, 3)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(776, 561)
+        Me.Panel5.Size = New System.Drawing.Size(776, 560)
         Me.Panel5.TabIndex = 50
         '
         'Panel6
@@ -1492,7 +1494,7 @@ Partial Class frm_slists
         Me.Panel6.Controls.Add(Me.RadioButton3)
         Me.Panel6.Controls.Add(Me.RadioButton4)
         Me.Panel6.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel6.Location = New System.Drawing.Point(0, 504)
+        Me.Panel6.Location = New System.Drawing.Point(0, 503)
         Me.Panel6.Name = "Panel6"
         Me.Panel6.Size = New System.Drawing.Size(776, 57)
         Me.Panel6.TabIndex = 48
@@ -1574,12 +1576,12 @@ Partial Class frm_slists
         DataGridViewCellStyle6.BackColor = System.Drawing.Color.SeaGreen
         DataGridViewCellStyle6.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle6.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.SeaGreen
         DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dg_sStudRec.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle6
         Me.dg_sStudRec.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dg_sStudRec.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.col_sStud_id, Me.col_sStud_fname, Me.col_sStud_lanme, Me.col_sStud_mi, Me.col_sSY, Me.col_sGL})
+        Me.dg_sStudRec.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.col_sStud_id, Me.col_sStud_fname, Me.col_sStud_lname, Me.col_sStud_mi, Me.col_sSY, Me.col_sGL})
         Me.dg_sStudRec.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dg_sStudRec.DoubleBuffered = True
         Me.dg_sStudRec.EnableHeadersVisualStyles = False
@@ -1591,52 +1593,8 @@ Partial Class frm_slists
         Me.dg_sStudRec.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.dg_sStudRec.RowHeadersVisible = False
         Me.dg_sStudRec.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dg_sStudRec.Size = New System.Drawing.Size(776, 561)
+        Me.dg_sStudRec.Size = New System.Drawing.Size(776, 560)
         Me.dg_sStudRec.TabIndex = 47
-        '
-        'col_sStud_id
-        '
-        Me.col_sStud_id.DataPropertyName = "estud_id"
-        Me.col_sStud_id.HeaderText = "Stud. id"
-        Me.col_sStud_id.Name = "col_sStud_id"
-        Me.col_sStud_id.ReadOnly = True
-        '
-        'col_sStud_fname
-        '
-        Me.col_sStud_fname.DataPropertyName = "estud_fname"
-        Me.col_sStud_fname.HeaderText = "First Name"
-        Me.col_sStud_fname.Name = "col_sStud_fname"
-        Me.col_sStud_fname.ReadOnly = True
-        '
-        'col_sStud_lanme
-        '
-        Me.col_sStud_lanme.DataPropertyName = "estud_Lname"
-        Me.col_sStud_lanme.HeaderText = "Last Name"
-        Me.col_sStud_lanme.Name = "col_sStud_lanme"
-        Me.col_sStud_lanme.ReadOnly = True
-        '
-        'col_sStud_mi
-        '
-        Me.col_sStud_mi.DataPropertyName = "estud_mi"
-        Me.col_sStud_mi.HeaderText = "Middle Initial"
-        Me.col_sStud_mi.Name = "col_sStud_mi"
-        Me.col_sStud_mi.ReadOnly = True
-        '
-        'col_sSY
-        '
-        Me.col_sSY.DataPropertyName = "esy_id"
-        Me.col_sSY.HeaderText = "S/Y"
-        Me.col_sSY.Name = "col_sSY"
-        Me.col_sSY.ReadOnly = True
-        Me.col_sSY.Visible = False
-        '
-        'col_sGL
-        '
-        Me.col_sGL.DataPropertyName = "egl_id"
-        Me.col_sGL.HeaderText = "G/L"
-        Me.col_sGL.Name = "col_sGL"
-        Me.col_sGL.ReadOnly = True
-        Me.col_sGL.Visible = False
         '
         'Panel4
         '
@@ -1661,7 +1619,7 @@ Partial Class frm_slists
         Me.Panel4.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Panel4.Location = New System.Drawing.Point(0, 70)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(370, 561)
+        Me.Panel4.Size = New System.Drawing.Size(370, 560)
         Me.Panel4.TabIndex = 49
         '
         'btn_sCancel
@@ -2036,9 +1994,9 @@ Partial Class frm_slists
         Me.juniorHigh_dept.Controls.Add(Me.Panel11)
         Me.juniorHigh_dept.Controls.Add(Me.Panel10)
         Me.juniorHigh_dept.Controls.Add(Me.GroupBox4)
-        Me.juniorHigh_dept.Location = New System.Drawing.Point(4, 29)
+        Me.juniorHigh_dept.Location = New System.Drawing.Point(4, 30)
         Me.juniorHigh_dept.Name = "juniorHigh_dept"
-        Me.juniorHigh_dept.Size = New System.Drawing.Size(1146, 631)
+        Me.juniorHigh_dept.Size = New System.Drawing.Size(1146, 630)
         Me.juniorHigh_dept.TabIndex = 3
         Me.juniorHigh_dept.Text = "Junior-High Dept."
         '
@@ -2050,7 +2008,7 @@ Partial Class frm_slists
         Me.Panel11.Location = New System.Drawing.Point(370, 70)
         Me.Panel11.Margin = New System.Windows.Forms.Padding(3, 3, 10, 3)
         Me.Panel11.Name = "Panel11"
-        Me.Panel11.Size = New System.Drawing.Size(776, 561)
+        Me.Panel11.Size = New System.Drawing.Size(776, 560)
         Me.Panel11.TabIndex = 51
         '
         'Panel12
@@ -2059,7 +2017,7 @@ Partial Class frm_slists
         Me.Panel12.Controls.Add(Me.RadioButton7)
         Me.Panel12.Controls.Add(Me.RadioButton8)
         Me.Panel12.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel12.Location = New System.Drawing.Point(0, 504)
+        Me.Panel12.Location = New System.Drawing.Point(0, 503)
         Me.Panel12.Name = "Panel12"
         Me.Panel12.Size = New System.Drawing.Size(776, 57)
         Me.Panel12.TabIndex = 48
@@ -2141,12 +2099,20 @@ Partial Class frm_slists
         DataGridViewCellStyle8.BackColor = System.Drawing.Color.SeaGreen
         DataGridViewCellStyle8.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle8.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.SeaGreen
         DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dg_jStudRec.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle8
         Me.dg_jStudRec.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dg_jStudRec.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn14, Me.DataGridViewTextBoxColumn16, Me.DataGridViewTextBoxColumn17, Me.DataGridViewTextBoxColumn18})
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dg_jStudRec.DefaultCellStyle = DataGridViewCellStyle9
         Me.dg_jStudRec.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dg_jStudRec.DoubleBuffered = True
         Me.dg_jStudRec.EnableHeadersVisualStyles = False
@@ -2158,7 +2124,7 @@ Partial Class frm_slists
         Me.dg_jStudRec.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.dg_jStudRec.RowHeadersVisible = False
         Me.dg_jStudRec.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dg_jStudRec.Size = New System.Drawing.Size(776, 561)
+        Me.dg_jStudRec.Size = New System.Drawing.Size(776, 560)
         Me.dg_jStudRec.TabIndex = 47
         '
         'DataGridViewTextBoxColumn7
@@ -2228,7 +2194,7 @@ Partial Class frm_slists
         Me.Panel10.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Panel10.Location = New System.Drawing.Point(0, 70)
         Me.Panel10.Name = "Panel10"
-        Me.Panel10.Size = New System.Drawing.Size(370, 561)
+        Me.Panel10.Size = New System.Drawing.Size(370, 560)
         Me.Panel10.TabIndex = 49
         '
         'btn_jCancel
@@ -2597,6 +2563,50 @@ Partial Class frm_slists
         Me.txtb_jSearch.Size = New System.Drawing.Size(425, 30)
         Me.txtb_jSearch.TabIndex = 13
         '
+        'col_sStud_id
+        '
+        Me.col_sStud_id.DataPropertyName = "sstud_id"
+        Me.col_sStud_id.HeaderText = "Stud. id"
+        Me.col_sStud_id.Name = "col_sStud_id"
+        Me.col_sStud_id.ReadOnly = True
+        '
+        'col_sStud_fname
+        '
+        Me.col_sStud_fname.DataPropertyName = "sstud_fname"
+        Me.col_sStud_fname.HeaderText = "First Name"
+        Me.col_sStud_fname.Name = "col_sStud_fname"
+        Me.col_sStud_fname.ReadOnly = True
+        '
+        'col_sStud_lname
+        '
+        Me.col_sStud_lname.DataPropertyName = "sstud_Lname"
+        Me.col_sStud_lname.HeaderText = "Last Name"
+        Me.col_sStud_lname.Name = "col_sStud_lname"
+        Me.col_sStud_lname.ReadOnly = True
+        '
+        'col_sStud_mi
+        '
+        Me.col_sStud_mi.DataPropertyName = "sstud_mi"
+        Me.col_sStud_mi.HeaderText = "Middle Initial"
+        Me.col_sStud_mi.Name = "col_sStud_mi"
+        Me.col_sStud_mi.ReadOnly = True
+        '
+        'col_sSY
+        '
+        Me.col_sSY.DataPropertyName = "ssy_id"
+        Me.col_sSY.HeaderText = "S/Y"
+        Me.col_sSY.Name = "col_sSY"
+        Me.col_sSY.ReadOnly = True
+        Me.col_sSY.Visible = False
+        '
+        'col_sGL
+        '
+        Me.col_sGL.DataPropertyName = "sgl_id"
+        Me.col_sGL.HeaderText = "G/L"
+        Me.col_sGL.Name = "col_sGL"
+        Me.col_sGL.ReadOnly = True
+        Me.col_sGL.Visible = False
+        '
         'frm_slists
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -2795,7 +2805,7 @@ Partial Class frm_slists
     Friend WithEvents col_egl_id As DataGridViewTextBoxColumn
     Friend WithEvents col_sStud_id As DataGridViewTextBoxColumn
     Friend WithEvents col_sStud_fname As DataGridViewTextBoxColumn
-    Friend WithEvents col_sStud_lanme As DataGridViewTextBoxColumn
+    Friend WithEvents col_sStud_lname As DataGridViewTextBoxColumn
     Friend WithEvents col_sStud_mi As DataGridViewTextBoxColumn
     Friend WithEvents col_sSY As DataGridViewTextBoxColumn
     Friend WithEvents col_sGL As DataGridViewTextBoxColumn

@@ -35,6 +35,7 @@ Public Class frm_slists
                 cbo_SearchBy.SelectedIndex = 1
 
             Case 1
+                _dbConnection("db_lccsams")
                 _loadToCombobox(eSelect_SY, cbo_eSYName)
                 _loadToCombobox(eSelect_GL, cbo_eGradeLevel)
                 cbo_eSearchBY.SelectedIndex = 1
@@ -44,12 +45,11 @@ Public Class frm_slists
                 txtb_estudMI.Clear()
                 cbo_eSYName.SelectedIndex = -1
                 cbo_eGradeLevel.SelectedIndex = -1
-
-                _dbConnection("db_lccsams")
                 _displayRecords(eSelect_studRec, dg_eStudRecords)
                 cbo_eSearchBY.SelectedIndex = 1
 
-            Case 3
+            Case 2
+                _dbConnection("db_lccsams")
                 _loadToCombobox(sSelect_SY, cbo_sSY)
                 _loadToCombobox(sSelect_GL, cbo_sGL)
                 cbo_sSearchBy.SelectedIndex = 1
@@ -58,8 +58,19 @@ Public Class frm_slists
                 txtb_smi.Clear()
                 cbo_sSY.SelectedIndex = -1
                 cbo_sGL.SelectedIndex = -1
-                _dbConnection("db_lccsams")
                 _displayRecords(sSelect_studRec, dg_sStudRec)
+
+            Case 3
+                _loadToCombobox(jSelect_SY, cbo_jSY)
+                _loadToCombobox(jSelect_GL, cbo_jGL)
+                cbo_jSearchBy.SelectedIndex = 1
+                txtb_jStudFname.Clear()
+                txtb_jStudLname.Clear()
+                txtb_jStudMI.Clear()
+                cbo_jSY.SelectedIndex = -1
+                cbo_jGL.SelectedIndex = -1
+                _dbConnection("db_lccsams")
+                _displayRecords(jSelect_studRec, dg_jStudRec)
 
 
 
@@ -513,17 +524,17 @@ Public Class frm_slists
         Select Case cbo_SearchBy.SelectedItem.ToString
             Case "Name"
                 _dbConnection("db_lccsams")
-                _displayRecords(" select * from tbl_elem_students where estud_fname Like '%" & txtb_eSearch.Text & "%' or estud_lname  Like '%" & txtb_eSearch.Text & "%' ", dg_eStudRecords)
+                _displayRecords(" select * from tbl_seniorhigh_students where sstud_fname Like '%" & txtb_sSearch.Text & "%' or sstud_lname  Like '%" & txtb_sSearch.Text & "%' ", dg_sStudRec)
 
             Case "ID Number"
                 _dbConnection("db_lccsams")
-                _displayRecords("select * from tbl_elem_students where estud_id Like '" & txtb_eSearch.Text & "%' ", dg_eStudRecords)
+                _displayRecords("select * from tbl_seniorhigh_students where sstud_id Like '" & txtb_sSearch.Text & "%' ", dg_sStudRec)
         End Select
     End Sub
 
     Private Sub btn_sViewAccount_Click(sender As Object, e As EventArgs) Handles btn_sViewAccount.Click
         Try
-            If sStud_id = "" Then
+            If txtb_sStud_id.Text = "" Then
                 MessageBox.Show("Pag select sag estudyanto bago ka mo proceed")
             Else
                 current_menu = 3
@@ -585,7 +596,7 @@ Public Class frm_slists
     End Sub
 
     Private Sub btn_sSave_Click(sender As Object, e As EventArgs) Handles btn_sSave.Click
-        If txtb_eStudFname.Text = "" Or txtb_eStudFname.Text = "" Or cbo_eGradeLevel.Text = "" Or cbo_eSYName.Text = "" Then
+        If txtb_sFname.Text = "" Or txtb_sLname.Text = "" Or cbo_sGL.Text = "" Or cbo_sSY.Text = "" Then
             MessageBox.Show("Please fill-up all fields!")
         Else
             txtb_sFname.Enabled = False
@@ -603,14 +614,16 @@ Public Class frm_slists
             btn_sSave.Enabled = False
             Select Case C
                 Case 1
-                    _insertdataOfStudents()
+                    Dim shAddNewStud = "Insert into tbl_seniorhigh_students values('" & txtb_sStud_id.Text & "','" & txtb_sFname.Text & "','" & txtb_sLname.Text & "','" & txtb_smi.Text & "','" & cbo_sSY.SelectedValue & "','" & cbo_sGL.SelectedValue & "')"
+                    _dbConnection("db_lccsams")
+                    _insertData(shAddNewStud)
                     dlg_savesuccessfully.ShowDialog()
-                    _displayRecords(sStudR, dg_eStudRecords)
+                    _displayRecords(sSelect_studRec, dg_sStudRec)
                 Case 2
-                    Dim querry3 = " "
+                    Dim querry3 = "update tbl_seniorhigh_students set sstud_fname='" & txtb_sFname.Text & "',sstud_lname='" & txtb_sLname.Text & "',sstud_mi='" & txtb_smi.Text & "',ssy_id='" & cbo_sSY.SelectedValue & "',sgl_id='" & cbo_sGL.SelectedValue & "' where sstud_id='" & txtb_sStud_id.Text & "' "
                     _dbConnection("db_lccsams")
                     _updateData(querry3)
-                    _displayRecords(sStudR, dg_eStudRecords)
+                    _displayRecords(sSelect_studRec, dg_sStudRec)
                     UpdatedSuccessfully.ShowDialog()
             End Select
         End If
@@ -643,18 +656,18 @@ Public Class frm_slists
             Dim i = e.RowIndex
             With dg_sStudRec
 
-                Dim querry As String = "Select esy_name from tbl_elem_sy where esy_id='" & .Item("col_sSY_id", i).Value & "'"
-                Dim querry2 As String = "Select egl_name from tbl_elem_gradelevel where egl_id='" & .Item("col_sGl_id", i).Value & "'"
+                Dim querry As String = "Select ssy_name from tbl_seniorhigh_sy where ssy_id='" & .Item("col_sSY", i).Value & "'"
+                Dim querry2 As String = "Select sgl_name from tbl_seniorhigh_gl where sgl_id='" & .Item("col_sGl", i).Value & "'"
                 _dbConnection("db_lccsams")
                 sStud_id = .Item("col_sStud_id", i).Value
-                sStudname = .Item("col_estud_fname", i).Value.ToString.ToUpper + " " + .Item("col_estud_mi", i).Value.ToString.ToUpper + " " + .Item("col_estud_lname", i).Value.ToString.ToUpper
-                sStudSY = .Item("col_estud_id", i).Value
-                sStudGL = .Item("col_estud_id", i).Value
+                sStudname = .Item("col_sStud_fname", i).Value.ToString.ToUpper + " " + .Item("col_sStud_mi", i).Value.ToString.ToUpper + " " + .Item("col_sStud_lname", i).Value.ToString.ToUpper
+                sStudSY = .Item("col_sSY", i).Value
+                sStudGL = .Item("col_sGL", i).Value
 
-                txtb_sStud_id.Text = .Item("col_estud_id", i).Value
-                txtb_sFname.Text = .Item("col_estud_fname", i).Value.ToString.ToUpper
-                txtb_sLname.Text = .Item("col_estud_lname", i).Value.ToString.ToUpper
-                txtb_smi.Text = .Item("col_estud_mi", i).Value.ToString.ToUpper
+                txtb_sStud_id.Text = .Item("col_sStud_id", i).Value
+                txtb_sFname.Text = .Item("col_sStud_fname", i).Value.ToString.ToUpper
+                txtb_sLname.Text = .Item("col_sStud_lname", i).Value.ToString.ToUpper
+                txtb_smi.Text = .Item("col_sStud_mi", i).Value.ToString.ToUpper
                 _selectComboBoxText(querry, cbo_sSY)
                 _selectComboBoxText(querry2, cbo_sGL)
 

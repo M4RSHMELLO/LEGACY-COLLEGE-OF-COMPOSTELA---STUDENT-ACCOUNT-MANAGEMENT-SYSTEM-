@@ -55,9 +55,9 @@ Module lccsams
     Public esy_eDate As String
 
     '#############################################################Senior-High PUBLIC VARIABLE#########################################################
-    Public sSelect_SY As String = "select * from tbl_elem_sy"
-    Public sSelect_GL As String = "select * from tbl_elem_gradelevel"
-    Public sSelect_studRec As String = "select * from tbl_elem_students order by estud_lname asc,estud_fname asc"
+    Public sSelect_SY As String = "select * from tbl_seniorhigh_sy"
+    Public sSelect_GL As String = "select * from tbl_seniorhigh_gl"
+    Public sSelect_studRec As String = "select * from tbl_seniorhigh_students order by sstud_lname asc,sstud_fname asc"
 
     Public sStud_id As String
     Public sFname As String
@@ -67,6 +67,20 @@ Module lccsams
     Public sStudSY As String
     Public sSy_sDate As String
     Public sSy_eDate As String
+
+    '#############################################################Junior-High PUBLIC VARIABLE#########################################################
+    Public jSelect_SY As String = ""
+    Public jSelect_GL As String = ""
+    Public jSelect_studRec As String = ""
+
+    Public jStud_id As String
+    Public jFname As String
+    Public jLname As String
+    Public jStudname As String
+    Public jStudGL As String
+    Public jStudSY As String
+    Public jSy_sDate As String
+    Public jSy_eDate As String
 
     '######################################################### Module & function class ##############################################################################
     Public Sub _dbConnection(ByVal dbName As String)

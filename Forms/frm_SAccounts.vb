@@ -103,8 +103,6 @@ Public Class frm_SAccounts
             dbConn.Close()
         End Try
 
-
-
     End Sub
     ''###########################################################Elementary Section ################################################################################
 
@@ -115,7 +113,23 @@ Public Class frm_SAccounts
         txtb_eGL.Text = eStudGL
 
 
+
     End Sub
 
+    '#############################################################Senior-High Section####################################################################
 
+    Public Sub txtb_sStud_id_Click(sender As Object, e As EventArgs) Handles txtb_sStud_id.Click
+        txtb_sStud_id.Text = sStud_id
+        txtb_sStud_name.Text = sStudname
+        txtb_sSY.Text = sStudSY
+        txtb_sGL.Text = sStudGL
+
+    End Sub
+    '#############################################################Junior-High Section####################################################################
+    Public Sub txtb_jStud_ID_Click(sender As Object, e As EventArgs) Handles txtb_jStud_ID.Click
+        txtb_jStud_ID.Text = jStud_id
+        txtb_jStud_name.Text = jStudname
+        txtb_jSY.Text = jStudSY
+        txtb_jGL.Text = jStudGL
+    End Sub
 End Class

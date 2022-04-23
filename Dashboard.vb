@@ -59,7 +59,9 @@
                         Case 1
                             frm_sA.txtb_eStud_id_Click(sender, e)
                         Case 2
+                            frm_sA.txtb_sStud_id_Click(sender, e)
                         Case 3
+                            frm_sA.txtb_jStud_id_Click(sender, e)
 
 
                         Case Else
