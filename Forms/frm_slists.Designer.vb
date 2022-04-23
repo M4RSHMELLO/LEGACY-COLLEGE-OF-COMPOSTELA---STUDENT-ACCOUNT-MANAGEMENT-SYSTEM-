@@ -219,7 +219,7 @@ Partial Class frm_slists
         Me.TabControl1.Controls.Add(Me.seniorHigh_dept)
         Me.TabControl1.Controls.Add(Me.juniorHigh_dept)
         Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TabControl1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TabControl1.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TabControl1.Location = New System.Drawing.Point(0, 0)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
@@ -232,10 +232,10 @@ Partial Class frm_slists
         Me.college_dept.Controls.Add(Me.Panel2)
         Me.college_dept.Controls.Add(Me.Panel1)
         Me.college_dept.Controls.Add(Me.GroupBox1)
-        Me.college_dept.Location = New System.Drawing.Point(4, 29)
+        Me.college_dept.Location = New System.Drawing.Point(4, 30)
         Me.college_dept.Name = "college_dept"
         Me.college_dept.Padding = New System.Windows.Forms.Padding(3)
-        Me.college_dept.Size = New System.Drawing.Size(1146, 631)
+        Me.college_dept.Size = New System.Drawing.Size(1146, 630)
         Me.college_dept.TabIndex = 0
         Me.college_dept.Text = "College  Dept."
         '
@@ -247,7 +247,7 @@ Partial Class frm_slists
         Me.Panel2.Location = New System.Drawing.Point(373, 73)
         Me.Panel2.Margin = New System.Windows.Forms.Padding(3, 3, 10, 3)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(770, 555)
+        Me.Panel2.Size = New System.Drawing.Size(770, 554)
         Me.Panel2.TabIndex = 48
         '
         'Panel3
@@ -256,7 +256,7 @@ Partial Class frm_slists
         Me.Panel3.Controls.Add(Me.RadioButton1)
         Me.Panel3.Controls.Add(Me.RadioButton2)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel3.Location = New System.Drawing.Point(0, 498)
+        Me.Panel3.Location = New System.Drawing.Point(0, 497)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(770, 57)
         Me.Panel3.TabIndex = 48
@@ -336,7 +336,7 @@ Partial Class frm_slists
         Me.dg_studR.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
         DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
@@ -355,7 +355,7 @@ Partial Class frm_slists
         Me.dg_studR.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.dg_studR.RowHeadersVisible = False
         Me.dg_studR.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dg_studR.Size = New System.Drawing.Size(770, 555)
+        Me.dg_studR.Size = New System.Drawing.Size(770, 554)
         Me.dg_studR.TabIndex = 47
         '
         's_id
@@ -449,7 +449,7 @@ Partial Class frm_slists
         Me.Panel1.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Panel1.Location = New System.Drawing.Point(3, 73)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(370, 555)
+        Me.Panel1.Size = New System.Drawing.Size(370, 554)
         Me.Panel1.TabIndex = 47
         '
         'btn_cancel
@@ -1005,7 +1005,7 @@ Partial Class frm_slists
         Me.dg_eStudRecords.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle4.BackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle4.ForeColor = System.Drawing.Color.White
         DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
@@ -1473,7 +1473,7 @@ Partial Class frm_slists
         Me.seniorHigh_dept.Name = "seniorHigh_dept"
         Me.seniorHigh_dept.Size = New System.Drawing.Size(1146, 631)
         Me.seniorHigh_dept.TabIndex = 2
-        Me.seniorHigh_dept.Text = "SeniorHigh Dept."
+        Me.seniorHigh_dept.Text = "Senior-High Dept."
         '
         'Panel5
         '
@@ -1572,7 +1572,7 @@ Partial Class frm_slists
         Me.dg_sStudRec.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle6.BackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle6.ForeColor = System.Drawing.Color.White
         DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
@@ -2040,7 +2040,7 @@ Partial Class frm_slists
         Me.juniorHigh_dept.Name = "juniorHigh_dept"
         Me.juniorHigh_dept.Size = New System.Drawing.Size(1146, 631)
         Me.juniorHigh_dept.TabIndex = 3
-        Me.juniorHigh_dept.Text = "JuniorHigh Dept."
+        Me.juniorHigh_dept.Text = "Junior-High Dept."
         '
         'Panel11
         '
@@ -2139,7 +2139,7 @@ Partial Class frm_slists
         Me.dg_jStudRec.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle8.BackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle8.ForeColor = System.Drawing.Color.White
         DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText

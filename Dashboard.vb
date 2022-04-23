@@ -40,6 +40,11 @@
                 frm_sA.TabControl1.SelectedIndex = 0
             Case 1
                 frm_sA.TabControl1.SelectedIndex = 1
+            Case 2
+                frm_sA.TabControl1.SelectedIndex = 2
+            Case 2
+                frm_sA.TabControl1.SelectedIndex = 3
+            Case Else
         End Select
     End Sub
     Public Sub btn_menuStudentsAccount_click(sender As Object, e As EventArgs) Handles btn_menuStudentsAccount.Click
@@ -48,7 +53,19 @@
                 Case 1
                     addContent(frm_sA, btn_menuStudentsAccount)
                     selected_menu(frm_sP.TabControl1)
-                    frm_sA.txtb_studAcct_ID_Click(sender, e)
+                    Select Case studIdClick
+                        Case 0
+                            frm_sA.txtb_studAcct_ID_Click(sender, e)
+                        Case 1
+                            frm_sA.txtb_eStud_id_Click(sender, e)
+                        Case 2
+                        Case 3
+
+
+                        Case Else
+                            MessageBox.Show("")
+                    End Select
+
                 Case 2
                     addContent(frm_sA, btn_menuStudentsAccount)
                     selected_menu(frm_sL.TabControl1)
@@ -57,6 +74,12 @@
                             frm_sA.txtb_studAcct_ID_Click(sender, e)
                         Case 1
                             frm_sA.txtb_eStud_id_Click(sender, e)
+                        Case 2
+                        Case 3
+
+
+                        Case Else
+                            MessageBox.Show("")
                     End Select
                 Case Else
                     MessageBox.Show("Please select a student first")
