@@ -118,7 +118,7 @@ Partial Class frm_SAccounts
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.txtb_eGL = New System.Windows.Forms.TextBox()
-        Me.txt_eStud_name = New System.Windows.Forms.TextBox()
+        Me.txtb_eStud_name = New System.Windows.Forms.TextBox()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.txtb_eSY = New System.Windows.Forms.TextBox()
         Me.Label22 = New System.Windows.Forms.Label()
@@ -1087,7 +1087,7 @@ Partial Class frm_SAccounts
         Me.GroupBox1.Controls.Add(Me.Label7)
         Me.GroupBox1.Controls.Add(Me.Label9)
         Me.GroupBox1.Controls.Add(Me.txtb_eGL)
-        Me.GroupBox1.Controls.Add(Me.txt_eStud_name)
+        Me.GroupBox1.Controls.Add(Me.txtb_eStud_name)
         Me.GroupBox1.Controls.Add(Me.Label14)
         Me.GroupBox1.Controls.Add(Me.txtb_eSY)
         Me.GroupBox1.Controls.Add(Me.Label22)
@@ -1137,14 +1137,14 @@ Partial Class frm_SAccounts
         Me.txtb_eGL.Size = New System.Drawing.Size(268, 26)
         Me.txtb_eGL.TabIndex = 17
         '
-        'txt_eStud_name
+        'txtb_eStud_name
         '
-        Me.txt_eStud_name.BackColor = System.Drawing.Color.White
-        Me.txt_eStud_name.Enabled = False
-        Me.txt_eStud_name.Location = New System.Drawing.Point(161, 61)
-        Me.txt_eStud_name.Name = "txt_eStud_name"
-        Me.txt_eStud_name.Size = New System.Drawing.Size(268, 26)
-        Me.txt_eStud_name.TabIndex = 6
+        Me.txtb_eStud_name.BackColor = System.Drawing.Color.White
+        Me.txtb_eStud_name.Enabled = False
+        Me.txtb_eStud_name.Location = New System.Drawing.Point(161, 61)
+        Me.txtb_eStud_name.Name = "txtb_eStud_name"
+        Me.txtb_eStud_name.Size = New System.Drawing.Size(268, 26)
+        Me.txtb_eStud_name.TabIndex = 6
         '
         'Label14
         '
@@ -2059,7 +2059,7 @@ Partial Class frm_SAccounts
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents txtb_eGL As System.Windows.Forms.TextBox
-    Public WithEvents txt_eStud_name As System.Windows.Forms.TextBox
+    Public WithEvents txtb_eStud_name As System.Windows.Forms.TextBox
     Friend WithEvents Label14 As System.Windows.Forms.Label
     Friend WithEvents txtb_eSY As System.Windows.Forms.TextBox
     Friend WithEvents Label22 As System.Windows.Forms.Label

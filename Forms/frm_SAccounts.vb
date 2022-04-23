@@ -110,5 +110,9 @@ Public Class frm_SAccounts
 
     Public Sub txtb_eStud_id_Click(sender As Object, e As EventArgs) Handles txtb_eStud_id.Click
         txtb_eStud_id.Text = eStud_id
+        txtb_eStud_name.Text = eStudname
+        txtb_eSY.Text = eStudSY
+        txtb_eGL.Text = eStudGL
+
     End Sub
 End Class
