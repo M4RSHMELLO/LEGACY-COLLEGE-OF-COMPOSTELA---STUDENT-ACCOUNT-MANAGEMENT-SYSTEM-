@@ -433,9 +433,7 @@ Public Class frm_slists
             btn_eSave.Enabled = True
             btn_eUpdateNewStud.Enabled = False
             b = 1
-
         End If
-
     End Sub
 
     Private Sub btn_eUpdateNewStud_Click(sender As Object, e As EventArgs) Handles btn_eUpdateNewStud.Click
