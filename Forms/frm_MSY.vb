@@ -254,4 +254,30 @@
         End Try
 
     End Sub
+
+    '#############################################################Junior-High PUBLIC VARIABLE#########################################################
+
+    Private Sub btn_jsy_new_Click(sender As Object, e As EventArgs) Handles btn_jsy_new.Click
+
+    End Sub
+
+    Private Sub btn_jsy_update_Click(sender As Object, e As EventArgs) Handles btn_jsy_update.Click
+
+    End Sub
+
+    Private Sub btn_jsy_save_Click(sender As Object, e As EventArgs) Handles btn_jsy_save.Click
+
+    End Sub
+
+    Private Sub dg_jsyRec_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dg_jsyRec.CellClick
+
+    End Sub
+
+    Private Sub btn_jgl_new_Click(sender As Object, e As EventArgs) Handles btn_jgl_new.Click
+
+    End Sub
+
+    Private Sub tn_jgl_update_Click(sender As Object, e As EventArgs) Handles tn_jgl_update.Click
+
+    End Sub
 End Class
