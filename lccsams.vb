@@ -21,8 +21,6 @@ Module lccsams
     Public s_msyR As String = "Select * from schyearrecords order by sy_eDate desc"
     Public sStudR As String = "select * from stud_records"
 
-
-    'shared stud_data
     Public fname As String
     Public lname As String
     Public stud_id As Integer
@@ -69,9 +67,9 @@ Module lccsams
     Public sSy_eDate As String
 
     '#############################################################Junior-High PUBLIC VARIABLE#########################################################
-    Public jSelect_SY As String = ""
-    Public jSelect_GL As String = ""
-    Public jSelect_studRec As String = ""
+    Public jSelect_SY As String = "select * from tbl_juniorhigh_sy order by jhsy_edate desc "
+    Public jSelect_GL As String = "selct * from tbl_juniorhigh_gradelevel"
+    Public jSelect_studRec As String = "select * from tbl_juniorhigh_students order by jstud_lname asc,jstud_fname asc"
 
     Public jStud_id As String
     Public jFname As String

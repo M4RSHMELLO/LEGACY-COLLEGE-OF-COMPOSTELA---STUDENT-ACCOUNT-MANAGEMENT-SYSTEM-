@@ -684,17 +684,17 @@ Public Class frm_slists
         Select Case cbo_jSearchBy.SelectedItem.ToString
             Case "Name"
                 _dbConnection("db_lccsams")
-                _displayRecords(" select * from tbl_elem_students where estud_fname Like '%" & txtb_eSearch.Text & "%' or estud_lname  Like '%" & txtb_eSearch.Text & "%' ", dg_eStudRecords)
+                _displayRecords(" select * from tbl_juniorhigh_students where jstud_fname Like '%" & txtb_jSearch.Text & "%' or jstud_lname  Like '%" & txtb_jSearch.Text & "%' ", dg_jStudRecords)
 
             Case "ID Number"
                 _dbConnection("db_lccsams")
-                _displayRecords("select * from tbl_elem_students where estud_id Like '" & txtb_eSearch.Text & "%' ", dg_eStudRecords)
+                _displayRecords("select * from tbl_juniorhigh_students where jstud_id Like '" & txtb_jSearch.Text & "%' ", dg_jStudRecords)
         End Select
     End Sub
 
     Private Sub btn_jViewAcct_Click(sender As Object, e As EventArgs) Handles btn_jViewAcct.Click
         Try
-            If sStud_id = "" Then
+            If txtb_jStud_id.Text = "" Then
                 MessageBox.Show("Pag select sag estudyanto bago ka mo proceed")
             Else
                 current_menu = 4
@@ -775,13 +775,14 @@ Public Class frm_slists
             btn_jSave.Enabled = False
             Select Case d
                 Case 1
-                    _insertdataOfStudents()
+                    Dim jNewStud As String = "Insert into tbl_juniorhigh_students values ('" & txtb_jStud_id.Text & "','" & txtb_jStudFname.Text & "','" & txtb_jStudLname.Text & "','" & txtb_jStudMI.Text & "','" & cbo_jSY.SelectedValue & "','" & cbo_jGL.SelectedValue & "')"
+                    _insertData(jNewStud)
                     dlg_savesuccessfully.ShowDialog()
                     _displayRecords(sStudR, dg_jStudRec)
                 Case 2
-                    Dim querry3 = " "
+                    Dim jUpdateStud = "Update tbl_juniorhigh_students set jstud_fname='" & txtb_jStudFname.Text & "',jstud_lname='" & txtb_jStudLname.Text & "',jstud_mi='" & txtb_jStudMI.Text & "',jsy_id='" & cbo_jSY.SelectedValue & "',jgl_id='" & cbo_jGL.SelectedValue & "' where jstud_id='" & txtb_jStud_id.Text & "' "
                     _dbConnection("db_lccsams")
-                    _updateData(querry3)
+                    _updateData(jUpdateStud)
                     _displayRecords(sStudR, dg_jStudRec)
                     UpdatedSuccessfully.ShowDialog()
             End Select
@@ -815,20 +816,20 @@ Public Class frm_slists
             Dim i = e.RowIndex
             With dg_jStudRec
 
-                Dim querry As String = "Select esy_name from tbl_elem_sy where esy_id='" & .Item("col_sSY_id", i).Value & "'"
-                Dim querry2 As String = "Select egl_name from tbl_elem_gradelevel where egl_id='" & .Item("col_sGl_id", i).Value & "'"
+                Dim querry As String = "Select jsy_name from tbl_juniorhigh_sy where jsy_id='" & .Item(0, i).Value & "'"
+                Dim querry2 As String = "Select jgl_name from tbl_juniorhigh_gradelevel where jgl_id='" & .Item(0, i).Value & "'"
                 _dbConnection("db_lccsams")
-                sStud_id = .Item("col_sStud_id", i).Value
-                sStudname = .Item("col_estud_fname", i).Value.ToString.ToUpper + " " + .Item("col_estud_mi", i).Value.ToString.ToUpper + " " + .Item("col_estud_lname", i).Value.ToString.ToUpper
-                sStudSY = .Item("col_estud_id", i).Value
-                sStudGL = .Item("col_estud_id", i).Value
+                jStud_id = .Item(0, i).Value
+                jStudname = .Item(1, i).Value.ToString.ToUpper + " " + .Item(2, i).Value.ToString.ToUpper + " " + .Item(3, i).Value.ToString.ToUpper
+                jStudSY = .Item(4, i).Value
+                jStudGL = .Item(5, i).Value
 
-                txtb_sStud_id.Text = .Item("col_estud_id", i).Value
-                txtb_sFname.Text = .Item("col_estud_fname", i).Value.ToString.ToUpper
-                txtb_sLname.Text = .Item("col_estud_lname", i).Value.ToString.ToUpper
-                txtb_smi.Text = .Item("col_estud_mi", i).Value.ToString.ToUpper
-                _selectComboBoxText(querry, cbo_sSY)
-                _selectComboBoxText(querry2, cbo_sGL)
+                txtb_jStud_id.Text = .Item(0, i).Value
+                txtb_jStudFname.Text = .Item(1, i).Value.ToString.ToUpper
+                txtb_jStudLname.Text = .Item(2, i).Value.ToString.ToUpper
+                txtb_jStudMI.Text = .Item(3, i).Value.ToString.ToUpper
+                _selectComboBoxText(querry, cbo_jSY)
+                _selectComboBoxText(querry2, cbo_jGL)
 
             End With
 

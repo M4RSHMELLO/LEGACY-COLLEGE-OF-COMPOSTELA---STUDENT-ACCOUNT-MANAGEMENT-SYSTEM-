@@ -30,7 +30,6 @@ Partial Class frm_slists
         Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.college_dept = New System.Windows.Forms.TabPage()
         Me.Panel2 = New System.Windows.Forms.Panel()
@@ -121,6 +120,12 @@ Partial Class frm_slists
         Me.RadioButton3 = New System.Windows.Forms.RadioButton()
         Me.RadioButton4 = New System.Windows.Forms.RadioButton()
         Me.dg_sStudRec = New Bunifu.Framework.UI.BunifuCustomDataGrid()
+        Me.col_sStud_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.col_sStud_fname = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.col_sStud_lname = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.col_sStud_mi = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.col_sSY = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.col_sGL = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.btn_sCancel = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.btn_sViewAccount = New Bunifu.Framework.UI.BunifuFlatButton()
@@ -151,12 +156,6 @@ Partial Class frm_slists
         Me.RadioButton7 = New System.Windows.Forms.RadioButton()
         Me.RadioButton8 = New System.Windows.Forms.RadioButton()
         Me.dg_jStudRec = New Bunifu.Framework.UI.BunifuCustomDataGrid()
-        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn16 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn17 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn18 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel10 = New System.Windows.Forms.Panel()
         Me.btn_jCancel = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.btn_jViewAcct = New Bunifu.Framework.UI.BunifuFlatButton()
@@ -180,12 +179,13 @@ Partial Class frm_slists
         Me.Label17 = New System.Windows.Forms.Label()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.txtb_jSearch = New System.Windows.Forms.TextBox()
-        Me.col_sStud_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.col_sStud_fname = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.col_sStud_lname = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.col_sStud_mi = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.col_sSY = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.col_sGL = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
+        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn16 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn17 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn18 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TabControl1.SuspendLayout()
         Me.college_dept.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -999,6 +999,7 @@ Partial Class frm_slists
         '
         Me.dg_eStudRecords.AllowUserToAddRows = False
         Me.dg_eStudRecords.AllowUserToDeleteRows = False
+        Me.dg_eStudRecords.AllowUserToResizeRows = False
         DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.dg_eStudRecords.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle3
         Me.dg_eStudRecords.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
@@ -1566,6 +1567,7 @@ Partial Class frm_slists
         '
         Me.dg_sStudRec.AllowUserToAddRows = False
         Me.dg_sStudRec.AllowUserToDeleteRows = False
+        Me.dg_sStudRec.AllowUserToResizeRows = False
         DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.dg_sStudRec.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle5
         Me.dg_sStudRec.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
@@ -1595,6 +1597,50 @@ Partial Class frm_slists
         Me.dg_sStudRec.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dg_sStudRec.Size = New System.Drawing.Size(776, 560)
         Me.dg_sStudRec.TabIndex = 47
+        '
+        'col_sStud_id
+        '
+        Me.col_sStud_id.DataPropertyName = "sstud_id"
+        Me.col_sStud_id.HeaderText = "Stud. id"
+        Me.col_sStud_id.Name = "col_sStud_id"
+        Me.col_sStud_id.ReadOnly = True
+        '
+        'col_sStud_fname
+        '
+        Me.col_sStud_fname.DataPropertyName = "sstud_fname"
+        Me.col_sStud_fname.HeaderText = "First Name"
+        Me.col_sStud_fname.Name = "col_sStud_fname"
+        Me.col_sStud_fname.ReadOnly = True
+        '
+        'col_sStud_lname
+        '
+        Me.col_sStud_lname.DataPropertyName = "sstud_Lname"
+        Me.col_sStud_lname.HeaderText = "Last Name"
+        Me.col_sStud_lname.Name = "col_sStud_lname"
+        Me.col_sStud_lname.ReadOnly = True
+        '
+        'col_sStud_mi
+        '
+        Me.col_sStud_mi.DataPropertyName = "sstud_mi"
+        Me.col_sStud_mi.HeaderText = "Middle Initial"
+        Me.col_sStud_mi.Name = "col_sStud_mi"
+        Me.col_sStud_mi.ReadOnly = True
+        '
+        'col_sSY
+        '
+        Me.col_sSY.DataPropertyName = "ssy_id"
+        Me.col_sSY.HeaderText = "S/Y"
+        Me.col_sSY.Name = "col_sSY"
+        Me.col_sSY.ReadOnly = True
+        Me.col_sSY.Visible = False
+        '
+        'col_sGL
+        '
+        Me.col_sGL.DataPropertyName = "sgl_id"
+        Me.col_sGL.HeaderText = "G/L"
+        Me.col_sGL.Name = "col_sGL"
+        Me.col_sGL.ReadOnly = True
+        Me.col_sGL.Visible = False
         '
         'Panel4
         '
@@ -2089,6 +2135,7 @@ Partial Class frm_slists
         '
         Me.dg_jStudRec.AllowUserToAddRows = False
         Me.dg_jStudRec.AllowUserToDeleteRows = False
+        Me.dg_jStudRec.AllowUserToResizeRows = False
         DataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.dg_jStudRec.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle7
         Me.dg_jStudRec.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
@@ -2105,14 +2152,6 @@ Partial Class frm_slists
         Me.dg_jStudRec.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle8
         Me.dg_jStudRec.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dg_jStudRec.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn14, Me.DataGridViewTextBoxColumn16, Me.DataGridViewTextBoxColumn17, Me.DataGridViewTextBoxColumn18})
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle9.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dg_jStudRec.DefaultCellStyle = DataGridViewCellStyle9
         Me.dg_jStudRec.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dg_jStudRec.DoubleBuffered = True
         Me.dg_jStudRec.EnableHeadersVisualStyles = False
@@ -2126,50 +2165,6 @@ Partial Class frm_slists
         Me.dg_jStudRec.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dg_jStudRec.Size = New System.Drawing.Size(776, 560)
         Me.dg_jStudRec.TabIndex = 47
-        '
-        'DataGridViewTextBoxColumn7
-        '
-        Me.DataGridViewTextBoxColumn7.DataPropertyName = "estud_id"
-        Me.DataGridViewTextBoxColumn7.HeaderText = "Stud. id"
-        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
-        Me.DataGridViewTextBoxColumn7.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn8
-        '
-        Me.DataGridViewTextBoxColumn8.DataPropertyName = "estud_fname"
-        Me.DataGridViewTextBoxColumn8.HeaderText = "First Name"
-        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
-        Me.DataGridViewTextBoxColumn8.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn14
-        '
-        Me.DataGridViewTextBoxColumn14.DataPropertyName = "estud_Lname"
-        Me.DataGridViewTextBoxColumn14.HeaderText = "Last Name"
-        Me.DataGridViewTextBoxColumn14.Name = "DataGridViewTextBoxColumn14"
-        Me.DataGridViewTextBoxColumn14.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn16
-        '
-        Me.DataGridViewTextBoxColumn16.DataPropertyName = "estud_mi"
-        Me.DataGridViewTextBoxColumn16.HeaderText = "Middle Initial"
-        Me.DataGridViewTextBoxColumn16.Name = "DataGridViewTextBoxColumn16"
-        Me.DataGridViewTextBoxColumn16.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn17
-        '
-        Me.DataGridViewTextBoxColumn17.DataPropertyName = "esy_id"
-        Me.DataGridViewTextBoxColumn17.HeaderText = "S/Y"
-        Me.DataGridViewTextBoxColumn17.Name = "DataGridViewTextBoxColumn17"
-        Me.DataGridViewTextBoxColumn17.ReadOnly = True
-        Me.DataGridViewTextBoxColumn17.Visible = False
-        '
-        'DataGridViewTextBoxColumn18
-        '
-        Me.DataGridViewTextBoxColumn18.DataPropertyName = "egl_id"
-        Me.DataGridViewTextBoxColumn18.HeaderText = "YL"
-        Me.DataGridViewTextBoxColumn18.Name = "DataGridViewTextBoxColumn18"
-        Me.DataGridViewTextBoxColumn18.ReadOnly = True
-        Me.DataGridViewTextBoxColumn18.Visible = False
         '
         'Panel10
         '
@@ -2563,49 +2558,49 @@ Partial Class frm_slists
         Me.txtb_jSearch.Size = New System.Drawing.Size(425, 30)
         Me.txtb_jSearch.TabIndex = 13
         '
-        'col_sStud_id
+        'DataGridViewTextBoxColumn7
         '
-        Me.col_sStud_id.DataPropertyName = "sstud_id"
-        Me.col_sStud_id.HeaderText = "Stud. id"
-        Me.col_sStud_id.Name = "col_sStud_id"
-        Me.col_sStud_id.ReadOnly = True
+        Me.DataGridViewTextBoxColumn7.DataPropertyName = "jstud_id"
+        Me.DataGridViewTextBoxColumn7.HeaderText = "Stud. id"
+        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
+        Me.DataGridViewTextBoxColumn7.ReadOnly = True
         '
-        'col_sStud_fname
+        'DataGridViewTextBoxColumn8
         '
-        Me.col_sStud_fname.DataPropertyName = "sstud_fname"
-        Me.col_sStud_fname.HeaderText = "First Name"
-        Me.col_sStud_fname.Name = "col_sStud_fname"
-        Me.col_sStud_fname.ReadOnly = True
+        Me.DataGridViewTextBoxColumn8.DataPropertyName = "jstud_fname"
+        Me.DataGridViewTextBoxColumn8.HeaderText = "First Name"
+        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
+        Me.DataGridViewTextBoxColumn8.ReadOnly = True
         '
-        'col_sStud_lname
+        'DataGridViewTextBoxColumn14
         '
-        Me.col_sStud_lname.DataPropertyName = "sstud_Lname"
-        Me.col_sStud_lname.HeaderText = "Last Name"
-        Me.col_sStud_lname.Name = "col_sStud_lname"
-        Me.col_sStud_lname.ReadOnly = True
+        Me.DataGridViewTextBoxColumn14.DataPropertyName = "jstud_Lname"
+        Me.DataGridViewTextBoxColumn14.HeaderText = "Last Name"
+        Me.DataGridViewTextBoxColumn14.Name = "DataGridViewTextBoxColumn14"
+        Me.DataGridViewTextBoxColumn14.ReadOnly = True
         '
-        'col_sStud_mi
+        'DataGridViewTextBoxColumn16
         '
-        Me.col_sStud_mi.DataPropertyName = "sstud_mi"
-        Me.col_sStud_mi.HeaderText = "Middle Initial"
-        Me.col_sStud_mi.Name = "col_sStud_mi"
-        Me.col_sStud_mi.ReadOnly = True
+        Me.DataGridViewTextBoxColumn16.DataPropertyName = "jstud_mi"
+        Me.DataGridViewTextBoxColumn16.HeaderText = "Middle Initial"
+        Me.DataGridViewTextBoxColumn16.Name = "DataGridViewTextBoxColumn16"
+        Me.DataGridViewTextBoxColumn16.ReadOnly = True
         '
-        'col_sSY
+        'DataGridViewTextBoxColumn17
         '
-        Me.col_sSY.DataPropertyName = "ssy_id"
-        Me.col_sSY.HeaderText = "S/Y"
-        Me.col_sSY.Name = "col_sSY"
-        Me.col_sSY.ReadOnly = True
-        Me.col_sSY.Visible = False
+        Me.DataGridViewTextBoxColumn17.DataPropertyName = "jsy_id"
+        Me.DataGridViewTextBoxColumn17.HeaderText = "S/Y"
+        Me.DataGridViewTextBoxColumn17.Name = "DataGridViewTextBoxColumn17"
+        Me.DataGridViewTextBoxColumn17.ReadOnly = True
+        Me.DataGridViewTextBoxColumn17.Visible = False
         '
-        'col_sGL
+        'DataGridViewTextBoxColumn18
         '
-        Me.col_sGL.DataPropertyName = "sgl_id"
-        Me.col_sGL.HeaderText = "G/L"
-        Me.col_sGL.Name = "col_sGL"
-        Me.col_sGL.ReadOnly = True
-        Me.col_sGL.Visible = False
+        Me.DataGridViewTextBoxColumn18.DataPropertyName = "jgl_id"
+        Me.DataGridViewTextBoxColumn18.HeaderText = "YL"
+        Me.DataGridViewTextBoxColumn18.Name = "DataGridViewTextBoxColumn18"
+        Me.DataGridViewTextBoxColumn18.ReadOnly = True
+        Me.DataGridViewTextBoxColumn18.Visible = False
         '
         'frm_slists
         '
@@ -2765,12 +2760,6 @@ Partial Class frm_slists
     Friend WithEvents RadioButton7 As System.Windows.Forms.RadioButton
     Friend WithEvents RadioButton8 As System.Windows.Forms.RadioButton
     Friend WithEvents dg_jStudRec As Bunifu.Framework.UI.BunifuCustomDataGrid
-    Friend WithEvents DataGridViewTextBoxColumn7 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn8 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn14 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn16 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn17 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn18 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Panel10 As System.Windows.Forms.Panel
     Friend WithEvents btn_jCancel As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents btn_jViewAcct As Bunifu.Framework.UI.BunifuFlatButton
@@ -2809,4 +2798,11 @@ Partial Class frm_slists
     Friend WithEvents col_sStud_mi As DataGridViewTextBoxColumn
     Friend WithEvents col_sSY As DataGridViewTextBoxColumn
     Friend WithEvents col_sGL As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn7 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn8 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn14 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn16 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn17 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn18 As DataGridViewTextBoxColumn
+    Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
 End Class

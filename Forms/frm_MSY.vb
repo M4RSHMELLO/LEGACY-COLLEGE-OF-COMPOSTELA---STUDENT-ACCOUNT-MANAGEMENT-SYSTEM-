@@ -163,8 +163,17 @@
 
     Private Sub dg_esyRec_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dg_esyRec.CellClick
         Dim i = e.RowIndex
+        Dim esy_spSTARTEND() As String
         With dg_esyRec
             esy_id = .Item(0, i).Value
+            esy_spSTARTEND = .Item(1, i).Value.ToString.Split("-")
+
+            txtb_esy_start.Text = esy_spSTARTEND(0)
+            txtb_esy_end.Text = esy_spSTARTEND(1)
+            Dim esd As Date = .Item(2, i).Value
+            Dim eed As Date = .Item(3, i).Value
+            dp_ssy_sDate.Text = esd.ToString("yyyy-MM-dd")
+            dp_ssy_eDate.Text = eed.ToString("yyyy-MM-dd")
         End With
     End Sub
 
@@ -221,5 +230,28 @@
             _updateData("Update tbl_seniorhigh_gl  set sgl_name='" & sgl_name & "' where sgl_id='" & lbo_sglRec.SelectedValue & "'")
             _loadToListBox(sSelect_GL, lbo_sglRec)
         End If
+    End Sub
+
+    Private Sub dg_ssyRec_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dg_ssyRec.CellClick
+        Try
+            Dim i = e.RowIndex
+            Dim ssy_spSTARTEND() As String
+
+
+            With dg_ssyRec
+                ssy_id = .Item(0, i).Value
+                ssy_spSTARTEND = .Item(1, i).Value.ToString.Split("-")
+
+                txtb_ssy_start.Text = ssy_spSTARTEND(0)
+                txtb_ssy_end.Text = ssy_spSTARTEND(1)
+                Dim ssd As Date = .Item(2, i).Value
+                Dim sed As Date = .Item(3, i).Value
+                dp_ssy_sDate.Text = ssd.ToString("yyyy-MM-dd")
+                dp_ssy_eDate.Text = sed.ToString("yyyy-MM-dd")
+            End With
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+
     End Sub
 End Class
