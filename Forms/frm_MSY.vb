@@ -256,28 +256,69 @@
     End Sub
 
     '#############################################################Junior-High PUBLIC VARIABLE#########################################################
-
+    Dim d As Integer = 0
+    Dim jsy_id As Integer
+    Dim jgl_name As String
     Private Sub btn_jsy_new_Click(sender As Object, e As EventArgs) Handles btn_jsy_new.Click
-
+        txtb_jsy_start.Enabled = True
+        txtb_jsy_end.Enabled = True
+        btn_jsy_save.Enabled = True
+        d = 1
     End Sub
 
     Private Sub btn_jsy_update_Click(sender As Object, e As EventArgs) Handles btn_jsy_update.Click
-
+        If MessageBox.Show("", "Do You want to Update a School Year ?", MessageBoxButtons.YesNo) = DialogResult.Yes Then
+            txtb_jsy_start.Enabled = True
+            txtb_jsy_end.Enabled = True
+            btn_jsy_save.Enabled = True
+        End If
+        d = 2
     End Sub
 
     Private Sub btn_jsy_save_Click(sender As Object, e As EventArgs) Handles btn_jsy_save.Click
-
+        Select Case d
+            Case 1
+                Dim jsyN As String = txtb_jsy_start.Text & "-" & txtb_jsy_end.Text
+                Dim strQueery6 As String = "Insert Into tbl_juniorhigh_sy values(0,'" & jsyN & "','" & dp_jsy_sDate.Text & "','" & dp_jsy_eDate.Text & "')"
+                _dbConnection("db_lccsams")
+                _insertData(strQueery6)
+                _displayRecords(jSelect_SY, dg_jsyRec)
+            Case 2
+                Dim esyName As String = txtb_jsy_start.Text & "-" & txtb_jsy_end.Text
+                _dbConnection("db_lccsams")
+                _updateData("update tbl_juniorhigh_sy  set jsy_name='" & jsyName & "',jsy_sdate='" & dp_jsy_sDate.Text & "',jsy_edate='" & dp_jsy_eDate.Text & "' where jsy_id ='" & esy_id & "' ")
+                _displayRecords(eSelect_SY, dg_esyRec)
+        End Select
     End Sub
 
     Private Sub dg_jsyRec_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dg_jsyRec.CellClick
-
+        Dim i = e.RowIndex
+        Dim jsy_spSTARTEND() As String
+        With dg_jsyRec
+            jsy_id = .Item(0, i).Value
+            jsy_spSTARTEND = .Item(1, i).Value.ToString.Split("-")
+            txtb_jsy_start.Text = jsy_spSTARTEND(0)
+            txtb_jsy_end.Text = jsy_spSTARTEND(1)
+            Dim jsd As Date = .Item(2, i).Value
+            Dim jed As Date = .Item(3, i).Value
+            dp_jsy_sDate.Text = jsd.ToString("yyyy-MM-dd")
+            dp_jsy_eDate.Text = jed.ToString("yyyy-MM-dd")
+        End With
     End Sub
 
     Private Sub btn_jgl_new_Click(sender As Object, e As EventArgs) Handles btn_jgl_new.Click
-
+        jgl_name = InputBox("Input New Grade Level")
+        strQuerry5 = "Insert into tbl_juniorhigh_gl values ('0','" & jgl_name & "')"
+        _dbConnection("db_lccsams")
+        _insertData(strQuerry5)
+        _loadToListBox(jSelect_GL, lbo_jglRec)
     End Sub
 
     Private Sub tn_jgl_update_Click(sender As Object, e As EventArgs) Handles tn_jgl_update.Click
-
+        If MessageBox.Show("Do you want to update this Grade level? " & vbNewLine & "Name: " & lbo_jglRec.Text, "", MessageBoxButtons.YesNo) = DialogResult.Yes Then
+            sgl_name = InputBox("Enter a new name ")
+            _updateData("Update tbl_seniorhigh_gl  set sgl_name='" & jgl_name & "' where sgl_id='" & lbo_jglRec.SelectedValue & "'")
+            _loadToListBox(jSelect_GL, lbo_jglRec)
+        End If
     End Sub
 End Class
