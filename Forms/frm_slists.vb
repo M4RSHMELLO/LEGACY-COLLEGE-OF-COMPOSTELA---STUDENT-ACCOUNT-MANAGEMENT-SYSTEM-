@@ -684,11 +684,11 @@ Public Class frm_slists
         Select Case cbo_jSearchBy.SelectedItem.ToString
             Case "Name"
                 _dbConnection("db_lccsams")
-                _displayRecords(" select * from tbl_juniorhigh_students where jstud_fname Like '%" & txtb_jSearch.Text & "%' or jstud_lname  Like '%" & txtb_jSearch.Text & "%' ", dg_jStudRec)
+                _displayRecords(" select * from tbl_juniorhigh_students where jstud_fname Like '%" & txtb_jSearch.Text & "%' or jstud_lname  Like '%" & txtb_jSearch.Text & "%' ", dg_jStudRecords)
 
             Case "ID Number"
                 _dbConnection("db_lccsams")
-                _displayRecords("select * from tbl_juniorhigh_students where jstud_id Like '" & txtb_jSearch.Text & "%' ", dg_jStudRec)
+                _displayRecords("select * from tbl_juniorhigh_students where jstud_id Like '" & txtb_jSearch.Text & "%' ", dg_jStudRecords)
         End Select
     End Sub
 
@@ -778,12 +778,12 @@ Public Class frm_slists
                     Dim jNewStud As String = "Insert into tbl_juniorhigh_students values ('" & txtb_jStud_id.Text & "','" & txtb_jStudFname.Text & "','" & txtb_jStudLname.Text & "','" & txtb_jStudMI.Text & "','" & cbo_jSY.SelectedValue & "','" & cbo_jGL.SelectedValue & "')"
                     _insertData(jNewStud)
                     dlg_savesuccessfully.ShowDialog()
-                    _displayRecords(jStudR, dg_jStudRec)
+                    _displayRecords(sStudR, dg_jStudRec)
                 Case 2
                     Dim jUpdateStud = "Update tbl_juniorhigh_students set jstud_fname='" & txtb_jStudFname.Text & "',jstud_lname='" & txtb_jStudLname.Text & "',jstud_mi='" & txtb_jStudMI.Text & "',jsy_id='" & cbo_jSY.SelectedValue & "',jgl_id='" & cbo_jGL.SelectedValue & "' where jstud_id='" & txtb_jStud_id.Text & "' "
                     _dbConnection("db_lccsams")
                     _updateData(jUpdateStud)
-                    _displayRecords(jStudR, dg_jStudRec)
+                    _displayRecords(sStudR, dg_jStudRec)
                     UpdatedSuccessfully.ShowDialog()
             End Select
         End If

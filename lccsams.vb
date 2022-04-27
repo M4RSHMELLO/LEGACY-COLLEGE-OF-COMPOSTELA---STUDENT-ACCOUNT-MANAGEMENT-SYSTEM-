@@ -67,8 +67,8 @@ Module lccsams
     Public sSy_eDate As String
 
     '#############################################################Junior-High PUBLIC VARIABLE#########################################################
-    Public jSelect_SY As String = "select * from tbl_juniorhigh_sy order by jsy_edate desc "
-    Public jSelect_GL As String = "select * from tbl_juniorhigh_gradelevel"
+    Public jSelect_SY As String = "select * from tbl_juniorhigh_sy order by jhsy_edate desc "
+    Public jSelect_GL As String = "selct * from tbl_juniorhigh_gradelevel"
     Public jSelect_studRec As String = "select * from tbl_juniorhigh_students order by jstud_lname asc,jstud_fname asc"
 
     Public jStud_id As String
