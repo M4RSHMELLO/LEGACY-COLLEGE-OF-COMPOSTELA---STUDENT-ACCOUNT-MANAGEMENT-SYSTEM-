@@ -172,7 +172,6 @@ Partial Class frm_SPayments
         Me.Label14 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.jh_dept = New System.Windows.Forms.TabPage()
-        Me.sh_dept = New System.Windows.Forms.TabPage()
         Me.BunifuFlatButton3 = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.BunifuFlatButton8 = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.BunifuFlatButton9 = New Bunifu.Framework.UI.BunifuFlatButton()
@@ -235,6 +234,7 @@ Partial Class frm_SPayments
         Me.Label79 = New System.Windows.Forms.Label()
         Me.Label80 = New System.Windows.Forms.Label()
         Me.TextBox24 = New System.Windows.Forms.TextBox()
+        Me.sh_dept = New System.Windows.Forms.TabPage()
         Me.BunifuFlatButton13 = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.BunifuFlatButton14 = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.BunifuFlatButton15 = New Bunifu.Framework.UI.BunifuFlatButton()
@@ -317,7 +317,6 @@ Partial Class frm_SPayments
         Me.GroupBox6.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
         Me.jh_dept.SuspendLayout()
-        Me.sh_dept.SuspendLayout()
         Me.GroupBox13.SuspendLayout()
         Me.GroupBox14.SuspendLayout()
         CType(Me.BunifuCustomDataGrid2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -326,6 +325,7 @@ Partial Class frm_SPayments
         Me.Panel3.SuspendLayout()
         Me.GroupBox17.SuspendLayout()
         Me.GroupBox18.SuspendLayout()
+        Me.sh_dept.SuspendLayout()
         Me.GroupBox19.SuspendLayout()
         Me.GroupBox20.SuspendLayout()
         CType(Me.BunifuCustomDataGrid3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -381,7 +381,7 @@ Partial Class frm_SPayments
         Me.BunifuFlatButton2.IconMarginLeft = 0
         Me.BunifuFlatButton2.IconMarginRight = 0
         Me.BunifuFlatButton2.IconRightVisible = False
-        Me.BunifuFlatButton2.IconRightZoom = 0.0R
+        Me.BunifuFlatButton2.IconRightZoom = 0R
         Me.BunifuFlatButton2.IconVisible = False
         Me.BunifuFlatButton2.IconZoom = 90.0R
         Me.BunifuFlatButton2.IsTab = False
@@ -413,7 +413,7 @@ Partial Class frm_SPayments
         Me.btn_clear.IconMarginLeft = 0
         Me.btn_clear.IconMarginRight = 0
         Me.btn_clear.IconRightVisible = False
-        Me.btn_clear.IconRightZoom = 0.0R
+        Me.btn_clear.IconRightZoom = 0R
         Me.btn_clear.IconVisible = False
         Me.btn_clear.IconZoom = 90.0R
         Me.btn_clear.IsTab = False
@@ -445,7 +445,7 @@ Partial Class frm_SPayments
         Me.btn_save.IconMarginLeft = 0
         Me.btn_save.IconMarginRight = 0
         Me.btn_save.IconRightVisible = False
-        Me.btn_save.IconRightZoom = 0.0R
+        Me.btn_save.IconRightZoom = 0R
         Me.btn_save.IconVisible = False
         Me.btn_save.IconZoom = 90.0R
         Me.btn_save.IsTab = False
@@ -536,7 +536,7 @@ Partial Class frm_SPayments
         Me.btn_add.IconMarginLeft = 0
         Me.btn_add.IconMarginRight = 0
         Me.btn_add.IconRightVisible = False
-        Me.btn_add.IconRightZoom = 0.0R
+        Me.btn_add.IconRightZoom = 0R
         Me.btn_add.IconVisible = False
         Me.btn_add.IconZoom = 90.0R
         Me.btn_add.IsTab = False
@@ -734,7 +734,7 @@ Partial Class frm_SPayments
         Me.btn_enter.IconMarginLeft = 0
         Me.btn_enter.IconMarginRight = 0
         Me.btn_enter.IconRightVisible = False
-        Me.btn_enter.IconRightZoom = 0.0R
+        Me.btn_enter.IconRightZoom = 0R
         Me.btn_enter.IconVisible = False
         Me.btn_enter.IconZoom = 90.0R
         Me.btn_enter.IsTab = False
@@ -929,7 +929,7 @@ Partial Class frm_SPayments
         Me.btn_manage.IconMarginLeft = 0
         Me.btn_manage.IconMarginRight = 0
         Me.btn_manage.IconRightVisible = False
-        Me.btn_manage.IconRightZoom = 0.0R
+        Me.btn_manage.IconRightZoom = 0R
         Me.btn_manage.IconVisible = False
         Me.btn_manage.IconZoom = 90.0R
         Me.btn_manage.IsTab = False
@@ -1064,7 +1064,7 @@ Partial Class frm_SPayments
         Me.BunifuFlatButton4.IconMarginLeft = 0
         Me.BunifuFlatButton4.IconMarginRight = 0
         Me.BunifuFlatButton4.IconRightVisible = False
-        Me.BunifuFlatButton4.IconRightZoom = 0.0R
+        Me.BunifuFlatButton4.IconRightZoom = 0R
         Me.BunifuFlatButton4.IconVisible = False
         Me.BunifuFlatButton4.IconZoom = 90.0R
         Me.BunifuFlatButton4.IsTab = False
@@ -1096,7 +1096,7 @@ Partial Class frm_SPayments
         Me.BunifuFlatButton5.IconMarginLeft = 0
         Me.BunifuFlatButton5.IconMarginRight = 0
         Me.BunifuFlatButton5.IconRightVisible = False
-        Me.BunifuFlatButton5.IconRightZoom = 0.0R
+        Me.BunifuFlatButton5.IconRightZoom = 0R
         Me.BunifuFlatButton5.IconVisible = False
         Me.BunifuFlatButton5.IconZoom = 90.0R
         Me.BunifuFlatButton5.IsTab = False
@@ -1128,7 +1128,7 @@ Partial Class frm_SPayments
         Me.BunifuFlatButton6.IconMarginLeft = 0
         Me.BunifuFlatButton6.IconMarginRight = 0
         Me.BunifuFlatButton6.IconRightVisible = False
-        Me.BunifuFlatButton6.IconRightZoom = 0.0R
+        Me.BunifuFlatButton6.IconRightZoom = 0R
         Me.BunifuFlatButton6.IconVisible = False
         Me.BunifuFlatButton6.IconZoom = 90.0R
         Me.BunifuFlatButton6.IsTab = False
@@ -1219,7 +1219,7 @@ Partial Class frm_SPayments
         Me.BunifuFlatButton7.IconMarginLeft = 0
         Me.BunifuFlatButton7.IconMarginRight = 0
         Me.BunifuFlatButton7.IconRightVisible = False
-        Me.BunifuFlatButton7.IconRightZoom = 0.0R
+        Me.BunifuFlatButton7.IconRightZoom = 0R
         Me.BunifuFlatButton7.IconVisible = False
         Me.BunifuFlatButton7.IconZoom = 90.0R
         Me.BunifuFlatButton7.IsTab = False
@@ -1516,7 +1516,7 @@ Partial Class frm_SPayments
         Me.btn_eManage.IconMarginLeft = 0
         Me.btn_eManage.IconMarginRight = 0
         Me.btn_eManage.IconRightVisible = False
-        Me.btn_eManage.IconRightZoom = 0.0R
+        Me.btn_eManage.IconRightZoom = 0R
         Me.btn_eManage.IconVisible = False
         Me.btn_eManage.IconZoom = 90.0R
         Me.btn_eManage.IsTab = False
@@ -1603,7 +1603,7 @@ Partial Class frm_SPayments
         Me.BunifuFlatButton1.IconMarginLeft = 0
         Me.BunifuFlatButton1.IconMarginRight = 0
         Me.BunifuFlatButton1.IconRightVisible = False
-        Me.BunifuFlatButton1.IconRightZoom = 0.0R
+        Me.BunifuFlatButton1.IconRightZoom = 0R
         Me.BunifuFlatButton1.IconVisible = False
         Me.BunifuFlatButton1.IconZoom = 90.0R
         Me.BunifuFlatButton1.IsTab = False
@@ -1656,21 +1656,6 @@ Partial Class frm_SPayments
         Me.jh_dept.Name = "jh_dept"
         Me.jh_dept.UseVisualStyleBackColor = True
         '
-        'sh_dept
-        '
-        Me.sh_dept.Controls.Add(Me.BunifuFlatButton13)
-        Me.sh_dept.Controls.Add(Me.BunifuFlatButton14)
-        Me.sh_dept.Controls.Add(Me.BunifuFlatButton15)
-        Me.sh_dept.Controls.Add(Me.GroupBox19)
-        Me.sh_dept.Controls.Add(Me.GroupBox20)
-        Me.sh_dept.Controls.Add(Me.GroupBox21)
-        Me.sh_dept.Controls.Add(Me.GroupBox22)
-        Me.sh_dept.Controls.Add(Me.GroupBox23)
-        Me.sh_dept.Controls.Add(Me.GroupBox24)
-        resources.ApplyResources(Me.sh_dept, "sh_dept")
-        Me.sh_dept.Name = "sh_dept"
-        Me.sh_dept.UseVisualStyleBackColor = True
-        '
         'BunifuFlatButton3
         '
         Me.BunifuFlatButton3.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
@@ -1690,7 +1675,7 @@ Partial Class frm_SPayments
         Me.BunifuFlatButton3.IconMarginLeft = 0
         Me.BunifuFlatButton3.IconMarginRight = 0
         Me.BunifuFlatButton3.IconRightVisible = False
-        Me.BunifuFlatButton3.IconRightZoom = 0.0R
+        Me.BunifuFlatButton3.IconRightZoom = 0R
         Me.BunifuFlatButton3.IconVisible = False
         Me.BunifuFlatButton3.IconZoom = 90.0R
         Me.BunifuFlatButton3.IsTab = False
@@ -1722,7 +1707,7 @@ Partial Class frm_SPayments
         Me.BunifuFlatButton8.IconMarginLeft = 0
         Me.BunifuFlatButton8.IconMarginRight = 0
         Me.BunifuFlatButton8.IconRightVisible = False
-        Me.BunifuFlatButton8.IconRightZoom = 0.0R
+        Me.BunifuFlatButton8.IconRightZoom = 0R
         Me.BunifuFlatButton8.IconVisible = False
         Me.BunifuFlatButton8.IconZoom = 90.0R
         Me.BunifuFlatButton8.IsTab = False
@@ -1754,7 +1739,7 @@ Partial Class frm_SPayments
         Me.BunifuFlatButton9.IconMarginLeft = 0
         Me.BunifuFlatButton9.IconMarginRight = 0
         Me.BunifuFlatButton9.IconRightVisible = False
-        Me.BunifuFlatButton9.IconRightZoom = 0.0R
+        Me.BunifuFlatButton9.IconRightZoom = 0R
         Me.BunifuFlatButton9.IconVisible = False
         Me.BunifuFlatButton9.IconZoom = 90.0R
         Me.BunifuFlatButton9.IsTab = False
@@ -1845,7 +1830,7 @@ Partial Class frm_SPayments
         Me.BunifuFlatButton10.IconMarginLeft = 0
         Me.BunifuFlatButton10.IconMarginRight = 0
         Me.BunifuFlatButton10.IconRightVisible = False
-        Me.BunifuFlatButton10.IconRightZoom = 0.0R
+        Me.BunifuFlatButton10.IconRightZoom = 0R
         Me.BunifuFlatButton10.IconVisible = False
         Me.BunifuFlatButton10.IconZoom = 90.0R
         Me.BunifuFlatButton10.IsTab = False
@@ -2142,7 +2127,7 @@ Partial Class frm_SPayments
         Me.BunifuFlatButton11.IconMarginLeft = 0
         Me.BunifuFlatButton11.IconMarginRight = 0
         Me.BunifuFlatButton11.IconRightVisible = False
-        Me.BunifuFlatButton11.IconRightZoom = 0.0R
+        Me.BunifuFlatButton11.IconRightZoom = 0R
         Me.BunifuFlatButton11.IconVisible = False
         Me.BunifuFlatButton11.IconZoom = 90.0R
         Me.BunifuFlatButton11.IsTab = False
@@ -2229,7 +2214,7 @@ Partial Class frm_SPayments
         Me.BunifuFlatButton12.IconMarginLeft = 0
         Me.BunifuFlatButton12.IconMarginRight = 0
         Me.BunifuFlatButton12.IconRightVisible = False
-        Me.BunifuFlatButton12.IconRightZoom = 0.0R
+        Me.BunifuFlatButton12.IconRightZoom = 0R
         Me.BunifuFlatButton12.IconVisible = False
         Me.BunifuFlatButton12.IconZoom = 90.0R
         Me.BunifuFlatButton12.IsTab = False
@@ -2267,6 +2252,21 @@ Partial Class frm_SPayments
         resources.ApplyResources(Me.TextBox24, "TextBox24")
         Me.TextBox24.Name = "TextBox24"
         '
+        'sh_dept
+        '
+        Me.sh_dept.Controls.Add(Me.BunifuFlatButton13)
+        Me.sh_dept.Controls.Add(Me.BunifuFlatButton14)
+        Me.sh_dept.Controls.Add(Me.BunifuFlatButton15)
+        Me.sh_dept.Controls.Add(Me.GroupBox19)
+        Me.sh_dept.Controls.Add(Me.GroupBox20)
+        Me.sh_dept.Controls.Add(Me.GroupBox21)
+        Me.sh_dept.Controls.Add(Me.GroupBox22)
+        Me.sh_dept.Controls.Add(Me.GroupBox23)
+        Me.sh_dept.Controls.Add(Me.GroupBox24)
+        resources.ApplyResources(Me.sh_dept, "sh_dept")
+        Me.sh_dept.Name = "sh_dept"
+        Me.sh_dept.UseVisualStyleBackColor = True
+        '
         'BunifuFlatButton13
         '
         Me.BunifuFlatButton13.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
@@ -2286,7 +2286,7 @@ Partial Class frm_SPayments
         Me.BunifuFlatButton13.IconMarginLeft = 0
         Me.BunifuFlatButton13.IconMarginRight = 0
         Me.BunifuFlatButton13.IconRightVisible = False
-        Me.BunifuFlatButton13.IconRightZoom = 0.0R
+        Me.BunifuFlatButton13.IconRightZoom = 0R
         Me.BunifuFlatButton13.IconVisible = False
         Me.BunifuFlatButton13.IconZoom = 90.0R
         Me.BunifuFlatButton13.IsTab = False
@@ -2318,7 +2318,7 @@ Partial Class frm_SPayments
         Me.BunifuFlatButton14.IconMarginLeft = 0
         Me.BunifuFlatButton14.IconMarginRight = 0
         Me.BunifuFlatButton14.IconRightVisible = False
-        Me.BunifuFlatButton14.IconRightZoom = 0.0R
+        Me.BunifuFlatButton14.IconRightZoom = 0R
         Me.BunifuFlatButton14.IconVisible = False
         Me.BunifuFlatButton14.IconZoom = 90.0R
         Me.BunifuFlatButton14.IsTab = False
@@ -2350,7 +2350,7 @@ Partial Class frm_SPayments
         Me.BunifuFlatButton15.IconMarginLeft = 0
         Me.BunifuFlatButton15.IconMarginRight = 0
         Me.BunifuFlatButton15.IconRightVisible = False
-        Me.BunifuFlatButton15.IconRightZoom = 0.0R
+        Me.BunifuFlatButton15.IconRightZoom = 0R
         Me.BunifuFlatButton15.IconVisible = False
         Me.BunifuFlatButton15.IconZoom = 90.0R
         Me.BunifuFlatButton15.IsTab = False
@@ -2441,7 +2441,7 @@ Partial Class frm_SPayments
         Me.BunifuFlatButton16.IconMarginLeft = 0
         Me.BunifuFlatButton16.IconMarginRight = 0
         Me.BunifuFlatButton16.IconRightVisible = False
-        Me.BunifuFlatButton16.IconRightZoom = 0.0R
+        Me.BunifuFlatButton16.IconRightZoom = 0R
         Me.BunifuFlatButton16.IconVisible = False
         Me.BunifuFlatButton16.IconZoom = 90.0R
         Me.BunifuFlatButton16.IsTab = False
@@ -2738,7 +2738,7 @@ Partial Class frm_SPayments
         Me.BunifuFlatButton17.IconMarginLeft = 0
         Me.BunifuFlatButton17.IconMarginRight = 0
         Me.BunifuFlatButton17.IconRightVisible = False
-        Me.BunifuFlatButton17.IconRightZoom = 0.0R
+        Me.BunifuFlatButton17.IconRightZoom = 0R
         Me.BunifuFlatButton17.IconVisible = False
         Me.BunifuFlatButton17.IconZoom = 90.0R
         Me.BunifuFlatButton17.IsTab = False
@@ -2825,7 +2825,7 @@ Partial Class frm_SPayments
         Me.BunifuFlatButton18.IconMarginLeft = 0
         Me.BunifuFlatButton18.IconMarginRight = 0
         Me.BunifuFlatButton18.IconRightVisible = False
-        Me.BunifuFlatButton18.IconRightZoom = 0.0R
+        Me.BunifuFlatButton18.IconRightZoom = 0R
         Me.BunifuFlatButton18.IconVisible = False
         Me.BunifuFlatButton18.IconZoom = 90.0R
         Me.BunifuFlatButton18.IsTab = False
@@ -2904,7 +2904,6 @@ Partial Class frm_SPayments
         Me.GroupBox5.ResumeLayout(False)
         Me.GroupBox5.PerformLayout()
         Me.jh_dept.ResumeLayout(False)
-        Me.sh_dept.ResumeLayout(False)
         Me.GroupBox13.ResumeLayout(False)
         Me.GroupBox13.PerformLayout()
         Me.GroupBox14.ResumeLayout(False)
@@ -2920,6 +2919,7 @@ Partial Class frm_SPayments
         Me.GroupBox17.PerformLayout()
         Me.GroupBox18.ResumeLayout(False)
         Me.GroupBox18.PerformLayout()
+        Me.sh_dept.ResumeLayout(False)
         Me.GroupBox19.ResumeLayout(False)
         Me.GroupBox19.PerformLayout()
         Me.GroupBox20.ResumeLayout(False)
