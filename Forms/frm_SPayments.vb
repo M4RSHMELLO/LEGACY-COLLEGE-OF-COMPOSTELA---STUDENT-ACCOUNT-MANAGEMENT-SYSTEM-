@@ -55,30 +55,37 @@ Public Class frm_SPayments
     Private Sub frm_SPayments_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         cboSearchBy.SelectedIndex = 1
         _loadStudentNameToTextbox(nameSuggestion, txtb_Search)
+        selectpaymentype()
     End Sub
 
     Sub _retrieveStudData()
-        _dbConnection("db_lccsams")
-        Dim student_id As Integer
-        Dim querry2 As String = " Select s.stud_id,s.stud_Fname,s.stud_midI,s.stud_Lname,sy.sy_name,sem.sem_name,yl.yl_name ,c.crs_name,sn.st_noUnits,sn.st_rateperunit,s.sem_id from tbl_student s inner join tbl_sch_year sy on  sy.sy_id=s.sy_id inner join tbl_semester sem  on sem.sem_id=s.sem_id inner join tbl_year_level yl on yl.yl_id=s.yl_id inner join tbl_coll_course c on c.crs_id=s.crs_id  inner join tbl_studnounits sn   on s.sy_id=sn.sy_id and s.yl_id=sn.yl_id and s.sem_id=sn.sem_id and s.crs_id=sn.crs_id and s.stud_id=sn.stud_id where s.stud_Fname='" & fname & "' and s.stud_Lname='" & lname & "'"
-        dbConn.Open()
-        sqlCommand = New MySqlCommand(querry2, dbConn)
-        dr = sqlCommand.ExecuteReader
-        While dr.Read
-            txtb_studID.Text = dr(0).ToString
-            txtb_name.Text = dr(1).ToString.ToUpper + " " + dr(2).ToString.ToUpper + " " + dr(3).ToString.ToUpper
-            txtb_sy.Text = dr(4).ToString
-            txtb_sem.Text = dr(5).ToString
-            txtb_yL.Text = dr(6).ToString
-            txtb_course.Text = dr(7).ToString
-            txtb_noUnits.Text = dr(8).ToString
-            txtb_rpu.Text = dr(9).ToString
-            Sem_id = Integer.Parse(dr(10).ToString)
-            student_id = Integer.Parse(dr(0).ToString)
-        End While
-        dbConn.Close()
-        Dim particular_list As String = "select f.fees_id, f.fees_name from tbl_coll_fees f inner join tbl_student s on s.sy_id=f.sy_id and s.sem_id=f.sem_id and s.yl_id=f.yl_id and s.crs_id=f.crs_id where s.stud_id='" & student_id & "'"
-        _loadToCombobox(particular_list, cbo_particular)
+        Try
+            _dbConnection("db_lccsams")
+            Dim student_id As Integer = 0
+            Dim querry2 As String = " Select s.stud_id,s.stud_Fname,s.stud_midI,s.stud_Lname,sy.sy_name,sem.sem_name,yl.yl_name ,c.crs_name,sn.st_noUnits,sn.st_rateperunit,s.sem_id from tbl_student s inner join tbl_sch_year sy on  sy.sy_id=s.sy_id inner join tbl_semester sem  on sem.sem_id=s.sem_id inner join tbl_year_level yl on yl.yl_id=s.yl_id inner join tbl_coll_course c on c.crs_id=s.crs_id  inner join tbl_studnounits sn   on s.sy_id=sn.sy_id and s.yl_id=sn.yl_id and s.sem_id=sn.sem_id and s.crs_id=sn.crs_id and s.stud_id=sn.stud_id where s.stud_Fname='" & fname & "' and s.stud_Lname='" & lname & "'"
+            dbConn.Open()
+            sqlCommand = New MySqlCommand(querry2, dbConn)
+            dr = sqlCommand.ExecuteReader
+            While dr.Read
+                txtb_studID.Text = dr(0).ToString
+                txtb_name.Text = dr(1).ToString.ToUpper + " " + dr(2).ToString.ToUpper + " " + dr(3).ToString.ToUpper
+                txtb_sy.Text = dr(4).ToString
+                txtb_sem.Text = dr(5).ToString
+                txtb_yL.Text = dr(6).ToString
+                txtb_course.Text = dr(7).ToString
+                txtb_noUnits.Text = dr(8).ToString
+                txtb_rpu.Text = dr(9).ToString
+                Sem_id = Integer.Parse(dr(10).ToString)
+                student_id = Integer.Parse(dr(0).ToString)
+            End While
+            dbConn.Close()
+            Dim particular_list As String = "select f.fees_id, f.fees_name from tbl_coll_fees f inner join tbl_student s on s.sy_id=f.sy_id and s.sem_id=f.sem_id and s.yl_id=f.yl_id and s.crs_id=f.crs_id where s.stud_id='" & student_id & "'"
+            _loadToCombobox(particular_list, cbo_particular)
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+
+        End Try
+
     End Sub
     Sub _displayToTextbox_name()
 
@@ -94,7 +101,7 @@ Public Class frm_SPayments
                 lname = sp(2)
                 _retrieveStudData()
             Else
-                MessageBox.Show("please retry and select format in the suggestion")
+                _retrieveStudData()
             End If
         Catch ex As Exception
             MessageBox.Show("please retry and select format in the suggestion")
@@ -119,10 +126,10 @@ Public Class frm_SPayments
                 txtb_course.Text = dr(7).ToString
                 txtb_noUnits.Text = dr(8).ToString
                 txtb_rpu.Text = dr(9).ToString
-                Dim particular_list As String = "select f.fees_id, f.fees_name from tbl_coll_fees f inner join tbl_student s on s.sy_id=f.sy_id and s.sem_id=f.sem_id and s.yl_id=f.yl_id and s.crs_id=f.crs_id where s.stud_id='" & dr(0).ToString & "'"
-                _loadToCombobox(particular_list, cbo_particular)
-
             End While
+            dbConn.Close()
+            Dim particular_list As String = "select f.fees_id, f.fees_name from tbl_coll_fees f inner join tbl_student s on s.sy_id=f.sy_id and s.sem_id=f.sem_id and s.yl_id=f.yl_id and s.crs_id=f.crs_id where s.stud_id='" & dr(0).ToString & "'"
+            _loadToCombobox(particular_list, cbo_particular)
         Catch ex As Exception
         Finally
             dbConn.Close()
@@ -222,15 +229,23 @@ Public Class frm_SPayments
             If txtb_studID.Text = "" Then
                 MessageBox.Show("Please Select a student First!")
             Else
-                If dg_viewCurrentPayment.Rows.Count = 0 Then
+                If txtb_Payment.Text = 0 And txtb_Payment.Text = "" Then
                     MessageBox.Show("Please add payment!")
                 Else
-                    For Each row As DataGridViewRow In dg_viewCurrentPayment.Rows
-                        Dim InsertPayments As String = "Insert into tbl_studaccount values('" & txtb_studID.Text & "','" & txtb_TransNo.Text & "','" & txtb_TransDate.Text & "','" & Integer.Parse(row.Cells("fees_id").Value) & "','" & Double.Parse(row.Cells("t_amount").Value) & "','" & Double.Parse(row.Cells("t_balance").Value) & "')"
-                        _dbConnection("db_lccsams")
-                        _insertData(InsertPayments)
-                    Next
+
+                    'For Each row As DataGridViewRow In dg_viewCurrentPayment.Rows
+                    '    Dim InsertPayments As String = "Insert into tbl_studaccount values('" & txtb_studID.Text & "','" & txtb_TransNo.Text & "','" & txtb_TransDate.Text & "','" & Integer.Parse(row.Cells("fees_id").Value) & "','" & Double.Parse(row.Cells("t_amount").Value) & "','" & Double.Parse(row.Cells("t_balance").Value) & "')"
+                    '    _dbConnection("db_lccsams")
+                    '    _insertData(InsertPayments)
+                    'Next
+                    Dim InsertPayments As String = "Insert into tbl_studaccount values('" & txtb_studID.Text & "','" & txtb_TransNo.Text & "','" & txtb_TransDate.Text & "','" & Integer.Parse(cbo_particular.SelectedValue) & "','" & Double.Parse(txtb_Payment.Text) & "','" & Double.Parse(txtb_CurrentBalance.Text) & "')"
+                    _dbConnection("db_lccsams")
+                    _insertData(InsertPayments)
                     If MessageBox.Show("Save Succesfully!") = DialogResult.OK Then
+                        lbl_particularName.Text = cbo_particular.Text
+                        lbl_amount.Text = txtb_Payment.Text
+                        lbl_tAmnt.Text = "TOTAL AMOUNT: " & txtb_Payment.Text
+                        lbl_Tbal.Text = "BALANCE: " & txtb_CurrentBalance.Text
                         _clearCurrentStudData(btn_save.Text)
                         btn_Enter_Click(sender, e)
                     End If
@@ -288,7 +303,7 @@ Public Class frm_SPayments
                     _loadStudentNameToTextbox(nameSuggestion, txtb_Search)
                     cboSearchBy.SelectedIndex = 1
 
-      
+
                 Case 1
             End Select
         Catch ex As Exception
@@ -383,4 +398,33 @@ Public Class frm_SPayments
             MessageBox.Show(ex.Message)
         End Try
     End Sub
+
+    Private Sub rbtn_partial_CheckedChanged(sender As Object, e As EventArgs) Handles rbtn_partial.CheckedChanged
+        selectpaymentype()
+    End Sub
+
+    Private Sub rbtn_full_CheckedChanged(sender As Object, e As EventArgs) Handles rbtn_full.CheckedChanged
+        selectpaymentype()
+    End Sub
+    Sub selectpaymentype()
+        If rbtn_partial.Checked = True Then
+            txtb_Payment.Enabled = True
+            lbl_tobepaid.Visible = True
+            lbl_tobepaid.Text = "To be paid: " & 0
+            txtb_Payment.Clear()
+            Dim diff As TimeSpan = Date.Parse(sSy_eDate) - Date.Parse(sSy_sDate)
+            Label30.Text = diff.Days.ToString
+            lbl_tobepaid.Text = "Exam fee to be paid: " & (Double.Parse(txtb_TotalAmount.Text))
+        Else
+            txtb_Payment.Enabled = False
+            lbl_tobepaid.Visible = False
+            txtb_Payment.Text = txtb_TotalAmount.Text
+
+
+        End If
+    End Sub
+    Sub dateIntervalFortheSem()
+
+    End Sub
+
 End Class

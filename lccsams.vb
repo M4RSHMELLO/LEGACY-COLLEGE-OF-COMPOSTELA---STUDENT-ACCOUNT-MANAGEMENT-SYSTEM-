@@ -21,8 +21,8 @@ Module lccsams
     Public s_msyR As String = "Select * from schyearrecords order by sy_eDate desc"
     Public sStudR As String = "select * from stud_records"
 
-    Public fname As String
-    Public lname As String
+    Public fname As String = ""
+    Public lname As String = ""
     Public stud_id As Integer
     Public stud_name As String
     Public stud_crs As String

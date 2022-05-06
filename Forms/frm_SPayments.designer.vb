@@ -48,13 +48,9 @@ Partial Class frm_SPayments
         Me.Label11 = New System.Windows.Forms.Label()
         Me.txtb_CurrentAccount = New System.Windows.Forms.TextBox()
         Me.GroupBox8 = New System.Windows.Forms.GroupBox()
-        Me.btn_add = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.dg_viewCurrentPayment = New Bunifu.Framework.UI.BunifuCustomDataGrid()
-        Me.fees_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.t_amount = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.t_balance = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.delete = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.lbl_tobepaid = New System.Windows.Forms.Label()
+        Me.rbtn_full = New System.Windows.Forms.RadioButton()
+        Me.rbtn_partial = New System.Windows.Forms.RadioButton()
         Me.Label30 = New System.Windows.Forms.Label()
         Me.Label20 = New System.Windows.Forms.Label()
         Me.txtb_CurrentBalance = New System.Windows.Forms.TextBox()
@@ -78,12 +74,19 @@ Partial Class frm_SPayments
         Me.lbl_particularName = New System.Windows.Forms.Label()
         Me.Label26 = New System.Windows.Forms.Label()
         Me.Label25 = New System.Windows.Forms.Label()
-        Me.Label24 = New System.Windows.Forms.Label()
-        Me.Label23 = New System.Windows.Forms.Label()
+        Me.lbl_Tbal = New System.Windows.Forms.Label()
+        Me.lbl_tAmnt = New System.Windows.Forms.Label()
         Me.Label22 = New System.Windows.Forms.Label()
         Me.lbl_name = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.lbl_date = New System.Windows.Forms.Label()
+        Me.btn_add = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.dg_viewCurrentPayment = New Bunifu.Framework.UI.BunifuCustomDataGrid()
+        Me.fees_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.t_amount = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.t_balance = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.delete = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.lbl_orN = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -297,15 +300,16 @@ Partial Class frm_SPayments
         Me.Label106 = New System.Windows.Forms.Label()
         Me.Label107 = New System.Windows.Forms.Label()
         Me.TextBox36 = New System.Windows.Forms.TextBox()
+        Me.Panel5 = New System.Windows.Forms.Panel()
         Me.TabControl1.SuspendLayout()
         Me.coll_dept.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox8.SuspendLayout()
-        CType(Me.dg_viewCurrentPayment, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox7.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
         Me.Panel1.SuspendLayout()
+        CType(Me.dg_viewCurrentPayment, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
         Me.elem_dept.SuspendLayout()
         Me.GroupBox10.SuspendLayout()
@@ -350,6 +354,7 @@ Partial Class frm_SPayments
         '
         Me.coll_dept.BackColor = System.Drawing.SystemColors.Control
         Me.coll_dept.Controls.Add(Me.BunifuFlatButton2)
+        Me.coll_dept.Controls.Add(Me.btn_add)
         Me.coll_dept.Controls.Add(Me.btn_clear)
         Me.coll_dept.Controls.Add(Me.btn_save)
         Me.coll_dept.Controls.Add(Me.GroupBox3)
@@ -505,8 +510,9 @@ Partial Class frm_SPayments
         '
         'GroupBox8
         '
-        Me.GroupBox8.Controls.Add(Me.btn_add)
-        Me.GroupBox8.Controls.Add(Me.dg_viewCurrentPayment)
+        Me.GroupBox8.Controls.Add(Me.lbl_tobepaid)
+        Me.GroupBox8.Controls.Add(Me.rbtn_full)
+        Me.GroupBox8.Controls.Add(Me.rbtn_partial)
         Me.GroupBox8.Controls.Add(Me.Label30)
         Me.GroupBox8.Controls.Add(Me.Label20)
         Me.GroupBox8.Controls.Add(Me.txtb_CurrentBalance)
@@ -517,105 +523,24 @@ Partial Class frm_SPayments
         Me.GroupBox8.Name = "GroupBox8"
         Me.GroupBox8.TabStop = False
         '
-        'btn_add
+        'lbl_tobepaid
         '
-        Me.btn_add.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
-        Me.btn_add.BackColor = System.Drawing.SystemColors.ButtonFace
-        resources.ApplyResources(Me.btn_add, "btn_add")
-        Me.btn_add.BorderRadius = 0
-        Me.btn_add.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.btn_add.ButtonText = "ADD"
-        Me.btn_add.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_add.DisabledColor = System.Drawing.Color.Gray
-        Me.btn_add.ForeColor = System.Drawing.Color.SeaGreen
-        Me.btn_add.Iconcolor = System.Drawing.Color.Transparent
-        Me.btn_add.Iconimage = Nothing
-        Me.btn_add.Iconimage_right = Nothing
-        Me.btn_add.Iconimage_right_Selected = Nothing
-        Me.btn_add.Iconimage_Selected = Nothing
-        Me.btn_add.IconMarginLeft = 0
-        Me.btn_add.IconMarginRight = 0
-        Me.btn_add.IconRightVisible = False
-        Me.btn_add.IconRightZoom = 0R
-        Me.btn_add.IconVisible = False
-        Me.btn_add.IconZoom = 90.0R
-        Me.btn_add.IsTab = False
-        Me.btn_add.Name = "btn_add"
-        Me.btn_add.Normalcolor = System.Drawing.SystemColors.ButtonFace
-        Me.btn_add.OnHovercolor = System.Drawing.Color.Goldenrod
-        Me.btn_add.OnHoverTextColor = System.Drawing.Color.White
-        Me.btn_add.selected = False
-        Me.btn_add.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.btn_add.Textcolor = System.Drawing.Color.SeaGreen
-        Me.btn_add.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        resources.ApplyResources(Me.lbl_tobepaid, "lbl_tobepaid")
+        Me.lbl_tobepaid.BackColor = System.Drawing.SystemColors.MenuBar
+        Me.lbl_tobepaid.ForeColor = System.Drawing.Color.Red
+        Me.lbl_tobepaid.Name = "lbl_tobepaid"
         '
-        'dg_viewCurrentPayment
+        'rbtn_full
         '
-        Me.dg_viewCurrentPayment.AllowUserToAddRows = False
-        Me.dg_viewCurrentPayment.AllowUserToResizeColumns = False
-        Me.dg_viewCurrentPayment.AllowUserToResizeRows = False
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.dg_viewCurrentPayment.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-        Me.dg_viewCurrentPayment.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.dg_viewCurrentPayment.BackgroundColor = System.Drawing.SystemColors.Control
-        Me.dg_viewCurrentPayment.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.dg_viewCurrentPayment.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dg_viewCurrentPayment.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
-        Me.dg_viewCurrentPayment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dg_viewCurrentPayment.ColumnHeadersVisible = False
-        Me.dg_viewCurrentPayment.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.fees_id, Me.Column1, Me.t_amount, Me.t_balance, Me.delete})
-        Me.dg_viewCurrentPayment.DoubleBuffered = True
-        Me.dg_viewCurrentPayment.EnableHeadersVisualStyles = False
-        Me.dg_viewCurrentPayment.HeaderBgColor = System.Drawing.Color.SeaGreen
-        Me.dg_viewCurrentPayment.HeaderForeColor = System.Drawing.Color.White
-        resources.ApplyResources(Me.dg_viewCurrentPayment, "dg_viewCurrentPayment")
-        Me.dg_viewCurrentPayment.Name = "dg_viewCurrentPayment"
-        Me.dg_viewCurrentPayment.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        Me.dg_viewCurrentPayment.RowHeadersVisible = False
-        Me.dg_viewCurrentPayment.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        resources.ApplyResources(Me.rbtn_full, "rbtn_full")
+        Me.rbtn_full.Name = "rbtn_full"
+        Me.rbtn_full.UseVisualStyleBackColor = True
         '
-        'fees_id
+        'rbtn_partial
         '
-        resources.ApplyResources(Me.fees_id, "fees_id")
-        Me.fees_id.Name = "fees_id"
-        Me.fees_id.ReadOnly = True
-        '
-        'Column1
-        '
-        Me.Column1.FillWeight = 147.2081!
-        resources.ApplyResources(Me.Column1, "Column1")
-        Me.Column1.Name = "Column1"
-        Me.Column1.ReadOnly = True
-        '
-        't_amount
-        '
-        resources.ApplyResources(Me.t_amount, "t_amount")
-        Me.t_amount.Name = "t_amount"
-        Me.t_amount.ReadOnly = True
-        '
-        't_balance
-        '
-        resources.ApplyResources(Me.t_balance, "t_balance")
-        Me.t_balance.Name = "t_balance"
-        Me.t_balance.ReadOnly = True
-        '
-        'delete
-        '
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle3.NullValue = "Delete"
-        Me.delete.DefaultCellStyle = DataGridViewCellStyle3
-        Me.delete.FillWeight = 52.79189!
-        Me.delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        resources.ApplyResources(Me.delete, "delete")
-        Me.delete.Name = "delete"
-        Me.delete.UseColumnTextForButtonValue = True
+        resources.ApplyResources(Me.rbtn_partial, "rbtn_partial")
+        Me.rbtn_partial.Name = "rbtn_partial"
+        Me.rbtn_partial.UseVisualStyleBackColor = True
         '
         'Label30
         '
@@ -708,6 +633,7 @@ Partial Class frm_SPayments
         '
         Me.GroupBox1.Controls.Add(Me.btn_enter)
         Me.GroupBox1.Controls.Add(Me.cboSearchBy)
+        Me.GroupBox1.Controls.Add(Me.dg_viewCurrentPayment)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.txtb_Search)
@@ -779,12 +705,13 @@ Partial Class frm_SPayments
         Me.GroupBox4.Controls.Add(Me.lbl_particularName)
         Me.GroupBox4.Controls.Add(Me.Label26)
         Me.GroupBox4.Controls.Add(Me.Label25)
-        Me.GroupBox4.Controls.Add(Me.Label24)
-        Me.GroupBox4.Controls.Add(Me.Label23)
+        Me.GroupBox4.Controls.Add(Me.lbl_Tbal)
+        Me.GroupBox4.Controls.Add(Me.lbl_tAmnt)
         Me.GroupBox4.Controls.Add(Me.Label22)
         Me.GroupBox4.Controls.Add(Me.lbl_name)
         Me.GroupBox4.Controls.Add(Me.Panel1)
         Me.GroupBox4.Controls.Add(Me.ShapeContainer1)
+        Me.GroupBox4.Controls.Add(Me.Panel5)
         resources.ApplyResources(Me.GroupBox4, "GroupBox4")
         Me.GroupBox4.Name = "GroupBox4"
         Me.GroupBox4.TabStop = False
@@ -815,15 +742,15 @@ Partial Class frm_SPayments
         Me.Label25.ForeColor = System.Drawing.SystemColors.AppWorkspace
         Me.Label25.Name = "Label25"
         '
-        'Label24
+        'lbl_Tbal
         '
-        resources.ApplyResources(Me.Label24, "Label24")
-        Me.Label24.Name = "Label24"
+        resources.ApplyResources(Me.lbl_Tbal, "lbl_Tbal")
+        Me.lbl_Tbal.Name = "lbl_Tbal"
         '
-        'Label23
+        'lbl_tAmnt
         '
-        resources.ApplyResources(Me.Label23, "Label23")
-        Me.Label23.Name = "Label23"
+        resources.ApplyResources(Me.lbl_tAmnt, "lbl_tAmnt")
+        Me.lbl_tAmnt.Name = "lbl_tAmnt"
         '
         'Label22
         '
@@ -852,6 +779,106 @@ Partial Class frm_SPayments
         Me.lbl_date.BackColor = System.Drawing.SystemColors.MenuBar
         Me.lbl_date.ForeColor = System.Drawing.SystemColors.AppWorkspace
         Me.lbl_date.Name = "lbl_date"
+        '
+        'btn_add
+        '
+        Me.btn_add.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
+        Me.btn_add.BackColor = System.Drawing.SystemColors.ButtonFace
+        resources.ApplyResources(Me.btn_add, "btn_add")
+        Me.btn_add.BorderRadius = 0
+        Me.btn_add.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.btn_add.ButtonText = "ADD"
+        Me.btn_add.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_add.DisabledColor = System.Drawing.Color.Gray
+        Me.btn_add.ForeColor = System.Drawing.Color.SeaGreen
+        Me.btn_add.Iconcolor = System.Drawing.Color.Transparent
+        Me.btn_add.Iconimage = Nothing
+        Me.btn_add.Iconimage_right = Nothing
+        Me.btn_add.Iconimage_right_Selected = Nothing
+        Me.btn_add.Iconimage_Selected = Nothing
+        Me.btn_add.IconMarginLeft = 0
+        Me.btn_add.IconMarginRight = 0
+        Me.btn_add.IconRightVisible = False
+        Me.btn_add.IconRightZoom = 0R
+        Me.btn_add.IconVisible = False
+        Me.btn_add.IconZoom = 90.0R
+        Me.btn_add.IsTab = False
+        Me.btn_add.Name = "btn_add"
+        Me.btn_add.Normalcolor = System.Drawing.SystemColors.ButtonFace
+        Me.btn_add.OnHovercolor = System.Drawing.Color.Goldenrod
+        Me.btn_add.OnHoverTextColor = System.Drawing.Color.White
+        Me.btn_add.selected = False
+        Me.btn_add.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btn_add.Textcolor = System.Drawing.Color.SeaGreen
+        Me.btn_add.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        '
+        'dg_viewCurrentPayment
+        '
+        Me.dg_viewCurrentPayment.AllowUserToAddRows = False
+        Me.dg_viewCurrentPayment.AllowUserToResizeColumns = False
+        Me.dg_viewCurrentPayment.AllowUserToResizeRows = False
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.dg_viewCurrentPayment.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        Me.dg_viewCurrentPayment.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dg_viewCurrentPayment.BackgroundColor = System.Drawing.SystemColors.Control
+        Me.dg_viewCurrentPayment.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.dg_viewCurrentPayment.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!)
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dg_viewCurrentPayment.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        Me.dg_viewCurrentPayment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dg_viewCurrentPayment.ColumnHeadersVisible = False
+        Me.dg_viewCurrentPayment.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.fees_id, Me.Column1, Me.t_amount, Me.t_balance, Me.delete})
+        Me.dg_viewCurrentPayment.DoubleBuffered = True
+        Me.dg_viewCurrentPayment.EnableHeadersVisualStyles = False
+        Me.dg_viewCurrentPayment.HeaderBgColor = System.Drawing.Color.SeaGreen
+        Me.dg_viewCurrentPayment.HeaderForeColor = System.Drawing.Color.White
+        resources.ApplyResources(Me.dg_viewCurrentPayment, "dg_viewCurrentPayment")
+        Me.dg_viewCurrentPayment.Name = "dg_viewCurrentPayment"
+        Me.dg_viewCurrentPayment.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.dg_viewCurrentPayment.RowHeadersVisible = False
+        Me.dg_viewCurrentPayment.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        '
+        'fees_id
+        '
+        resources.ApplyResources(Me.fees_id, "fees_id")
+        Me.fees_id.Name = "fees_id"
+        Me.fees_id.ReadOnly = True
+        '
+        'Column1
+        '
+        Me.Column1.FillWeight = 147.2081!
+        resources.ApplyResources(Me.Column1, "Column1")
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        '
+        't_amount
+        '
+        resources.ApplyResources(Me.t_amount, "t_amount")
+        Me.t_amount.Name = "t_amount"
+        Me.t_amount.ReadOnly = True
+        '
+        't_balance
+        '
+        resources.ApplyResources(Me.t_balance, "t_balance")
+        Me.t_balance.Name = "t_balance"
+        Me.t_balance.ReadOnly = True
+        '
+        'delete
+        '
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle3.NullValue = "Delete"
+        Me.delete.DefaultCellStyle = DataGridViewCellStyle3
+        Me.delete.FillWeight = 52.79189!
+        Me.delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        resources.ApplyResources(Me.delete, "delete")
+        Me.delete.Name = "delete"
+        Me.delete.UseColumnTextForButtonValue = True
         '
         'Label15
         '
@@ -2863,6 +2890,12 @@ Partial Class frm_SPayments
         resources.ApplyResources(Me.TextBox36, "TextBox36")
         Me.TextBox36.Name = "TextBox36"
         '
+        'Panel5
+        '
+        Me.Panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        resources.ApplyResources(Me.Panel5, "Panel5")
+        Me.Panel5.Name = "Panel5"
+        '
         'frm_SPayments
         '
         resources.ApplyResources(Me, "$this")
@@ -2876,7 +2909,6 @@ Partial Class frm_SPayments
         Me.GroupBox3.PerformLayout()
         Me.GroupBox8.ResumeLayout(False)
         Me.GroupBox8.PerformLayout()
-        CType(Me.dg_viewCurrentPayment, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox7.ResumeLayout(False)
         Me.GroupBox7.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
@@ -2885,6 +2917,7 @@ Partial Class frm_SPayments
         Me.GroupBox4.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.dg_viewCurrentPayment, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.elem_dept.ResumeLayout(False)
@@ -2964,12 +2997,11 @@ Partial Class frm_SPayments
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents txtb_Search As System.Windows.Forms.TextBox
     Friend WithEvents GroupBox4 As System.Windows.Forms.GroupBox
-    Friend WithEvents lbl_amount As System.Windows.Forms.Label
     Friend WithEvents lbl_particularName As System.Windows.Forms.Label
     Friend WithEvents Label26 As System.Windows.Forms.Label
     Friend WithEvents Label25 As System.Windows.Forms.Label
-    Friend WithEvents Label24 As System.Windows.Forms.Label
-    Friend WithEvents Label23 As System.Windows.Forms.Label
+    Friend WithEvents lbl_Tbal As System.Windows.Forms.Label
+    Friend WithEvents lbl_tAmnt As System.Windows.Forms.Label
     Friend WithEvents Label22 As System.Windows.Forms.Label
     Friend WithEvents lbl_name As System.Windows.Forms.Label
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
@@ -3200,5 +3232,9 @@ Partial Class frm_SPayments
     Friend WithEvents Label106 As System.Windows.Forms.Label
     Friend WithEvents Label107 As System.Windows.Forms.Label
     Friend WithEvents TextBox36 As System.Windows.Forms.TextBox
-
+    Friend WithEvents lbl_tobepaid As Label
+    Friend WithEvents rbtn_full As RadioButton
+    Friend WithEvents rbtn_partial As RadioButton
+    Friend WithEvents lbl_amount As Label
+    Friend WithEvents Panel5 As Panel
 End Class
