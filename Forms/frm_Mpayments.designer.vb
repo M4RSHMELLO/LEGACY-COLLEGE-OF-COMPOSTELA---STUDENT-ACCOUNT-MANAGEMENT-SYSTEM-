@@ -70,26 +70,18 @@ Partial Class frm_Mpayments
         Me.elem_dept = New System.Windows.Forms.TabPage()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.dg_eFeesRec = New Bunifu.Framework.UI.BunifuCustomDataGrid()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Label8 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.cbo_eSortGL = New System.Windows.Forms.ComboBox()
         Me.cbo_eSortSy = New System.Windows.Forms.ComboBox()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.btn_eCancel = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.Label18 = New System.Windows.Forms.Label()
-        Me.cbo_eGL = New System.Windows.Forms.ComboBox()
         Me.cbo_eSY = New System.Windows.Forms.ComboBox()
         Me.txtb_eFeeAmnt = New System.Windows.Forms.TextBox()
         Me.Label20 = New System.Windows.Forms.Label()
         Me.btn_eSave = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.txtb_eFeeName = New System.Windows.Forms.TextBox()
-        Me.Label22 = New System.Windows.Forms.Label()
         Me.btn_eUpdate = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.btn_eAdd = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
@@ -125,23 +117,22 @@ Partial Class frm_Mpayments
         Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.Label28 = New System.Windows.Forms.Label()
         Me.Label29 = New System.Windows.Forms.Label()
-        Me.cbo_jSortGL = New System.Windows.Forms.ComboBox()
         Me.cbo_jSortSY = New System.Windows.Forms.ComboBox()
         Me.Panel9 = New System.Windows.Forms.Panel()
         Me.btn_jCancel = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.Label31 = New System.Windows.Forms.Label()
         Me.Label32 = New System.Windows.Forms.Label()
-        Me.cbo_jGL = New System.Windows.Forms.ComboBox()
         Me.cbo_jSY = New System.Windows.Forms.ComboBox()
         Me.txtb_jFeesAmnt = New System.Windows.Forms.TextBox()
         Me.Label34 = New System.Windows.Forms.Label()
         Me.btn_jSave = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.txtb_jFeesName = New System.Windows.Forms.TextBox()
-        Me.Label35 = New System.Windows.Forms.Label()
         Me.btn_jUpdate = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.btn_jAdd = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -740,7 +731,7 @@ Partial Class frm_Mpayments
         DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dg_eFeesRec.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.dg_eFeesRec.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dg_eFeesRec.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4})
+        Me.dg_eFeesRec.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3})
         Me.dg_eFeesRec.DoubleBuffered = True
         Me.dg_eFeesRec.EnableHeadersVisualStyles = False
         Me.dg_eFeesRec.HeaderBgColor = System.Drawing.Color.SeaGreen
@@ -753,41 +744,9 @@ Partial Class frm_Mpayments
         Me.dg_eFeesRec.Size = New System.Drawing.Size(609, 377)
         Me.dg_eFeesRec.TabIndex = 58
         '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "fees_id"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "Fees ID"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        Me.DataGridViewTextBoxColumn1.ReadOnly = True
-        Me.DataGridViewTextBoxColumn1.Visible = False
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "fees_name"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "Fees Type"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        Me.DataGridViewTextBoxColumn2.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "fees_amount"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "Fees Amount"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        Me.DataGridViewTextBoxColumn3.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn4
-        '
-        Me.DataGridViewTextBoxColumn4.DataPropertyName = "tuition_rpu_id"
-        Me.DataGridViewTextBoxColumn4.HeaderText = "Rate_per_unit"
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        Me.DataGridViewTextBoxColumn4.ReadOnly = True
-        Me.DataGridViewTextBoxColumn4.Visible = False
-        '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.Label8)
         Me.GroupBox1.Controls.Add(Me.Label10)
-        Me.GroupBox1.Controls.Add(Me.cbo_eSortGL)
         Me.GroupBox1.Controls.Add(Me.cbo_eSortSy)
         Me.GroupBox1.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(13, 13)
@@ -796,16 +755,6 @@ Partial Class frm_Mpayments
         Me.GroupBox1.TabIndex = 57
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "SORT BY"
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(316, 26)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(30, 20)
-        Me.Label8.TabIndex = 31
-        Me.Label8.Text = "G/L"
         '
         'Label10
         '
@@ -816,16 +765,6 @@ Partial Class frm_Mpayments
         Me.Label10.Size = New System.Drawing.Size(30, 20)
         Me.Label10.TabIndex = 31
         Me.Label10.Text = "S/Y"
-        '
-        'cbo_eSortGL
-        '
-        Me.cbo_eSortGL.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbo_eSortGL.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cbo_eSortGL.FormattingEnabled = True
-        Me.cbo_eSortGL.Location = New System.Drawing.Point(372, 26)
-        Me.cbo_eSortGL.Name = "cbo_eSortGL"
-        Me.cbo_eSortGL.Size = New System.Drawing.Size(218, 24)
-        Me.cbo_eSortGL.TabIndex = 11
         '
         'cbo_eSortSy
         '
@@ -843,13 +782,11 @@ Partial Class frm_Mpayments
         Me.Panel5.Controls.Add(Me.btn_eCancel)
         Me.Panel5.Controls.Add(Me.Label17)
         Me.Panel5.Controls.Add(Me.Label18)
-        Me.Panel5.Controls.Add(Me.cbo_eGL)
         Me.Panel5.Controls.Add(Me.cbo_eSY)
         Me.Panel5.Controls.Add(Me.txtb_eFeeAmnt)
         Me.Panel5.Controls.Add(Me.Label20)
         Me.Panel5.Controls.Add(Me.btn_eSave)
         Me.Panel5.Controls.Add(Me.txtb_eFeeName)
-        Me.Panel5.Controls.Add(Me.Label22)
         Me.Panel5.Controls.Add(Me.btn_eUpdate)
         Me.Panel5.Controls.Add(Me.btn_eAdd)
         Me.Panel5.Location = New System.Drawing.Point(33, 103)
@@ -915,17 +852,6 @@ Partial Class frm_Mpayments
         Me.Label18.Size = New System.Drawing.Size(45, 21)
         Me.Label18.TabIndex = 31
         Me.Label18.Text = "NAME"
-        '
-        'cbo_eGL
-        '
-        Me.cbo_eGL.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbo_eGL.Enabled = False
-        Me.cbo_eGL.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cbo_eGL.FormattingEnabled = True
-        Me.cbo_eGL.Location = New System.Drawing.Point(123, 83)
-        Me.cbo_eGL.Name = "cbo_eGL"
-        Me.cbo_eGL.Size = New System.Drawing.Size(217, 29)
-        Me.cbo_eGL.TabIndex = 20
         '
         'cbo_eSY
         '
@@ -1004,16 +930,6 @@ Partial Class frm_Mpayments
         Me.txtb_eFeeName.Name = "txtb_eFeeName"
         Me.txtb_eFeeName.Size = New System.Drawing.Size(253, 26)
         Me.txtb_eFeeName.TabIndex = 24
-        '
-        'Label22
-        '
-        Me.Label22.AutoSize = True
-        Me.Label22.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label22.Location = New System.Drawing.Point(24, 83)
-        Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(89, 21)
-        Me.Label22.TabIndex = 19
-        Me.Label22.Text = "GRADE LEVEL"
         '
         'btn_eUpdate
         '
@@ -1571,9 +1487,7 @@ Partial Class frm_Mpayments
         '
         'GroupBox3
         '
-        Me.GroupBox3.Controls.Add(Me.Label28)
         Me.GroupBox3.Controls.Add(Me.Label29)
-        Me.GroupBox3.Controls.Add(Me.cbo_jSortGL)
         Me.GroupBox3.Controls.Add(Me.cbo_jSortSY)
         Me.GroupBox3.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox3.Location = New System.Drawing.Point(13, 13)
@@ -1582,16 +1496,6 @@ Partial Class frm_Mpayments
         Me.GroupBox3.TabIndex = 57
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "SORT BY"
-        '
-        'Label28
-        '
-        Me.Label28.AutoSize = True
-        Me.Label28.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label28.Location = New System.Drawing.Point(316, 26)
-        Me.Label28.Name = "Label28"
-        Me.Label28.Size = New System.Drawing.Size(30, 20)
-        Me.Label28.TabIndex = 31
-        Me.Label28.Text = "G/L"
         '
         'Label29
         '
@@ -1602,16 +1506,6 @@ Partial Class frm_Mpayments
         Me.Label29.Size = New System.Drawing.Size(30, 20)
         Me.Label29.TabIndex = 31
         Me.Label29.Text = "S/Y"
-        '
-        'cbo_jSortGL
-        '
-        Me.cbo_jSortGL.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbo_jSortGL.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cbo_jSortGL.FormattingEnabled = True
-        Me.cbo_jSortGL.Location = New System.Drawing.Point(372, 26)
-        Me.cbo_jSortGL.Name = "cbo_jSortGL"
-        Me.cbo_jSortGL.Size = New System.Drawing.Size(218, 24)
-        Me.cbo_jSortGL.TabIndex = 11
         '
         'cbo_jSortSY
         '
@@ -1629,13 +1523,11 @@ Partial Class frm_Mpayments
         Me.Panel9.Controls.Add(Me.btn_jCancel)
         Me.Panel9.Controls.Add(Me.Label31)
         Me.Panel9.Controls.Add(Me.Label32)
-        Me.Panel9.Controls.Add(Me.cbo_jGL)
         Me.Panel9.Controls.Add(Me.cbo_jSY)
         Me.Panel9.Controls.Add(Me.txtb_jFeesAmnt)
         Me.Panel9.Controls.Add(Me.Label34)
         Me.Panel9.Controls.Add(Me.btn_jSave)
         Me.Panel9.Controls.Add(Me.txtb_jFeesName)
-        Me.Panel9.Controls.Add(Me.Label35)
         Me.Panel9.Controls.Add(Me.btn_jUpdate)
         Me.Panel9.Controls.Add(Me.btn_jAdd)
         Me.Panel9.Location = New System.Drawing.Point(33, 103)
@@ -1701,17 +1593,6 @@ Partial Class frm_Mpayments
         Me.Label32.Size = New System.Drawing.Size(45, 21)
         Me.Label32.TabIndex = 31
         Me.Label32.Text = "NAME"
-        '
-        'cbo_jGL
-        '
-        Me.cbo_jGL.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbo_jGL.Enabled = False
-        Me.cbo_jGL.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cbo_jGL.FormattingEnabled = True
-        Me.cbo_jGL.Location = New System.Drawing.Point(123, 83)
-        Me.cbo_jGL.Name = "cbo_jGL"
-        Me.cbo_jGL.Size = New System.Drawing.Size(217, 29)
-        Me.cbo_jGL.TabIndex = 20
         '
         'cbo_jSY
         '
@@ -1791,16 +1672,6 @@ Partial Class frm_Mpayments
         Me.txtb_jFeesName.Size = New System.Drawing.Size(253, 26)
         Me.txtb_jFeesName.TabIndex = 24
         '
-        'Label35
-        '
-        Me.Label35.AutoSize = True
-        Me.Label35.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label35.Location = New System.Drawing.Point(24, 83)
-        Me.Label35.Name = "Label35"
-        Me.Label35.Size = New System.Drawing.Size(89, 21)
-        Me.Label35.TabIndex = 19
-        Me.Label35.Text = "GRADE LEVEL"
-        '
         'btn_jUpdate
         '
         Me.btn_jUpdate.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
@@ -1876,6 +1747,28 @@ Partial Class frm_Mpayments
         Me.btn_jAdd.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.btn_jAdd.Textcolor = System.Drawing.Color.SeaGreen
         Me.btn_jAdd.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "efees_id"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "Fees ID"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.ReadOnly = True
+        Me.DataGridViewTextBoxColumn1.Visible = False
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "efees_name"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "Fees Type"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "efees_amount"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "Fees Amount"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.ReadOnly = True
         '
         'frm_Mpayments
         '
@@ -1958,26 +1851,18 @@ Partial Class frm_Mpayments
     Friend WithEvents rpu_id As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Panel3 As System.Windows.Forms.Panel
     Friend WithEvents dg_eFeesRec As Bunifu.Framework.UI.BunifuCustomDataGrid
-    Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
-    Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents Label10 As System.Windows.Forms.Label
-    Friend WithEvents cbo_eSortGL As System.Windows.Forms.ComboBox
     Friend WithEvents cbo_eSortSy As System.Windows.Forms.ComboBox
     Friend WithEvents Panel5 As System.Windows.Forms.Panel
     Friend WithEvents btn_eCancel As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents Label17 As System.Windows.Forms.Label
     Friend WithEvents Label18 As System.Windows.Forms.Label
-    Friend WithEvents cbo_eGL As System.Windows.Forms.ComboBox
     Friend WithEvents cbo_eSY As System.Windows.Forms.ComboBox
     Friend WithEvents txtb_eFeeAmnt As System.Windows.Forms.TextBox
     Friend WithEvents Label20 As System.Windows.Forms.Label
     Friend WithEvents btn_eSave As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents txtb_eFeeName As System.Windows.Forms.TextBox
-    Friend WithEvents Label22 As System.Windows.Forms.Label
     Friend WithEvents btn_eUpdate As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents btn_eAdd As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents TabPage2 As TabPage
@@ -2009,25 +1894,24 @@ Partial Class frm_Mpayments
     Friend WithEvents DataGridViewTextBoxColumn11 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn12 As DataGridViewTextBoxColumn
     Friend WithEvents GroupBox3 As GroupBox
-    Friend WithEvents Label28 As Label
     Friend WithEvents Label29 As Label
-    Friend WithEvents cbo_jSortGL As ComboBox
     Friend WithEvents cbo_jSortSY As ComboBox
     Friend WithEvents Panel9 As Panel
     Friend WithEvents btn_jCancel As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents Label31 As Label
     Friend WithEvents Label32 As Label
-    Friend WithEvents cbo_jGL As ComboBox
     Friend WithEvents cbo_jSY As ComboBox
     Friend WithEvents txtb_jFeesAmnt As TextBox
     Friend WithEvents Label34 As Label
     Friend WithEvents btn_jSave As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents txtb_jFeesName As TextBox
-    Friend WithEvents Label35 As Label
     Friend WithEvents btn_jUpdate As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents btn_jAdd As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents Label16 As Label
     Friend WithEvents cbo_sGL As ComboBox
     Friend WithEvents cbo_sSY As ComboBox
     Friend WithEvents Label19 As Label
+    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
 End Class

@@ -10,6 +10,7 @@
         cbo_course.SelectedIndex = -1
 
         'Sort by
+
         _loadToCombobox(slctSY, cbo_SortSY)
         _loadToCombobox(slctC, cbo_SortCrs)
         _loadToCombobox(slctS, cbo_SortSem)
@@ -181,9 +182,9 @@
                 cbo_SortYL.SelectedIndex = -1
             Case 1
                 _dbConnection("db_lccsams")
-                _loadToCombobox(slctC, cbo_eSY)
-                _loadToCombobox(slctS, cbo_eGL)
-
+                _loadToCombobox(eSelect_SY, cbo_eSY)
+                _loadToCombobox(eSelect_SY, cbo_eSortSy)
+                cbo_eSortSy.SelectedIndex = -1
         End Select
     End Sub
 
@@ -206,89 +207,295 @@
 
 
     '###########################################################Elementary Depatment Section##############################################################
+    Dim b As Integer = 0
     Private Sub btn_eAdd_Click(sender As Object, e As EventArgs) Handles btn_eAdd.Click
+        If MessageBox.Show("", "Do You want to add new elementary fees", MessageBoxButtons.YesNo) = DialogResult.Yes Then
+            cbo_eSY.Enabled = True
+            txtb_eFeeName.Enabled = True
+            txtb_eFeeAmnt.Enabled = True
 
+
+            btn_eAdd.Enabled = False
+            btn_eUpdate.Enabled = False
+            btn_eCancel.Enabled = True
+            btn_eSave.Enabled = True
+            dg_eFeesRec.Enabled = False
+            b = 1
+
+        End If
     End Sub
 
     Private Sub btn_eUpdate_Click(sender As Object, e As EventArgs) Handles btn_eUpdate.Click
+        If MessageBox.Show("", "Do You want to Update this fees?", MessageBoxButtons.YesNo) = DialogResult.Yes Then
+            b = 2
+            cbo_eSY.Enabled = True
+            txtb_eFeeName.Enabled = True
+            txtb_eFeeAmnt.Enabled = True
 
+            btn_eAdd.Enabled = False
+            btn_eUpdate.Enabled = False
+            btn_eCancel.Enabled = True
+            btn_eSave.Enabled = True
+            dg_eFeesRec.Enabled = False
+        End If
     End Sub
 
     Private Sub btn_eCancel_Click(sender As Object, e As EventArgs) Handles btn_eCancel.Click
+        cbo_eSY.Enabled = False
+        txtb_eFeeName.Enabled = False
+        txtb_eFeeAmnt.Enabled = False
 
+        btn_eAdd.Enabled = True
+        btn_eUpdate.Enabled = True
+        btn_eCancel.Enabled = False
+        btn_eSave.Enabled = False
+        dg_eFeesRec.Enabled = True
     End Sub
 
     Private Sub btn_eSave_Click(sender As Object, e As EventArgs) Handles btn_eSave.Click
+        Dim sFeesR As String = " "
 
+        Select Case b
+            Case 1
+
+                _dbConnection("db_lccsams")
+                _insertData("insert into tbl_coll_fees values (0,'" & txtb_eFeeName.Text & "','" & txtb_eFeeAmnt.Text & "','" & cbo_eSY.SelectedValue & "')")
+
+
+            Case 2
+                _dbConnection("db_lccsams")
+                _updateData("")
+                btn_update.Enabled = True
+                btn_save.Enabled = False
+                _displayRecords(sFeesR, dg_pRecords)
+        End Select
     End Sub
 
     Private Sub cbo_eSortSy_SelectionChangeCommitted(sender As Object, e As EventArgs) Handles cbo_eSortSy.SelectionChangeCommitted
+        Try
+            _dbConnection("db_lccsams")
+            Dim sFeesR_sort As String = "select efees_id,efees_name, efees_amount from tbl_elem_fees where esy_id='" & cbo_eSortSy.SelectedValue & "' "
 
+            txtb_eFeeAmnt.Clear()
+            txtb_eFeeName.Clear()
+            _displayRecords(sFeesR_sort, dg_eFeesRec)
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
     End Sub
 
-    Private Sub cbo_eSortGL_SelectionChangeCommitted(sender As Object, e As EventArgs) Handles cbo_eSortGL.SelectionChangeCommitted
-
-    End Sub
 
     Private Sub dg_eFeesRec_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dg_eFeesRec.CellClick
+        Try
+            Dim s = e.RowIndex
+            With dg_eFeesRec
+                cbo_eSY.Text = cbo_eSortSy.Text
 
+                txtb_eFeeName.Text = .Item(1, s).Value.ToString
+                txtb_eFeeAmnt.Text = .Item(2, s).Value.ToString
+            End With
+        Catch ex As Exception
+            MessageBox.Show("Error:", ex.Message)
+
+        End Try
     End Sub
-    '###########################################################Elementary Depatment Section##############################################################
-
+    '###########################################################Senior High Department Section##############################################################
+    Dim c As Integer = 0
     Private Sub btn_sAdd_Click(sender As Object, e As EventArgs) Handles btn_sAdd.Click
+        If MessageBox.Show("", "Do You want to add new Senior High fees", MessageBoxButtons.YesNo) = DialogResult.Yes Then
+            cbo_sSY.Enabled = True
+            txtb_sfeeName.Enabled = True
+            txtb_sFeeAmnt.Enabled = True
 
+
+            btn_sAdd.Enabled = False
+            btn_sUpdate.Enabled = False
+            btn_sCancel.Enabled = True
+            btn_sSave.Enabled = True
+            dg_sfeesRec.Enabled = False
+            c = 1
+
+        End If
     End Sub
 
     Private Sub btn_sUpdate_Click(sender As Object, e As EventArgs) Handles btn_sUpdate.Click
+        If MessageBox.Show("", "Do You want to Update this fees?", MessageBoxButtons.YesNo) = DialogResult.Yes Then
+            c = 2
+            cbo_sSY.Enabled = True
+            txtb_sfeeName.Enabled = True
+            txtb_sFeeAmnt.Enabled = True
 
+
+            btn_sAdd.Enabled = False
+            btn_sUpdate.Enabled = False
+            btn_sCancel.Enabled = True
+            btn_sSave.Enabled = True
+            dg_sfeesRec.Enabled = False
+        End If
     End Sub
 
     Private Sub btn_sCancel_Click(sender As Object, e As EventArgs) Handles btn_sCancel.Click
+        cbo_sSY.Enabled = False
+        txtb_sfeeName.Enabled = False
+        txtb_sFeeAmnt.Enabled = False
 
+
+        btn_sAdd.Enabled = True
+        btn_sUpdate.Enabled = True
+        btn_sCancel.Enabled = False
+        btn_sSave.Enabled = False
+        dg_sfeesRec.Enabled = True
     End Sub
 
     Private Sub btn_sSave_Click(sender As Object, e As EventArgs) Handles btn_sSave.Click
+        Select Case c
+            Case 1
 
+                _dbConnection("db_lccsams")
+                _insertData("insert into tbl_coll_fees values (0,'" & txtb_sfeeName.Text & "','" & txtb_sFeeAmnt.Text & "','" & cbo_sSY.SelectedValue & "')")
+
+
+            Case 2
+                _dbConnection("db_lccsams")
+                _updateData("")
+                btn_sUpdate.Enabled = True
+                btn_sSave.Enabled = False
+                _displayRecords("", dg_sfeesRec)
+        End Select
+        cbo_sSY.Enabled = False
+        txtb_sfeeName.Enabled = False
+        txtb_sFeeAmnt.Enabled = False
+
+
+        btn_sAdd.Enabled = True
+        btn_sUpdate.Enabled = True
+        btn_sCancel.Enabled = False
+        btn_sSave.Enabled = False
+        dg_sfeesRec.Enabled = True
     End Sub
 
     Private Sub cbo_sSortSY_SelectionChangeCommitted(sender As Object, e As EventArgs) Handles cbo_sSortSY.SelectionChangeCommitted
+        Try
+            _dbConnection("db_lccsams")
+            Dim sFeesR_sort As String = "select sfees_id,sfees_name, sfees_amount from tbl_senior_fees where ssy_id='" & cbo_sSortSY.SelectedValue & "' "
 
+            txtb_sFeeAmnt.Clear()
+            txtb_sfeeName.Clear()
+            _displayRecords(sFeesR_sort, dg_sfeesRec)
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
     End Sub
 
-    Private Sub cbo_sSortGL_SelectionChangeCommitted(sender As Object, e As EventArgs) Handles cbo_sSortGL.SelectionChangeCommitted
-
-    End Sub
 
     Private Sub dg_sfeesRec_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dg_sfeesRec.CellClick
+        Try
+            Dim s = e.RowIndex
+            With dg_sfeesRec
+                cbo_sSY.Text = cbo_sSortSY.Text
 
+                txtb_sfeeName.Text = .Item(1, s).Value.ToString
+                txtb_sFeeAmnt.Text = .Item(2, s).Value.ToString
+            End With
+        Catch ex As Exception
+            MessageBox.Show("Error:", ex.Message)
+
+        End Try
     End Sub
-    '###########################################################Elementary Depatment Section##############################################################
-
+    '###########################################################junior high Depatment Section##############################################################
+    Dim d As Integer = 0
     Private Sub btn_jAdd_Click(sender As Object, e As EventArgs) Handles btn_jAdd.Click
+        If MessageBox.Show("", "Do You want to add new Junior High fees", MessageBoxButtons.YesNo) = DialogResult.Yes Then
+            cbo_jSY.Enabled = True
+            txtb_jFeesName.Enabled = True
+            txtb_jFeesAmnt.Enabled = True
 
+
+            btn_jAdd.Enabled = False
+            btn_jUpdate.Enabled = False
+            btn_jCancel.Enabled = True
+            btn_jSave.Enabled = True
+            dg_jFeesRec.Enabled = False
+            d = 1
+
+        End If
     End Sub
 
     Private Sub btn_jUpdate_Click(sender As Object, e As EventArgs) Handles btn_jUpdate.Click
+        If MessageBox.Show("", "Do You want to Update this fees?", MessageBoxButtons.YesNo) = DialogResult.Yes Then
+            d = 2
+            cbo_jSY.Enabled = True
+            txtb_jFeesName.Enabled = True
+            txtb_jFeesAmnt.Enabled = True
 
+
+            btn_jAdd.Enabled = False
+            btn_jUpdate.Enabled = False
+            btn_jCancel.Enabled = True
+            btn_jSave.Enabled = True
+            dg_jFeesRec.Enabled = False
+
+        End If
     End Sub
 
     Private Sub btn_jCancel_Click(sender As Object, e As EventArgs) Handles btn_jCancel.Click
+        cbo_jSY.Enabled = False
+        txtb_jFeesName.Enabled = False
+        txtb_jFeesAmnt.Enabled = False
 
+
+        btn_jAdd.Enabled = True
+        btn_jUpdate.Enabled = True
+        btn_jCancel.Enabled = False
+        btn_jSave.Enabled = False
+        dg_jFeesRec.Enabled = True
     End Sub
 
     Private Sub btn_jSave_Click(sender As Object, e As EventArgs) Handles btn_jSave.Click
+        Select Case d
+            Case 1
 
+                _dbConnection("db_lccsams")
+                _insertData("insert into tbl_coll_fees values (0,'" & txtb_sfeeName.Text & "','" & txtb_sFeeAmnt.Text & "','" & cbo_sSY.SelectedValue & "')")
+
+
+            Case 2
+                _dbConnection("db_lccsams")
+                _updateData("")
+                btn_sUpdate.Enabled = True
+                btn_sSave.Enabled = False
+                _displayRecords("", dg_sfeesRec)
+        End Select
     End Sub
 
     Private Sub cbo_jSortSY_SelectionChangeCommitted(sender As Object, e As EventArgs) Handles cbo_jSortSY.SelectionChangeCommitted
+        Try
+            _dbConnection("db_lccsams")
+            Dim sFeesR_sort As String = "select jfees_id,jfees_name, jfees_amount from tbl_junior_fees where jsy_id='" & cbo_jSortSY.SelectedValue & "' "
 
+            txtb_jFeesAmnt.Clear()
+            txtb_jFeesName.Clear()
+            _displayRecords(sFeesR_sort, dg_jFeesRec)
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
     End Sub
 
-    Private Sub cbo_jSortGL_SelectionChangeCommitted(sender As Object, e As EventArgs) Handles cbo_jSortGL.SelectionChangeCommitted
-
-    End Sub
 
     Private Sub dg_jFeesRec_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dg_jFeesRec.CellClick
+        Try
+            Dim s = e.RowIndex
+            With dg_jFeesRec
+                cbo_jSY.Text = cbo_jSortSY.Text
+                txtb_jFeesName.Text = .Item(1, s).Value.ToString
+                txtb_jFeesAmnt.Text = .Item(2, s).Value.ToString
+            End With
+        Catch ex As Exception
+            MessageBox.Show("Error:", ex.Message)
 
+        End Try
     End Sub
 End Class
