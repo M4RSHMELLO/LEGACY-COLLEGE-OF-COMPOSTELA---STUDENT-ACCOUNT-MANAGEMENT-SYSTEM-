@@ -26,18 +26,10 @@ Partial Class frm_SPayments
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.coll_dept = New System.Windows.Forms.TabPage()
         Me.BunifuFlatButton2 = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.btn_add = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.btn_clear = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.btn_save = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
@@ -66,6 +58,12 @@ Partial Class frm_SPayments
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.btn_enter = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.cboSearchBy = New System.Windows.Forms.ComboBox()
+        Me.dg_viewCurrentPayment = New Bunifu.Framework.UI.BunifuCustomDataGrid()
+        Me.fees_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.t_amount = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.t_balance = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.delete = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtb_Search = New System.Windows.Forms.TextBox()
@@ -80,19 +78,13 @@ Partial Class frm_SPayments
         Me.lbl_name = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.lbl_date = New System.Windows.Forms.Label()
-        Me.btn_add = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.dg_viewCurrentPayment = New Bunifu.Framework.UI.BunifuCustomDataGrid()
-        Me.fees_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.t_amount = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.t_balance = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.delete = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.lbl_orN = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.Panel5 = New System.Windows.Forms.Panel()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.btn_manage = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.txtb_studID = New System.Windows.Forms.TextBox()
@@ -123,13 +115,6 @@ Partial Class frm_SPayments
         Me.Label52 = New System.Windows.Forms.Label()
         Me.TextBox12 = New System.Windows.Forms.TextBox()
         Me.GroupBox11 = New System.Windows.Forms.GroupBox()
-        Me.BunifuFlatButton7 = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.BunifuCustomDataGrid1 = New Bunifu.Framework.UI.BunifuCustomDataGrid()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewButtonColumn1 = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.Label53 = New System.Windows.Forms.Label()
         Me.Label54 = New System.Windows.Forms.Label()
         Me.TextBox13 = New System.Windows.Forms.TextBox()
@@ -160,7 +145,7 @@ Partial Class frm_SPayments
         Me.LineShape2 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.GroupBox6 = New System.Windows.Forms.GroupBox()
         Me.btn_eManage = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtb_eStudID = New System.Windows.Forms.TextBox()
         Me.Label27 = New System.Windows.Forms.Label()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.Label28 = New System.Windows.Forms.Label()
@@ -170,10 +155,10 @@ Partial Class frm_SPayments
         Me.TextBox9 = New System.Windows.Forms.TextBox()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
         Me.BunifuFlatButton1 = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.cbo_eSearchBy = New System.Windows.Forms.ComboBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtb_eSearch = New System.Windows.Forms.TextBox()
         Me.jh_dept = New System.Windows.Forms.TabPage()
         Me.BunifuFlatButton3 = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.BunifuFlatButton8 = New Bunifu.Framework.UI.BunifuFlatButton()
@@ -186,13 +171,6 @@ Partial Class frm_SPayments
         Me.Label34 = New System.Windows.Forms.Label()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.GroupBox14 = New System.Windows.Forms.GroupBox()
-        Me.BunifuFlatButton10 = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.BunifuCustomDataGrid2 = New Bunifu.Framework.UI.BunifuCustomDataGrid()
-        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewButtonColumn2 = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.Label35 = New System.Windows.Forms.Label()
         Me.Label58 = New System.Windows.Forms.Label()
         Me.TextBox7 = New System.Windows.Forms.TextBox()
@@ -249,13 +227,6 @@ Partial Class frm_SPayments
         Me.Label83 = New System.Windows.Forms.Label()
         Me.TextBox27 = New System.Windows.Forms.TextBox()
         Me.GroupBox20 = New System.Windows.Forms.GroupBox()
-        Me.BunifuFlatButton16 = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.BunifuCustomDataGrid3 = New Bunifu.Framework.UI.BunifuCustomDataGrid()
-        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewButtonColumn3 = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.Label84 = New System.Windows.Forms.Label()
         Me.Label85 = New System.Windows.Forms.Label()
         Me.TextBox28 = New System.Windows.Forms.TextBox()
@@ -300,21 +271,19 @@ Partial Class frm_SPayments
         Me.Label106 = New System.Windows.Forms.Label()
         Me.Label107 = New System.Windows.Forms.Label()
         Me.TextBox36 = New System.Windows.Forms.TextBox()
-        Me.Panel5 = New System.Windows.Forms.Panel()
         Me.TabControl1.SuspendLayout()
         Me.coll_dept.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox8.SuspendLayout()
         Me.GroupBox7.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.dg_viewCurrentPayment, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox4.SuspendLayout()
         Me.Panel1.SuspendLayout()
-        CType(Me.dg_viewCurrentPayment, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
         Me.elem_dept.SuspendLayout()
         Me.GroupBox10.SuspendLayout()
         Me.GroupBox11.SuspendLayout()
-        CType(Me.BunifuCustomDataGrid1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox12.SuspendLayout()
         Me.GroupBox9.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -323,7 +292,6 @@ Partial Class frm_SPayments
         Me.jh_dept.SuspendLayout()
         Me.GroupBox13.SuspendLayout()
         Me.GroupBox14.SuspendLayout()
-        CType(Me.BunifuCustomDataGrid2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox15.SuspendLayout()
         Me.GroupBox16.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -332,7 +300,6 @@ Partial Class frm_SPayments
         Me.sh_dept.SuspendLayout()
         Me.GroupBox19.SuspendLayout()
         Me.GroupBox20.SuspendLayout()
-        CType(Me.BunifuCustomDataGrid3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox21.SuspendLayout()
         Me.GroupBox22.SuspendLayout()
         Me.Panel4.SuspendLayout()
@@ -398,6 +365,38 @@ Partial Class frm_SPayments
         Me.BunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.BunifuFlatButton2.Textcolor = System.Drawing.Color.SeaGreen
         Me.BunifuFlatButton2.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        '
+        'btn_add
+        '
+        Me.btn_add.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
+        Me.btn_add.BackColor = System.Drawing.SystemColors.ButtonFace
+        resources.ApplyResources(Me.btn_add, "btn_add")
+        Me.btn_add.BorderRadius = 0
+        Me.btn_add.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.btn_add.ButtonText = "ADD"
+        Me.btn_add.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_add.DisabledColor = System.Drawing.Color.Gray
+        Me.btn_add.ForeColor = System.Drawing.Color.SeaGreen
+        Me.btn_add.Iconcolor = System.Drawing.Color.Transparent
+        Me.btn_add.Iconimage = Nothing
+        Me.btn_add.Iconimage_right = Nothing
+        Me.btn_add.Iconimage_right_Selected = Nothing
+        Me.btn_add.Iconimage_Selected = Nothing
+        Me.btn_add.IconMarginLeft = 0
+        Me.btn_add.IconMarginRight = 0
+        Me.btn_add.IconRightVisible = False
+        Me.btn_add.IconRightZoom = 0R
+        Me.btn_add.IconVisible = False
+        Me.btn_add.IconZoom = 90.0R
+        Me.btn_add.IsTab = False
+        Me.btn_add.Name = "btn_add"
+        Me.btn_add.Normalcolor = System.Drawing.SystemColors.ButtonFace
+        Me.btn_add.OnHovercolor = System.Drawing.Color.Goldenrod
+        Me.btn_add.OnHoverTextColor = System.Drawing.Color.White
+        Me.btn_add.selected = False
+        Me.btn_add.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btn_add.Textcolor = System.Drawing.Color.SeaGreen
+        Me.btn_add.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
         'btn_clear
         '
@@ -681,6 +680,74 @@ Partial Class frm_SPayments
         resources.ApplyResources(Me.cboSearchBy, "cboSearchBy")
         Me.cboSearchBy.Name = "cboSearchBy"
         '
+        'dg_viewCurrentPayment
+        '
+        Me.dg_viewCurrentPayment.AllowUserToAddRows = False
+        Me.dg_viewCurrentPayment.AllowUserToResizeColumns = False
+        Me.dg_viewCurrentPayment.AllowUserToResizeRows = False
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.dg_viewCurrentPayment.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        Me.dg_viewCurrentPayment.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dg_viewCurrentPayment.BackgroundColor = System.Drawing.SystemColors.Control
+        Me.dg_viewCurrentPayment.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.dg_viewCurrentPayment.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!)
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dg_viewCurrentPayment.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        Me.dg_viewCurrentPayment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dg_viewCurrentPayment.ColumnHeadersVisible = False
+        Me.dg_viewCurrentPayment.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.fees_id, Me.Column1, Me.t_amount, Me.t_balance, Me.delete})
+        Me.dg_viewCurrentPayment.DoubleBuffered = True
+        Me.dg_viewCurrentPayment.EnableHeadersVisualStyles = False
+        Me.dg_viewCurrentPayment.HeaderBgColor = System.Drawing.Color.SeaGreen
+        Me.dg_viewCurrentPayment.HeaderForeColor = System.Drawing.Color.White
+        resources.ApplyResources(Me.dg_viewCurrentPayment, "dg_viewCurrentPayment")
+        Me.dg_viewCurrentPayment.Name = "dg_viewCurrentPayment"
+        Me.dg_viewCurrentPayment.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.dg_viewCurrentPayment.RowHeadersVisible = False
+        Me.dg_viewCurrentPayment.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        '
+        'fees_id
+        '
+        resources.ApplyResources(Me.fees_id, "fees_id")
+        Me.fees_id.Name = "fees_id"
+        Me.fees_id.ReadOnly = True
+        '
+        'Column1
+        '
+        Me.Column1.FillWeight = 147.2081!
+        resources.ApplyResources(Me.Column1, "Column1")
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        '
+        't_amount
+        '
+        resources.ApplyResources(Me.t_amount, "t_amount")
+        Me.t_amount.Name = "t_amount"
+        Me.t_amount.ReadOnly = True
+        '
+        't_balance
+        '
+        resources.ApplyResources(Me.t_balance, "t_balance")
+        Me.t_balance.Name = "t_balance"
+        Me.t_balance.ReadOnly = True
+        '
+        'delete
+        '
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle3.NullValue = "Delete"
+        Me.delete.DefaultCellStyle = DataGridViewCellStyle3
+        Me.delete.FillWeight = 52.79189!
+        Me.delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        resources.ApplyResources(Me.delete, "delete")
+        Me.delete.Name = "delete"
+        Me.delete.UseColumnTextForButtonValue = True
+        '
         'Label1
         '
         resources.ApplyResources(Me.Label1, "Label1")
@@ -780,106 +847,6 @@ Partial Class frm_SPayments
         Me.lbl_date.ForeColor = System.Drawing.SystemColors.AppWorkspace
         Me.lbl_date.Name = "lbl_date"
         '
-        'btn_add
-        '
-        Me.btn_add.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
-        Me.btn_add.BackColor = System.Drawing.SystemColors.ButtonFace
-        resources.ApplyResources(Me.btn_add, "btn_add")
-        Me.btn_add.BorderRadius = 0
-        Me.btn_add.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.btn_add.ButtonText = "ADD"
-        Me.btn_add.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_add.DisabledColor = System.Drawing.Color.Gray
-        Me.btn_add.ForeColor = System.Drawing.Color.SeaGreen
-        Me.btn_add.Iconcolor = System.Drawing.Color.Transparent
-        Me.btn_add.Iconimage = Nothing
-        Me.btn_add.Iconimage_right = Nothing
-        Me.btn_add.Iconimage_right_Selected = Nothing
-        Me.btn_add.Iconimage_Selected = Nothing
-        Me.btn_add.IconMarginLeft = 0
-        Me.btn_add.IconMarginRight = 0
-        Me.btn_add.IconRightVisible = False
-        Me.btn_add.IconRightZoom = 0R
-        Me.btn_add.IconVisible = False
-        Me.btn_add.IconZoom = 90.0R
-        Me.btn_add.IsTab = False
-        Me.btn_add.Name = "btn_add"
-        Me.btn_add.Normalcolor = System.Drawing.SystemColors.ButtonFace
-        Me.btn_add.OnHovercolor = System.Drawing.Color.Goldenrod
-        Me.btn_add.OnHoverTextColor = System.Drawing.Color.White
-        Me.btn_add.selected = False
-        Me.btn_add.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.btn_add.Textcolor = System.Drawing.Color.SeaGreen
-        Me.btn_add.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        '
-        'dg_viewCurrentPayment
-        '
-        Me.dg_viewCurrentPayment.AllowUserToAddRows = False
-        Me.dg_viewCurrentPayment.AllowUserToResizeColumns = False
-        Me.dg_viewCurrentPayment.AllowUserToResizeRows = False
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.dg_viewCurrentPayment.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-        Me.dg_viewCurrentPayment.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.dg_viewCurrentPayment.BackgroundColor = System.Drawing.SystemColors.Control
-        Me.dg_viewCurrentPayment.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.dg_viewCurrentPayment.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!)
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dg_viewCurrentPayment.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
-        Me.dg_viewCurrentPayment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dg_viewCurrentPayment.ColumnHeadersVisible = False
-        Me.dg_viewCurrentPayment.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.fees_id, Me.Column1, Me.t_amount, Me.t_balance, Me.delete})
-        Me.dg_viewCurrentPayment.DoubleBuffered = True
-        Me.dg_viewCurrentPayment.EnableHeadersVisualStyles = False
-        Me.dg_viewCurrentPayment.HeaderBgColor = System.Drawing.Color.SeaGreen
-        Me.dg_viewCurrentPayment.HeaderForeColor = System.Drawing.Color.White
-        resources.ApplyResources(Me.dg_viewCurrentPayment, "dg_viewCurrentPayment")
-        Me.dg_viewCurrentPayment.Name = "dg_viewCurrentPayment"
-        Me.dg_viewCurrentPayment.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        Me.dg_viewCurrentPayment.RowHeadersVisible = False
-        Me.dg_viewCurrentPayment.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        '
-        'fees_id
-        '
-        resources.ApplyResources(Me.fees_id, "fees_id")
-        Me.fees_id.Name = "fees_id"
-        Me.fees_id.ReadOnly = True
-        '
-        'Column1
-        '
-        Me.Column1.FillWeight = 147.2081!
-        resources.ApplyResources(Me.Column1, "Column1")
-        Me.Column1.Name = "Column1"
-        Me.Column1.ReadOnly = True
-        '
-        't_amount
-        '
-        resources.ApplyResources(Me.t_amount, "t_amount")
-        Me.t_amount.Name = "t_amount"
-        Me.t_amount.ReadOnly = True
-        '
-        't_balance
-        '
-        resources.ApplyResources(Me.t_balance, "t_balance")
-        Me.t_balance.Name = "t_balance"
-        Me.t_balance.ReadOnly = True
-        '
-        'delete
-        '
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle3.NullValue = "Delete"
-        Me.delete.DefaultCellStyle = DataGridViewCellStyle3
-        Me.delete.FillWeight = 52.79189!
-        Me.delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        resources.ApplyResources(Me.delete, "delete")
-        Me.delete.Name = "delete"
-        Me.delete.UseColumnTextForButtonValue = True
-        '
         'Label15
         '
         resources.ApplyResources(Me.Label15, "Label15")
@@ -913,6 +880,12 @@ Partial Class frm_SPayments
         '
         Me.LineShape1.Name = "LineShape1"
         resources.ApplyResources(Me.LineShape1, "LineShape1")
+        '
+        'Panel5
+        '
+        Me.Panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        resources.ApplyResources(Me.Panel5, "Panel5")
+        Me.Panel5.Name = "Panel5"
         '
         'GroupBox2
         '
@@ -1215,8 +1188,6 @@ Partial Class frm_SPayments
         '
         'GroupBox11
         '
-        Me.GroupBox11.Controls.Add(Me.BunifuFlatButton7)
-        Me.GroupBox11.Controls.Add(Me.BunifuCustomDataGrid1)
         Me.GroupBox11.Controls.Add(Me.Label53)
         Me.GroupBox11.Controls.Add(Me.Label54)
         Me.GroupBox11.Controls.Add(Me.TextBox13)
@@ -1226,106 +1197,6 @@ Partial Class frm_SPayments
         resources.ApplyResources(Me.GroupBox11, "GroupBox11")
         Me.GroupBox11.Name = "GroupBox11"
         Me.GroupBox11.TabStop = False
-        '
-        'BunifuFlatButton7
-        '
-        Me.BunifuFlatButton7.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
-        Me.BunifuFlatButton7.BackColor = System.Drawing.SystemColors.ButtonFace
-        resources.ApplyResources(Me.BunifuFlatButton7, "BunifuFlatButton7")
-        Me.BunifuFlatButton7.BorderRadius = 0
-        Me.BunifuFlatButton7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.BunifuFlatButton7.ButtonText = "ADD"
-        Me.BunifuFlatButton7.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BunifuFlatButton7.DisabledColor = System.Drawing.Color.Gray
-        Me.BunifuFlatButton7.ForeColor = System.Drawing.Color.SeaGreen
-        Me.BunifuFlatButton7.Iconcolor = System.Drawing.Color.Transparent
-        Me.BunifuFlatButton7.Iconimage = Nothing
-        Me.BunifuFlatButton7.Iconimage_right = Nothing
-        Me.BunifuFlatButton7.Iconimage_right_Selected = Nothing
-        Me.BunifuFlatButton7.Iconimage_Selected = Nothing
-        Me.BunifuFlatButton7.IconMarginLeft = 0
-        Me.BunifuFlatButton7.IconMarginRight = 0
-        Me.BunifuFlatButton7.IconRightVisible = False
-        Me.BunifuFlatButton7.IconRightZoom = 0R
-        Me.BunifuFlatButton7.IconVisible = False
-        Me.BunifuFlatButton7.IconZoom = 90.0R
-        Me.BunifuFlatButton7.IsTab = False
-        Me.BunifuFlatButton7.Name = "BunifuFlatButton7"
-        Me.BunifuFlatButton7.Normalcolor = System.Drawing.SystemColors.ButtonFace
-        Me.BunifuFlatButton7.OnHovercolor = System.Drawing.Color.Goldenrod
-        Me.BunifuFlatButton7.OnHoverTextColor = System.Drawing.Color.White
-        Me.BunifuFlatButton7.selected = False
-        Me.BunifuFlatButton7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.BunifuFlatButton7.Textcolor = System.Drawing.Color.SeaGreen
-        Me.BunifuFlatButton7.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        '
-        'BunifuCustomDataGrid1
-        '
-        Me.BunifuCustomDataGrid1.AllowUserToAddRows = False
-        Me.BunifuCustomDataGrid1.AllowUserToResizeColumns = False
-        Me.BunifuCustomDataGrid1.AllowUserToResizeRows = False
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.BunifuCustomDataGrid1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
-        Me.BunifuCustomDataGrid1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.BunifuCustomDataGrid1.BackgroundColor = System.Drawing.SystemColors.Control
-        Me.BunifuCustomDataGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.BunifuCustomDataGrid1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.BunifuCustomDataGrid1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
-        Me.BunifuCustomDataGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.BunifuCustomDataGrid1.ColumnHeadersVisible = False
-        Me.BunifuCustomDataGrid1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewButtonColumn1})
-        Me.BunifuCustomDataGrid1.DoubleBuffered = True
-        Me.BunifuCustomDataGrid1.EnableHeadersVisualStyles = False
-        Me.BunifuCustomDataGrid1.HeaderBgColor = System.Drawing.Color.SeaGreen
-        Me.BunifuCustomDataGrid1.HeaderForeColor = System.Drawing.Color.White
-        resources.ApplyResources(Me.BunifuCustomDataGrid1, "BunifuCustomDataGrid1")
-        Me.BunifuCustomDataGrid1.Name = "BunifuCustomDataGrid1"
-        Me.BunifuCustomDataGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        Me.BunifuCustomDataGrid1.RowHeadersVisible = False
-        Me.BunifuCustomDataGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        '
-        'DataGridViewTextBoxColumn1
-        '
-        resources.ApplyResources(Me.DataGridViewTextBoxColumn1, "DataGridViewTextBoxColumn1")
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        Me.DataGridViewTextBoxColumn1.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.FillWeight = 147.2081!
-        resources.ApplyResources(Me.DataGridViewTextBoxColumn2, "DataGridViewTextBoxColumn2")
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        Me.DataGridViewTextBoxColumn2.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        resources.ApplyResources(Me.DataGridViewTextBoxColumn3, "DataGridViewTextBoxColumn3")
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        Me.DataGridViewTextBoxColumn3.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn4
-        '
-        resources.ApplyResources(Me.DataGridViewTextBoxColumn4, "DataGridViewTextBoxColumn4")
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        Me.DataGridViewTextBoxColumn4.ReadOnly = True
-        '
-        'DataGridViewButtonColumn1
-        '
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle6.NullValue = "Delete"
-        Me.DataGridViewButtonColumn1.DefaultCellStyle = DataGridViewCellStyle6
-        Me.DataGridViewButtonColumn1.FillWeight = 52.79189!
-        Me.DataGridViewButtonColumn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        resources.ApplyResources(Me.DataGridViewButtonColumn1, "DataGridViewButtonColumn1")
-        Me.DataGridViewButtonColumn1.Name = "DataGridViewButtonColumn1"
-        Me.DataGridViewButtonColumn1.UseColumnTextForButtonValue = True
         '
         'Label53
         '
@@ -1512,7 +1383,7 @@ Partial Class frm_SPayments
         'GroupBox6
         '
         Me.GroupBox6.Controls.Add(Me.btn_eManage)
-        Me.GroupBox6.Controls.Add(Me.TextBox2)
+        Me.GroupBox6.Controls.Add(Me.txtb_eStudID)
         Me.GroupBox6.Controls.Add(Me.Label27)
         Me.GroupBox6.Controls.Add(Me.TextBox5)
         Me.GroupBox6.Controls.Add(Me.Label28)
@@ -1556,11 +1427,11 @@ Partial Class frm_SPayments
         Me.btn_eManage.Textcolor = System.Drawing.Color.SeaGreen
         Me.btn_eManage.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
-        'TextBox2
+        'txtb_eStudID
         '
-        Me.TextBox2.BackColor = System.Drawing.Color.White
-        resources.ApplyResources(Me.TextBox2, "TextBox2")
-        Me.TextBox2.Name = "TextBox2"
+        Me.txtb_eStudID.BackColor = System.Drawing.Color.White
+        resources.ApplyResources(Me.txtb_eStudID, "txtb_eStudID")
+        Me.txtb_eStudID.Name = "txtb_eStudID"
         '
         'Label27
         '
@@ -1603,10 +1474,10 @@ Partial Class frm_SPayments
         'GroupBox5
         '
         Me.GroupBox5.Controls.Add(Me.BunifuFlatButton1)
-        Me.GroupBox5.Controls.Add(Me.ComboBox1)
+        Me.GroupBox5.Controls.Add(Me.cbo_eSearchBy)
         Me.GroupBox5.Controls.Add(Me.Label5)
         Me.GroupBox5.Controls.Add(Me.Label14)
-        Me.GroupBox5.Controls.Add(Me.TextBox1)
+        Me.GroupBox5.Controls.Add(Me.txtb_eSearch)
         resources.ApplyResources(Me.GroupBox5, "GroupBox5")
         Me.GroupBox5.Name = "GroupBox5"
         Me.GroupBox5.TabStop = False
@@ -1643,13 +1514,13 @@ Partial Class frm_SPayments
         Me.BunifuFlatButton1.Textcolor = System.Drawing.Color.SeaGreen
         Me.BunifuFlatButton1.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
-        'ComboBox1
+        'cbo_eSearchBy
         '
-        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {resources.GetString("ComboBox1.Items"), resources.GetString("ComboBox1.Items1")})
-        resources.ApplyResources(Me.ComboBox1, "ComboBox1")
-        Me.ComboBox1.Name = "ComboBox1"
+        Me.cbo_eSearchBy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbo_eSearchBy.FormattingEnabled = True
+        Me.cbo_eSearchBy.Items.AddRange(New Object() {resources.GetString("cbo_eSearchBy.Items"), resources.GetString("cbo_eSearchBy.Items1")})
+        resources.ApplyResources(Me.cbo_eSearchBy, "cbo_eSearchBy")
+        Me.cbo_eSearchBy.Name = "cbo_eSearchBy"
         '
         'Label5
         '
@@ -1661,15 +1532,16 @@ Partial Class frm_SPayments
         resources.ApplyResources(Me.Label14, "Label14")
         Me.Label14.Name = "Label14"
         '
-        'TextBox1
+        'txtb_eSearch
         '
-        Me.TextBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.TextBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
-        resources.ApplyResources(Me.TextBox1, "TextBox1")
-        Me.TextBox1.Name = "TextBox1"
+        Me.txtb_eSearch.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.txtb_eSearch.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
+        resources.ApplyResources(Me.txtb_eSearch, "txtb_eSearch")
+        Me.txtb_eSearch.Name = "txtb_eSearch"
         '
         'jh_dept
         '
+        Me.jh_dept.BackColor = System.Drawing.SystemColors.Control
         Me.jh_dept.Controls.Add(Me.BunifuFlatButton3)
         Me.jh_dept.Controls.Add(Me.BunifuFlatButton8)
         Me.jh_dept.Controls.Add(Me.BunifuFlatButton9)
@@ -1681,7 +1553,6 @@ Partial Class frm_SPayments
         Me.jh_dept.Controls.Add(Me.GroupBox18)
         resources.ApplyResources(Me.jh_dept, "jh_dept")
         Me.jh_dept.Name = "jh_dept"
-        Me.jh_dept.UseVisualStyleBackColor = True
         '
         'BunifuFlatButton3
         '
@@ -1826,8 +1697,6 @@ Partial Class frm_SPayments
         '
         'GroupBox14
         '
-        Me.GroupBox14.Controls.Add(Me.BunifuFlatButton10)
-        Me.GroupBox14.Controls.Add(Me.BunifuCustomDataGrid2)
         Me.GroupBox14.Controls.Add(Me.Label35)
         Me.GroupBox14.Controls.Add(Me.Label58)
         Me.GroupBox14.Controls.Add(Me.TextBox7)
@@ -1837,106 +1706,6 @@ Partial Class frm_SPayments
         resources.ApplyResources(Me.GroupBox14, "GroupBox14")
         Me.GroupBox14.Name = "GroupBox14"
         Me.GroupBox14.TabStop = False
-        '
-        'BunifuFlatButton10
-        '
-        Me.BunifuFlatButton10.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
-        Me.BunifuFlatButton10.BackColor = System.Drawing.SystemColors.ButtonFace
-        resources.ApplyResources(Me.BunifuFlatButton10, "BunifuFlatButton10")
-        Me.BunifuFlatButton10.BorderRadius = 0
-        Me.BunifuFlatButton10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.BunifuFlatButton10.ButtonText = "ADD"
-        Me.BunifuFlatButton10.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BunifuFlatButton10.DisabledColor = System.Drawing.Color.Gray
-        Me.BunifuFlatButton10.ForeColor = System.Drawing.Color.SeaGreen
-        Me.BunifuFlatButton10.Iconcolor = System.Drawing.Color.Transparent
-        Me.BunifuFlatButton10.Iconimage = Nothing
-        Me.BunifuFlatButton10.Iconimage_right = Nothing
-        Me.BunifuFlatButton10.Iconimage_right_Selected = Nothing
-        Me.BunifuFlatButton10.Iconimage_Selected = Nothing
-        Me.BunifuFlatButton10.IconMarginLeft = 0
-        Me.BunifuFlatButton10.IconMarginRight = 0
-        Me.BunifuFlatButton10.IconRightVisible = False
-        Me.BunifuFlatButton10.IconRightZoom = 0R
-        Me.BunifuFlatButton10.IconVisible = False
-        Me.BunifuFlatButton10.IconZoom = 90.0R
-        Me.BunifuFlatButton10.IsTab = False
-        Me.BunifuFlatButton10.Name = "BunifuFlatButton10"
-        Me.BunifuFlatButton10.Normalcolor = System.Drawing.SystemColors.ButtonFace
-        Me.BunifuFlatButton10.OnHovercolor = System.Drawing.Color.Goldenrod
-        Me.BunifuFlatButton10.OnHoverTextColor = System.Drawing.Color.White
-        Me.BunifuFlatButton10.selected = False
-        Me.BunifuFlatButton10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.BunifuFlatButton10.Textcolor = System.Drawing.Color.SeaGreen
-        Me.BunifuFlatButton10.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        '
-        'BunifuCustomDataGrid2
-        '
-        Me.BunifuCustomDataGrid2.AllowUserToAddRows = False
-        Me.BunifuCustomDataGrid2.AllowUserToResizeColumns = False
-        Me.BunifuCustomDataGrid2.AllowUserToResizeRows = False
-        DataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.BunifuCustomDataGrid2.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle7
-        Me.BunifuCustomDataGrid2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.BunifuCustomDataGrid2.BackgroundColor = System.Drawing.SystemColors.Control
-        Me.BunifuCustomDataGrid2.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.BunifuCustomDataGrid2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle8.BackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.BunifuCustomDataGrid2.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle8
-        Me.BunifuCustomDataGrid2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.BunifuCustomDataGrid2.ColumnHeadersVisible = False
-        Me.BunifuCustomDataGrid2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8, Me.DataGridViewButtonColumn2})
-        Me.BunifuCustomDataGrid2.DoubleBuffered = True
-        Me.BunifuCustomDataGrid2.EnableHeadersVisualStyles = False
-        Me.BunifuCustomDataGrid2.HeaderBgColor = System.Drawing.Color.SeaGreen
-        Me.BunifuCustomDataGrid2.HeaderForeColor = System.Drawing.Color.White
-        resources.ApplyResources(Me.BunifuCustomDataGrid2, "BunifuCustomDataGrid2")
-        Me.BunifuCustomDataGrid2.Name = "BunifuCustomDataGrid2"
-        Me.BunifuCustomDataGrid2.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        Me.BunifuCustomDataGrid2.RowHeadersVisible = False
-        Me.BunifuCustomDataGrid2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        '
-        'DataGridViewTextBoxColumn5
-        '
-        resources.ApplyResources(Me.DataGridViewTextBoxColumn5, "DataGridViewTextBoxColumn5")
-        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
-        Me.DataGridViewTextBoxColumn5.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn6
-        '
-        Me.DataGridViewTextBoxColumn6.FillWeight = 147.2081!
-        resources.ApplyResources(Me.DataGridViewTextBoxColumn6, "DataGridViewTextBoxColumn6")
-        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
-        Me.DataGridViewTextBoxColumn6.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn7
-        '
-        resources.ApplyResources(Me.DataGridViewTextBoxColumn7, "DataGridViewTextBoxColumn7")
-        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
-        Me.DataGridViewTextBoxColumn7.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn8
-        '
-        resources.ApplyResources(Me.DataGridViewTextBoxColumn8, "DataGridViewTextBoxColumn8")
-        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
-        Me.DataGridViewTextBoxColumn8.ReadOnly = True
-        '
-        'DataGridViewButtonColumn2
-        '
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle9.NullValue = "Delete"
-        Me.DataGridViewButtonColumn2.DefaultCellStyle = DataGridViewCellStyle9
-        Me.DataGridViewButtonColumn2.FillWeight = 52.79189!
-        Me.DataGridViewButtonColumn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        resources.ApplyResources(Me.DataGridViewButtonColumn2, "DataGridViewButtonColumn2")
-        Me.DataGridViewButtonColumn2.Name = "DataGridViewButtonColumn2"
-        Me.DataGridViewButtonColumn2.UseColumnTextForButtonValue = True
         '
         'Label35
         '
@@ -2281,6 +2050,7 @@ Partial Class frm_SPayments
         '
         'sh_dept
         '
+        Me.sh_dept.BackColor = System.Drawing.SystemColors.Control
         Me.sh_dept.Controls.Add(Me.BunifuFlatButton13)
         Me.sh_dept.Controls.Add(Me.BunifuFlatButton14)
         Me.sh_dept.Controls.Add(Me.BunifuFlatButton15)
@@ -2292,7 +2062,6 @@ Partial Class frm_SPayments
         Me.sh_dept.Controls.Add(Me.GroupBox24)
         resources.ApplyResources(Me.sh_dept, "sh_dept")
         Me.sh_dept.Name = "sh_dept"
-        Me.sh_dept.UseVisualStyleBackColor = True
         '
         'BunifuFlatButton13
         '
@@ -2437,8 +2206,6 @@ Partial Class frm_SPayments
         '
         'GroupBox20
         '
-        Me.GroupBox20.Controls.Add(Me.BunifuFlatButton16)
-        Me.GroupBox20.Controls.Add(Me.BunifuCustomDataGrid3)
         Me.GroupBox20.Controls.Add(Me.Label84)
         Me.GroupBox20.Controls.Add(Me.Label85)
         Me.GroupBox20.Controls.Add(Me.TextBox28)
@@ -2448,106 +2215,6 @@ Partial Class frm_SPayments
         resources.ApplyResources(Me.GroupBox20, "GroupBox20")
         Me.GroupBox20.Name = "GroupBox20"
         Me.GroupBox20.TabStop = False
-        '
-        'BunifuFlatButton16
-        '
-        Me.BunifuFlatButton16.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
-        Me.BunifuFlatButton16.BackColor = System.Drawing.SystemColors.ButtonFace
-        resources.ApplyResources(Me.BunifuFlatButton16, "BunifuFlatButton16")
-        Me.BunifuFlatButton16.BorderRadius = 0
-        Me.BunifuFlatButton16.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.BunifuFlatButton16.ButtonText = "ADD"
-        Me.BunifuFlatButton16.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BunifuFlatButton16.DisabledColor = System.Drawing.Color.Gray
-        Me.BunifuFlatButton16.ForeColor = System.Drawing.Color.SeaGreen
-        Me.BunifuFlatButton16.Iconcolor = System.Drawing.Color.Transparent
-        Me.BunifuFlatButton16.Iconimage = Nothing
-        Me.BunifuFlatButton16.Iconimage_right = Nothing
-        Me.BunifuFlatButton16.Iconimage_right_Selected = Nothing
-        Me.BunifuFlatButton16.Iconimage_Selected = Nothing
-        Me.BunifuFlatButton16.IconMarginLeft = 0
-        Me.BunifuFlatButton16.IconMarginRight = 0
-        Me.BunifuFlatButton16.IconRightVisible = False
-        Me.BunifuFlatButton16.IconRightZoom = 0R
-        Me.BunifuFlatButton16.IconVisible = False
-        Me.BunifuFlatButton16.IconZoom = 90.0R
-        Me.BunifuFlatButton16.IsTab = False
-        Me.BunifuFlatButton16.Name = "BunifuFlatButton16"
-        Me.BunifuFlatButton16.Normalcolor = System.Drawing.SystemColors.ButtonFace
-        Me.BunifuFlatButton16.OnHovercolor = System.Drawing.Color.Goldenrod
-        Me.BunifuFlatButton16.OnHoverTextColor = System.Drawing.Color.White
-        Me.BunifuFlatButton16.selected = False
-        Me.BunifuFlatButton16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.BunifuFlatButton16.Textcolor = System.Drawing.Color.SeaGreen
-        Me.BunifuFlatButton16.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        '
-        'BunifuCustomDataGrid3
-        '
-        Me.BunifuCustomDataGrid3.AllowUserToAddRows = False
-        Me.BunifuCustomDataGrid3.AllowUserToResizeColumns = False
-        Me.BunifuCustomDataGrid3.AllowUserToResizeRows = False
-        DataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.BunifuCustomDataGrid3.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle10
-        Me.BunifuCustomDataGrid3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.BunifuCustomDataGrid3.BackgroundColor = System.Drawing.SystemColors.Control
-        Me.BunifuCustomDataGrid3.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.BunifuCustomDataGrid3.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle11.BackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle11.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle11.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.BunifuCustomDataGrid3.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle11
-        Me.BunifuCustomDataGrid3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.BunifuCustomDataGrid3.ColumnHeadersVisible = False
-        Me.BunifuCustomDataGrid3.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn9, Me.DataGridViewTextBoxColumn10, Me.DataGridViewTextBoxColumn11, Me.DataGridViewTextBoxColumn12, Me.DataGridViewButtonColumn3})
-        Me.BunifuCustomDataGrid3.DoubleBuffered = True
-        Me.BunifuCustomDataGrid3.EnableHeadersVisualStyles = False
-        Me.BunifuCustomDataGrid3.HeaderBgColor = System.Drawing.Color.SeaGreen
-        Me.BunifuCustomDataGrid3.HeaderForeColor = System.Drawing.Color.White
-        resources.ApplyResources(Me.BunifuCustomDataGrid3, "BunifuCustomDataGrid3")
-        Me.BunifuCustomDataGrid3.Name = "BunifuCustomDataGrid3"
-        Me.BunifuCustomDataGrid3.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        Me.BunifuCustomDataGrid3.RowHeadersVisible = False
-        Me.BunifuCustomDataGrid3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        '
-        'DataGridViewTextBoxColumn9
-        '
-        resources.ApplyResources(Me.DataGridViewTextBoxColumn9, "DataGridViewTextBoxColumn9")
-        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
-        Me.DataGridViewTextBoxColumn9.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn10
-        '
-        Me.DataGridViewTextBoxColumn10.FillWeight = 147.2081!
-        resources.ApplyResources(Me.DataGridViewTextBoxColumn10, "DataGridViewTextBoxColumn10")
-        Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
-        Me.DataGridViewTextBoxColumn10.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn11
-        '
-        resources.ApplyResources(Me.DataGridViewTextBoxColumn11, "DataGridViewTextBoxColumn11")
-        Me.DataGridViewTextBoxColumn11.Name = "DataGridViewTextBoxColumn11"
-        Me.DataGridViewTextBoxColumn11.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn12
-        '
-        resources.ApplyResources(Me.DataGridViewTextBoxColumn12, "DataGridViewTextBoxColumn12")
-        Me.DataGridViewTextBoxColumn12.Name = "DataGridViewTextBoxColumn12"
-        Me.DataGridViewTextBoxColumn12.ReadOnly = True
-        '
-        'DataGridViewButtonColumn3
-        '
-        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle12.NullValue = "Delete"
-        Me.DataGridViewButtonColumn3.DefaultCellStyle = DataGridViewCellStyle12
-        Me.DataGridViewButtonColumn3.FillWeight = 52.79189!
-        Me.DataGridViewButtonColumn3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        resources.ApplyResources(Me.DataGridViewButtonColumn3, "DataGridViewButtonColumn3")
-        Me.DataGridViewButtonColumn3.Name = "DataGridViewButtonColumn3"
-        Me.DataGridViewButtonColumn3.UseColumnTextForButtonValue = True
         '
         'Label84
         '
@@ -2890,12 +2557,6 @@ Partial Class frm_SPayments
         resources.ApplyResources(Me.TextBox36, "TextBox36")
         Me.TextBox36.Name = "TextBox36"
         '
-        'Panel5
-        '
-        Me.Panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.Panel5, "Panel5")
-        Me.Panel5.Name = "Panel5"
-        '
         'frm_SPayments
         '
         resources.ApplyResources(Me, "$this")
@@ -2913,11 +2574,11 @@ Partial Class frm_SPayments
         Me.GroupBox7.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.dg_viewCurrentPayment, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.dg_viewCurrentPayment, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.elem_dept.ResumeLayout(False)
@@ -2925,7 +2586,6 @@ Partial Class frm_SPayments
         Me.GroupBox10.PerformLayout()
         Me.GroupBox11.ResumeLayout(False)
         Me.GroupBox11.PerformLayout()
-        CType(Me.BunifuCustomDataGrid1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox12.ResumeLayout(False)
         Me.GroupBox12.PerformLayout()
         Me.GroupBox9.ResumeLayout(False)
@@ -2941,7 +2601,6 @@ Partial Class frm_SPayments
         Me.GroupBox13.PerformLayout()
         Me.GroupBox14.ResumeLayout(False)
         Me.GroupBox14.PerformLayout()
-        CType(Me.BunifuCustomDataGrid2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox15.ResumeLayout(False)
         Me.GroupBox15.PerformLayout()
         Me.GroupBox16.ResumeLayout(False)
@@ -2957,7 +2616,6 @@ Partial Class frm_SPayments
         Me.GroupBox19.PerformLayout()
         Me.GroupBox20.ResumeLayout(False)
         Me.GroupBox20.PerformLayout()
-        CType(Me.BunifuCustomDataGrid3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox21.ResumeLayout(False)
         Me.GroupBox21.PerformLayout()
         Me.GroupBox22.ResumeLayout(False)
@@ -3055,13 +2713,6 @@ Partial Class frm_SPayments
     Friend WithEvents Label52 As System.Windows.Forms.Label
     Friend WithEvents TextBox12 As System.Windows.Forms.TextBox
     Friend WithEvents GroupBox11 As System.Windows.Forms.GroupBox
-    Friend WithEvents BunifuFlatButton7 As Bunifu.Framework.UI.BunifuFlatButton
-    Friend WithEvents BunifuCustomDataGrid1 As Bunifu.Framework.UI.BunifuCustomDataGrid
-    Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewButtonColumn1 As System.Windows.Forms.DataGridViewButtonColumn
     Friend WithEvents Label53 As System.Windows.Forms.Label
     Friend WithEvents Label54 As System.Windows.Forms.Label
     Friend WithEvents TextBox13 As System.Windows.Forms.TextBox
@@ -3092,7 +2743,7 @@ Partial Class frm_SPayments
     Friend WithEvents LineShape2 As Microsoft.VisualBasic.PowerPacks.LineShape
     Friend WithEvents GroupBox6 As System.Windows.Forms.GroupBox
     Friend WithEvents btn_eManage As Bunifu.Framework.UI.BunifuFlatButton
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
+    Friend WithEvents txtb_eStudID As System.Windows.Forms.TextBox
     Friend WithEvents Label27 As System.Windows.Forms.Label
     Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
     Friend WithEvents Label28 As System.Windows.Forms.Label
@@ -3102,10 +2753,10 @@ Partial Class frm_SPayments
     Friend WithEvents TextBox9 As System.Windows.Forms.TextBox
     Friend WithEvents GroupBox5 As System.Windows.Forms.GroupBox
     Friend WithEvents BunifuFlatButton1 As Bunifu.Framework.UI.BunifuFlatButton
-    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
+    Friend WithEvents cbo_eSearchBy As System.Windows.Forms.ComboBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label14 As System.Windows.Forms.Label
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents txtb_eSearch As System.Windows.Forms.TextBox
     Friend WithEvents jh_dept As System.Windows.Forms.TabPage
     Friend WithEvents sh_dept As System.Windows.Forms.TabPage
     Friend WithEvents BunifuFlatButton3 As Bunifu.Framework.UI.BunifuFlatButton
@@ -3119,13 +2770,6 @@ Partial Class frm_SPayments
     Friend WithEvents Label34 As System.Windows.Forms.Label
     Friend WithEvents TextBox6 As System.Windows.Forms.TextBox
     Friend WithEvents GroupBox14 As System.Windows.Forms.GroupBox
-    Friend WithEvents BunifuFlatButton10 As Bunifu.Framework.UI.BunifuFlatButton
-    Friend WithEvents BunifuCustomDataGrid2 As Bunifu.Framework.UI.BunifuCustomDataGrid
-    Friend WithEvents DataGridViewTextBoxColumn5 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn6 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn7 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn8 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewButtonColumn2 As System.Windows.Forms.DataGridViewButtonColumn
     Friend WithEvents Label35 As System.Windows.Forms.Label
     Friend WithEvents Label58 As System.Windows.Forms.Label
     Friend WithEvents TextBox7 As System.Windows.Forms.TextBox
@@ -3181,13 +2825,6 @@ Partial Class frm_SPayments
     Friend WithEvents Label83 As System.Windows.Forms.Label
     Friend WithEvents TextBox27 As System.Windows.Forms.TextBox
     Friend WithEvents GroupBox20 As System.Windows.Forms.GroupBox
-    Friend WithEvents BunifuFlatButton16 As Bunifu.Framework.UI.BunifuFlatButton
-    Friend WithEvents BunifuCustomDataGrid3 As Bunifu.Framework.UI.BunifuCustomDataGrid
-    Friend WithEvents DataGridViewTextBoxColumn9 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn10 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn11 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn12 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewButtonColumn3 As System.Windows.Forms.DataGridViewButtonColumn
     Friend WithEvents Label84 As System.Windows.Forms.Label
     Friend WithEvents Label85 As System.Windows.Forms.Label
     Friend WithEvents TextBox28 As System.Windows.Forms.TextBox

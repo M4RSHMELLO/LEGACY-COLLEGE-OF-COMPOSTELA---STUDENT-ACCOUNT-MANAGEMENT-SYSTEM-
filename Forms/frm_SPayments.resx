@@ -2565,96 +2565,6 @@
   <data name="&gt;&gt;GroupBox10.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="BunifuFlatButton7.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Stretch</value>
-  </data>
-  <data name="BunifuFlatButton7.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Franklin Gothic Medium Cond, 12pt</value>
-  </data>
-  <data name="BunifuFlatButton7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>330, 67</value>
-  </data>
-  <data name="BunifuFlatButton7.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 5, 3, 5</value>
-  </data>
-  <data name="BunifuFlatButton7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 30</value>
-  </data>
-  <data name="BunifuFlatButton7.TabIndex" type="System.Int32, mscorlib">
-    <value>57</value>
-  </data>
-  <data name="BunifuFlatButton7.Text" xml:space="preserve">
-    <value>ADD</value>
-  </data>
-  <data name="&gt;&gt;BunifuFlatButton7.Name" xml:space="preserve">
-    <value>BunifuFlatButton7</value>
-  </data>
-  <data name="&gt;&gt;BunifuFlatButton7.Type" xml:space="preserve">
-    <value>Bunifu.Framework.UI.BunifuFlatButton, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;BunifuFlatButton7.Parent" xml:space="preserve">
-    <value>GroupBox11</value>
-  </data>
-  <data name="&gt;&gt;BunifuFlatButton7.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <metadata name="DataGridViewTextBoxColumn1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="DataGridViewTextBoxColumn1.HeaderText" xml:space="preserve">
-    <value>Fees_Id</value>
-  </data>
-  <data name="DataGridViewTextBoxColumn1.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <metadata name="DataGridViewTextBoxColumn2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="DataGridViewTextBoxColumn2.HeaderText" xml:space="preserve">
-    <value>Particular</value>
-  </data>
-  <metadata name="DataGridViewTextBoxColumn3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="DataGridViewTextBoxColumn3.HeaderText" xml:space="preserve">
-    <value>Amount</value>
-  </data>
-  <metadata name="DataGridViewTextBoxColumn4.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="DataGridViewTextBoxColumn4.HeaderText" xml:space="preserve">
-    <value>balance</value>
-  </data>
-  <data name="DataGridViewTextBoxColumn4.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <metadata name="DataGridViewButtonColumn1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="DataGridViewButtonColumn1.HeaderText" xml:space="preserve">
-    <value>Delete</value>
-  </data>
-  <data name="BunifuCustomDataGrid1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>38, 103</value>
-  </data>
-  <data name="BunifuCustomDataGrid1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>349, 66</value>
-  </data>
-  <data name="BunifuCustomDataGrid1.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
-  </data>
-  <data name="&gt;&gt;BunifuCustomDataGrid1.Name" xml:space="preserve">
-    <value>BunifuCustomDataGrid1</value>
-  </data>
-  <data name="&gt;&gt;BunifuCustomDataGrid1.Type" xml:space="preserve">
-    <value>Bunifu.Framework.UI.BunifuCustomDataGrid, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;BunifuCustomDataGrid1.Parent" xml:space="preserve">
-    <value>GroupBox11</value>
-  </data>
-  <data name="&gt;&gt;BunifuCustomDataGrid1.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <data name="Label53.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -2686,7 +2596,7 @@
     <value>GroupBox11</value>
   </data>
   <data name="&gt;&gt;Label53.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>0</value>
   </data>
   <data name="Label54.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2719,7 +2629,7 @@
     <value>GroupBox11</value>
   </data>
   <data name="&gt;&gt;Label54.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>1</value>
   </data>
   <data name="TextBox13.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -2752,13 +2662,13 @@
     <value>GroupBox11</value>
   </data>
   <data name="&gt;&gt;TextBox13.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>2</value>
   </data>
   <data name="ComboBox2.Location" type="System.Drawing.Point, System.Drawing">
     <value>133, 67</value>
   </data>
   <data name="ComboBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>191, 29</value>
+    <value>254, 29</value>
   </data>
   <data name="ComboBox2.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
@@ -2773,7 +2683,7 @@
     <value>GroupBox11</value>
   </data>
   <data name="&gt;&gt;ComboBox2.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>3</value>
   </data>
   <data name="Label55.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2806,7 +2716,7 @@
     <value>GroupBox11</value>
   </data>
   <data name="&gt;&gt;Label55.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>4</value>
   </data>
   <data name="TextBox14.Font" type="System.Drawing.Font, System.Drawing">
     <value>Franklin Gothic Medium Cond, 20.25pt</value>
@@ -2833,7 +2743,7 @@
     <value>GroupBox11</value>
   </data>
   <data name="&gt;&gt;TextBox14.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>5</value>
   </data>
   <data name="GroupBox11.Font" type="System.Drawing.Font, System.Drawing">
     <value>Franklin Gothic Medium Cond, 12pt, style=Bold</value>
@@ -3549,28 +3459,28 @@
   <data name="&gt;&gt;btn_eManage.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="TextBox2.Enabled" type="System.Boolean, mscorlib">
+  <data name="txtb_eStudID.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="TextBox2.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="txtb_eStudID.Location" type="System.Drawing.Point, System.Drawing">
     <value>99, 25</value>
   </data>
-  <data name="TextBox2.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="txtb_eStudID.Size" type="System.Drawing.Size, System.Drawing">
     <value>246, 26</value>
   </data>
-  <data name="TextBox2.TabIndex" type="System.Int32, mscorlib">
+  <data name="txtb_eStudID.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
   </data>
-  <data name="&gt;&gt;TextBox2.Name" xml:space="preserve">
-    <value>TextBox2</value>
+  <data name="&gt;&gt;txtb_eStudID.Name" xml:space="preserve">
+    <value>txtb_eStudID</value>
   </data>
-  <data name="&gt;&gt;TextBox2.Type" xml:space="preserve">
+  <data name="&gt;&gt;txtb_eStudID.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;TextBox2.Parent" xml:space="preserve">
+  <data name="&gt;&gt;txtb_eStudID.Parent" xml:space="preserve">
     <value>GroupBox6</value>
   </data>
-  <data name="&gt;&gt;TextBox2.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;txtb_eStudID.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="Label27.AutoSize" type="System.Boolean, mscorlib">
@@ -3828,31 +3738,31 @@
   <data name="&gt;&gt;BunifuFlatButton1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="ComboBox1.Items" xml:space="preserve">
+  <data name="cbo_eSearchBy.Items" xml:space="preserve">
     <value>Id Number</value>
   </data>
-  <data name="ComboBox1.Items1" xml:space="preserve">
+  <data name="cbo_eSearchBy.Items1" xml:space="preserve">
     <value>Name</value>
   </data>
-  <data name="ComboBox1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="cbo_eSearchBy.Location" type="System.Drawing.Point, System.Drawing">
     <value>100, 25</value>
   </data>
-  <data name="ComboBox1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="cbo_eSearchBy.Size" type="System.Drawing.Size, System.Drawing">
     <value>114, 29</value>
   </data>
-  <data name="ComboBox1.TabIndex" type="System.Int32, mscorlib">
+  <data name="cbo_eSearchBy.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
-  <data name="&gt;&gt;ComboBox1.Name" xml:space="preserve">
-    <value>ComboBox1</value>
+  <data name="&gt;&gt;cbo_eSearchBy.Name" xml:space="preserve">
+    <value>cbo_eSearchBy</value>
   </data>
-  <data name="&gt;&gt;ComboBox1.Type" xml:space="preserve">
+  <data name="&gt;&gt;cbo_eSearchBy.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;ComboBox1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;cbo_eSearchBy.Parent" xml:space="preserve">
     <value>GroupBox5</value>
   </data>
-  <data name="&gt;&gt;ComboBox1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;cbo_eSearchBy.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="Label5.AutoSize" type="System.Boolean, mscorlib">
@@ -3915,28 +3825,28 @@
   <data name="&gt;&gt;Label14.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="TextBox1.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="txtb_eSearch.Font" type="System.Drawing.Font, System.Drawing">
     <value>Franklin Gothic Medium Cond, 12pt, style=Bold</value>
   </data>
-  <data name="TextBox1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="txtb_eSearch.Location" type="System.Drawing.Point, System.Drawing">
     <value>220, 26</value>
   </data>
-  <data name="TextBox1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="txtb_eSearch.Size" type="System.Drawing.Size, System.Drawing">
     <value>343, 26</value>
   </data>
-  <data name="TextBox1.TabIndex" type="System.Int32, mscorlib">
+  <data name="txtb_eSearch.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;TextBox1.Name" xml:space="preserve">
-    <value>TextBox1</value>
+  <data name="&gt;&gt;txtb_eSearch.Name" xml:space="preserve">
+    <value>txtb_eSearch</value>
   </data>
-  <data name="&gt;&gt;TextBox1.Type" xml:space="preserve">
+  <data name="&gt;&gt;txtb_eSearch.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;TextBox1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;txtb_eSearch.Parent" xml:space="preserve">
     <value>GroupBox5</value>
   </data>
-  <data name="&gt;&gt;TextBox1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;txtb_eSearch.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
   <data name="GroupBox5.Font" type="System.Drawing.Font, System.Drawing">
@@ -4317,96 +4227,6 @@
   <data name="&gt;&gt;GroupBox13.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="BunifuFlatButton10.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Stretch</value>
-  </data>
-  <data name="BunifuFlatButton10.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Franklin Gothic Medium Cond, 12pt</value>
-  </data>
-  <data name="BunifuFlatButton10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>330, 67</value>
-  </data>
-  <data name="BunifuFlatButton10.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 5, 3, 5</value>
-  </data>
-  <data name="BunifuFlatButton10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 30</value>
-  </data>
-  <data name="BunifuFlatButton10.TabIndex" type="System.Int32, mscorlib">
-    <value>57</value>
-  </data>
-  <data name="BunifuFlatButton10.Text" xml:space="preserve">
-    <value>ADD</value>
-  </data>
-  <data name="&gt;&gt;BunifuFlatButton10.Name" xml:space="preserve">
-    <value>BunifuFlatButton10</value>
-  </data>
-  <data name="&gt;&gt;BunifuFlatButton10.Type" xml:space="preserve">
-    <value>Bunifu.Framework.UI.BunifuFlatButton, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;BunifuFlatButton10.Parent" xml:space="preserve">
-    <value>GroupBox14</value>
-  </data>
-  <data name="&gt;&gt;BunifuFlatButton10.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <metadata name="DataGridViewTextBoxColumn5.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="DataGridViewTextBoxColumn5.HeaderText" xml:space="preserve">
-    <value>Fees_Id</value>
-  </data>
-  <data name="DataGridViewTextBoxColumn5.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <metadata name="DataGridViewTextBoxColumn6.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="DataGridViewTextBoxColumn6.HeaderText" xml:space="preserve">
-    <value>Particular</value>
-  </data>
-  <metadata name="DataGridViewTextBoxColumn7.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="DataGridViewTextBoxColumn7.HeaderText" xml:space="preserve">
-    <value>Amount</value>
-  </data>
-  <metadata name="DataGridViewTextBoxColumn8.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="DataGridViewTextBoxColumn8.HeaderText" xml:space="preserve">
-    <value>balance</value>
-  </data>
-  <data name="DataGridViewTextBoxColumn8.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <metadata name="DataGridViewButtonColumn2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="DataGridViewButtonColumn2.HeaderText" xml:space="preserve">
-    <value>Delete</value>
-  </data>
-  <data name="BunifuCustomDataGrid2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>38, 103</value>
-  </data>
-  <data name="BunifuCustomDataGrid2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>349, 66</value>
-  </data>
-  <data name="BunifuCustomDataGrid2.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
-  </data>
-  <data name="&gt;&gt;BunifuCustomDataGrid2.Name" xml:space="preserve">
-    <value>BunifuCustomDataGrid2</value>
-  </data>
-  <data name="&gt;&gt;BunifuCustomDataGrid2.Type" xml:space="preserve">
-    <value>Bunifu.Framework.UI.BunifuCustomDataGrid, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;BunifuCustomDataGrid2.Parent" xml:space="preserve">
-    <value>GroupBox14</value>
-  </data>
-  <data name="&gt;&gt;BunifuCustomDataGrid2.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <data name="Label35.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -4438,7 +4258,7 @@
     <value>GroupBox14</value>
   </data>
   <data name="&gt;&gt;Label35.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>0</value>
   </data>
   <data name="Label58.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -4471,7 +4291,7 @@
     <value>GroupBox14</value>
   </data>
   <data name="&gt;&gt;Label58.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>1</value>
   </data>
   <data name="TextBox7.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -4504,13 +4324,13 @@
     <value>GroupBox14</value>
   </data>
   <data name="&gt;&gt;TextBox7.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>2</value>
   </data>
   <data name="ComboBox3.Location" type="System.Drawing.Point, System.Drawing">
     <value>133, 67</value>
   </data>
   <data name="ComboBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>191, 29</value>
+    <value>254, 29</value>
   </data>
   <data name="ComboBox3.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
@@ -4525,7 +4345,7 @@
     <value>GroupBox14</value>
   </data>
   <data name="&gt;&gt;ComboBox3.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>3</value>
   </data>
   <data name="Label59.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -4558,7 +4378,7 @@
     <value>GroupBox14</value>
   </data>
   <data name="&gt;&gt;Label59.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>4</value>
   </data>
   <data name="TextBox17.Font" type="System.Drawing.Font, System.Drawing">
     <value>Franklin Gothic Medium Cond, 20.25pt</value>
@@ -4585,7 +4405,7 @@
     <value>GroupBox14</value>
   </data>
   <data name="&gt;&gt;TextBox17.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>5</value>
   </data>
   <data name="GroupBox14.Font" type="System.Drawing.Font, System.Drawing">
     <value>Franklin Gothic Medium Cond, 12pt, style=Bold</value>
@@ -6066,96 +5886,6 @@
   <data name="&gt;&gt;GroupBox19.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="BunifuFlatButton16.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Stretch</value>
-  </data>
-  <data name="BunifuFlatButton16.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Franklin Gothic Medium Cond, 12pt</value>
-  </data>
-  <data name="BunifuFlatButton16.Location" type="System.Drawing.Point, System.Drawing">
-    <value>330, 67</value>
-  </data>
-  <data name="BunifuFlatButton16.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 5, 3, 5</value>
-  </data>
-  <data name="BunifuFlatButton16.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 30</value>
-  </data>
-  <data name="BunifuFlatButton16.TabIndex" type="System.Int32, mscorlib">
-    <value>57</value>
-  </data>
-  <data name="BunifuFlatButton16.Text" xml:space="preserve">
-    <value>ADD</value>
-  </data>
-  <data name="&gt;&gt;BunifuFlatButton16.Name" xml:space="preserve">
-    <value>BunifuFlatButton16</value>
-  </data>
-  <data name="&gt;&gt;BunifuFlatButton16.Type" xml:space="preserve">
-    <value>Bunifu.Framework.UI.BunifuFlatButton, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;BunifuFlatButton16.Parent" xml:space="preserve">
-    <value>GroupBox20</value>
-  </data>
-  <data name="&gt;&gt;BunifuFlatButton16.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <metadata name="DataGridViewTextBoxColumn9.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="DataGridViewTextBoxColumn9.HeaderText" xml:space="preserve">
-    <value>Fees_Id</value>
-  </data>
-  <data name="DataGridViewTextBoxColumn9.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <metadata name="DataGridViewTextBoxColumn10.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="DataGridViewTextBoxColumn10.HeaderText" xml:space="preserve">
-    <value>Particular</value>
-  </data>
-  <metadata name="DataGridViewTextBoxColumn11.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="DataGridViewTextBoxColumn11.HeaderText" xml:space="preserve">
-    <value>Amount</value>
-  </data>
-  <metadata name="DataGridViewTextBoxColumn12.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="DataGridViewTextBoxColumn12.HeaderText" xml:space="preserve">
-    <value>balance</value>
-  </data>
-  <data name="DataGridViewTextBoxColumn12.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <metadata name="DataGridViewButtonColumn3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="DataGridViewButtonColumn3.HeaderText" xml:space="preserve">
-    <value>Delete</value>
-  </data>
-  <data name="BunifuCustomDataGrid3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>38, 103</value>
-  </data>
-  <data name="BunifuCustomDataGrid3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>349, 66</value>
-  </data>
-  <data name="BunifuCustomDataGrid3.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
-  </data>
-  <data name="&gt;&gt;BunifuCustomDataGrid3.Name" xml:space="preserve">
-    <value>BunifuCustomDataGrid3</value>
-  </data>
-  <data name="&gt;&gt;BunifuCustomDataGrid3.Type" xml:space="preserve">
-    <value>Bunifu.Framework.UI.BunifuCustomDataGrid, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;BunifuCustomDataGrid3.Parent" xml:space="preserve">
-    <value>GroupBox20</value>
-  </data>
-  <data name="&gt;&gt;BunifuCustomDataGrid3.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <data name="Label84.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -6187,7 +5917,7 @@
     <value>GroupBox20</value>
   </data>
   <data name="&gt;&gt;Label84.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>0</value>
   </data>
   <data name="Label85.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -6220,7 +5950,7 @@
     <value>GroupBox20</value>
   </data>
   <data name="&gt;&gt;Label85.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>1</value>
   </data>
   <data name="TextBox28.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -6253,13 +5983,13 @@
     <value>GroupBox20</value>
   </data>
   <data name="&gt;&gt;TextBox28.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>2</value>
   </data>
   <data name="ComboBox5.Location" type="System.Drawing.Point, System.Drawing">
     <value>133, 67</value>
   </data>
   <data name="ComboBox5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>191, 29</value>
+    <value>254, 29</value>
   </data>
   <data name="ComboBox5.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
@@ -6274,7 +6004,7 @@
     <value>GroupBox20</value>
   </data>
   <data name="&gt;&gt;ComboBox5.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>3</value>
   </data>
   <data name="Label86.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -6307,7 +6037,7 @@
     <value>GroupBox20</value>
   </data>
   <data name="&gt;&gt;Label86.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>4</value>
   </data>
   <data name="TextBox29.Font" type="System.Drawing.Font, System.Drawing">
     <value>Franklin Gothic Medium Cond, 20.25pt</value>
@@ -6334,7 +6064,7 @@
     <value>GroupBox20</value>
   </data>
   <data name="&gt;&gt;TextBox29.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>5</value>
   </data>
   <data name="GroupBox20.Font" type="System.Drawing.Font, System.Drawing">
     <value>Franklin Gothic Medium Cond, 12pt, style=Bold</value>
@@ -7563,107 +7293,17 @@
   <data name="&gt;&gt;LineShape1.Type" xml:space="preserve">
     <value>Microsoft.VisualBasic.PowerPacks.LineShape, Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="&gt;&gt;DataGridViewTextBoxColumn1.Name" xml:space="preserve">
-    <value>DataGridViewTextBoxColumn1</value>
-  </data>
-  <data name="&gt;&gt;DataGridViewTextBoxColumn1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;DataGridViewTextBoxColumn2.Name" xml:space="preserve">
-    <value>DataGridViewTextBoxColumn2</value>
-  </data>
-  <data name="&gt;&gt;DataGridViewTextBoxColumn2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;DataGridViewTextBoxColumn3.Name" xml:space="preserve">
-    <value>DataGridViewTextBoxColumn3</value>
-  </data>
-  <data name="&gt;&gt;DataGridViewTextBoxColumn3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;DataGridViewTextBoxColumn4.Name" xml:space="preserve">
-    <value>DataGridViewTextBoxColumn4</value>
-  </data>
-  <data name="&gt;&gt;DataGridViewTextBoxColumn4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;DataGridViewButtonColumn1.Name" xml:space="preserve">
-    <value>DataGridViewButtonColumn1</value>
-  </data>
-  <data name="&gt;&gt;DataGridViewButtonColumn1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewButtonColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;LineShape2.Name" xml:space="preserve">
     <value>LineShape2</value>
   </data>
   <data name="&gt;&gt;LineShape2.Type" xml:space="preserve">
     <value>Microsoft.VisualBasic.PowerPacks.LineShape, Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="&gt;&gt;DataGridViewTextBoxColumn5.Name" xml:space="preserve">
-    <value>DataGridViewTextBoxColumn5</value>
-  </data>
-  <data name="&gt;&gt;DataGridViewTextBoxColumn5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;DataGridViewTextBoxColumn6.Name" xml:space="preserve">
-    <value>DataGridViewTextBoxColumn6</value>
-  </data>
-  <data name="&gt;&gt;DataGridViewTextBoxColumn6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;DataGridViewTextBoxColumn7.Name" xml:space="preserve">
-    <value>DataGridViewTextBoxColumn7</value>
-  </data>
-  <data name="&gt;&gt;DataGridViewTextBoxColumn7.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;DataGridViewTextBoxColumn8.Name" xml:space="preserve">
-    <value>DataGridViewTextBoxColumn8</value>
-  </data>
-  <data name="&gt;&gt;DataGridViewTextBoxColumn8.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;DataGridViewButtonColumn2.Name" xml:space="preserve">
-    <value>DataGridViewButtonColumn2</value>
-  </data>
-  <data name="&gt;&gt;DataGridViewButtonColumn2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewButtonColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;LineShape3.Name" xml:space="preserve">
     <value>LineShape3</value>
   </data>
   <data name="&gt;&gt;LineShape3.Type" xml:space="preserve">
     <value>Microsoft.VisualBasic.PowerPacks.LineShape, Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="&gt;&gt;DataGridViewTextBoxColumn9.Name" xml:space="preserve">
-    <value>DataGridViewTextBoxColumn9</value>
-  </data>
-  <data name="&gt;&gt;DataGridViewTextBoxColumn9.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;DataGridViewTextBoxColumn10.Name" xml:space="preserve">
-    <value>DataGridViewTextBoxColumn10</value>
-  </data>
-  <data name="&gt;&gt;DataGridViewTextBoxColumn10.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;DataGridViewTextBoxColumn11.Name" xml:space="preserve">
-    <value>DataGridViewTextBoxColumn11</value>
-  </data>
-  <data name="&gt;&gt;DataGridViewTextBoxColumn11.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;DataGridViewTextBoxColumn12.Name" xml:space="preserve">
-    <value>DataGridViewTextBoxColumn12</value>
-  </data>
-  <data name="&gt;&gt;DataGridViewTextBoxColumn12.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;DataGridViewButtonColumn3.Name" xml:space="preserve">
-    <value>DataGridViewButtonColumn3</value>
-  </data>
-  <data name="&gt;&gt;DataGridViewButtonColumn3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewButtonColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;LineShape4.Name" xml:space="preserve">
     <value>LineShape4</value>

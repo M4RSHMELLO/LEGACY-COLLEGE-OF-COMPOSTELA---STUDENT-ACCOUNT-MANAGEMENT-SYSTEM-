@@ -39,7 +39,7 @@ Module lccsams
 
 
     ''#################################Elementary PUBLIC VARIABLE#################################################################################################
-    Public eSelect_SY As String = "select * from tbl_elem_sy"
+    Public eSelect_SY As String = "select * from tbl_elem_sy order by esy_edate desc"
     Public eSelect_GL As String = "select * from tbl_elem_gradelevel"
     Public eSelect_studRec As String = "select * from tbl_elem_students order by estud_lname asc,estud_fname asc"
 
@@ -67,8 +67,8 @@ Module lccsams
     Public sSy_eDate As String
 
     '#############################################################Junior-High PUBLIC VARIABLE#########################################################
-    Public jSelect_SY As String = "select * from tbl_juniorhigh_sy order by jhsy_edate desc "
-    Public jSelect_GL As String = "selct * from tbl_juniorhigh_gradelevel"
+    Public jSelect_SY As String = "select * from tbl_juniorhigh_sy order by jsy_edate desc "
+    Public jSelect_GL As String = "select * from tbl_juniorhigh_gradelevel"
     Public jSelect_studRec As String = "select * from tbl_juniorhigh_students order by jstud_lname asc,jstud_fname asc"
 
     Public jStud_id As String
@@ -201,7 +201,7 @@ Module lccsams
         txtb.Text = stud_id
     End Sub
 
-    Public Sub _selectComboBoxText(ByVal sql As String, ByVal cbo As ComboBox)
+    Function _selectComboBoxText(ByVal sql As String, ByVal cbo As ComboBox) As String
         Try
             dbConn.Open()
             sqlCommand = New MySqlCommand(sql, dbConn)
@@ -214,7 +214,8 @@ Module lccsams
         Finally
             dbConn.Close()
         End Try
-    End Sub
+        Return cbo.Text
+    End Function
 
 
     Public Sub _loadStudentNameToTextbox(ByVal sql As String, txtb As TextBox)

@@ -308,7 +308,7 @@
 
     Private Sub btn_jgl_new_Click(sender As Object, e As EventArgs) Handles btn_jgl_new.Click
         jgl_name = InputBox("Input New Grade Level")
-        strQuerry5 = "Insert into tbl_juniorhigh_gl values ('0','" & jgl_name & "')"
+        strQuerry5 = "Insert into tbl_juniorhigh_gradelevel values ('0','" & jgl_name & "')"
         _dbConnection("db_lccsams")
         _insertData(strQuerry5)
         _loadToListBox(jSelect_GL, lbo_jglRec)
@@ -317,7 +317,7 @@
     Private Sub tn_jgl_update_Click(sender As Object, e As EventArgs) Handles tn_jgl_update.Click
         If MessageBox.Show("Do you want to update this Grade level? " & vbNewLine & "Name: " & lbo_jglRec.Text, "", MessageBoxButtons.YesNo) = DialogResult.Yes Then
             sgl_name = InputBox("Enter a new name ")
-            _updateData("Update tbl_seniorhigh_gl  set sgl_name='" & jgl_name & "' where sgl_id='" & lbo_jglRec.SelectedValue & "'")
+            _updateData("Update tbl_juniorhigh_gradelevel  set jgl_name='" & jgl_name & "' where jgl_id='" & lbo_jglRec.SelectedValue & "'")
             _loadToListBox(jSelect_GL, lbo_jglRec)
         End If
     End Sub

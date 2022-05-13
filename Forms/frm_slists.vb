@@ -501,16 +501,16 @@ Public Class frm_slists
                 _dbConnection("db_lccsams")
                 eStud_id = .Item("col_estud_id", i).Value
                 eStudname = .Item("col_estud_fname", i).Value.ToString.ToUpper + " " + .Item("col_estud_mi", i).Value.ToString.ToUpper + " " + .Item("col_estud_lname", i).Value.ToString.ToUpper
-                eStudSY = .Item("col_estud_id", i).Value
-                eStudGL = .Item("col_estud_id", i).Value
+                eStudSY = _selectComboBoxText(querry, cbo_eSYName)
+                eStudGL = _selectComboBoxText(querry2, cbo_eGradeLevel)
 
                 txtb_eStudID.Text = .Item("col_estud_id", i).Value
                 txtb_eStudFname.Text = .Item("col_estud_fname", i).Value.ToString.ToUpper
                 txtb_estudLname.Text = .Item("col_estud_lname", i).Value.ToString.ToUpper
                 txtb_estudMI.Text = .Item("col_estud_mi", i).Value.ToString.ToUpper
 
-                _selectComboBoxText(querry, cbo_eSYName)
-                _selectComboBoxText(querry2, cbo_eGradeLevel)
+
+
 
             End With
 

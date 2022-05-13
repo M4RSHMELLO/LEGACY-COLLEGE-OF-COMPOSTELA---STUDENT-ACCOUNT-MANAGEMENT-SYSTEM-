@@ -179,6 +179,10 @@
                 cbo_SortCrs.SelectedIndex = -1
                 cbo_SortSem.SelectedIndex = -1
                 cbo_SortYL.SelectedIndex = -1
+            Case 1
+                _dbConnection("db_lccsams")
+                _loadToCombobox(slctC, cbo_eSY)
+                _loadToCombobox(slctS, cbo_eGL)
 
         End Select
     End Sub
@@ -201,4 +205,90 @@
     End Sub
 
 
+    '###########################################################Elementary Depatment Section##############################################################
+    Private Sub btn_eAdd_Click(sender As Object, e As EventArgs) Handles btn_eAdd.Click
+
+    End Sub
+
+    Private Sub btn_eUpdate_Click(sender As Object, e As EventArgs) Handles btn_eUpdate.Click
+
+    End Sub
+
+    Private Sub btn_eCancel_Click(sender As Object, e As EventArgs) Handles btn_eCancel.Click
+
+    End Sub
+
+    Private Sub btn_eSave_Click(sender As Object, e As EventArgs) Handles btn_eSave.Click
+
+    End Sub
+
+    Private Sub cbo_eSortSy_SelectionChangeCommitted(sender As Object, e As EventArgs) Handles cbo_eSortSy.SelectionChangeCommitted
+
+    End Sub
+
+    Private Sub cbo_eSortGL_SelectionChangeCommitted(sender As Object, e As EventArgs) Handles cbo_eSortGL.SelectionChangeCommitted
+
+    End Sub
+
+    Private Sub dg_eFeesRec_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dg_eFeesRec.CellClick
+
+    End Sub
+    '###########################################################Elementary Depatment Section##############################################################
+
+    Private Sub btn_sAdd_Click(sender As Object, e As EventArgs) Handles btn_sAdd.Click
+
+    End Sub
+
+    Private Sub btn_sUpdate_Click(sender As Object, e As EventArgs) Handles btn_sUpdate.Click
+
+    End Sub
+
+    Private Sub btn_sCancel_Click(sender As Object, e As EventArgs) Handles btn_sCancel.Click
+
+    End Sub
+
+    Private Sub btn_sSave_Click(sender As Object, e As EventArgs) Handles btn_sSave.Click
+
+    End Sub
+
+    Private Sub cbo_sSortSY_SelectionChangeCommitted(sender As Object, e As EventArgs) Handles cbo_sSortSY.SelectionChangeCommitted
+
+    End Sub
+
+    Private Sub cbo_sSortGL_SelectionChangeCommitted(sender As Object, e As EventArgs) Handles cbo_sSortGL.SelectionChangeCommitted
+
+    End Sub
+
+    Private Sub dg_sfeesRec_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dg_sfeesRec.CellClick
+
+    End Sub
+    '###########################################################Elementary Depatment Section##############################################################
+
+    Private Sub btn_jAdd_Click(sender As Object, e As EventArgs) Handles btn_jAdd.Click
+
+    End Sub
+
+    Private Sub btn_jUpdate_Click(sender As Object, e As EventArgs) Handles btn_jUpdate.Click
+
+    End Sub
+
+    Private Sub btn_jCancel_Click(sender As Object, e As EventArgs) Handles btn_jCancel.Click
+
+    End Sub
+
+    Private Sub btn_jSave_Click(sender As Object, e As EventArgs) Handles btn_jSave.Click
+
+    End Sub
+
+    Private Sub cbo_jSortSY_SelectionChangeCommitted(sender As Object, e As EventArgs) Handles cbo_jSortSY.SelectionChangeCommitted
+
+    End Sub
+
+    Private Sub cbo_jSortGL_SelectionChangeCommitted(sender As Object, e As EventArgs) Handles cbo_jSortGL.SelectionChangeCommitted
+
+    End Sub
+
+    Private Sub dg_jFeesRec_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dg_jFeesRec.CellClick
+
+    End Sub
 End Class
