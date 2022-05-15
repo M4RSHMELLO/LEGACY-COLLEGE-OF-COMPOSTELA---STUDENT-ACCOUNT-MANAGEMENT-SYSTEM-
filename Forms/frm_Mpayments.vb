@@ -208,12 +208,12 @@
 
     '###########################################################Elementary Depatment Section##############################################################
     Dim b As Integer = 0
+    Dim esy_id As Integer = 0
     Private Sub btn_eAdd_Click(sender As Object, e As EventArgs) Handles btn_eAdd.Click
         If MessageBox.Show("", "Do You want to add new elementary fees", MessageBoxButtons.YesNo) = DialogResult.Yes Then
             cbo_eSY.Enabled = True
             txtb_eFeeName.Enabled = True
             txtb_eFeeAmnt.Enabled = True
-
 
             btn_eAdd.Enabled = False
             btn_eUpdate.Enabled = False
@@ -259,15 +259,15 @@
             Case 1
 
                 _dbConnection("db_lccsams")
-                _insertData("insert into tbl_coll_fees values (0,'" & txtb_eFeeName.Text & "','" & txtb_eFeeAmnt.Text & "','" & cbo_eSY.SelectedValue & "')")
+                _insertData("insert into tbl_elem_fees values (0,'" & txtb_eFeeName.Text & "','" & txtb_eFeeAmnt.Text & "','" & cbo_eSY.SelectedValue & "')")
 
 
             Case 2
                 _dbConnection("db_lccsams")
-                _updateData("")
+                _updateData("update tbl_elem_fees set efees_name='" & txtb_eFeeName.Text & "',efees_amount= '" & txtb_eFeeName.Text & "' where efees_id='" & esy_id & "' ")
                 btn_update.Enabled = True
                 btn_save.Enabled = False
-                _displayRecords(sFeesR, dg_pRecords)
+                _displayRecords(sFeesR, dg_eFeesRec)
         End Select
     End Sub
 
@@ -291,7 +291,7 @@
             Dim s = e.RowIndex
             With dg_eFeesRec
                 cbo_eSY.Text = cbo_eSortSy.Text
-
+                esy_id = .Item(0, s).Value.ToString
                 txtb_eFeeName.Text = .Item(1, s).Value.ToString
                 txtb_eFeeAmnt.Text = .Item(2, s).Value.ToString
             End With
@@ -302,6 +302,7 @@
     End Sub
     '###########################################################Senior High Department Section##############################################################
     Dim c As Integer = 0
+    Dim ssy_id As Integer = 0
     Private Sub btn_sAdd_Click(sender As Object, e As EventArgs) Handles btn_sAdd.Click
         If MessageBox.Show("", "Do You want to add new Senior High fees", MessageBoxButtons.YesNo) = DialogResult.Yes Then
             cbo_sSY.Enabled = True
@@ -395,7 +396,7 @@
             Dim s = e.RowIndex
             With dg_sfeesRec
                 cbo_sSY.Text = cbo_sSortSY.Text
-
+                ssy_id
                 txtb_sfeeName.Text = .Item(1, s).Value.ToString
                 txtb_sFeeAmnt.Text = .Item(2, s).Value.ToString
             End With
@@ -444,8 +445,6 @@
         cbo_jSY.Enabled = False
         txtb_jFeesName.Enabled = False
         txtb_jFeesAmnt.Enabled = False
-
-
         btn_jAdd.Enabled = True
         btn_jUpdate.Enabled = True
         btn_jCancel.Enabled = False
@@ -458,7 +457,7 @@
             Case 1
 
                 _dbConnection("db_lccsams")
-                _insertData("insert into tbl_coll_fees values (0,'" & txtb_sfeeName.Text & "','" & txtb_sFeeAmnt.Text & "','" & cbo_sSY.SelectedValue & "')")
+                _insertData("insert into tbl_junior_fees values (0,'" & txtb_sfeeName.Text & "','" & txtb_sFeeAmnt.Text & "','" & cbo_sSY.SelectedValue & "')")
 
 
             Case 2

@@ -1227,7 +1227,7 @@ Partial Class frm_MSY
         '
         'DataGridViewTextBoxColumn8
         '
-        Me.DataGridViewTextBoxColumn8.DataPropertyName = "esy_id"
+        Me.DataGridViewTextBoxColumn8.DataPropertyName = "jsy_id"
         Me.DataGridViewTextBoxColumn8.HeaderText = "Id"
         Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
         Me.DataGridViewTextBoxColumn8.ReadOnly = True
@@ -1235,21 +1235,21 @@ Partial Class frm_MSY
         '
         'DataGridViewTextBoxColumn9
         '
-        Me.DataGridViewTextBoxColumn9.DataPropertyName = "esy_name"
+        Me.DataGridViewTextBoxColumn9.DataPropertyName = "jsy_name"
         Me.DataGridViewTextBoxColumn9.HeaderText = "SCH YEAR"
         Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
         Me.DataGridViewTextBoxColumn9.ReadOnly = True
         '
         'DataGridViewTextBoxColumn10
         '
-        Me.DataGridViewTextBoxColumn10.DataPropertyName = "esy_sdate"
+        Me.DataGridViewTextBoxColumn10.DataPropertyName = "jsy_sdate"
         Me.DataGridViewTextBoxColumn10.HeaderText = "START DATE"
         Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
         Me.DataGridViewTextBoxColumn10.ReadOnly = True
         '
         'DataGridViewTextBoxColumn11
         '
-        Me.DataGridViewTextBoxColumn11.DataPropertyName = "esy_edate"
+        Me.DataGridViewTextBoxColumn11.DataPropertyName = "jsy_edate"
         Me.DataGridViewTextBoxColumn11.HeaderText = "END DATE"
         Me.DataGridViewTextBoxColumn11.Name = "DataGridViewTextBoxColumn11"
         Me.DataGridViewTextBoxColumn11.ReadOnly = True
@@ -1385,12 +1385,12 @@ Partial Class frm_MSY
     Friend WithEvents btn_jsy_save As Button
     Friend WithEvents btn_jsy_update As Button
     Friend WithEvents dg_jsyRec As DataGridView
-    Friend WithEvents DataGridViewTextBoxColumn8 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn9 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn10 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn11 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn7 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn8 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn9 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn10 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn11 As DataGridViewTextBoxColumn
 End Class
