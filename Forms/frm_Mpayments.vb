@@ -185,6 +185,16 @@
                 _loadToCombobox(eSelect_SY, cbo_eSY)
                 _loadToCombobox(eSelect_SY, cbo_eSortSy)
                 cbo_eSortSy.SelectedIndex = -1
+            Case 2
+                _dbConnection("db_lccsams")
+                _loadToCombobox(sSelect_SY, cbo_sSY)
+                _loadToCombobox(sSelect_SY, cbo_sSortSY)
+                cbo_sSortSY.SelectedIndex = -1
+            Case 3
+                _dbConnection("db_lccsams")
+                _loadToCombobox(jSelect_SY, cbo_jSY)
+                _loadToCombobox(jSelect_SY, cbo_jSortSY)
+                cbo_jSortSY.SelectedIndex = -1
         End Select
     End Sub
 
@@ -209,6 +219,8 @@
     '###########################################################Elementary Depatment Section##############################################################
     Dim b As Integer = 0
     Dim esy_id As Integer = 0
+    Dim eFeesR_sort As String = "select efees_id,efees_name, efees_amount from tbl_elem_fees where esy_id='" & cbo_eSortSy.SelectedValue & "' "
+
     Private Sub btn_eAdd_Click(sender As Object, e As EventArgs) Handles btn_eAdd.Click
         If MessageBox.Show("", "Do You want to add new elementary fees", MessageBoxButtons.YesNo) = DialogResult.Yes Then
             cbo_eSY.Enabled = True
@@ -260,25 +272,25 @@
 
                 _dbConnection("db_lccsams")
                 _insertData("insert into tbl_elem_fees values (0,'" & txtb_eFeeName.Text & "','" & txtb_eFeeAmnt.Text & "','" & cbo_eSY.SelectedValue & "')")
-
-
+                _displayRecords(eFeesR, dg_eFeesRec)
+                dlg_savesuccessfully.ShowDialog()
             Case 2
                 _dbConnection("db_lccsams")
                 _updateData("update tbl_elem_fees set efees_name='" & txtb_eFeeName.Text & "',efees_amount= '" & txtb_eFeeName.Text & "' where efees_id='" & esy_id & "' ")
                 btn_update.Enabled = True
                 btn_save.Enabled = False
-                _displayRecords(sFeesR, dg_eFeesRec)
+                _displayRecords(eFeesR, dg_eFeesRec)
+                UpdatedSuccessfully.ShowDialog()
         End Select
     End Sub
 
     Private Sub cbo_eSortSy_SelectionChangeCommitted(sender As Object, e As EventArgs) Handles cbo_eSortSy.SelectionChangeCommitted
         Try
             _dbConnection("db_lccsams")
-            Dim sFeesR_sort As String = "select efees_id,efees_name, efees_amount from tbl_elem_fees where esy_id='" & cbo_eSortSy.SelectedValue & "' "
 
             txtb_eFeeAmnt.Clear()
             txtb_eFeeName.Clear()
-            _displayRecords(sFeesR_sort, dg_eFeesRec)
+            _displayRecords(eFeesR_sort, dg_eFeesRec)
 
         Catch ex As Exception
             MessageBox.Show(ex.Message)
@@ -303,6 +315,8 @@
     '###########################################################Senior High Department Section##############################################################
     Dim c As Integer = 0
     Dim ssy_id As Integer = 0
+    Dim sFeesR_sort As String = "select sfees_id,sfees_name, sfees_amount from tbl_senior_fees where ssy_id='" & cbo_sSortSY.SelectedValue & "' "
+
     Private Sub btn_sAdd_Click(sender As Object, e As EventArgs) Handles btn_sAdd.Click
         If MessageBox.Show("", "Do You want to add new Senior High fees", MessageBoxButtons.YesNo) = DialogResult.Yes Then
             cbo_sSY.Enabled = True
@@ -354,15 +368,17 @@
             Case 1
 
                 _dbConnection("db_lccsams")
-                _insertData("insert into tbl_coll_fees values (0,'" & txtb_sfeeName.Text & "','" & txtb_sFeeAmnt.Text & "','" & cbo_sSY.SelectedValue & "')")
-
-
+                _insertData("insert into tbl_senior_fees values (0,'" & txtb_sfeeName.Text & "','" & txtb_sFeeAmnt.Text & "','" & cbo_sSY.SelectedValue & "')")
+                _displayRecords(sFeesR_sort, dg_sfeesRec)
+                dlg_savesuccessfully.ShowDialog()
             Case 2
                 _dbConnection("db_lccsams")
-                _updateData("")
+                _updateData("update tbl_senior_fees  set sfees_name='" & txtb_sfeeName.Text & "', sfees_amount='" & txtb_sFeeAmnt.Text & "' where sfees_id='" & sfees_id & "'")
                 btn_sUpdate.Enabled = True
                 btn_sSave.Enabled = False
-                _displayRecords("", dg_sfeesRec)
+                UpdatedSuccessfully.ShowDialog()
+                _displayRecords(sFeesR_sort, dg_sfeesRec)
+
         End Select
         cbo_sSY.Enabled = False
         txtb_sfeeName.Enabled = False
@@ -379,7 +395,6 @@
     Private Sub cbo_sSortSY_SelectionChangeCommitted(sender As Object, e As EventArgs) Handles cbo_sSortSY.SelectionChangeCommitted
         Try
             _dbConnection("db_lccsams")
-            Dim sFeesR_sort As String = "select sfees_id,sfees_name, sfees_amount from tbl_senior_fees where ssy_id='" & cbo_sSortSY.SelectedValue & "' "
 
             txtb_sFeeAmnt.Clear()
             txtb_sfeeName.Clear()
@@ -396,7 +411,7 @@
             Dim s = e.RowIndex
             With dg_sfeesRec
                 cbo_sSY.Text = cbo_sSortSY.Text
-                ssy_id
+                ssy_id = .Item(0, s).Value.ToString
                 txtb_sfeeName.Text = .Item(1, s).Value.ToString
                 txtb_sFeeAmnt.Text = .Item(2, s).Value.ToString
             End With
@@ -407,6 +422,9 @@
     End Sub
     '###########################################################junior high Depatment Section##############################################################
     Dim d As Integer = 0
+    Dim jfees_id As Integer = 0
+    Dim jFeesR_sort As String = "select jfees_id,jfees_name, jfees_amount from tbl_junior_fees where jsy_id='" & cbo_jSortSY.SelectedValue & "' "
+
     Private Sub btn_jAdd_Click(sender As Object, e As EventArgs) Handles btn_jAdd.Click
         If MessageBox.Show("", "Do You want to add new Junior High fees", MessageBoxButtons.YesNo) = DialogResult.Yes Then
             cbo_jSY.Enabled = True
@@ -458,21 +476,21 @@
 
                 _dbConnection("db_lccsams")
                 _insertData("insert into tbl_junior_fees values (0,'" & txtb_sfeeName.Text & "','" & txtb_sFeeAmnt.Text & "','" & cbo_sSY.SelectedValue & "')")
-
-
+                _displayRecords(sFeesR_sort, dg_jFeesRec)
+                dlg_savesuccessfully.ShowDialog()
             Case 2
                 _dbConnection("db_lccsams")
-                _updateData("")
+                _updateData("update tbl_junior_fees set jfees_name='" & txtb_jFeesName.Text & "', jfees_amount='" & txtb_jFeesAmnt.Text & "' where jfees_id='" & jfees_id & "'")
                 btn_sUpdate.Enabled = True
                 btn_sSave.Enabled = False
-                _displayRecords("", dg_sfeesRec)
+                UpdatedSuccessfully.ShowDialog()
+                _displayRecords(sFeesR_sort, dg_jFeesRec)
         End Select
     End Sub
-
     Private Sub cbo_jSortSY_SelectionChangeCommitted(sender As Object, e As EventArgs) Handles cbo_jSortSY.SelectionChangeCommitted
         Try
             _dbConnection("db_lccsams")
-            Dim sFeesR_sort As String = "select jfees_id,jfees_name, jfees_amount from tbl_junior_fees where jsy_id='" & cbo_jSortSY.SelectedValue & "' "
+
 
             txtb_jFeesAmnt.Clear()
             txtb_jFeesName.Clear()
@@ -488,6 +506,7 @@
         Try
             Dim s = e.RowIndex
             With dg_jFeesRec
+                jfees_id = .Item(0, s).Value.ToString
                 cbo_jSY.Text = cbo_jSortSY.Text
                 txtb_jFeesName.Text = .Item(1, s).Value.ToString
                 txtb_jFeesAmnt.Text = .Item(2, s).Value.ToString
@@ -497,4 +516,5 @@
 
         End Try
     End Sub
+
 End Class

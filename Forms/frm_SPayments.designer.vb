@@ -22,6 +22,7 @@ Partial Class frm_SPayments
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_SPayments))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -305,6 +306,7 @@ Partial Class frm_SPayments
         Me.Panel4.SuspendLayout()
         Me.GroupBox23.SuspendLayout()
         Me.GroupBox24.SuspendLayout()
+        CType(Me.TblseniorfeesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -2557,6 +2559,10 @@ Partial Class frm_SPayments
         resources.ApplyResources(Me.TextBox36, "TextBox36")
         Me.TextBox36.Name = "TextBox36"
         '
+        '
+        'TblseniorfeesBindingSource
+        '
+        Me.TblseniorfeesBindingSource.DataMember = "tbl_senior_fees"        '
         'frm_SPayments
         '
         resources.ApplyResources(Me, "$this")
@@ -2626,6 +2632,7 @@ Partial Class frm_SPayments
         Me.GroupBox23.PerformLayout()
         Me.GroupBox24.ResumeLayout(False)
         Me.GroupBox24.PerformLayout()
+        CType(Me.TblseniorfeesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -2874,4 +2881,5 @@ Partial Class frm_SPayments
     Friend WithEvents rbtn_partial As RadioButton
     Friend WithEvents lbl_amount As Label
     Friend WithEvents Panel5 As Panel
+    Friend WithEvents TblseniorfeesBindingSource As BindingSource
 End Class

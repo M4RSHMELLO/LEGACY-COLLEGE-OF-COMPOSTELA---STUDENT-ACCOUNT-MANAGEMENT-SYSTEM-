@@ -42,7 +42,7 @@
                 frm_sA.TabControl1.SelectedIndex = 1
             Case 2
                 frm_sA.TabControl1.SelectedIndex = 2
-            Case 2
+            Case 3
                 frm_sA.TabControl1.SelectedIndex = 3
             Case Else
         End Select
@@ -77,8 +77,9 @@
                         Case 1
                             frm_sA.txtb_eStud_id_Click(sender, e)
                         Case 2
+                            frm_sA.txtb_sStud_id_Click(sender, e)
                         Case 3
-
+                            frm_sA.txtb_jStud_ID_Click(sender, e)
 
                         Case Else
                             MessageBox.Show("")

@@ -1,5 +1,4 @@
-﻿Imports MySql.Data.MySqlClient
-Imports System.Data
+﻿Imports System.Data
 Public Class frm_SAccounts
 
     Public Sub frm_SAccounts_Load(sender As Object, e As EventArgs) Handles MyBase.Load

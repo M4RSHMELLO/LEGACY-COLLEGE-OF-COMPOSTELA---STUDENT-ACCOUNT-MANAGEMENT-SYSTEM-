@@ -1,5 +1,4 @@
-﻿Imports MySql.Data.MySqlClient
-
+﻿
 Public Class frm_slists
     Dim sAccount As New frm_SAccounts
     Sub random()
@@ -535,9 +534,9 @@ Public Class frm_slists
     Private Sub btn_sViewAccount_Click(sender As Object, e As EventArgs) Handles btn_sViewAccount.Click
         Try
             If txtb_sStud_id.Text = "" Then
-                MessageBox.Show("Pag select sag estudyanto bago ka mo proceed")
+                MessageBox.Show("Select a student first")
             Else
-                current_menu = 3
+                current_menu = 2
                 Dashboard.btn_menuStudentsAccount_click(sender, e)
             End If
         Catch ex As Exception
@@ -661,15 +660,15 @@ Public Class frm_slists
                 _dbConnection("db_lccsams")
                 sStud_id = .Item("col_sStud_id", i).Value
                 sStudname = .Item("col_sStud_fname", i).Value.ToString.ToUpper + " " + .Item("col_sStud_mi", i).Value.ToString.ToUpper + " " + .Item("col_sStud_lname", i).Value.ToString.ToUpper
-                sStudSY = .Item("col_sSY", i).Value
-                sStudGL = .Item("col_sGL", i).Value
+                sStudSY = _selectComboBoxText(querry, cbo_sSY)
+                sStudGL = _selectComboBoxText(querry2, cbo_sGL)
 
                 txtb_sStud_id.Text = .Item("col_sStud_id", i).Value
                 txtb_sFname.Text = .Item("col_sStud_fname", i).Value.ToString.ToUpper
                 txtb_sLname.Text = .Item("col_sStud_lname", i).Value.ToString.ToUpper
                 txtb_smi.Text = .Item("col_sStud_mi", i).Value.ToString.ToUpper
-                _selectComboBoxText(querry, cbo_sSY)
-                _selectComboBoxText(querry2, cbo_sGL)
+
+
 
             End With
 
@@ -697,7 +696,7 @@ Public Class frm_slists
             If txtb_jStud_id.Text = "" Then
                 MessageBox.Show("Pag select sag estudyanto bago ka mo proceed")
             Else
-                current_menu = 4
+                current_menu = 2
                 Dashboard.btn_menuStudentsAccount_click(sender, e)
             End If
         Catch ex As Exception
