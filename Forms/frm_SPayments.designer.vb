@@ -306,7 +306,6 @@ Partial Class frm_SPayments
         Me.Panel4.SuspendLayout()
         Me.GroupBox23.SuspendLayout()
         Me.GroupBox24.SuspendLayout()
-        CType(Me.TblseniorfeesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -2562,7 +2561,7 @@ Partial Class frm_SPayments
         '
         'TblseniorfeesBindingSource
         '
-        Me.TblseniorfeesBindingSource.DataMember = "tbl_senior_fees"        '
+        '
         'frm_SPayments
         '
         resources.ApplyResources(Me, "$this")
@@ -2632,7 +2631,6 @@ Partial Class frm_SPayments
         Me.GroupBox23.PerformLayout()
         Me.GroupBox24.ResumeLayout(False)
         Me.GroupBox24.PerformLayout()
-        CType(Me.TblseniorfeesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
