@@ -28,18 +28,20 @@
                 _displayRecords(sSelect_SY, dg_ssyRec)
                 _loadToListBox(sSelect_GL, lbo_sglRec)
             Case 3
-                _displayRecords(jSelect_SY, dg_esyRec)
-                _loadToListBox(jSelect_GL, lbo_eglRec)
+                _displayRecords(jSelect_SY, dg_jsyRec)
+                _loadToListBox(jSelect_GL, lbo_jglRec)
         End Select
 
     End Sub
 
     Private Sub btn_nCourse_Click(sender As Object, e As EventArgs) Handles btn_nCourse.Click
-        inputedV = InputBox("Input New Course")
-        strQuery3 = "Insert into tbl_coll_course values ('0','" & inputedV & "')"
-        _dbConnection("db_lccsams")
-        _insertData(strQuery3)
-        _loadToListBox(slctC, lbo_courses)
+        dlg_newCourse.ShowDialog()
+        If dlg_newCourse.DialogResult = DialogResult.Yes Then
+            strQuery3 = "Insert into tbl_coll_course values ('0','" & dlg_newCourse.txtb_nCourse.Text.ToUpper & "')"
+            _dbConnection("db_lccsams")
+            _insertData(strQuery3)
+            _loadToListBox(slctC, lbo_courses)
+        End If
 
     End Sub
 
@@ -52,26 +54,35 @@
     End Sub
 
     Private Sub btn_Ucourse_Click(sender As Object, e As EventArgs) Handles btn_Ucourse.Click
+        dlg_updateCourse.txtb_uCourse.Text = lbo_courses.Text
+        dlg_updateCourse.ShowDialog()
+        If dlg_updateCourse.DialogResult = DialogResult.Yes Then
+            _updateData("Update tbl_course set crs_name='" & dlg_updateCourse.txtb_uCourse.Text & "' where crs_id='" & lbo_courses.SelectedValue & "'")
+            _loadToListBox(slctC, lbo_courses)
+        End If
+
         If MessageBox.Show("Do you want to update this course? " & vbNewLine & "Name: " & lbo_courses.Text, "", MessageBoxButtons.YesNo) = DialogResult.Yes Then
             inputedV = InputBox("Enter a new name ")
-            _updateData("Update tbl_course set crs_name='" & inputedV & "' where crs_id='" & lbo_courses.SelectedValue & "'")
-
-            _loadToListBox(slctC, lbo_courses)
         End If
     End Sub
 
     Private Sub btn_nYearlevel_Click_1(sender As Object, e As EventArgs) Handles btn_nYearlevel.Click
-        inputedV = InputBox("Input New Year Level")
-        strQuerry5 = "Insert into tbl_year_level values ('0','" & inputedV & "')"
-        _dbConnection("db_lccsams")
-        _insertData(strQuerry5)
-        _loadToListBox(slctYL, lbo_yearL)
+        dlg_insertYearLevel.ShowDialog()
+        If dlg_insertYearLevel.DialogResult = DialogResult.Yes Then
+            strQuerry5 = "Insert into tbl_year_level values ('0','" & dlg_insertYearLevel.txtb_yearlevel.Text & "')"
+            _dbConnection("db_lccsams")
+            _insertData(strQuerry5)
+            _loadToListBox(slctYL, lbo_yearL)
+        End If
+
     End Sub
 
     Private Sub btn_ylUpate_Click_1(sender As Object, e As EventArgs) Handles btn_ylUpate.Click
-        If MessageBox.Show("Do you want to update this year level? " & vbNewLine & "Name: " & lbo_yearL.Text, "", MessageBoxButtons.YesNo) = DialogResult.Yes Then
-            inputedV = InputBox("Enter a new name ")
-            _updateData("Update tbl_year_level  set yl_name='" & inputedV & "' where yl_id='" & lbo_courses.SelectedValue & "'")
+        dlg_updateYearLevel.txtb_updateYL.Text = lbo_yearL.Text
+        dlg_updateYearLevel.ShowDialog()
+
+        If dlg_updateYearLevel.DialogResult = DialogResult.Yes Then
+            _updateData("Update tbl_year_level  set yl_name='" & dlg_updateYearLevel.txtb_updateYL.Text & "' where yl_id='" & lbo_yearL.SelectedValue & "'")
             _loadToListBox(slctYL, lbo_yearL)
         End If
     End Sub
@@ -86,6 +97,7 @@
     End Sub
 
     Private Sub btn_new_Click(sender As Object, e As EventArgs) Handles btn_new.Click
+
         txtb_syS.Enabled = True
         txtb_syE.Enabled = True
         btn_save.Enabled = True
@@ -145,20 +157,25 @@
     End Sub
 
     Private Sub btn_egl_new_Click(sender As Object, e As EventArgs) Handles btn_egl_new.Click
-        egl_name = InputBox("Input New Grade Level")
-        strQuerry5 = "Insert into tbl_elem_gradelevel values ('0','" & egl_name & "')"
-        _dbConnection("db_lccsams")
-        _insertData(strQuerry5)
-        _loadToListBox(eSelect_GL, lbo_eglRec)
-
+        dlg_inputGradeLevel.ShowDialog()
+        If dlg_inputGradeLevel.DialogResult = DialogResult.Yes Then
+            strQuerry5 = "Insert into tbl_elem_gradelevel values ('0','" & dlg_inputGradeLevel.txtb_gradelevel.Text & "')"
+            _dbConnection("db_lccsams")
+            _insertData(strQuerry5)
+            _loadToListBox(eSelect_GL, lbo_eglRec)
+        End If
     End Sub
 
     Private Sub btn_egl_update_Click(sender As Object, e As EventArgs) Handles btn_egl_update.Click
-        If MessageBox.Show("Do you want to update this Grade level? " & vbNewLine & "Name: " & lbo_eglRec.Text, "", MessageBoxButtons.YesNo) = DialogResult.Yes Then
-            egl_name = InputBox("Enter a new name ")
-            _updateData("Update tbl_elem_gradelevel  set esy_eglname='" & egl_name & "' where egl_id='" & lbo_eglRec.SelectedValue & "'")
+        dlg_updateGradeLevel.txtb_gradelevel.Text = lbo_eglRec.Text
+        dlg_updateGradeLevel.ShowDialog()
+        If dlg_updateGradeLevel.DialogResult = DialogResult.Yes Then
+            _updateData("Update tbl_elem_gradelevel  set egl_name='" & dlg_updateGradeLevel.txtb_gradelevel.Text & "' where egl_id='" & lbo_eglRec.SelectedValue & "'")
             _loadToListBox(eSelect_GL, lbo_eglRec)
         End If
+
+
+
     End Sub
 
     Private Sub dg_esyRec_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dg_esyRec.CellClick
@@ -217,19 +234,23 @@
     End Sub
 
     Private Sub btn_new_sGL_Click(sender As Object, e As EventArgs) Handles btn_new_sGL.Click
-        sgl_name = InputBox("Input New Grade Level")
-        strQuerry5 = "Insert into tbl_seniorhigh_gl values ('0','" & sgl_name & "')"
-        _dbConnection("db_lccsams")
-        _insertData(strQuerry5)
-        _loadToListBox(sSelect_GL, lbo_eglRec)
+        dlg_inputGradeLevel.ShowDialog()
+        If dlg_inputGradeLevel.DialogResult = DialogResult.Yes Then
+            strQuerry5 = "Insert into tbl_seniorhigh_gl values ('0','" & dlg_inputGradeLevel.txtb_gradelevel.Text & "')"
+            _dbConnection("db_lccsams")
+            _insertData(strQuerry5)
+            _loadToListBox(sSelect_GL, lbo_sglRec)
+        End If
     End Sub
 
     Private Sub btn_Update_sGL_Click(sender As Object, e As EventArgs) Handles btn_Update_sGL.Click
-        If MessageBox.Show("Do you want to update this Grade level? " & vbNewLine & "Name: " & lbo_sglRec.Text, "", MessageBoxButtons.YesNo) = DialogResult.Yes Then
-            sgl_name = InputBox("Enter a new name ")
-            _updateData("Update tbl_seniorhigh_gl  set sgl_name='" & sgl_name & "' where sgl_id='" & lbo_sglRec.SelectedValue & "'")
+        dlg_updateGradeLevel.txtb_gradelevel.Text = lbo_sglRec.Text
+        dlg_updateGradeLevel.ShowDialog()
+        If dlg_updateGradeLevel.DialogResult = DialogResult.Yes Then
+            _updateData("Update tbl_seniorhigh_gl  set sgl_name='" & dlg_updateGradeLevel.txtb_gradelevel.Text & "' where sgl_id='" & lbo_sglRec.SelectedValue & "'")
             _loadToListBox(sSelect_GL, lbo_sglRec)
         End If
+
     End Sub
 
     Private Sub dg_ssyRec_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dg_ssyRec.CellClick
@@ -307,18 +328,22 @@
     End Sub
 
     Private Sub btn_jgl_new_Click(sender As Object, e As EventArgs) Handles btn_jgl_new.Click
-        jgl_name = InputBox("Input New Grade Level")
-        strQuerry5 = "Insert into tbl_juniorhigh_gradelevel values ('0','" & jgl_name & "')"
-        _dbConnection("db_lccsams")
-        _insertData(strQuerry5)
-        _loadToListBox(jSelect_GL, lbo_jglRec)
+        dlg_inputGradeLevel.ShowDialog()
+        If dlg_inputGradeLevel.DialogResult = DialogResult.Yes Then
+            strQuerry5 = "Insert into tbl_juniorhigh_gradelevel values ('0','" & dlg_inputGradeLevel.txtb_gradelevel.Text & "')"
+            _dbConnection("db_lccsams")
+            _insertData(strQuerry5)
+            _loadToListBox(jSelect_GL, lbo_jglRec)
+        End If
     End Sub
 
     Private Sub tn_jgl_update_Click(sender As Object, e As EventArgs) Handles tn_jgl_update.Click
-        If MessageBox.Show("Do you want to update this Grade level? " & vbNewLine & "Name: " & lbo_jglRec.Text, "", MessageBoxButtons.YesNo) = DialogResult.Yes Then
-            sgl_name = InputBox("Enter a new name ")
-            _updateData("Update tbl_juniorhigh_gradelevel  set jgl_name='" & jgl_name & "' where jgl_id='" & lbo_jglRec.SelectedValue & "'")
+        dlg_updateGradeLevel.txtb_gradelevel.Text = lbo_jglRec.Text
+        dlg_updateGradeLevel.ShowDialog()
+        If dlg_updateGradeLevel.DialogResult = DialogResult.Yes Then
+            _updateData("Update tbl_juniorhigh_gradelevel  set jgl_name='" & dlg_updateGradeLevel.txtb_gradelevel.Text & "' where jgl_id='" & lbo_jglRec.SelectedValue & "'")
             _loadToListBox(jSelect_GL, lbo_jglRec)
         End If
+
     End Sub
 End Class

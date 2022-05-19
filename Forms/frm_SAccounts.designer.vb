@@ -23,18 +23,18 @@ Partial Class frm_SAccounts
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_SAccounts))
-        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle19 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle20 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle21 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle22 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle23 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle24 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.college_dept = New System.Windows.Forms.TabPage()
         Me.BunifuThinButton23 = New Bunifu.Framework.UI.BunifuThinButton2()
@@ -92,6 +92,12 @@ Partial Class frm_SAccounts
         Me.Label44 = New System.Windows.Forms.Label()
         Me.GroupBox9 = New System.Windows.Forms.GroupBox()
         Me.dg_eStudAcctRec = New Bunifu.Framework.UI.BunifuCustomDataGrid()
+        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox8 = New System.Windows.Forms.GroupBox()
         Me.dg_eStudFees = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -120,6 +126,9 @@ Partial Class frm_SAccounts
         Me.txtb_eSY = New System.Windows.Forms.TextBox()
         Me.Label22 = New System.Windows.Forms.Label()
         Me.sh_dept = New System.Windows.Forms.TabPage()
+        Me.GroupBox19 = New System.Windows.Forms.GroupBox()
+        Me.cbo_sSortBY = New System.Windows.Forms.ComboBox()
+        Me.Label43 = New System.Windows.Forms.Label()
         Me.GroupBox14 = New System.Windows.Forms.GroupBox()
         Me.dg_sStudAcctRec = New Bunifu.Framework.UI.BunifuCustomDataGrid()
         Me.DataGridViewTextBoxColumn25 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -156,6 +165,9 @@ Partial Class frm_SAccounts
         Me.txtb_sSY = New System.Windows.Forms.TextBox()
         Me.Label42 = New System.Windows.Forms.Label()
         Me.jh_dept = New System.Windows.Forms.TabPage()
+        Me.GroupBox20 = New System.Windows.Forms.GroupBox()
+        Me.cbo_jSortBY = New System.Windows.Forms.ComboBox()
+        Me.Label45 = New System.Windows.Forms.Label()
         Me.GroupBox10 = New System.Windows.Forms.GroupBox()
         Me.dg_jStudAcctRec = New Bunifu.Framework.UI.BunifuCustomDataGrid()
         Me.DataGridViewTextBoxColumn13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -192,18 +204,6 @@ Partial Class frm_SAccounts
         Me.txtb_jSY = New System.Windows.Forms.TextBox()
         Me.Label33 = New System.Windows.Forms.Label()
         Me.sp_balance = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.GroupBox19 = New System.Windows.Forms.GroupBox()
-        Me.cbo_sSortBY = New System.Windows.Forms.ComboBox()
-        Me.Label43 = New System.Windows.Forms.Label()
-        Me.GroupBox20 = New System.Windows.Forms.GroupBox()
-        Me.cbo_jSortBY = New System.Windows.Forms.ComboBox()
-        Me.Label45 = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.college_dept.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -224,6 +224,7 @@ Partial Class frm_SAccounts
         CType(Me.dg_Fees, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.sh_dept.SuspendLayout()
+        Me.GroupBox19.SuspendLayout()
         Me.GroupBox14.SuspendLayout()
         CType(Me.dg_sStudAcctRec, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox15.SuspendLayout()
@@ -232,6 +233,7 @@ Partial Class frm_SAccounts
         CType(Me.dg_sFeesRec, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox17.SuspendLayout()
         Me.jh_dept.SuspendLayout()
+        Me.GroupBox20.SuspendLayout()
         Me.GroupBox10.SuspendLayout()
         CType(Me.dg_jStudAcctRec, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox11.SuspendLayout()
@@ -239,8 +241,6 @@ Partial Class frm_SAccounts
         Me.GroupBox12.SuspendLayout()
         CType(Me.dg_jFees, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox13.SuspendLayout()
-        Me.GroupBox19.SuspendLayout()
-        Me.GroupBox20.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -732,20 +732,20 @@ Partial Class frm_SAccounts
         '
         Me.dg_acctRec.AllowUserToAddRows = False
         Me.dg_acctRec.AllowUserToDeleteRows = False
-        DataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.dg_acctRec.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle13
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.dg_acctRec.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.dg_acctRec.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dg_acctRec.BackgroundColor = System.Drawing.Color.Gainsboro
         Me.dg_acctRec.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dg_acctRec.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle14.BackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle14.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle14.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dg_acctRec.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle14
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dg_acctRec.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.dg_acctRec.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dg_acctRec.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.stdacct_id, Me.or_id, Me.sa_date, Me.sa_particulars, Me.sa_amountPaid, Me.sa_balance})
         Me.dg_acctRec.Dock = System.Windows.Forms.DockStyle.Fill
@@ -781,9 +781,9 @@ Partial Class frm_SAccounts
         'sa_date
         '
         Me.sa_date.DataPropertyName = "stdacct_tDate"
-        DataGridViewCellStyle15.Format = "yyyy-MM-dd"
-        DataGridViewCellStyle15.NullValue = Nothing
-        Me.sa_date.DefaultCellStyle = DataGridViewCellStyle15
+        DataGridViewCellStyle3.Format = "yyyy-MM-dd"
+        DataGridViewCellStyle3.NullValue = Nothing
+        Me.sa_date.DefaultCellStyle = DataGridViewCellStyle3
         Me.sa_date.HeaderText = "DATE"
         Me.sa_date.Name = "sa_date"
         Me.sa_date.ReadOnly = True
@@ -871,20 +871,20 @@ Partial Class frm_SAccounts
         '
         Me.dg_eStudAcctRec.AllowUserToAddRows = False
         Me.dg_eStudAcctRec.AllowUserToDeleteRows = False
-        DataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.dg_eStudAcctRec.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle16
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.dg_eStudAcctRec.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
         Me.dg_eStudAcctRec.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dg_eStudAcctRec.BackgroundColor = System.Drawing.Color.Gainsboro
         Me.dg_eStudAcctRec.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dg_eStudAcctRec.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle17.BackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle17.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle17.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dg_eStudAcctRec.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle17
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dg_eStudAcctRec.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
         Me.dg_eStudAcctRec.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dg_eStudAcctRec.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn9, Me.DataGridViewTextBoxColumn10, Me.DataGridViewTextBoxColumn11, Me.DataGridViewTextBoxColumn12})
         Me.dg_eStudAcctRec.Dock = System.Windows.Forms.DockStyle.Fill
@@ -901,6 +901,52 @@ Partial Class frm_SAccounts
         Me.dg_eStudAcctRec.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dg_eStudAcctRec.Size = New System.Drawing.Size(532, 279)
         Me.dg_eStudAcctRec.TabIndex = 0
+        '
+        'DataGridViewTextBoxColumn7
+        '
+        Me.DataGridViewTextBoxColumn7.DataPropertyName = "estud_id"
+        Me.DataGridViewTextBoxColumn7.HeaderText = "ID"
+        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
+        Me.DataGridViewTextBoxColumn7.ReadOnly = True
+        Me.DataGridViewTextBoxColumn7.Visible = False
+        '
+        'DataGridViewTextBoxColumn8
+        '
+        Me.DataGridViewTextBoxColumn8.DataPropertyName = "etan"
+        Me.DataGridViewTextBoxColumn8.HeaderText = "OR No."
+        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
+        Me.DataGridViewTextBoxColumn8.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn9
+        '
+        Me.DataGridViewTextBoxColumn9.DataPropertyName = "edate_paidamount"
+        DataGridViewCellStyle6.Format = "yyyy-MM-dd"
+        DataGridViewCellStyle6.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn9.DefaultCellStyle = DataGridViewCellStyle6
+        Me.DataGridViewTextBoxColumn9.HeaderText = "DATE"
+        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
+        Me.DataGridViewTextBoxColumn9.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn10
+        '
+        Me.DataGridViewTextBoxColumn10.DataPropertyName = "efees_name"
+        Me.DataGridViewTextBoxColumn10.HeaderText = "PARTICULARS"
+        Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
+        Me.DataGridViewTextBoxColumn10.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn11
+        '
+        Me.DataGridViewTextBoxColumn11.DataPropertyName = "epay_amount"
+        Me.DataGridViewTextBoxColumn11.HeaderText = "AMOUNT PAID"
+        Me.DataGridViewTextBoxColumn11.Name = "DataGridViewTextBoxColumn11"
+        Me.DataGridViewTextBoxColumn11.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn12
+        '
+        Me.DataGridViewTextBoxColumn12.DataPropertyName = "ebal_amount"
+        Me.DataGridViewTextBoxColumn12.HeaderText = "Balance"
+        Me.DataGridViewTextBoxColumn12.Name = "DataGridViewTextBoxColumn12"
+        Me.DataGridViewTextBoxColumn12.ReadOnly = True
         '
         'GroupBox8
         '
@@ -1191,6 +1237,37 @@ Partial Class frm_SAccounts
         Me.sh_dept.TabIndex = 3
         Me.sh_dept.Text = "Senior-High Dept"
         '
+        'GroupBox19
+        '
+        Me.GroupBox19.Controls.Add(Me.cbo_sSortBY)
+        Me.GroupBox19.Controls.Add(Me.Label43)
+        Me.GroupBox19.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.GroupBox19.Location = New System.Drawing.Point(484, 216)
+        Me.GroupBox19.Name = "GroupBox19"
+        Me.GroupBox19.Size = New System.Drawing.Size(538, 52)
+        Me.GroupBox19.TabIndex = 55
+        Me.GroupBox19.TabStop = False
+        Me.GroupBox19.Text = "SORT BY"
+        '
+        'cbo_sSortBY
+        '
+        Me.cbo_sSortBY.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbo_sSortBY.FormattingEnabled = True
+        Me.cbo_sSortBY.Location = New System.Drawing.Point(46, 22)
+        Me.cbo_sSortBY.Name = "cbo_sSortBY"
+        Me.cbo_sSortBY.Size = New System.Drawing.Size(188, 25)
+        Me.cbo_sSortBY.TabIndex = 19
+        '
+        'Label43
+        '
+        Me.Label43.AutoSize = True
+        Me.Label43.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label43.Location = New System.Drawing.Point(7, 30)
+        Me.Label43.Name = "Label43"
+        Me.Label43.Size = New System.Drawing.Size(31, 18)
+        Me.Label43.TabIndex = 19
+        Me.Label43.Text = "S.Y."
+        '
         'GroupBox14
         '
         Me.GroupBox14.Controls.Add(Me.dg_sStudAcctRec)
@@ -1206,20 +1283,20 @@ Partial Class frm_SAccounts
         '
         Me.dg_sStudAcctRec.AllowUserToAddRows = False
         Me.dg_sStudAcctRec.AllowUserToDeleteRows = False
-        DataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.dg_sStudAcctRec.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle19
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.dg_sStudAcctRec.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle7
         Me.dg_sStudAcctRec.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dg_sStudAcctRec.BackgroundColor = System.Drawing.Color.Gainsboro
         Me.dg_sStudAcctRec.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dg_sStudAcctRec.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle20.BackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle20.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle20.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dg_sStudAcctRec.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle20
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dg_sStudAcctRec.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle8
         Me.dg_sStudAcctRec.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dg_sStudAcctRec.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn25, Me.DataGridViewTextBoxColumn26, Me.DataGridViewTextBoxColumn27, Me.DataGridViewTextBoxColumn28, Me.DataGridViewTextBoxColumn29, Me.DataGridViewTextBoxColumn30})
         Me.dg_sStudAcctRec.Dock = System.Windows.Forms.DockStyle.Fill
@@ -1255,9 +1332,9 @@ Partial Class frm_SAccounts
         'DataGridViewTextBoxColumn27
         '
         Me.DataGridViewTextBoxColumn27.DataPropertyName = "stdacct_tDate"
-        DataGridViewCellStyle21.Format = "yyyy-MM-dd"
-        DataGridViewCellStyle21.NullValue = Nothing
-        Me.DataGridViewTextBoxColumn27.DefaultCellStyle = DataGridViewCellStyle21
+        DataGridViewCellStyle9.Format = "yyyy-MM-dd"
+        DataGridViewCellStyle9.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn27.DefaultCellStyle = DataGridViewCellStyle9
         Me.DataGridViewTextBoxColumn27.HeaderText = "DATE"
         Me.DataGridViewTextBoxColumn27.Name = "DataGridViewTextBoxColumn27"
         Me.DataGridViewTextBoxColumn27.ReadOnly = True
@@ -1572,6 +1649,37 @@ Partial Class frm_SAccounts
         Me.jh_dept.TabIndex = 2
         Me.jh_dept.Text = "Junior-High Dept"
         '
+        'GroupBox20
+        '
+        Me.GroupBox20.Controls.Add(Me.cbo_jSortBY)
+        Me.GroupBox20.Controls.Add(Me.Label45)
+        Me.GroupBox20.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.GroupBox20.Location = New System.Drawing.Point(481, 220)
+        Me.GroupBox20.Name = "GroupBox20"
+        Me.GroupBox20.Size = New System.Drawing.Size(538, 52)
+        Me.GroupBox20.TabIndex = 55
+        Me.GroupBox20.TabStop = False
+        Me.GroupBox20.Text = "SORT BY"
+        '
+        'cbo_jSortBY
+        '
+        Me.cbo_jSortBY.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbo_jSortBY.FormattingEnabled = True
+        Me.cbo_jSortBY.Location = New System.Drawing.Point(46, 22)
+        Me.cbo_jSortBY.Name = "cbo_jSortBY"
+        Me.cbo_jSortBY.Size = New System.Drawing.Size(188, 25)
+        Me.cbo_jSortBY.TabIndex = 19
+        '
+        'Label45
+        '
+        Me.Label45.AutoSize = True
+        Me.Label45.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label45.Location = New System.Drawing.Point(7, 30)
+        Me.Label45.Name = "Label45"
+        Me.Label45.Size = New System.Drawing.Size(31, 18)
+        Me.Label45.TabIndex = 19
+        Me.Label45.Text = "S.Y."
+        '
         'GroupBox10
         '
         Me.GroupBox10.Controls.Add(Me.dg_jStudAcctRec)
@@ -1587,20 +1695,20 @@ Partial Class frm_SAccounts
         '
         Me.dg_jStudAcctRec.AllowUserToAddRows = False
         Me.dg_jStudAcctRec.AllowUserToDeleteRows = False
-        DataGridViewCellStyle22.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.dg_jStudAcctRec.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle22
+        DataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.dg_jStudAcctRec.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle10
         Me.dg_jStudAcctRec.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dg_jStudAcctRec.BackgroundColor = System.Drawing.Color.Gainsboro
         Me.dg_jStudAcctRec.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dg_jStudAcctRec.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle23.BackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle23.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle23.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dg_jStudAcctRec.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle23
+        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle11.BackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle11.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle11.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dg_jStudAcctRec.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle11
         Me.dg_jStudAcctRec.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dg_jStudAcctRec.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn13, Me.DataGridViewTextBoxColumn14, Me.DataGridViewTextBoxColumn15, Me.DataGridViewTextBoxColumn16, Me.DataGridViewTextBoxColumn17, Me.DataGridViewTextBoxColumn18})
         Me.dg_jStudAcctRec.Dock = System.Windows.Forms.DockStyle.Fill
@@ -1636,9 +1744,9 @@ Partial Class frm_SAccounts
         'DataGridViewTextBoxColumn15
         '
         Me.DataGridViewTextBoxColumn15.DataPropertyName = "stdacct_tDate"
-        DataGridViewCellStyle24.Format = "yyyy-MM-dd"
-        DataGridViewCellStyle24.NullValue = Nothing
-        Me.DataGridViewTextBoxColumn15.DefaultCellStyle = DataGridViewCellStyle24
+        DataGridViewCellStyle12.Format = "yyyy-MM-dd"
+        DataGridViewCellStyle12.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn15.DefaultCellStyle = DataGridViewCellStyle12
         Me.DataGridViewTextBoxColumn15.HeaderText = "DATE"
         Me.DataGridViewTextBoxColumn15.Name = "DataGridViewTextBoxColumn15"
         Me.DataGridViewTextBoxColumn15.ReadOnly = True
@@ -1944,116 +2052,6 @@ Partial Class frm_SAccounts
         Me.sp_balance.HeaderText = "Balance"
         Me.sp_balance.Name = "sp_balance"
         '
-        'DataGridViewTextBoxColumn7
-        '
-        Me.DataGridViewTextBoxColumn7.DataPropertyName = "estud_id"
-        Me.DataGridViewTextBoxColumn7.HeaderText = "ID"
-        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
-        Me.DataGridViewTextBoxColumn7.ReadOnly = True
-        Me.DataGridViewTextBoxColumn7.Visible = False
-        '
-        'DataGridViewTextBoxColumn8
-        '
-        Me.DataGridViewTextBoxColumn8.DataPropertyName = "etan"
-        Me.DataGridViewTextBoxColumn8.HeaderText = "OR No."
-        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
-        Me.DataGridViewTextBoxColumn8.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn9
-        '
-        Me.DataGridViewTextBoxColumn9.DataPropertyName = "edate_paidamount"
-        DataGridViewCellStyle18.Format = "yyyy-MM-dd"
-        DataGridViewCellStyle18.NullValue = Nothing
-        Me.DataGridViewTextBoxColumn9.DefaultCellStyle = DataGridViewCellStyle18
-        Me.DataGridViewTextBoxColumn9.HeaderText = "DATE"
-        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
-        Me.DataGridViewTextBoxColumn9.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn10
-        '
-        Me.DataGridViewTextBoxColumn10.DataPropertyName = "efees_name"
-        Me.DataGridViewTextBoxColumn10.HeaderText = "PARTICULARS"
-        Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
-        Me.DataGridViewTextBoxColumn10.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn11
-        '
-        Me.DataGridViewTextBoxColumn11.DataPropertyName = "epay_amount"
-        Me.DataGridViewTextBoxColumn11.HeaderText = "AMOUNT PAID"
-        Me.DataGridViewTextBoxColumn11.Name = "DataGridViewTextBoxColumn11"
-        Me.DataGridViewTextBoxColumn11.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn12
-        '
-        Me.DataGridViewTextBoxColumn12.DataPropertyName = "ebal_amount"
-        Me.DataGridViewTextBoxColumn12.HeaderText = "Balance"
-        Me.DataGridViewTextBoxColumn12.Name = "DataGridViewTextBoxColumn12"
-        Me.DataGridViewTextBoxColumn12.ReadOnly = True
-        '
-        'GroupBox19
-        '
-        Me.GroupBox19.Controls.Add(Me.cbo_sSortBY)
-        Me.GroupBox19.Controls.Add(Me.Label43)
-        Me.GroupBox19.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.GroupBox19.Location = New System.Drawing.Point(484, 216)
-        Me.GroupBox19.Name = "GroupBox19"
-        Me.GroupBox19.Size = New System.Drawing.Size(538, 52)
-        Me.GroupBox19.TabIndex = 55
-        Me.GroupBox19.TabStop = False
-        Me.GroupBox19.Text = "SORT BY"
-        '
-        'cbo_sSortBY
-        '
-        Me.cbo_sSortBY.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbo_sSortBY.FormattingEnabled = True
-        Me.cbo_sSortBY.Items.AddRange(New Object() {"2029-2030", "2028-2029", "2027-2028", "2026-2027", "2025-2026", "2024-2025", "2023-2024", "2022-2023", "2021-2022", "2020-2021"})
-        Me.cbo_sSortBY.Location = New System.Drawing.Point(46, 22)
-        Me.cbo_sSortBY.Name = "cbo_sSortBY"
-        Me.cbo_sSortBY.Size = New System.Drawing.Size(188, 25)
-        Me.cbo_sSortBY.TabIndex = 19
-        '
-        'Label43
-        '
-        Me.Label43.AutoSize = True
-        Me.Label43.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label43.Location = New System.Drawing.Point(7, 30)
-        Me.Label43.Name = "Label43"
-        Me.Label43.Size = New System.Drawing.Size(31, 18)
-        Me.Label43.TabIndex = 19
-        Me.Label43.Text = "S.Y."
-        '
-        'GroupBox20
-        '
-        Me.GroupBox20.Controls.Add(Me.cbo_jSortBY)
-        Me.GroupBox20.Controls.Add(Me.Label45)
-        Me.GroupBox20.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.GroupBox20.Location = New System.Drawing.Point(481, 220)
-        Me.GroupBox20.Name = "GroupBox20"
-        Me.GroupBox20.Size = New System.Drawing.Size(538, 52)
-        Me.GroupBox20.TabIndex = 55
-        Me.GroupBox20.TabStop = False
-        Me.GroupBox20.Text = "SORT BY"
-        '
-        'cbo_jSortBY
-        '
-        Me.cbo_jSortBY.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbo_jSortBY.FormattingEnabled = True
-        Me.cbo_jSortBY.Items.AddRange(New Object() {"2029-2030", "2028-2029", "2027-2028", "2026-2027", "2025-2026", "2024-2025", "2023-2024", "2022-2023", "2021-2022", "2020-2021"})
-        Me.cbo_jSortBY.Location = New System.Drawing.Point(46, 22)
-        Me.cbo_jSortBY.Name = "cbo_jSortBY"
-        Me.cbo_jSortBY.Size = New System.Drawing.Size(188, 25)
-        Me.cbo_jSortBY.TabIndex = 19
-        '
-        'Label45
-        '
-        Me.Label45.AutoSize = True
-        Me.Label45.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label45.Location = New System.Drawing.Point(7, 30)
-        Me.Label45.Name = "Label45"
-        Me.Label45.Size = New System.Drawing.Size(31, 18)
-        Me.Label45.TabIndex = 19
-        Me.Label45.Text = "S.Y."
-        '
         'frm_SAccounts
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -2089,6 +2087,8 @@ Partial Class frm_SAccounts
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.sh_dept.ResumeLayout(False)
+        Me.GroupBox19.ResumeLayout(False)
+        Me.GroupBox19.PerformLayout()
         Me.GroupBox14.ResumeLayout(False)
         CType(Me.dg_sStudAcctRec, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox15.ResumeLayout(False)
@@ -2100,6 +2100,8 @@ Partial Class frm_SAccounts
         Me.GroupBox17.ResumeLayout(False)
         Me.GroupBox17.PerformLayout()
         Me.jh_dept.ResumeLayout(False)
+        Me.GroupBox20.ResumeLayout(False)
+        Me.GroupBox20.PerformLayout()
         Me.GroupBox10.ResumeLayout(False)
         CType(Me.dg_jStudAcctRec, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox11.ResumeLayout(False)
@@ -2110,10 +2112,6 @@ Partial Class frm_SAccounts
         CType(Me.dg_jFees, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox13.ResumeLayout(False)
         Me.GroupBox13.PerformLayout()
-        Me.GroupBox19.ResumeLayout(False)
-        Me.GroupBox19.PerformLayout()
-        Me.GroupBox20.ResumeLayout(False)
-        Me.GroupBox20.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub

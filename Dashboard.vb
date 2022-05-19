@@ -115,19 +115,23 @@
         addContent(frm_sSg, BunifuFlatButton4)
     End Sub
     Private Sub btn_logout_Click(sender As Object, e As EventArgs) Handles btn_logout.Click
-        Try
-            pnlMContainer.Controls.Clear()
-            pnlMContainer.Controls.Add(PictureBox2)
-            pnlMContainer.Controls.Add(Label4)
-            Label4.BringToFront()
-            pnlMContainer.Controls.Add(Label3)
-            Panel3.Size = Panel3.MinimumSize
-            Panel2.Size = Panel2.MinimumSize
-            Me.Hide()
-            form_login.Show()
-        Catch ex As Exception
+        dlg_logout.ShowDialog()
+        If dlg_logout.DialogResult = DialogResult.Yes Then
+            Try
+                pnlMContainer.Controls.Clear()
+                pnlMContainer.Controls.Add(PictureBox2)
+                pnlMContainer.Controls.Add(Label4)
+                Label4.BringToFront()
+                pnlMContainer.Controls.Add(Label3)
+                Panel3.Size = Panel3.MinimumSize
+                Panel2.Size = Panel2.MinimumSize
+                Me.Hide()
+                form_login.Show()
+            Catch ex As Exception
 
-        End Try
+            End Try
+        End If
+
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick

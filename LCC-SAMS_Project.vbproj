@@ -11,7 +11,7 @@
     <AssemblyName>LCC-SAMS_Project</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
@@ -151,10 +151,94 @@
     <Compile Include="dlg_addstudents.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="dlg_delete.designer.vb">
+      <DependentUpon>dlg_delete.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlg_delete.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlg_exist.designer.vb">
+      <DependentUpon>dlg_exist.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlg_exist.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlg_fillup.designer.vb">
+      <DependentUpon>dlg_fillup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlg_fillup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlg_inputGradeLevel.designer.vb">
+      <DependentUpon>dlg_inputGradeLevel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlg_inputGradeLevel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlg_insertYearLevel.designer.vb">
+      <DependentUpon>dlg_insertYearLevel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlg_insertYearLevel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlg_logout.designer.vb">
+      <DependentUpon>dlg_logout.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlg_logout.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlg_newCourse.designer.vb">
+      <DependentUpon>dlg_newCourse.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlg_newCourse.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlg_payments.designer.vb">
+      <DependentUpon>dlg_payments.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlg_payments.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlg_proceduralform.designer.vb">
+      <DependentUpon>dlg_proceduralform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlg_proceduralform.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="dlg_savesuccessfully.designer.vb">
       <DependentUpon>dlg_savesuccessfully.vb</DependentUpon>
     </Compile>
     <Compile Include="dlg_savesuccessfully.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlg_updateCourse.designer.vb">
+      <DependentUpon>dlg_updateCourse.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlg_updateCourse.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlg_updateGradeLevel.designer.vb">
+      <DependentUpon>dlg_updateGradeLevel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlg_updateGradeLevel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlg_updateSchoolYear.designer.vb">
+      <DependentUpon>dlg_updateSchoolYear.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlg_updateSchoolYear.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlg_updatestudents.designer.vb">
+      <DependentUpon>dlg_updatestudents.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlg_updatestudents.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlg_updateYearLevel.designer.vb">
+      <DependentUpon>dlg_updateYearLevel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlg_updateYearLevel.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\frm_slists.Designer.vb">
@@ -261,8 +345,50 @@
     <EmbeddedResource Include="dlg_addstudents.resx">
       <DependentUpon>dlg_addstudents.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="dlg_delete.resx">
+      <DependentUpon>dlg_delete.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlg_exist.resx">
+      <DependentUpon>dlg_exist.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlg_fillup.resx">
+      <DependentUpon>dlg_fillup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlg_inputGradeLevel.resx">
+      <DependentUpon>dlg_inputGradeLevel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlg_insertYearLevel.resx">
+      <DependentUpon>dlg_insertYearLevel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlg_logout.resx">
+      <DependentUpon>dlg_logout.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlg_newCourse.resx">
+      <DependentUpon>dlg_newCourse.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlg_payments.resx">
+      <DependentUpon>dlg_payments.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlg_proceduralform.resx">
+      <DependentUpon>dlg_proceduralform.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="dlg_savesuccessfully.resx">
       <DependentUpon>dlg_savesuccessfully.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlg_updateCourse.resx">
+      <DependentUpon>dlg_updateCourse.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlg_updateGradeLevel.resx">
+      <DependentUpon>dlg_updateGradeLevel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlg_updateSchoolYear.resx">
+      <DependentUpon>dlg_updateSchoolYear.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlg_updatestudents.resx">
+      <DependentUpon>dlg_updatestudents.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlg_updateYearLevel.resx">
+      <DependentUpon>dlg_updateYearLevel.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frm_slists.resx">
       <DependentUpon>frm_slists.vb</DependentUpon>
@@ -448,6 +574,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\loginerroricon.png" />
+    <None Include="Resources\addstudentsicon.png" />
+    <None Include="Resources\dlg_existed.png" />
+    <None Include="Resources\dlg_logouticon.png" />
+    <Content Include="Resources\dlg_studentsupdatedsuccessfully.png" />
+    <None Include="Resources\dlg_studentsupdatedsuccessfully1.png" />
+    <None Include="Resources\fillupform.png" />
+    <None Include="Resources\paymentsicon.png" />
     <Content Include="Resources\savesuccessfully.png" />
     <None Include="Resources\savesuccessfully1.png" />
     <None Include="Resources\savesuccessfully2.png" />

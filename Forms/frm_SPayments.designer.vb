@@ -22,11 +22,10 @@ Partial Class frm_SPayments
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_SPayments))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.coll_dept = New System.Windows.Forms.TabPage()
         Me.BunifuFlatButton2 = New Bunifu.Framework.UI.BunifuFlatButton()
@@ -105,28 +104,28 @@ Partial Class frm_SPayments
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtb_name = New System.Windows.Forms.TextBox()
         Me.elem_dept = New System.Windows.Forms.TabPage()
-        Me.BunifuFlatButton4 = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.BunifuFlatButton5 = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.BunifuFlatButton6 = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.btn_ePrint = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.btn_eClear = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.btn_eSave = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.GroupBox10 = New System.Windows.Forms.GroupBox()
         Me.Label50 = New System.Windows.Forms.Label()
-        Me.TextBox10 = New System.Windows.Forms.TextBox()
+        Me.txtb_eStudTotAmnt = New System.Windows.Forms.TextBox()
         Me.Label51 = New System.Windows.Forms.Label()
-        Me.TextBox11 = New System.Windows.Forms.TextBox()
+        Me.txtb_eStudOldAcct = New System.Windows.Forms.TextBox()
         Me.Label52 = New System.Windows.Forms.Label()
-        Me.TextBox12 = New System.Windows.Forms.TextBox()
+        Me.txtb_eStudCurrAcct = New System.Windows.Forms.TextBox()
         Me.GroupBox11 = New System.Windows.Forms.GroupBox()
         Me.Label53 = New System.Windows.Forms.Label()
         Me.Label54 = New System.Windows.Forms.Label()
-        Me.TextBox13 = New System.Windows.Forms.TextBox()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.txtb_eStudCurrBal = New System.Windows.Forms.TextBox()
+        Me.cbo_eParticulars = New System.Windows.Forms.ComboBox()
         Me.Label55 = New System.Windows.Forms.Label()
-        Me.TextBox14 = New System.Windows.Forms.TextBox()
+        Me.txtb_eStudAmntPay = New System.Windows.Forms.TextBox()
         Me.GroupBox12 = New System.Windows.Forms.GroupBox()
         Me.Label56 = New System.Windows.Forms.Label()
-        Me.TextBox15 = New System.Windows.Forms.TextBox()
+        Me.txtb_eTD = New System.Windows.Forms.TextBox()
         Me.Label57 = New System.Windows.Forms.Label()
-        Me.TextBox16 = New System.Windows.Forms.TextBox()
+        Me.txtb_eTN = New System.Windows.Forms.TextBox()
         Me.GroupBox9 = New System.Windows.Forms.GroupBox()
         Me.Label37 = New System.Windows.Forms.Label()
         Me.Label38 = New System.Windows.Forms.Label()
@@ -135,11 +134,11 @@ Partial Class frm_SPayments
         Me.Label41 = New System.Windows.Forms.Label()
         Me.Label42 = New System.Windows.Forms.Label()
         Me.Label43 = New System.Windows.Forms.Label()
-        Me.Label44 = New System.Windows.Forms.Label()
+        Me.lbl_eStudName = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Label45 = New System.Windows.Forms.Label()
+        Me.lbl_eTD = New System.Windows.Forms.Label()
         Me.Label46 = New System.Windows.Forms.Label()
-        Me.Label47 = New System.Windows.Forms.Label()
+        Me.lbl_eRcptNo = New System.Windows.Forms.Label()
         Me.Label48 = New System.Windows.Forms.Label()
         Me.Label49 = New System.Windows.Forms.Label()
         Me.ShapeContainer2 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
@@ -148,97 +147,41 @@ Partial Class frm_SPayments
         Me.btn_eManage = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.txtb_eStudID = New System.Windows.Forms.TextBox()
         Me.Label27 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.txtb_eSY = New System.Windows.Forms.TextBox()
         Me.Label28 = New System.Windows.Forms.Label()
         Me.Label33 = New System.Windows.Forms.Label()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
+        Me.txtb_eGL = New System.Windows.Forms.TextBox()
         Me.Label36 = New System.Windows.Forms.Label()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
+        Me.txtb_eStudName = New System.Windows.Forms.TextBox()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
-        Me.BunifuFlatButton1 = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.btn_eEnter = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.cbo_eSearchBy = New System.Windows.Forms.ComboBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.txtb_eSearch = New System.Windows.Forms.TextBox()
-        Me.jh_dept = New System.Windows.Forms.TabPage()
-        Me.BunifuFlatButton3 = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.BunifuFlatButton8 = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.BunifuFlatButton9 = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.GroupBox13 = New System.Windows.Forms.GroupBox()
-        Me.Label31 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.Label32 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.Label34 = New System.Windows.Forms.Label()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.GroupBox14 = New System.Windows.Forms.GroupBox()
-        Me.Label35 = New System.Windows.Forms.Label()
-        Me.Label58 = New System.Windows.Forms.Label()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
-        Me.Label59 = New System.Windows.Forms.Label()
-        Me.TextBox17 = New System.Windows.Forms.TextBox()
-        Me.GroupBox15 = New System.Windows.Forms.GroupBox()
-        Me.Label60 = New System.Windows.Forms.Label()
-        Me.TextBox18 = New System.Windows.Forms.TextBox()
-        Me.Label61 = New System.Windows.Forms.Label()
-        Me.TextBox19 = New System.Windows.Forms.TextBox()
-        Me.GroupBox16 = New System.Windows.Forms.GroupBox()
-        Me.Label62 = New System.Windows.Forms.Label()
-        Me.Label63 = New System.Windows.Forms.Label()
-        Me.Label64 = New System.Windows.Forms.Label()
-        Me.Label65 = New System.Windows.Forms.Label()
-        Me.Label66 = New System.Windows.Forms.Label()
-        Me.Label67 = New System.Windows.Forms.Label()
-        Me.Label68 = New System.Windows.Forms.Label()
-        Me.Label69 = New System.Windows.Forms.Label()
-        Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.Label70 = New System.Windows.Forms.Label()
-        Me.Label71 = New System.Windows.Forms.Label()
-        Me.Label72 = New System.Windows.Forms.Label()
-        Me.Label73 = New System.Windows.Forms.Label()
-        Me.Label74 = New System.Windows.Forms.Label()
-        Me.ShapeContainer3 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
-        Me.LineShape3 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.GroupBox17 = New System.Windows.Forms.GroupBox()
-        Me.BunifuFlatButton11 = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.TextBox20 = New System.Windows.Forms.TextBox()
-        Me.Label75 = New System.Windows.Forms.Label()
-        Me.TextBox21 = New System.Windows.Forms.TextBox()
-        Me.Label76 = New System.Windows.Forms.Label()
-        Me.Label77 = New System.Windows.Forms.Label()
-        Me.TextBox22 = New System.Windows.Forms.TextBox()
-        Me.Label78 = New System.Windows.Forms.Label()
-        Me.TextBox23 = New System.Windows.Forms.TextBox()
-        Me.GroupBox18 = New System.Windows.Forms.GroupBox()
-        Me.BunifuFlatButton12 = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.ComboBox4 = New System.Windows.Forms.ComboBox()
-        Me.Label79 = New System.Windows.Forms.Label()
-        Me.Label80 = New System.Windows.Forms.Label()
-        Me.TextBox24 = New System.Windows.Forms.TextBox()
         Me.sh_dept = New System.Windows.Forms.TabPage()
-        Me.BunifuFlatButton13 = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.BunifuFlatButton14 = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.BunifuFlatButton15 = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.btn_sPrint = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.btn_sClear = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.btn_sSave = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.GroupBox19 = New System.Windows.Forms.GroupBox()
         Me.Label81 = New System.Windows.Forms.Label()
-        Me.TextBox25 = New System.Windows.Forms.TextBox()
+        Me.txtb_sToAmnt = New System.Windows.Forms.TextBox()
         Me.Label82 = New System.Windows.Forms.Label()
-        Me.TextBox26 = New System.Windows.Forms.TextBox()
+        Me.txtb_sOldAcct = New System.Windows.Forms.TextBox()
         Me.Label83 = New System.Windows.Forms.Label()
-        Me.TextBox27 = New System.Windows.Forms.TextBox()
+        Me.txtb_sCurrAcct = New System.Windows.Forms.TextBox()
         Me.GroupBox20 = New System.Windows.Forms.GroupBox()
         Me.Label84 = New System.Windows.Forms.Label()
         Me.Label85 = New System.Windows.Forms.Label()
-        Me.TextBox28 = New System.Windows.Forms.TextBox()
-        Me.ComboBox5 = New System.Windows.Forms.ComboBox()
+        Me.txtb_sCurrBal = New System.Windows.Forms.TextBox()
+        Me.cbo_sParticulars = New System.Windows.Forms.ComboBox()
         Me.Label86 = New System.Windows.Forms.Label()
-        Me.TextBox29 = New System.Windows.Forms.TextBox()
+        Me.txtb_sAmntPay = New System.Windows.Forms.TextBox()
         Me.GroupBox21 = New System.Windows.Forms.GroupBox()
         Me.Label87 = New System.Windows.Forms.Label()
-        Me.TextBox30 = New System.Windows.Forms.TextBox()
+        Me.txtb_sTD = New System.Windows.Forms.TextBox()
         Me.Label88 = New System.Windows.Forms.Label()
-        Me.TextBox31 = New System.Windows.Forms.TextBox()
+        Me.txtb_sTN = New System.Windows.Forms.TextBox()
         Me.GroupBox22 = New System.Windows.Forms.GroupBox()
         Me.Label89 = New System.Windows.Forms.Label()
         Me.Label90 = New System.Windows.Forms.Label()
@@ -257,21 +200,77 @@ Partial Class frm_SPayments
         Me.ShapeContainer4 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.LineShape4 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.GroupBox23 = New System.Windows.Forms.GroupBox()
-        Me.BunifuFlatButton17 = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.TextBox32 = New System.Windows.Forms.TextBox()
+        Me.btn_sManage = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.txtb_sStudID = New System.Windows.Forms.TextBox()
         Me.Label102 = New System.Windows.Forms.Label()
-        Me.TextBox33 = New System.Windows.Forms.TextBox()
+        Me.txtb_sSY = New System.Windows.Forms.TextBox()
         Me.Label103 = New System.Windows.Forms.Label()
         Me.Label104 = New System.Windows.Forms.Label()
-        Me.TextBox34 = New System.Windows.Forms.TextBox()
+        Me.txtb_sGL = New System.Windows.Forms.TextBox()
         Me.Label105 = New System.Windows.Forms.Label()
-        Me.TextBox35 = New System.Windows.Forms.TextBox()
+        Me.txtb_sStudName = New System.Windows.Forms.TextBox()
         Me.GroupBox24 = New System.Windows.Forms.GroupBox()
-        Me.BunifuFlatButton18 = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.ComboBox6 = New System.Windows.Forms.ComboBox()
+        Me.btn_sEnter = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.cbo_sSearchBY = New System.Windows.Forms.ComboBox()
         Me.Label106 = New System.Windows.Forms.Label()
         Me.Label107 = New System.Windows.Forms.Label()
-        Me.TextBox36 = New System.Windows.Forms.TextBox()
+        Me.txtb_sSearch = New System.Windows.Forms.TextBox()
+        Me.jh_dept = New System.Windows.Forms.TabPage()
+        Me.btn_jPrint = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.btn_jClear = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.btn_jSave = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.GroupBox13 = New System.Windows.Forms.GroupBox()
+        Me.Label31 = New System.Windows.Forms.Label()
+        Me.txtb_jToAmnt = New System.Windows.Forms.TextBox()
+        Me.Label32 = New System.Windows.Forms.Label()
+        Me.txtb_jOldAcct = New System.Windows.Forms.TextBox()
+        Me.Label34 = New System.Windows.Forms.Label()
+        Me.txtb_jCurrAcct = New System.Windows.Forms.TextBox()
+        Me.GroupBox14 = New System.Windows.Forms.GroupBox()
+        Me.Label35 = New System.Windows.Forms.Label()
+        Me.Label58 = New System.Windows.Forms.Label()
+        Me.txtb_jCurrBal = New System.Windows.Forms.TextBox()
+        Me.cbo_jParticulars = New System.Windows.Forms.ComboBox()
+        Me.Label59 = New System.Windows.Forms.Label()
+        Me.txtb_jAmntPay = New System.Windows.Forms.TextBox()
+        Me.GroupBox15 = New System.Windows.Forms.GroupBox()
+        Me.Label60 = New System.Windows.Forms.Label()
+        Me.txtb_jTD = New System.Windows.Forms.TextBox()
+        Me.Label61 = New System.Windows.Forms.Label()
+        Me.txtb_jTN = New System.Windows.Forms.TextBox()
+        Me.GroupBox16 = New System.Windows.Forms.GroupBox()
+        Me.Label62 = New System.Windows.Forms.Label()
+        Me.Label63 = New System.Windows.Forms.Label()
+        Me.Label64 = New System.Windows.Forms.Label()
+        Me.Label65 = New System.Windows.Forms.Label()
+        Me.Label66 = New System.Windows.Forms.Label()
+        Me.Label67 = New System.Windows.Forms.Label()
+        Me.Label68 = New System.Windows.Forms.Label()
+        Me.Label69 = New System.Windows.Forms.Label()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Label70 = New System.Windows.Forms.Label()
+        Me.Label71 = New System.Windows.Forms.Label()
+        Me.Label72 = New System.Windows.Forms.Label()
+        Me.Label73 = New System.Windows.Forms.Label()
+        Me.Label74 = New System.Windows.Forms.Label()
+        Me.ShapeContainer3 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
+        Me.LineShape3 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.GroupBox17 = New System.Windows.Forms.GroupBox()
+        Me.btn_jManage = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.txtb_jStudID = New System.Windows.Forms.TextBox()
+        Me.Label75 = New System.Windows.Forms.Label()
+        Me.txtb_jSY = New System.Windows.Forms.TextBox()
+        Me.Label76 = New System.Windows.Forms.Label()
+        Me.Label77 = New System.Windows.Forms.Label()
+        Me.txtb_jGL = New System.Windows.Forms.TextBox()
+        Me.Label78 = New System.Windows.Forms.Label()
+        Me.txtb_jStudName = New System.Windows.Forms.TextBox()
+        Me.GroupBox18 = New System.Windows.Forms.GroupBox()
+        Me.btn_jEnter = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.cbo_jSearchBY = New System.Windows.Forms.ComboBox()
+        Me.Label79 = New System.Windows.Forms.Label()
+        Me.Label80 = New System.Windows.Forms.Label()
+        Me.txtb_jSearch = New System.Windows.Forms.TextBox()
         Me.TabControl1.SuspendLayout()
         Me.coll_dept.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -290,14 +289,6 @@ Partial Class frm_SPayments
         Me.Panel2.SuspendLayout()
         Me.GroupBox6.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
-        Me.jh_dept.SuspendLayout()
-        Me.GroupBox13.SuspendLayout()
-        Me.GroupBox14.SuspendLayout()
-        Me.GroupBox15.SuspendLayout()
-        Me.GroupBox16.SuspendLayout()
-        Me.Panel3.SuspendLayout()
-        Me.GroupBox17.SuspendLayout()
-        Me.GroupBox18.SuspendLayout()
         Me.sh_dept.SuspendLayout()
         Me.GroupBox19.SuspendLayout()
         Me.GroupBox20.SuspendLayout()
@@ -306,14 +297,22 @@ Partial Class frm_SPayments
         Me.Panel4.SuspendLayout()
         Me.GroupBox23.SuspendLayout()
         Me.GroupBox24.SuspendLayout()
+        Me.jh_dept.SuspendLayout()
+        Me.GroupBox13.SuspendLayout()
+        Me.GroupBox14.SuspendLayout()
+        Me.GroupBox15.SuspendLayout()
+        Me.GroupBox16.SuspendLayout()
+        Me.Panel3.SuspendLayout()
+        Me.GroupBox17.SuspendLayout()
+        Me.GroupBox18.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabControl1
         '
         Me.TabControl1.Controls.Add(Me.coll_dept)
         Me.TabControl1.Controls.Add(Me.elem_dept)
-        Me.TabControl1.Controls.Add(Me.jh_dept)
         Me.TabControl1.Controls.Add(Me.sh_dept)
+        Me.TabControl1.Controls.Add(Me.jh_dept)
         resources.ApplyResources(Me.TabControl1, "TabControl1")
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
@@ -686,20 +685,20 @@ Partial Class frm_SPayments
         Me.dg_viewCurrentPayment.AllowUserToAddRows = False
         Me.dg_viewCurrentPayment.AllowUserToResizeColumns = False
         Me.dg_viewCurrentPayment.AllowUserToResizeRows = False
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.dg_viewCurrentPayment.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.dg_viewCurrentPayment.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle7
         Me.dg_viewCurrentPayment.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dg_viewCurrentPayment.BackgroundColor = System.Drawing.SystemColors.Control
         Me.dg_viewCurrentPayment.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dg_viewCurrentPayment.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!)
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dg_viewCurrentPayment.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!)
+        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dg_viewCurrentPayment.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle8
         Me.dg_viewCurrentPayment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dg_viewCurrentPayment.ColumnHeadersVisible = False
         Me.dg_viewCurrentPayment.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.fees_id, Me.Column1, Me.t_amount, Me.t_balance, Me.delete})
@@ -740,9 +739,9 @@ Partial Class frm_SPayments
         '
         'delete
         '
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle3.NullValue = "Delete"
-        Me.delete.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle9.NullValue = "Delete"
+        Me.delete.DefaultCellStyle = DataGridViewCellStyle9
         Me.delete.FillWeight = 52.79189!
         Me.delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         resources.ApplyResources(Me.delete, "delete")
@@ -1034,9 +1033,9 @@ Partial Class frm_SPayments
         'elem_dept
         '
         Me.elem_dept.BackColor = System.Drawing.SystemColors.Control
-        Me.elem_dept.Controls.Add(Me.BunifuFlatButton4)
-        Me.elem_dept.Controls.Add(Me.BunifuFlatButton5)
-        Me.elem_dept.Controls.Add(Me.BunifuFlatButton6)
+        Me.elem_dept.Controls.Add(Me.btn_ePrint)
+        Me.elem_dept.Controls.Add(Me.btn_eClear)
+        Me.elem_dept.Controls.Add(Me.btn_eSave)
         Me.elem_dept.Controls.Add(Me.GroupBox10)
         Me.elem_dept.Controls.Add(Me.GroupBox11)
         Me.elem_dept.Controls.Add(Me.GroupBox12)
@@ -1046,110 +1045,110 @@ Partial Class frm_SPayments
         resources.ApplyResources(Me.elem_dept, "elem_dept")
         Me.elem_dept.Name = "elem_dept"
         '
-        'BunifuFlatButton4
+        'btn_ePrint
         '
-        Me.BunifuFlatButton4.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
-        Me.BunifuFlatButton4.BackColor = System.Drawing.SystemColors.ButtonFace
-        resources.ApplyResources(Me.BunifuFlatButton4, "BunifuFlatButton4")
-        Me.BunifuFlatButton4.BorderRadius = 0
-        Me.BunifuFlatButton4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.BunifuFlatButton4.ButtonText = "PRINT"
-        Me.BunifuFlatButton4.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BunifuFlatButton4.DisabledColor = System.Drawing.Color.Gray
-        Me.BunifuFlatButton4.ForeColor = System.Drawing.Color.SeaGreen
-        Me.BunifuFlatButton4.Iconcolor = System.Drawing.Color.Transparent
-        Me.BunifuFlatButton4.Iconimage = Nothing
-        Me.BunifuFlatButton4.Iconimage_right = Nothing
-        Me.BunifuFlatButton4.Iconimage_right_Selected = Nothing
-        Me.BunifuFlatButton4.Iconimage_Selected = Nothing
-        Me.BunifuFlatButton4.IconMarginLeft = 0
-        Me.BunifuFlatButton4.IconMarginRight = 0
-        Me.BunifuFlatButton4.IconRightVisible = False
-        Me.BunifuFlatButton4.IconRightZoom = 0R
-        Me.BunifuFlatButton4.IconVisible = False
-        Me.BunifuFlatButton4.IconZoom = 90.0R
-        Me.BunifuFlatButton4.IsTab = False
-        Me.BunifuFlatButton4.Name = "BunifuFlatButton4"
-        Me.BunifuFlatButton4.Normalcolor = System.Drawing.SystemColors.ButtonFace
-        Me.BunifuFlatButton4.OnHovercolor = System.Drawing.Color.Goldenrod
-        Me.BunifuFlatButton4.OnHoverTextColor = System.Drawing.Color.White
-        Me.BunifuFlatButton4.selected = False
-        Me.BunifuFlatButton4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.BunifuFlatButton4.Textcolor = System.Drawing.Color.SeaGreen
-        Me.BunifuFlatButton4.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_ePrint.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
+        Me.btn_ePrint.BackColor = System.Drawing.SystemColors.ButtonFace
+        resources.ApplyResources(Me.btn_ePrint, "btn_ePrint")
+        Me.btn_ePrint.BorderRadius = 0
+        Me.btn_ePrint.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.btn_ePrint.ButtonText = "PRINT"
+        Me.btn_ePrint.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_ePrint.DisabledColor = System.Drawing.Color.Gray
+        Me.btn_ePrint.ForeColor = System.Drawing.Color.SeaGreen
+        Me.btn_ePrint.Iconcolor = System.Drawing.Color.Transparent
+        Me.btn_ePrint.Iconimage = Nothing
+        Me.btn_ePrint.Iconimage_right = Nothing
+        Me.btn_ePrint.Iconimage_right_Selected = Nothing
+        Me.btn_ePrint.Iconimage_Selected = Nothing
+        Me.btn_ePrint.IconMarginLeft = 0
+        Me.btn_ePrint.IconMarginRight = 0
+        Me.btn_ePrint.IconRightVisible = False
+        Me.btn_ePrint.IconRightZoom = 0R
+        Me.btn_ePrint.IconVisible = False
+        Me.btn_ePrint.IconZoom = 90.0R
+        Me.btn_ePrint.IsTab = False
+        Me.btn_ePrint.Name = "btn_ePrint"
+        Me.btn_ePrint.Normalcolor = System.Drawing.SystemColors.ButtonFace
+        Me.btn_ePrint.OnHovercolor = System.Drawing.Color.Goldenrod
+        Me.btn_ePrint.OnHoverTextColor = System.Drawing.Color.White
+        Me.btn_ePrint.selected = False
+        Me.btn_ePrint.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btn_ePrint.Textcolor = System.Drawing.Color.SeaGreen
+        Me.btn_ePrint.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
-        'BunifuFlatButton5
+        'btn_eClear
         '
-        Me.BunifuFlatButton5.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
-        Me.BunifuFlatButton5.BackColor = System.Drawing.SystemColors.ButtonFace
-        resources.ApplyResources(Me.BunifuFlatButton5, "BunifuFlatButton5")
-        Me.BunifuFlatButton5.BorderRadius = 0
-        Me.BunifuFlatButton5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.BunifuFlatButton5.ButtonText = "CLEAR"
-        Me.BunifuFlatButton5.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BunifuFlatButton5.DisabledColor = System.Drawing.Color.Gray
-        Me.BunifuFlatButton5.ForeColor = System.Drawing.Color.SeaGreen
-        Me.BunifuFlatButton5.Iconcolor = System.Drawing.Color.Transparent
-        Me.BunifuFlatButton5.Iconimage = Nothing
-        Me.BunifuFlatButton5.Iconimage_right = Nothing
-        Me.BunifuFlatButton5.Iconimage_right_Selected = Nothing
-        Me.BunifuFlatButton5.Iconimage_Selected = Nothing
-        Me.BunifuFlatButton5.IconMarginLeft = 0
-        Me.BunifuFlatButton5.IconMarginRight = 0
-        Me.BunifuFlatButton5.IconRightVisible = False
-        Me.BunifuFlatButton5.IconRightZoom = 0R
-        Me.BunifuFlatButton5.IconVisible = False
-        Me.BunifuFlatButton5.IconZoom = 90.0R
-        Me.BunifuFlatButton5.IsTab = False
-        Me.BunifuFlatButton5.Name = "BunifuFlatButton5"
-        Me.BunifuFlatButton5.Normalcolor = System.Drawing.SystemColors.ButtonFace
-        Me.BunifuFlatButton5.OnHovercolor = System.Drawing.Color.Goldenrod
-        Me.BunifuFlatButton5.OnHoverTextColor = System.Drawing.Color.White
-        Me.BunifuFlatButton5.selected = False
-        Me.BunifuFlatButton5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.BunifuFlatButton5.Textcolor = System.Drawing.Color.SeaGreen
-        Me.BunifuFlatButton5.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_eClear.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
+        Me.btn_eClear.BackColor = System.Drawing.SystemColors.ButtonFace
+        resources.ApplyResources(Me.btn_eClear, "btn_eClear")
+        Me.btn_eClear.BorderRadius = 0
+        Me.btn_eClear.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.btn_eClear.ButtonText = "CLEAR"
+        Me.btn_eClear.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_eClear.DisabledColor = System.Drawing.Color.Gray
+        Me.btn_eClear.ForeColor = System.Drawing.Color.SeaGreen
+        Me.btn_eClear.Iconcolor = System.Drawing.Color.Transparent
+        Me.btn_eClear.Iconimage = Nothing
+        Me.btn_eClear.Iconimage_right = Nothing
+        Me.btn_eClear.Iconimage_right_Selected = Nothing
+        Me.btn_eClear.Iconimage_Selected = Nothing
+        Me.btn_eClear.IconMarginLeft = 0
+        Me.btn_eClear.IconMarginRight = 0
+        Me.btn_eClear.IconRightVisible = False
+        Me.btn_eClear.IconRightZoom = 0R
+        Me.btn_eClear.IconVisible = False
+        Me.btn_eClear.IconZoom = 90.0R
+        Me.btn_eClear.IsTab = False
+        Me.btn_eClear.Name = "btn_eClear"
+        Me.btn_eClear.Normalcolor = System.Drawing.SystemColors.ButtonFace
+        Me.btn_eClear.OnHovercolor = System.Drawing.Color.Goldenrod
+        Me.btn_eClear.OnHoverTextColor = System.Drawing.Color.White
+        Me.btn_eClear.selected = False
+        Me.btn_eClear.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btn_eClear.Textcolor = System.Drawing.Color.SeaGreen
+        Me.btn_eClear.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
-        'BunifuFlatButton6
+        'btn_eSave
         '
-        Me.BunifuFlatButton6.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
-        Me.BunifuFlatButton6.BackColor = System.Drawing.SystemColors.ButtonFace
-        resources.ApplyResources(Me.BunifuFlatButton6, "BunifuFlatButton6")
-        Me.BunifuFlatButton6.BorderRadius = 0
-        Me.BunifuFlatButton6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.BunifuFlatButton6.ButtonText = "SAVE"
-        Me.BunifuFlatButton6.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BunifuFlatButton6.DisabledColor = System.Drawing.Color.Gray
-        Me.BunifuFlatButton6.ForeColor = System.Drawing.Color.SeaGreen
-        Me.BunifuFlatButton6.Iconcolor = System.Drawing.Color.Transparent
-        Me.BunifuFlatButton6.Iconimage = Nothing
-        Me.BunifuFlatButton6.Iconimage_right = Nothing
-        Me.BunifuFlatButton6.Iconimage_right_Selected = Nothing
-        Me.BunifuFlatButton6.Iconimage_Selected = Nothing
-        Me.BunifuFlatButton6.IconMarginLeft = 0
-        Me.BunifuFlatButton6.IconMarginRight = 0
-        Me.BunifuFlatButton6.IconRightVisible = False
-        Me.BunifuFlatButton6.IconRightZoom = 0R
-        Me.BunifuFlatButton6.IconVisible = False
-        Me.BunifuFlatButton6.IconZoom = 90.0R
-        Me.BunifuFlatButton6.IsTab = False
-        Me.BunifuFlatButton6.Name = "BunifuFlatButton6"
-        Me.BunifuFlatButton6.Normalcolor = System.Drawing.SystemColors.ButtonFace
-        Me.BunifuFlatButton6.OnHovercolor = System.Drawing.Color.Goldenrod
-        Me.BunifuFlatButton6.OnHoverTextColor = System.Drawing.Color.White
-        Me.BunifuFlatButton6.selected = False
-        Me.BunifuFlatButton6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.BunifuFlatButton6.Textcolor = System.Drawing.Color.SeaGreen
-        Me.BunifuFlatButton6.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_eSave.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
+        Me.btn_eSave.BackColor = System.Drawing.SystemColors.ButtonFace
+        resources.ApplyResources(Me.btn_eSave, "btn_eSave")
+        Me.btn_eSave.BorderRadius = 0
+        Me.btn_eSave.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.btn_eSave.ButtonText = "SAVE"
+        Me.btn_eSave.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_eSave.DisabledColor = System.Drawing.Color.Gray
+        Me.btn_eSave.ForeColor = System.Drawing.Color.SeaGreen
+        Me.btn_eSave.Iconcolor = System.Drawing.Color.Transparent
+        Me.btn_eSave.Iconimage = Nothing
+        Me.btn_eSave.Iconimage_right = Nothing
+        Me.btn_eSave.Iconimage_right_Selected = Nothing
+        Me.btn_eSave.Iconimage_Selected = Nothing
+        Me.btn_eSave.IconMarginLeft = 0
+        Me.btn_eSave.IconMarginRight = 0
+        Me.btn_eSave.IconRightVisible = False
+        Me.btn_eSave.IconRightZoom = 0R
+        Me.btn_eSave.IconVisible = False
+        Me.btn_eSave.IconZoom = 90.0R
+        Me.btn_eSave.IsTab = False
+        Me.btn_eSave.Name = "btn_eSave"
+        Me.btn_eSave.Normalcolor = System.Drawing.SystemColors.ButtonFace
+        Me.btn_eSave.OnHovercolor = System.Drawing.Color.Goldenrod
+        Me.btn_eSave.OnHoverTextColor = System.Drawing.Color.White
+        Me.btn_eSave.selected = False
+        Me.btn_eSave.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btn_eSave.Textcolor = System.Drawing.Color.SeaGreen
+        Me.btn_eSave.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
         'GroupBox10
         '
         Me.GroupBox10.Controls.Add(Me.Label50)
-        Me.GroupBox10.Controls.Add(Me.TextBox10)
+        Me.GroupBox10.Controls.Add(Me.txtb_eStudTotAmnt)
         Me.GroupBox10.Controls.Add(Me.Label51)
-        Me.GroupBox10.Controls.Add(Me.TextBox11)
+        Me.GroupBox10.Controls.Add(Me.txtb_eStudOldAcct)
         Me.GroupBox10.Controls.Add(Me.Label52)
-        Me.GroupBox10.Controls.Add(Me.TextBox12)
+        Me.GroupBox10.Controls.Add(Me.txtb_eStudCurrAcct)
         resources.ApplyResources(Me.GroupBox10, "GroupBox10")
         Me.GroupBox10.Name = "GroupBox10"
         Me.GroupBox10.TabStop = False
@@ -1159,42 +1158,42 @@ Partial Class frm_SPayments
         resources.ApplyResources(Me.Label50, "Label50")
         Me.Label50.Name = "Label50"
         '
-        'TextBox10
+        'txtb_eStudTotAmnt
         '
-        Me.TextBox10.BackColor = System.Drawing.Color.White
-        resources.ApplyResources(Me.TextBox10, "TextBox10")
-        Me.TextBox10.Name = "TextBox10"
+        Me.txtb_eStudTotAmnt.BackColor = System.Drawing.Color.White
+        resources.ApplyResources(Me.txtb_eStudTotAmnt, "txtb_eStudTotAmnt")
+        Me.txtb_eStudTotAmnt.Name = "txtb_eStudTotAmnt"
         '
         'Label51
         '
         resources.ApplyResources(Me.Label51, "Label51")
         Me.Label51.Name = "Label51"
         '
-        'TextBox11
+        'txtb_eStudOldAcct
         '
-        Me.TextBox11.BackColor = System.Drawing.Color.White
-        resources.ApplyResources(Me.TextBox11, "TextBox11")
-        Me.TextBox11.Name = "TextBox11"
+        Me.txtb_eStudOldAcct.BackColor = System.Drawing.Color.White
+        resources.ApplyResources(Me.txtb_eStudOldAcct, "txtb_eStudOldAcct")
+        Me.txtb_eStudOldAcct.Name = "txtb_eStudOldAcct"
         '
         'Label52
         '
         resources.ApplyResources(Me.Label52, "Label52")
         Me.Label52.Name = "Label52"
         '
-        'TextBox12
+        'txtb_eStudCurrAcct
         '
-        Me.TextBox12.BackColor = System.Drawing.Color.White
-        resources.ApplyResources(Me.TextBox12, "TextBox12")
-        Me.TextBox12.Name = "TextBox12"
+        Me.txtb_eStudCurrAcct.BackColor = System.Drawing.Color.White
+        resources.ApplyResources(Me.txtb_eStudCurrAcct, "txtb_eStudCurrAcct")
+        Me.txtb_eStudCurrAcct.Name = "txtb_eStudCurrAcct"
         '
         'GroupBox11
         '
         Me.GroupBox11.Controls.Add(Me.Label53)
         Me.GroupBox11.Controls.Add(Me.Label54)
-        Me.GroupBox11.Controls.Add(Me.TextBox13)
-        Me.GroupBox11.Controls.Add(Me.ComboBox2)
+        Me.GroupBox11.Controls.Add(Me.txtb_eStudCurrBal)
+        Me.GroupBox11.Controls.Add(Me.cbo_eParticulars)
         Me.GroupBox11.Controls.Add(Me.Label55)
-        Me.GroupBox11.Controls.Add(Me.TextBox14)
+        Me.GroupBox11.Controls.Add(Me.txtb_eStudAmntPay)
         resources.ApplyResources(Me.GroupBox11, "GroupBox11")
         Me.GroupBox11.Name = "GroupBox11"
         Me.GroupBox11.TabStop = False
@@ -1209,35 +1208,35 @@ Partial Class frm_SPayments
         resources.ApplyResources(Me.Label54, "Label54")
         Me.Label54.Name = "Label54"
         '
-        'TextBox13
+        'txtb_eStudCurrBal
         '
-        Me.TextBox13.BackColor = System.Drawing.Color.White
-        resources.ApplyResources(Me.TextBox13, "TextBox13")
-        Me.TextBox13.Name = "TextBox13"
+        Me.txtb_eStudCurrBal.BackColor = System.Drawing.Color.White
+        resources.ApplyResources(Me.txtb_eStudCurrBal, "txtb_eStudCurrBal")
+        Me.txtb_eStudCurrBal.Name = "txtb_eStudCurrBal"
         '
-        'ComboBox2
+        'cbo_eParticulars
         '
-        Me.ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox2.FormattingEnabled = True
-        resources.ApplyResources(Me.ComboBox2, "ComboBox2")
-        Me.ComboBox2.Name = "ComboBox2"
+        Me.cbo_eParticulars.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbo_eParticulars.FormattingEnabled = True
+        resources.ApplyResources(Me.cbo_eParticulars, "cbo_eParticulars")
+        Me.cbo_eParticulars.Name = "cbo_eParticulars"
         '
         'Label55
         '
         resources.ApplyResources(Me.Label55, "Label55")
         Me.Label55.Name = "Label55"
         '
-        'TextBox14
+        'txtb_eStudAmntPay
         '
-        resources.ApplyResources(Me.TextBox14, "TextBox14")
-        Me.TextBox14.Name = "TextBox14"
+        resources.ApplyResources(Me.txtb_eStudAmntPay, "txtb_eStudAmntPay")
+        Me.txtb_eStudAmntPay.Name = "txtb_eStudAmntPay"
         '
         'GroupBox12
         '
         Me.GroupBox12.Controls.Add(Me.Label56)
-        Me.GroupBox12.Controls.Add(Me.TextBox15)
+        Me.GroupBox12.Controls.Add(Me.txtb_eTD)
         Me.GroupBox12.Controls.Add(Me.Label57)
-        Me.GroupBox12.Controls.Add(Me.TextBox16)
+        Me.GroupBox12.Controls.Add(Me.txtb_eTN)
         resources.ApplyResources(Me.GroupBox12, "GroupBox12")
         Me.GroupBox12.Name = "GroupBox12"
         Me.GroupBox12.TabStop = False
@@ -1247,24 +1246,24 @@ Partial Class frm_SPayments
         resources.ApplyResources(Me.Label56, "Label56")
         Me.Label56.Name = "Label56"
         '
-        'TextBox15
+        'txtb_eTD
         '
-        Me.TextBox15.BackColor = System.Drawing.Color.White
-        resources.ApplyResources(Me.TextBox15, "TextBox15")
-        Me.TextBox15.ForeColor = System.Drawing.SystemColors.AppWorkspace
-        Me.TextBox15.Name = "TextBox15"
+        Me.txtb_eTD.BackColor = System.Drawing.Color.White
+        resources.ApplyResources(Me.txtb_eTD, "txtb_eTD")
+        Me.txtb_eTD.ForeColor = System.Drawing.SystemColors.AppWorkspace
+        Me.txtb_eTD.Name = "txtb_eTD"
         '
         'Label57
         '
         resources.ApplyResources(Me.Label57, "Label57")
         Me.Label57.Name = "Label57"
         '
-        'TextBox16
+        'txtb_eTN
         '
-        Me.TextBox16.BackColor = System.Drawing.Color.White
-        resources.ApplyResources(Me.TextBox16, "TextBox16")
-        Me.TextBox16.ForeColor = System.Drawing.SystemColors.AppWorkspace
-        Me.TextBox16.Name = "TextBox16"
+        Me.txtb_eTN.BackColor = System.Drawing.Color.White
+        resources.ApplyResources(Me.txtb_eTN, "txtb_eTN")
+        Me.txtb_eTN.ForeColor = System.Drawing.SystemColors.AppWorkspace
+        Me.txtb_eTN.Name = "txtb_eTN"
         '
         'GroupBox9
         '
@@ -1276,7 +1275,7 @@ Partial Class frm_SPayments
         Me.GroupBox9.Controls.Add(Me.Label41)
         Me.GroupBox9.Controls.Add(Me.Label42)
         Me.GroupBox9.Controls.Add(Me.Label43)
-        Me.GroupBox9.Controls.Add(Me.Label44)
+        Me.GroupBox9.Controls.Add(Me.lbl_eStudName)
         Me.GroupBox9.Controls.Add(Me.Panel2)
         Me.GroupBox9.Controls.Add(Me.ShapeContainer2)
         resources.ApplyResources(Me.GroupBox9, "GroupBox9")
@@ -1324,40 +1323,40 @@ Partial Class frm_SPayments
         resources.ApplyResources(Me.Label43, "Label43")
         Me.Label43.Name = "Label43"
         '
-        'Label44
+        'lbl_eStudName
         '
-        resources.ApplyResources(Me.Label44, "Label44")
-        Me.Label44.Name = "Label44"
+        resources.ApplyResources(Me.lbl_eStudName, "lbl_eStudName")
+        Me.lbl_eStudName.Name = "lbl_eStudName"
         '
         'Panel2
         '
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel2.Controls.Add(Me.Label45)
+        Me.Panel2.Controls.Add(Me.lbl_eTD)
         Me.Panel2.Controls.Add(Me.Label46)
-        Me.Panel2.Controls.Add(Me.Label47)
+        Me.Panel2.Controls.Add(Me.lbl_eRcptNo)
         Me.Panel2.Controls.Add(Me.Label48)
         Me.Panel2.Controls.Add(Me.Label49)
         resources.ApplyResources(Me.Panel2, "Panel2")
         Me.Panel2.Name = "Panel2"
         '
-        'Label45
+        'lbl_eTD
         '
-        resources.ApplyResources(Me.Label45, "Label45")
-        Me.Label45.BackColor = System.Drawing.SystemColors.MenuBar
-        Me.Label45.ForeColor = System.Drawing.SystemColors.AppWorkspace
-        Me.Label45.Name = "Label45"
+        resources.ApplyResources(Me.lbl_eTD, "lbl_eTD")
+        Me.lbl_eTD.BackColor = System.Drawing.SystemColors.MenuBar
+        Me.lbl_eTD.ForeColor = System.Drawing.SystemColors.AppWorkspace
+        Me.lbl_eTD.Name = "lbl_eTD"
         '
         'Label46
         '
         resources.ApplyResources(Me.Label46, "Label46")
         Me.Label46.Name = "Label46"
         '
-        'Label47
+        'lbl_eRcptNo
         '
-        resources.ApplyResources(Me.Label47, "Label47")
-        Me.Label47.BackColor = System.Drawing.SystemColors.MenuBar
-        Me.Label47.ForeColor = System.Drawing.SystemColors.AppWorkspace
-        Me.Label47.Name = "Label47"
+        resources.ApplyResources(Me.lbl_eRcptNo, "lbl_eRcptNo")
+        Me.lbl_eRcptNo.BackColor = System.Drawing.SystemColors.MenuBar
+        Me.lbl_eRcptNo.ForeColor = System.Drawing.SystemColors.AppWorkspace
+        Me.lbl_eRcptNo.Name = "lbl_eRcptNo"
         '
         'Label48
         '
@@ -1386,12 +1385,12 @@ Partial Class frm_SPayments
         Me.GroupBox6.Controls.Add(Me.btn_eManage)
         Me.GroupBox6.Controls.Add(Me.txtb_eStudID)
         Me.GroupBox6.Controls.Add(Me.Label27)
-        Me.GroupBox6.Controls.Add(Me.TextBox5)
+        Me.GroupBox6.Controls.Add(Me.txtb_eSY)
         Me.GroupBox6.Controls.Add(Me.Label28)
         Me.GroupBox6.Controls.Add(Me.Label33)
-        Me.GroupBox6.Controls.Add(Me.TextBox8)
+        Me.GroupBox6.Controls.Add(Me.txtb_eGL)
         Me.GroupBox6.Controls.Add(Me.Label36)
-        Me.GroupBox6.Controls.Add(Me.TextBox9)
+        Me.GroupBox6.Controls.Add(Me.txtb_eStudName)
         resources.ApplyResources(Me.GroupBox6, "GroupBox6")
         Me.GroupBox6.Name = "GroupBox6"
         Me.GroupBox6.TabStop = False
@@ -1439,11 +1438,11 @@ Partial Class frm_SPayments
         resources.ApplyResources(Me.Label27, "Label27")
         Me.Label27.Name = "Label27"
         '
-        'TextBox5
+        'txtb_eSY
         '
-        Me.TextBox5.BackColor = System.Drawing.Color.White
-        resources.ApplyResources(Me.TextBox5, "TextBox5")
-        Me.TextBox5.Name = "TextBox5"
+        Me.txtb_eSY.BackColor = System.Drawing.Color.White
+        resources.ApplyResources(Me.txtb_eSY, "txtb_eSY")
+        Me.txtb_eSY.Name = "txtb_eSY"
         '
         'Label28
         '
@@ -1455,26 +1454,26 @@ Partial Class frm_SPayments
         resources.ApplyResources(Me.Label33, "Label33")
         Me.Label33.Name = "Label33"
         '
-        'TextBox8
+        'txtb_eGL
         '
-        Me.TextBox8.BackColor = System.Drawing.Color.White
-        resources.ApplyResources(Me.TextBox8, "TextBox8")
-        Me.TextBox8.Name = "TextBox8"
+        Me.txtb_eGL.BackColor = System.Drawing.Color.White
+        resources.ApplyResources(Me.txtb_eGL, "txtb_eGL")
+        Me.txtb_eGL.Name = "txtb_eGL"
         '
         'Label36
         '
         resources.ApplyResources(Me.Label36, "Label36")
         Me.Label36.Name = "Label36"
         '
-        'TextBox9
+        'txtb_eStudName
         '
-        Me.TextBox9.BackColor = System.Drawing.Color.White
-        resources.ApplyResources(Me.TextBox9, "TextBox9")
-        Me.TextBox9.Name = "TextBox9"
+        Me.txtb_eStudName.BackColor = System.Drawing.Color.White
+        resources.ApplyResources(Me.txtb_eStudName, "txtb_eStudName")
+        Me.txtb_eStudName.Name = "txtb_eStudName"
         '
         'GroupBox5
         '
-        Me.GroupBox5.Controls.Add(Me.BunifuFlatButton1)
+        Me.GroupBox5.Controls.Add(Me.btn_eEnter)
         Me.GroupBox5.Controls.Add(Me.cbo_eSearchBy)
         Me.GroupBox5.Controls.Add(Me.Label5)
         Me.GroupBox5.Controls.Add(Me.Label14)
@@ -1483,37 +1482,37 @@ Partial Class frm_SPayments
         Me.GroupBox5.Name = "GroupBox5"
         Me.GroupBox5.TabStop = False
         '
-        'BunifuFlatButton1
+        'btn_eEnter
         '
-        Me.BunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
-        resources.ApplyResources(Me.BunifuFlatButton1, "BunifuFlatButton1")
-        Me.BunifuFlatButton1.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.BunifuFlatButton1.BorderRadius = 0
-        Me.BunifuFlatButton1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.BunifuFlatButton1.ButtonText = "ENTER"
-        Me.BunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray
-        Me.BunifuFlatButton1.ForeColor = System.Drawing.Color.SeaGreen
-        Me.BunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent
-        Me.BunifuFlatButton1.Iconimage = Nothing
-        Me.BunifuFlatButton1.Iconimage_right = Nothing
-        Me.BunifuFlatButton1.Iconimage_right_Selected = Nothing
-        Me.BunifuFlatButton1.Iconimage_Selected = Nothing
-        Me.BunifuFlatButton1.IconMarginLeft = 0
-        Me.BunifuFlatButton1.IconMarginRight = 0
-        Me.BunifuFlatButton1.IconRightVisible = False
-        Me.BunifuFlatButton1.IconRightZoom = 0R
-        Me.BunifuFlatButton1.IconVisible = False
-        Me.BunifuFlatButton1.IconZoom = 90.0R
-        Me.BunifuFlatButton1.IsTab = False
-        Me.BunifuFlatButton1.Name = "BunifuFlatButton1"
-        Me.BunifuFlatButton1.Normalcolor = System.Drawing.SystemColors.ButtonFace
-        Me.BunifuFlatButton1.OnHovercolor = System.Drawing.Color.Goldenrod
-        Me.BunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White
-        Me.BunifuFlatButton1.selected = False
-        Me.BunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.BunifuFlatButton1.Textcolor = System.Drawing.Color.SeaGreen
-        Me.BunifuFlatButton1.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_eEnter.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
+        resources.ApplyResources(Me.btn_eEnter, "btn_eEnter")
+        Me.btn_eEnter.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.btn_eEnter.BorderRadius = 0
+        Me.btn_eEnter.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.btn_eEnter.ButtonText = "ENTER"
+        Me.btn_eEnter.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_eEnter.DisabledColor = System.Drawing.Color.Gray
+        Me.btn_eEnter.ForeColor = System.Drawing.Color.SeaGreen
+        Me.btn_eEnter.Iconcolor = System.Drawing.Color.Transparent
+        Me.btn_eEnter.Iconimage = Nothing
+        Me.btn_eEnter.Iconimage_right = Nothing
+        Me.btn_eEnter.Iconimage_right_Selected = Nothing
+        Me.btn_eEnter.Iconimage_Selected = Nothing
+        Me.btn_eEnter.IconMarginLeft = 0
+        Me.btn_eEnter.IconMarginRight = 0
+        Me.btn_eEnter.IconRightVisible = False
+        Me.btn_eEnter.IconRightZoom = 0R
+        Me.btn_eEnter.IconVisible = False
+        Me.btn_eEnter.IconZoom = 90.0R
+        Me.btn_eEnter.IsTab = False
+        Me.btn_eEnter.Name = "btn_eEnter"
+        Me.btn_eEnter.Normalcolor = System.Drawing.SystemColors.ButtonFace
+        Me.btn_eEnter.OnHovercolor = System.Drawing.Color.Goldenrod
+        Me.btn_eEnter.OnHoverTextColor = System.Drawing.Color.White
+        Me.btn_eEnter.selected = False
+        Me.btn_eEnter.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btn_eEnter.Textcolor = System.Drawing.Color.SeaGreen
+        Me.btn_eEnter.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
         'cbo_eSearchBy
         '
@@ -1540,521 +1539,12 @@ Partial Class frm_SPayments
         resources.ApplyResources(Me.txtb_eSearch, "txtb_eSearch")
         Me.txtb_eSearch.Name = "txtb_eSearch"
         '
-        'jh_dept
-        '
-        Me.jh_dept.BackColor = System.Drawing.SystemColors.Control
-        Me.jh_dept.Controls.Add(Me.BunifuFlatButton3)
-        Me.jh_dept.Controls.Add(Me.BunifuFlatButton8)
-        Me.jh_dept.Controls.Add(Me.BunifuFlatButton9)
-        Me.jh_dept.Controls.Add(Me.GroupBox13)
-        Me.jh_dept.Controls.Add(Me.GroupBox14)
-        Me.jh_dept.Controls.Add(Me.GroupBox15)
-        Me.jh_dept.Controls.Add(Me.GroupBox16)
-        Me.jh_dept.Controls.Add(Me.GroupBox17)
-        Me.jh_dept.Controls.Add(Me.GroupBox18)
-        resources.ApplyResources(Me.jh_dept, "jh_dept")
-        Me.jh_dept.Name = "jh_dept"
-        '
-        'BunifuFlatButton3
-        '
-        Me.BunifuFlatButton3.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
-        Me.BunifuFlatButton3.BackColor = System.Drawing.SystemColors.ButtonFace
-        resources.ApplyResources(Me.BunifuFlatButton3, "BunifuFlatButton3")
-        Me.BunifuFlatButton3.BorderRadius = 0
-        Me.BunifuFlatButton3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.BunifuFlatButton3.ButtonText = "PRINT"
-        Me.BunifuFlatButton3.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BunifuFlatButton3.DisabledColor = System.Drawing.Color.Gray
-        Me.BunifuFlatButton3.ForeColor = System.Drawing.Color.SeaGreen
-        Me.BunifuFlatButton3.Iconcolor = System.Drawing.Color.Transparent
-        Me.BunifuFlatButton3.Iconimage = Nothing
-        Me.BunifuFlatButton3.Iconimage_right = Nothing
-        Me.BunifuFlatButton3.Iconimage_right_Selected = Nothing
-        Me.BunifuFlatButton3.Iconimage_Selected = Nothing
-        Me.BunifuFlatButton3.IconMarginLeft = 0
-        Me.BunifuFlatButton3.IconMarginRight = 0
-        Me.BunifuFlatButton3.IconRightVisible = False
-        Me.BunifuFlatButton3.IconRightZoom = 0R
-        Me.BunifuFlatButton3.IconVisible = False
-        Me.BunifuFlatButton3.IconZoom = 90.0R
-        Me.BunifuFlatButton3.IsTab = False
-        Me.BunifuFlatButton3.Name = "BunifuFlatButton3"
-        Me.BunifuFlatButton3.Normalcolor = System.Drawing.SystemColors.ButtonFace
-        Me.BunifuFlatButton3.OnHovercolor = System.Drawing.Color.Goldenrod
-        Me.BunifuFlatButton3.OnHoverTextColor = System.Drawing.Color.White
-        Me.BunifuFlatButton3.selected = False
-        Me.BunifuFlatButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.BunifuFlatButton3.Textcolor = System.Drawing.Color.SeaGreen
-        Me.BunifuFlatButton3.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        '
-        'BunifuFlatButton8
-        '
-        Me.BunifuFlatButton8.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
-        Me.BunifuFlatButton8.BackColor = System.Drawing.SystemColors.ButtonFace
-        resources.ApplyResources(Me.BunifuFlatButton8, "BunifuFlatButton8")
-        Me.BunifuFlatButton8.BorderRadius = 0
-        Me.BunifuFlatButton8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.BunifuFlatButton8.ButtonText = "CLEAR"
-        Me.BunifuFlatButton8.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BunifuFlatButton8.DisabledColor = System.Drawing.Color.Gray
-        Me.BunifuFlatButton8.ForeColor = System.Drawing.Color.SeaGreen
-        Me.BunifuFlatButton8.Iconcolor = System.Drawing.Color.Transparent
-        Me.BunifuFlatButton8.Iconimage = Nothing
-        Me.BunifuFlatButton8.Iconimage_right = Nothing
-        Me.BunifuFlatButton8.Iconimage_right_Selected = Nothing
-        Me.BunifuFlatButton8.Iconimage_Selected = Nothing
-        Me.BunifuFlatButton8.IconMarginLeft = 0
-        Me.BunifuFlatButton8.IconMarginRight = 0
-        Me.BunifuFlatButton8.IconRightVisible = False
-        Me.BunifuFlatButton8.IconRightZoom = 0R
-        Me.BunifuFlatButton8.IconVisible = False
-        Me.BunifuFlatButton8.IconZoom = 90.0R
-        Me.BunifuFlatButton8.IsTab = False
-        Me.BunifuFlatButton8.Name = "BunifuFlatButton8"
-        Me.BunifuFlatButton8.Normalcolor = System.Drawing.SystemColors.ButtonFace
-        Me.BunifuFlatButton8.OnHovercolor = System.Drawing.Color.Goldenrod
-        Me.BunifuFlatButton8.OnHoverTextColor = System.Drawing.Color.White
-        Me.BunifuFlatButton8.selected = False
-        Me.BunifuFlatButton8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.BunifuFlatButton8.Textcolor = System.Drawing.Color.SeaGreen
-        Me.BunifuFlatButton8.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        '
-        'BunifuFlatButton9
-        '
-        Me.BunifuFlatButton9.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
-        Me.BunifuFlatButton9.BackColor = System.Drawing.SystemColors.ButtonFace
-        resources.ApplyResources(Me.BunifuFlatButton9, "BunifuFlatButton9")
-        Me.BunifuFlatButton9.BorderRadius = 0
-        Me.BunifuFlatButton9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.BunifuFlatButton9.ButtonText = "SAVE"
-        Me.BunifuFlatButton9.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BunifuFlatButton9.DisabledColor = System.Drawing.Color.Gray
-        Me.BunifuFlatButton9.ForeColor = System.Drawing.Color.SeaGreen
-        Me.BunifuFlatButton9.Iconcolor = System.Drawing.Color.Transparent
-        Me.BunifuFlatButton9.Iconimage = Nothing
-        Me.BunifuFlatButton9.Iconimage_right = Nothing
-        Me.BunifuFlatButton9.Iconimage_right_Selected = Nothing
-        Me.BunifuFlatButton9.Iconimage_Selected = Nothing
-        Me.BunifuFlatButton9.IconMarginLeft = 0
-        Me.BunifuFlatButton9.IconMarginRight = 0
-        Me.BunifuFlatButton9.IconRightVisible = False
-        Me.BunifuFlatButton9.IconRightZoom = 0R
-        Me.BunifuFlatButton9.IconVisible = False
-        Me.BunifuFlatButton9.IconZoom = 90.0R
-        Me.BunifuFlatButton9.IsTab = False
-        Me.BunifuFlatButton9.Name = "BunifuFlatButton9"
-        Me.BunifuFlatButton9.Normalcolor = System.Drawing.SystemColors.ButtonFace
-        Me.BunifuFlatButton9.OnHovercolor = System.Drawing.Color.Goldenrod
-        Me.BunifuFlatButton9.OnHoverTextColor = System.Drawing.Color.White
-        Me.BunifuFlatButton9.selected = False
-        Me.BunifuFlatButton9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.BunifuFlatButton9.Textcolor = System.Drawing.Color.SeaGreen
-        Me.BunifuFlatButton9.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        '
-        'GroupBox13
-        '
-        Me.GroupBox13.Controls.Add(Me.Label31)
-        Me.GroupBox13.Controls.Add(Me.TextBox3)
-        Me.GroupBox13.Controls.Add(Me.Label32)
-        Me.GroupBox13.Controls.Add(Me.TextBox4)
-        Me.GroupBox13.Controls.Add(Me.Label34)
-        Me.GroupBox13.Controls.Add(Me.TextBox6)
-        resources.ApplyResources(Me.GroupBox13, "GroupBox13")
-        Me.GroupBox13.Name = "GroupBox13"
-        Me.GroupBox13.TabStop = False
-        '
-        'Label31
-        '
-        resources.ApplyResources(Me.Label31, "Label31")
-        Me.Label31.Name = "Label31"
-        '
-        'TextBox3
-        '
-        Me.TextBox3.BackColor = System.Drawing.Color.White
-        resources.ApplyResources(Me.TextBox3, "TextBox3")
-        Me.TextBox3.Name = "TextBox3"
-        '
-        'Label32
-        '
-        resources.ApplyResources(Me.Label32, "Label32")
-        Me.Label32.Name = "Label32"
-        '
-        'TextBox4
-        '
-        Me.TextBox4.BackColor = System.Drawing.Color.White
-        resources.ApplyResources(Me.TextBox4, "TextBox4")
-        Me.TextBox4.Name = "TextBox4"
-        '
-        'Label34
-        '
-        resources.ApplyResources(Me.Label34, "Label34")
-        Me.Label34.Name = "Label34"
-        '
-        'TextBox6
-        '
-        Me.TextBox6.BackColor = System.Drawing.Color.White
-        resources.ApplyResources(Me.TextBox6, "TextBox6")
-        Me.TextBox6.Name = "TextBox6"
-        '
-        'GroupBox14
-        '
-        Me.GroupBox14.Controls.Add(Me.Label35)
-        Me.GroupBox14.Controls.Add(Me.Label58)
-        Me.GroupBox14.Controls.Add(Me.TextBox7)
-        Me.GroupBox14.Controls.Add(Me.ComboBox3)
-        Me.GroupBox14.Controls.Add(Me.Label59)
-        Me.GroupBox14.Controls.Add(Me.TextBox17)
-        resources.ApplyResources(Me.GroupBox14, "GroupBox14")
-        Me.GroupBox14.Name = "GroupBox14"
-        Me.GroupBox14.TabStop = False
-        '
-        'Label35
-        '
-        resources.ApplyResources(Me.Label35, "Label35")
-        Me.Label35.Name = "Label35"
-        '
-        'Label58
-        '
-        resources.ApplyResources(Me.Label58, "Label58")
-        Me.Label58.Name = "Label58"
-        '
-        'TextBox7
-        '
-        Me.TextBox7.BackColor = System.Drawing.Color.White
-        resources.ApplyResources(Me.TextBox7, "TextBox7")
-        Me.TextBox7.Name = "TextBox7"
-        '
-        'ComboBox3
-        '
-        Me.ComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox3.FormattingEnabled = True
-        resources.ApplyResources(Me.ComboBox3, "ComboBox3")
-        Me.ComboBox3.Name = "ComboBox3"
-        '
-        'Label59
-        '
-        resources.ApplyResources(Me.Label59, "Label59")
-        Me.Label59.Name = "Label59"
-        '
-        'TextBox17
-        '
-        resources.ApplyResources(Me.TextBox17, "TextBox17")
-        Me.TextBox17.Name = "TextBox17"
-        '
-        'GroupBox15
-        '
-        Me.GroupBox15.Controls.Add(Me.Label60)
-        Me.GroupBox15.Controls.Add(Me.TextBox18)
-        Me.GroupBox15.Controls.Add(Me.Label61)
-        Me.GroupBox15.Controls.Add(Me.TextBox19)
-        resources.ApplyResources(Me.GroupBox15, "GroupBox15")
-        Me.GroupBox15.Name = "GroupBox15"
-        Me.GroupBox15.TabStop = False
-        '
-        'Label60
-        '
-        resources.ApplyResources(Me.Label60, "Label60")
-        Me.Label60.Name = "Label60"
-        '
-        'TextBox18
-        '
-        Me.TextBox18.BackColor = System.Drawing.Color.White
-        resources.ApplyResources(Me.TextBox18, "TextBox18")
-        Me.TextBox18.ForeColor = System.Drawing.SystemColors.AppWorkspace
-        Me.TextBox18.Name = "TextBox18"
-        '
-        'Label61
-        '
-        resources.ApplyResources(Me.Label61, "Label61")
-        Me.Label61.Name = "Label61"
-        '
-        'TextBox19
-        '
-        Me.TextBox19.BackColor = System.Drawing.Color.White
-        resources.ApplyResources(Me.TextBox19, "TextBox19")
-        Me.TextBox19.ForeColor = System.Drawing.SystemColors.AppWorkspace
-        Me.TextBox19.Name = "TextBox19"
-        '
-        'GroupBox16
-        '
-        Me.GroupBox16.BackColor = System.Drawing.SystemColors.Menu
-        Me.GroupBox16.Controls.Add(Me.Label62)
-        Me.GroupBox16.Controls.Add(Me.Label63)
-        Me.GroupBox16.Controls.Add(Me.Label64)
-        Me.GroupBox16.Controls.Add(Me.Label65)
-        Me.GroupBox16.Controls.Add(Me.Label66)
-        Me.GroupBox16.Controls.Add(Me.Label67)
-        Me.GroupBox16.Controls.Add(Me.Label68)
-        Me.GroupBox16.Controls.Add(Me.Label69)
-        Me.GroupBox16.Controls.Add(Me.Panel3)
-        Me.GroupBox16.Controls.Add(Me.ShapeContainer3)
-        resources.ApplyResources(Me.GroupBox16, "GroupBox16")
-        Me.GroupBox16.Name = "GroupBox16"
-        Me.GroupBox16.TabStop = False
-        '
-        'Label62
-        '
-        resources.ApplyResources(Me.Label62, "Label62")
-        Me.Label62.BackColor = System.Drawing.SystemColors.MenuBar
-        Me.Label62.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label62.Name = "Label62"
-        '
-        'Label63
-        '
-        resources.ApplyResources(Me.Label63, "Label63")
-        Me.Label63.BackColor = System.Drawing.SystemColors.MenuBar
-        Me.Label63.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label63.Name = "Label63"
-        '
-        'Label64
-        '
-        resources.ApplyResources(Me.Label64, "Label64")
-        Me.Label64.ForeColor = System.Drawing.SystemColors.AppWorkspace
-        Me.Label64.Name = "Label64"
-        '
-        'Label65
-        '
-        resources.ApplyResources(Me.Label65, "Label65")
-        Me.Label65.ForeColor = System.Drawing.SystemColors.AppWorkspace
-        Me.Label65.Name = "Label65"
-        '
-        'Label66
-        '
-        resources.ApplyResources(Me.Label66, "Label66")
-        Me.Label66.Name = "Label66"
-        '
-        'Label67
-        '
-        resources.ApplyResources(Me.Label67, "Label67")
-        Me.Label67.Name = "Label67"
-        '
-        'Label68
-        '
-        resources.ApplyResources(Me.Label68, "Label68")
-        Me.Label68.Name = "Label68"
-        '
-        'Label69
-        '
-        resources.ApplyResources(Me.Label69, "Label69")
-        Me.Label69.Name = "Label69"
-        '
-        'Panel3
-        '
-        Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel3.Controls.Add(Me.Label70)
-        Me.Panel3.Controls.Add(Me.Label71)
-        Me.Panel3.Controls.Add(Me.Label72)
-        Me.Panel3.Controls.Add(Me.Label73)
-        Me.Panel3.Controls.Add(Me.Label74)
-        resources.ApplyResources(Me.Panel3, "Panel3")
-        Me.Panel3.Name = "Panel3"
-        '
-        'Label70
-        '
-        resources.ApplyResources(Me.Label70, "Label70")
-        Me.Label70.BackColor = System.Drawing.SystemColors.MenuBar
-        Me.Label70.ForeColor = System.Drawing.SystemColors.AppWorkspace
-        Me.Label70.Name = "Label70"
-        '
-        'Label71
-        '
-        resources.ApplyResources(Me.Label71, "Label71")
-        Me.Label71.Name = "Label71"
-        '
-        'Label72
-        '
-        resources.ApplyResources(Me.Label72, "Label72")
-        Me.Label72.BackColor = System.Drawing.SystemColors.MenuBar
-        Me.Label72.ForeColor = System.Drawing.SystemColors.AppWorkspace
-        Me.Label72.Name = "Label72"
-        '
-        'Label73
-        '
-        resources.ApplyResources(Me.Label73, "Label73")
-        Me.Label73.Name = "Label73"
-        '
-        'Label74
-        '
-        resources.ApplyResources(Me.Label74, "Label74")
-        Me.Label74.Name = "Label74"
-        '
-        'ShapeContainer3
-        '
-        resources.ApplyResources(Me.ShapeContainer3, "ShapeContainer3")
-        Me.ShapeContainer3.Name = "ShapeContainer3"
-        Me.ShapeContainer3.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.LineShape3})
-        Me.ShapeContainer3.TabStop = False
-        '
-        'LineShape3
-        '
-        Me.LineShape3.Name = "LineShape1"
-        resources.ApplyResources(Me.LineShape3, "LineShape3")
-        '
-        'GroupBox17
-        '
-        Me.GroupBox17.Controls.Add(Me.BunifuFlatButton11)
-        Me.GroupBox17.Controls.Add(Me.TextBox20)
-        Me.GroupBox17.Controls.Add(Me.Label75)
-        Me.GroupBox17.Controls.Add(Me.TextBox21)
-        Me.GroupBox17.Controls.Add(Me.Label76)
-        Me.GroupBox17.Controls.Add(Me.Label77)
-        Me.GroupBox17.Controls.Add(Me.TextBox22)
-        Me.GroupBox17.Controls.Add(Me.Label78)
-        Me.GroupBox17.Controls.Add(Me.TextBox23)
-        resources.ApplyResources(Me.GroupBox17, "GroupBox17")
-        Me.GroupBox17.Name = "GroupBox17"
-        Me.GroupBox17.TabStop = False
-        '
-        'BunifuFlatButton11
-        '
-        Me.BunifuFlatButton11.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
-        resources.ApplyResources(Me.BunifuFlatButton11, "BunifuFlatButton11")
-        Me.BunifuFlatButton11.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.BunifuFlatButton11.BorderRadius = 0
-        Me.BunifuFlatButton11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.BunifuFlatButton11.ButtonText = "MANAGE"
-        Me.BunifuFlatButton11.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BunifuFlatButton11.DisabledColor = System.Drawing.Color.Gray
-        Me.BunifuFlatButton11.ForeColor = System.Drawing.Color.SeaGreen
-        Me.BunifuFlatButton11.Iconcolor = System.Drawing.Color.Transparent
-        Me.BunifuFlatButton11.Iconimage = Nothing
-        Me.BunifuFlatButton11.Iconimage_right = Nothing
-        Me.BunifuFlatButton11.Iconimage_right_Selected = Nothing
-        Me.BunifuFlatButton11.Iconimage_Selected = Nothing
-        Me.BunifuFlatButton11.IconMarginLeft = 0
-        Me.BunifuFlatButton11.IconMarginRight = 0
-        Me.BunifuFlatButton11.IconRightVisible = False
-        Me.BunifuFlatButton11.IconRightZoom = 0R
-        Me.BunifuFlatButton11.IconVisible = False
-        Me.BunifuFlatButton11.IconZoom = 90.0R
-        Me.BunifuFlatButton11.IsTab = False
-        Me.BunifuFlatButton11.Name = "BunifuFlatButton11"
-        Me.BunifuFlatButton11.Normalcolor = System.Drawing.SystemColors.ButtonFace
-        Me.BunifuFlatButton11.OnHovercolor = System.Drawing.Color.Goldenrod
-        Me.BunifuFlatButton11.OnHoverTextColor = System.Drawing.Color.White
-        Me.BunifuFlatButton11.selected = False
-        Me.BunifuFlatButton11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.BunifuFlatButton11.Textcolor = System.Drawing.Color.SeaGreen
-        Me.BunifuFlatButton11.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        '
-        'TextBox20
-        '
-        Me.TextBox20.BackColor = System.Drawing.Color.White
-        resources.ApplyResources(Me.TextBox20, "TextBox20")
-        Me.TextBox20.Name = "TextBox20"
-        '
-        'Label75
-        '
-        resources.ApplyResources(Me.Label75, "Label75")
-        Me.Label75.Name = "Label75"
-        '
-        'TextBox21
-        '
-        Me.TextBox21.BackColor = System.Drawing.Color.White
-        resources.ApplyResources(Me.TextBox21, "TextBox21")
-        Me.TextBox21.Name = "TextBox21"
-        '
-        'Label76
-        '
-        resources.ApplyResources(Me.Label76, "Label76")
-        Me.Label76.Name = "Label76"
-        '
-        'Label77
-        '
-        resources.ApplyResources(Me.Label77, "Label77")
-        Me.Label77.Name = "Label77"
-        '
-        'TextBox22
-        '
-        Me.TextBox22.BackColor = System.Drawing.Color.White
-        resources.ApplyResources(Me.TextBox22, "TextBox22")
-        Me.TextBox22.Name = "TextBox22"
-        '
-        'Label78
-        '
-        resources.ApplyResources(Me.Label78, "Label78")
-        Me.Label78.Name = "Label78"
-        '
-        'TextBox23
-        '
-        Me.TextBox23.BackColor = System.Drawing.Color.White
-        resources.ApplyResources(Me.TextBox23, "TextBox23")
-        Me.TextBox23.Name = "TextBox23"
-        '
-        'GroupBox18
-        '
-        Me.GroupBox18.Controls.Add(Me.BunifuFlatButton12)
-        Me.GroupBox18.Controls.Add(Me.ComboBox4)
-        Me.GroupBox18.Controls.Add(Me.Label79)
-        Me.GroupBox18.Controls.Add(Me.Label80)
-        Me.GroupBox18.Controls.Add(Me.TextBox24)
-        resources.ApplyResources(Me.GroupBox18, "GroupBox18")
-        Me.GroupBox18.Name = "GroupBox18"
-        Me.GroupBox18.TabStop = False
-        '
-        'BunifuFlatButton12
-        '
-        Me.BunifuFlatButton12.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
-        resources.ApplyResources(Me.BunifuFlatButton12, "BunifuFlatButton12")
-        Me.BunifuFlatButton12.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.BunifuFlatButton12.BorderRadius = 0
-        Me.BunifuFlatButton12.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.BunifuFlatButton12.ButtonText = "ENTER"
-        Me.BunifuFlatButton12.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BunifuFlatButton12.DisabledColor = System.Drawing.Color.Gray
-        Me.BunifuFlatButton12.ForeColor = System.Drawing.Color.SeaGreen
-        Me.BunifuFlatButton12.Iconcolor = System.Drawing.Color.Transparent
-        Me.BunifuFlatButton12.Iconimage = Nothing
-        Me.BunifuFlatButton12.Iconimage_right = Nothing
-        Me.BunifuFlatButton12.Iconimage_right_Selected = Nothing
-        Me.BunifuFlatButton12.Iconimage_Selected = Nothing
-        Me.BunifuFlatButton12.IconMarginLeft = 0
-        Me.BunifuFlatButton12.IconMarginRight = 0
-        Me.BunifuFlatButton12.IconRightVisible = False
-        Me.BunifuFlatButton12.IconRightZoom = 0R
-        Me.BunifuFlatButton12.IconVisible = False
-        Me.BunifuFlatButton12.IconZoom = 90.0R
-        Me.BunifuFlatButton12.IsTab = False
-        Me.BunifuFlatButton12.Name = "BunifuFlatButton12"
-        Me.BunifuFlatButton12.Normalcolor = System.Drawing.SystemColors.ButtonFace
-        Me.BunifuFlatButton12.OnHovercolor = System.Drawing.Color.Goldenrod
-        Me.BunifuFlatButton12.OnHoverTextColor = System.Drawing.Color.White
-        Me.BunifuFlatButton12.selected = False
-        Me.BunifuFlatButton12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.BunifuFlatButton12.Textcolor = System.Drawing.Color.SeaGreen
-        Me.BunifuFlatButton12.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        '
-        'ComboBox4
-        '
-        Me.ComboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox4.FormattingEnabled = True
-        Me.ComboBox4.Items.AddRange(New Object() {resources.GetString("ComboBox4.Items"), resources.GetString("ComboBox4.Items1")})
-        resources.ApplyResources(Me.ComboBox4, "ComboBox4")
-        Me.ComboBox4.Name = "ComboBox4"
-        '
-        'Label79
-        '
-        resources.ApplyResources(Me.Label79, "Label79")
-        Me.Label79.Name = "Label79"
-        '
-        'Label80
-        '
-        resources.ApplyResources(Me.Label80, "Label80")
-        Me.Label80.Name = "Label80"
-        '
-        'TextBox24
-        '
-        Me.TextBox24.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.TextBox24.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
-        resources.ApplyResources(Me.TextBox24, "TextBox24")
-        Me.TextBox24.Name = "TextBox24"
-        '
         'sh_dept
         '
         Me.sh_dept.BackColor = System.Drawing.SystemColors.Control
-        Me.sh_dept.Controls.Add(Me.BunifuFlatButton13)
-        Me.sh_dept.Controls.Add(Me.BunifuFlatButton14)
-        Me.sh_dept.Controls.Add(Me.BunifuFlatButton15)
+        Me.sh_dept.Controls.Add(Me.btn_sPrint)
+        Me.sh_dept.Controls.Add(Me.btn_sClear)
+        Me.sh_dept.Controls.Add(Me.btn_sSave)
         Me.sh_dept.Controls.Add(Me.GroupBox19)
         Me.sh_dept.Controls.Add(Me.GroupBox20)
         Me.sh_dept.Controls.Add(Me.GroupBox21)
@@ -2064,110 +1554,110 @@ Partial Class frm_SPayments
         resources.ApplyResources(Me.sh_dept, "sh_dept")
         Me.sh_dept.Name = "sh_dept"
         '
-        'BunifuFlatButton13
+        'btn_sPrint
         '
-        Me.BunifuFlatButton13.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
-        Me.BunifuFlatButton13.BackColor = System.Drawing.SystemColors.ButtonFace
-        resources.ApplyResources(Me.BunifuFlatButton13, "BunifuFlatButton13")
-        Me.BunifuFlatButton13.BorderRadius = 0
-        Me.BunifuFlatButton13.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.BunifuFlatButton13.ButtonText = "PRINT"
-        Me.BunifuFlatButton13.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BunifuFlatButton13.DisabledColor = System.Drawing.Color.Gray
-        Me.BunifuFlatButton13.ForeColor = System.Drawing.Color.SeaGreen
-        Me.BunifuFlatButton13.Iconcolor = System.Drawing.Color.Transparent
-        Me.BunifuFlatButton13.Iconimage = Nothing
-        Me.BunifuFlatButton13.Iconimage_right = Nothing
-        Me.BunifuFlatButton13.Iconimage_right_Selected = Nothing
-        Me.BunifuFlatButton13.Iconimage_Selected = Nothing
-        Me.BunifuFlatButton13.IconMarginLeft = 0
-        Me.BunifuFlatButton13.IconMarginRight = 0
-        Me.BunifuFlatButton13.IconRightVisible = False
-        Me.BunifuFlatButton13.IconRightZoom = 0R
-        Me.BunifuFlatButton13.IconVisible = False
-        Me.BunifuFlatButton13.IconZoom = 90.0R
-        Me.BunifuFlatButton13.IsTab = False
-        Me.BunifuFlatButton13.Name = "BunifuFlatButton13"
-        Me.BunifuFlatButton13.Normalcolor = System.Drawing.SystemColors.ButtonFace
-        Me.BunifuFlatButton13.OnHovercolor = System.Drawing.Color.Goldenrod
-        Me.BunifuFlatButton13.OnHoverTextColor = System.Drawing.Color.White
-        Me.BunifuFlatButton13.selected = False
-        Me.BunifuFlatButton13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.BunifuFlatButton13.Textcolor = System.Drawing.Color.SeaGreen
-        Me.BunifuFlatButton13.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_sPrint.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
+        Me.btn_sPrint.BackColor = System.Drawing.SystemColors.ButtonFace
+        resources.ApplyResources(Me.btn_sPrint, "btn_sPrint")
+        Me.btn_sPrint.BorderRadius = 0
+        Me.btn_sPrint.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.btn_sPrint.ButtonText = "PRINT"
+        Me.btn_sPrint.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_sPrint.DisabledColor = System.Drawing.Color.Gray
+        Me.btn_sPrint.ForeColor = System.Drawing.Color.SeaGreen
+        Me.btn_sPrint.Iconcolor = System.Drawing.Color.Transparent
+        Me.btn_sPrint.Iconimage = Nothing
+        Me.btn_sPrint.Iconimage_right = Nothing
+        Me.btn_sPrint.Iconimage_right_Selected = Nothing
+        Me.btn_sPrint.Iconimage_Selected = Nothing
+        Me.btn_sPrint.IconMarginLeft = 0
+        Me.btn_sPrint.IconMarginRight = 0
+        Me.btn_sPrint.IconRightVisible = False
+        Me.btn_sPrint.IconRightZoom = 0R
+        Me.btn_sPrint.IconVisible = False
+        Me.btn_sPrint.IconZoom = 90.0R
+        Me.btn_sPrint.IsTab = False
+        Me.btn_sPrint.Name = "btn_sPrint"
+        Me.btn_sPrint.Normalcolor = System.Drawing.SystemColors.ButtonFace
+        Me.btn_sPrint.OnHovercolor = System.Drawing.Color.Goldenrod
+        Me.btn_sPrint.OnHoverTextColor = System.Drawing.Color.White
+        Me.btn_sPrint.selected = False
+        Me.btn_sPrint.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btn_sPrint.Textcolor = System.Drawing.Color.SeaGreen
+        Me.btn_sPrint.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
-        'BunifuFlatButton14
+        'btn_sClear
         '
-        Me.BunifuFlatButton14.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
-        Me.BunifuFlatButton14.BackColor = System.Drawing.SystemColors.ButtonFace
-        resources.ApplyResources(Me.BunifuFlatButton14, "BunifuFlatButton14")
-        Me.BunifuFlatButton14.BorderRadius = 0
-        Me.BunifuFlatButton14.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.BunifuFlatButton14.ButtonText = "CLEAR"
-        Me.BunifuFlatButton14.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BunifuFlatButton14.DisabledColor = System.Drawing.Color.Gray
-        Me.BunifuFlatButton14.ForeColor = System.Drawing.Color.SeaGreen
-        Me.BunifuFlatButton14.Iconcolor = System.Drawing.Color.Transparent
-        Me.BunifuFlatButton14.Iconimage = Nothing
-        Me.BunifuFlatButton14.Iconimage_right = Nothing
-        Me.BunifuFlatButton14.Iconimage_right_Selected = Nothing
-        Me.BunifuFlatButton14.Iconimage_Selected = Nothing
-        Me.BunifuFlatButton14.IconMarginLeft = 0
-        Me.BunifuFlatButton14.IconMarginRight = 0
-        Me.BunifuFlatButton14.IconRightVisible = False
-        Me.BunifuFlatButton14.IconRightZoom = 0R
-        Me.BunifuFlatButton14.IconVisible = False
-        Me.BunifuFlatButton14.IconZoom = 90.0R
-        Me.BunifuFlatButton14.IsTab = False
-        Me.BunifuFlatButton14.Name = "BunifuFlatButton14"
-        Me.BunifuFlatButton14.Normalcolor = System.Drawing.SystemColors.ButtonFace
-        Me.BunifuFlatButton14.OnHovercolor = System.Drawing.Color.Goldenrod
-        Me.BunifuFlatButton14.OnHoverTextColor = System.Drawing.Color.White
-        Me.BunifuFlatButton14.selected = False
-        Me.BunifuFlatButton14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.BunifuFlatButton14.Textcolor = System.Drawing.Color.SeaGreen
-        Me.BunifuFlatButton14.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_sClear.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
+        Me.btn_sClear.BackColor = System.Drawing.SystemColors.ButtonFace
+        resources.ApplyResources(Me.btn_sClear, "btn_sClear")
+        Me.btn_sClear.BorderRadius = 0
+        Me.btn_sClear.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.btn_sClear.ButtonText = "CLEAR"
+        Me.btn_sClear.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_sClear.DisabledColor = System.Drawing.Color.Gray
+        Me.btn_sClear.ForeColor = System.Drawing.Color.SeaGreen
+        Me.btn_sClear.Iconcolor = System.Drawing.Color.Transparent
+        Me.btn_sClear.Iconimage = Nothing
+        Me.btn_sClear.Iconimage_right = Nothing
+        Me.btn_sClear.Iconimage_right_Selected = Nothing
+        Me.btn_sClear.Iconimage_Selected = Nothing
+        Me.btn_sClear.IconMarginLeft = 0
+        Me.btn_sClear.IconMarginRight = 0
+        Me.btn_sClear.IconRightVisible = False
+        Me.btn_sClear.IconRightZoom = 0R
+        Me.btn_sClear.IconVisible = False
+        Me.btn_sClear.IconZoom = 90.0R
+        Me.btn_sClear.IsTab = False
+        Me.btn_sClear.Name = "btn_sClear"
+        Me.btn_sClear.Normalcolor = System.Drawing.SystemColors.ButtonFace
+        Me.btn_sClear.OnHovercolor = System.Drawing.Color.Goldenrod
+        Me.btn_sClear.OnHoverTextColor = System.Drawing.Color.White
+        Me.btn_sClear.selected = False
+        Me.btn_sClear.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btn_sClear.Textcolor = System.Drawing.Color.SeaGreen
+        Me.btn_sClear.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
-        'BunifuFlatButton15
+        'btn_sSave
         '
-        Me.BunifuFlatButton15.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
-        Me.BunifuFlatButton15.BackColor = System.Drawing.SystemColors.ButtonFace
-        resources.ApplyResources(Me.BunifuFlatButton15, "BunifuFlatButton15")
-        Me.BunifuFlatButton15.BorderRadius = 0
-        Me.BunifuFlatButton15.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.BunifuFlatButton15.ButtonText = "SAVE"
-        Me.BunifuFlatButton15.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BunifuFlatButton15.DisabledColor = System.Drawing.Color.Gray
-        Me.BunifuFlatButton15.ForeColor = System.Drawing.Color.SeaGreen
-        Me.BunifuFlatButton15.Iconcolor = System.Drawing.Color.Transparent
-        Me.BunifuFlatButton15.Iconimage = Nothing
-        Me.BunifuFlatButton15.Iconimage_right = Nothing
-        Me.BunifuFlatButton15.Iconimage_right_Selected = Nothing
-        Me.BunifuFlatButton15.Iconimage_Selected = Nothing
-        Me.BunifuFlatButton15.IconMarginLeft = 0
-        Me.BunifuFlatButton15.IconMarginRight = 0
-        Me.BunifuFlatButton15.IconRightVisible = False
-        Me.BunifuFlatButton15.IconRightZoom = 0R
-        Me.BunifuFlatButton15.IconVisible = False
-        Me.BunifuFlatButton15.IconZoom = 90.0R
-        Me.BunifuFlatButton15.IsTab = False
-        Me.BunifuFlatButton15.Name = "BunifuFlatButton15"
-        Me.BunifuFlatButton15.Normalcolor = System.Drawing.SystemColors.ButtonFace
-        Me.BunifuFlatButton15.OnHovercolor = System.Drawing.Color.Goldenrod
-        Me.BunifuFlatButton15.OnHoverTextColor = System.Drawing.Color.White
-        Me.BunifuFlatButton15.selected = False
-        Me.BunifuFlatButton15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.BunifuFlatButton15.Textcolor = System.Drawing.Color.SeaGreen
-        Me.BunifuFlatButton15.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_sSave.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
+        Me.btn_sSave.BackColor = System.Drawing.SystemColors.ButtonFace
+        resources.ApplyResources(Me.btn_sSave, "btn_sSave")
+        Me.btn_sSave.BorderRadius = 0
+        Me.btn_sSave.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.btn_sSave.ButtonText = "SAVE"
+        Me.btn_sSave.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_sSave.DisabledColor = System.Drawing.Color.Gray
+        Me.btn_sSave.ForeColor = System.Drawing.Color.SeaGreen
+        Me.btn_sSave.Iconcolor = System.Drawing.Color.Transparent
+        Me.btn_sSave.Iconimage = Nothing
+        Me.btn_sSave.Iconimage_right = Nothing
+        Me.btn_sSave.Iconimage_right_Selected = Nothing
+        Me.btn_sSave.Iconimage_Selected = Nothing
+        Me.btn_sSave.IconMarginLeft = 0
+        Me.btn_sSave.IconMarginRight = 0
+        Me.btn_sSave.IconRightVisible = False
+        Me.btn_sSave.IconRightZoom = 0R
+        Me.btn_sSave.IconVisible = False
+        Me.btn_sSave.IconZoom = 90.0R
+        Me.btn_sSave.IsTab = False
+        Me.btn_sSave.Name = "btn_sSave"
+        Me.btn_sSave.Normalcolor = System.Drawing.SystemColors.ButtonFace
+        Me.btn_sSave.OnHovercolor = System.Drawing.Color.Goldenrod
+        Me.btn_sSave.OnHoverTextColor = System.Drawing.Color.White
+        Me.btn_sSave.selected = False
+        Me.btn_sSave.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btn_sSave.Textcolor = System.Drawing.Color.SeaGreen
+        Me.btn_sSave.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
         'GroupBox19
         '
         Me.GroupBox19.Controls.Add(Me.Label81)
-        Me.GroupBox19.Controls.Add(Me.TextBox25)
+        Me.GroupBox19.Controls.Add(Me.txtb_sToAmnt)
         Me.GroupBox19.Controls.Add(Me.Label82)
-        Me.GroupBox19.Controls.Add(Me.TextBox26)
+        Me.GroupBox19.Controls.Add(Me.txtb_sOldAcct)
         Me.GroupBox19.Controls.Add(Me.Label83)
-        Me.GroupBox19.Controls.Add(Me.TextBox27)
+        Me.GroupBox19.Controls.Add(Me.txtb_sCurrAcct)
         resources.ApplyResources(Me.GroupBox19, "GroupBox19")
         Me.GroupBox19.Name = "GroupBox19"
         Me.GroupBox19.TabStop = False
@@ -2177,42 +1667,42 @@ Partial Class frm_SPayments
         resources.ApplyResources(Me.Label81, "Label81")
         Me.Label81.Name = "Label81"
         '
-        'TextBox25
+        'txtb_sToAmnt
         '
-        Me.TextBox25.BackColor = System.Drawing.Color.White
-        resources.ApplyResources(Me.TextBox25, "TextBox25")
-        Me.TextBox25.Name = "TextBox25"
+        Me.txtb_sToAmnt.BackColor = System.Drawing.Color.White
+        resources.ApplyResources(Me.txtb_sToAmnt, "txtb_sToAmnt")
+        Me.txtb_sToAmnt.Name = "txtb_sToAmnt"
         '
         'Label82
         '
         resources.ApplyResources(Me.Label82, "Label82")
         Me.Label82.Name = "Label82"
         '
-        'TextBox26
+        'txtb_sOldAcct
         '
-        Me.TextBox26.BackColor = System.Drawing.Color.White
-        resources.ApplyResources(Me.TextBox26, "TextBox26")
-        Me.TextBox26.Name = "TextBox26"
+        Me.txtb_sOldAcct.BackColor = System.Drawing.Color.White
+        resources.ApplyResources(Me.txtb_sOldAcct, "txtb_sOldAcct")
+        Me.txtb_sOldAcct.Name = "txtb_sOldAcct"
         '
         'Label83
         '
         resources.ApplyResources(Me.Label83, "Label83")
         Me.Label83.Name = "Label83"
         '
-        'TextBox27
+        'txtb_sCurrAcct
         '
-        Me.TextBox27.BackColor = System.Drawing.Color.White
-        resources.ApplyResources(Me.TextBox27, "TextBox27")
-        Me.TextBox27.Name = "TextBox27"
+        Me.txtb_sCurrAcct.BackColor = System.Drawing.Color.White
+        resources.ApplyResources(Me.txtb_sCurrAcct, "txtb_sCurrAcct")
+        Me.txtb_sCurrAcct.Name = "txtb_sCurrAcct"
         '
         'GroupBox20
         '
         Me.GroupBox20.Controls.Add(Me.Label84)
         Me.GroupBox20.Controls.Add(Me.Label85)
-        Me.GroupBox20.Controls.Add(Me.TextBox28)
-        Me.GroupBox20.Controls.Add(Me.ComboBox5)
+        Me.GroupBox20.Controls.Add(Me.txtb_sCurrBal)
+        Me.GroupBox20.Controls.Add(Me.cbo_sParticulars)
         Me.GroupBox20.Controls.Add(Me.Label86)
-        Me.GroupBox20.Controls.Add(Me.TextBox29)
+        Me.GroupBox20.Controls.Add(Me.txtb_sAmntPay)
         resources.ApplyResources(Me.GroupBox20, "GroupBox20")
         Me.GroupBox20.Name = "GroupBox20"
         Me.GroupBox20.TabStop = False
@@ -2227,35 +1717,35 @@ Partial Class frm_SPayments
         resources.ApplyResources(Me.Label85, "Label85")
         Me.Label85.Name = "Label85"
         '
-        'TextBox28
+        'txtb_sCurrBal
         '
-        Me.TextBox28.BackColor = System.Drawing.Color.White
-        resources.ApplyResources(Me.TextBox28, "TextBox28")
-        Me.TextBox28.Name = "TextBox28"
+        Me.txtb_sCurrBal.BackColor = System.Drawing.Color.White
+        resources.ApplyResources(Me.txtb_sCurrBal, "txtb_sCurrBal")
+        Me.txtb_sCurrBal.Name = "txtb_sCurrBal"
         '
-        'ComboBox5
+        'cbo_sParticulars
         '
-        Me.ComboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox5.FormattingEnabled = True
-        resources.ApplyResources(Me.ComboBox5, "ComboBox5")
-        Me.ComboBox5.Name = "ComboBox5"
+        Me.cbo_sParticulars.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbo_sParticulars.FormattingEnabled = True
+        resources.ApplyResources(Me.cbo_sParticulars, "cbo_sParticulars")
+        Me.cbo_sParticulars.Name = "cbo_sParticulars"
         '
         'Label86
         '
         resources.ApplyResources(Me.Label86, "Label86")
         Me.Label86.Name = "Label86"
         '
-        'TextBox29
+        'txtb_sAmntPay
         '
-        resources.ApplyResources(Me.TextBox29, "TextBox29")
-        Me.TextBox29.Name = "TextBox29"
+        resources.ApplyResources(Me.txtb_sAmntPay, "txtb_sAmntPay")
+        Me.txtb_sAmntPay.Name = "txtb_sAmntPay"
         '
         'GroupBox21
         '
         Me.GroupBox21.Controls.Add(Me.Label87)
-        Me.GroupBox21.Controls.Add(Me.TextBox30)
+        Me.GroupBox21.Controls.Add(Me.txtb_sTD)
         Me.GroupBox21.Controls.Add(Me.Label88)
-        Me.GroupBox21.Controls.Add(Me.TextBox31)
+        Me.GroupBox21.Controls.Add(Me.txtb_sTN)
         resources.ApplyResources(Me.GroupBox21, "GroupBox21")
         Me.GroupBox21.Name = "GroupBox21"
         Me.GroupBox21.TabStop = False
@@ -2265,24 +1755,24 @@ Partial Class frm_SPayments
         resources.ApplyResources(Me.Label87, "Label87")
         Me.Label87.Name = "Label87"
         '
-        'TextBox30
+        'txtb_sTD
         '
-        Me.TextBox30.BackColor = System.Drawing.Color.White
-        resources.ApplyResources(Me.TextBox30, "TextBox30")
-        Me.TextBox30.ForeColor = System.Drawing.SystemColors.AppWorkspace
-        Me.TextBox30.Name = "TextBox30"
+        Me.txtb_sTD.BackColor = System.Drawing.Color.White
+        resources.ApplyResources(Me.txtb_sTD, "txtb_sTD")
+        Me.txtb_sTD.ForeColor = System.Drawing.SystemColors.AppWorkspace
+        Me.txtb_sTD.Name = "txtb_sTD"
         '
         'Label88
         '
         resources.ApplyResources(Me.Label88, "Label88")
         Me.Label88.Name = "Label88"
         '
-        'TextBox31
+        'txtb_sTN
         '
-        Me.TextBox31.BackColor = System.Drawing.Color.White
-        resources.ApplyResources(Me.TextBox31, "TextBox31")
-        Me.TextBox31.ForeColor = System.Drawing.SystemColors.AppWorkspace
-        Me.TextBox31.Name = "TextBox31"
+        Me.txtb_sTN.BackColor = System.Drawing.Color.White
+        resources.ApplyResources(Me.txtb_sTN, "txtb_sTN")
+        Me.txtb_sTN.ForeColor = System.Drawing.SystemColors.AppWorkspace
+        Me.txtb_sTN.Name = "txtb_sTN"
         '
         'GroupBox22
         '
@@ -2401,67 +1891,67 @@ Partial Class frm_SPayments
         '
         'GroupBox23
         '
-        Me.GroupBox23.Controls.Add(Me.BunifuFlatButton17)
-        Me.GroupBox23.Controls.Add(Me.TextBox32)
+        Me.GroupBox23.Controls.Add(Me.btn_sManage)
+        Me.GroupBox23.Controls.Add(Me.txtb_sStudID)
         Me.GroupBox23.Controls.Add(Me.Label102)
-        Me.GroupBox23.Controls.Add(Me.TextBox33)
+        Me.GroupBox23.Controls.Add(Me.txtb_sSY)
         Me.GroupBox23.Controls.Add(Me.Label103)
         Me.GroupBox23.Controls.Add(Me.Label104)
-        Me.GroupBox23.Controls.Add(Me.TextBox34)
+        Me.GroupBox23.Controls.Add(Me.txtb_sGL)
         Me.GroupBox23.Controls.Add(Me.Label105)
-        Me.GroupBox23.Controls.Add(Me.TextBox35)
+        Me.GroupBox23.Controls.Add(Me.txtb_sStudName)
         resources.ApplyResources(Me.GroupBox23, "GroupBox23")
         Me.GroupBox23.Name = "GroupBox23"
         Me.GroupBox23.TabStop = False
         '
-        'BunifuFlatButton17
+        'btn_sManage
         '
-        Me.BunifuFlatButton17.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
-        resources.ApplyResources(Me.BunifuFlatButton17, "BunifuFlatButton17")
-        Me.BunifuFlatButton17.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.BunifuFlatButton17.BorderRadius = 0
-        Me.BunifuFlatButton17.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.BunifuFlatButton17.ButtonText = "MANAGE"
-        Me.BunifuFlatButton17.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BunifuFlatButton17.DisabledColor = System.Drawing.Color.Gray
-        Me.BunifuFlatButton17.ForeColor = System.Drawing.Color.SeaGreen
-        Me.BunifuFlatButton17.Iconcolor = System.Drawing.Color.Transparent
-        Me.BunifuFlatButton17.Iconimage = Nothing
-        Me.BunifuFlatButton17.Iconimage_right = Nothing
-        Me.BunifuFlatButton17.Iconimage_right_Selected = Nothing
-        Me.BunifuFlatButton17.Iconimage_Selected = Nothing
-        Me.BunifuFlatButton17.IconMarginLeft = 0
-        Me.BunifuFlatButton17.IconMarginRight = 0
-        Me.BunifuFlatButton17.IconRightVisible = False
-        Me.BunifuFlatButton17.IconRightZoom = 0R
-        Me.BunifuFlatButton17.IconVisible = False
-        Me.BunifuFlatButton17.IconZoom = 90.0R
-        Me.BunifuFlatButton17.IsTab = False
-        Me.BunifuFlatButton17.Name = "BunifuFlatButton17"
-        Me.BunifuFlatButton17.Normalcolor = System.Drawing.SystemColors.ButtonFace
-        Me.BunifuFlatButton17.OnHovercolor = System.Drawing.Color.Goldenrod
-        Me.BunifuFlatButton17.OnHoverTextColor = System.Drawing.Color.White
-        Me.BunifuFlatButton17.selected = False
-        Me.BunifuFlatButton17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.BunifuFlatButton17.Textcolor = System.Drawing.Color.SeaGreen
-        Me.BunifuFlatButton17.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_sManage.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
+        resources.ApplyResources(Me.btn_sManage, "btn_sManage")
+        Me.btn_sManage.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.btn_sManage.BorderRadius = 0
+        Me.btn_sManage.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.btn_sManage.ButtonText = "MANAGE"
+        Me.btn_sManage.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_sManage.DisabledColor = System.Drawing.Color.Gray
+        Me.btn_sManage.ForeColor = System.Drawing.Color.SeaGreen
+        Me.btn_sManage.Iconcolor = System.Drawing.Color.Transparent
+        Me.btn_sManage.Iconimage = Nothing
+        Me.btn_sManage.Iconimage_right = Nothing
+        Me.btn_sManage.Iconimage_right_Selected = Nothing
+        Me.btn_sManage.Iconimage_Selected = Nothing
+        Me.btn_sManage.IconMarginLeft = 0
+        Me.btn_sManage.IconMarginRight = 0
+        Me.btn_sManage.IconRightVisible = False
+        Me.btn_sManage.IconRightZoom = 0R
+        Me.btn_sManage.IconVisible = False
+        Me.btn_sManage.IconZoom = 90.0R
+        Me.btn_sManage.IsTab = False
+        Me.btn_sManage.Name = "btn_sManage"
+        Me.btn_sManage.Normalcolor = System.Drawing.SystemColors.ButtonFace
+        Me.btn_sManage.OnHovercolor = System.Drawing.Color.Goldenrod
+        Me.btn_sManage.OnHoverTextColor = System.Drawing.Color.White
+        Me.btn_sManage.selected = False
+        Me.btn_sManage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btn_sManage.Textcolor = System.Drawing.Color.SeaGreen
+        Me.btn_sManage.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
-        'TextBox32
+        'txtb_sStudID
         '
-        Me.TextBox32.BackColor = System.Drawing.Color.White
-        resources.ApplyResources(Me.TextBox32, "TextBox32")
-        Me.TextBox32.Name = "TextBox32"
+        Me.txtb_sStudID.BackColor = System.Drawing.Color.White
+        resources.ApplyResources(Me.txtb_sStudID, "txtb_sStudID")
+        Me.txtb_sStudID.Name = "txtb_sStudID"
         '
         'Label102
         '
         resources.ApplyResources(Me.Label102, "Label102")
         Me.Label102.Name = "Label102"
         '
-        'TextBox33
+        'txtb_sSY
         '
-        Me.TextBox33.BackColor = System.Drawing.Color.White
-        resources.ApplyResources(Me.TextBox33, "TextBox33")
-        Me.TextBox33.Name = "TextBox33"
+        Me.txtb_sSY.BackColor = System.Drawing.Color.White
+        resources.ApplyResources(Me.txtb_sSY, "txtb_sSY")
+        Me.txtb_sSY.Name = "txtb_sSY"
         '
         'Label103
         '
@@ -2473,73 +1963,73 @@ Partial Class frm_SPayments
         resources.ApplyResources(Me.Label104, "Label104")
         Me.Label104.Name = "Label104"
         '
-        'TextBox34
+        'txtb_sGL
         '
-        Me.TextBox34.BackColor = System.Drawing.Color.White
-        resources.ApplyResources(Me.TextBox34, "TextBox34")
-        Me.TextBox34.Name = "TextBox34"
+        Me.txtb_sGL.BackColor = System.Drawing.Color.White
+        resources.ApplyResources(Me.txtb_sGL, "txtb_sGL")
+        Me.txtb_sGL.Name = "txtb_sGL"
         '
         'Label105
         '
         resources.ApplyResources(Me.Label105, "Label105")
         Me.Label105.Name = "Label105"
         '
-        'TextBox35
+        'txtb_sStudName
         '
-        Me.TextBox35.BackColor = System.Drawing.Color.White
-        resources.ApplyResources(Me.TextBox35, "TextBox35")
-        Me.TextBox35.Name = "TextBox35"
+        Me.txtb_sStudName.BackColor = System.Drawing.Color.White
+        resources.ApplyResources(Me.txtb_sStudName, "txtb_sStudName")
+        Me.txtb_sStudName.Name = "txtb_sStudName"
         '
         'GroupBox24
         '
-        Me.GroupBox24.Controls.Add(Me.BunifuFlatButton18)
-        Me.GroupBox24.Controls.Add(Me.ComboBox6)
+        Me.GroupBox24.Controls.Add(Me.btn_sEnter)
+        Me.GroupBox24.Controls.Add(Me.cbo_sSearchBY)
         Me.GroupBox24.Controls.Add(Me.Label106)
         Me.GroupBox24.Controls.Add(Me.Label107)
-        Me.GroupBox24.Controls.Add(Me.TextBox36)
+        Me.GroupBox24.Controls.Add(Me.txtb_sSearch)
         resources.ApplyResources(Me.GroupBox24, "GroupBox24")
         Me.GroupBox24.Name = "GroupBox24"
         Me.GroupBox24.TabStop = False
         '
-        'BunifuFlatButton18
+        'btn_sEnter
         '
-        Me.BunifuFlatButton18.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
-        resources.ApplyResources(Me.BunifuFlatButton18, "BunifuFlatButton18")
-        Me.BunifuFlatButton18.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.BunifuFlatButton18.BorderRadius = 0
-        Me.BunifuFlatButton18.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.BunifuFlatButton18.ButtonText = "ENTER"
-        Me.BunifuFlatButton18.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BunifuFlatButton18.DisabledColor = System.Drawing.Color.Gray
-        Me.BunifuFlatButton18.ForeColor = System.Drawing.Color.SeaGreen
-        Me.BunifuFlatButton18.Iconcolor = System.Drawing.Color.Transparent
-        Me.BunifuFlatButton18.Iconimage = Nothing
-        Me.BunifuFlatButton18.Iconimage_right = Nothing
-        Me.BunifuFlatButton18.Iconimage_right_Selected = Nothing
-        Me.BunifuFlatButton18.Iconimage_Selected = Nothing
-        Me.BunifuFlatButton18.IconMarginLeft = 0
-        Me.BunifuFlatButton18.IconMarginRight = 0
-        Me.BunifuFlatButton18.IconRightVisible = False
-        Me.BunifuFlatButton18.IconRightZoom = 0R
-        Me.BunifuFlatButton18.IconVisible = False
-        Me.BunifuFlatButton18.IconZoom = 90.0R
-        Me.BunifuFlatButton18.IsTab = False
-        Me.BunifuFlatButton18.Name = "BunifuFlatButton18"
-        Me.BunifuFlatButton18.Normalcolor = System.Drawing.SystemColors.ButtonFace
-        Me.BunifuFlatButton18.OnHovercolor = System.Drawing.Color.Goldenrod
-        Me.BunifuFlatButton18.OnHoverTextColor = System.Drawing.Color.White
-        Me.BunifuFlatButton18.selected = False
-        Me.BunifuFlatButton18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.BunifuFlatButton18.Textcolor = System.Drawing.Color.SeaGreen
-        Me.BunifuFlatButton18.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_sEnter.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
+        resources.ApplyResources(Me.btn_sEnter, "btn_sEnter")
+        Me.btn_sEnter.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.btn_sEnter.BorderRadius = 0
+        Me.btn_sEnter.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.btn_sEnter.ButtonText = "ENTER"
+        Me.btn_sEnter.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_sEnter.DisabledColor = System.Drawing.Color.Gray
+        Me.btn_sEnter.ForeColor = System.Drawing.Color.SeaGreen
+        Me.btn_sEnter.Iconcolor = System.Drawing.Color.Transparent
+        Me.btn_sEnter.Iconimage = Nothing
+        Me.btn_sEnter.Iconimage_right = Nothing
+        Me.btn_sEnter.Iconimage_right_Selected = Nothing
+        Me.btn_sEnter.Iconimage_Selected = Nothing
+        Me.btn_sEnter.IconMarginLeft = 0
+        Me.btn_sEnter.IconMarginRight = 0
+        Me.btn_sEnter.IconRightVisible = False
+        Me.btn_sEnter.IconRightZoom = 0R
+        Me.btn_sEnter.IconVisible = False
+        Me.btn_sEnter.IconZoom = 90.0R
+        Me.btn_sEnter.IsTab = False
+        Me.btn_sEnter.Name = "btn_sEnter"
+        Me.btn_sEnter.Normalcolor = System.Drawing.SystemColors.ButtonFace
+        Me.btn_sEnter.OnHovercolor = System.Drawing.Color.Goldenrod
+        Me.btn_sEnter.OnHoverTextColor = System.Drawing.Color.White
+        Me.btn_sEnter.selected = False
+        Me.btn_sEnter.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btn_sEnter.Textcolor = System.Drawing.Color.SeaGreen
+        Me.btn_sEnter.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
-        'ComboBox6
+        'cbo_sSearchBY
         '
-        Me.ComboBox6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox6.FormattingEnabled = True
-        Me.ComboBox6.Items.AddRange(New Object() {resources.GetString("ComboBox6.Items"), resources.GetString("ComboBox6.Items1")})
-        resources.ApplyResources(Me.ComboBox6, "ComboBox6")
-        Me.ComboBox6.Name = "ComboBox6"
+        Me.cbo_sSearchBY.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbo_sSearchBY.FormattingEnabled = True
+        Me.cbo_sSearchBY.Items.AddRange(New Object() {resources.GetString("cbo_sSearchBY.Items"), resources.GetString("cbo_sSearchBY.Items1")})
+        resources.ApplyResources(Me.cbo_sSearchBY, "cbo_sSearchBY")
+        Me.cbo_sSearchBY.Name = "cbo_sSearchBY"
         '
         'Label106
         '
@@ -2551,16 +2041,521 @@ Partial Class frm_SPayments
         resources.ApplyResources(Me.Label107, "Label107")
         Me.Label107.Name = "Label107"
         '
-        'TextBox36
+        'txtb_sSearch
         '
-        Me.TextBox36.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.TextBox36.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
-        resources.ApplyResources(Me.TextBox36, "TextBox36")
-        Me.TextBox36.Name = "TextBox36"
+        Me.txtb_sSearch.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.txtb_sSearch.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
+        resources.ApplyResources(Me.txtb_sSearch, "txtb_sSearch")
+        Me.txtb_sSearch.Name = "txtb_sSearch"
         '
+        'jh_dept
         '
-        'TblseniorfeesBindingSource
+        Me.jh_dept.BackColor = System.Drawing.SystemColors.Control
+        Me.jh_dept.Controls.Add(Me.btn_jPrint)
+        Me.jh_dept.Controls.Add(Me.btn_jClear)
+        Me.jh_dept.Controls.Add(Me.btn_jSave)
+        Me.jh_dept.Controls.Add(Me.GroupBox13)
+        Me.jh_dept.Controls.Add(Me.GroupBox14)
+        Me.jh_dept.Controls.Add(Me.GroupBox15)
+        Me.jh_dept.Controls.Add(Me.GroupBox16)
+        Me.jh_dept.Controls.Add(Me.GroupBox17)
+        Me.jh_dept.Controls.Add(Me.GroupBox18)
+        resources.ApplyResources(Me.jh_dept, "jh_dept")
+        Me.jh_dept.Name = "jh_dept"
         '
+        'btn_jPrint
+        '
+        Me.btn_jPrint.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
+        Me.btn_jPrint.BackColor = System.Drawing.SystemColors.ButtonFace
+        resources.ApplyResources(Me.btn_jPrint, "btn_jPrint")
+        Me.btn_jPrint.BorderRadius = 0
+        Me.btn_jPrint.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.btn_jPrint.ButtonText = "PRINT"
+        Me.btn_jPrint.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_jPrint.DisabledColor = System.Drawing.Color.Gray
+        Me.btn_jPrint.ForeColor = System.Drawing.Color.SeaGreen
+        Me.btn_jPrint.Iconcolor = System.Drawing.Color.Transparent
+        Me.btn_jPrint.Iconimage = Nothing
+        Me.btn_jPrint.Iconimage_right = Nothing
+        Me.btn_jPrint.Iconimage_right_Selected = Nothing
+        Me.btn_jPrint.Iconimage_Selected = Nothing
+        Me.btn_jPrint.IconMarginLeft = 0
+        Me.btn_jPrint.IconMarginRight = 0
+        Me.btn_jPrint.IconRightVisible = False
+        Me.btn_jPrint.IconRightZoom = 0R
+        Me.btn_jPrint.IconVisible = False
+        Me.btn_jPrint.IconZoom = 90.0R
+        Me.btn_jPrint.IsTab = False
+        Me.btn_jPrint.Name = "btn_jPrint"
+        Me.btn_jPrint.Normalcolor = System.Drawing.SystemColors.ButtonFace
+        Me.btn_jPrint.OnHovercolor = System.Drawing.Color.Goldenrod
+        Me.btn_jPrint.OnHoverTextColor = System.Drawing.Color.White
+        Me.btn_jPrint.selected = False
+        Me.btn_jPrint.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btn_jPrint.Textcolor = System.Drawing.Color.SeaGreen
+        Me.btn_jPrint.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        '
+        'btn_jClear
+        '
+        Me.btn_jClear.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
+        Me.btn_jClear.BackColor = System.Drawing.SystemColors.ButtonFace
+        resources.ApplyResources(Me.btn_jClear, "btn_jClear")
+        Me.btn_jClear.BorderRadius = 0
+        Me.btn_jClear.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.btn_jClear.ButtonText = "CLEAR"
+        Me.btn_jClear.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_jClear.DisabledColor = System.Drawing.Color.Gray
+        Me.btn_jClear.ForeColor = System.Drawing.Color.SeaGreen
+        Me.btn_jClear.Iconcolor = System.Drawing.Color.Transparent
+        Me.btn_jClear.Iconimage = Nothing
+        Me.btn_jClear.Iconimage_right = Nothing
+        Me.btn_jClear.Iconimage_right_Selected = Nothing
+        Me.btn_jClear.Iconimage_Selected = Nothing
+        Me.btn_jClear.IconMarginLeft = 0
+        Me.btn_jClear.IconMarginRight = 0
+        Me.btn_jClear.IconRightVisible = False
+        Me.btn_jClear.IconRightZoom = 0R
+        Me.btn_jClear.IconVisible = False
+        Me.btn_jClear.IconZoom = 90.0R
+        Me.btn_jClear.IsTab = False
+        Me.btn_jClear.Name = "btn_jClear"
+        Me.btn_jClear.Normalcolor = System.Drawing.SystemColors.ButtonFace
+        Me.btn_jClear.OnHovercolor = System.Drawing.Color.Goldenrod
+        Me.btn_jClear.OnHoverTextColor = System.Drawing.Color.White
+        Me.btn_jClear.selected = False
+        Me.btn_jClear.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btn_jClear.Textcolor = System.Drawing.Color.SeaGreen
+        Me.btn_jClear.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        '
+        'btn_jSave
+        '
+        Me.btn_jSave.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
+        Me.btn_jSave.BackColor = System.Drawing.SystemColors.ButtonFace
+        resources.ApplyResources(Me.btn_jSave, "btn_jSave")
+        Me.btn_jSave.BorderRadius = 0
+        Me.btn_jSave.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.btn_jSave.ButtonText = "SAVE"
+        Me.btn_jSave.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_jSave.DisabledColor = System.Drawing.Color.Gray
+        Me.btn_jSave.ForeColor = System.Drawing.Color.SeaGreen
+        Me.btn_jSave.Iconcolor = System.Drawing.Color.Transparent
+        Me.btn_jSave.Iconimage = Nothing
+        Me.btn_jSave.Iconimage_right = Nothing
+        Me.btn_jSave.Iconimage_right_Selected = Nothing
+        Me.btn_jSave.Iconimage_Selected = Nothing
+        Me.btn_jSave.IconMarginLeft = 0
+        Me.btn_jSave.IconMarginRight = 0
+        Me.btn_jSave.IconRightVisible = False
+        Me.btn_jSave.IconRightZoom = 0R
+        Me.btn_jSave.IconVisible = False
+        Me.btn_jSave.IconZoom = 90.0R
+        Me.btn_jSave.IsTab = False
+        Me.btn_jSave.Name = "btn_jSave"
+        Me.btn_jSave.Normalcolor = System.Drawing.SystemColors.ButtonFace
+        Me.btn_jSave.OnHovercolor = System.Drawing.Color.Goldenrod
+        Me.btn_jSave.OnHoverTextColor = System.Drawing.Color.White
+        Me.btn_jSave.selected = False
+        Me.btn_jSave.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btn_jSave.Textcolor = System.Drawing.Color.SeaGreen
+        Me.btn_jSave.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        '
+        'GroupBox13
+        '
+        Me.GroupBox13.Controls.Add(Me.Label31)
+        Me.GroupBox13.Controls.Add(Me.txtb_jToAmnt)
+        Me.GroupBox13.Controls.Add(Me.Label32)
+        Me.GroupBox13.Controls.Add(Me.txtb_jOldAcct)
+        Me.GroupBox13.Controls.Add(Me.Label34)
+        Me.GroupBox13.Controls.Add(Me.txtb_jCurrAcct)
+        resources.ApplyResources(Me.GroupBox13, "GroupBox13")
+        Me.GroupBox13.Name = "GroupBox13"
+        Me.GroupBox13.TabStop = False
+        '
+        'Label31
+        '
+        resources.ApplyResources(Me.Label31, "Label31")
+        Me.Label31.Name = "Label31"
+        '
+        'txtb_jToAmnt
+        '
+        Me.txtb_jToAmnt.BackColor = System.Drawing.Color.White
+        resources.ApplyResources(Me.txtb_jToAmnt, "txtb_jToAmnt")
+        Me.txtb_jToAmnt.Name = "txtb_jToAmnt"
+        '
+        'Label32
+        '
+        resources.ApplyResources(Me.Label32, "Label32")
+        Me.Label32.Name = "Label32"
+        '
+        'txtb_jOldAcct
+        '
+        Me.txtb_jOldAcct.BackColor = System.Drawing.Color.White
+        resources.ApplyResources(Me.txtb_jOldAcct, "txtb_jOldAcct")
+        Me.txtb_jOldAcct.Name = "txtb_jOldAcct"
+        '
+        'Label34
+        '
+        resources.ApplyResources(Me.Label34, "Label34")
+        Me.Label34.Name = "Label34"
+        '
+        'txtb_jCurrAcct
+        '
+        Me.txtb_jCurrAcct.BackColor = System.Drawing.Color.White
+        resources.ApplyResources(Me.txtb_jCurrAcct, "txtb_jCurrAcct")
+        Me.txtb_jCurrAcct.Name = "txtb_jCurrAcct"
+        '
+        'GroupBox14
+        '
+        Me.GroupBox14.Controls.Add(Me.Label35)
+        Me.GroupBox14.Controls.Add(Me.Label58)
+        Me.GroupBox14.Controls.Add(Me.txtb_jCurrBal)
+        Me.GroupBox14.Controls.Add(Me.cbo_jParticulars)
+        Me.GroupBox14.Controls.Add(Me.Label59)
+        Me.GroupBox14.Controls.Add(Me.txtb_jAmntPay)
+        resources.ApplyResources(Me.GroupBox14, "GroupBox14")
+        Me.GroupBox14.Name = "GroupBox14"
+        Me.GroupBox14.TabStop = False
+        '
+        'Label35
+        '
+        resources.ApplyResources(Me.Label35, "Label35")
+        Me.Label35.Name = "Label35"
+        '
+        'Label58
+        '
+        resources.ApplyResources(Me.Label58, "Label58")
+        Me.Label58.Name = "Label58"
+        '
+        'txtb_jCurrBal
+        '
+        Me.txtb_jCurrBal.BackColor = System.Drawing.Color.White
+        resources.ApplyResources(Me.txtb_jCurrBal, "txtb_jCurrBal")
+        Me.txtb_jCurrBal.Name = "txtb_jCurrBal"
+        '
+        'cbo_jParticulars
+        '
+        Me.cbo_jParticulars.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbo_jParticulars.FormattingEnabled = True
+        resources.ApplyResources(Me.cbo_jParticulars, "cbo_jParticulars")
+        Me.cbo_jParticulars.Name = "cbo_jParticulars"
+        '
+        'Label59
+        '
+        resources.ApplyResources(Me.Label59, "Label59")
+        Me.Label59.Name = "Label59"
+        '
+        'txtb_jAmntPay
+        '
+        resources.ApplyResources(Me.txtb_jAmntPay, "txtb_jAmntPay")
+        Me.txtb_jAmntPay.Name = "txtb_jAmntPay"
+        '
+        'GroupBox15
+        '
+        Me.GroupBox15.Controls.Add(Me.Label60)
+        Me.GroupBox15.Controls.Add(Me.txtb_jTD)
+        Me.GroupBox15.Controls.Add(Me.Label61)
+        Me.GroupBox15.Controls.Add(Me.txtb_jTN)
+        resources.ApplyResources(Me.GroupBox15, "GroupBox15")
+        Me.GroupBox15.Name = "GroupBox15"
+        Me.GroupBox15.TabStop = False
+        '
+        'Label60
+        '
+        resources.ApplyResources(Me.Label60, "Label60")
+        Me.Label60.Name = "Label60"
+        '
+        'txtb_jTD
+        '
+        Me.txtb_jTD.BackColor = System.Drawing.Color.White
+        resources.ApplyResources(Me.txtb_jTD, "txtb_jTD")
+        Me.txtb_jTD.ForeColor = System.Drawing.SystemColors.AppWorkspace
+        Me.txtb_jTD.Name = "txtb_jTD"
+        '
+        'Label61
+        '
+        resources.ApplyResources(Me.Label61, "Label61")
+        Me.Label61.Name = "Label61"
+        '
+        'txtb_jTN
+        '
+        Me.txtb_jTN.BackColor = System.Drawing.Color.White
+        resources.ApplyResources(Me.txtb_jTN, "txtb_jTN")
+        Me.txtb_jTN.ForeColor = System.Drawing.SystemColors.AppWorkspace
+        Me.txtb_jTN.Name = "txtb_jTN"
+        '
+        'GroupBox16
+        '
+        Me.GroupBox16.BackColor = System.Drawing.SystemColors.Menu
+        Me.GroupBox16.Controls.Add(Me.Label62)
+        Me.GroupBox16.Controls.Add(Me.Label63)
+        Me.GroupBox16.Controls.Add(Me.Label64)
+        Me.GroupBox16.Controls.Add(Me.Label65)
+        Me.GroupBox16.Controls.Add(Me.Label66)
+        Me.GroupBox16.Controls.Add(Me.Label67)
+        Me.GroupBox16.Controls.Add(Me.Label68)
+        Me.GroupBox16.Controls.Add(Me.Label69)
+        Me.GroupBox16.Controls.Add(Me.Panel3)
+        Me.GroupBox16.Controls.Add(Me.ShapeContainer3)
+        resources.ApplyResources(Me.GroupBox16, "GroupBox16")
+        Me.GroupBox16.Name = "GroupBox16"
+        Me.GroupBox16.TabStop = False
+        '
+        'Label62
+        '
+        resources.ApplyResources(Me.Label62, "Label62")
+        Me.Label62.BackColor = System.Drawing.SystemColors.MenuBar
+        Me.Label62.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label62.Name = "Label62"
+        '
+        'Label63
+        '
+        resources.ApplyResources(Me.Label63, "Label63")
+        Me.Label63.BackColor = System.Drawing.SystemColors.MenuBar
+        Me.Label63.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label63.Name = "Label63"
+        '
+        'Label64
+        '
+        resources.ApplyResources(Me.Label64, "Label64")
+        Me.Label64.ForeColor = System.Drawing.SystemColors.AppWorkspace
+        Me.Label64.Name = "Label64"
+        '
+        'Label65
+        '
+        resources.ApplyResources(Me.Label65, "Label65")
+        Me.Label65.ForeColor = System.Drawing.SystemColors.AppWorkspace
+        Me.Label65.Name = "Label65"
+        '
+        'Label66
+        '
+        resources.ApplyResources(Me.Label66, "Label66")
+        Me.Label66.Name = "Label66"
+        '
+        'Label67
+        '
+        resources.ApplyResources(Me.Label67, "Label67")
+        Me.Label67.Name = "Label67"
+        '
+        'Label68
+        '
+        resources.ApplyResources(Me.Label68, "Label68")
+        Me.Label68.Name = "Label68"
+        '
+        'Label69
+        '
+        resources.ApplyResources(Me.Label69, "Label69")
+        Me.Label69.Name = "Label69"
+        '
+        'Panel3
+        '
+        Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel3.Controls.Add(Me.Label70)
+        Me.Panel3.Controls.Add(Me.Label71)
+        Me.Panel3.Controls.Add(Me.Label72)
+        Me.Panel3.Controls.Add(Me.Label73)
+        Me.Panel3.Controls.Add(Me.Label74)
+        resources.ApplyResources(Me.Panel3, "Panel3")
+        Me.Panel3.Name = "Panel3"
+        '
+        'Label70
+        '
+        resources.ApplyResources(Me.Label70, "Label70")
+        Me.Label70.BackColor = System.Drawing.SystemColors.MenuBar
+        Me.Label70.ForeColor = System.Drawing.SystemColors.AppWorkspace
+        Me.Label70.Name = "Label70"
+        '
+        'Label71
+        '
+        resources.ApplyResources(Me.Label71, "Label71")
+        Me.Label71.Name = "Label71"
+        '
+        'Label72
+        '
+        resources.ApplyResources(Me.Label72, "Label72")
+        Me.Label72.BackColor = System.Drawing.SystemColors.MenuBar
+        Me.Label72.ForeColor = System.Drawing.SystemColors.AppWorkspace
+        Me.Label72.Name = "Label72"
+        '
+        'Label73
+        '
+        resources.ApplyResources(Me.Label73, "Label73")
+        Me.Label73.Name = "Label73"
+        '
+        'Label74
+        '
+        resources.ApplyResources(Me.Label74, "Label74")
+        Me.Label74.Name = "Label74"
+        '
+        'ShapeContainer3
+        '
+        resources.ApplyResources(Me.ShapeContainer3, "ShapeContainer3")
+        Me.ShapeContainer3.Name = "ShapeContainer3"
+        Me.ShapeContainer3.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.LineShape3})
+        Me.ShapeContainer3.TabStop = False
+        '
+        'LineShape3
+        '
+        Me.LineShape3.Name = "LineShape1"
+        resources.ApplyResources(Me.LineShape3, "LineShape3")
+        '
+        'GroupBox17
+        '
+        Me.GroupBox17.Controls.Add(Me.btn_jManage)
+        Me.GroupBox17.Controls.Add(Me.txtb_jStudID)
+        Me.GroupBox17.Controls.Add(Me.Label75)
+        Me.GroupBox17.Controls.Add(Me.txtb_jSY)
+        Me.GroupBox17.Controls.Add(Me.Label76)
+        Me.GroupBox17.Controls.Add(Me.Label77)
+        Me.GroupBox17.Controls.Add(Me.txtb_jGL)
+        Me.GroupBox17.Controls.Add(Me.Label78)
+        Me.GroupBox17.Controls.Add(Me.txtb_jStudName)
+        resources.ApplyResources(Me.GroupBox17, "GroupBox17")
+        Me.GroupBox17.Name = "GroupBox17"
+        Me.GroupBox17.TabStop = False
+        '
+        'btn_jManage
+        '
+        Me.btn_jManage.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
+        resources.ApplyResources(Me.btn_jManage, "btn_jManage")
+        Me.btn_jManage.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.btn_jManage.BorderRadius = 0
+        Me.btn_jManage.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.btn_jManage.ButtonText = "MANAGE"
+        Me.btn_jManage.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_jManage.DisabledColor = System.Drawing.Color.Gray
+        Me.btn_jManage.ForeColor = System.Drawing.Color.SeaGreen
+        Me.btn_jManage.Iconcolor = System.Drawing.Color.Transparent
+        Me.btn_jManage.Iconimage = Nothing
+        Me.btn_jManage.Iconimage_right = Nothing
+        Me.btn_jManage.Iconimage_right_Selected = Nothing
+        Me.btn_jManage.Iconimage_Selected = Nothing
+        Me.btn_jManage.IconMarginLeft = 0
+        Me.btn_jManage.IconMarginRight = 0
+        Me.btn_jManage.IconRightVisible = False
+        Me.btn_jManage.IconRightZoom = 0R
+        Me.btn_jManage.IconVisible = False
+        Me.btn_jManage.IconZoom = 90.0R
+        Me.btn_jManage.IsTab = False
+        Me.btn_jManage.Name = "btn_jManage"
+        Me.btn_jManage.Normalcolor = System.Drawing.SystemColors.ButtonFace
+        Me.btn_jManage.OnHovercolor = System.Drawing.Color.Goldenrod
+        Me.btn_jManage.OnHoverTextColor = System.Drawing.Color.White
+        Me.btn_jManage.selected = False
+        Me.btn_jManage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btn_jManage.Textcolor = System.Drawing.Color.SeaGreen
+        Me.btn_jManage.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        '
+        'txtb_jStudID
+        '
+        Me.txtb_jStudID.BackColor = System.Drawing.Color.White
+        resources.ApplyResources(Me.txtb_jStudID, "txtb_jStudID")
+        Me.txtb_jStudID.Name = "txtb_jStudID"
+        '
+        'Label75
+        '
+        resources.ApplyResources(Me.Label75, "Label75")
+        Me.Label75.Name = "Label75"
+        '
+        'txtb_jSY
+        '
+        Me.txtb_jSY.BackColor = System.Drawing.Color.White
+        resources.ApplyResources(Me.txtb_jSY, "txtb_jSY")
+        Me.txtb_jSY.Name = "txtb_jSY"
+        '
+        'Label76
+        '
+        resources.ApplyResources(Me.Label76, "Label76")
+        Me.Label76.Name = "Label76"
+        '
+        'Label77
+        '
+        resources.ApplyResources(Me.Label77, "Label77")
+        Me.Label77.Name = "Label77"
+        '
+        'txtb_jGL
+        '
+        Me.txtb_jGL.BackColor = System.Drawing.Color.White
+        resources.ApplyResources(Me.txtb_jGL, "txtb_jGL")
+        Me.txtb_jGL.Name = "txtb_jGL"
+        '
+        'Label78
+        '
+        resources.ApplyResources(Me.Label78, "Label78")
+        Me.Label78.Name = "Label78"
+        '
+        'txtb_jStudName
+        '
+        Me.txtb_jStudName.BackColor = System.Drawing.Color.White
+        resources.ApplyResources(Me.txtb_jStudName, "txtb_jStudName")
+        Me.txtb_jStudName.Name = "txtb_jStudName"
+        '
+        'GroupBox18
+        '
+        Me.GroupBox18.Controls.Add(Me.btn_jEnter)
+        Me.GroupBox18.Controls.Add(Me.cbo_jSearchBY)
+        Me.GroupBox18.Controls.Add(Me.Label79)
+        Me.GroupBox18.Controls.Add(Me.Label80)
+        Me.GroupBox18.Controls.Add(Me.txtb_jSearch)
+        resources.ApplyResources(Me.GroupBox18, "GroupBox18")
+        Me.GroupBox18.Name = "GroupBox18"
+        Me.GroupBox18.TabStop = False
+        '
+        'btn_jEnter
+        '
+        Me.btn_jEnter.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
+        resources.ApplyResources(Me.btn_jEnter, "btn_jEnter")
+        Me.btn_jEnter.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.btn_jEnter.BorderRadius = 0
+        Me.btn_jEnter.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.btn_jEnter.ButtonText = "ENTER"
+        Me.btn_jEnter.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_jEnter.DisabledColor = System.Drawing.Color.Gray
+        Me.btn_jEnter.ForeColor = System.Drawing.Color.SeaGreen
+        Me.btn_jEnter.Iconcolor = System.Drawing.Color.Transparent
+        Me.btn_jEnter.Iconimage = Nothing
+        Me.btn_jEnter.Iconimage_right = Nothing
+        Me.btn_jEnter.Iconimage_right_Selected = Nothing
+        Me.btn_jEnter.Iconimage_Selected = Nothing
+        Me.btn_jEnter.IconMarginLeft = 0
+        Me.btn_jEnter.IconMarginRight = 0
+        Me.btn_jEnter.IconRightVisible = False
+        Me.btn_jEnter.IconRightZoom = 0R
+        Me.btn_jEnter.IconVisible = False
+        Me.btn_jEnter.IconZoom = 90.0R
+        Me.btn_jEnter.IsTab = False
+        Me.btn_jEnter.Name = "btn_jEnter"
+        Me.btn_jEnter.Normalcolor = System.Drawing.SystemColors.ButtonFace
+        Me.btn_jEnter.OnHovercolor = System.Drawing.Color.Goldenrod
+        Me.btn_jEnter.OnHoverTextColor = System.Drawing.Color.White
+        Me.btn_jEnter.selected = False
+        Me.btn_jEnter.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btn_jEnter.Textcolor = System.Drawing.Color.SeaGreen
+        Me.btn_jEnter.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        '
+        'cbo_jSearchBY
+        '
+        Me.cbo_jSearchBY.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbo_jSearchBY.FormattingEnabled = True
+        Me.cbo_jSearchBY.Items.AddRange(New Object() {resources.GetString("cbo_jSearchBY.Items"), resources.GetString("cbo_jSearchBY.Items1")})
+        resources.ApplyResources(Me.cbo_jSearchBY, "cbo_jSearchBY")
+        Me.cbo_jSearchBY.Name = "cbo_jSearchBY"
+        '
+        'Label79
+        '
+        resources.ApplyResources(Me.Label79, "Label79")
+        Me.Label79.Name = "Label79"
+        '
+        'Label80
+        '
+        resources.ApplyResources(Me.Label80, "Label80")
+        Me.Label80.Name = "Label80"
+        '
+        'txtb_jSearch
+        '
+        Me.txtb_jSearch.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.txtb_jSearch.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
+        resources.ApplyResources(Me.txtb_jSearch, "txtb_jSearch")
+        Me.txtb_jSearch.Name = "txtb_jSearch"
         '
         'frm_SPayments
         '
@@ -2601,21 +2596,6 @@ Partial Class frm_SPayments
         Me.GroupBox6.PerformLayout()
         Me.GroupBox5.ResumeLayout(False)
         Me.GroupBox5.PerformLayout()
-        Me.jh_dept.ResumeLayout(False)
-        Me.GroupBox13.ResumeLayout(False)
-        Me.GroupBox13.PerformLayout()
-        Me.GroupBox14.ResumeLayout(False)
-        Me.GroupBox14.PerformLayout()
-        Me.GroupBox15.ResumeLayout(False)
-        Me.GroupBox15.PerformLayout()
-        Me.GroupBox16.ResumeLayout(False)
-        Me.GroupBox16.PerformLayout()
-        Me.Panel3.ResumeLayout(False)
-        Me.Panel3.PerformLayout()
-        Me.GroupBox17.ResumeLayout(False)
-        Me.GroupBox17.PerformLayout()
-        Me.GroupBox18.ResumeLayout(False)
-        Me.GroupBox18.PerformLayout()
         Me.sh_dept.ResumeLayout(False)
         Me.GroupBox19.ResumeLayout(False)
         Me.GroupBox19.PerformLayout()
@@ -2631,6 +2611,21 @@ Partial Class frm_SPayments
         Me.GroupBox23.PerformLayout()
         Me.GroupBox24.ResumeLayout(False)
         Me.GroupBox24.PerformLayout()
+        Me.jh_dept.ResumeLayout(False)
+        Me.GroupBox13.ResumeLayout(False)
+        Me.GroupBox13.PerformLayout()
+        Me.GroupBox14.ResumeLayout(False)
+        Me.GroupBox14.PerformLayout()
+        Me.GroupBox15.ResumeLayout(False)
+        Me.GroupBox15.PerformLayout()
+        Me.GroupBox16.ResumeLayout(False)
+        Me.GroupBox16.PerformLayout()
+        Me.Panel3.ResumeLayout(False)
+        Me.Panel3.PerformLayout()
+        Me.GroupBox17.ResumeLayout(False)
+        Me.GroupBox17.PerformLayout()
+        Me.GroupBox18.ResumeLayout(False)
+        Me.GroupBox18.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -2707,28 +2702,28 @@ Partial Class frm_SPayments
     Friend WithEvents t_amount As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents t_balance As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents delete As System.Windows.Forms.DataGridViewButtonColumn
-    Friend WithEvents BunifuFlatButton4 As Bunifu.Framework.UI.BunifuFlatButton
-    Friend WithEvents BunifuFlatButton5 As Bunifu.Framework.UI.BunifuFlatButton
-    Friend WithEvents BunifuFlatButton6 As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents btn_ePrint As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents btn_eClear As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents btn_eSave As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents GroupBox10 As System.Windows.Forms.GroupBox
     Friend WithEvents Label50 As System.Windows.Forms.Label
-    Friend WithEvents TextBox10 As System.Windows.Forms.TextBox
+    Friend WithEvents txtb_eStudTotAmnt As System.Windows.Forms.TextBox
     Friend WithEvents Label51 As System.Windows.Forms.Label
-    Friend WithEvents TextBox11 As System.Windows.Forms.TextBox
+    Friend WithEvents txtb_eStudOldAcct As System.Windows.Forms.TextBox
     Friend WithEvents Label52 As System.Windows.Forms.Label
-    Friend WithEvents TextBox12 As System.Windows.Forms.TextBox
+    Friend WithEvents txtb_eStudCurrAcct As System.Windows.Forms.TextBox
     Friend WithEvents GroupBox11 As System.Windows.Forms.GroupBox
     Friend WithEvents Label53 As System.Windows.Forms.Label
     Friend WithEvents Label54 As System.Windows.Forms.Label
-    Friend WithEvents TextBox13 As System.Windows.Forms.TextBox
-    Friend WithEvents ComboBox2 As System.Windows.Forms.ComboBox
+    Friend WithEvents txtb_eStudCurrBal As System.Windows.Forms.TextBox
+    Friend WithEvents cbo_eParticulars As System.Windows.Forms.ComboBox
     Friend WithEvents Label55 As System.Windows.Forms.Label
-    Friend WithEvents TextBox14 As System.Windows.Forms.TextBox
+    Friend WithEvents txtb_eStudAmntPay As System.Windows.Forms.TextBox
     Friend WithEvents GroupBox12 As System.Windows.Forms.GroupBox
     Friend WithEvents Label56 As System.Windows.Forms.Label
-    Friend WithEvents TextBox15 As System.Windows.Forms.TextBox
+    Friend WithEvents txtb_eTD As System.Windows.Forms.TextBox
     Friend WithEvents Label57 As System.Windows.Forms.Label
-    Friend WithEvents TextBox16 As System.Windows.Forms.TextBox
+    Friend WithEvents txtb_eTN As System.Windows.Forms.TextBox
     Friend WithEvents GroupBox9 As System.Windows.Forms.GroupBox
     Friend WithEvents Label37 As System.Windows.Forms.Label
     Friend WithEvents Label38 As System.Windows.Forms.Label
@@ -2737,11 +2732,11 @@ Partial Class frm_SPayments
     Friend WithEvents Label41 As System.Windows.Forms.Label
     Friend WithEvents Label42 As System.Windows.Forms.Label
     Friend WithEvents Label43 As System.Windows.Forms.Label
-    Friend WithEvents Label44 As System.Windows.Forms.Label
+    Friend WithEvents lbl_eStudName As System.Windows.Forms.Label
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
-    Friend WithEvents Label45 As System.Windows.Forms.Label
+    Friend WithEvents lbl_eTD As System.Windows.Forms.Label
     Friend WithEvents Label46 As System.Windows.Forms.Label
-    Friend WithEvents Label47 As System.Windows.Forms.Label
+    Friend WithEvents lbl_eRcptNo As System.Windows.Forms.Label
     Friend WithEvents Label48 As System.Windows.Forms.Label
     Friend WithEvents Label49 As System.Windows.Forms.Label
     Friend WithEvents ShapeContainer2 As Microsoft.VisualBasic.PowerPacks.ShapeContainer
@@ -2750,42 +2745,42 @@ Partial Class frm_SPayments
     Friend WithEvents btn_eManage As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents txtb_eStudID As System.Windows.Forms.TextBox
     Friend WithEvents Label27 As System.Windows.Forms.Label
-    Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
+    Friend WithEvents txtb_eSY As System.Windows.Forms.TextBox
     Friend WithEvents Label28 As System.Windows.Forms.Label
     Friend WithEvents Label33 As System.Windows.Forms.Label
-    Friend WithEvents TextBox8 As System.Windows.Forms.TextBox
+    Friend WithEvents txtb_eGL As System.Windows.Forms.TextBox
     Friend WithEvents Label36 As System.Windows.Forms.Label
-    Friend WithEvents TextBox9 As System.Windows.Forms.TextBox
+    Friend WithEvents txtb_eStudName As System.Windows.Forms.TextBox
     Friend WithEvents GroupBox5 As System.Windows.Forms.GroupBox
-    Friend WithEvents BunifuFlatButton1 As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents btn_eEnter As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents cbo_eSearchBy As System.Windows.Forms.ComboBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label14 As System.Windows.Forms.Label
     Friend WithEvents txtb_eSearch As System.Windows.Forms.TextBox
     Friend WithEvents jh_dept As System.Windows.Forms.TabPage
     Friend WithEvents sh_dept As System.Windows.Forms.TabPage
-    Friend WithEvents BunifuFlatButton3 As Bunifu.Framework.UI.BunifuFlatButton
-    Friend WithEvents BunifuFlatButton8 As Bunifu.Framework.UI.BunifuFlatButton
-    Friend WithEvents BunifuFlatButton9 As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents btn_jPrint As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents btn_jClear As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents btn_jSave As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents GroupBox13 As System.Windows.Forms.GroupBox
     Friend WithEvents Label31 As System.Windows.Forms.Label
-    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
+    Friend WithEvents txtb_jToAmnt As System.Windows.Forms.TextBox
     Friend WithEvents Label32 As System.Windows.Forms.Label
-    Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
+    Friend WithEvents txtb_jOldAcct As System.Windows.Forms.TextBox
     Friend WithEvents Label34 As System.Windows.Forms.Label
-    Friend WithEvents TextBox6 As System.Windows.Forms.TextBox
+    Friend WithEvents txtb_jCurrAcct As System.Windows.Forms.TextBox
     Friend WithEvents GroupBox14 As System.Windows.Forms.GroupBox
     Friend WithEvents Label35 As System.Windows.Forms.Label
     Friend WithEvents Label58 As System.Windows.Forms.Label
-    Friend WithEvents TextBox7 As System.Windows.Forms.TextBox
-    Friend WithEvents ComboBox3 As System.Windows.Forms.ComboBox
+    Friend WithEvents txtb_jCurrBal As System.Windows.Forms.TextBox
+    Friend WithEvents cbo_jParticulars As System.Windows.Forms.ComboBox
     Friend WithEvents Label59 As System.Windows.Forms.Label
-    Friend WithEvents TextBox17 As System.Windows.Forms.TextBox
+    Friend WithEvents txtb_jAmntPay As System.Windows.Forms.TextBox
     Friend WithEvents GroupBox15 As System.Windows.Forms.GroupBox
     Friend WithEvents Label60 As System.Windows.Forms.Label
-    Friend WithEvents TextBox18 As System.Windows.Forms.TextBox
+    Friend WithEvents txtb_jTD As System.Windows.Forms.TextBox
     Friend WithEvents Label61 As System.Windows.Forms.Label
-    Friend WithEvents TextBox19 As System.Windows.Forms.TextBox
+    Friend WithEvents txtb_jTN As System.Windows.Forms.TextBox
     Friend WithEvents GroupBox16 As System.Windows.Forms.GroupBox
     Friend WithEvents Label62 As System.Windows.Forms.Label
     Friend WithEvents Label63 As System.Windows.Forms.Label
@@ -2804,43 +2799,43 @@ Partial Class frm_SPayments
     Friend WithEvents ShapeContainer3 As Microsoft.VisualBasic.PowerPacks.ShapeContainer
     Friend WithEvents LineShape3 As Microsoft.VisualBasic.PowerPacks.LineShape
     Friend WithEvents GroupBox17 As System.Windows.Forms.GroupBox
-    Friend WithEvents BunifuFlatButton11 As Bunifu.Framework.UI.BunifuFlatButton
-    Friend WithEvents TextBox20 As System.Windows.Forms.TextBox
+    Friend WithEvents btn_jManage As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents txtb_jStudID As System.Windows.Forms.TextBox
     Friend WithEvents Label75 As System.Windows.Forms.Label
-    Friend WithEvents TextBox21 As System.Windows.Forms.TextBox
+    Friend WithEvents txtb_jSY As System.Windows.Forms.TextBox
     Friend WithEvents Label76 As System.Windows.Forms.Label
     Friend WithEvents Label77 As System.Windows.Forms.Label
-    Friend WithEvents TextBox22 As System.Windows.Forms.TextBox
+    Friend WithEvents txtb_jGL As System.Windows.Forms.TextBox
     Friend WithEvents Label78 As System.Windows.Forms.Label
-    Friend WithEvents TextBox23 As System.Windows.Forms.TextBox
+    Friend WithEvents txtb_jStudName As System.Windows.Forms.TextBox
     Friend WithEvents GroupBox18 As System.Windows.Forms.GroupBox
-    Friend WithEvents BunifuFlatButton12 As Bunifu.Framework.UI.BunifuFlatButton
-    Friend WithEvents ComboBox4 As System.Windows.Forms.ComboBox
+    Friend WithEvents btn_jEnter As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents cbo_jSearchBY As System.Windows.Forms.ComboBox
     Friend WithEvents Label79 As System.Windows.Forms.Label
     Friend WithEvents Label80 As System.Windows.Forms.Label
-    Friend WithEvents TextBox24 As System.Windows.Forms.TextBox
-    Friend WithEvents BunifuFlatButton13 As Bunifu.Framework.UI.BunifuFlatButton
-    Friend WithEvents BunifuFlatButton14 As Bunifu.Framework.UI.BunifuFlatButton
-    Friend WithEvents BunifuFlatButton15 As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents txtb_jSearch As System.Windows.Forms.TextBox
+    Friend WithEvents btn_sPrint As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents btn_sClear As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents btn_sSave As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents GroupBox19 As System.Windows.Forms.GroupBox
     Friend WithEvents Label81 As System.Windows.Forms.Label
-    Friend WithEvents TextBox25 As System.Windows.Forms.TextBox
+    Friend WithEvents txtb_sToAmnt As System.Windows.Forms.TextBox
     Friend WithEvents Label82 As System.Windows.Forms.Label
-    Friend WithEvents TextBox26 As System.Windows.Forms.TextBox
+    Friend WithEvents txtb_sOldAcct As System.Windows.Forms.TextBox
     Friend WithEvents Label83 As System.Windows.Forms.Label
-    Friend WithEvents TextBox27 As System.Windows.Forms.TextBox
+    Friend WithEvents txtb_sCurrAcct As System.Windows.Forms.TextBox
     Friend WithEvents GroupBox20 As System.Windows.Forms.GroupBox
     Friend WithEvents Label84 As System.Windows.Forms.Label
     Friend WithEvents Label85 As System.Windows.Forms.Label
-    Friend WithEvents TextBox28 As System.Windows.Forms.TextBox
-    Friend WithEvents ComboBox5 As System.Windows.Forms.ComboBox
+    Friend WithEvents txtb_sCurrBal As System.Windows.Forms.TextBox
+    Friend WithEvents cbo_sParticulars As System.Windows.Forms.ComboBox
     Friend WithEvents Label86 As System.Windows.Forms.Label
-    Friend WithEvents TextBox29 As System.Windows.Forms.TextBox
+    Friend WithEvents txtb_sAmntPay As System.Windows.Forms.TextBox
     Friend WithEvents GroupBox21 As System.Windows.Forms.GroupBox
     Friend WithEvents Label87 As System.Windows.Forms.Label
-    Friend WithEvents TextBox30 As System.Windows.Forms.TextBox
+    Friend WithEvents txtb_sTD As System.Windows.Forms.TextBox
     Friend WithEvents Label88 As System.Windows.Forms.Label
-    Friend WithEvents TextBox31 As System.Windows.Forms.TextBox
+    Friend WithEvents txtb_sTN As System.Windows.Forms.TextBox
     Friend WithEvents GroupBox22 As System.Windows.Forms.GroupBox
     Friend WithEvents Label89 As System.Windows.Forms.Label
     Friend WithEvents Label90 As System.Windows.Forms.Label
@@ -2859,21 +2854,21 @@ Partial Class frm_SPayments
     Friend WithEvents ShapeContainer4 As Microsoft.VisualBasic.PowerPacks.ShapeContainer
     Friend WithEvents LineShape4 As Microsoft.VisualBasic.PowerPacks.LineShape
     Friend WithEvents GroupBox23 As System.Windows.Forms.GroupBox
-    Friend WithEvents BunifuFlatButton17 As Bunifu.Framework.UI.BunifuFlatButton
-    Friend WithEvents TextBox32 As System.Windows.Forms.TextBox
+    Friend WithEvents btn_sManage As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents txtb_sStudID As System.Windows.Forms.TextBox
     Friend WithEvents Label102 As System.Windows.Forms.Label
-    Friend WithEvents TextBox33 As System.Windows.Forms.TextBox
+    Friend WithEvents txtb_sSY As System.Windows.Forms.TextBox
     Friend WithEvents Label103 As System.Windows.Forms.Label
     Friend WithEvents Label104 As System.Windows.Forms.Label
-    Friend WithEvents TextBox34 As System.Windows.Forms.TextBox
+    Friend WithEvents txtb_sGL As System.Windows.Forms.TextBox
     Friend WithEvents Label105 As System.Windows.Forms.Label
-    Friend WithEvents TextBox35 As System.Windows.Forms.TextBox
+    Friend WithEvents txtb_sStudName As System.Windows.Forms.TextBox
     Friend WithEvents GroupBox24 As System.Windows.Forms.GroupBox
-    Friend WithEvents BunifuFlatButton18 As Bunifu.Framework.UI.BunifuFlatButton
-    Friend WithEvents ComboBox6 As System.Windows.Forms.ComboBox
+    Friend WithEvents btn_sEnter As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents cbo_sSearchBY As System.Windows.Forms.ComboBox
     Friend WithEvents Label106 As System.Windows.Forms.Label
     Friend WithEvents Label107 As System.Windows.Forms.Label
-    Friend WithEvents TextBox36 As System.Windows.Forms.TextBox
+    Friend WithEvents txtb_sSearch As System.Windows.Forms.TextBox
     Friend WithEvents lbl_tobepaid As Label
     Friend WithEvents rbtn_full As RadioButton
     Friend WithEvents rbtn_partial As RadioButton

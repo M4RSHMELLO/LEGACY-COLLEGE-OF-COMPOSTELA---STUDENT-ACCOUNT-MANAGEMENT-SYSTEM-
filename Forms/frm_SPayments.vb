@@ -1,9 +1,12 @@
-﻿Imports MySql.Data.MySqlClient
-Imports System.Data
+﻿Imports System.Data
 Public Class frm_SPayments
     Dim Sem_id As Integer
     Dim totalAmount As Double
     Dim nameSuggestion As String = "Select stud_Fname,stud_Lname from tbl_student"
+    Dim enameSuggestion As String = "select estud_fname,estud_lname from tbl_elem_students"
+    Dim snameSuggestion As String = "Select sstud_fname, sstud_lname from tbl_seniorhigh_students"
+    Dim jnameSuggestion As String = "Select jstud_Fname,jstud_Lname from tbl_juniorhigh_students"
+
     Function random_TaN() As Integer
         Dim tan_NO As Integer = 0
         'Create an instance of the Random class
@@ -54,7 +57,13 @@ Public Class frm_SPayments
 
     Private Sub frm_SPayments_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         cboSearchBy.SelectedIndex = 1
+        cbo_eSearchBy.SelectedIndex = 1
+        cbo_sSearchBY.SelectedIndex = 1
+        cbo_jSearchBY.SelectedIndex = 1
         _loadStudentNameToTextbox(nameSuggestion, txtb_Search)
+        _loadStudentNameToTextbox(enameSuggestion, txtb_eSearch)
+        _loadStudentNameToTextbox(snameSuggestion, txtb_sSearch)
+        _loadStudentNameToTextbox(jnameSuggestion, txtb_jSearch)
         selectpaymentype()
     End Sub
 
@@ -241,7 +250,7 @@ Public Class frm_SPayments
                     Dim InsertPayments As String = "Insert into tbl_studaccount values('" & txtb_studID.Text & "','" & txtb_TransNo.Text & "','" & txtb_TransDate.Text & "','" & Integer.Parse(cbo_particular.SelectedValue) & "','" & Double.Parse(txtb_Payment.Text) & "','" & Double.Parse(txtb_CurrentBalance.Text) & "')"
                     _dbConnection("db_lccsams")
                     _insertData(InsertPayments)
-                    If MessageBox.Show("Save Succesfully!") = DialogResult.OK Then
+                    If dlg_payments.ShowDialog = DialogResult.OK Then
                         lbl_particularName.Text = cbo_particular.Text
                         lbl_amount.Text = txtb_Payment.Text
                         lbl_tAmnt.Text = "TOTAL AMOUNT: " & txtb_Payment.Text
@@ -373,9 +382,7 @@ Public Class frm_SPayments
         End Try
     End Sub
 
-    Private Sub dg_viewCurrentPayment_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dg_viewCurrentPayment.CellContentClick
 
-    End Sub
 
     Private Sub txtb_Payment_TextChanged(sender As Object, e As EventArgs) Handles txtb_Payment.TextChanged
         Try
@@ -412,9 +419,9 @@ Public Class frm_SPayments
             lbl_tobepaid.Visible = True
             lbl_tobepaid.Text = "To be paid: " & 0
             txtb_Payment.Clear()
-            Dim diff As TimeSpan = Date.Parse(sSy_eDate) - Date.Parse(sSy_sDate)
-            Label30.Text = diff.Days.ToString
-            lbl_tobepaid.Text = "Exam fee to be paid: " & (Double.Parse(txtb_TotalAmount.Text))
+            'Dim diff As TimeSpan = Date.Parse(sSy_eDate) - Date.Parse(sSy_sDate)
+            'Label30.Text = diff.Days.ToString
+            lbl_tobepaid.Text = "Exam fee to be paid: " & Double.Parse(txtb_TotalAmount.Text)
         Else
             txtb_Payment.Enabled = False
             lbl_tobepaid.Visible = False
@@ -426,5 +433,257 @@ Public Class frm_SPayments
     Sub dateIntervalFortheSem()
 
     End Sub
+    ''###########################################################Elementary Section ################################################################################
+    Sub _retrieve_eStudData()
+        Try
+            _dbConnection("db_lccsams")
+            Dim querry2 As String = "Select s.estud_id,s.estud_Fname,s.estud_mi,s.estud_Lname,sy.esy_name,gl.egl_name from tbl_elem_students s inner join tbl_elem_sy  sy on  sy.esy_id=s.esy_id inner join tbl_elem_gradelevel gl on gl.egl_id=s.egl_id  where s.estud_Fname='" & eFname & "' and s.estud_Lname='" & eLname & "'"
+            dbConn.Open()
+            sqlCommand = New MySqlCommand(querry2, dbConn)
+            dr = sqlCommand.ExecuteReader
+            While dr.Read
+                txtb_eStudID.Text = dr(0).ToString
+                txtb_eStudName.Text = dr(1).ToString.ToUpper + " " + dr(2).ToString.ToUpper + " " + dr(3).ToString.ToUpper
+                txtb_eSY.Text = dr(4).ToString
+                txtb_eGL.Text = dr(5).ToString
+            End While
+            dbConn.Close()
+            Dim particular_list As String = "select f.efees_id, f.efees_name from tbl_elem_fees f inner join tbl_elem_students s on s.esy_id=f.esy_id where s.estud_id='" & txtb_eStudID.Text & "'"
+            _loadToCombobox(particular_list, cbo_eParticulars)
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
 
+        End Try
+
+    End Sub
+    Sub display_estudData()
+        Select Case cbo_eSearchBy.Text
+            Case "Id Number"
+                _dbConnection("db_lccsams")
+                Try
+                    Dim querry3 As String = " Select s.estud_id,s.estud_Fname,s.estud_mi,s.estud_Lname,sy.esy_name,gl.egl_name from tbl_elem_students s inner join tbl_elem_sy  sy on  sy.esy_id=s.esy_id inner join tbl_elem_gradelevel gl on gl.egl_id=s.egl_id   where s.estud_id='" & txtb_eSearch.Text & "'"
+                    dbConn.Open()
+                    sqlCommand = New MySqlCommand(querry3, dbConn)
+                    dr = sqlCommand.ExecuteReader
+                    While dr.Read
+                        txtb_eStudID.Text = dr(0).ToString
+                        txtb_eStudName.Text = dr(1).ToString.ToUpper + " " + dr(2).ToString.ToUpper + " " + dr(3).ToString.ToUpper
+                        txtb_eSY.Text = dr(4).ToString
+                        txtb_eGL.Text = dr(5).ToString
+                    End While
+                    dbConn.Close()
+                    Dim particular_list As String = "select f.efees_id, f.efees_name from tbl_elem_fees f inner join tbl_elem_students s on s.esy_id=f.esy_id where s.estud_id='" & txtb_eStudID.Text & "'"
+                    _loadToCombobox(particular_list, cbo_eParticulars)
+                Catch ex As Exception
+                    MessageBox.Show(ex.Message)
+                Finally
+                    dbConn.Close()
+                End Try
+
+            Case "Name"
+                Try
+                    Dim sp() As String
+                    sp = txtb_eSearch.Text.Split(" ")
+                    If UBound(sp) = 1 Then
+                        eFname = sp(0)
+                        eLname = sp(1)
+                        _retrieve_eStudData()
+                    ElseIf UBound(sp) = 2 Then
+                        eFname = sp(0) + " " + sp(1)
+                        eLname = sp(2)
+                        _retrieveStudData()
+                    Else
+
+                        _retrieveStudData()
+                    End If
+                Catch ex As Exception
+                    MessageBox.Show("please retry and select format in the suggestion")
+                Finally
+                    dbConn.Close()
+                End Try
+            Case Else
+                MessageBox.Show("please retry and select format in the suggestion")
+
+        End Select
+    End Sub
+    Private Sub btn_eClear_Click(sender As Object, e As EventArgs) Handles btn_eClear.Click
+
+    End Sub
+    Private Sub btn_eEnter_Click(sender As Object, e As EventArgs) Handles btn_eEnter.Click
+        display_estudData()
+    End Sub
+    Private Sub btn_eSave_Click(sender As Object, e As EventArgs) Handles btn_eSave.Click
+
+    End Sub
+    Private Sub btn_ePrint_Click(sender As Object, e As EventArgs) Handles btn_ePrint.Click
+
+    End Sub
+    '#############################################################Senior-High depatment Section#########################################################
+    Sub _retrieve_sStudData()
+        Try
+            _dbConnection("db_lccsams")
+            Dim querry2 As String = " Select s.sstud_id,s.sstud_Fname,s.sstud_mi,s.sstud_Lname,sy.ssy_name,gl.sgl_name from tbl_seniorhigh_students s inner join tbl_seniorhigh_sy  sy on  sy.ssy_id=s.ssy_id inner join tbl_seniorhigh_gl  gl on gl.sgl_id=s.sgl_id  where s.sstud_Fname='" & sFname & "' and s.sstud_Lname='" & sLname & "'"
+            dbConn.Open()
+            sqlCommand = New MySqlCommand(querry2, dbConn)
+            dr = sqlCommand.ExecuteReader
+            While dr.Read
+                txtb_sStudID.Text = dr(0).ToString
+                txtb_sStudName.Text = dr(1).ToString.ToUpper + " " + dr(2).ToString.ToUpper + " " + dr(3).ToString.ToUpper
+                txtb_sSY.Text = dr(4).ToString
+                txtb_sGL.Text = dr(5).ToString
+            End While
+            dbConn.Close()
+            Dim particular_list As String = "select f.sfees_id, f.sfees_name from tbl_senior_fees f inner join tbl_seniorhigh_students s on s.ssy_id=f.ssy_id inner join tbl_seniorhigh_gl gl on s.sgl_id=gl.sgl_id  where s.sstud_id='" & txtb_sStudID.Text & "'"
+            _loadToCombobox(particular_list, cbo_sParticulars)
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+
+        End Try
+
+    End Sub
+    Sub display_sstudData()
+        Select Case cbo_eSearchBy.Text
+            Case "Id Number"
+                _dbConnection("db_lccsams")
+                Try
+                    Dim querry3 As String = " Select s.sstud_id,s.sstud_Fname,s.sstud_mi,s.sstud_Lname,sy.ssy_name,gl.sgl_name from tbl_seniorhigh_students s inner join tbl_seniorhigh_sy  sy on  sy.ssy_id=s.ssy_id inner join tbl_seniorhigh_gl  gl on gl.sgl_id=s.sgl_id   where s.sstud_id='" & txtb_sSearch.Text & "'"
+                    dbConn.Open()
+                    sqlCommand = New MySqlCommand(querry3, dbConn)
+                    dr = sqlCommand.ExecuteReader
+                    While dr.Read
+                        txtb_sStudID.Text = dr(0).ToString
+                        txtb_sStudName.Text = dr(1).ToString.ToUpper + " " + dr(2).ToString.ToUpper + " " + dr(3).ToString.ToUpper
+                        txtb_sSY.Text = dr(4).ToString
+                        txtb_sGL.Text = dr(5).ToString
+                    End While
+                    dbConn.Close()
+                    Dim particular_list As String = "select f.sfees_id, f.sfees_name from tbl_senior_fees f inner join tbl_seniorhigh_students s on s.ssy_id=f.ssy_id inner join tbl_seniorhigh_gl gl on s.sgl_id=gl.sgl_id  where s.sstud_id='" & txtb_sStudID.Text & "'"
+                    _loadToCombobox(particular_list, cbo_sParticulars)
+                Catch ex As Exception
+                Finally
+                    dbConn.Close()
+                End Try
+
+            Case "Name"
+                Try
+                    Dim sp() As String
+                    sp = txtb_sSearch.Text.Split(" ")
+                    If UBound(sp) = 1 Then
+                        sFname = sp(0)
+                        sLname = sp(1)
+                        _retrieve_sStudData()
+                    ElseIf UBound(sp) = 2 Then
+                        sFname = sp(0) + " " + sp(1)
+                        sLname = sp(2)
+                        _retrieve_sStudData()
+                    Else
+
+                        _retrieve_sStudData()
+                    End If
+                Catch ex As Exception
+                    MessageBox.Show("please retry and select format in the suggestion")
+                Finally
+                    dbConn.Close()
+                End Try
+        End Select
+    End Sub
+
+    Private Sub btn_sEnter_Click(sender As Object, e As EventArgs) Handles btn_sEnter.Click
+        display_sstudData()
+    End Sub
+
+    Private Sub btn_sClear_Click(sender As Object, e As EventArgs) Handles btn_sClear.Click
+
+    End Sub
+    Private Sub btn_sSave_Click(sender As Object, e As EventArgs) Handles btn_sSave.Click
+
+    End Sub
+    Private Sub btn_sPrint_Click(sender As Object, e As EventArgs) Handles btn_sPrint.Click
+
+    End Sub
+    '####################################################Junior-High department Section##################################################################
+    Sub _retrieve_jStudData()
+        Try
+            _dbConnection("db_lccsams")
+            Dim querry5 As String = " Select s.jstud_id,s.jstud_Fname,s.jstud_mi,s.jstud_Lname,sy.jsy_name,gl.jgl_name from tbl_juniorhigh_students s inner join tbl_juniorhigh_sy  sy on  sy.jsy_id=s.jsy_id inner join tbl_juniorhigh_gradelevel  gl on gl.jgl_id=s.jgl_id  where s.jstud_Fname='" & jFname & "' and s.jstud_Lname='" & jLname & "'"
+            dbConn.Open()
+            sqlCommand = New MySqlCommand(querry5, dbConn)
+            dr = sqlCommand.ExecuteReader
+            While dr.Read
+                txtb_jStudID.Text = dr(0).ToString
+                txtb_jStudName.Text = dr(1).ToString.ToUpper + " " + dr(2).ToString.ToUpper + " " + dr(3).ToString.ToUpper
+                txtb_jSY.Text = dr(4).ToString
+                txtb_jGL.Text = dr(5).ToString
+            End While
+            dbConn.Close()
+            Dim particular_list As String = "select f.jfees_id, f.jfees_name from tbl_junior_fees f inner join tbl_juniorhigh_students s on s.jsy_id=f.jsy_id  where s.jstud_id='" & txtb_jStudID.Text & "'"
+            _loadToCombobox(particular_list, cbo_jParticulars)
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+
+        End Try
+
+    End Sub
+    Sub display_jstudData()
+        Select Case cbo_jSearchBY.Text
+            Case "Id Number"
+                Try
+                    _dbConnection("db_lccsams")
+                    Dim selectjStudAcct As String = " Select s.jstud_id,s.jstud_Fname,s.jstud_mi,s.jstud_Lname,sy.jsy_name,gl.jgl_name from tbl_juniorhigh_students s inner join tbl_juniorhigh_sy sy on  sy.jsy_id=s.jsy_id  where s.jstud_id='" & txtb_jSearch.Text & "'"
+                    dbConn.Open()
+                    sqlCommand = New MySqlCommand(selectjStudAcct, dbConn)
+                    dr = sqlCommand.ExecuteReader
+                    While dr.Read
+                        txtb_jStudID.Text = dr(0).ToString
+                        txtb_jStudName.Text = dr(1).ToString.ToUpper + " " + dr(2).ToString.ToUpper + " " + dr(3).ToString.ToUpper
+                        txtb_jSY.Text = dr(4).ToString
+                        txtb_jGL.Text = dr(5).ToString
+                    End While
+                    dbConn.Close()
+                    Dim particular_list As String = "select f.jfees_id, f.jfees_name from tbl_junior_fees f inner join tbl_juniorhigh_students s on s.jsy_id=f.jsy_id where s.jstud_id='" & txtb_jStudID.Text & "'"
+                    _loadToCombobox(particular_list, cbo_jParticulars)
+                Catch ex As Exception
+                    MessageBox.Show(ex.Message)
+                Finally
+                    dbConn.Close()
+                End Try
+
+            Case "Name"
+                Try
+                    Dim sp() As String
+                    sp = txtb_jSearch.Text.Split(" ")
+                    If UBound(sp) = 1 Then
+                        jFname = sp(0)
+                        jLname = sp(1)
+                        _retrieve_jStudData()
+                    ElseIf UBound(sp) = 2 Then
+                        jFname = sp(0) + " " + sp(1)
+                        jLname = sp(2)
+                        _retrieve_jStudData()
+                    Else
+                        _retrieve_jStudData()
+                    End If
+                Catch ex As Exception
+                    MessageBox.Show("please retry and select format in the suggestion!")
+                Finally
+                    dbConn.Close()
+                End Try
+        End Select
+    End Sub
+
+    Private Sub btn_jEnter_Click(sender As Object, e As EventArgs) Handles btn_jEnter.Click
+        display_jstudData()
+    End Sub
+
+    Private Sub btn_jClear_Click(sender As Object, e As EventArgs) Handles btn_jClear.Click
+
+    End Sub
+
+    Private Sub btn_jSave_Click(sender As Object, e As EventArgs) Handles btn_jSave.Click
+
+    End Sub
+
+    Private Sub btn_jPrint_Click(sender As Object, e As EventArgs) Handles btn_jPrint.Click
+
+    End Sub
 End Class

@@ -79,7 +79,8 @@ Public Class frm_slists
     End Sub
     '######################################################College Dept Section#####################################################################
     Private Sub btn_addNstud_Click(sender As Object, e As EventArgs) Handles btn_addNstud.Click
-        If MessageBox.Show("", "Do You want to add new student", MessageBoxButtons.YesNo) = DialogResult.Yes Then
+
+        If dlg_addstudents.ShowDialog = DialogResult.Yes Then
             txtb_studFname.Enabled = True
             txtb_studLname.Enabled = True
             txtb_studMI.Enabled = True
@@ -108,7 +109,6 @@ Public Class frm_slists
             btn_addNstud.Enabled = False
             btn_updtStud.Enabled = False
             a = 1
-
         End If
     End Sub
     Dim a As Integer
@@ -136,7 +136,7 @@ Public Class frm_slists
     End Sub
     Private Sub btn_save_Click(sender As Object, e As EventArgs) Handles btn_save.Click
         If txtb_studFname.Text = "" Or txtb_studLname.Text = "" Or cbo_course.Text = "" Or cbo_yearlevel.Text = "" Or cbo_sem.Text = "" Then
-            MessageBox.Show("Please fill-up all fields!")
+            dlg_fillup.ShowDialog()
         Else
             txtb_studFname.Enabled = False
             txtb_studLname.Enabled = False
@@ -387,7 +387,7 @@ Public Class frm_slists
 
     Private Sub btn_eSave_Click(sender As Object, e As EventArgs) Handles btn_eSave.Click
         If txtb_eStudFname.Text = "" Or txtb_eStudFname.Text = "" Or cbo_eGradeLevel.Text = "" Or cbo_eSYName.Text = "" Then
-            MessageBox.Show("Please fill-up all fields!")
+            dlg_fillup.ShowDialog()
         Else
             txtb_eStudFname.Enabled = False
             txtb_eStudFname.Enabled = False
@@ -419,7 +419,7 @@ Public Class frm_slists
     End Sub
 
     Private Sub btn_eAddNewStud_Click(sender As Object, e As EventArgs) Handles btn_eAddNewStud.Click
-        If MessageBox.Show("", "Do You want to add new student", MessageBoxButtons.YesNo) = DialogResult.Yes Then
+        If dlg_addstudents.ShowDialog = DialogResult.Yes Then
             txtb_eStudFname.Enabled = True
             txtb_estudLname.Enabled = True
             txtb_estudMI.Enabled = True
@@ -444,10 +444,11 @@ Public Class frm_slists
             btn_eUpdateNewStud.Enabled = False
             b = 1
         End If
+
     End Sub
 
     Private Sub btn_eUpdateNewStud_Click(sender As Object, e As EventArgs) Handles btn_eUpdateNewStud.Click
-        If MessageBox.Show("", "Do You want to Update a Student?", MessageBoxButtons.YesNo) = DialogResult.Yes Then
+        If dlg_updatestudents.ShowDialog = DialogResult.Yes Then
             txtb_eStudFname.Enabled = True
             txtb_estudLname.Enabled = True
             txtb_estudMI.Enabled = True
@@ -462,8 +463,6 @@ Public Class frm_slists
             btn_eViewAccount.Enabled = False
             btn_eCancel.Enabled = True
             b = 2
-
-
         End If
 
     End Sub
@@ -545,7 +544,7 @@ Public Class frm_slists
     End Sub
 
     Private Sub btn_sAddStud_Click(sender As Object, e As EventArgs) Handles btn_sAddStud.Click
-        If MessageBox.Show("", "Do You want to add new student", MessageBoxButtons.YesNo) = DialogResult.Yes Then
+        If dlg_addstudents.ShowDialog = DialogResult.Yes Then
             txtb_sFname.Enabled = True
             txtb_sLname.Enabled = True
             txtb_smi.Enabled = True
@@ -568,13 +567,13 @@ Public Class frm_slists
             btn_sCancel.Enabled = True
             btn_sSave.Enabled = True
             btn_sUpdateStud.Enabled = False
-            c = 1
-
+            C = 1
         End If
+
     End Sub
 
     Private Sub btn_sUpdateStud_Click(sender As Object, e As EventArgs) Handles btn_sUpdateStud.Click
-        If MessageBox.Show("", "Do You want to Update a Student?", MessageBoxButtons.YesNo) = DialogResult.Yes Then
+        If dlg_updatestudents.ShowDialog = DialogResult.Yes Then
             txtb_sFname.Enabled = True
             txtb_sLname.Enabled = True
             txtb_smi.Enabled = True
@@ -589,14 +588,12 @@ Public Class frm_slists
             btn_sViewAccount.Enabled = False
             btn_sCancel.Enabled = True
             C = 2
-
-
         End If
     End Sub
 
     Private Sub btn_sSave_Click(sender As Object, e As EventArgs) Handles btn_sSave.Click
         If txtb_sFname.Text = "" Or txtb_sLname.Text = "" Or cbo_sGL.Text = "" Or cbo_sSY.Text = "" Then
-            MessageBox.Show("Please fill-up all fields!")
+            dlg_fillup.ShowDialog()
         Else
             txtb_sFname.Enabled = False
             txtb_sLname.Enabled = False
@@ -705,7 +702,7 @@ Public Class frm_slists
     End Sub
 
     Private Sub btn_jAddStud_Click(sender As Object, e As EventArgs) Handles btn_jAddStud.Click
-        If MessageBox.Show("", "Do You want to add new student", MessageBoxButtons.YesNo) = DialogResult.Yes Then
+        If dlg_addstudents.ShowDialog = DialogResult.Yes Then
             txtb_jStudFname.Enabled = True
             txtb_jStudLname.Enabled = True
             txtb_jStudMI.Enabled = True
@@ -730,12 +727,12 @@ Public Class frm_slists
             btn_jUpdateStud.Enabled = False
             btn_jViewAcct.Enabled = False
             d = 1
-
         End If
+
     End Sub
 
     Private Sub btn_jUpdateStud_Click(sender As Object, e As EventArgs) Handles btn_jUpdateStud.Click
-        If MessageBox.Show("", "Do You want to Update a Student?", MessageBoxButtons.YesNo) = DialogResult.Yes Then
+        If dlg_updatestudents.ShowDialog = DialogResult.Yes Then
             txtb_jStudFname.Enabled = True
             txtb_jStudLname.Enabled = True
             txtb_jStudMI.Enabled = True
@@ -750,14 +747,14 @@ Public Class frm_slists
             btn_jViewAcct.Enabled = False
             btn_jCancel.Enabled = True
             d = 2
-
-
         End If
+
+
     End Sub
 
     Private Sub btn_jSave_Click(sender As Object, e As EventArgs) Handles btn_jSave.Click
         If txtb_jStudFname.Text = "" Or txtb_jStudLname.Text = "" Or cbo_jGL.Text = "" Or cbo_jSY.Text = "" Then
-            MessageBox.Show("Please fill-up all fields!")
+            dlg_fillup.ShowDialog()
         Else
             txtb_jStudFname.Enabled = False
             txtb_jStudLname.Enabled = False
@@ -777,12 +774,12 @@ Public Class frm_slists
                     Dim jNewStud As String = "Insert into tbl_juniorhigh_students values ('" & txtb_jStud_id.Text & "','" & txtb_jStudFname.Text & "','" & txtb_jStudLname.Text & "','" & txtb_jStudMI.Text & "','" & cbo_jSY.SelectedValue & "','" & cbo_jGL.SelectedValue & "')"
                     _insertData(jNewStud)
                     dlg_savesuccessfully.ShowDialog()
-                    _displayRecords(sStudR, dg_jStudRec)
+                    _displayRecords(jSelect_studRec, dg_jStudRec)
                 Case 2
                     Dim jUpdateStud = "Update tbl_juniorhigh_students set jstud_fname='" & txtb_jStudFname.Text & "',jstud_lname='" & txtb_jStudLname.Text & "',jstud_mi='" & txtb_jStudMI.Text & "',jsy_id='" & cbo_jSY.SelectedValue & "',jgl_id='" & cbo_jGL.SelectedValue & "' where jstud_id='" & txtb_jStud_id.Text & "' "
                     _dbConnection("db_lccsams")
                     _updateData(jUpdateStud)
-                    _displayRecords(sStudR, dg_jStudRec)
+                    _displayRecords(jSelect_studRec, dg_jStudRec)
                     UpdatedSuccessfully.ShowDialog()
             End Select
         End If

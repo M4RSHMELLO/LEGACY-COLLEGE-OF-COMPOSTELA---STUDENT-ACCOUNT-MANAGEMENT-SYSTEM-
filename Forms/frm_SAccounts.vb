@@ -6,6 +6,9 @@ Public Class frm_SAccounts
         _loadToCombobox(slctSY, cbo_sortSY)
         _loadToCombobox(slctS, cbo_sortSem)
         _loadToCombobox(eSelect_SY, cbo_eSortSY)
+        _loadToCombobox(sSelect_SY, cbo_sSortBY)
+        _loadToCombobox(jSelect_SY, cbo_jSortBY)
+
     End Sub
 
     Public Sub txtb_studAcct_ID_Click(sender As Object, e As EventArgs) Handles txtb_studAcct_ID.Click

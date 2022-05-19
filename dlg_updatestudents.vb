@@ -1,6 +1,9 @@
 ﻿Imports System.Windows.Forms
 
-Public Class dlg_addstudents
+Public Class dlg_updatestudents
+
+
+
 
     Private Sub dlg_addsdnt_yes_Click(sender As Object, e As EventArgs) Handles dlg_addsdnt_yes.Click
         Me.DialogResult = System.Windows.Forms.DialogResult.Yes

@@ -218,7 +218,7 @@
 
     '###########################################################Elementary Depatment Section##############################################################
     Dim b As Integer = 0
-    Dim esy_id As Integer = 0
+    Dim efees_id As Integer = 0
 
 
     Private Sub btn_eAdd_Click(sender As Object, e As EventArgs) Handles btn_eAdd.Click
@@ -275,12 +275,19 @@
                 dlg_savesuccessfully.ShowDialog()
             Case 2
                 _dbConnection("db_lccsams")
-                _updateData("update tbl_elem_fees set efees_name='" & txtb_eFeeName.Text & "',efees_amount= '" & txtb_eFeeName.Text & "' where efees_id='" & esy_id & "' ")
-                btn_update.Enabled = True
-                btn_save.Enabled = False
+                _updateData("update tbl_elem_fees set efees_name='" & txtb_eFeeName.Text & "',efees_amount= '" & txtb_eFeeName.Text & "' where efees_id='" & efees_id & "' ")
+
                 _displayRecords(efeesR, dg_eFeesRec)
                 UpdatedSuccessfully.ShowDialog()
         End Select
+        btn_eAdd.Enabled = True
+        btn_eUpdate.Enabled = True
+        btn_eCancel.Enabled = False
+        btn_eSave.Enabled = False
+        dg_eFeesRec.Enabled = True
+        cbo_eSY.Enabled = False
+        txtb_eFeeName.Enabled = False
+        txtb_eFeeAmnt.Enabled = False
     End Sub
 
     Private Sub cbo_eSortSy_SelectionChangeCommitted(sender As Object, e As EventArgs) Handles cbo_eSortSy.SelectionChangeCommitted
@@ -303,7 +310,7 @@
             Dim s = e.RowIndex
             With dg_eFeesRec
                 cbo_eSY.Text = cbo_eSortSy.Text
-                esy_id = .Item(0, s).Value.ToString
+                efees_id = .Item(0, s).Value.ToString
                 txtb_eFeeName.Text = .Item(1, s).Value.ToString
                 txtb_eFeeAmnt.Text = .Item(2, s).Value.ToString
             End With
@@ -487,21 +494,26 @@
                 _updateData("update tbl_junior_fees set jfees_name='" & txtb_jFeesName.Text & "', jfees_amount='" & txtb_jFeesAmnt.Text & "' where jfees_id='" & jfees_id & "'")
                 btn_sUpdate.Enabled = True
                 btn_sSave.Enabled = False
+
                 UpdatedSuccessfully.ShowDialog()
                 _displayRecords(jFeesR, dg_jFeesRec)
         End Select
+        cbo_jSY.Enabled = False
+        txtb_jFeesName.Enabled = False
+        txtb_jFeesAmnt.Enabled = False
+        btn_jAdd.Enabled = True
+        btn_jUpdate.Enabled = True
+        btn_jCancel.Enabled = False
+        btn_jSave.Enabled = False
+        dg_jFeesRec.Enabled = True
     End Sub
     Private Sub cbo_jSortSY_SelectionChangeCommitted(sender As Object, e As EventArgs) Handles cbo_jSortSY.SelectionChangeCommitted
         Try
             Dim jFeesR_sort As String = "select jfees_id,jfees_name, jfees_amount from tbl_junior_fees where jsy_id='" & cbo_jSortSY.SelectedValue & "' "
-
             _dbConnection("db_lccsams")
-
-
             txtb_jFeesAmnt.Clear()
             txtb_jFeesName.Clear()
-            _displayRecords(sFeesR_sort, dg_jFeesRec)
-
+            _displayRecords(jFeesR_sort, dg_jFeesRec)
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
