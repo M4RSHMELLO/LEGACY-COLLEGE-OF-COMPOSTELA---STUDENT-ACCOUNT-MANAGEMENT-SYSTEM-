@@ -86,13 +86,11 @@
                     MessageBox.Show("Error: ", ex.Message)
                 Finally
                     dbConn.Close()
-
-
                 End Try
 
             Case 2
                 _dbConnection("db_lccsams")
-                _updateData("")
+                _updateData("update tbl_coll_fees set fees_name='" & txtb_CollName.Text & "',fees_amount='" & txtb_collAmnt.Text & "', ")
                 btn_update.Enabled = True
                 btn_save.Enabled = False
                 _displayRecords(sFeesR, dg_pRecords)
@@ -101,11 +99,13 @@
     Private Sub btn_update_Click(sender As Object, e As EventArgs) Handles btn_update.Click
         If MessageBox.Show("", "Do You want to Update this fees?", MessageBoxButtons.YesNo) = DialogResult.Yes Then
             a = 2
-            cbo_yl.Enabled = True
-            cbo_course.Enabled = True
-            cbo_MSY.Enabled = True
-            cbo_MS.Enabled = True
+            'cbo_yl.Enabled = True
+            'cbo_course.Enabled = True
+            'cbo_MSY.Enabled = True
+            'cbo_MS.Enabled = True
 
+            txtb_CollName.Enabled = True
+            txtb_collAmnt.Enabled = True
             btn_save.Enabled = True
             btn_update.Enabled = False
 

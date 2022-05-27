@@ -296,6 +296,7 @@ Public Class frm_slists
             txtb_RpU.Clear()
             _loadToTextbox(querry2, txtb_RpU)
         End If
+
     End Sub
 
     Private Sub cbo_yearlevel_SelectionChangeCommitted(sender As Object, e As EventArgs) Handles cbo_yearlevel.SelectionChangeCommitted
@@ -306,8 +307,6 @@ Public Class frm_slists
     Private Sub cbo_sem_SelectionChangeCommitted(sender As Object, e As EventArgs) Handles cbo_sem.SelectionChangeCommitted
         cbo_course.SelectedIndex = -1
     End Sub
-
-
     Private Sub btn_cancel_Click(sender As Object, e As EventArgs) Handles btn_cancel.Click
         'disabled
         txtb_studFname.Enabled = False

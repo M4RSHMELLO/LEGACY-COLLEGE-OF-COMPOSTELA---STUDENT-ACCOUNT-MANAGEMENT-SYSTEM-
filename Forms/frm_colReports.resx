@@ -117,41 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="DataGridViewTextBoxColumn1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="DataGridViewTextBoxColumn2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="DataGridViewTextBoxColumn3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="BunifuThinButton22.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAF0AAABJCAYAAABfNipOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKsSURBVHhe7ZzPSxRxGMb7i7p16dapU10SAvFgHSRIMAJF
-        RKRDSCKiHlYIDYMyFZMVhUSkWMPFWFETETdB+7mCmjSIB9HDK893x6llJ/vhfve5PB94YGF25vCZ4Z13
-        D/tcCILAlPJG0gmRdEIknRBJJ0TSCTlT+vb3XRtdmLb7yQ6rHmixq4/v2sX2m0pM4AaOal8+ssHMpH3b
-        2Yp1ivxW+tTKrLtQ/XiXTa6lbf7LquWCHRPxwA0cvV7PWPOrhHMH+XFui6TjDjWOd9udkVbbPfgRXlL8
-        K/uHB05+zfBD29j6XOC4QDqE3+ivt7GVVHiqOC+zm0tW+azJsl834qXjCZfw0oOxg3lfJB0zHCNF+KHr
-        7QvrmRn+KR1bCga/Zrg/Do+PrOJpgy1/yual4y2LoS/88uTdmLVN9+elY7fEqiP8kt3+6BYVJ/1ab51t
-        7uXCQ8IXGDGXOqvy0i9333J7pfAPfr066fggyoOkE5B0ApJOQNIJSDoBSScg6QQknYCkE5B0ApJOQNIJ
-        SDoBSScg6QQknYCkE5B0ApJOQNIJSDoBSScg6QQknYCkE5B0ApJOQNIJSDoBSScg6QQknYCkE5B0ApJO
-        QNIJSDoBSScg6QQi6fgXL/7NK/wTSUcDhqqiykMkHZVHaOARfkH/AnoYnPREasiVwAi/oDUK7VFOOvql
-        rvfd01z3TF2y3Sbep/LSkc43z60nPRIeFqUGNYvot4TrSDoqpVDutZxbD78mSgVqujBJTgsyI+kI+qXQ
-        M6XCndIB4bcHH1hqLRN5LpCOpD8susqjvrlkeJr4X1DRhSf8V+FIkXQEowYFX7hDeOOqxe7vQUMU5jfq
-        ctGNFte5Gyv9NLhDWHGuJGrcUq/8OajmwgsTxdBxTpEzpSt+IumESDohkk6IpJc9gZ0AnnXDPtCmFxcA
-        AAAASUVORK5CYII=
-</value>
-  </data>
-  <metadata name="DataGridViewTextBoxColumn4.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="DataGridViewTextBoxColumn5.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="DataGridViewTextBoxColumn6.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
+  <metadata name="CrystalReport31.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
   </metadata>
 </root>

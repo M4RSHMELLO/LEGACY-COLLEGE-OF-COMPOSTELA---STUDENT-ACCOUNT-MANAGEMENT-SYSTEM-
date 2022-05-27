@@ -118,22 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="BunifuThinButton21.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAFAAAAAtCAYAAAA5reyyAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJYSURBVGhD7ZpNSxtRGIX7i7rrpjtXXelGQSgutAspWLAU
-        UkSKuCilRSTJIkLRkkL9xJaIQkVEScVgiagNUkwFP9sEjIqDZBF08cq5GUdDxjjxddU5DxwITBKYh9x7
-        J/fcB5ZlCXP3UKAyFKgMBSpDgcpQoDIVBR4cHcq3lVl5FeuV5qEuefKxTR72NP73wX3ifl98fS8jyWn5
-        l8u6+kFuFDizvmi+KDAZkumNhCzv/5aMlRM/gPvE/c5tJuXN94jxAJFunsoEwnbHZFiej7+Tw/yJ/ZX+
-        5rSQNyJbx97KVnavxFeJQMirjwZkYj1uf5RcZ3F7TZ5+6ZT03y13gfjlUV5lMLQxP5YJxJyHYUtuJ7Qw
-        LH0/xq4EYrXFRMk5zxuF8zNp+PxaUrvpokCsMJgkiXc+/ZyQD7PRokA872DJJt5JH+yYBdcIrO1vl+3j
-        jH2JeAHD+FGwqSjwcbjFPOuQ6sC/FiMQL0j1UKASClRCgUooUAkFKqFAJRSohAKVUKASClRCgUocgdhV
-        wO4CqQ5HIHaj/VJZ3ieOQNR1aJyId7B/in1UIzASHzVFCfEO2ku0mEYges66gZecB6ugPdYjU7/iRYFI
-        cH5Q+hLj9mVSCRx1wXkheHMEotpEYZzKbNpvI26g+sVovTxw5AhE0HOi72TB5A7kPRvplvhG0nFWIhBJ
-        /Fk1dd3AUsz+GAGoffHLuy4PKROIYDijNIZtrDZ+PbGAphLzHY74oTt3OyfoKvAysI2luibSah4a/RbU
-        vVgscMjUzQ9SUSBzeyhQGQpUhgKVoUBVLLkAN0LaLAaE2pAAAAAASUVORK5CYII=
-</value>
-  </data>
   <data name="BunifuThinButton23.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAFAAAAAtCAYAAAA5reyyAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -173,6 +157,9 @@
     <value>True</value>
   </metadata>
   <metadata name="s_lName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="midd_i.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="s_yLevel.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

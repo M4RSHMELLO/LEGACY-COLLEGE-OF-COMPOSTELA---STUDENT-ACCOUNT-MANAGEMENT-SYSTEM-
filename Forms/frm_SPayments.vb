@@ -506,6 +506,8 @@ Public Class frm_SPayments
 
         End Select
     End Sub
+
+
     Private Sub btn_eClear_Click(sender As Object, e As EventArgs) Handles btn_eClear.Click
 
     End Sub

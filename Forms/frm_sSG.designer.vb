@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frm_sSG
     Inherits System.Windows.Forms.UserControl
 
     'UserControl overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,36 +20,33 @@ Partial Class frm_sSG
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_sSG))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.BunifuThinButton21 = New Bunifu.Framework.UI.BunifuThinButton2()
-        Me.cboSearchBy = New System.Windows.Forms.ComboBox()
+        Me.cbo_SearchBy = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.txtSearch = New System.Windows.Forms.TextBox()
+        Me.txtb_Search = New System.Windows.Forms.TextBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label15 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.txtb_studid = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.x = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtb_studLname = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox10 = New System.Windows.Forms.TextBox()
-        Me.TextBox11 = New System.Windows.Forms.TextBox()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
-        Me.txtStudentName = New System.Windows.Forms.TextBox()
+        Me.txtb_studSem = New System.Windows.Forms.TextBox()
+        Me.txtb_studCourse = New System.Windows.Forms.TextBox()
+        Me.txtb_SY = New System.Windows.Forms.TextBox()
+        Me.txtb_studLevel = New System.Windows.Forms.TextBox()
+        Me.txtb_studFname = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.BunifuThinButton23 = New Bunifu.Framework.UI.BunifuThinButton2()
@@ -58,78 +55,60 @@ Partial Class frm_sSG
         Me.RadioButton3 = New System.Windows.Forms.RadioButton()
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.txtb_ScholarAmnt = New System.Windows.Forms.TextBox()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.txtb_ScholarType = New System.Windows.Forms.TextBox()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.Label16 = New System.Windows.Forms.Label()
-        Me.BunifuCustomDataGrid1 = New Bunifu.Framework.UI.BunifuCustomDataGrid()
+        Me.dg_StudScholarRec = New Bunifu.Framework.UI.BunifuCustomDataGrid()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.cbo_SelectDept = New System.Windows.Forms.ComboBox()
+        Me.Label14 = New System.Windows.Forms.Label()
         Me.s_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.s_fName = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.s_lName = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.midd_i = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.s_yLevel = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
-        CType(Me.BunifuCustomDataGrid1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dg_StudScholarRec, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
+        Me.FlowLayoutPanel1.SuspendLayout()
+        Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.BunifuThinButton21)
-        Me.GroupBox1.Controls.Add(Me.cboSearchBy)
+        Me.GroupBox1.Controls.Add(Me.cbo_SearchBy)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.txtSearch)
-        Me.GroupBox1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.GroupBox1.Controls.Add(Me.txtb_Search)
         Me.GroupBox1.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(0, 0)
+        Me.GroupBox1.Location = New System.Drawing.Point(3, 3)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(1066, 70)
+        Me.GroupBox1.Size = New System.Drawing.Size(548, 70)
         Me.GroupBox1.TabIndex = 37
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "SEARCH FOR STUDENT"
         '
-        'BunifuThinButton21
+        'cbo_SearchBy
         '
-        Me.BunifuThinButton21.ActiveBorderThickness = 1
-        Me.BunifuThinButton21.ActiveCornerRadius = 20
-        Me.BunifuThinButton21.ActiveFillColor = System.Drawing.Color.Transparent
-        Me.BunifuThinButton21.ActiveForecolor = System.Drawing.Color.White
-        Me.BunifuThinButton21.ActiveLineColor = System.Drawing.Color.DarkGreen
-        Me.BunifuThinButton21.BackColor = System.Drawing.SystemColors.Control
-        Me.BunifuThinButton21.BackgroundImage = CType(resources.GetObject("BunifuThinButton21.BackgroundImage"), System.Drawing.Image)
-        Me.BunifuThinButton21.ButtonText = "ENTER"
-        Me.BunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BunifuThinButton21.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BunifuThinButton21.ForeColor = System.Drawing.Color.DarkGreen
-        Me.BunifuThinButton21.IdleBorderThickness = 1
-        Me.BunifuThinButton21.IdleCornerRadius = 20
-        Me.BunifuThinButton21.IdleFillColor = System.Drawing.Color.White
-        Me.BunifuThinButton21.IdleForecolor = System.Drawing.Color.SeaGreen
-        Me.BunifuThinButton21.IdleLineColor = System.Drawing.Color.SeaGreen
-        Me.BunifuThinButton21.Location = New System.Drawing.Point(792, 17)
-        Me.BunifuThinButton21.Margin = New System.Windows.Forms.Padding(5)
-        Me.BunifuThinButton21.Name = "BunifuThinButton21"
-        Me.BunifuThinButton21.Size = New System.Drawing.Size(80, 45)
-        Me.BunifuThinButton21.TabIndex = 8
-        Me.BunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'cboSearchBy
-        '
-        Me.cboSearchBy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboSearchBy.FormattingEnabled = True
-        Me.cboSearchBy.Items.AddRange(New Object() {"Id Number", "Name"})
-        Me.cboSearchBy.Location = New System.Drawing.Point(641, 23)
-        Me.cboSearchBy.Name = "cboSearchBy"
-        Me.cboSearchBy.Size = New System.Drawing.Size(134, 33)
-        Me.cboSearchBy.TabIndex = 6
+        Me.cbo_SearchBy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbo_SearchBy.FormattingEnabled = True
+        Me.cbo_SearchBy.Items.AddRange(New Object() {"Id Number", "Name"})
+        Me.cbo_SearchBy.Location = New System.Drawing.Point(122, 25)
+        Me.cbo_SearchBy.Name = "cbo_SearchBy"
+        Me.cbo_SearchBy.Size = New System.Drawing.Size(134, 33)
+        Me.cbo_SearchBy.TabIndex = 6
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label1.Location = New System.Drawing.Point(604, 31)
+        Me.Label1.Location = New System.Drawing.Point(85, 31)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(31, 25)
         Me.Label1.TabIndex = 7
@@ -139,78 +118,57 @@ Partial Class frm_sSG
         '
         Me.Label2.AutoSize = True
         Me.Label2.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label2.Location = New System.Drawing.Point(194, 31)
+        Me.Label2.Location = New System.Drawing.Point(17, 31)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(74, 25)
         Me.Label2.TabIndex = 5
         Me.Label2.Text = "SEARCH"
         '
-        'txtSearch
+        'txtb_Search
         '
-        Me.txtSearch.AutoCompleteCustomSource.AddRange(New String() {"Niño Agsoy", "Tajmahal Amarila", "Joshua Avila", "Harvey Baloria", "Faith Claire Bawan", "Mark Bello", "Charmel Camposo", "Kristel Ann Corpuz", "Princess Anne Dadul", "Vj Debuque", "Juvy Dela Cruz", "Laica Joy Delostrico", "Charles Deragosa", "Chris Lyn Joyce Diaz", "Amado Doverte", "John Mark Dulce", "James Bryan N. Dumail", "Junelyn Gumia", "Jessa Langwas", "Annalyn Larita", "Rhea Lynn Legaspi", "Mayter Lumiguid", "Charlene Manabat", "John Vincent A. Medillo", "Jericho Montealto", "Wendel Odilao", "Kurt Randall Oviedo", "Elson Patac", "Kate Pendon", "Carren Polinio", "Jhon Philip Pondar", "Arnic Reponte", "Quirjhon Dave Rivera", "Hanna Gladys Sala", "ARIEL SAOCEJO", "Rea Siarot", "Robel Sta Teresa", "Venus Torrevillas", "Tyrone Vibas", "Jerald Jose"})
-        Me.txtSearch.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.txtSearch.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
-        Me.txtSearch.Location = New System.Drawing.Point(273, 26)
-        Me.txtSearch.Name = "txtSearch"
-        Me.txtSearch.Size = New System.Drawing.Size(325, 30)
-        Me.txtSearch.TabIndex = 0
+        Me.txtb_Search.AutoCompleteCustomSource.AddRange(New String() {"Niño Agsoy", "Tajmahal Amarila", "Joshua Avila", "Harvey Baloria", "Faith Claire Bawan", "Mark Bello", "Charmel Camposo", "Kristel Ann Corpuz", "Princess Anne Dadul", "Vj Debuque", "Juvy Dela Cruz", "Laica Joy Delostrico", "Charles Deragosa", "Chris Lyn Joyce Diaz", "Amado Doverte", "John Mark Dulce", "James Bryan N. Dumail", "Junelyn Gumia", "Jessa Langwas", "Annalyn Larita", "Rhea Lynn Legaspi", "Mayter Lumiguid", "Charlene Manabat", "John Vincent A. Medillo", "Jericho Montealto", "Wendel Odilao", "Kurt Randall Oviedo", "Elson Patac", "Kate Pendon", "Carren Polinio", "Jhon Philip Pondar", "Arnic Reponte", "Quirjhon Dave Rivera", "Hanna Gladys Sala", "ARIEL SAOCEJO", "Rea Siarot", "Robel Sta Teresa", "Venus Torrevillas", "Tyrone Vibas", "Jerald Jose"})
+        Me.txtb_Search.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.txtb_Search.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
+        Me.txtb_Search.Location = New System.Drawing.Point(264, 25)
+        Me.txtb_Search.Name = "txtb_Search"
+        Me.txtb_Search.Size = New System.Drawing.Size(264, 30)
+        Me.txtb_Search.TabIndex = 0
         '
         'GroupBox2
         '
-        Me.GroupBox2.Controls.Add(Me.TextBox6)
         Me.GroupBox2.Controls.Add(Me.Label10)
-        Me.GroupBox2.Controls.Add(Me.Label15)
         Me.GroupBox2.Controls.Add(Me.Label6)
-        Me.GroupBox2.Controls.Add(Me.TextBox3)
+        Me.GroupBox2.Controls.Add(Me.txtb_studid)
         Me.GroupBox2.Controls.Add(Me.Label9)
-        Me.GroupBox2.Controls.Add(Me.TextBox2)
+        Me.GroupBox2.Controls.Add(Me.x)
         Me.GroupBox2.Controls.Add(Me.Label5)
         Me.GroupBox2.Controls.Add(Me.Label4)
         Me.GroupBox2.Controls.Add(Me.Label8)
         Me.GroupBox2.Controls.Add(Me.Label7)
-        Me.GroupBox2.Controls.Add(Me.TextBox1)
+        Me.GroupBox2.Controls.Add(Me.txtb_studLname)
         Me.GroupBox2.Controls.Add(Me.Label3)
-        Me.GroupBox2.Controls.Add(Me.TextBox10)
-        Me.GroupBox2.Controls.Add(Me.TextBox11)
-        Me.GroupBox2.Controls.Add(Me.TextBox9)
-        Me.GroupBox2.Controls.Add(Me.TextBox8)
-        Me.GroupBox2.Controls.Add(Me.txtStudentName)
+        Me.GroupBox2.Controls.Add(Me.txtb_studSem)
+        Me.GroupBox2.Controls.Add(Me.txtb_studCourse)
+        Me.GroupBox2.Controls.Add(Me.txtb_SY)
+        Me.GroupBox2.Controls.Add(Me.txtb_studLevel)
+        Me.GroupBox2.Controls.Add(Me.txtb_studFname)
         Me.GroupBox2.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox2.Location = New System.Drawing.Point(10, 76)
+        Me.GroupBox2.Location = New System.Drawing.Point(11, 12)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(430, 201)
+        Me.GroupBox2.Size = New System.Drawing.Size(441, 201)
         Me.GroupBox2.TabIndex = 38
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "STUDENT INFORMATION"
-        '
-        'TextBox6
-        '
-        Me.TextBox6.BackColor = System.Drawing.Color.White
-        Me.TextBox6.Enabled = False
-        Me.TextBox6.Location = New System.Drawing.Point(322, 128)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(93, 26)
-        Me.TextBox6.TabIndex = 24
         '
         'Label10
         '
         Me.Label10.AutoSize = True
         Me.Label10.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label10.Location = New System.Drawing.Point(4, 134)
+        Me.Label10.Location = New System.Drawing.Point(6, 100)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(70, 21)
         Me.Label10.TabIndex = 21
         Me.Label10.Text = "SCH-YEAR"
-        '
-        'Label15
-        '
-        Me.Label15.AutoSize = True
-        Me.Label15.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label15.Location = New System.Drawing.Point(229, 131)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(90, 21)
-        Me.Label15.TabIndex = 23
-        Me.Label15.Text = "NO. OF UNITS"
         '
         'Label6
         '
@@ -222,14 +180,14 @@ Partial Class frm_sSG
         Me.Label6.TabIndex = 19
         Me.Label6.Text = "SEMESTER"
         '
-        'TextBox3
+        'txtb_studid
         '
-        Me.TextBox3.BackColor = System.Drawing.Color.White
-        Me.TextBox3.Enabled = False
-        Me.TextBox3.Location = New System.Drawing.Point(88, 23)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(276, 26)
-        Me.TextBox3.TabIndex = 16
+        Me.txtb_studid.BackColor = System.Drawing.Color.White
+        Me.txtb_studid.Enabled = False
+        Me.txtb_studid.Location = New System.Drawing.Point(88, 23)
+        Me.txtb_studid.Name = "txtb_studid"
+        Me.txtb_studid.Size = New System.Drawing.Size(344, 26)
+        Me.txtb_studid.TabIndex = 16
         '
         'Label9
         '
@@ -241,20 +199,20 @@ Partial Class frm_sSG
         Me.Label9.TabIndex = 15
         Me.Label9.Text = "STUDENT ID"
         '
-        'TextBox2
+        'x
         '
-        Me.TextBox2.BackColor = System.Drawing.Color.White
-        Me.TextBox2.Enabled = False
-        Me.TextBox2.Location = New System.Drawing.Point(393, 60)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(30, 26)
-        Me.TextBox2.TabIndex = 14
+        Me.x.BackColor = System.Drawing.Color.White
+        Me.x.Enabled = False
+        Me.x.Location = New System.Drawing.Point(402, 60)
+        Me.x.Name = "x"
+        Me.x.Size = New System.Drawing.Size(30, 26)
+        Me.x.TabIndex = 14
         '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label5.Location = New System.Drawing.Point(229, 100)
+        Me.Label5.Location = New System.Drawing.Point(6, 135)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(59, 21)
         Me.Label5.TabIndex = 11
@@ -264,7 +222,7 @@ Partial Class frm_sSG
         '
         Me.Label4.AutoSize = True
         Me.Label4.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label4.Location = New System.Drawing.Point(4, 100)
+        Me.Label4.Location = New System.Drawing.Point(188, 102)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(78, 21)
         Me.Label4.TabIndex = 9
@@ -274,7 +232,7 @@ Partial Class frm_sSG
         '
         Me.Label8.AutoSize = True
         Me.Label8.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label8.Location = New System.Drawing.Point(362, 63)
+        Me.Label8.Location = New System.Drawing.Point(369, 63)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(29, 21)
         Me.Label8.TabIndex = 7
@@ -284,83 +242,83 @@ Partial Class frm_sSG
         '
         Me.Label7.AutoSize = True
         Me.Label7.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label7.Location = New System.Drawing.Point(182, 63)
+        Me.Label7.Location = New System.Drawing.Point(188, 63)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(77, 21)
         Me.Label7.TabIndex = 7
         Me.Label7.Text = "LAST NAME"
         '
-        'TextBox1
+        'txtb_studLname
         '
-        Me.TextBox1.BackColor = System.Drawing.Color.White
-        Me.TextBox1.Enabled = False
-        Me.TextBox1.Location = New System.Drawing.Point(261, 60)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 26)
-        Me.TextBox1.TabIndex = 6
+        Me.txtb_studLname.BackColor = System.Drawing.Color.White
+        Me.txtb_studLname.Enabled = False
+        Me.txtb_studLname.Location = New System.Drawing.Point(265, 60)
+        Me.txtb_studLname.Name = "txtb_studLname"
+        Me.txtb_studLname.Size = New System.Drawing.Size(105, 26)
+        Me.txtb_studLname.TabIndex = 6
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label3.Location = New System.Drawing.Point(1, 65)
+        Me.Label3.Location = New System.Drawing.Point(6, 63)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(81, 21)
         Me.Label3.TabIndex = 7
         Me.Label3.Text = "FIRST NAME"
         '
-        'TextBox10
+        'txtb_studSem
         '
-        Me.TextBox10.BackColor = System.Drawing.Color.White
-        Me.TextBox10.Enabled = False
-        Me.TextBox10.Location = New System.Drawing.Point(88, 165)
-        Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.Size = New System.Drawing.Size(100, 26)
-        Me.TextBox10.TabIndex = 6
+        Me.txtb_studSem.BackColor = System.Drawing.Color.White
+        Me.txtb_studSem.Enabled = False
+        Me.txtb_studSem.Location = New System.Drawing.Point(88, 165)
+        Me.txtb_studSem.Name = "txtb_studSem"
+        Me.txtb_studSem.Size = New System.Drawing.Size(344, 26)
+        Me.txtb_studSem.TabIndex = 6
         '
-        'TextBox11
+        'txtb_studCourse
         '
-        Me.TextBox11.BackColor = System.Drawing.Color.White
-        Me.TextBox11.Enabled = False
-        Me.TextBox11.Location = New System.Drawing.Point(322, 97)
-        Me.TextBox11.Name = "TextBox11"
-        Me.TextBox11.Size = New System.Drawing.Size(93, 26)
-        Me.TextBox11.TabIndex = 6
+        Me.txtb_studCourse.BackColor = System.Drawing.Color.White
+        Me.txtb_studCourse.Enabled = False
+        Me.txtb_studCourse.Location = New System.Drawing.Point(90, 132)
+        Me.txtb_studCourse.Name = "txtb_studCourse"
+        Me.txtb_studCourse.Size = New System.Drawing.Size(342, 26)
+        Me.txtb_studCourse.TabIndex = 6
         '
-        'TextBox9
+        'txtb_SY
         '
-        Me.TextBox9.BackColor = System.Drawing.Color.White
-        Me.TextBox9.Enabled = False
-        Me.TextBox9.Location = New System.Drawing.Point(88, 131)
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(100, 26)
-        Me.TextBox9.TabIndex = 6
+        Me.txtb_SY.BackColor = System.Drawing.Color.White
+        Me.txtb_SY.Enabled = False
+        Me.txtb_SY.Location = New System.Drawing.Point(90, 97)
+        Me.txtb_SY.Name = "txtb_SY"
+        Me.txtb_SY.Size = New System.Drawing.Size(100, 26)
+        Me.txtb_SY.TabIndex = 6
         '
-        'TextBox8
+        'txtb_studLevel
         '
-        Me.TextBox8.BackColor = System.Drawing.Color.White
-        Me.TextBox8.Enabled = False
-        Me.TextBox8.Location = New System.Drawing.Point(88, 97)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(100, 26)
-        Me.TextBox8.TabIndex = 6
+        Me.txtb_studLevel.BackColor = System.Drawing.Color.White
+        Me.txtb_studLevel.Enabled = False
+        Me.txtb_studLevel.Location = New System.Drawing.Point(265, 97)
+        Me.txtb_studLevel.Name = "txtb_studLevel"
+        Me.txtb_studLevel.Size = New System.Drawing.Size(167, 26)
+        Me.txtb_studLevel.TabIndex = 6
         '
-        'txtStudentName
+        'txtb_studFname
         '
-        Me.txtStudentName.BackColor = System.Drawing.Color.White
-        Me.txtStudentName.Enabled = False
-        Me.txtStudentName.Location = New System.Drawing.Point(88, 63)
-        Me.txtStudentName.Name = "txtStudentName"
-        Me.txtStudentName.Size = New System.Drawing.Size(88, 26)
-        Me.txtStudentName.TabIndex = 6
+        Me.txtb_studFname.BackColor = System.Drawing.Color.White
+        Me.txtb_studFname.Enabled = False
+        Me.txtb_studFname.Location = New System.Drawing.Point(88, 60)
+        Me.txtb_studFname.Name = "txtb_studFname"
+        Me.txtb_studFname.Size = New System.Drawing.Size(103, 26)
+        Me.txtb_studFname.TabIndex = 6
         '
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(660, 96)
+        Me.Label11.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(383, 82)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(210, 25)
+        Me.Label11.Size = New System.Drawing.Size(299, 34)
         Me.Label11.TabIndex = 40
         Me.Label11.Text = "SCHOLARSHIP GRANT LIST"
         '
@@ -372,15 +330,15 @@ Partial Class frm_sSG
         Me.GroupBox3.Controls.Add(Me.RadioButton3)
         Me.GroupBox3.Controls.Add(Me.RadioButton1)
         Me.GroupBox3.Controls.Add(Me.Label13)
-        Me.GroupBox3.Controls.Add(Me.TextBox4)
+        Me.GroupBox3.Controls.Add(Me.txtb_ScholarAmnt)
         Me.GroupBox3.Controls.Add(Me.Label12)
-        Me.GroupBox3.Controls.Add(Me.TextBox7)
+        Me.GroupBox3.Controls.Add(Me.txtb_ScholarType)
         Me.GroupBox3.Controls.Add(Me.TextBox5)
         Me.GroupBox3.Controls.Add(Me.Label16)
         Me.GroupBox3.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox3.Location = New System.Drawing.Point(10, 299)
+        Me.GroupBox3.Location = New System.Drawing.Point(11, 235)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(430, 201)
+        Me.GroupBox3.Size = New System.Drawing.Size(441, 201)
         Me.GroupBox3.TabIndex = 39
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "SCHOLARSHIP INFORMATION"
@@ -475,14 +433,14 @@ Partial Class frm_sSG
         Me.Label13.TabIndex = 19
         Me.Label13.Text = "SCHOLARSHIP STATUS"
         '
-        'TextBox4
+        'txtb_ScholarAmnt
         '
-        Me.TextBox4.BackColor = System.Drawing.Color.White
-        Me.TextBox4.Enabled = False
-        Me.TextBox4.Location = New System.Drawing.Point(163, 68)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(252, 26)
-        Me.TextBox4.TabIndex = 18
+        Me.txtb_ScholarAmnt.BackColor = System.Drawing.Color.White
+        Me.txtb_ScholarAmnt.Enabled = False
+        Me.txtb_ScholarAmnt.Location = New System.Drawing.Point(163, 68)
+        Me.txtb_ScholarAmnt.Name = "txtb_ScholarAmnt"
+        Me.txtb_ScholarAmnt.Size = New System.Drawing.Size(252, 26)
+        Me.txtb_ScholarAmnt.TabIndex = 18
         '
         'Label12
         '
@@ -494,14 +452,14 @@ Partial Class frm_sSG
         Me.Label12.TabIndex = 17
         Me.Label12.Text = "SCHOLARSHIP AMOUNT"
         '
-        'TextBox7
+        'txtb_ScholarType
         '
-        Me.TextBox7.BackColor = System.Drawing.Color.White
-        Me.TextBox7.Enabled = False
-        Me.TextBox7.Location = New System.Drawing.Point(163, 25)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(252, 26)
-        Me.TextBox7.TabIndex = 16
+        Me.txtb_ScholarType.BackColor = System.Drawing.Color.White
+        Me.txtb_ScholarType.Enabled = False
+        Me.txtb_ScholarType.Location = New System.Drawing.Point(163, 25)
+        Me.txtb_ScholarType.Name = "txtb_ScholarType"
+        Me.txtb_ScholarType.Size = New System.Drawing.Size(252, 26)
+        Me.txtb_ScholarType.TabIndex = 16
         '
         'TextBox5
         '
@@ -523,101 +481,170 @@ Partial Class frm_sSG
         Me.Label16.TabIndex = 15
         Me.Label16.Text = "SCHOLARSHIP TYPE"
         '
-        'BunifuCustomDataGrid1
+        'dg_StudScholarRec
         '
+        Me.dg_StudScholarRec.AllowUserToAddRows = False
+        Me.dg_StudScholarRec.AllowUserToDeleteRows = False
+        Me.dg_StudScholarRec.AllowUserToResizeRows = False
         DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.BunifuCustomDataGrid1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-        Me.BunifuCustomDataGrid1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.BunifuCustomDataGrid1.BackgroundColor = System.Drawing.Color.Gainsboro
-        Me.BunifuCustomDataGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.BunifuCustomDataGrid1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.dg_StudScholarRec.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        Me.dg_StudScholarRec.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dg_StudScholarRec.BackgroundColor = System.Drawing.Color.Gainsboro
+        Me.dg_StudScholarRec.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.dg_StudScholarRec.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
         DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.BunifuCustomDataGrid1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
-        Me.BunifuCustomDataGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.BunifuCustomDataGrid1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.s_id, Me.s_fName, Me.s_lName, Me.s_yLevel})
-        Me.BunifuCustomDataGrid1.DoubleBuffered = True
-        Me.BunifuCustomDataGrid1.EnableHeadersVisualStyles = False
-        Me.BunifuCustomDataGrid1.HeaderBgColor = System.Drawing.Color.SeaGreen
-        Me.BunifuCustomDataGrid1.HeaderForeColor = System.Drawing.Color.White
-        Me.BunifuCustomDataGrid1.Location = New System.Drawing.Point(446, 124)
-        Me.BunifuCustomDataGrid1.Name = "BunifuCustomDataGrid1"
-        Me.BunifuCustomDataGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        Me.BunifuCustomDataGrid1.Size = New System.Drawing.Size(577, 395)
-        Me.BunifuCustomDataGrid1.TabIndex = 48
+        Me.dg_StudScholarRec.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        Me.dg_StudScholarRec.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dg_StudScholarRec.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.s_id, Me.s_fName, Me.s_lName, Me.midd_i, Me.s_yLevel})
+        Me.dg_StudScholarRec.DoubleBuffered = True
+        Me.dg_StudScholarRec.EnableHeadersVisualStyles = False
+        Me.dg_StudScholarRec.HeaderBgColor = System.Drawing.Color.SeaGreen
+        Me.dg_StudScholarRec.HeaderForeColor = System.Drawing.Color.White
+        Me.dg_StudScholarRec.Location = New System.Drawing.Point(3, 79)
+        Me.dg_StudScholarRec.Name = "dg_StudScholarRec"
+        Me.dg_StudScholarRec.ReadOnly = True
+        Me.dg_StudScholarRec.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.dg_StudScholarRec.RowHeadersVisible = False
+        Me.dg_StudScholarRec.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dg_StudScholarRec.Size = New System.Drawing.Size(548, 357)
+        Me.dg_StudScholarRec.TabIndex = 48
+        '
+        'Panel1
+        '
+        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel1.Controls.Add(Me.GroupBox2)
+        Me.Panel1.Controls.Add(Me.GroupBox3)
+        Me.Panel1.Location = New System.Drawing.Point(15, 135)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(459, 448)
+        Me.Panel1.TabIndex = 49
+        '
+        'FlowLayoutPanel1
+        '
+        Me.FlowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.FlowLayoutPanel1.Controls.Add(Me.GroupBox1)
+        Me.FlowLayoutPanel1.Controls.Add(Me.dg_StudScholarRec)
+        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(480, 135)
+        Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(562, 448)
+        Me.FlowLayoutPanel1.TabIndex = 50
+        '
+        'Panel2
+        '
+        Me.Panel2.Controls.Add(Me.cbo_SelectDept)
+        Me.Panel2.Controls.Add(Me.Label14)
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel2.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Panel2.Location = New System.Drawing.Point(0, 0)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(1064, 70)
+        Me.Panel2.TabIndex = 51
+        '
+        'cbo_SelectDept
+        '
+        Me.cbo_SelectDept.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbo_SelectDept.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbo_SelectDept.FormattingEnabled = True
+        Me.cbo_SelectDept.Items.AddRange(New Object() {"COLLEGE DEPARTMENT", "ELEMENTARY DEPARTMENT", "SENIOR-HIGH DEPARTMENT", "JUNIOR-HIGH DEPARTMENT"})
+        Me.cbo_SelectDept.Location = New System.Drawing.Point(489, 17)
+        Me.cbo_SelectDept.Name = "cbo_SelectDept"
+        Me.cbo_SelectDept.Size = New System.Drawing.Size(282, 33)
+        Me.cbo_SelectDept.TabIndex = 8
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label14.Location = New System.Drawing.Point(294, 20)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(189, 25)
+        Me.Label14.TabIndex = 8
+        Me.Label14.Text = "SELECT DEPARTMENT"
         '
         's_id
         '
         Me.s_id.HeaderText = "Stud. id"
         Me.s_id.Name = "s_id"
+        Me.s_id.ReadOnly = True
         '
         's_fName
         '
         Me.s_fName.HeaderText = "First Name"
         Me.s_fName.Name = "s_fName"
+        Me.s_fName.ReadOnly = True
         '
         's_lName
         '
         Me.s_lName.HeaderText = "Last Name"
         Me.s_lName.Name = "s_lName"
+        Me.s_lName.ReadOnly = True
+        '
+        'midd_i
+        '
+        Me.midd_i.HeaderText = "M.I"
+        Me.midd_i.Name = "midd_i"
+        Me.midd_i.ReadOnly = True
         '
         's_yLevel
         '
         Me.s_yLevel.HeaderText = "Scholar Type"
         Me.s_yLevel.Name = "s_yLevel"
+        Me.s_yLevel.ReadOnly = True
         '
         'frm_sSG
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.Controls.Add(Me.BunifuCustomDataGrid1)
-        Me.Controls.Add(Me.GroupBox3)
+        Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Label11)
-        Me.Controls.Add(Me.GroupBox2)
-        Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.FlowLayoutPanel1)
         Me.Name = "frm_sSG"
-        Me.Size = New System.Drawing.Size(1066, 538)
+        Me.Size = New System.Drawing.Size(1064, 664)
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
-        CType(Me.BunifuCustomDataGrid1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dg_StudScholarRec, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
+        Me.FlowLayoutPanel1.ResumeLayout(False)
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
-    Friend WithEvents BunifuThinButton21 As Bunifu.Framework.UI.BunifuThinButton2
-    Friend WithEvents cboSearchBy As System.Windows.Forms.ComboBox
+    Friend WithEvents cbo_SearchBy As System.Windows.Forms.ComboBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents txtSearch As System.Windows.Forms.TextBox
+    Friend WithEvents txtb_Search As System.Windows.Forms.TextBox
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
-    Friend WithEvents TextBox6 As System.Windows.Forms.TextBox
     Friend WithEvents Label10 As System.Windows.Forms.Label
-    Friend WithEvents Label15 As System.Windows.Forms.Label
     Friend WithEvents Label6 As System.Windows.Forms.Label
-    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
+    Friend WithEvents txtb_studid As System.Windows.Forms.TextBox
     Friend WithEvents Label9 As System.Windows.Forms.Label
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
+    Friend WithEvents x As System.Windows.Forms.TextBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents Label7 As System.Windows.Forms.Label
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents txtb_studLname As System.Windows.Forms.TextBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents TextBox10 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox11 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox9 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox8 As System.Windows.Forms.TextBox
-    Friend WithEvents txtStudentName As System.Windows.Forms.TextBox
+    Friend WithEvents txtb_studSem As System.Windows.Forms.TextBox
+    Friend WithEvents txtb_studCourse As System.Windows.Forms.TextBox
+    Friend WithEvents txtb_SY As System.Windows.Forms.TextBox
+    Friend WithEvents txtb_studLevel As System.Windows.Forms.TextBox
+    Friend WithEvents txtb_studFname As System.Windows.Forms.TextBox
     Friend WithEvents Label11 As System.Windows.Forms.Label
     Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
     Friend WithEvents BunifuThinButton23 As Bunifu.Framework.UI.BunifuThinButton2
@@ -625,16 +652,21 @@ Partial Class frm_sSG
     Friend WithEvents RadioButton2 As System.Windows.Forms.RadioButton
     Friend WithEvents RadioButton1 As System.Windows.Forms.RadioButton
     Friend WithEvents Label13 As System.Windows.Forms.Label
-    Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
+    Friend WithEvents txtb_ScholarAmnt As System.Windows.Forms.TextBox
     Friend WithEvents Label12 As System.Windows.Forms.Label
     Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
     Friend WithEvents Label16 As System.Windows.Forms.Label
-    Friend WithEvents BunifuCustomDataGrid1 As Bunifu.Framework.UI.BunifuCustomDataGrid
-    Friend WithEvents s_id As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents s_fName As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents s_lName As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents s_yLevel As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents dg_StudScholarRec As Bunifu.Framework.UI.BunifuCustomDataGrid
     Friend WithEvents RadioButton3 As System.Windows.Forms.RadioButton
-    Friend WithEvents TextBox7 As System.Windows.Forms.TextBox
-
+    Friend WithEvents txtb_ScholarType As System.Windows.Forms.TextBox
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents cbo_SelectDept As ComboBox
+    Friend WithEvents Label14 As Label
+    Friend WithEvents s_id As DataGridViewTextBoxColumn
+    Friend WithEvents s_fName As DataGridViewTextBoxColumn
+    Friend WithEvents s_lName As DataGridViewTextBoxColumn
+    Friend WithEvents midd_i As DataGridViewTextBoxColumn
+    Friend WithEvents s_yLevel As DataGridViewTextBoxColumn
 End Class

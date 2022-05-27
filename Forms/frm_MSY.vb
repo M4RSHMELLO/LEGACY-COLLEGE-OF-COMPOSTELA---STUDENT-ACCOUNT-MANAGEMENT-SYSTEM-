@@ -88,20 +88,26 @@
     End Sub
 
     Private Sub btn_updateSchY_Click(sender As Object, e As EventArgs) Handles btn_updateSchY.Click
-        If MessageBox.Show("", "Do You want to Update a School Year ?", MessageBoxButtons.YesNo) = DialogResult.Yes Then
+        dlg_updatesy.ShowDialog()
+        If dlg_updatesy.DialogResult = DialogResult.OK Then
             txtb_syS.Enabled = True
             txtb_syE.Enabled = True
             btn_save.Enabled = True
+            a = 2
         End If
-        a = 2
+
+
+
     End Sub
 
     Private Sub btn_new_Click(sender As Object, e As EventArgs) Handles btn_new.Click
-
-        txtb_syS.Enabled = True
-        txtb_syE.Enabled = True
-        btn_save.Enabled = True
-        a = 1
+        dlg_addnewsy.ShowDialog()
+        If dlg_addnewsy.DialogResult = DialogResult.OK Then
+            txtb_syS.Enabled = True
+            txtb_syE.Enabled = True
+            btn_save.Enabled = True
+            a = 1
+        End If
     End Sub
 
     Private Sub btn_save_Click(sender As Object, e As EventArgs) Handles btn_save.Click
@@ -125,19 +131,26 @@
     Dim egl_name As String
 
     Private Sub btn_esy_New_Click(sender As Object, e As EventArgs) Handles btn_esy_New.Click
-        txtb_esy_start.Enabled = True
-        txtb_esy_end.Enabled = True
-        btn_esy_save.Enabled = True
-        b = 1
-    End Sub
-
-    Private Sub btn_esy_update_Click(sender As Object, e As EventArgs) Handles btn_esy_update.Click
-        If MessageBox.Show("", "Do You want to Update a School Year ?", MessageBoxButtons.YesNo) = DialogResult.Yes Then
+        dlg_addnewsy.ShowDialog()
+        If dlg_addnewsy.DialogResult = DialogResult.OK Then
             txtb_esy_start.Enabled = True
             txtb_esy_end.Enabled = True
             btn_esy_save.Enabled = True
+            b = 1
         End If
-        b = 2
+
+    End Sub
+
+    Private Sub btn_esy_update_Click(sender As Object, e As EventArgs) Handles btn_esy_update.Click
+
+        dlg_updatesy.ShowDialog()
+        If dlg_updatesy.DialogResult = DialogResult.OK Then
+            txtb_esy_start.Enabled = True
+            txtb_esy_end.Enabled = True
+            btn_esy_save.Enabled = True
+            b = 2
+        End If
+
     End Sub
 
     Private Sub btn_esy_save_Click(sender As Object, e As EventArgs) Handles btn_esy_save.Click
@@ -202,19 +215,27 @@
     Dim sgl_name As String
 
     Private Sub btn_new_sSY_Click(sender As Object, e As EventArgs) Handles btn_new_sSY.Click
-        txtb_ssy_start.Enabled = True
-        txtb_ssy_end.Enabled = True
-        btn_save_ssy.Enabled = True
-        c = 1
-    End Sub
-
-    Private Sub btn_update_ssy_Click(sender As Object, e As EventArgs) Handles btn_update_ssy.Click
-        If MessageBox.Show("", "Do You want to Update a School Year ?", MessageBoxButtons.YesNo) = DialogResult.Yes Then
+        dlg_addnewsy.ShowDialog()
+        If dlg_addnewsy.DialogResult = DialogResult.OK Then
             txtb_ssy_start.Enabled = True
             txtb_ssy_end.Enabled = True
             btn_save_ssy.Enabled = True
+            c = 1
         End If
-        c = 2
+
+    End Sub
+
+    Private Sub btn_update_ssy_Click(sender As Object, e As EventArgs) Handles btn_update_ssy.Click
+
+        dlg_updatesy.ShowDialog()
+        If dlg_updatesy.DialogResult = DialogResult.OK Then
+            txtb_ssy_start.Enabled = True
+            txtb_ssy_end.Enabled = True
+            btn_save_ssy.Enabled = True
+
+            c = 2
+        End If
+
     End Sub
 
     Private Sub btn_save_ssy_Click(sender As Object, e As EventArgs) Handles btn_save_ssy.Click
@@ -281,19 +302,24 @@
     Dim jsy_id As Integer
     Dim jgl_name As String
     Private Sub btn_jsy_new_Click(sender As Object, e As EventArgs) Handles btn_jsy_new.Click
-        txtb_jsy_start.Enabled = True
-        txtb_jsy_end.Enabled = True
-        btn_jsy_save.Enabled = True
-        d = 1
-    End Sub
-
-    Private Sub btn_jsy_update_Click(sender As Object, e As EventArgs) Handles btn_jsy_update.Click
-        If MessageBox.Show("", "Do You want to Update a School Year ?", MessageBoxButtons.YesNo) = DialogResult.Yes Then
+        dlg_addnewsy.ShowDialog()
+        If dlg_addnewsy.DialogResult = DialogResult.OK Then
             txtb_jsy_start.Enabled = True
             txtb_jsy_end.Enabled = True
             btn_jsy_save.Enabled = True
+            d = 1
         End If
-        d = 2
+
+    End Sub
+
+    Private Sub btn_jsy_update_Click(sender As Object, e As EventArgs) Handles btn_jsy_update.Click
+        dlg_updatesy.ShowDialog()
+        If dlg_updatesy.DialogResult = DialogResult.OK Then
+            txtb_jsy_start.Enabled = True
+            txtb_jsy_end.Enabled = True
+            btn_jsy_save.Enabled = True
+            d = 2
+        End If
     End Sub
 
     Private Sub btn_jsy_save_Click(sender As Object, e As EventArgs) Handles btn_jsy_save.Click

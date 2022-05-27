@@ -11,7 +11,7 @@ Module lccsams
     Public dr As MySqlDataReader
     Public ds As DataSet
     Public current_menu As Integer = 0
-    Public current_date As Date = Date.Now()   'Current Date OF THE transaction ocurred
+    Public current_date As Date = Date.Now()   'Caurrent Date OF THE transaction ocurred
     Public result As Integer
     '#################################################################COLLEGE PUBLIC VARIABLE###############################################################################
     Public slctC As String = "Select * from tbl_coll_course"
