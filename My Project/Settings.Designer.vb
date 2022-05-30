@@ -63,6 +63,17 @@ Namespace My
                 Return CType(Me("db_lccsamsConnectionString"),String)
             End Get
         End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("server=192.168.0.113;user id=raldz;password=d74r3j93527;persistsecurityinfo=True;"& _ 
+            "database=db_lccsams")>  _
+        Public ReadOnly Property db_lccsams_arnicConnection() As String
+            Get
+                Return CType(Me("db_lccsams_arnicConnection"),String)
+            End Get
+        End Property
     End Class
 End Namespace
 

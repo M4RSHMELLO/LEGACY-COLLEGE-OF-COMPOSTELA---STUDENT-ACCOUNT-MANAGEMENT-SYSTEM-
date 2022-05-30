@@ -22,6 +22,7 @@ Partial Class frm_sSG
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_sSG))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -61,16 +62,19 @@ Partial Class frm_sSG
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.dg_StudScholarRec = New Bunifu.Framework.UI.BunifuCustomDataGrid()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.cbo_SelectDept = New System.Windows.Forms.ComboBox()
-        Me.Label14 = New System.Windows.Forms.Label()
         Me.s_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.s_fName = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.s_lName = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.midd_i = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.s_yLevel = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.cbo_SelectDept = New System.Windows.Forms.ComboBox()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.Db_lccsamsDataSet = New LCC_SAMS_Project.db_lccsamsDataSet()
+        Me.TblcollscholarlistBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Tbl_coll_scholarlistTableAdapter = New LCC_SAMS_Project.db_lccsamsDataSetTableAdapters.tbl_coll_scholarlistTableAdapter()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -78,6 +82,8 @@ Partial Class frm_sSG
         Me.Panel1.SuspendLayout()
         Me.FlowLayoutPanel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
+        CType(Me.Db_lccsamsDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TblcollscholarlistBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -488,6 +494,7 @@ Partial Class frm_sSG
         Me.dg_StudScholarRec.AllowUserToResizeRows = False
         DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.dg_StudScholarRec.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        Me.dg_StudScholarRec.AutoGenerateColumns = False
         Me.dg_StudScholarRec.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dg_StudScholarRec.BackgroundColor = System.Drawing.Color.Gainsboro
         Me.dg_StudScholarRec.BorderStyle = System.Windows.Forms.BorderStyle.None
@@ -502,6 +509,7 @@ Partial Class frm_sSG
         Me.dg_StudScholarRec.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.dg_StudScholarRec.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dg_StudScholarRec.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.s_id, Me.s_fName, Me.s_lName, Me.midd_i, Me.s_yLevel})
+        Me.dg_StudScholarRec.DataSource = Me.TblcollscholarlistBindingSource
         Me.dg_StudScholarRec.DoubleBuffered = True
         Me.dg_StudScholarRec.EnableHeadersVisualStyles = False
         Me.dg_StudScholarRec.HeaderBgColor = System.Drawing.Color.SeaGreen
@@ -514,6 +522,36 @@ Partial Class frm_sSG
         Me.dg_StudScholarRec.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dg_StudScholarRec.Size = New System.Drawing.Size(548, 357)
         Me.dg_StudScholarRec.TabIndex = 48
+        '
+        's_id
+        '
+        Me.s_id.HeaderText = "Stud. id"
+        Me.s_id.Name = "s_id"
+        Me.s_id.ReadOnly = True
+        '
+        's_fName
+        '
+        Me.s_fName.HeaderText = "First Name"
+        Me.s_fName.Name = "s_fName"
+        Me.s_fName.ReadOnly = True
+        '
+        's_lName
+        '
+        Me.s_lName.HeaderText = "Last Name"
+        Me.s_lName.Name = "s_lName"
+        Me.s_lName.ReadOnly = True
+        '
+        'midd_i
+        '
+        Me.midd_i.HeaderText = "M.I"
+        Me.midd_i.Name = "midd_i"
+        Me.midd_i.ReadOnly = True
+        '
+        's_yLevel
+        '
+        Me.s_yLevel.HeaderText = "Scholar Type"
+        Me.s_yLevel.Name = "s_yLevel"
+        Me.s_yLevel.ReadOnly = True
         '
         'Panel1
         '
@@ -568,35 +606,19 @@ Partial Class frm_sSG
         Me.Label14.TabIndex = 8
         Me.Label14.Text = "SELECT DEPARTMENT"
         '
-        's_id
+        'Db_lccsamsDataSet
         '
-        Me.s_id.HeaderText = "Stud. id"
-        Me.s_id.Name = "s_id"
-        Me.s_id.ReadOnly = True
+        Me.Db_lccsamsDataSet.DataSetName = "db_lccsamsDataSet"
+        Me.Db_lccsamsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        's_fName
+        'TblcollscholarlistBindingSource
         '
-        Me.s_fName.HeaderText = "First Name"
-        Me.s_fName.Name = "s_fName"
-        Me.s_fName.ReadOnly = True
+        Me.TblcollscholarlistBindingSource.DataMember = "tbl_coll_scholarlist"
+        Me.TblcollscholarlistBindingSource.DataSource = Me.Db_lccsamsDataSet
         '
-        's_lName
+        'Tbl_coll_scholarlistTableAdapter
         '
-        Me.s_lName.HeaderText = "Last Name"
-        Me.s_lName.Name = "s_lName"
-        Me.s_lName.ReadOnly = True
-        '
-        'midd_i
-        '
-        Me.midd_i.HeaderText = "M.I"
-        Me.midd_i.Name = "midd_i"
-        Me.midd_i.ReadOnly = True
-        '
-        's_yLevel
-        '
-        Me.s_yLevel.HeaderText = "Scholar Type"
-        Me.s_yLevel.Name = "s_yLevel"
-        Me.s_yLevel.ReadOnly = True
+        Me.Tbl_coll_scholarlistTableAdapter.ClearBeforeFill = True
         '
         'frm_sSG
         '
@@ -619,6 +641,8 @@ Partial Class frm_sSG
         Me.FlowLayoutPanel1.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
+        CType(Me.Db_lccsamsDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TblcollscholarlistBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -669,4 +693,7 @@ Partial Class frm_sSG
     Friend WithEvents s_lName As DataGridViewTextBoxColumn
     Friend WithEvents midd_i As DataGridViewTextBoxColumn
     Friend WithEvents s_yLevel As DataGridViewTextBoxColumn
+    Friend WithEvents TblcollscholarlistBindingSource As BindingSource
+    Friend WithEvents Db_lccsamsDataSet As db_lccsamsDataSet
+    Friend WithEvents Tbl_coll_scholarlistTableAdapter As db_lccsamsDataSetTableAdapters.tbl_coll_scholarlistTableAdapter
 End Class

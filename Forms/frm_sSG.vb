@@ -1,43 +1,43 @@
 ﻿Public Class frm_sSG
 
     Private Sub cbo_SelectDept_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbo_SelectDept.SelectedIndexChanged
-        'txtb_Search.Clear()
+        ''txtb_Search.Clear()
 
-        Select Case cbo_SelectDept.SelectedIndex
+        'Select Case cbo_SelectDept.SelectedIndex
 
-            Case 0
-                dg_StudScholarRec.Columns(0).DataPropertyName = "stud_id"
-                dg_StudScholarRec.Columns(1).DataPropertyName = "stud_fname"
-                dg_StudScholarRec.Columns(2).DataPropertyName = "stud_lname"
-                dg_StudScholarRec.Columns(3).DataPropertyName = "stud_midI"
-                Dim coll_studScholar As String = "select s.stud_id,s.stud_fname,s.stud_lname,s.stud_midI,sl.sl_name  from tbl_student s inner join tbl_coll_scholarlist sl on sl.stud_id=s.stud_id order by stud_lname asc"
-                _displayRecords(coll_studScholar, dg_StudScholarRec)
+        '    Case 0
+        '        dg_StudScholarRec.Columns(0).DataPropertyName = "stud_id"
+        '        dg_StudScholarRec.Columns(1).DataPropertyName = "stud_fname"
+        '        dg_StudScholarRec.Columns(2).DataPropertyName = "stud_lname"
+        '        dg_StudScholarRec.Columns(3).DataPropertyName = "stud_midI"
+        '        Dim coll_studScholar As String = "select s.stud_id,s.stud_fname,s.stud_lname,s.stud_midI,sl.sl_name  from tbl_student s inner join tbl_coll_scholarlist sl on sl.stud_id=s.stud_id order by stud_lname asc"
+        '        _displayRecords(coll_studScholar, dg_StudScholarRec)
 
-            Case 1
-                dg_StudScholarRec.Columns(0).DataPropertyName = "estud_id"
-                dg_StudScholarRec.Columns(1).DataPropertyName = "estud_fname"
-                dg_StudScholarRec.Columns(2).DataPropertyName = "estud_lname"
-                dg_StudScholarRec.Columns(3).DataPropertyName = "estud_mi"
-                Dim elem_studScholar As String = "select estud_id,estud_fname,estud_lname,estud_mi from tbl_elem_students  order by estud_lname asc"
-                _displayRecords(elem_studScholar, dg_StudScholarRec)
+        '    Case 1
+        '        dg_StudScholarRec.Columns(0).DataPropertyName = "estud_id"
+        '        dg_StudScholarRec.Columns(1).DataPropertyName = "estud_fname"
+        '        dg_StudScholarRec.Columns(2).DataPropertyName = "estud_lname"
+        '        dg_StudScholarRec.Columns(3).DataPropertyName = "estud_mi"
+        '        Dim elem_studScholar As String = "select estud_id,estud_fname,estud_lname,estud_mi from tbl_elem_students  order by estud_lname asc"
+        '        _displayRecords(elem_studScholar, dg_StudScholarRec)
 
-            Case 2
-                dg_StudScholarRec.Columns(0).DataPropertyName = "sstud_id"
-                dg_StudScholarRec.Columns(1).DataPropertyName = "sstud_fname"
-                dg_StudScholarRec.Columns(2).DataPropertyName = "sstud_lname"
-                dg_StudScholarRec.Columns(3).DataPropertyName = "sstud_mi"
-                Dim senior_studScholar As String = "select  sstud_id,sstud_fname,sstud_lname,sstud_mi from tbl_seniorhigh_students order by sstud_lname asc"
-                _displayRecords(senior_studScholar, dg_StudScholarRec)
+        '    Case 2
+        '        dg_StudScholarRec.Columns(0).DataPropertyName = "sstud_id"
+        '        dg_StudScholarRec.Columns(1).DataPropertyName = "sstud_fname"
+        '        dg_StudScholarRec.Columns(2).DataPropertyName = "sstud_lname"
+        '        dg_StudScholarRec.Columns(3).DataPropertyName = "sstud_mi"
+        '        Dim senior_studScholar As String = "select  sstud_id,sstud_fname,sstud_lname,sstud_mi from tbl_seniorhigh_students order by sstud_lname asc"
+        '        _displayRecords(senior_studScholar, dg_StudScholarRec)
 
-            Case 3
-                dg_StudScholarRec.Columns(0).DataPropertyName = "jstud_id"
-                dg_StudScholarRec.Columns(1).DataPropertyName = "jstud_fname"
-                dg_StudScholarRec.Columns(2).DataPropertyName = "jstud_lname"
-                dg_StudScholarRec.Columns(3).DataPropertyName = "jstud_mi"
-                Dim junior_studScholar As String = "select  jstud_id,jstud_fname,jstud_lname,jstud_mi from tbl_juniorhigh_students order by jstud_lname asc"
-                _displayRecords(junior_studScholar, dg_StudScholarRec)
+        '    Case 3
+        '        dg_StudScholarRec.Columns(0).DataPropertyName = "jstud_id"
+        '        dg_StudScholarRec.Columns(1).DataPropertyName = "jstud_fname"
+        '        dg_StudScholarRec.Columns(2).DataPropertyName = "jstud_lname"
+        '        dg_StudScholarRec.Columns(3).DataPropertyName = "jstud_mi"
+        '        Dim junior_studScholar As String = "select  jstud_id,jstud_fname,jstud_lname,jstud_mi from tbl_juniorhigh_students order by jstud_lname asc"
+        '        _displayRecords(junior_studScholar, dg_StudScholarRec)
 
-        End Select
+        'End Select
     End Sub
 
 

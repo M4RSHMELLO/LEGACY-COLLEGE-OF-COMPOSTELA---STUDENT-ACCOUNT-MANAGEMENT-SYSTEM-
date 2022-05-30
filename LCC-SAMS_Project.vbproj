@@ -162,6 +162,11 @@
     <Compile Include="Dashboard.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="db_lccsamsDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db_lccsamsDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="dlg_addnewsy.designer.vb">
       <DependentUpon>dlg_addnewsy.vb</DependentUpon>
     </Compile>
@@ -476,6 +481,17 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="db_lccsamsDataSet.xsc">
+      <DependentUpon>db_lccsamsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="db_lccsamsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>db_lccsamsDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="db_lccsamsDataSet.xss">
+      <DependentUpon>db_lccsamsDataSet.xsd</DependentUpon>
+    </None>
     <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>

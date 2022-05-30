@@ -5,7 +5,8 @@ Module lccsams
     Public dbConn As MySqlConnection ' This is used to establish connection
     Public sqlCommand As MySqlCommand ' This is used invoking SQL Command and retrieval
     Public sqlCommand2 As MySqlCommand ' This is used invoking SQL Command and retrieval
-    Public strConn = "server=localhost; user id=root;database=" 'Connecttion String
+    'Public strConn = "server=localhost; user id=root;database=" 'Connecttion String
+    Public strConn = "server=192.168.0.113; user id=raldz;password=d74r3j93527;database=" 'Connecttion String
     Public da As MySqlDataAdapter ' A bridge between connection and Data
     Public dt As DataTable  'opulate the records from Database
     Public dr As MySqlDataReader
