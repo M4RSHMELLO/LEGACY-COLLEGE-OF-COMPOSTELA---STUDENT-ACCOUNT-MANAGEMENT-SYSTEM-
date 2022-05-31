@@ -31,6 +31,7 @@ Partial Class frm_colReports
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.txtb_totalFeesAmount = New System.Windows.Forms.TextBox()
         Me.Label16 = New System.Windows.Forms.Label()
+        Me.CrystalReportViewer2 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -245,10 +246,23 @@ Partial Class frm_colReports
         Me.Label16.TabIndex = 22
         Me.Label16.Text = "TOTAL AMOUNT"
         '
+        'CrystalReportViewer2
+        '
+        Me.CrystalReportViewer2.ActiveViewIndex = -1
+        Me.CrystalReportViewer2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.CrystalReportViewer2.Cursor = System.Windows.Forms.Cursors.Default
+        Me.CrystalReportViewer2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.CrystalReportViewer2.Location = New System.Drawing.Point(0, 85)
+        Me.CrystalReportViewer2.Name = "CrystalReportViewer2"
+        Me.CrystalReportViewer2.Size = New System.Drawing.Size(1154, 579)
+        Me.CrystalReportViewer2.TabIndex = 24
+        Me.CrystalReportViewer2.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
+        '
         'frm_colReports
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 21.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.Controls.Add(Me.CrystalReportViewer2)
         Me.Controls.Add(Me.txtb_totalFeesAmount)
         Me.Controls.Add(Me.Label16)
         Me.Controls.Add(Me.Panel1)
@@ -272,5 +286,5 @@ Partial Class frm_colReports
     Friend WithEvents txtb_totalFeesAmount As System.Windows.Forms.TextBox
     Friend WithEvents Label16 As System.Windows.Forms.Label
     Friend WithEvents CrystalReportViewer1 As CrystalDecisions.Windows.Forms.CrystalReportViewer
-
+    Friend WithEvents CrystalReportViewer2 As CrystalDecisions.Windows.Forms.CrystalReportViewer
 End Class
