@@ -6,7 +6,7 @@ Module lccsams
     Public sqlCommand As MySqlCommand ' This is used invoking SQL Command and retrieval
     Public sqlCommand2 As MySqlCommand ' This is used invoking SQL Command and retrieval
     'Public strConn = "server=localhost; user id=root;database=" 'Connecttion String
-    Public strConn = "server=192.168.0.113; user id=raldz;password=d74r3j93527;database=" 'Connecttion String
+    Public strConn = "server=192.168.254.114; user id=raldz;password=d74r3j93527;database=" 'Connecttion String
     Public da As MySqlDataAdapter ' A bridge between connection and Data
     Public dt As DataTable  'opulate the records from Database
     Public dr As MySqlDataReader
@@ -188,7 +188,29 @@ Module lccsams
             sqlCommand = New MySqlCommand(sql, dbConn)
             dr = sqlCommand.ExecuteReader
             While dr.Read()
+
                 txtb.Text = dr(0)
+            End While
+        Catch ex As Exception
+            erromessage("error 108: loadToTextbox " & ex.Message)
+        Finally
+            dbConn.Close()
+        End Try
+    End Sub
+    Public Sub _loadToTextbox_2col(ByVal sql As String, ByVal txtb As TextBox, ByVal rb As RadioButton)
+        Try
+            dbConn.Open()
+            sqlCommand = New MySqlCommand(sql, dbConn)
+            dr = sqlCommand.ExecuteReader
+            While dr.Read()
+
+                txtb.Text = dr(0)
+                If dr(1) = 1 Then
+                    rb.Checked = True
+                Else
+                    rb.Checked = True
+                End If
+
             End While
         Catch ex As Exception
             erromessage("error 108: loadToTextbox " & ex.Message)

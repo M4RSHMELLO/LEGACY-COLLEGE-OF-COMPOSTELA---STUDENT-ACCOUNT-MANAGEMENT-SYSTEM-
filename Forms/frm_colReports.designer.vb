@@ -31,8 +31,6 @@ Partial Class frm_colReports
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.txtb_totalFeesAmount = New System.Windows.Forms.TextBox()
         Me.Label16 = New System.Windows.Forms.Label()
-        Me.CrystalReportViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
-        Me.CrystalReport31 = New LCC_SAMS_Project.CrystalReport3()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -48,7 +46,7 @@ Partial Class frm_colReports
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1154, 117)
+        Me.Panel1.Size = New System.Drawing.Size(1154, 85)
         Me.Panel1.TabIndex = 0
         '
         'btn_seniordept
@@ -247,24 +245,10 @@ Partial Class frm_colReports
         Me.Label16.TabIndex = 22
         Me.Label16.Text = "TOTAL AMOUNT"
         '
-        'CrystalReportViewer1
-        '
-        Me.CrystalReportViewer1.ActiveViewIndex = -1
-        Me.CrystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.CrystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default
-        Me.CrystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.CrystalReportViewer1.Location = New System.Drawing.Point(0, 117)
-        Me.CrystalReportViewer1.Name = "CrystalReportViewer1"
-        Me.CrystalReportViewer1.ReportSource = Me.CrystalReport31
-        Me.CrystalReportViewer1.Size = New System.Drawing.Size(1154, 547)
-        Me.CrystalReportViewer1.TabIndex = 24
-        Me.CrystalReportViewer1.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
-        '
         'frm_colReports
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 21.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.Controls.Add(Me.CrystalReportViewer1)
         Me.Controls.Add(Me.txtb_totalFeesAmount)
         Me.Controls.Add(Me.Label16)
         Me.Controls.Add(Me.Panel1)
@@ -288,5 +272,5 @@ Partial Class frm_colReports
     Friend WithEvents txtb_totalFeesAmount As System.Windows.Forms.TextBox
     Friend WithEvents Label16 As System.Windows.Forms.Label
     Friend WithEvents CrystalReportViewer1 As CrystalDecisions.Windows.Forms.CrystalReportViewer
-    Friend WithEvents CrystalReport31 As CrystalReport3
+
 End Class

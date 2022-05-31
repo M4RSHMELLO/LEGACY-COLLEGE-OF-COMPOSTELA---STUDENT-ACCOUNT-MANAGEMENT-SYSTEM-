@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="db_lccsamsDataSet1" targetNamespace="http://tempuri.org/db_lccsamsDataSet1.xsd" xmlns:mstns="http://tempuri.org/db_lccsamsDataSet1.xsd" xmlns="http://tempuri.org/db_lccsamsDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="db_lccsams_jeraldServer" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="db_lccsams_jeraldServer (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.LCC_SAMS_Project.My.MySettings.GlobalReference.Default.db_lccsams_jeraldServer" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tbl_studentTableAdapter" GeneratorDataComponentClassName="tbl_studentTableAdapter" Name="tbl_student" UserDataComponentName="tbl_studentTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="db_lccsams_jeraldServer (MySettings)" DbObjectName="db_lccsams.tbl_student" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="tbl_student" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="tbl_student" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="tbl_student" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        stud_id, stud_Fname, stud_Lname, stud_midI
+FROM            tbl_student</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="stud_id" DataSetColumn="stud_id" />
+              <Mapping SourceColumn="stud_Fname" DataSetColumn="stud_Fname" />
+              <Mapping SourceColumn="stud_Lname" DataSetColumn="stud_Lname" />
+              <Mapping SourceColumn="stud_midI" DataSetColumn="stud_midI" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="db_lccsamsDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="db_lccsamsDataSet1" msprop:Generator_UserDSName="db_lccsamsDataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tbl_student" msprop:Generator_TableClassName="tbl_studentDataTable" msprop:Generator_TableVarName="tabletbl_student" msprop:Generator_TablePropName="tbl_student" msprop:Generator_RowDeletingName="tbl_studentRowDeleting" msprop:Generator_RowChangingName="tbl_studentRowChanging" msprop:Generator_RowEvHandlerName="tbl_studentRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_studentRowDeleted" msprop:Generator_UserTableName="tbl_student" msprop:Generator_RowChangedName="tbl_studentRowChanged" msprop:Generator_RowEvArgName="tbl_studentRowChangeEvent" msprop:Generator_RowClassName="tbl_studentRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="stud_id" msprop:Generator_ColumnVarNameInTable="columnstud_id" msprop:Generator_ColumnPropNameInRow="stud_id" msprop:Generator_ColumnPropNameInTable="stud_idColumn" msprop:Generator_UserColumnName="stud_id" type="xs:int" />
+              <xs:element name="stud_Fname" msprop:Generator_ColumnVarNameInTable="columnstud_Fname" msprop:Generator_ColumnPropNameInRow="stud_Fname" msprop:Generator_ColumnPropNameInTable="stud_FnameColumn" msprop:Generator_UserColumnName="stud_Fname">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="stud_Lname" msprop:Generator_ColumnVarNameInTable="columnstud_Lname" msprop:Generator_ColumnPropNameInRow="stud_Lname" msprop:Generator_ColumnPropNameInTable="stud_LnameColumn" msprop:Generator_UserColumnName="stud_Lname">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="stud_midI" msprop:Generator_ColumnVarNameInTable="columnstud_midI" msprop:Generator_ColumnPropNameInRow="stud_midI" msprop:Generator_ColumnPropNameInTable="stud_midIColumn" msprop:Generator_UserColumnName="stud_midI">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tbl_student" />
+      <xs:field xpath="mstns:stud_id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
