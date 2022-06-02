@@ -85,6 +85,27 @@ Namespace My
                 Return CType(Me("db_lccsams_jeraldServer"),String)
             End Get
         End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("server=206.189.80.59;user id=raldz;persistsecurityinfo=True;port=22284;database=d"& _ 
+            "b_lccsams")>  _
+        Public ReadOnly Property db_lccsams_onlineServer() As String
+            Get
+                Return CType(Me("db_lccsams_onlineServer"),String)
+            End Get
+        End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("server=localhost;user id=raldz;persistsecurityinfo=True;database=db_lccsams")>  _
+        Public ReadOnly Property db_lccsams_localhost() As String
+            Get
+                Return CType(Me("db_lccsams_localhost"),String)
+            End Get
+        End Property
     End Class
 End Namespace
 

@@ -26,5 +26,21 @@
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">server=192.168.254.114;user id=raldz;persistsecurityinfo=True;database=db_lccsams</Value>
     </Setting>
+    <Setting Name="db_lccsams_onlineServer" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;server=206.189.80.59;user id=raldz;persistsecurityinfo=True;port=22284;database=db_lccsams&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;MySql.Data.MySqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">server=206.189.80.59;user id=raldz;persistsecurityinfo=True;port=22284;database=db_lccsams</Value>
+    </Setting>
+    <Setting Name="db_lccsams_localhost" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;server=localhost;user id=raldz;persistsecurityinfo=True;database=db_lccsams&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;MySql.Data.MySqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">server=localhost;user id=raldz;persistsecurityinfo=True;database=db_lccsams</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

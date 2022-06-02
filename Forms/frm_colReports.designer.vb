@@ -32,6 +32,7 @@ Partial Class frm_colReports
         Me.txtb_totalFeesAmount = New System.Windows.Forms.TextBox()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.CrystalReportViewer2 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
+        Me.college_reports1 = New LCC_SAMS_Project.college_reports()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -254,6 +255,7 @@ Partial Class frm_colReports
         Me.CrystalReportViewer2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.CrystalReportViewer2.Location = New System.Drawing.Point(0, 85)
         Me.CrystalReportViewer2.Name = "CrystalReportViewer2"
+        Me.CrystalReportViewer2.ReportSource = Me.college_reports1
         Me.CrystalReportViewer2.Size = New System.Drawing.Size(1154, 579)
         Me.CrystalReportViewer2.TabIndex = 24
         Me.CrystalReportViewer2.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
@@ -287,4 +289,5 @@ Partial Class frm_colReports
     Friend WithEvents Label16 As System.Windows.Forms.Label
     Friend WithEvents CrystalReportViewer1 As CrystalDecisions.Windows.Forms.CrystalReportViewer
     Friend WithEvents CrystalReportViewer2 As CrystalDecisions.Windows.Forms.CrystalReportViewer
+    Friend WithEvents college_reports1 As college_reports
 End Class

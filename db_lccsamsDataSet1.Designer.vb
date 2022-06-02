@@ -405,12 +405,6 @@ Partial Public Class db_lccsamsDataSet1
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function FindBystud_id(ByVal stud_id As Integer) As tbl_studentRow
-            Return CType(Me.Rows.Find(New Object() {stud_id}),tbl_studentRow)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Overrides Function Clone() As Global.System.Data.DataTable
             Dim cln As tbl_studentDataTable = CType(MyBase.Clone,tbl_studentDataTable)
             cln.InitVars
@@ -443,9 +437,7 @@ Partial Public Class db_lccsamsDataSet1
             MyBase.Columns.Add(Me.columnstud_Lname)
             Me.columnstud_midI = New Global.System.Data.DataColumn("stud_midI", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnstud_midI)
-            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnstud_id}, true))
             Me.columnstud_id.AllowDBNull = false
-            Me.columnstud_id.Unique = true
             Me.columnstud_Fname.AllowDBNull = false
             Me.columnstud_Fname.MaxLength = 50
             Me.columnstud_Lname.AllowDBNull = false
@@ -818,7 +810,7 @@ Namespace db_lccsamsDataSet1TableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitConnection()
             Me._connection = New Global.MySql.Data.MySqlClient.MySqlConnection()
-            Me._connection.ConnectionString = Global.LCC_SAMS_Project.My.MySettings.Default.db_lccsams_jeraldServer
+            Me._connection.ConnectionString = "server=localhost;user id=raldz;persistsecurityinfo=True;database=db_lccsams"
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -827,8 +819,7 @@ Namespace db_lccsamsDataSet1TableAdapters
             Me._commandCollection = New Global.MySql.Data.MySqlClient.MySqlCommand(0) {}
             Me._commandCollection(0) = New Global.MySql.Data.MySqlClient.MySqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT        stud_id, stud_Fname, stud_Lname, stud_midI"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            tbl_stu"& _ 
-                "dent"
+            Me._commandCollection(0).CommandText = "SELECT `stud_id`, `stud_Fname`, `stud_Lname`, `stud_midI` FROM `tbl_student`"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -849,7 +840,7 @@ Namespace db_lccsamsDataSet1TableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function tbl_student() As db_lccsamsDataSet1.tbl_studentDataTable
+        Public Overloads Overridable Function GetData() As db_lccsamsDataSet1.tbl_studentDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             Dim dataTable As db_lccsamsDataSet1.tbl_studentDataTable = New db_lccsamsDataSet1.tbl_studentDataTable()
             Me.Adapter.Fill(dataTable)

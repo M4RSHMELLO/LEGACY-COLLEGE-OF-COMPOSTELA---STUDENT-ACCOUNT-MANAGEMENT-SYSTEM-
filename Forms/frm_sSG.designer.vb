@@ -68,9 +68,7 @@ Partial Class frm_sSG
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.cbo_SelectDept = New System.Windows.Forms.ComboBox()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.Db_lccsams_elemDs = New LCC_SAMS_Project.db_lccsams_elemDs()
         Me.TblelemstudentsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Tbl_elem_studentsTableAdapter = New LCC_SAMS_Project.db_lccsams_elemDsTableAdapters.tbl_elem_studentsTableAdapter()
         Me.TblstudentBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Db_lccsamsDataSet11 = New LCC_SAMS_Project.db_lccsamsDataSet1()
         Me.Tbl_studentTableAdapter = New LCC_SAMS_Project.db_lccsamsDataSet1TableAdapters.tbl_studentTableAdapter()
@@ -89,7 +87,6 @@ Partial Class frm_sSG
         Me.Panel3.SuspendLayout()
         CType(Me.dg_StudScholarRec, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
-        CType(Me.Db_lccsams_elemDs, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TblelemstudentsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TblstudentBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Db_lccsamsDataSet11, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -592,19 +589,13 @@ Partial Class frm_sSG
         Me.Label14.TabIndex = 8
         Me.Label14.Text = "SELECT DEPARTMENT"
         '
-        'Db_lccsams_elemDs
-        '
-        Me.Db_lccsams_elemDs.DataSetName = "db_lccsams_elemDs"
-        Me.Db_lccsams_elemDs.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'TblelemstudentsBindingSource
         '
         Me.TblelemstudentsBindingSource.DataMember = "tbl_elem_students"
-        Me.TblelemstudentsBindingSource.DataSource = Me.Db_lccsams_elemDs
         '
         'Tbl_elem_studentsTableAdapter
         '
-        Me.Tbl_elem_studentsTableAdapter.ClearBeforeFill = True
         '
         'TblstudentBindingSource
         '
@@ -688,7 +679,6 @@ Partial Class frm_sSG
         CType(Me.dg_StudScholarRec, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        CType(Me.Db_lccsams_elemDs, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TblelemstudentsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TblstudentBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Db_lccsamsDataSet11, System.ComponentModel.ISupportInitialize).EndInit()
@@ -741,9 +731,7 @@ Partial Class frm_sSG
     Friend WithEvents TblstudentBindingSource As BindingSource
     Friend WithEvents Db_lccsamsDataSet11 As db_lccsamsDataSet1
     Friend WithEvents Tbl_studentTableAdapter As db_lccsamsDataSet1TableAdapters.tbl_studentTableAdapter
-    Friend WithEvents Db_lccsams_elemDs As db_lccsams_elemDs
     Friend WithEvents TblelemstudentsBindingSource As BindingSource
-    Friend WithEvents Tbl_elem_studentsTableAdapter As db_lccsams_elemDsTableAdapters.tbl_elem_studentsTableAdapter
     Friend WithEvents StudidDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents StudFnameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents StudLnameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn

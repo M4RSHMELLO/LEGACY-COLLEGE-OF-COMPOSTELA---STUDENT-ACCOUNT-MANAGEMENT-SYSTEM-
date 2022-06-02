@@ -4,16 +4,15 @@
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="db_lccsams_jeraldServer" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="db_lccsams_jeraldServer (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.LCC_SAMS_Project.My.MySettings.GlobalReference.Default.db_lccsams_jeraldServer" Provider="MySql.Data.MySqlClient" />
+          <Connection ConnectionStringObject="server=localhost;user id=raldz;persistsecurityinfo=True;database=db_lccsams" IsAppSettingsProperty="false" Modifier="Assembly" Name="localhost(db_lccsams)" ParameterPrefix="@" Provider="MySql.Data.MySqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tbl_studentTableAdapter" GeneratorDataComponentClassName="tbl_studentTableAdapter" Name="tbl_student" UserDataComponentName="tbl_studentTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="db_lccsams_jeraldServer (MySettings)" DbObjectName="db_lccsams.tbl_student" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="tbl_student" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="tbl_student" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="tbl_student" UserSourceName="Fill">
+              <DbSource ConnectionRef="localhost(db_lccsams)" DbObjectName="db_lccsams.tbl_student" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT        stud_id, stud_Fname, stud_Lname, stud_midI
-FROM            tbl_student</CommandText>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `stud_id`, `stud_Fname`, `stud_Lname`, `stud_midI` FROM `tbl_student`</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -65,9 +64,5 @@ FROM            tbl_student</CommandText>
         </xs:element>
       </xs:choice>
     </xs:complexType>
-    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:tbl_student" />
-      <xs:field xpath="mstns:stud_id" />
-    </xs:unique>
   </xs:element>
 </xs:schema>

@@ -20,12 +20,12 @@ Option Explicit On
  Global.System.ComponentModel.DesignerCategoryAttribute("code"),  _
  Global.System.ComponentModel.ToolboxItem(true),  _
  Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema"),  _
- Global.System.Xml.Serialization.XmlRootAttribute("db_lccsams_elemDs"),  _
+ Global.System.Xml.Serialization.XmlRootAttribute("db_lccsamsDataSet"),  _
  Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")>  _
-Partial Public Class db_lccsams_elemDs
+Partial Public Class db_lccsamsDataSet
     Inherits Global.System.Data.DataSet
     
-    Private tabletbl_elem_students As tbl_elem_studentsDataTable
+    Private tabletbl_collection_reports As tbl_collection_reportsDataTable
     
     Private _schemaSerializationMode As Global.System.Data.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
     
@@ -56,8 +56,8 @@ Partial Public Class db_lccsams_elemDs
         If (Me.DetermineSchemaSerializationMode(info, context) = Global.System.Data.SchemaSerializationMode.IncludeSchema) Then
             Dim ds As Global.System.Data.DataSet = New Global.System.Data.DataSet()
             ds.ReadXmlSchema(New Global.System.Xml.XmlTextReader(New Global.System.IO.StringReader(strSchema)))
-            If (Not (ds.Tables("tbl_elem_students")) Is Nothing) Then
-                MyBase.Tables.Add(New tbl_elem_studentsDataTable(ds.Tables("tbl_elem_students")))
+            If (Not (ds.Tables("tbl_collection_reports")) Is Nothing) Then
+                MyBase.Tables.Add(New tbl_collection_reportsDataTable(ds.Tables("tbl_collection_reports")))
             End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
@@ -80,9 +80,9 @@ Partial Public Class db_lccsams_elemDs
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
      Global.System.ComponentModel.Browsable(false),  _
      Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
-    Public ReadOnly Property tbl_elem_students() As tbl_elem_studentsDataTable
+    Public ReadOnly Property tbl_collection_reports() As tbl_collection_reportsDataTable
         Get
-            Return Me.tabletbl_elem_students
+            Return Me.tabletbl_collection_reports
         End Get
     End Property
     
@@ -128,7 +128,7 @@ Partial Public Class db_lccsams_elemDs
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
     Public Overrides Function Clone() As Global.System.Data.DataSet
-        Dim cln As db_lccsams_elemDs = CType(MyBase.Clone,db_lccsams_elemDs)
+        Dim cln As db_lccsamsDataSet = CType(MyBase.Clone,db_lccsamsDataSet)
         cln.InitVars
         cln.SchemaSerializationMode = Me.SchemaSerializationMode
         Return cln
@@ -153,8 +153,8 @@ Partial Public Class db_lccsams_elemDs
             Me.Reset
             Dim ds As Global.System.Data.DataSet = New Global.System.Data.DataSet()
             ds.ReadXml(reader)
-            If (Not (ds.Tables("tbl_elem_students")) Is Nothing) Then
-                MyBase.Tables.Add(New tbl_elem_studentsDataTable(ds.Tables("tbl_elem_students")))
+            If (Not (ds.Tables("tbl_collection_reports")) Is Nothing) Then
+                MyBase.Tables.Add(New tbl_collection_reportsDataTable(ds.Tables("tbl_collection_reports")))
             End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
@@ -188,10 +188,10 @@ Partial Public Class db_lccsams_elemDs
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
     Friend Overloads Sub InitVars(ByVal initTable As Boolean)
-        Me.tabletbl_elem_students = CType(MyBase.Tables("tbl_elem_students"),tbl_elem_studentsDataTable)
+        Me.tabletbl_collection_reports = CType(MyBase.Tables("tbl_collection_reports"),tbl_collection_reportsDataTable)
         If (initTable = true) Then
-            If (Not (Me.tabletbl_elem_students) Is Nothing) Then
-                Me.tabletbl_elem_students.InitVars
+            If (Not (Me.tabletbl_collection_reports) Is Nothing) Then
+                Me.tabletbl_collection_reports.InitVars
             End If
         End If
     End Sub
@@ -199,18 +199,18 @@ Partial Public Class db_lccsams_elemDs
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
     Private Sub InitClass()
-        Me.DataSetName = "db_lccsams_elemDs"
+        Me.DataSetName = "db_lccsamsDataSet"
         Me.Prefix = ""
-        Me.Namespace = "http://tempuri.org/db_lccsams_elemDs.xsd"
+        Me.Namespace = "http://tempuri.org/db_lccsamsDataSet.xsd"
         Me.EnforceConstraints = true
         Me.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
-        Me.tabletbl_elem_students = New tbl_elem_studentsDataTable()
-        MyBase.Tables.Add(Me.tabletbl_elem_students)
+        Me.tabletbl_collection_reports = New tbl_collection_reportsDataTable()
+        MyBase.Tables.Add(Me.tabletbl_collection_reports)
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-    Private Function ShouldSerializetbl_elem_students() As Boolean
+    Private Function ShouldSerializetbl_collection_reports() As Boolean
         Return false
     End Function
     
@@ -225,7 +225,7 @@ Partial Public Class db_lccsams_elemDs
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
     Public Shared Function GetTypedDataSetSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
-        Dim ds As db_lccsams_elemDs = New db_lccsams_elemDs()
+        Dim ds As db_lccsamsDataSet = New db_lccsamsDataSet()
         Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
         Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
         Dim any As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
@@ -273,29 +273,29 @@ Partial Public Class db_lccsams_elemDs
     End Function
     
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-    Public Delegate Sub tbl_elem_studentsRowChangeEventHandler(ByVal sender As Object, ByVal e As tbl_elem_studentsRowChangeEvent)
+    Public Delegate Sub tbl_collection_reportsRowChangeEventHandler(ByVal sender As Object, ByVal e As tbl_collection_reportsRowChangeEvent)
     
     '''<summary>
     '''Represents the strongly named DataTable class.
     '''</summary>
     <Global.System.Serializable(),  _
      Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
-    Partial Public Class tbl_elem_studentsDataTable
-        Inherits Global.System.Data.TypedTableBase(Of tbl_elem_studentsRow)
+    Partial Public Class tbl_collection_reportsDataTable
+        Inherits Global.System.Data.TypedTableBase(Of tbl_collection_reportsRow)
         
-        Private columnestud_id As Global.System.Data.DataColumn
+        Private columncr_id As Global.System.Data.DataColumn
         
-        Private columnestud_fname As Global.System.Data.DataColumn
+        Private columncr_type As Global.System.Data.DataColumn
         
-        Private columnestud_lname As Global.System.Data.DataColumn
+        Private columnsf_type_id As Global.System.Data.DataColumn
         
-        Private columnestud_mi As Global.System.Data.DataColumn
+        Private columnsf_date As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub New()
             MyBase.New
-            Me.TableName = "tbl_elem_students"
+            Me.TableName = "tbl_collection_reports"
             Me.BeginInit
             Me.InitClass
             Me.EndInit
@@ -328,33 +328,33 @@ Partial Public Class db_lccsams_elemDs
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property estud_idColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property cr_idColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnestud_id
+                Return Me.columncr_id
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property estud_fnameColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property cr_typeColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnestud_fname
+                Return Me.columncr_type
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property estud_lnameColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property sf_type_idColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnestud_lname
+                Return Me.columnsf_type_id
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property estud_miColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property sf_dateColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnestud_mi
+                Return Me.columnsf_date
             End Get
         End Property
         
@@ -369,50 +369,44 @@ Partial Public Class db_lccsams_elemDs
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Default ReadOnly Property Item(ByVal index As Integer) As tbl_elem_studentsRow
+        Public Default ReadOnly Property Item(ByVal index As Integer) As tbl_collection_reportsRow
             Get
-                Return CType(Me.Rows(index),tbl_elem_studentsRow)
+                Return CType(Me.Rows(index),tbl_collection_reportsRow)
             End Get
         End Property
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Event tbl_elem_studentsRowChanging As tbl_elem_studentsRowChangeEventHandler
+        Public Event tbl_collection_reportsRowChanging As tbl_collection_reportsRowChangeEventHandler
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Event tbl_elem_studentsRowChanged As tbl_elem_studentsRowChangeEventHandler
+        Public Event tbl_collection_reportsRowChanged As tbl_collection_reportsRowChangeEventHandler
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Event tbl_elem_studentsRowDeleting As tbl_elem_studentsRowChangeEventHandler
+        Public Event tbl_collection_reportsRowDeleting As tbl_collection_reportsRowChangeEventHandler
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Event tbl_elem_studentsRowDeleted As tbl_elem_studentsRowChangeEventHandler
+        Public Event tbl_collection_reportsRowDeleted As tbl_collection_reportsRowChangeEventHandler
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overloads Sub Addtbl_elem_studentsRow(ByVal row As tbl_elem_studentsRow)
+        Public Overloads Sub Addtbl_collection_reportsRow(ByVal row As tbl_collection_reportsRow)
             Me.Rows.Add(row)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overloads Function Addtbl_elem_studentsRow(ByVal estud_id As Integer, ByVal estud_fname As String, ByVal estud_lname As String, ByVal estud_mi As String) As tbl_elem_studentsRow
-            Dim rowtbl_elem_studentsRow As tbl_elem_studentsRow = CType(Me.NewRow,tbl_elem_studentsRow)
-            Dim columnValuesArray() As Object = New Object() {estud_id, estud_fname, estud_lname, estud_mi}
-            rowtbl_elem_studentsRow.ItemArray = columnValuesArray
-            Me.Rows.Add(rowtbl_elem_studentsRow)
-            Return rowtbl_elem_studentsRow
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function FindByestud_id(ByVal estud_id As Integer) As tbl_elem_studentsRow
-            Return CType(Me.Rows.Find(New Object() {estud_id}),tbl_elem_studentsRow)
+        Public Overloads Function Addtbl_collection_reportsRow(ByVal cr_id As Integer, ByVal cr_type As Integer, ByVal sf_type_id As Integer, ByVal sf_date As Integer) As tbl_collection_reportsRow
+            Dim rowtbl_collection_reportsRow As tbl_collection_reportsRow = CType(Me.NewRow,tbl_collection_reportsRow)
+            Dim columnValuesArray() As Object = New Object() {cr_id, cr_type, sf_type_id, sf_date}
+            rowtbl_collection_reportsRow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowtbl_collection_reportsRow)
+            Return rowtbl_collection_reportsRow
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Overrides Function Clone() As Global.System.Data.DataTable
-            Dim cln As tbl_elem_studentsDataTable = CType(MyBase.Clone,tbl_elem_studentsDataTable)
+            Dim cln As tbl_collection_reportsDataTable = CType(MyBase.Clone,tbl_collection_reportsDataTable)
             cln.InitVars
             Return cln
         End Function
@@ -420,64 +414,59 @@ Partial Public Class db_lccsams_elemDs
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
-            Return New tbl_elem_studentsDataTable()
+            Return New tbl_collection_reportsDataTable()
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Friend Sub InitVars()
-            Me.columnestud_id = MyBase.Columns("estud_id")
-            Me.columnestud_fname = MyBase.Columns("estud_fname")
-            Me.columnestud_lname = MyBase.Columns("estud_lname")
-            Me.columnestud_mi = MyBase.Columns("estud_mi")
+            Me.columncr_id = MyBase.Columns("cr_id")
+            Me.columncr_type = MyBase.Columns("cr_type")
+            Me.columnsf_type_id = MyBase.Columns("sf_type_id")
+            Me.columnsf_date = MyBase.Columns("sf_date")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitClass()
-            Me.columnestud_id = New Global.System.Data.DataColumn("estud_id", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnestud_id)
-            Me.columnestud_fname = New Global.System.Data.DataColumn("estud_fname", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnestud_fname)
-            Me.columnestud_lname = New Global.System.Data.DataColumn("estud_lname", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnestud_lname)
-            Me.columnestud_mi = New Global.System.Data.DataColumn("estud_mi", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnestud_mi)
-            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnestud_id}, true))
-            Me.columnestud_id.AllowDBNull = false
-            Me.columnestud_id.Unique = true
-            Me.columnestud_fname.AllowDBNull = false
-            Me.columnestud_fname.MaxLength = 50
-            Me.columnestud_lname.AllowDBNull = false
-            Me.columnestud_lname.MaxLength = 50
-            Me.columnestud_mi.AllowDBNull = false
-            Me.columnestud_mi.MaxLength = 10
+            Me.columncr_id = New Global.System.Data.DataColumn("cr_id", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columncr_id)
+            Me.columncr_type = New Global.System.Data.DataColumn("cr_type", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columncr_type)
+            Me.columnsf_type_id = New Global.System.Data.DataColumn("sf_type_id", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnsf_type_id)
+            Me.columnsf_date = New Global.System.Data.DataColumn("sf_date", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnsf_date)
+            Me.columncr_id.AllowDBNull = false
+            Me.columncr_type.AllowDBNull = false
+            Me.columnsf_type_id.AllowDBNull = false
+            Me.columnsf_date.AllowDBNull = false
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function Newtbl_elem_studentsRow() As tbl_elem_studentsRow
-            Return CType(Me.NewRow,tbl_elem_studentsRow)
+        Public Function Newtbl_collection_reportsRow() As tbl_collection_reportsRow
+            Return CType(Me.NewRow,tbl_collection_reportsRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
-            Return New tbl_elem_studentsRow(builder)
+            Return New tbl_collection_reportsRow(builder)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Protected Overrides Function GetRowType() As Global.System.Type
-            Return GetType(tbl_elem_studentsRow)
+            Return GetType(tbl_collection_reportsRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowChanged(e)
-            If (Not (Me.tbl_elem_studentsRowChangedEvent) Is Nothing) Then
-                RaiseEvent tbl_elem_studentsRowChanged(Me, New tbl_elem_studentsRowChangeEvent(CType(e.Row,tbl_elem_studentsRow), e.Action))
+            If (Not (Me.tbl_collection_reportsRowChangedEvent) Is Nothing) Then
+                RaiseEvent tbl_collection_reportsRowChanged(Me, New tbl_collection_reportsRowChangeEvent(CType(e.Row,tbl_collection_reportsRow), e.Action))
             End If
         End Sub
         
@@ -485,8 +474,8 @@ Partial Public Class db_lccsams_elemDs
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowChanging(e)
-            If (Not (Me.tbl_elem_studentsRowChangingEvent) Is Nothing) Then
-                RaiseEvent tbl_elem_studentsRowChanging(Me, New tbl_elem_studentsRowChangeEvent(CType(e.Row,tbl_elem_studentsRow), e.Action))
+            If (Not (Me.tbl_collection_reportsRowChangingEvent) Is Nothing) Then
+                RaiseEvent tbl_collection_reportsRowChanging(Me, New tbl_collection_reportsRowChangeEvent(CType(e.Row,tbl_collection_reportsRow), e.Action))
             End If
         End Sub
         
@@ -494,8 +483,8 @@ Partial Public Class db_lccsams_elemDs
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowDeleted(e)
-            If (Not (Me.tbl_elem_studentsRowDeletedEvent) Is Nothing) Then
-                RaiseEvent tbl_elem_studentsRowDeleted(Me, New tbl_elem_studentsRowChangeEvent(CType(e.Row,tbl_elem_studentsRow), e.Action))
+            If (Not (Me.tbl_collection_reportsRowDeletedEvent) Is Nothing) Then
+                RaiseEvent tbl_collection_reportsRowDeleted(Me, New tbl_collection_reportsRowChangeEvent(CType(e.Row,tbl_collection_reportsRow), e.Action))
             End If
         End Sub
         
@@ -503,14 +492,14 @@ Partial Public Class db_lccsams_elemDs
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowDeleting(e)
-            If (Not (Me.tbl_elem_studentsRowDeletingEvent) Is Nothing) Then
-                RaiseEvent tbl_elem_studentsRowDeleting(Me, New tbl_elem_studentsRowChangeEvent(CType(e.Row,tbl_elem_studentsRow), e.Action))
+            If (Not (Me.tbl_collection_reportsRowDeletingEvent) Is Nothing) Then
+                RaiseEvent tbl_collection_reportsRowDeleting(Me, New tbl_collection_reportsRowChangeEvent(CType(e.Row,tbl_collection_reportsRow), e.Action))
             End If
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub Removetbl_elem_studentsRow(ByVal row As tbl_elem_studentsRow)
+        Public Sub Removetbl_collection_reportsRow(ByVal row As tbl_collection_reportsRow)
             Me.Rows.Remove(row)
         End Sub
         
@@ -519,7 +508,7 @@ Partial Public Class db_lccsams_elemDs
         Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
             Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
             Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
-            Dim ds As db_lccsams_elemDs = New db_lccsams_elemDs()
+            Dim ds As db_lccsamsDataSet = New db_lccsamsDataSet()
             Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
             any1.Namespace = "http://www.w3.org/2001/XMLSchema"
             any1.MinOccurs = New Decimal(0)
@@ -537,7 +526,7 @@ Partial Public Class db_lccsams_elemDs
             type.Attributes.Add(attribute1)
             Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
             attribute2.Name = "tableTypeName"
-            attribute2.FixedValue = "tbl_elem_studentsDataTable"
+            attribute2.FixedValue = "tbl_collection_reportsDataTable"
             type.Attributes.Add(attribute2)
             type.Particle = sequence
             Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
@@ -584,59 +573,59 @@ Partial Public Class db_lccsams_elemDs
     '''<summary>
     '''Represents strongly named DataRow class.
     '''</summary>
-    Partial Public Class tbl_elem_studentsRow
+    Partial Public Class tbl_collection_reportsRow
         Inherits Global.System.Data.DataRow
         
-        Private tabletbl_elem_students As tbl_elem_studentsDataTable
+        Private tabletbl_collection_reports As tbl_collection_reportsDataTable
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
             MyBase.New(rb)
-            Me.tabletbl_elem_students = CType(Me.Table,tbl_elem_studentsDataTable)
+            Me.tabletbl_collection_reports = CType(Me.Table,tbl_collection_reportsDataTable)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property estud_id() As Integer
+        Public Property cr_id() As Integer
             Get
-                Return CType(Me(Me.tabletbl_elem_students.estud_idColumn),Integer)
+                Return CType(Me(Me.tabletbl_collection_reports.cr_idColumn),Integer)
             End Get
             Set
-                Me(Me.tabletbl_elem_students.estud_idColumn) = value
+                Me(Me.tabletbl_collection_reports.cr_idColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property estud_fname() As String
+        Public Property cr_type() As Integer
             Get
-                Return CType(Me(Me.tabletbl_elem_students.estud_fnameColumn),String)
+                Return CType(Me(Me.tabletbl_collection_reports.cr_typeColumn),Integer)
             End Get
             Set
-                Me(Me.tabletbl_elem_students.estud_fnameColumn) = value
+                Me(Me.tabletbl_collection_reports.cr_typeColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property estud_lname() As String
+        Public Property sf_type_id() As Integer
             Get
-                Return CType(Me(Me.tabletbl_elem_students.estud_lnameColumn),String)
+                Return CType(Me(Me.tabletbl_collection_reports.sf_type_idColumn),Integer)
             End Get
             Set
-                Me(Me.tabletbl_elem_students.estud_lnameColumn) = value
+                Me(Me.tabletbl_collection_reports.sf_type_idColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property estud_mi() As String
+        Public Property sf_date() As Integer
             Get
-                Return CType(Me(Me.tabletbl_elem_students.estud_miColumn),String)
+                Return CType(Me(Me.tabletbl_collection_reports.sf_dateColumn),Integer)
             End Get
             Set
-                Me(Me.tabletbl_elem_students.estud_miColumn) = value
+                Me(Me.tabletbl_collection_reports.sf_dateColumn) = value
             End Set
         End Property
     End Class
@@ -645,16 +634,16 @@ Partial Public Class db_lccsams_elemDs
     '''Row event argument class
     '''</summary>
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-    Public Class tbl_elem_studentsRowChangeEvent
+    Public Class tbl_collection_reportsRowChangeEvent
         Inherits Global.System.EventArgs
         
-        Private eventRow As tbl_elem_studentsRow
+        Private eventRow As tbl_collection_reportsRow
         
         Private eventAction As Global.System.Data.DataRowAction
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub New(ByVal row As tbl_elem_studentsRow, ByVal action As Global.System.Data.DataRowAction)
+        Public Sub New(ByVal row As tbl_collection_reportsRow, ByVal action As Global.System.Data.DataRowAction)
             MyBase.New
             Me.eventRow = row
             Me.eventAction = action
@@ -662,7 +651,7 @@ Partial Public Class db_lccsams_elemDs
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property Row() As tbl_elem_studentsRow
+        Public ReadOnly Property Row() As tbl_collection_reportsRow
             Get
                 Return Me.eventRow
             End Get
@@ -678,7 +667,7 @@ Partial Public Class db_lccsams_elemDs
     End Class
 End Class
 
-Namespace db_lccsams_elemDsTableAdapters
+Namespace db_lccsamsDataSetTableAdapters
     
     '''<summary>
     '''Represents the connection and commands used to retrieve and save data.
@@ -689,7 +678,7 @@ Namespace db_lccsams_elemDsTableAdapters
      Global.System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner"& _ 
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"),  _
      Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-    Partial Public Class tbl_elem_studentsTableAdapter
+    Partial Public Class tbl_collection_reportsTableAdapter
         Inherits Global.System.ComponentModel.Component
         
         Private WithEvents _adapter As Global.MySql.Data.MySqlClient.MySqlDataAdapter
@@ -806,117 +795,56 @@ Namespace db_lccsams_elemDsTableAdapters
             Me._adapter = New Global.MySql.Data.MySqlClient.MySqlDataAdapter()
             Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
             tableMapping.SourceTable = "Table"
-            tableMapping.DataSetTable = "tbl_elem_students"
-            tableMapping.ColumnMappings.Add("estud_id", "estud_id")
-            tableMapping.ColumnMappings.Add("estud_fname", "estud_fname")
-            tableMapping.ColumnMappings.Add("estud_lname", "estud_lname")
-            tableMapping.ColumnMappings.Add("estud_mi", "estud_mi")
+            tableMapping.DataSetTable = "tbl_collection_reports"
+            tableMapping.ColumnMappings.Add("cr_id", "cr_id")
+            tableMapping.ColumnMappings.Add("cr_type", "cr_type")
+            tableMapping.ColumnMappings.Add("sf_type_id", "sf_type_id")
+            tableMapping.ColumnMappings.Add("sf_date", "sf_date")
             Me._adapter.TableMappings.Add(tableMapping)
-            Me._adapter.DeleteCommand = New Global.MySql.Data.MySqlClient.MySqlCommand()
-            Me._adapter.DeleteCommand.Connection = Me.Connection
-            Me._adapter.DeleteCommand.CommandText = "DELETE FROM `tbl_elem_students` WHERE ((`estud_id` = @p1) AND (`estud_fname` = @p"& _ 
-                "2) AND (`estud_lname` = @p3) AND (`estud_mi` = @p4))"
-            Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
+            Me._adapter.InsertCommand = New Global.MySql.Data.MySqlClient.MySqlCommand()
+            Me._adapter.InsertCommand.Connection = Me.Connection
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO `tbl_collection_reports` (`cr_id`, `cr_type`, `sf_type_id`, `sf_date`"& _ 
+                ") VALUES (@p1, @p2, @p3, @p4)"
+            Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Dim param As Global.MySql.Data.MySqlClient.MySqlParameter = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p1"
             param.DbType = Global.System.Data.DbType.Int32
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
             param.IsNullable = true
-            param.SourceColumn = "estud_id"
-            param.SourceVersion = Global.System.Data.DataRowVersion.Original
-            Me._adapter.DeleteCommand.Parameters.Add(param)
+            param.SourceColumn = "cr_id"
+            param.SourceVersion = Global.System.Data.DataRowVersion.Current
+            Me._adapter.InsertCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p2"
-            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
-            param.IsNullable = true
-            param.SourceColumn = "estud_fname"
-            param.SourceVersion = Global.System.Data.DataRowVersion.Original
-            Me._adapter.DeleteCommand.Parameters.Add(param)
-            param = New Global.MySql.Data.MySqlClient.MySqlParameter()
-            param.ParameterName = "@p3"
-            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
-            param.IsNullable = true
-            param.SourceColumn = "estud_lname"
-            param.SourceVersion = Global.System.Data.DataRowVersion.Original
-            Me._adapter.DeleteCommand.Parameters.Add(param)
-            param = New Global.MySql.Data.MySqlClient.MySqlParameter()
-            param.ParameterName = "@p4"
-            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
-            param.IsNullable = true
-            param.SourceColumn = "estud_mi"
-            param.SourceVersion = Global.System.Data.DataRowVersion.Original
-            Me._adapter.DeleteCommand.Parameters.Add(param)
-            Me._adapter.UpdateCommand = New Global.MySql.Data.MySqlClient.MySqlCommand()
-            Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE `tbl_elem_students` SET `estud_id` = @p1, `estud_fname` = @p2, `estud_lnam"& _ 
-                "e` = @p3, `estud_mi` = @p4 WHERE ((`estud_id` = @p5) AND (`estud_fname` = @p6) A"& _ 
-                "ND (`estud_lname` = @p7) AND (`estud_mi` = @p8))"
-            Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
-            param = New Global.MySql.Data.MySqlClient.MySqlParameter()
-            param.ParameterName = "@p1"
             param.DbType = Global.System.Data.DbType.Int32
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
             param.IsNullable = true
-            param.SourceColumn = "estud_id"
+            param.SourceColumn = "cr_type"
             param.SourceVersion = Global.System.Data.DataRowVersion.Current
-            Me._adapter.UpdateCommand.Parameters.Add(param)
-            param = New Global.MySql.Data.MySqlClient.MySqlParameter()
-            param.ParameterName = "@p2"
-            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
-            param.IsNullable = true
-            param.SourceColumn = "estud_fname"
-            param.SourceVersion = Global.System.Data.DataRowVersion.Current
-            Me._adapter.UpdateCommand.Parameters.Add(param)
+            Me._adapter.InsertCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p3"
-            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
-            param.IsNullable = true
-            param.SourceColumn = "estud_lname"
-            param.SourceVersion = Global.System.Data.DataRowVersion.Current
-            Me._adapter.UpdateCommand.Parameters.Add(param)
-            param = New Global.MySql.Data.MySqlClient.MySqlParameter()
-            param.ParameterName = "@p4"
-            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
-            param.IsNullable = true
-            param.SourceColumn = "estud_mi"
-            param.SourceVersion = Global.System.Data.DataRowVersion.Current
-            Me._adapter.UpdateCommand.Parameters.Add(param)
-            param = New Global.MySql.Data.MySqlClient.MySqlParameter()
-            param.ParameterName = "@p5"
             param.DbType = Global.System.Data.DbType.Int32
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
             param.IsNullable = true
-            param.SourceColumn = "estud_id"
-            param.SourceVersion = Global.System.Data.DataRowVersion.Original
-            Me._adapter.UpdateCommand.Parameters.Add(param)
+            param.SourceColumn = "sf_type_id"
+            param.SourceVersion = Global.System.Data.DataRowVersion.Current
+            Me._adapter.InsertCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
-            param.ParameterName = "@p6"
-            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
+            param.ParameterName = "@p4"
+            param.DbType = Global.System.Data.DbType.Int32
+            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
             param.IsNullable = true
-            param.SourceColumn = "estud_fname"
-            param.SourceVersion = Global.System.Data.DataRowVersion.Original
-            Me._adapter.UpdateCommand.Parameters.Add(param)
-            param = New Global.MySql.Data.MySqlClient.MySqlParameter()
-            param.ParameterName = "@p7"
-            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
-            param.IsNullable = true
-            param.SourceColumn = "estud_lname"
-            param.SourceVersion = Global.System.Data.DataRowVersion.Original
-            Me._adapter.UpdateCommand.Parameters.Add(param)
-            param = New Global.MySql.Data.MySqlClient.MySqlParameter()
-            param.ParameterName = "@p8"
-            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
-            param.IsNullable = true
-            param.SourceColumn = "estud_mi"
-            param.SourceVersion = Global.System.Data.DataRowVersion.Original
-            Me._adapter.UpdateCommand.Parameters.Add(param)
+            param.SourceColumn = "sf_date"
+            param.SourceVersion = Global.System.Data.DataRowVersion.Current
+            Me._adapter.InsertCommand.Parameters.Add(param)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitConnection()
             Me._connection = New Global.MySql.Data.MySqlClient.MySqlConnection()
-            Me._connection.ConnectionString = Global.LCC_SAMS_Project.My.MySettings.Default.db_lccsams_jeraldServer
+            Me._connection.ConnectionString = Global.LCC_SAMS_Project.My.MySettings.Default.db_lccsams_localhost
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -925,8 +853,7 @@ Namespace db_lccsams_elemDsTableAdapters
             Me._commandCollection = New Global.MySql.Data.MySqlClient.MySqlCommand(0) {}
             Me._commandCollection(0) = New Global.MySql.Data.MySqlClient.MySqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT `estud_id`, `estud_fname`, `estud_lname`, `estud_mi` FROM `tbl_elem_studen"& _ 
-                "ts`"
+            Me._commandCollection(0).CommandText = "SELECT `cr_id`, `cr_type`, `sf_type_id`, `sf_date` FROM `tbl_collection_reports`"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -934,7 +861,7 @@ Namespace db_lccsams_elemDsTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As db_lccsams_elemDs.tbl_elem_studentsDataTable) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As db_lccsamsDataSet.tbl_collection_reportsDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -947,9 +874,9 @@ Namespace db_lccsams_elemDsTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As db_lccsams_elemDs.tbl_elem_studentsDataTable
+        Public Overloads Overridable Function GetData() As db_lccsamsDataSet.tbl_collection_reportsDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As db_lccsams_elemDs.tbl_elem_studentsDataTable = New db_lccsams_elemDs.tbl_elem_studentsDataTable()
+            Dim dataTable As db_lccsamsDataSet.tbl_collection_reportsDataTable = New db_lccsamsDataSet.tbl_collection_reportsDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
@@ -957,15 +884,15 @@ Namespace db_lccsams_elemDsTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataTable As db_lccsams_elemDs.tbl_elem_studentsDataTable) As Integer
+        Public Overloads Overridable Function Update(ByVal dataTable As db_lccsamsDataSet.tbl_collection_reportsDataTable) As Integer
             Return Me.Adapter.Update(dataTable)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataSet As db_lccsams_elemDs) As Integer
-            Return Me.Adapter.Update(dataSet, "tbl_elem_students")
+        Public Overloads Overridable Function Update(ByVal dataSet As db_lccsamsDataSet) As Integer
+            Return Me.Adapter.Update(dataSet, "tbl_collection_reports")
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -985,97 +912,25 @@ Namespace db_lccsams_elemDsTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal p1 As Integer, ByVal p2 As String, ByVal p3 As String, ByVal p4 As String) As Integer
-            Me.Adapter.DeleteCommand.Parameters(0).Value = CType(p1,Integer)
-            If (p2 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("p2")
-            Else
-                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(p2,String)
-            End If
-            If (p3 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("p3")
-            Else
-                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(p3,String)
-            End If
-            If (p4 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("p4")
-            Else
-                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(p4,String)
-            End If
-            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
-            If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
+        Public Overloads Overridable Function Insert(ByVal p1 As Integer, ByVal p2 As Integer, ByVal p3 As Integer, ByVal p4 As Integer) As Integer
+            Me.Adapter.InsertCommand.Parameters(0).Value = CType(p1,Integer)
+            Me.Adapter.InsertCommand.Parameters(1).Value = CType(p2,Integer)
+            Me.Adapter.InsertCommand.Parameters(2).Value = CType(p3,Integer)
+            Me.Adapter.InsertCommand.Parameters(3).Value = CType(p4,Integer)
+            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
+            If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
-                Me.Adapter.DeleteCommand.Connection.Open
+                Me.Adapter.InsertCommand.Connection.Open
             End If
             Try 
-                Dim returnValue As Integer = Me.Adapter.DeleteCommand.ExecuteNonQuery
+                Dim returnValue As Integer = Me.Adapter.InsertCommand.ExecuteNonQuery
                 Return returnValue
             Finally
                 If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
-                    Me.Adapter.DeleteCommand.Connection.Close
+                    Me.Adapter.InsertCommand.Connection.Close
                 End If
             End Try
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal p1 As Integer, ByVal p2 As String, ByVal p3 As String, ByVal p4 As String, ByVal p5 As Integer, ByVal p6 As String, ByVal p7 As String, ByVal p8 As String) As Integer
-            Me.Adapter.UpdateCommand.Parameters(0).Value = CType(p1,Integer)
-            If (p2 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("p2")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(p2,String)
-            End If
-            If (p3 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("p3")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(p3,String)
-            End If
-            If (p4 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("p4")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(p4,String)
-            End If
-            Me.Adapter.UpdateCommand.Parameters(4).Value = CType(p5,Integer)
-            If (p6 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("p6")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(p6,String)
-            End If
-            If (p7 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("p7")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(p7,String)
-            End If
-            If (p8 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("p8")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(p8,String)
-            End If
-            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
-            If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
-                        <> Global.System.Data.ConnectionState.Open) Then
-                Me.Adapter.UpdateCommand.Connection.Open
-            End If
-            Try 
-                Dim returnValue As Integer = Me.Adapter.UpdateCommand.ExecuteNonQuery
-                Return returnValue
-            Finally
-                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
-                    Me.Adapter.UpdateCommand.Connection.Close
-                End If
-            End Try
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal p2 As String, ByVal p3 As String, ByVal p4 As String, ByVal p5 As Integer, ByVal p6 As String, ByVal p7 As String, ByVal p8 As String) As Integer
-            Return Me.Update(p5, p2, p3, p4, p5, p6, p7, p8)
         End Function
     End Class
     
@@ -1092,7 +947,7 @@ Namespace db_lccsams_elemDsTableAdapters
         
         Private _updateOrder As UpdateOrderOption
         
-        Private _tbl_elem_studentsTableAdapter As tbl_elem_studentsTableAdapter
+        Private _tbl_collection_reportsTableAdapter As tbl_collection_reportsTableAdapter
         
         Private _backupDataSetBeforeUpdate As Boolean
         
@@ -1114,12 +969,12 @@ Namespace db_lccsams_elemDsTableAdapters
          Global.System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso"& _ 
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3"& _ 
             "a", "System.Drawing.Design.UITypeEditor")>  _
-        Public Property tbl_elem_studentsTableAdapter() As tbl_elem_studentsTableAdapter
+        Public Property tbl_collection_reportsTableAdapter() As tbl_collection_reportsTableAdapter
             Get
-                Return Me._tbl_elem_studentsTableAdapter
+                Return Me._tbl_collection_reportsTableAdapter
             End Get
             Set
-                Me._tbl_elem_studentsTableAdapter = value
+                Me._tbl_collection_reportsTableAdapter = value
             End Set
         End Property
         
@@ -1142,9 +997,9 @@ Namespace db_lccsams_elemDsTableAdapters
                 If (Not (Me._connection) Is Nothing) Then
                     Return Me._connection
                 End If
-                If ((Not (Me._tbl_elem_studentsTableAdapter) Is Nothing)  _
-                            AndAlso (Not (Me._tbl_elem_studentsTableAdapter.Connection) Is Nothing)) Then
-                    Return Me._tbl_elem_studentsTableAdapter.Connection
+                If ((Not (Me._tbl_collection_reportsTableAdapter) Is Nothing)  _
+                            AndAlso (Not (Me._tbl_collection_reportsTableAdapter.Connection) Is Nothing)) Then
+                    Return Me._tbl_collection_reportsTableAdapter.Connection
                 End If
                 Return Nothing
             End Get
@@ -1159,7 +1014,7 @@ Namespace db_lccsams_elemDsTableAdapters
         Public ReadOnly Property TableAdapterInstanceCount() As Integer
             Get
                 Dim count As Integer = 0
-                If (Not (Me._tbl_elem_studentsTableAdapter) Is Nothing) Then
+                If (Not (Me._tbl_collection_reportsTableAdapter) Is Nothing) Then
                     count = (count + 1)
                 End If
                 Return count
@@ -1171,14 +1026,14 @@ Namespace db_lccsams_elemDsTableAdapters
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Private Function UpdateUpdatedRows(ByVal dataSet As db_lccsams_elemDs, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow), ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
+        Private Function UpdateUpdatedRows(ByVal dataSet As db_lccsamsDataSet, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow), ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
-            If (Not (Me._tbl_elem_studentsTableAdapter) Is Nothing) Then
-                Dim updatedRows() As Global.System.Data.DataRow = dataSet.tbl_elem_students.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
+            If (Not (Me._tbl_collection_reportsTableAdapter) Is Nothing) Then
+                Dim updatedRows() As Global.System.Data.DataRow = dataSet.tbl_collection_reports.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
                 updatedRows = Me.GetRealUpdatedRows(updatedRows, allAddedRows)
                 If ((Not (updatedRows) Is Nothing)  _
                             AndAlso (0 < updatedRows.Length)) Then
-                    result = (result + Me._tbl_elem_studentsTableAdapter.Update(updatedRows))
+                    result = (result + Me._tbl_collection_reportsTableAdapter.Update(updatedRows))
                     allChangedRows.AddRange(updatedRows)
                 End If
             End If
@@ -1190,13 +1045,13 @@ Namespace db_lccsams_elemDsTableAdapters
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Private Function UpdateInsertedRows(ByVal dataSet As db_lccsams_elemDs, ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
+        Private Function UpdateInsertedRows(ByVal dataSet As db_lccsamsDataSet, ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
-            If (Not (Me._tbl_elem_studentsTableAdapter) Is Nothing) Then
-                Dim addedRows() As Global.System.Data.DataRow = dataSet.tbl_elem_students.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
+            If (Not (Me._tbl_collection_reportsTableAdapter) Is Nothing) Then
+                Dim addedRows() As Global.System.Data.DataRow = dataSet.tbl_collection_reports.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
                 If ((Not (addedRows) Is Nothing)  _
                             AndAlso (0 < addedRows.Length)) Then
-                    result = (result + Me._tbl_elem_studentsTableAdapter.Update(addedRows))
+                    result = (result + Me._tbl_collection_reportsTableAdapter.Update(addedRows))
                     allAddedRows.AddRange(addedRows)
                 End If
             End If
@@ -1208,13 +1063,13 @@ Namespace db_lccsams_elemDsTableAdapters
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Private Function UpdateDeletedRows(ByVal dataSet As db_lccsams_elemDs, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
+        Private Function UpdateDeletedRows(ByVal dataSet As db_lccsamsDataSet, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
-            If (Not (Me._tbl_elem_studentsTableAdapter) Is Nothing) Then
-                Dim deletedRows() As Global.System.Data.DataRow = dataSet.tbl_elem_students.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
+            If (Not (Me._tbl_collection_reportsTableAdapter) Is Nothing) Then
+                Dim deletedRows() As Global.System.Data.DataRow = dataSet.tbl_collection_reports.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
                 If ((Not (deletedRows) Is Nothing)  _
                             AndAlso (0 < deletedRows.Length)) Then
-                    result = (result + Me._tbl_elem_studentsTableAdapter.Update(deletedRows))
+                    result = (result + Me._tbl_collection_reportsTableAdapter.Update(deletedRows))
                     allChangedRows.AddRange(deletedRows)
                 End If
             End If
@@ -1252,15 +1107,15 @@ Namespace db_lccsams_elemDsTableAdapters
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overridable Function UpdateAll(ByVal dataSet As db_lccsams_elemDs) As Integer
+        Public Overridable Function UpdateAll(ByVal dataSet As db_lccsamsDataSet) As Integer
             If (dataSet Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("dataSet")
             End If
             If (dataSet.HasChanges = false) Then
                 Return 0
             End If
-            If ((Not (Me._tbl_elem_studentsTableAdapter) Is Nothing)  _
-                        AndAlso (Me.MatchTableAdapterConnection(Me._tbl_elem_studentsTableAdapter.Connection) = false)) Then
+            If ((Not (Me._tbl_collection_reportsTableAdapter) Is Nothing)  _
+                        AndAlso (Me.MatchTableAdapterConnection(Me._tbl_collection_reportsTableAdapter.Connection) = false)) Then
                 Throw New Global.System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s"& _ 
                         "tring.")
             End If
@@ -1296,13 +1151,13 @@ Namespace db_lccsams_elemDsTableAdapters
             Try 
                 '---- Prepare for update -----------
                 '
-                If (Not (Me._tbl_elem_studentsTableAdapter) Is Nothing) Then
-                    revertConnections.Add(Me._tbl_elem_studentsTableAdapter, Me._tbl_elem_studentsTableAdapter.Connection)
-                    Me._tbl_elem_studentsTableAdapter.Connection = CType(workConnection,Global.MySql.Data.MySqlClient.MySqlConnection)
-                    Me._tbl_elem_studentsTableAdapter.Transaction = CType(workTransaction,Global.MySql.Data.MySqlClient.MySqlTransaction)
-                    If Me._tbl_elem_studentsTableAdapter.Adapter.AcceptChangesDuringUpdate Then
-                        Me._tbl_elem_studentsTableAdapter.Adapter.AcceptChangesDuringUpdate = false
-                        adaptersWithAcceptChangesDuringUpdate.Add(Me._tbl_elem_studentsTableAdapter.Adapter)
+                If (Not (Me._tbl_collection_reportsTableAdapter) Is Nothing) Then
+                    revertConnections.Add(Me._tbl_collection_reportsTableAdapter, Me._tbl_collection_reportsTableAdapter.Connection)
+                    Me._tbl_collection_reportsTableAdapter.Connection = CType(workConnection,Global.MySql.Data.MySqlClient.MySqlConnection)
+                    Me._tbl_collection_reportsTableAdapter.Transaction = CType(workTransaction,Global.MySql.Data.MySqlClient.MySqlTransaction)
+                    If Me._tbl_collection_reportsTableAdapter.Adapter.AcceptChangesDuringUpdate Then
+                        Me._tbl_collection_reportsTableAdapter.Adapter.AcceptChangesDuringUpdate = false
+                        adaptersWithAcceptChangesDuringUpdate.Add(Me._tbl_collection_reportsTableAdapter.Adapter)
                     End If
                 End If
                 '
@@ -1365,9 +1220,9 @@ Namespace db_lccsams_elemDsTableAdapters
                 If workConnOpened Then
                     workConnection.Close
                 End If
-                If (Not (Me._tbl_elem_studentsTableAdapter) Is Nothing) Then
-                    Me._tbl_elem_studentsTableAdapter.Connection = CType(revertConnections(Me._tbl_elem_studentsTableAdapter),Global.MySql.Data.MySqlClient.MySqlConnection)
-                    Me._tbl_elem_studentsTableAdapter.Transaction = Nothing
+                If (Not (Me._tbl_collection_reportsTableAdapter) Is Nothing) Then
+                    Me._tbl_collection_reportsTableAdapter.Connection = CType(revertConnections(Me._tbl_collection_reportsTableAdapter),Global.MySql.Data.MySqlClient.MySqlConnection)
+                    Me._tbl_collection_reportsTableAdapter.Transaction = Nothing
                 End If
                 If (0 < adaptersWithAcceptChangesDuringUpdate.Count) Then
                     Dim adapters((adaptersWithAcceptChangesDuringUpdate.Count) - 1) As Global.System.Data.Common.DataAdapter
