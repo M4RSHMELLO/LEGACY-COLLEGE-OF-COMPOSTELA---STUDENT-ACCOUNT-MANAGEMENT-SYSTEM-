@@ -57,49 +57,6 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("server=localhost;user id=root;database=db_lccsams")>  _
-        Public ReadOnly Property db_lccsamsConnectionString() As String
-            Get
-                Return CType(Me("db_lccsamsConnectionString"),String)
-            End Get
-        End Property
-        
-        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("server=192.168.0.113;user id=raldz;password=d74r3j93527;persistsecurityinfo=True;"& _ 
-            "database=db_lccsams")>  _
-        Public ReadOnly Property db_lccsams_arnicConnection() As String
-            Get
-                Return CType(Me("db_lccsams_arnicConnection"),String)
-            End Get
-        End Property
-        
-        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("server=192.168.254.114;user id=raldz;persistsecurityinfo=True;database=db_lccsams"& _ 
-            "")>  _
-        Public ReadOnly Property db_lccsams_jeraldServer() As String
-            Get
-                Return CType(Me("db_lccsams_jeraldServer"),String)
-            End Get
-        End Property
-        
-        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("server=206.189.80.59;user id=raldz;persistsecurityinfo=True;port=22284;database=d"& _ 
-            "b_lccsams")>  _
-        Public ReadOnly Property db_lccsams_onlineServer() As String
-            Get
-                Return CType(Me("db_lccsams_onlineServer"),String)
-            End Get
-        End Property
-        
-        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
          Global.System.Configuration.DefaultSettingValueAttribute("server=localhost;user id=raldz;persistsecurityinfo=True;database=db_lccsams")>  _
         Public ReadOnly Property db_lccsams_localhost() As String
             Get

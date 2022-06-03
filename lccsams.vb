@@ -1,6 +1,7 @@
 ﻿
 Imports System.Data
 Module lccsams
+
     '#############################################################Db Connection##########################################################################################
     Public dbConn As MySqlConnection ' This is used to establish connection
     Public sqlCommand As MySqlCommand ' This is used invoking SQL Command and retrieval
@@ -120,7 +121,22 @@ Module lccsams
             dbConn.Close()
         End Try
     End Sub
+    Public rpt As New college_reports
+    Public Sub _displayToReports(ByVal sql As String)
+        Try
 
+            dbConn.Open()
+            da = New MySqlDataAdapter(sql, dbConn)
+            dt = New DataTable
+            da.Fill(dt)
+            rpt.SetDataSource(dt)
+
+        Catch ex As Exception
+            erromessage("error 103: Display Record" & ex.Message)
+        Finally
+            dbConn.Close()
+        End Try
+    End Sub
     Public Sub _loadToCombobox(ByVal sql As String, ByVal cbo As ComboBox)
         Try
             dbConn.Open()

@@ -28,12 +28,18 @@ Partial Class frm_colReports
         Me.btn_elemdept = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.btn_collDept = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.cbo_dailyweekly = New System.Windows.Forms.ComboBox()
         Me.txtb_totalFeesAmount = New System.Windows.Forms.TextBox()
         Me.Label16 = New System.Windows.Forms.Label()
-        Me.CrystalReportViewer2 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
-        Me.college_reports1 = New LCC_SAMS_Project.college_reports()
+        Me.dg_coll_rpt = New System.Windows.Forms.DataGridView()
+        Me.BunifuFlatButton1 = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.tran_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.fees_name = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.fees_amnt = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.fees_date = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.lbl_total = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
+        CType(Me.dg_coll_rpt, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -43,7 +49,7 @@ Partial Class frm_colReports
         Me.Panel1.Controls.Add(Me.btn_elemdept)
         Me.Panel1.Controls.Add(Me.btn_collDept)
         Me.Panel1.Controls.Add(Me.Label8)
-        Me.Panel1.Controls.Add(Me.ComboBox1)
+        Me.Panel1.Controls.Add(Me.cbo_dailyweekly)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
@@ -214,17 +220,17 @@ Partial Class frm_colReports
         Me.Label8.TabIndex = 25
         Me.Label8.Text = "SELECT REPORTS"
         '
-        'ComboBox1
+        'cbo_dailyweekly
         '
-        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox1.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"DAILY", "WEEKLY"})
-        Me.ComboBox1.Location = New System.Drawing.Point(217, 24)
-        Me.ComboBox1.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(161, 33)
-        Me.ComboBox1.TabIndex = 26
+        Me.cbo_dailyweekly.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbo_dailyweekly.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbo_dailyweekly.FormattingEnabled = True
+        Me.cbo_dailyweekly.Items.AddRange(New Object() {"DAILY", "WEEKLY"})
+        Me.cbo_dailyweekly.Location = New System.Drawing.Point(217, 24)
+        Me.cbo_dailyweekly.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
+        Me.cbo_dailyweekly.Name = "cbo_dailyweekly"
+        Me.cbo_dailyweekly.Size = New System.Drawing.Size(161, 33)
+        Me.cbo_dailyweekly.TabIndex = 26
         '
         'txtb_totalFeesAmount
         '
@@ -247,24 +253,96 @@ Partial Class frm_colReports
         Me.Label16.TabIndex = 22
         Me.Label16.Text = "TOTAL AMOUNT"
         '
-        'CrystalReportViewer2
+        'dg_coll_rpt
         '
-        Me.CrystalReportViewer2.ActiveViewIndex = -1
-        Me.CrystalReportViewer2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.CrystalReportViewer2.Cursor = System.Windows.Forms.Cursors.Default
-        Me.CrystalReportViewer2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.CrystalReportViewer2.Location = New System.Drawing.Point(0, 85)
-        Me.CrystalReportViewer2.Name = "CrystalReportViewer2"
-        Me.CrystalReportViewer2.ReportSource = Me.college_reports1
-        Me.CrystalReportViewer2.Size = New System.Drawing.Size(1154, 579)
-        Me.CrystalReportViewer2.TabIndex = 24
-        Me.CrystalReportViewer2.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
+        Me.dg_coll_rpt.AllowUserToAddRows = False
+        Me.dg_coll_rpt.AllowUserToDeleteRows = False
+        Me.dg_coll_rpt.AllowUserToResizeRows = False
+        Me.dg_coll_rpt.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dg_coll_rpt.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dg_coll_rpt.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.tran_id, Me.fees_name, Me.fees_amnt, Me.fees_date})
+        Me.dg_coll_rpt.Location = New System.Drawing.Point(109, 112)
+        Me.dg_coll_rpt.Name = "dg_coll_rpt"
+        Me.dg_coll_rpt.RowHeadersVisible = False
+        Me.dg_coll_rpt.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dg_coll_rpt.Size = New System.Drawing.Size(922, 360)
+        Me.dg_coll_rpt.TabIndex = 25
+        '
+        'BunifuFlatButton1
+        '
+        Me.BunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
+        Me.BunifuFlatButton1.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.BunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BunifuFlatButton1.BorderRadius = 0
+        Me.BunifuFlatButton1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.BunifuFlatButton1.ButtonText = "PRINT"
+        Me.BunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray
+        Me.BunifuFlatButton1.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.BunifuFlatButton1.ForeColor = System.Drawing.Color.SeaGreen
+        Me.BunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent
+        Me.BunifuFlatButton1.Iconimage = Nothing
+        Me.BunifuFlatButton1.Iconimage_right = Nothing
+        Me.BunifuFlatButton1.Iconimage_right_Selected = Nothing
+        Me.BunifuFlatButton1.Iconimage_Selected = Nothing
+        Me.BunifuFlatButton1.IconMarginLeft = 0
+        Me.BunifuFlatButton1.IconMarginRight = 0
+        Me.BunifuFlatButton1.IconRightVisible = False
+        Me.BunifuFlatButton1.IconRightZoom = 0R
+        Me.BunifuFlatButton1.IconVisible = False
+        Me.BunifuFlatButton1.IconZoom = 90.0R
+        Me.BunifuFlatButton1.IsTab = False
+        Me.BunifuFlatButton1.Location = New System.Drawing.Point(851, 566)
+        Me.BunifuFlatButton1.Margin = New System.Windows.Forms.Padding(3, 8, 3, 8)
+        Me.BunifuFlatButton1.Name = "BunifuFlatButton1"
+        Me.BunifuFlatButton1.Normalcolor = System.Drawing.SystemColors.ButtonFace
+        Me.BunifuFlatButton1.OnHovercolor = System.Drawing.Color.Goldenrod
+        Me.BunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White
+        Me.BunifuFlatButton1.selected = False
+        Me.BunifuFlatButton1.Size = New System.Drawing.Size(180, 33)
+        Me.BunifuFlatButton1.TabIndex = 54
+        Me.BunifuFlatButton1.Text = "PRINT"
+        Me.BunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.BunifuFlatButton1.Textcolor = System.Drawing.Color.SeaGreen
+        Me.BunifuFlatButton1.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        '
+        'tran_id
+        '
+        Me.tran_id.HeaderText = "Invoice No."
+        Me.tran_id.Name = "tran_id"
+        '
+        'fees_name
+        '
+        Me.fees_name.HeaderText = "Particulars"
+        Me.fees_name.Name = "fees_name"
+        '
+        'fees_amnt
+        '
+        Me.fees_amnt.HeaderText = "Amount"
+        Me.fees_amnt.Name = "fees_amnt"
+        '
+        'fees_date
+        '
+        Me.fees_date.HeaderText = "Date"
+        Me.fees_date.Name = "fees_date"
+        '
+        'lbl_total
+        '
+        Me.lbl_total.AutoSize = True
+        Me.lbl_total.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_total.Location = New System.Drawing.Point(566, 485)
+        Me.lbl_total.Name = "lbl_total"
+        Me.lbl_total.Size = New System.Drawing.Size(62, 25)
+        Me.lbl_total.TabIndex = 55
+        Me.lbl_total.Text = "TOTAL"
         '
         'frm_colReports
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 21.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.Controls.Add(Me.CrystalReportViewer2)
+        Me.Controls.Add(Me.lbl_total)
+        Me.Controls.Add(Me.BunifuFlatButton1)
+        Me.Controls.Add(Me.dg_coll_rpt)
         Me.Controls.Add(Me.txtb_totalFeesAmount)
         Me.Controls.Add(Me.Label16)
         Me.Controls.Add(Me.Panel1)
@@ -274,13 +352,14 @@ Partial Class frm_colReports
         Me.Size = New System.Drawing.Size(1154, 664)
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.dg_coll_rpt, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents Label8 As System.Windows.Forms.Label
-    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
+    Friend WithEvents cbo_dailyweekly As System.Windows.Forms.ComboBox
     Friend WithEvents btn_seniordept As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents btn_juniordept As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents btn_elemdept As Bunifu.Framework.UI.BunifuFlatButton
@@ -288,6 +367,11 @@ Partial Class frm_colReports
     Friend WithEvents txtb_totalFeesAmount As System.Windows.Forms.TextBox
     Friend WithEvents Label16 As System.Windows.Forms.Label
     Friend WithEvents CrystalReportViewer1 As CrystalDecisions.Windows.Forms.CrystalReportViewer
-    Friend WithEvents CrystalReportViewer2 As CrystalDecisions.Windows.Forms.CrystalReportViewer
-    Friend WithEvents college_reports1 As college_reports
+    Friend WithEvents dg_coll_rpt As DataGridView
+    Friend WithEvents BunifuFlatButton1 As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents tran_id As DataGridViewTextBoxColumn
+    Friend WithEvents fees_name As DataGridViewTextBoxColumn
+    Friend WithEvents fees_amnt As DataGridViewTextBoxColumn
+    Friend WithEvents fees_date As DataGridViewTextBoxColumn
+    Friend WithEvents lbl_total As Label
 End Class

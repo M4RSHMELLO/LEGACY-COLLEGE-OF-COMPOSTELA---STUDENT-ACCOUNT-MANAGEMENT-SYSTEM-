@@ -166,15 +166,10 @@
     <Compile Include="Dashboard.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="db_lccsamsDataSet.Designer.vb">
+    <Compile Include="coll_rpt_ds.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>db_lccsamsDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="db_lccsamsDataSet1.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>db_lccsamsDataSet1.xsd</DependentUpon>
+      <DependentUpon>coll_rpt_ds.xsd</DependentUpon>
     </Compile>
     <Compile Include="dlg_addnewsy.designer.vb">
       <DependentUpon>dlg_addnewsy.vb</DependentUpon>
@@ -282,6 +277,12 @@
       <DependentUpon>dlg_updateYearLevel.vb</DependentUpon>
     </Compile>
     <Compile Include="dlg_updateYearLevel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="collection_rpt.Designer.vb">
+      <DependentUpon>collection_rpt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="collection_rpt.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\frm_slists.Designer.vb">
@@ -444,6 +445,9 @@
     <EmbeddedResource Include="dlg_updateYearLevel.resx">
       <DependentUpon>dlg_updateYearLevel.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="collection_rpt.resx">
+      <DependentUpon>collection_rpt.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frm_slists.resx">
       <DependentUpon>frm_slists.vb</DependentUpon>
     </EmbeddedResource>
@@ -491,27 +495,16 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="db_lccsamsDataSet.xsc">
-      <DependentUpon>db_lccsamsDataSet.xsd</DependentUpon>
+    <None Include="coll_rpt_ds.xsc">
+      <DependentUpon>coll_rpt_ds.xsd</DependentUpon>
     </None>
-    <None Include="db_lccsamsDataSet.xsd">
+    <None Include="coll_rpt_ds.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>db_lccsamsDataSet.Designer.vb</LastGenOutput>
+      <LastGenOutput>coll_rpt_ds.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="db_lccsamsDataSet.xss">
-      <DependentUpon>db_lccsamsDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="db_lccsamsDataSet1.xsc">
-      <DependentUpon>db_lccsamsDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="db_lccsamsDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>db_lccsamsDataSet1.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="db_lccsamsDataSet1.xss">
-      <DependentUpon>db_lccsamsDataSet1.xsd</DependentUpon>
+    <None Include="coll_rpt_ds.xss">
+      <DependentUpon>coll_rpt_ds.xsd</DependentUpon>
     </None>
     <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
