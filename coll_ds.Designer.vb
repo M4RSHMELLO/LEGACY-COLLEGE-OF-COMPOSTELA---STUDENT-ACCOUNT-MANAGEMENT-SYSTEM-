@@ -287,9 +287,9 @@ Partial Public Class coll_ds
         
         Private columnstdacct_tDate As Global.System.Data.DataColumn
         
-        Private columnstdacct_tName As Global.System.Data.DataColumn
-        
         Private columnstdacct_tAmount As Global.System.Data.DataColumn
+        
+        Private columnfees_name As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
@@ -344,17 +344,17 @@ Partial Public Class coll_ds
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property stdacct_tNameColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property stdacct_tAmountColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnstdacct_tName
+                Return Me.columnstdacct_tAmount
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property stdacct_tAmountColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property fees_nameColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnstdacct_tAmount
+                Return Me.columnfees_name
             End Get
         End Property
         
@@ -395,9 +395,9 @@ Partial Public Class coll_ds
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overloads Function Addtbl_studaccountRow(ByVal stdacct_tN As Integer, ByVal stdacct_tDate As Date, ByVal stdacct_tName As Integer, ByVal stdacct_tAmount As Double) As tbl_studaccountRow
+        Public Overloads Function Addtbl_studaccountRow(ByVal stdacct_tN As Integer, ByVal stdacct_tDate As Date, ByVal stdacct_tAmount As Double, ByVal fees_name As String) As tbl_studaccountRow
             Dim rowtbl_studaccountRow As tbl_studaccountRow = CType(Me.NewRow,tbl_studaccountRow)
-            Dim columnValuesArray() As Object = New Object() {stdacct_tN, stdacct_tDate, stdacct_tName, stdacct_tAmount}
+            Dim columnValuesArray() As Object = New Object() {stdacct_tN, stdacct_tDate, stdacct_tAmount, fees_name}
             rowtbl_studaccountRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowtbl_studaccountRow)
             Return rowtbl_studaccountRow
@@ -422,8 +422,8 @@ Partial Public Class coll_ds
         Friend Sub InitVars()
             Me.columnstdacct_tN = MyBase.Columns("stdacct_tN")
             Me.columnstdacct_tDate = MyBase.Columns("stdacct_tDate")
-            Me.columnstdacct_tName = MyBase.Columns("stdacct_tName")
             Me.columnstdacct_tAmount = MyBase.Columns("stdacct_tAmount")
+            Me.columnfees_name = MyBase.Columns("fees_name")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -433,10 +433,12 @@ Partial Public Class coll_ds
             MyBase.Columns.Add(Me.columnstdacct_tN)
             Me.columnstdacct_tDate = New Global.System.Data.DataColumn("stdacct_tDate", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnstdacct_tDate)
-            Me.columnstdacct_tName = New Global.System.Data.DataColumn("stdacct_tName", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnstdacct_tName)
             Me.columnstdacct_tAmount = New Global.System.Data.DataColumn("stdacct_tAmount", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnstdacct_tAmount)
+            Me.columnfees_name = New Global.System.Data.DataColumn("fees_name", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnfees_name)
+            Me.columnfees_name.AllowDBNull = false
+            Me.columnfees_name.MaxLength = 45
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -613,21 +615,6 @@ Partial Public Class coll_ds
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property stdacct_tName() As Integer
-            Get
-                Try 
-                    Return CType(Me(Me.tabletbl_studaccount.stdacct_tNameColumn),Integer)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'stdacct_tName' in table 'tbl_studaccount' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tabletbl_studaccount.stdacct_tNameColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Property stdacct_tAmount() As Double
             Get
                 Try 
@@ -638,6 +625,17 @@ Partial Public Class coll_ds
             End Get
             Set
                 Me(Me.tabletbl_studaccount.stdacct_tAmountColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property fees_name() As String
+            Get
+                Return CType(Me(Me.tabletbl_studaccount.fees_nameColumn),String)
+            End Get
+            Set
+                Me(Me.tabletbl_studaccount.fees_nameColumn) = value
             End Set
         End Property
         
@@ -663,18 +661,6 @@ Partial Public Class coll_ds
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub Setstdacct_tDateNull()
             Me(Me.tabletbl_studaccount.stdacct_tDateColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function Isstdacct_tNameNull() As Boolean
-            Return Me.IsNull(Me.tabletbl_studaccount.stdacct_tNameColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub Setstdacct_tNameNull()
-            Me(Me.tabletbl_studaccount.stdacct_tNameColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -858,8 +844,8 @@ Namespace coll_dsTableAdapters
             tableMapping.DataSetTable = "tbl_studaccount"
             tableMapping.ColumnMappings.Add("stdacct_tN", "stdacct_tN")
             tableMapping.ColumnMappings.Add("stdacct_tDate", "stdacct_tDate")
-            tableMapping.ColumnMappings.Add("stdacct_tName", "stdacct_tName")
             tableMapping.ColumnMappings.Add("stdacct_tAmount", "stdacct_tAmount")
+            tableMapping.ColumnMappings.Add("fees_name", "fees_name")
             Me._adapter.TableMappings.Add(tableMapping)
         End Sub
         
@@ -876,8 +862,9 @@ Namespace coll_dsTableAdapters
             Me._commandCollection = New Global.MySql.Data.MySqlClient.MySqlCommand(0) {}
             Me._commandCollection(0) = New Global.MySql.Data.MySqlClient.MySqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT `stdacct_tN`, `stdacct_tDate`, `stdacct_tName`, `stdacct_tAmount` FROM `tb"& _ 
-                "l_studaccount`"
+            Me._commandCollection(0).CommandText = "Select sa.stdacct_tN,sa.stdacct_tDate,cf.fees_name,sa.stdacct_tAmount from tbl_st"& _ 
+                "udaccount sa inner join tbl_coll_fees cf on cf.fees_id=sa.stdacct_tName    order"& _ 
+                " by sa.stdacct_tDate desc"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         

@@ -165,6 +165,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>coll_ds.xsd</DependentUpon>
     </Compile>
+    <Compile Include="coll_ds.vb">
+      <DependentUpon>coll_ds.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Dashboard.Designer.vb">
       <DependentUpon>Dashboard.vb</DependentUpon>
     </Compile>

@@ -70,8 +70,6 @@ Partial Class frm_sSG
         Me.Label14 = New System.Windows.Forms.Label()
         Me.TblelemstudentsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TblstudentBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Db_lccsamsDataSet11 = New LCC_SAMS_Project.db_lccsamsDataSet1()
-        Me.Tbl_studentTableAdapter = New LCC_SAMS_Project.db_lccsamsDataSet1TableAdapters.tbl_studentTableAdapter()
         Me.StudidDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.StudFnameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.StudLnameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -89,7 +87,6 @@ Partial Class frm_sSG
         Me.Panel2.SuspendLayout()
         CType(Me.TblelemstudentsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TblstudentBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Db_lccsamsDataSet11, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -600,16 +597,7 @@ Partial Class frm_sSG
         'TblstudentBindingSource
         '
         Me.TblstudentBindingSource.DataMember = "tbl_student"
-        Me.TblstudentBindingSource.DataSource = Me.Db_lccsamsDataSet11
         '
-        'Db_lccsamsDataSet11
-        '
-        Me.Db_lccsamsDataSet11.DataSetName = "db_lccsamsDataSet1"
-        Me.Db_lccsamsDataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'Tbl_studentTableAdapter
-        '
-        Me.Tbl_studentTableAdapter.ClearBeforeFill = True
         '
         'StudidDataGridViewTextBoxColumn
         '
@@ -681,7 +669,6 @@ Partial Class frm_sSG
         Me.Panel2.PerformLayout()
         CType(Me.TblelemstudentsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TblstudentBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Db_lccsamsDataSet11, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -729,8 +716,6 @@ Partial Class frm_sSG
     Friend WithEvents Panel3 As Panel
     Friend WithEvents dg_StudScholarRec As Bunifu.Framework.UI.BunifuCustomDataGrid
     Friend WithEvents TblstudentBindingSource As BindingSource
-    Friend WithEvents Db_lccsamsDataSet11 As db_lccsamsDataSet1
-    Friend WithEvents Tbl_studentTableAdapter As db_lccsamsDataSet1TableAdapters.tbl_studentTableAdapter
     Friend WithEvents TblelemstudentsBindingSource As BindingSource
     Friend WithEvents StudidDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents StudFnameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn

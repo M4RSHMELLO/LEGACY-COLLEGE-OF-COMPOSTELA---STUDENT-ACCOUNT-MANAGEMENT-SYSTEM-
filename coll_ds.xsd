@@ -9,10 +9,10 @@
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tbl_studaccountTableAdapter" GeneratorDataComponentClassName="tbl_studaccountTableAdapter" Name="tbl_studaccount" UserDataComponentName="tbl_studaccountTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="db_connection (MySettings)" DbObjectName="db_lccsams.tbl_studaccount" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="db_connection (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT `stdacct_tN`, `stdacct_tDate`, `stdacct_tName`, `stdacct_tAmount` FROM `tbl_studaccount`</CommandText>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>Select sa.stdacct_tN,sa.stdacct_tDate,cf.fees_name,sa.stdacct_tAmount from tbl_studaccount sa inner join tbl_coll_fees cf on cf.fees_id=sa.stdacct_tName    order by sa.stdacct_tDate desc</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -21,8 +21,8 @@
             <Mappings>
               <Mapping SourceColumn="stdacct_tN" DataSetColumn="stdacct_tN" />
               <Mapping SourceColumn="stdacct_tDate" DataSetColumn="stdacct_tDate" />
-              <Mapping SourceColumn="stdacct_tName" DataSetColumn="stdacct_tName" />
               <Mapping SourceColumn="stdacct_tAmount" DataSetColumn="stdacct_tAmount" />
+              <Mapping SourceColumn="fees_name" DataSetColumn="fees_name" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -34,13 +34,19 @@
   <xs:element name="coll_ds" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="coll_ds" msprop:Generator_UserDSName="coll_ds">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="tbl_studaccount" msprop:Generator_TableClassName="tbl_studaccountDataTable" msprop:Generator_TableVarName="tabletbl_studaccount" msprop:Generator_TablePropName="tbl_studaccount" msprop:Generator_RowDeletingName="tbl_studaccountRowDeleting" msprop:Generator_RowChangingName="tbl_studaccountRowChanging" msprop:Generator_RowEvHandlerName="tbl_studaccountRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_studaccountRowDeleted" msprop:Generator_UserTableName="tbl_studaccount" msprop:Generator_RowChangedName="tbl_studaccountRowChanged" msprop:Generator_RowEvArgName="tbl_studaccountRowChangeEvent" msprop:Generator_RowClassName="tbl_studaccountRow">
+        <xs:element name="tbl_studaccount" msprop:Generator_TableClassName="tbl_studaccountDataTable" msprop:Generator_TableVarName="tabletbl_studaccount" msprop:Generator_RowChangedName="tbl_studaccountRowChanged" msprop:Generator_TablePropName="tbl_studaccount" msprop:Generator_RowDeletingName="tbl_studaccountRowDeleting" msprop:Generator_RowChangingName="tbl_studaccountRowChanging" msprop:Generator_RowEvHandlerName="tbl_studaccountRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_studaccountRowDeleted" msprop:Generator_RowClassName="tbl_studaccountRow" msprop:Generator_UserTableName="tbl_studaccount" msprop:Generator_RowEvArgName="tbl_studaccountRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="stdacct_tN" msprop:Generator_ColumnVarNameInTable="columnstdacct_tN" msprop:Generator_ColumnPropNameInRow="stdacct_tN" msprop:Generator_ColumnPropNameInTable="stdacct_tNColumn" msprop:Generator_UserColumnName="stdacct_tN" type="xs:int" minOccurs="0" />
               <xs:element name="stdacct_tDate" msprop:Generator_ColumnVarNameInTable="columnstdacct_tDate" msprop:Generator_ColumnPropNameInRow="stdacct_tDate" msprop:Generator_ColumnPropNameInTable="stdacct_tDateColumn" msprop:Generator_UserColumnName="stdacct_tDate" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="stdacct_tName" msprop:Generator_ColumnVarNameInTable="columnstdacct_tName" msprop:Generator_ColumnPropNameInRow="stdacct_tName" msprop:Generator_ColumnPropNameInTable="stdacct_tNameColumn" msprop:Generator_UserColumnName="stdacct_tName" type="xs:int" minOccurs="0" />
               <xs:element name="stdacct_tAmount" msprop:Generator_ColumnVarNameInTable="columnstdacct_tAmount" msprop:Generator_ColumnPropNameInRow="stdacct_tAmount" msprop:Generator_ColumnPropNameInTable="stdacct_tAmountColumn" msprop:Generator_UserColumnName="stdacct_tAmount" type="xs:double" minOccurs="0" />
+              <xs:element name="fees_name" msprop:Generator_ColumnVarNameInTable="columnfees_name" msprop:Generator_ColumnPropNameInRow="fees_name" msprop:Generator_ColumnPropNameInTable="fees_nameColumn" msprop:Generator_UserColumnName="fees_name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>

@@ -22,6 +22,7 @@ Partial Class frm_colReports
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btn_seniordept = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.btn_juniordept = New Bunifu.Framework.UI.BunifuFlatButton()
@@ -32,14 +33,20 @@ Partial Class frm_colReports
         Me.txtb_totalFeesAmount = New System.Windows.Forms.TextBox()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.dg_coll_rpt = New System.Windows.Forms.DataGridView()
-        Me.BunifuFlatButton1 = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.tran_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.fees_date = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.fees_name = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.fees_amnt = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.fees_date = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.BunifuFlatButton1 = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.lbl_total = New System.Windows.Forms.Label()
+        Me.TblstudaccountBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Coll_ds = New LCC_SAMS_Project.coll_ds()
+        Me.Tbl_studaccountTableAdapter = New LCC_SAMS_Project.coll_dsTableAdapters.tbl_studaccountTableAdapter()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.Panel1.SuspendLayout()
         CType(Me.dg_coll_rpt, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TblstudaccountBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Coll_ds, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -260,13 +267,33 @@ Partial Class frm_colReports
         Me.dg_coll_rpt.AllowUserToResizeRows = False
         Me.dg_coll_rpt.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dg_coll_rpt.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dg_coll_rpt.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.tran_id, Me.fees_name, Me.fees_amnt, Me.fees_date})
-        Me.dg_coll_rpt.Location = New System.Drawing.Point(109, 112)
+        Me.dg_coll_rpt.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.tran_id, Me.fees_date, Me.fees_name, Me.fees_amnt})
+        Me.dg_coll_rpt.Location = New System.Drawing.Point(109, 138)
         Me.dg_coll_rpt.Name = "dg_coll_rpt"
         Me.dg_coll_rpt.RowHeadersVisible = False
         Me.dg_coll_rpt.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dg_coll_rpt.Size = New System.Drawing.Size(922, 360)
         Me.dg_coll_rpt.TabIndex = 25
+        '
+        'tran_id
+        '
+        Me.tran_id.HeaderText = "Invoice No."
+        Me.tran_id.Name = "tran_id"
+        '
+        'fees_date
+        '
+        Me.fees_date.HeaderText = "Date"
+        Me.fees_date.Name = "fees_date"
+        '
+        'fees_name
+        '
+        Me.fees_name.HeaderText = "Particulars"
+        Me.fees_name.Name = "fees_name"
+        '
+        'fees_amnt
+        '
+        Me.fees_amnt.HeaderText = "Amount"
+        Me.fees_amnt.Name = "fees_amnt"
         '
         'BunifuFlatButton1
         '
@@ -306,26 +333,6 @@ Partial Class frm_colReports
         Me.BunifuFlatButton1.Textcolor = System.Drawing.Color.SeaGreen
         Me.BunifuFlatButton1.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
-        'tran_id
-        '
-        Me.tran_id.HeaderText = "Invoice No."
-        Me.tran_id.Name = "tran_id"
-        '
-        'fees_name
-        '
-        Me.fees_name.HeaderText = "Particulars"
-        Me.fees_name.Name = "fees_name"
-        '
-        'fees_amnt
-        '
-        Me.fees_amnt.HeaderText = "Amount"
-        Me.fees_amnt.Name = "fees_amnt"
-        '
-        'fees_date
-        '
-        Me.fees_date.HeaderText = "Date"
-        Me.fees_date.Name = "fees_date"
-        '
         'lbl_total
         '
         Me.lbl_total.AutoSize = True
@@ -336,10 +343,34 @@ Partial Class frm_colReports
         Me.lbl_total.TabIndex = 55
         Me.lbl_total.Text = "TOTAL"
         '
+        'TblstudaccountBindingSource
+        '
+        Me.TblstudaccountBindingSource.DataMember = "tbl_studaccount"
+        Me.TblstudaccountBindingSource.DataSource = Me.Coll_ds
+        '
+        'Coll_ds
+        '
+        Me.Coll_ds.DataSetName = "coll_ds"
+        Me.Coll_ds.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'Tbl_studaccountTableAdapter
+        '
+        Me.Tbl_studaccountTableAdapter.ClearBeforeFill = True
+        '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.CustomFormat = "dddd"
+        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.DateTimePicker1.Location = New System.Drawing.Point(109, 112)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 26)
+        Me.DateTimePicker1.TabIndex = 56
+        '
         'frm_colReports
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 21.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.Controls.Add(Me.DateTimePicker1)
         Me.Controls.Add(Me.lbl_total)
         Me.Controls.Add(Me.BunifuFlatButton1)
         Me.Controls.Add(Me.dg_coll_rpt)
@@ -353,6 +384,8 @@ Partial Class frm_colReports
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.dg_coll_rpt, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TblstudaccountBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Coll_ds, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -369,9 +402,13 @@ Partial Class frm_colReports
     Friend WithEvents CrystalReportViewer1 As CrystalDecisions.Windows.Forms.CrystalReportViewer
     Friend WithEvents dg_coll_rpt As DataGridView
     Friend WithEvents BunifuFlatButton1 As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents lbl_total As Label
     Friend WithEvents tran_id As DataGridViewTextBoxColumn
+    Friend WithEvents fees_date As DataGridViewTextBoxColumn
     Friend WithEvents fees_name As DataGridViewTextBoxColumn
     Friend WithEvents fees_amnt As DataGridViewTextBoxColumn
-    Friend WithEvents fees_date As DataGridViewTextBoxColumn
-    Friend WithEvents lbl_total As Label
+    Friend WithEvents TblstudaccountBindingSource As BindingSource
+    Friend WithEvents Coll_ds As coll_ds
+    Friend WithEvents Tbl_studaccountTableAdapter As coll_dsTableAdapters.tbl_studaccountTableAdapter
+    Friend WithEvents DateTimePicker1 As DateTimePicker
 End Class
