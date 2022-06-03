@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="coll_ds" targetNamespace="http://tempuri.org/coll_ds.xsd" xmlns:mstns="http://tempuri.org/coll_ds.xsd" xmlns="http://tempuri.org/coll_ds.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="db_connection" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="db_connection (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.LCC_SAMS_Project.My.MySettings.GlobalReference.Default.db_connection" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tbl_studaccountTableAdapter" GeneratorDataComponentClassName="tbl_studaccountTableAdapter" Name="tbl_studaccount" UserDataComponentName="tbl_studaccountTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="db_connection (MySettings)" DbObjectName="db_lccsams.tbl_studaccount" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `stdacct_tN`, `stdacct_tDate`, `stdacct_tName`, `stdacct_tAmount` FROM `tbl_studaccount`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="stdacct_tN" DataSetColumn="stdacct_tN" />
+              <Mapping SourceColumn="stdacct_tDate" DataSetColumn="stdacct_tDate" />
+              <Mapping SourceColumn="stdacct_tName" DataSetColumn="stdacct_tName" />
+              <Mapping SourceColumn="stdacct_tAmount" DataSetColumn="stdacct_tAmount" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="coll_ds" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="coll_ds" msprop:Generator_UserDSName="coll_ds">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tbl_studaccount" msprop:Generator_TableClassName="tbl_studaccountDataTable" msprop:Generator_TableVarName="tabletbl_studaccount" msprop:Generator_TablePropName="tbl_studaccount" msprop:Generator_RowDeletingName="tbl_studaccountRowDeleting" msprop:Generator_RowChangingName="tbl_studaccountRowChanging" msprop:Generator_RowEvHandlerName="tbl_studaccountRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_studaccountRowDeleted" msprop:Generator_UserTableName="tbl_studaccount" msprop:Generator_RowChangedName="tbl_studaccountRowChanged" msprop:Generator_RowEvArgName="tbl_studaccountRowChangeEvent" msprop:Generator_RowClassName="tbl_studaccountRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="stdacct_tN" msprop:Generator_ColumnVarNameInTable="columnstdacct_tN" msprop:Generator_ColumnPropNameInRow="stdacct_tN" msprop:Generator_ColumnPropNameInTable="stdacct_tNColumn" msprop:Generator_UserColumnName="stdacct_tN" type="xs:int" minOccurs="0" />
+              <xs:element name="stdacct_tDate" msprop:Generator_ColumnVarNameInTable="columnstdacct_tDate" msprop:Generator_ColumnPropNameInRow="stdacct_tDate" msprop:Generator_ColumnPropNameInTable="stdacct_tDateColumn" msprop:Generator_UserColumnName="stdacct_tDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="stdacct_tName" msprop:Generator_ColumnVarNameInTable="columnstdacct_tName" msprop:Generator_ColumnPropNameInRow="stdacct_tName" msprop:Generator_ColumnPropNameInTable="stdacct_tNameColumn" msprop:Generator_UserColumnName="stdacct_tName" type="xs:int" minOccurs="0" />
+              <xs:element name="stdacct_tAmount" msprop:Generator_ColumnVarNameInTable="columnstdacct_tAmount" msprop:Generator_ColumnPropNameInRow="stdacct_tAmount" msprop:Generator_ColumnPropNameInTable="stdacct_tAmountColumn" msprop:Generator_UserColumnName="stdacct_tAmount" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

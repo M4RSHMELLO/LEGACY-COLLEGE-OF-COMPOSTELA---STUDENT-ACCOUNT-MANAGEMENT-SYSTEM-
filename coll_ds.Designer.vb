@@ -20,9 +20,9 @@ Option Explicit On
  Global.System.ComponentModel.DesignerCategoryAttribute("code"),  _
  Global.System.ComponentModel.ToolboxItem(true),  _
  Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema"),  _
- Global.System.Xml.Serialization.XmlRootAttribute("db_lccsamsDataSet"),  _
+ Global.System.Xml.Serialization.XmlRootAttribute("coll_ds"),  _
  Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")>  _
-Partial Public Class db_lccsamsDataSet
+Partial Public Class coll_ds
     Inherits Global.System.Data.DataSet
     
     Private tabletbl_studaccount As tbl_studaccountDataTable
@@ -128,7 +128,7 @@ Partial Public Class db_lccsamsDataSet
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
     Public Overrides Function Clone() As Global.System.Data.DataSet
-        Dim cln As db_lccsamsDataSet = CType(MyBase.Clone,db_lccsamsDataSet)
+        Dim cln As coll_ds = CType(MyBase.Clone,coll_ds)
         cln.InitVars
         cln.SchemaSerializationMode = Me.SchemaSerializationMode
         Return cln
@@ -199,9 +199,9 @@ Partial Public Class db_lccsamsDataSet
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
     Private Sub InitClass()
-        Me.DataSetName = "db_lccsamsDataSet"
+        Me.DataSetName = "coll_ds"
         Me.Prefix = ""
-        Me.Namespace = "http://tempuri.org/db_lccsamsDataSet.xsd"
+        Me.Namespace = "http://tempuri.org/coll_ds.xsd"
         Me.EnforceConstraints = true
         Me.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
         Me.tabletbl_studaccount = New tbl_studaccountDataTable()
@@ -225,7 +225,7 @@ Partial Public Class db_lccsamsDataSet
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
     Public Shared Function GetTypedDataSetSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
-        Dim ds As db_lccsamsDataSet = New db_lccsamsDataSet()
+        Dim ds As coll_ds = New coll_ds()
         Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
         Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
         Dim any As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
@@ -287,9 +287,9 @@ Partial Public Class db_lccsamsDataSet
         
         Private columnstdacct_tDate As Global.System.Data.DataColumn
         
-        Private columnstdacct_tAmount As Global.System.Data.DataColumn
+        Private columnstdacct_tName As Global.System.Data.DataColumn
         
-        Private columnfees_name As Global.System.Data.DataColumn
+        Private columnstdacct_tAmount As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
@@ -344,17 +344,17 @@ Partial Public Class db_lccsamsDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property stdacct_tAmountColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property stdacct_tNameColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnstdacct_tAmount
+                Return Me.columnstdacct_tName
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property fees_nameColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property stdacct_tAmountColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnfees_name
+                Return Me.columnstdacct_tAmount
             End Get
         End Property
         
@@ -395,9 +395,9 @@ Partial Public Class db_lccsamsDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overloads Function Addtbl_studaccountRow(ByVal stdacct_tN As Integer, ByVal stdacct_tDate As Date, ByVal stdacct_tAmount As Double, ByVal fees_name As String) As tbl_studaccountRow
+        Public Overloads Function Addtbl_studaccountRow(ByVal stdacct_tN As Integer, ByVal stdacct_tDate As Date, ByVal stdacct_tName As Integer, ByVal stdacct_tAmount As Double) As tbl_studaccountRow
             Dim rowtbl_studaccountRow As tbl_studaccountRow = CType(Me.NewRow,tbl_studaccountRow)
-            Dim columnValuesArray() As Object = New Object() {stdacct_tN, stdacct_tDate, stdacct_tAmount, fees_name}
+            Dim columnValuesArray() As Object = New Object() {stdacct_tN, stdacct_tDate, stdacct_tName, stdacct_tAmount}
             rowtbl_studaccountRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowtbl_studaccountRow)
             Return rowtbl_studaccountRow
@@ -422,8 +422,8 @@ Partial Public Class db_lccsamsDataSet
         Friend Sub InitVars()
             Me.columnstdacct_tN = MyBase.Columns("stdacct_tN")
             Me.columnstdacct_tDate = MyBase.Columns("stdacct_tDate")
+            Me.columnstdacct_tName = MyBase.Columns("stdacct_tName")
             Me.columnstdacct_tAmount = MyBase.Columns("stdacct_tAmount")
-            Me.columnfees_name = MyBase.Columns("fees_name")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -433,12 +433,10 @@ Partial Public Class db_lccsamsDataSet
             MyBase.Columns.Add(Me.columnstdacct_tN)
             Me.columnstdacct_tDate = New Global.System.Data.DataColumn("stdacct_tDate", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnstdacct_tDate)
+            Me.columnstdacct_tName = New Global.System.Data.DataColumn("stdacct_tName", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnstdacct_tName)
             Me.columnstdacct_tAmount = New Global.System.Data.DataColumn("stdacct_tAmount", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnstdacct_tAmount)
-            Me.columnfees_name = New Global.System.Data.DataColumn("fees_name", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnfees_name)
-            Me.columnfees_name.AllowDBNull = false
-            Me.columnfees_name.MaxLength = 45
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -506,7 +504,7 @@ Partial Public Class db_lccsamsDataSet
         Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
             Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
             Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
-            Dim ds As db_lccsamsDataSet = New db_lccsamsDataSet()
+            Dim ds As coll_ds = New coll_ds()
             Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
             any1.Namespace = "http://www.w3.org/2001/XMLSchema"
             any1.MinOccurs = New Decimal(0)
@@ -615,6 +613,21 @@ Partial Public Class db_lccsamsDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property stdacct_tName() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_studaccount.stdacct_tNameColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'stdacct_tName' in table 'tbl_studaccount' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_studaccount.stdacct_tNameColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Property stdacct_tAmount() As Double
             Get
                 Try 
@@ -625,17 +638,6 @@ Partial Public Class db_lccsamsDataSet
             End Get
             Set
                 Me(Me.tabletbl_studaccount.stdacct_tAmountColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property fees_name() As String
-            Get
-                Return CType(Me(Me.tabletbl_studaccount.fees_nameColumn),String)
-            End Get
-            Set
-                Me(Me.tabletbl_studaccount.fees_nameColumn) = value
             End Set
         End Property
         
@@ -661,6 +663,18 @@ Partial Public Class db_lccsamsDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub Setstdacct_tDateNull()
             Me(Me.tabletbl_studaccount.stdacct_tDateColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function Isstdacct_tNameNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_studaccount.stdacct_tNameColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub Setstdacct_tNameNull()
+            Me(Me.tabletbl_studaccount.stdacct_tNameColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -713,7 +727,7 @@ Partial Public Class db_lccsamsDataSet
     End Class
 End Class
 
-Namespace db_lccsamsDataSetTableAdapters
+Namespace coll_dsTableAdapters
     
     '''<summary>
     '''Represents the connection and commands used to retrieve and save data.
@@ -844,8 +858,8 @@ Namespace db_lccsamsDataSetTableAdapters
             tableMapping.DataSetTable = "tbl_studaccount"
             tableMapping.ColumnMappings.Add("stdacct_tN", "stdacct_tN")
             tableMapping.ColumnMappings.Add("stdacct_tDate", "stdacct_tDate")
+            tableMapping.ColumnMappings.Add("stdacct_tName", "stdacct_tName")
             tableMapping.ColumnMappings.Add("stdacct_tAmount", "stdacct_tAmount")
-            tableMapping.ColumnMappings.Add("fees_name", "fees_name")
             Me._adapter.TableMappings.Add(tableMapping)
         End Sub
         
@@ -853,7 +867,7 @@ Namespace db_lccsamsDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitConnection()
             Me._connection = New Global.MySql.Data.MySqlClient.MySqlConnection()
-            Me._connection.ConnectionString = "server=localhost;user id=raldz;persistsecurityinfo=True;database=db_lccsams"
+            Me._connection.ConnectionString = Global.LCC_SAMS_Project.My.MySettings.Default.db_connection
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -862,9 +876,8 @@ Namespace db_lccsamsDataSetTableAdapters
             Me._commandCollection = New Global.MySql.Data.MySqlClient.MySqlCommand(0) {}
             Me._commandCollection(0) = New Global.MySql.Data.MySqlClient.MySqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "Select sa.stdacct_tN,sa.stdacct_tDate,cf.fees_name,sa.stdacct_tAmount from tbl_st"& _ 
-                "udaccount sa inner join tbl_coll_fees cf on cf.fees_id=sa.stdacct_tName  where  "& _ 
-                "WEEK(sa.stdacct_tDate) = WEEK(NOW()) - 1  order by sa.stdacct_tDate desc"
+            Me._commandCollection(0).CommandText = "SELECT `stdacct_tN`, `stdacct_tDate`, `stdacct_tName`, `stdacct_tAmount` FROM `tb"& _ 
+                "l_studaccount`"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -872,7 +885,7 @@ Namespace db_lccsamsDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As db_lccsamsDataSet.tbl_studaccountDataTable) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As coll_ds.tbl_studaccountDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -885,9 +898,9 @@ Namespace db_lccsamsDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As db_lccsamsDataSet.tbl_studaccountDataTable
+        Public Overloads Overridable Function GetData() As coll_ds.tbl_studaccountDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As db_lccsamsDataSet.tbl_studaccountDataTable = New db_lccsamsDataSet.tbl_studaccountDataTable()
+            Dim dataTable As coll_ds.tbl_studaccountDataTable = New coll_ds.tbl_studaccountDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
@@ -962,7 +975,7 @@ Namespace db_lccsamsDataSetTableAdapters
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Private Function UpdateUpdatedRows(ByVal dataSet As db_lccsamsDataSet, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow), ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
+        Private Function UpdateUpdatedRows(ByVal dataSet As coll_ds, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow), ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
             Return result
         End Function
@@ -972,7 +985,7 @@ Namespace db_lccsamsDataSetTableAdapters
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Private Function UpdateInsertedRows(ByVal dataSet As db_lccsamsDataSet, ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
+        Private Function UpdateInsertedRows(ByVal dataSet As coll_ds, ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
             Return result
         End Function
@@ -982,7 +995,7 @@ Namespace db_lccsamsDataSetTableAdapters
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Private Function UpdateDeletedRows(ByVal dataSet As db_lccsamsDataSet, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
+        Private Function UpdateDeletedRows(ByVal dataSet As coll_ds, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
             Return result
         End Function
@@ -1018,7 +1031,7 @@ Namespace db_lccsamsDataSetTableAdapters
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overridable Function UpdateAll(ByVal dataSet As db_lccsamsDataSet) As Integer
+        Public Overridable Function UpdateAll(ByVal dataSet As coll_ds) As Integer
             If (dataSet Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("dataSet")
             End If

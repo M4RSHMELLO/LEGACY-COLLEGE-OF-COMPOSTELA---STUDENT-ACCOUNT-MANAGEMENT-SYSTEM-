@@ -58,9 +58,20 @@ Namespace My
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
          Global.System.Configuration.DefaultSettingValueAttribute("server=localhost;user id=raldz;persistsecurityinfo=True;database=db_lccsams")>  _
-        Public ReadOnly Property db_lccsams_localhost() As String
+        Public ReadOnly Property db_lccsamsConnectionLocalhost() As String
             Get
-                Return CType(Me("db_lccsams_localhost"),String)
+                Return CType(Me("db_lccsamsConnectionLocalhost"),String)
+            End Get
+        End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("server=127.0.0.1;user id=raldz;password=d74r3j93527;persistsecurityinfo=True;data"& _ 
+            "base=db_lccsams")>  _
+        Public ReadOnly Property db_connection() As String
+            Get
+                Return CType(Me("db_connection"),String)
             End Get
         End Property
     End Class

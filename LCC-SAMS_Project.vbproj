@@ -160,16 +160,16 @@
       <DependentUpon>college_reports.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="coll_ds.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>coll_ds.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Dashboard.Designer.vb">
       <DependentUpon>Dashboard.vb</DependentUpon>
     </Compile>
     <Compile Include="Dashboard.vb">
       <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="coll_rpt_ds.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>coll_rpt_ds.xsd</DependentUpon>
     </Compile>
     <Compile Include="dlg_addnewsy.designer.vb">
       <DependentUpon>dlg_addnewsy.vb</DependentUpon>
@@ -495,16 +495,16 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="coll_rpt_ds.xsc">
-      <DependentUpon>coll_rpt_ds.xsd</DependentUpon>
+    <None Include="coll_ds.xsc">
+      <DependentUpon>coll_ds.xsd</DependentUpon>
     </None>
-    <None Include="coll_rpt_ds.xsd">
+    <None Include="coll_ds.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>coll_rpt_ds.Designer.vb</LastGenOutput>
+      <LastGenOutput>coll_ds.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="coll_rpt_ds.xss">
-      <DependentUpon>coll_rpt_ds.xsd</DependentUpon>
+    <None Include="coll_ds.xss">
+      <DependentUpon>coll_ds.xsd</DependentUpon>
     </None>
     <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
