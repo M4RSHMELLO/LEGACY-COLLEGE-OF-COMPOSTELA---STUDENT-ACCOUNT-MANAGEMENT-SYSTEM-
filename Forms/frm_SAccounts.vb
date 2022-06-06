@@ -31,6 +31,7 @@ Public Class frm_SAccounts
             End If
             total_fees += rowX.Cells("FeesAmount").Value
         Next
+
         txtb_totalFees.Text = total_fees
     End Sub
     Sub load_stud_data()

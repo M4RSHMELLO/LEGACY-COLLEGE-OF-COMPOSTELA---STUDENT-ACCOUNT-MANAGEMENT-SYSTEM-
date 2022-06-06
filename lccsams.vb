@@ -52,6 +52,8 @@ Module lccsams
     Public eStudname As String
     Public eStudGL As String
     Public eStudSY As String
+    Public eSy_id As String
+
     Public esy_sDate As String
     Public esy_eDate As String
 
@@ -152,6 +154,8 @@ Module lccsams
             dbConn.Close()
         End Try
     End Sub
+
+
 
 
     Public Sub _retrieveData(ByVal sql As String)
