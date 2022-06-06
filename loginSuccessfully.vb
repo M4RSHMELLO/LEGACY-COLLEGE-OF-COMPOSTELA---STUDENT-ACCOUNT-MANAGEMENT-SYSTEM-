@@ -3,7 +3,7 @@
         Try
             Dashboard.Show()
             form_login.Hide()
-            Close()
+            Me.Close()
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try

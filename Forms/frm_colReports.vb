@@ -39,4 +39,8 @@ Public Class frm_colReports
 
 
     End Sub
+
+    Private Sub cbo_dailyweekly_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbo_dailyweekly.SelectedIndexChanged
+
+    End Sub
 End Class

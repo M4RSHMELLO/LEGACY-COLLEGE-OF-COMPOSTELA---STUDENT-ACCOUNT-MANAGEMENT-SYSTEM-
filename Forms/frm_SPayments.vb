@@ -15,7 +15,41 @@ Public Class frm_SPayments
         tan_NO = rnd.Next(10, 100000)
         Return tan_NO
     End Function
+    Private Sub TabControl1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles TabControl1.SelectedIndexChanged
+        Dim DepartMent_level As Integer = TabControl1.SelectedIndex
+        Try
+            Select Case DepartMent_level
+                Case 0
+                    _loadStudentNameToTextbox(nameSuggestion, txtb_Search)
+                    cboSearchBy.SelectedIndex = 1
+                Case 1
+                    _loadStudentNameToTextbox(enameSuggestion, txtb_eSearch)
+                    cbo_eSearchBy.SelectedIndex = 1
+                Case 2
+                    _loadStudentNameToTextbox(snameSuggestion, txtb_sSearch)
+                    cbo_sSearchBY.SelectedIndex = 1
+                Case 3
+                    _loadStudentNameToTextbox(jnameSuggestion, txtb_sSearch)
+                    cbo_jSearchBY.SelectedIndex = 1
 
+            End Select
+        Catch ex As Exception
+        End Try
+    End Sub
+
+    Private Sub frm_SPayments_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        cboSearchBy.SelectedIndex = 1
+        cbo_eSearchBy.SelectedIndex = 1
+        cbo_sSearchBY.SelectedIndex = 1
+        cbo_jSearchBY.SelectedIndex = 1
+        _loadStudentNameToTextbox(nameSuggestion, txtb_Search)
+        _loadStudentNameToTextbox(enameSuggestion, txtb_eSearch)
+        _loadStudentNameToTextbox(snameSuggestion, txtb_sSearch)
+        _loadStudentNameToTextbox(jnameSuggestion, txtb_jSearch)
+        selectpaymentype()
+    End Sub
+
+    '######################################################################College dept section####################################################################
     Public Sub btn_Enter_Click(sender As Object, e As EventArgs) Handles btn_enter.Click
         If cboSearchBy.SelectedIndex = 1 Then
             _displayToTextbox_name()
@@ -55,17 +89,6 @@ Public Class frm_SPayments
     End Function
 
 
-    Private Sub frm_SPayments_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        cboSearchBy.SelectedIndex = 1
-        cbo_eSearchBy.SelectedIndex = 1
-        cbo_sSearchBY.SelectedIndex = 1
-        cbo_jSearchBY.SelectedIndex = 1
-        _loadStudentNameToTextbox(nameSuggestion, txtb_Search)
-        _loadStudentNameToTextbox(enameSuggestion, txtb_eSearch)
-        _loadStudentNameToTextbox(snameSuggestion, txtb_sSearch)
-        _loadStudentNameToTextbox(jnameSuggestion, txtb_jSearch)
-        selectpaymentype()
-    End Sub
 
     Sub _retrieveStudData()
         Try
@@ -304,20 +327,6 @@ Public Class frm_SPayments
         End Try
     End Sub
 
-    Private Sub TabControl1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles TabControl1.SelectedIndexChanged
-        Dim DepartMent_level As Integer = TabControl1.SelectedIndex
-        Try
-            Select Case DepartMent_level
-                Case 0
-                    _loadStudentNameToTextbox(nameSuggestion, txtb_Search)
-                    cboSearchBy.SelectedIndex = 1
-
-
-                Case 1
-            End Select
-        Catch ex As Exception
-        End Try
-    End Sub
 
     Sub _clearCurrentStudData(ByVal btn As String)
         Select Case btn
@@ -396,15 +405,6 @@ Public Class frm_SPayments
 
 
 
-    '################################################################################################ElemenTary Section######################################################
-    Private Sub btn_eManage_Click(sender As Object, e As EventArgs) Handles btn_eManage.Click
-        Try
-            current_menu = 1
-            Dashboard.btn_menuStudentsAccount_click(sender, e)
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        End Try
-    End Sub
 
     Private Sub rbtn_partial_CheckedChanged(sender As Object, e As EventArgs) Handles rbtn_partial.CheckedChanged
         selectpaymentype()
@@ -434,6 +434,51 @@ Public Class frm_SPayments
 
     End Sub
     ''###########################################################Elementary Section ################################################################################
+
+    Private Sub btn_eManage_Click(sender As Object, e As EventArgs) Handles btn_eManage.Click
+        Try
+            current_menu = 1
+            Dashboard.btn_menuStudentsAccount_click(sender, e)
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
+
+
+
+    Sub _clearECurrentStudData(ByVal btn As String)
+        Select Case btn
+            Case "SAVE"
+                txtb_eTN.Clear()
+                txtb_eTD.Clear()
+                cbo_eParticulars.SelectedIndex = -1
+                txtb_eStudAmntPay.Text = 0
+                txtb_eStudCurrAcct.Text = 0
+                txtb_eStudCurrBal.Text = 0
+                txtb_eStudTotAmnt.Text = 0
+
+                totalAmount = 0
+
+            Case "CLEAR"
+
+                txtb_eSearch.Clear()
+                txtb_eStudName.Clear()
+                txtb_eStudID.Clear()
+                txtb_eSY.Clear()
+                txtb_eGL.Clear()
+                lbl_name.Text = ""
+
+                txtb_eTN.Clear()
+                txtb_eTD.Clear()
+                cbo_eParticulars.SelectedIndex = -1
+                txtb_eStudAmntPay.Text = 0
+                txtb_eStudCurrAcct.Text = 0
+                txtb_eStudCurrBal.Text = 0
+                txtb_eStudTotAmnt.Text = 0
+                totalAmount = 0
+        End Select
+    End Sub
+
     Sub _retrieve_eStudData()
         Try
             _dbConnection("db_lccsams")
@@ -509,12 +554,43 @@ Public Class frm_SPayments
 
 
     Private Sub btn_eClear_Click(sender As Object, e As EventArgs) Handles btn_eClear.Click
-
+        _clearECurrentStudData(btn_eClear.Text)
     End Sub
     Private Sub btn_eEnter_Click(sender As Object, e As EventArgs) Handles btn_eEnter.Click
         display_estudData()
+
     End Sub
     Private Sub btn_eSave_Click(sender As Object, e As EventArgs) Handles btn_eSave.Click
+        Try
+            If txtb_eStudID.Text = "" Then
+                MessageBox.Show("Please Select a student First!")
+            Else
+                If txtb_eStudAmntPay.Text = 0 And txtb_eStudAmntPay.Text = "" Then
+                    MessageBox.Show("Please add payment!")
+                Else
+
+                    'For Each row As DataGridViewRow In dg_viewCurrentPayment.Rows
+                    '    Dim InsertPayments As String = "Insert into tbl_studaccount values('" & txtb_studID.Text & "','" & txtb_TransNo.Text & "','" & txtb_TransDate.Text & "','" & Integer.Parse(row.Cells("fees_id").Value) & "','" & Double.Parse(row.Cells("t_amount").Value) & "','" & Double.Parse(row.Cells("t_balance").Value) & "')"
+                    '    _dbConnection("db_lccsams")
+                    '    _insertData(InsertPayments)
+                    'Next
+                    Dim InsertEPayments As String = "Insert into tbl_studaccount values('" & txtb_studID.Text & "','" & txtb_TransNo.Text & "','" & txtb_TransDate.Text & "','" & Integer.Parse(cbo_particular.SelectedValue) & "','" & Double.Parse(txtb_Payment.Text) & "','" & Double.Parse(txtb_CurrentBalance.Text) & "')"
+                    _dbConnection("db_lccsams")
+                    _insertData(InsertEPayments)
+                    If dlg_payments.ShowDialog = DialogResult.OK Then
+                        lbl_particularName.Text = cbo_particular.Text
+                        lbl_amount.Text = txtb_eStudAmntPay.Text
+                        lbl_tAmnt.Text = "TOTAL AMOUNT: " & txtb_Payment.Text
+                        lbl_Tbal.Text = "BALANCE: " & txtb_CurrentBalance.Text
+                        _clearECurrentStudData(btn_eSave.Text)
+                        btn_Enter_Click(sender, e)
+                    End If
+                End If
+            End If
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+
 
     End Sub
     Private Sub btn_ePrint_Click(sender As Object, e As EventArgs) Handles btn_ePrint.Click

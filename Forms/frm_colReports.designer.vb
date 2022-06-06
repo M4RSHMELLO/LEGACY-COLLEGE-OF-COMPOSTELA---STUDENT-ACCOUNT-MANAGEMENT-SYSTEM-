@@ -202,7 +202,7 @@ Partial Class frm_colReports
         Me.btn_collDept.IconVisible = False
         Me.btn_collDept.IconZoom = 90.0R
         Me.btn_collDept.IsTab = False
-        Me.btn_collDept.Location = New System.Drawing.Point(384, 24)
+        Me.btn_collDept.Location = New System.Drawing.Point(388, 24)
         Me.btn_collDept.Margin = New System.Windows.Forms.Padding(3, 8, 3, 8)
         Me.btn_collDept.Name = "btn_collDept"
         Me.btn_collDept.Normalcolor = System.Drawing.SystemColors.ButtonFace
@@ -272,7 +272,7 @@ Partial Class frm_colReports
         Me.dg_coll_rpt.Name = "dg_coll_rpt"
         Me.dg_coll_rpt.RowHeadersVisible = False
         Me.dg_coll_rpt.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dg_coll_rpt.Size = New System.Drawing.Size(922, 360)
+        Me.dg_coll_rpt.Size = New System.Drawing.Size(922, 318)
         Me.dg_coll_rpt.TabIndex = 25
         '
         'tran_id
@@ -337,7 +337,7 @@ Partial Class frm_colReports
         '
         Me.lbl_total.AutoSize = True
         Me.lbl_total.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_total.Location = New System.Drawing.Point(566, 485)
+        Me.lbl_total.Location = New System.Drawing.Point(733, 474)
         Me.lbl_total.Name = "lbl_total"
         Me.lbl_total.Size = New System.Drawing.Size(62, 25)
         Me.lbl_total.TabIndex = 55
@@ -361,7 +361,7 @@ Partial Class frm_colReports
         '
         Me.DateTimePicker1.CustomFormat = "dddd"
         Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.DateTimePicker1.Location = New System.Drawing.Point(109, 112)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(109, 106)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(200, 26)
         Me.DateTimePicker1.TabIndex = 56
