@@ -34,6 +34,10 @@ Module lccsams
     Public stud_sy As String
     Public stud_nUnits As String
     Public stud_rpu As String
+    Public csy_id As String
+    Public cyl_id As String
+    Public csem_id As String
+    Public ccrs_id As String
 
     Public sy_fid As String
     Public sy_sDate As String
@@ -53,7 +57,7 @@ Module lccsams
     Public eStudGL As String
     Public eStudSY As String
     Public eSy_id As String
-
+    Public egl_id As String
     Public esy_sDate As String
     Public esy_eDate As String
 
@@ -70,6 +74,8 @@ Module lccsams
     Public sStudSY As String
     Public sSy_sDate As String
     Public sSy_eDate As String
+    Public sSy_id As String
+    Public sgl_id As String
 
     '#############################################################Junior-High PUBLIC VARIABLE#########################################################
     Public jSelect_SY As String = "select * from tbl_juniorhigh_sy order by jsy_edate desc "
@@ -84,7 +90,8 @@ Module lccsams
     Public jStudSY As String
     Public jSy_sDate As String
     Public jSy_eDate As String
-
+    Public jSy_id As String
+    Public jgl_id As String
     '######################################################### Module & function class ##############################################################################
     Public Sub _dbConnection(ByVal dbName As String)
         Try
