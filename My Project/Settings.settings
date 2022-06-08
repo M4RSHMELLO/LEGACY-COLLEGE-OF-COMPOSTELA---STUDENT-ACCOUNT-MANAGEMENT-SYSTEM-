@@ -2,21 +2,13 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
   <Profiles />
   <Settings>
-    <Setting Name="db_lccsamsConnectionLocalhost" Type="(Connection string)" Scope="Application">
+    <Setting Name="db_lccsams_connection" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;server=localhost;user id=raldz;persistsecurityinfo=True;database=db_lccsams&lt;/ConnectionString&gt;
-  &lt;ProviderName&gt;MySql.Data.MySqlClient&lt;/ProviderName&gt;
+  &lt;ConnectionString&gt;User Id=raldz;Password=d74r3j93527;Host=127.0.0.1;Database=db_lccsams;Persist Security Info=True&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;Devart.Data.MySql&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">server=localhost;user id=raldz;persistsecurityinfo=True;database=db_lccsams</Value>
-    </Setting>
-    <Setting Name="db_connection" Type="(Connection string)" Scope="Application">
-      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
-&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;server=127.0.0.1;user id=raldz;password=d74r3j93527;persistsecurityinfo=True;database=db_lccsams&lt;/ConnectionString&gt;
-  &lt;ProviderName&gt;MySql.Data.MySqlClient&lt;/ProviderName&gt;
-&lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">server=127.0.0.1;user id=raldz;password=d74r3j93527;persistsecurityinfo=True;database=db_lccsams</Value>
+      <Value Profile="(Default)">User Id=raldz;Password=d74r3j93527;Host=127.0.0.1;Database=db_lccsams;Persist Security Info=True</Value>
     </Setting>
   </Settings>
 </SettingsFile>

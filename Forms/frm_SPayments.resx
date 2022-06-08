@@ -117,6 +117,84 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="&gt;&gt;coll_dept.Name" xml:space="preserve">
+    <value>coll_dept</value>
+  </data>
+  <data name="&gt;&gt;coll_dept.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;coll_dept.Parent" xml:space="preserve">
+    <value>TabControl1</value>
+  </data>
+  <data name="&gt;&gt;coll_dept.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;elem_dept.Name" xml:space="preserve">
+    <value>elem_dept</value>
+  </data>
+  <data name="&gt;&gt;elem_dept.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;elem_dept.Parent" xml:space="preserve">
+    <value>TabControl1</value>
+  </data>
+  <data name="&gt;&gt;elem_dept.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;sh_dept.Name" xml:space="preserve">
+    <value>sh_dept</value>
+  </data>
+  <data name="&gt;&gt;sh_dept.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;sh_dept.Parent" xml:space="preserve">
+    <value>TabControl1</value>
+  </data>
+  <data name="&gt;&gt;sh_dept.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;jh_dept.Name" xml:space="preserve">
+    <value>jh_dept</value>
+  </data>
+  <data name="&gt;&gt;jh_dept.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;jh_dept.Parent" xml:space="preserve">
+    <value>TabControl1</value>
+  </data>
+  <data name="&gt;&gt;jh_dept.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="TabControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="TabControl1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Franklin Gothic Medium Cond, 12pt, style=Bold</value>
+  </data>
+  <data name="TabControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="TabControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1035, 639</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="TabControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;TabControl1.Name" xml:space="preserve">
+    <value>TabControl1</value>
+  </data>
+  <data name="&gt;&gt;TabControl1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TabControl1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;TabControl1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="&gt;&gt;pnl_receipts.Name" xml:space="preserve">
     <value>pnl_receipts</value>
   </data>
@@ -237,18 +315,15 @@
   <data name="&gt;&gt;GroupBox2.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="coll_dept.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 30</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="coll_dept.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
   </data>
   <data name="coll_dept.Size" type="System.Drawing.Size, System.Drawing">
     <value>1027, 605</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="coll_dept.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
@@ -265,1275 +340,6 @@
     <value>TabControl1</value>
   </data>
   <data name="&gt;&gt;coll_dept.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;Panel1.Name" xml:space="preserve">
-    <value>Panel1</value>
-  </data>
-  <data name="&gt;&gt;Panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Panel1.Parent" xml:space="preserve">
-    <value>elem_dept</value>
-  </data>
-  <data name="&gt;&gt;Panel1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;btn_ePrint.Name" xml:space="preserve">
-    <value>btn_ePrint</value>
-  </data>
-  <data name="&gt;&gt;btn_ePrint.Type" xml:space="preserve">
-    <value>Bunifu.Framework.UI.BunifuFlatButton, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;btn_ePrint.Parent" xml:space="preserve">
-    <value>elem_dept</value>
-  </data>
-  <data name="&gt;&gt;btn_ePrint.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;btn_eClear.Name" xml:space="preserve">
-    <value>btn_eClear</value>
-  </data>
-  <data name="&gt;&gt;btn_eClear.Type" xml:space="preserve">
-    <value>Bunifu.Framework.UI.BunifuFlatButton, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;btn_eClear.Parent" xml:space="preserve">
-    <value>elem_dept</value>
-  </data>
-  <data name="&gt;&gt;btn_eClear.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;btn_eSave.Name" xml:space="preserve">
-    <value>btn_eSave</value>
-  </data>
-  <data name="&gt;&gt;btn_eSave.Type" xml:space="preserve">
-    <value>Bunifu.Framework.UI.BunifuFlatButton, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;btn_eSave.Parent" xml:space="preserve">
-    <value>elem_dept</value>
-  </data>
-  <data name="&gt;&gt;btn_eSave.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;GroupBox10.Name" xml:space="preserve">
-    <value>GroupBox10</value>
-  </data>
-  <data name="&gt;&gt;GroupBox10.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GroupBox10.Parent" xml:space="preserve">
-    <value>elem_dept</value>
-  </data>
-  <data name="&gt;&gt;GroupBox10.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;GroupBox11.Name" xml:space="preserve">
-    <value>GroupBox11</value>
-  </data>
-  <data name="&gt;&gt;GroupBox11.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GroupBox11.Parent" xml:space="preserve">
-    <value>elem_dept</value>
-  </data>
-  <data name="&gt;&gt;GroupBox11.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;GroupBox12.Name" xml:space="preserve">
-    <value>GroupBox12</value>
-  </data>
-  <data name="&gt;&gt;GroupBox12.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GroupBox12.Parent" xml:space="preserve">
-    <value>elem_dept</value>
-  </data>
-  <data name="&gt;&gt;GroupBox12.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;GroupBox6.Name" xml:space="preserve">
-    <value>GroupBox6</value>
-  </data>
-  <data name="&gt;&gt;GroupBox6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GroupBox6.Parent" xml:space="preserve">
-    <value>elem_dept</value>
-  </data>
-  <data name="&gt;&gt;GroupBox6.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;GroupBox5.Name" xml:space="preserve">
-    <value>GroupBox5</value>
-  </data>
-  <data name="&gt;&gt;GroupBox5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GroupBox5.Parent" xml:space="preserve">
-    <value>elem_dept</value>
-  </data>
-  <data name="&gt;&gt;GroupBox5.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="elem_dept.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 30</value>
-  </data>
-  <data name="elem_dept.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="elem_dept.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1027, 605</value>
-  </data>
-  <data name="elem_dept.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="elem_dept.Text" xml:space="preserve">
-    <value>Elementary Dept</value>
-  </data>
-  <data name="&gt;&gt;elem_dept.Name" xml:space="preserve">
-    <value>elem_dept</value>
-  </data>
-  <data name="&gt;&gt;elem_dept.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;elem_dept.Parent" xml:space="preserve">
-    <value>TabControl1</value>
-  </data>
-  <data name="&gt;&gt;elem_dept.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;Panel2.Name" xml:space="preserve">
-    <value>Panel2</value>
-  </data>
-  <data name="&gt;&gt;Panel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Panel2.Parent" xml:space="preserve">
-    <value>sh_dept</value>
-  </data>
-  <data name="&gt;&gt;Panel2.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;btn_sPrint.Name" xml:space="preserve">
-    <value>btn_sPrint</value>
-  </data>
-  <data name="&gt;&gt;btn_sPrint.Type" xml:space="preserve">
-    <value>Bunifu.Framework.UI.BunifuFlatButton, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;btn_sPrint.Parent" xml:space="preserve">
-    <value>sh_dept</value>
-  </data>
-  <data name="&gt;&gt;btn_sPrint.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;btn_sClear.Name" xml:space="preserve">
-    <value>btn_sClear</value>
-  </data>
-  <data name="&gt;&gt;btn_sClear.Type" xml:space="preserve">
-    <value>Bunifu.Framework.UI.BunifuFlatButton, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;btn_sClear.Parent" xml:space="preserve">
-    <value>sh_dept</value>
-  </data>
-  <data name="&gt;&gt;btn_sClear.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;btn_sSave.Name" xml:space="preserve">
-    <value>btn_sSave</value>
-  </data>
-  <data name="&gt;&gt;btn_sSave.Type" xml:space="preserve">
-    <value>Bunifu.Framework.UI.BunifuFlatButton, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;btn_sSave.Parent" xml:space="preserve">
-    <value>sh_dept</value>
-  </data>
-  <data name="&gt;&gt;btn_sSave.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;GroupBox19.Name" xml:space="preserve">
-    <value>GroupBox19</value>
-  </data>
-  <data name="&gt;&gt;GroupBox19.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GroupBox19.Parent" xml:space="preserve">
-    <value>sh_dept</value>
-  </data>
-  <data name="&gt;&gt;GroupBox19.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;GroupBox20.Name" xml:space="preserve">
-    <value>GroupBox20</value>
-  </data>
-  <data name="&gt;&gt;GroupBox20.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GroupBox20.Parent" xml:space="preserve">
-    <value>sh_dept</value>
-  </data>
-  <data name="&gt;&gt;GroupBox20.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;GroupBox21.Name" xml:space="preserve">
-    <value>GroupBox21</value>
-  </data>
-  <data name="&gt;&gt;GroupBox21.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GroupBox21.Parent" xml:space="preserve">
-    <value>sh_dept</value>
-  </data>
-  <data name="&gt;&gt;GroupBox21.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;GroupBox23.Name" xml:space="preserve">
-    <value>GroupBox23</value>
-  </data>
-  <data name="&gt;&gt;GroupBox23.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GroupBox23.Parent" xml:space="preserve">
-    <value>sh_dept</value>
-  </data>
-  <data name="&gt;&gt;GroupBox23.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;GroupBox24.Name" xml:space="preserve">
-    <value>GroupBox24</value>
-  </data>
-  <data name="&gt;&gt;GroupBox24.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GroupBox24.Parent" xml:space="preserve">
-    <value>sh_dept</value>
-  </data>
-  <data name="&gt;&gt;GroupBox24.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="sh_dept.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 30</value>
-  </data>
-  <data name="sh_dept.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1027, 605</value>
-  </data>
-  <data name="sh_dept.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="sh_dept.Text" xml:space="preserve">
-    <value>Senior-High Dept</value>
-  </data>
-  <data name="&gt;&gt;sh_dept.Name" xml:space="preserve">
-    <value>sh_dept</value>
-  </data>
-  <data name="&gt;&gt;sh_dept.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;sh_dept.Parent" xml:space="preserve">
-    <value>TabControl1</value>
-  </data>
-  <data name="&gt;&gt;sh_dept.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;dg_jReceipts.Name" xml:space="preserve">
-    <value>dg_jReceipts</value>
-  </data>
-  <data name="&gt;&gt;dg_jReceipts.Type" xml:space="preserve">
-    <value>Bunifu.Framework.UI.BunifuCustomDataGrid, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;dg_jReceipts.Parent" xml:space="preserve">
-    <value>Panel3</value>
-  </data>
-  <data name="&gt;&gt;dg_jReceipts.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;Label62.Name" xml:space="preserve">
-    <value>Label62</value>
-  </data>
-  <data name="&gt;&gt;Label62.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label62.Parent" xml:space="preserve">
-    <value>Panel3</value>
-  </data>
-  <data name="&gt;&gt;Label62.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;lbl_jName.Name" xml:space="preserve">
-    <value>lbl_jName</value>
-  </data>
-  <data name="&gt;&gt;lbl_jName.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_jName.Parent" xml:space="preserve">
-    <value>Panel3</value>
-  </data>
-  <data name="&gt;&gt;lbl_jName.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;Label64.Name" xml:space="preserve">
-    <value>Label64</value>
-  </data>
-  <data name="&gt;&gt;Label64.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label64.Parent" xml:space="preserve">
-    <value>Panel3</value>
-  </data>
-  <data name="&gt;&gt;Label64.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;lbl_jBal.Name" xml:space="preserve">
-    <value>lbl_jBal</value>
-  </data>
-  <data name="&gt;&gt;lbl_jBal.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_jBal.Parent" xml:space="preserve">
-    <value>Panel3</value>
-  </data>
-  <data name="&gt;&gt;lbl_jBal.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;Label66.Name" xml:space="preserve">
-    <value>Label66</value>
-  </data>
-  <data name="&gt;&gt;Label66.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label66.Parent" xml:space="preserve">
-    <value>Panel3</value>
-  </data>
-  <data name="&gt;&gt;Label66.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;lbl_jDate.Name" xml:space="preserve">
-    <value>lbl_jDate</value>
-  </data>
-  <data name="&gt;&gt;lbl_jDate.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_jDate.Parent" xml:space="preserve">
-    <value>Panel3</value>
-  </data>
-  <data name="&gt;&gt;lbl_jDate.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;Label68.Name" xml:space="preserve">
-    <value>Label68</value>
-  </data>
-  <data name="&gt;&gt;Label68.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label68.Parent" xml:space="preserve">
-    <value>Panel3</value>
-  </data>
-  <data name="&gt;&gt;Label68.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;Label69.Name" xml:space="preserve">
-    <value>Label69</value>
-  </data>
-  <data name="&gt;&gt;Label69.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label69.Parent" xml:space="preserve">
-    <value>Panel3</value>
-  </data>
-  <data name="&gt;&gt;Label69.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;lbl_jTamnt.Name" xml:space="preserve">
-    <value>lbl_jTamnt</value>
-  </data>
-  <data name="&gt;&gt;lbl_jTamnt.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_jTamnt.Parent" xml:space="preserve">
-    <value>Panel3</value>
-  </data>
-  <data name="&gt;&gt;lbl_jTamnt.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;Label71.Name" xml:space="preserve">
-    <value>Label71</value>
-  </data>
-  <data name="&gt;&gt;Label71.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label71.Parent" xml:space="preserve">
-    <value>Panel3</value>
-  </data>
-  <data name="&gt;&gt;Label71.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="Panel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>21, 304</value>
-  </data>
-  <data name="Panel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>574, 299</value>
-  </data>
-  <data name="Panel3.TabIndex" type="System.Int32, mscorlib">
-    <value>72</value>
-  </data>
-  <data name="&gt;&gt;Panel3.Name" xml:space="preserve">
-    <value>Panel3</value>
-  </data>
-  <data name="&gt;&gt;Panel3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Panel3.Parent" xml:space="preserve">
-    <value>jh_dept</value>
-  </data>
-  <data name="&gt;&gt;Panel3.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="btn_jPrint.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Stretch</value>
-  </data>
-  <data name="btn_jPrint.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Franklin Gothic Medium Cond, 12pt</value>
-  </data>
-  <data name="btn_jPrint.Location" type="System.Drawing.Point, System.Drawing">
-    <value>699, 562</value>
-  </data>
-  <data name="btn_jPrint.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 5, 3, 5</value>
-  </data>
-  <data name="btn_jPrint.Size" type="System.Drawing.Size, System.Drawing">
-    <value>276, 35</value>
-  </data>
-  <data name="btn_jPrint.TabIndex" type="System.Int32, mscorlib">
-    <value>71</value>
-  </data>
-  <data name="btn_jPrint.Text" xml:space="preserve">
-    <value>PRINT</value>
-  </data>
-  <data name="&gt;&gt;btn_jPrint.Name" xml:space="preserve">
-    <value>btn_jPrint</value>
-  </data>
-  <data name="&gt;&gt;btn_jPrint.Type" xml:space="preserve">
-    <value>Bunifu.Framework.UI.BunifuFlatButton, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;btn_jPrint.Parent" xml:space="preserve">
-    <value>jh_dept</value>
-  </data>
-  <data name="&gt;&gt;btn_jPrint.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="btn_jClear.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Stretch</value>
-  </data>
-  <data name="btn_jClear.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Franklin Gothic Medium Cond, 12pt</value>
-  </data>
-  <data name="btn_jClear.Location" type="System.Drawing.Point, System.Drawing">
-    <value>675, 520</value>
-  </data>
-  <data name="btn_jClear.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 5, 3, 5</value>
-  </data>
-  <data name="btn_jClear.Size" type="System.Drawing.Size, System.Drawing">
-    <value>136, 35</value>
-  </data>
-  <data name="btn_jClear.TabIndex" type="System.Int32, mscorlib">
-    <value>70</value>
-  </data>
-  <data name="btn_jClear.Text" xml:space="preserve">
-    <value>CLEAR</value>
-  </data>
-  <data name="&gt;&gt;btn_jClear.Name" xml:space="preserve">
-    <value>btn_jClear</value>
-  </data>
-  <data name="&gt;&gt;btn_jClear.Type" xml:space="preserve">
-    <value>Bunifu.Framework.UI.BunifuFlatButton, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;btn_jClear.Parent" xml:space="preserve">
-    <value>jh_dept</value>
-  </data>
-  <data name="&gt;&gt;btn_jClear.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="btn_jSave.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Stretch</value>
-  </data>
-  <data name="btn_jSave.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Franklin Gothic Medium Cond, 12pt</value>
-  </data>
-  <data name="btn_jSave.Location" type="System.Drawing.Point, System.Drawing">
-    <value>839, 520</value>
-  </data>
-  <data name="btn_jSave.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 5, 3, 5</value>
-  </data>
-  <data name="btn_jSave.Size" type="System.Drawing.Size, System.Drawing">
-    <value>136, 35</value>
-  </data>
-  <data name="btn_jSave.TabIndex" type="System.Int32, mscorlib">
-    <value>69</value>
-  </data>
-  <data name="btn_jSave.Text" xml:space="preserve">
-    <value>SAVE</value>
-  </data>
-  <data name="&gt;&gt;btn_jSave.Name" xml:space="preserve">
-    <value>btn_jSave</value>
-  </data>
-  <data name="&gt;&gt;btn_jSave.Type" xml:space="preserve">
-    <value>Bunifu.Framework.UI.BunifuFlatButton, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;btn_jSave.Parent" xml:space="preserve">
-    <value>jh_dept</value>
-  </data>
-  <data name="&gt;&gt;btn_jSave.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;Label31.Name" xml:space="preserve">
-    <value>Label31</value>
-  </data>
-  <data name="&gt;&gt;Label31.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label31.Parent" xml:space="preserve">
-    <value>GroupBox13</value>
-  </data>
-  <data name="&gt;&gt;Label31.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;txtb_jToAmnt.Name" xml:space="preserve">
-    <value>txtb_jToAmnt</value>
-  </data>
-  <data name="&gt;&gt;txtb_jToAmnt.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtb_jToAmnt.Parent" xml:space="preserve">
-    <value>GroupBox13</value>
-  </data>
-  <data name="&gt;&gt;txtb_jToAmnt.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;Label32.Name" xml:space="preserve">
-    <value>Label32</value>
-  </data>
-  <data name="&gt;&gt;Label32.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label32.Parent" xml:space="preserve">
-    <value>GroupBox13</value>
-  </data>
-  <data name="&gt;&gt;Label32.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;txtb_jOldAcct.Name" xml:space="preserve">
-    <value>txtb_jOldAcct</value>
-  </data>
-  <data name="&gt;&gt;txtb_jOldAcct.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtb_jOldAcct.Parent" xml:space="preserve">
-    <value>GroupBox13</value>
-  </data>
-  <data name="&gt;&gt;txtb_jOldAcct.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;Label34.Name" xml:space="preserve">
-    <value>Label34</value>
-  </data>
-  <data name="&gt;&gt;Label34.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label34.Parent" xml:space="preserve">
-    <value>GroupBox13</value>
-  </data>
-  <data name="&gt;&gt;Label34.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;txtb_jCurrAcct.Name" xml:space="preserve">
-    <value>txtb_jCurrAcct</value>
-  </data>
-  <data name="&gt;&gt;txtb_jCurrAcct.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtb_jCurrAcct.Parent" xml:space="preserve">
-    <value>GroupBox13</value>
-  </data>
-  <data name="&gt;&gt;txtb_jCurrAcct.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="GroupBox13.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="GroupBox13.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Franklin Gothic Medium Cond, 12pt, style=Bold</value>
-  </data>
-  <data name="GroupBox13.Location" type="System.Drawing.Point, System.Drawing">
-    <value>601, 108</value>
-  </data>
-  <data name="GroupBox13.Size" type="System.Drawing.Size, System.Drawing">
-    <value>415, 137</value>
-  </data>
-  <data name="GroupBox13.TabIndex" type="System.Int32, mscorlib">
-    <value>66</value>
-  </data>
-  <data name="GroupBox13.Text" xml:space="preserve">
-    <value>SUMMARY</value>
-  </data>
-  <data name="&gt;&gt;GroupBox13.Name" xml:space="preserve">
-    <value>GroupBox13</value>
-  </data>
-  <data name="&gt;&gt;GroupBox13.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GroupBox13.Parent" xml:space="preserve">
-    <value>jh_dept</value>
-  </data>
-  <data name="&gt;&gt;GroupBox13.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <metadata name="DataGridViewTextBoxColumn17.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="DataGridViewTextBoxColumn17.HeaderText" xml:space="preserve">
-    <value>Fees_Id</value>
-  </data>
-  <data name="DataGridViewTextBoxColumn17.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <metadata name="DataGridViewTextBoxColumn18.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="DataGridViewTextBoxColumn18.HeaderText" xml:space="preserve">
-    <value>Particular</value>
-  </data>
-  <metadata name="DataGridViewTextBoxColumn19.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="DataGridViewTextBoxColumn19.HeaderText" xml:space="preserve">
-    <value>Amount</value>
-  </data>
-  <metadata name="DataGridViewTextBoxColumn20.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="DataGridViewTextBoxColumn20.HeaderText" xml:space="preserve">
-    <value>balance</value>
-  </data>
-  <data name="DataGridViewTextBoxColumn20.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <metadata name="DataGridViewButtonColumn3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="DataGridViewButtonColumn3.HeaderText" xml:space="preserve">
-    <value>Delete</value>
-  </data>
-  <data name="dg_jPayment.Location" type="System.Drawing.Point, System.Drawing">
-    <value>25, 132</value>
-  </data>
-  <data name="dg_jPayment.Size" type="System.Drawing.Size, System.Drawing">
-    <value>362, 75</value>
-  </data>
-  <data name="dg_jPayment.TabIndex" type="System.Int32, mscorlib">
-    <value>61</value>
-  </data>
-  <data name="&gt;&gt;dg_jPayment.Name" xml:space="preserve">
-    <value>dg_jPayment</value>
-  </data>
-  <data name="&gt;&gt;dg_jPayment.Type" xml:space="preserve">
-    <value>Bunifu.Framework.UI.BunifuCustomDataGrid, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;dg_jPayment.Parent" xml:space="preserve">
-    <value>GroupBox14</value>
-  </data>
-  <data name="&gt;&gt;dg_jPayment.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="btn_jAdd.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Stretch</value>
-  </data>
-  <data name="btn_jAdd.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Franklin Gothic Medium Cond, 12pt</value>
-  </data>
-  <data name="btn_jAdd.Location" type="System.Drawing.Point, System.Drawing">
-    <value>307, 76</value>
-  </data>
-  <data name="btn_jAdd.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 5, 3, 5</value>
-  </data>
-  <data name="btn_jAdd.Size" type="System.Drawing.Size, System.Drawing">
-    <value>80, 38</value>
-  </data>
-  <data name="btn_jAdd.TabIndex" type="System.Int32, mscorlib">
-    <value>60</value>
-  </data>
-  <data name="btn_jAdd.Text" xml:space="preserve">
-    <value>ADD</value>
-  </data>
-  <data name="&gt;&gt;btn_jAdd.Name" xml:space="preserve">
-    <value>btn_jAdd</value>
-  </data>
-  <data name="&gt;&gt;btn_jAdd.Type" xml:space="preserve">
-    <value>Bunifu.Framework.UI.BunifuFlatButton, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;btn_jAdd.Parent" xml:space="preserve">
-    <value>GroupBox14</value>
-  </data>
-  <data name="&gt;&gt;btn_jAdd.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="Label35.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="Label35.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Franklin Gothic Medium Cond, 15pt, style=Bold</value>
-  </data>
-  <data name="Label35.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="Label35.Location" type="System.Drawing.Point, System.Drawing">
-    <value>44, 86</value>
-  </data>
-  <data name="Label35.Size" type="System.Drawing.Size, System.Drawing">
-    <value>83, 25</value>
-  </data>
-  <data name="Label35.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
-  </data>
-  <data name="Label35.Text" xml:space="preserve">
-    <value>AMOUNT</value>
-  </data>
-  <data name="&gt;&gt;Label35.Name" xml:space="preserve">
-    <value>Label35</value>
-  </data>
-  <data name="&gt;&gt;Label35.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label35.Parent" xml:space="preserve">
-    <value>GroupBox14</value>
-  </data>
-  <data name="&gt;&gt;Label35.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="Label58.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="Label58.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Franklin Gothic Medium Cond, 15pt, style=Bold</value>
-  </data>
-  <data name="Label58.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="Label58.Location" type="System.Drawing.Point, System.Drawing">
-    <value>17, 219</value>
-  </data>
-  <data name="Label58.Size" type="System.Drawing.Size, System.Drawing">
-    <value>173, 25</value>
-  </data>
-  <data name="Label58.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="Label58.Text" xml:space="preserve">
-    <value>CURRENT BALANCE</value>
-  </data>
-  <data name="&gt;&gt;Label58.Name" xml:space="preserve">
-    <value>Label58</value>
-  </data>
-  <data name="&gt;&gt;Label58.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label58.Parent" xml:space="preserve">
-    <value>GroupBox14</value>
-  </data>
-  <data name="&gt;&gt;Label58.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="txtb_jCurrBal.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="txtb_jCurrBal.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Franklin Gothic Medium Cond, 20.25pt</value>
-  </data>
-  <data name="txtb_jCurrBal.Location" type="System.Drawing.Point, System.Drawing">
-    <value>196, 213</value>
-  </data>
-  <data name="txtb_jCurrBal.Size" type="System.Drawing.Size, System.Drawing">
-    <value>191, 38</value>
-  </data>
-  <data name="txtb_jCurrBal.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="txtb_jCurrBal.Text" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="txtb_jCurrBal.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
-    <value>Right</value>
-  </data>
-  <data name="&gt;&gt;txtb_jCurrBal.Name" xml:space="preserve">
-    <value>txtb_jCurrBal</value>
-  </data>
-  <data name="&gt;&gt;txtb_jCurrBal.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtb_jCurrBal.Parent" xml:space="preserve">
-    <value>GroupBox14</value>
-  </data>
-  <data name="&gt;&gt;txtb_jCurrBal.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="cbo_jParticulars.Location" type="System.Drawing.Point, System.Drawing">
-    <value>133, 41</value>
-  </data>
-  <data name="cbo_jParticulars.Size" type="System.Drawing.Size, System.Drawing">
-    <value>254, 29</value>
-  </data>
-  <data name="cbo_jParticulars.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="&gt;&gt;cbo_jParticulars.Name" xml:space="preserve">
-    <value>cbo_jParticulars</value>
-  </data>
-  <data name="&gt;&gt;cbo_jParticulars.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cbo_jParticulars.Parent" xml:space="preserve">
-    <value>GroupBox14</value>
-  </data>
-  <data name="&gt;&gt;cbo_jParticulars.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="Label59.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="Label59.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Franklin Gothic Medium Cond, 15pt, style=Bold</value>
-  </data>
-  <data name="Label59.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="Label59.Location" type="System.Drawing.Point, System.Drawing">
-    <value>33, 44</value>
-  </data>
-  <data name="Label59.Size" type="System.Drawing.Size, System.Drawing">
-    <value>94, 25</value>
-  </data>
-  <data name="Label59.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="Label59.Text" xml:space="preserve">
-    <value>REMARKS</value>
-  </data>
-  <data name="&gt;&gt;Label59.Name" xml:space="preserve">
-    <value>Label59</value>
-  </data>
-  <data name="&gt;&gt;Label59.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label59.Parent" xml:space="preserve">
-    <value>GroupBox14</value>
-  </data>
-  <data name="&gt;&gt;Label59.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="txtb_jAmntPay.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Franklin Gothic Medium Cond, 20.25pt</value>
-  </data>
-  <data name="txtb_jAmntPay.Location" type="System.Drawing.Point, System.Drawing">
-    <value>133, 76</value>
-  </data>
-  <data name="txtb_jAmntPay.Size" type="System.Drawing.Size, System.Drawing">
-    <value>168, 38</value>
-  </data>
-  <data name="txtb_jAmntPay.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="txtb_jAmntPay.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
-    <value>Right</value>
-  </data>
-  <data name="&gt;&gt;txtb_jAmntPay.Name" xml:space="preserve">
-    <value>txtb_jAmntPay</value>
-  </data>
-  <data name="&gt;&gt;txtb_jAmntPay.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtb_jAmntPay.Parent" xml:space="preserve">
-    <value>GroupBox14</value>
-  </data>
-  <data name="&gt;&gt;txtb_jAmntPay.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="GroupBox14.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Franklin Gothic Medium Cond, 12pt, style=Bold</value>
-  </data>
-  <data name="GroupBox14.Location" type="System.Drawing.Point, System.Drawing">
-    <value>601, 251</value>
-  </data>
-  <data name="GroupBox14.Size" type="System.Drawing.Size, System.Drawing">
-    <value>415, 261</value>
-  </data>
-  <data name="GroupBox14.TabIndex" type="System.Int32, mscorlib">
-    <value>68</value>
-  </data>
-  <data name="GroupBox14.Text" xml:space="preserve">
-    <value>PAYMENT</value>
-  </data>
-  <data name="&gt;&gt;GroupBox14.Name" xml:space="preserve">
-    <value>GroupBox14</value>
-  </data>
-  <data name="&gt;&gt;GroupBox14.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GroupBox14.Parent" xml:space="preserve">
-    <value>jh_dept</value>
-  </data>
-  <data name="&gt;&gt;GroupBox14.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;Label60.Name" xml:space="preserve">
-    <value>Label60</value>
-  </data>
-  <data name="&gt;&gt;Label60.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label60.Parent" xml:space="preserve">
-    <value>GroupBox15</value>
-  </data>
-  <data name="&gt;&gt;Label60.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;txtb_jTD.Name" xml:space="preserve">
-    <value>txtb_jTD</value>
-  </data>
-  <data name="&gt;&gt;txtb_jTD.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtb_jTD.Parent" xml:space="preserve">
-    <value>GroupBox15</value>
-  </data>
-  <data name="&gt;&gt;txtb_jTD.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;Label61.Name" xml:space="preserve">
-    <value>Label61</value>
-  </data>
-  <data name="&gt;&gt;Label61.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label61.Parent" xml:space="preserve">
-    <value>GroupBox15</value>
-  </data>
-  <data name="&gt;&gt;Label61.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;txtb_jTN.Name" xml:space="preserve">
-    <value>txtb_jTN</value>
-  </data>
-  <data name="&gt;&gt;txtb_jTN.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtb_jTN.Parent" xml:space="preserve">
-    <value>GroupBox15</value>
-  </data>
-  <data name="&gt;&gt;txtb_jTN.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="GroupBox15.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="GroupBox15.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Franklin Gothic Medium Cond, 12pt</value>
-  </data>
-  <data name="GroupBox15.Location" type="System.Drawing.Point, System.Drawing">
-    <value>601, 17</value>
-  </data>
-  <data name="GroupBox15.Size" type="System.Drawing.Size, System.Drawing">
-    <value>415, 85</value>
-  </data>
-  <data name="GroupBox15.TabIndex" type="System.Int32, mscorlib">
-    <value>67</value>
-  </data>
-  <data name="GroupBox15.Text" xml:space="preserve">
-    <value>TRANSACTION DETAILS</value>
-  </data>
-  <data name="&gt;&gt;GroupBox15.Name" xml:space="preserve">
-    <value>GroupBox15</value>
-  </data>
-  <data name="&gt;&gt;GroupBox15.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GroupBox15.Parent" xml:space="preserve">
-    <value>jh_dept</value>
-  </data>
-  <data name="&gt;&gt;GroupBox15.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;btn_jManage.Name" xml:space="preserve">
-    <value>btn_jManage</value>
-  </data>
-  <data name="&gt;&gt;btn_jManage.Type" xml:space="preserve">
-    <value>Bunifu.Framework.UI.BunifuFlatButton, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;btn_jManage.Parent" xml:space="preserve">
-    <value>GroupBox17</value>
-  </data>
-  <data name="&gt;&gt;btn_jManage.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;txtb_jStudID.Name" xml:space="preserve">
-    <value>txtb_jStudID</value>
-  </data>
-  <data name="&gt;&gt;txtb_jStudID.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtb_jStudID.Parent" xml:space="preserve">
-    <value>GroupBox17</value>
-  </data>
-  <data name="&gt;&gt;txtb_jStudID.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;Label75.Name" xml:space="preserve">
-    <value>Label75</value>
-  </data>
-  <data name="&gt;&gt;Label75.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label75.Parent" xml:space="preserve">
-    <value>GroupBox17</value>
-  </data>
-  <data name="&gt;&gt;Label75.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;txtb_jSY.Name" xml:space="preserve">
-    <value>txtb_jSY</value>
-  </data>
-  <data name="&gt;&gt;txtb_jSY.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtb_jSY.Parent" xml:space="preserve">
-    <value>GroupBox17</value>
-  </data>
-  <data name="&gt;&gt;txtb_jSY.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;Label76.Name" xml:space="preserve">
-    <value>Label76</value>
-  </data>
-  <data name="&gt;&gt;Label76.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label76.Parent" xml:space="preserve">
-    <value>GroupBox17</value>
-  </data>
-  <data name="&gt;&gt;Label76.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;Label77.Name" xml:space="preserve">
-    <value>Label77</value>
-  </data>
-  <data name="&gt;&gt;Label77.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label77.Parent" xml:space="preserve">
-    <value>GroupBox17</value>
-  </data>
-  <data name="&gt;&gt;Label77.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;txtb_jGL.Name" xml:space="preserve">
-    <value>txtb_jGL</value>
-  </data>
-  <data name="&gt;&gt;txtb_jGL.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtb_jGL.Parent" xml:space="preserve">
-    <value>GroupBox17</value>
-  </data>
-  <data name="&gt;&gt;txtb_jGL.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;Label78.Name" xml:space="preserve">
-    <value>Label78</value>
-  </data>
-  <data name="&gt;&gt;Label78.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label78.Parent" xml:space="preserve">
-    <value>GroupBox17</value>
-  </data>
-  <data name="&gt;&gt;Label78.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;txtb_jStudName.Name" xml:space="preserve">
-    <value>txtb_jStudName</value>
-  </data>
-  <data name="&gt;&gt;txtb_jStudName.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtb_jStudName.Parent" xml:space="preserve">
-    <value>GroupBox17</value>
-  </data>
-  <data name="&gt;&gt;txtb_jStudName.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="GroupBox17.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Franklin Gothic Medium Cond, 12pt</value>
-  </data>
-  <data name="GroupBox17.Location" type="System.Drawing.Point, System.Drawing">
-    <value>21, 127</value>
-  </data>
-  <data name="GroupBox17.Size" type="System.Drawing.Size, System.Drawing">
-    <value>574, 169</value>
-  </data>
-  <data name="GroupBox17.TabIndex" type="System.Int32, mscorlib">
-    <value>64</value>
-  </data>
-  <data name="GroupBox17.Text" xml:space="preserve">
-    <value>STUDENT DETAILS</value>
-  </data>
-  <data name="&gt;&gt;GroupBox17.Name" xml:space="preserve">
-    <value>GroupBox17</value>
-  </data>
-  <data name="&gt;&gt;GroupBox17.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GroupBox17.Parent" xml:space="preserve">
-    <value>jh_dept</value>
-  </data>
-  <data name="&gt;&gt;GroupBox17.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;btn_jEnter.Name" xml:space="preserve">
-    <value>btn_jEnter</value>
-  </data>
-  <data name="&gt;&gt;btn_jEnter.Type" xml:space="preserve">
-    <value>Bunifu.Framework.UI.BunifuFlatButton, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;btn_jEnter.Parent" xml:space="preserve">
-    <value>GroupBox18</value>
-  </data>
-  <data name="&gt;&gt;btn_jEnter.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;cbo_jSearchBY.Name" xml:space="preserve">
-    <value>cbo_jSearchBY</value>
-  </data>
-  <data name="&gt;&gt;cbo_jSearchBY.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cbo_jSearchBY.Parent" xml:space="preserve">
-    <value>GroupBox18</value>
-  </data>
-  <data name="&gt;&gt;cbo_jSearchBY.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;Label79.Name" xml:space="preserve">
-    <value>Label79</value>
-  </data>
-  <data name="&gt;&gt;Label79.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label79.Parent" xml:space="preserve">
-    <value>GroupBox18</value>
-  </data>
-  <data name="&gt;&gt;Label79.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;Label80.Name" xml:space="preserve">
-    <value>Label80</value>
-  </data>
-  <data name="&gt;&gt;Label80.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label80.Parent" xml:space="preserve">
-    <value>GroupBox18</value>
-  </data>
-  <data name="&gt;&gt;Label80.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;txtb_jSearch.Name" xml:space="preserve">
-    <value>txtb_jSearch</value>
-  </data>
-  <data name="&gt;&gt;txtb_jSearch.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtb_jSearch.Parent" xml:space="preserve">
-    <value>GroupBox18</value>
-  </data>
-  <data name="&gt;&gt;txtb_jSearch.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="GroupBox18.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Franklin Gothic Medium Cond, 12pt</value>
-  </data>
-  <data name="GroupBox18.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 17</value>
-  </data>
-  <data name="GroupBox18.Size" type="System.Drawing.Size, System.Drawing">
-    <value>584, 104</value>
-  </data>
-  <data name="GroupBox18.TabIndex" type="System.Int32, mscorlib">
-    <value>63</value>
-  </data>
-  <data name="GroupBox18.Text" xml:space="preserve">
-    <value>SEARCH FOR STUDENT</value>
-  </data>
-  <data name="&gt;&gt;GroupBox18.Name" xml:space="preserve">
-    <value>GroupBox18</value>
-  </data>
-  <data name="&gt;&gt;GroupBox18.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GroupBox18.Parent" xml:space="preserve">
-    <value>jh_dept</value>
-  </data>
-  <data name="&gt;&gt;GroupBox18.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="jh_dept.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 30</value>
-  </data>
-  <data name="jh_dept.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1027, 605</value>
-  </data>
-  <data name="jh_dept.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="jh_dept.Text" xml:space="preserve">
-    <value>Junior-High Dept</value>
-  </data>
-  <data name="&gt;&gt;jh_dept.Name" xml:space="preserve">
-    <value>jh_dept</value>
-  </data>
-  <data name="&gt;&gt;jh_dept.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;jh_dept.Parent" xml:space="preserve">
-    <value>TabControl1</value>
-  </data>
-  <data name="&gt;&gt;jh_dept.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="TabControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="TabControl1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Franklin Gothic Medium Cond, 12pt, style=Bold</value>
-  </data>
-  <data name="TabControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="TabControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1035, 639</value>
-  </data>
-  <data name="TabControl1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;TabControl1.Name" xml:space="preserve">
-    <value>TabControl1</value>
-  </data>
-  <data name="&gt;&gt;TabControl1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TabControl1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;TabControl1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="&gt;&gt;dg_receipts.Name" xml:space="preserve">
@@ -4050,6 +2856,141 @@
   <data name="&gt;&gt;txtb_name.ZOrder" xml:space="preserve">
     <value>16</value>
   </data>
+  <data name="&gt;&gt;Panel1.Name" xml:space="preserve">
+    <value>Panel1</value>
+  </data>
+  <data name="&gt;&gt;Panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Panel1.Parent" xml:space="preserve">
+    <value>elem_dept</value>
+  </data>
+  <data name="&gt;&gt;Panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btn_ePrint.Name" xml:space="preserve">
+    <value>btn_ePrint</value>
+  </data>
+  <data name="&gt;&gt;btn_ePrint.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuFlatButton, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btn_ePrint.Parent" xml:space="preserve">
+    <value>elem_dept</value>
+  </data>
+  <data name="&gt;&gt;btn_ePrint.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;btn_eClear.Name" xml:space="preserve">
+    <value>btn_eClear</value>
+  </data>
+  <data name="&gt;&gt;btn_eClear.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuFlatButton, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btn_eClear.Parent" xml:space="preserve">
+    <value>elem_dept</value>
+  </data>
+  <data name="&gt;&gt;btn_eClear.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;btn_eSave.Name" xml:space="preserve">
+    <value>btn_eSave</value>
+  </data>
+  <data name="&gt;&gt;btn_eSave.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuFlatButton, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btn_eSave.Parent" xml:space="preserve">
+    <value>elem_dept</value>
+  </data>
+  <data name="&gt;&gt;btn_eSave.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;GroupBox10.Name" xml:space="preserve">
+    <value>GroupBox10</value>
+  </data>
+  <data name="&gt;&gt;GroupBox10.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupBox10.Parent" xml:space="preserve">
+    <value>elem_dept</value>
+  </data>
+  <data name="&gt;&gt;GroupBox10.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;GroupBox11.Name" xml:space="preserve">
+    <value>GroupBox11</value>
+  </data>
+  <data name="&gt;&gt;GroupBox11.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupBox11.Parent" xml:space="preserve">
+    <value>elem_dept</value>
+  </data>
+  <data name="&gt;&gt;GroupBox11.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;GroupBox12.Name" xml:space="preserve">
+    <value>GroupBox12</value>
+  </data>
+  <data name="&gt;&gt;GroupBox12.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupBox12.Parent" xml:space="preserve">
+    <value>elem_dept</value>
+  </data>
+  <data name="&gt;&gt;GroupBox12.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;GroupBox6.Name" xml:space="preserve">
+    <value>GroupBox6</value>
+  </data>
+  <data name="&gt;&gt;GroupBox6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupBox6.Parent" xml:space="preserve">
+    <value>elem_dept</value>
+  </data>
+  <data name="&gt;&gt;GroupBox6.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;GroupBox5.Name" xml:space="preserve">
+    <value>GroupBox5</value>
+  </data>
+  <data name="&gt;&gt;GroupBox5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupBox5.Parent" xml:space="preserve">
+    <value>elem_dept</value>
+  </data>
+  <data name="&gt;&gt;GroupBox5.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="elem_dept.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 30</value>
+  </data>
+  <data name="elem_dept.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="elem_dept.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1027, 605</value>
+  </data>
+  <data name="elem_dept.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="elem_dept.Text" xml:space="preserve">
+    <value>Elementary Dept</value>
+  </data>
+  <data name="&gt;&gt;elem_dept.Name" xml:space="preserve">
+    <value>elem_dept</value>
+  </data>
+  <data name="&gt;&gt;elem_dept.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;elem_dept.Parent" xml:space="preserve">
+    <value>TabControl1</value>
+  </data>
+  <data name="&gt;&gt;elem_dept.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="&gt;&gt;dg_eReceipts.Name" xml:space="preserve">
     <value>dg_eReceipts</value>
   </data>
@@ -6161,6 +5102,138 @@
   </data>
   <data name="&gt;&gt;txtb_eSearch.ZOrder" xml:space="preserve">
     <value>4</value>
+  </data>
+  <data name="&gt;&gt;Panel2.Name" xml:space="preserve">
+    <value>Panel2</value>
+  </data>
+  <data name="&gt;&gt;Panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Panel2.Parent" xml:space="preserve">
+    <value>sh_dept</value>
+  </data>
+  <data name="&gt;&gt;Panel2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btn_sPrint.Name" xml:space="preserve">
+    <value>btn_sPrint</value>
+  </data>
+  <data name="&gt;&gt;btn_sPrint.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuFlatButton, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btn_sPrint.Parent" xml:space="preserve">
+    <value>sh_dept</value>
+  </data>
+  <data name="&gt;&gt;btn_sPrint.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;btn_sClear.Name" xml:space="preserve">
+    <value>btn_sClear</value>
+  </data>
+  <data name="&gt;&gt;btn_sClear.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuFlatButton, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btn_sClear.Parent" xml:space="preserve">
+    <value>sh_dept</value>
+  </data>
+  <data name="&gt;&gt;btn_sClear.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;btn_sSave.Name" xml:space="preserve">
+    <value>btn_sSave</value>
+  </data>
+  <data name="&gt;&gt;btn_sSave.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuFlatButton, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btn_sSave.Parent" xml:space="preserve">
+    <value>sh_dept</value>
+  </data>
+  <data name="&gt;&gt;btn_sSave.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;GroupBox19.Name" xml:space="preserve">
+    <value>GroupBox19</value>
+  </data>
+  <data name="&gt;&gt;GroupBox19.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupBox19.Parent" xml:space="preserve">
+    <value>sh_dept</value>
+  </data>
+  <data name="&gt;&gt;GroupBox19.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;GroupBox20.Name" xml:space="preserve">
+    <value>GroupBox20</value>
+  </data>
+  <data name="&gt;&gt;GroupBox20.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupBox20.Parent" xml:space="preserve">
+    <value>sh_dept</value>
+  </data>
+  <data name="&gt;&gt;GroupBox20.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;GroupBox21.Name" xml:space="preserve">
+    <value>GroupBox21</value>
+  </data>
+  <data name="&gt;&gt;GroupBox21.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupBox21.Parent" xml:space="preserve">
+    <value>sh_dept</value>
+  </data>
+  <data name="&gt;&gt;GroupBox21.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;GroupBox23.Name" xml:space="preserve">
+    <value>GroupBox23</value>
+  </data>
+  <data name="&gt;&gt;GroupBox23.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupBox23.Parent" xml:space="preserve">
+    <value>sh_dept</value>
+  </data>
+  <data name="&gt;&gt;GroupBox23.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;GroupBox24.Name" xml:space="preserve">
+    <value>GroupBox24</value>
+  </data>
+  <data name="&gt;&gt;GroupBox24.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupBox24.Parent" xml:space="preserve">
+    <value>sh_dept</value>
+  </data>
+  <data name="&gt;&gt;GroupBox24.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="sh_dept.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 30</value>
+  </data>
+  <data name="sh_dept.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1027, 605</value>
+  </data>
+  <data name="sh_dept.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="sh_dept.Text" xml:space="preserve">
+    <value>Senior-High Dept</value>
+  </data>
+  <data name="&gt;&gt;sh_dept.Name" xml:space="preserve">
+    <value>sh_dept</value>
+  </data>
+  <data name="&gt;&gt;sh_dept.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;sh_dept.Parent" xml:space="preserve">
+    <value>TabControl1</value>
+  </data>
+  <data name="&gt;&gt;sh_dept.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="&gt;&gt;dg_sReceipts.Name" xml:space="preserve">
     <value>dg_sReceipts</value>
@@ -8274,6 +7347,291 @@
   <data name="&gt;&gt;txtb_sSearch.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <data name="&gt;&gt;Panel3.Name" xml:space="preserve">
+    <value>Panel3</value>
+  </data>
+  <data name="&gt;&gt;Panel3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Panel3.Parent" xml:space="preserve">
+    <value>jh_dept</value>
+  </data>
+  <data name="&gt;&gt;Panel3.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btn_jPrint.Name" xml:space="preserve">
+    <value>btn_jPrint</value>
+  </data>
+  <data name="&gt;&gt;btn_jPrint.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuFlatButton, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btn_jPrint.Parent" xml:space="preserve">
+    <value>jh_dept</value>
+  </data>
+  <data name="&gt;&gt;btn_jPrint.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;btn_jClear.Name" xml:space="preserve">
+    <value>btn_jClear</value>
+  </data>
+  <data name="&gt;&gt;btn_jClear.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuFlatButton, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btn_jClear.Parent" xml:space="preserve">
+    <value>jh_dept</value>
+  </data>
+  <data name="&gt;&gt;btn_jClear.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;btn_jSave.Name" xml:space="preserve">
+    <value>btn_jSave</value>
+  </data>
+  <data name="&gt;&gt;btn_jSave.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuFlatButton, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btn_jSave.Parent" xml:space="preserve">
+    <value>jh_dept</value>
+  </data>
+  <data name="&gt;&gt;btn_jSave.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;GroupBox13.Name" xml:space="preserve">
+    <value>GroupBox13</value>
+  </data>
+  <data name="&gt;&gt;GroupBox13.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupBox13.Parent" xml:space="preserve">
+    <value>jh_dept</value>
+  </data>
+  <data name="&gt;&gt;GroupBox13.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;GroupBox14.Name" xml:space="preserve">
+    <value>GroupBox14</value>
+  </data>
+  <data name="&gt;&gt;GroupBox14.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupBox14.Parent" xml:space="preserve">
+    <value>jh_dept</value>
+  </data>
+  <data name="&gt;&gt;GroupBox14.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;GroupBox15.Name" xml:space="preserve">
+    <value>GroupBox15</value>
+  </data>
+  <data name="&gt;&gt;GroupBox15.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupBox15.Parent" xml:space="preserve">
+    <value>jh_dept</value>
+  </data>
+  <data name="&gt;&gt;GroupBox15.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;GroupBox17.Name" xml:space="preserve">
+    <value>GroupBox17</value>
+  </data>
+  <data name="&gt;&gt;GroupBox17.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupBox17.Parent" xml:space="preserve">
+    <value>jh_dept</value>
+  </data>
+  <data name="&gt;&gt;GroupBox17.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;GroupBox18.Name" xml:space="preserve">
+    <value>GroupBox18</value>
+  </data>
+  <data name="&gt;&gt;GroupBox18.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupBox18.Parent" xml:space="preserve">
+    <value>jh_dept</value>
+  </data>
+  <data name="&gt;&gt;GroupBox18.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="jh_dept.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 30</value>
+  </data>
+  <data name="jh_dept.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1027, 605</value>
+  </data>
+  <data name="jh_dept.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="jh_dept.Text" xml:space="preserve">
+    <value>Junior-High Dept</value>
+  </data>
+  <data name="&gt;&gt;jh_dept.Name" xml:space="preserve">
+    <value>jh_dept</value>
+  </data>
+  <data name="&gt;&gt;jh_dept.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;jh_dept.Parent" xml:space="preserve">
+    <value>TabControl1</value>
+  </data>
+  <data name="&gt;&gt;jh_dept.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;dg_jReceipts.Name" xml:space="preserve">
+    <value>dg_jReceipts</value>
+  </data>
+  <data name="&gt;&gt;dg_jReceipts.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuCustomDataGrid, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dg_jReceipts.Parent" xml:space="preserve">
+    <value>Panel3</value>
+  </data>
+  <data name="&gt;&gt;dg_jReceipts.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;Label62.Name" xml:space="preserve">
+    <value>Label62</value>
+  </data>
+  <data name="&gt;&gt;Label62.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label62.Parent" xml:space="preserve">
+    <value>Panel3</value>
+  </data>
+  <data name="&gt;&gt;Label62.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;lbl_jName.Name" xml:space="preserve">
+    <value>lbl_jName</value>
+  </data>
+  <data name="&gt;&gt;lbl_jName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_jName.Parent" xml:space="preserve">
+    <value>Panel3</value>
+  </data>
+  <data name="&gt;&gt;lbl_jName.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;Label64.Name" xml:space="preserve">
+    <value>Label64</value>
+  </data>
+  <data name="&gt;&gt;Label64.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label64.Parent" xml:space="preserve">
+    <value>Panel3</value>
+  </data>
+  <data name="&gt;&gt;Label64.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;lbl_jBal.Name" xml:space="preserve">
+    <value>lbl_jBal</value>
+  </data>
+  <data name="&gt;&gt;lbl_jBal.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_jBal.Parent" xml:space="preserve">
+    <value>Panel3</value>
+  </data>
+  <data name="&gt;&gt;lbl_jBal.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;Label66.Name" xml:space="preserve">
+    <value>Label66</value>
+  </data>
+  <data name="&gt;&gt;Label66.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label66.Parent" xml:space="preserve">
+    <value>Panel3</value>
+  </data>
+  <data name="&gt;&gt;Label66.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;lbl_jDate.Name" xml:space="preserve">
+    <value>lbl_jDate</value>
+  </data>
+  <data name="&gt;&gt;lbl_jDate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_jDate.Parent" xml:space="preserve">
+    <value>Panel3</value>
+  </data>
+  <data name="&gt;&gt;lbl_jDate.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;Label68.Name" xml:space="preserve">
+    <value>Label68</value>
+  </data>
+  <data name="&gt;&gt;Label68.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label68.Parent" xml:space="preserve">
+    <value>Panel3</value>
+  </data>
+  <data name="&gt;&gt;Label68.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;Label69.Name" xml:space="preserve">
+    <value>Label69</value>
+  </data>
+  <data name="&gt;&gt;Label69.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label69.Parent" xml:space="preserve">
+    <value>Panel3</value>
+  </data>
+  <data name="&gt;&gt;Label69.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;lbl_jTamnt.Name" xml:space="preserve">
+    <value>lbl_jTamnt</value>
+  </data>
+  <data name="&gt;&gt;lbl_jTamnt.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_jTamnt.Parent" xml:space="preserve">
+    <value>Panel3</value>
+  </data>
+  <data name="&gt;&gt;lbl_jTamnt.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;Label71.Name" xml:space="preserve">
+    <value>Label71</value>
+  </data>
+  <data name="&gt;&gt;Label71.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label71.Parent" xml:space="preserve">
+    <value>Panel3</value>
+  </data>
+  <data name="&gt;&gt;Label71.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="Panel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>21, 304</value>
+  </data>
+  <data name="Panel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>574, 299</value>
+  </data>
+  <data name="Panel3.TabIndex" type="System.Int32, mscorlib">
+    <value>72</value>
+  </data>
+  <data name="&gt;&gt;Panel3.Name" xml:space="preserve">
+    <value>Panel3</value>
+  </data>
+  <data name="&gt;&gt;Panel3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Panel3.Parent" xml:space="preserve">
+    <value>jh_dept</value>
+  </data>
+  <data name="&gt;&gt;Panel3.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <metadata name="DataGridViewTextBoxColumn7.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -8637,6 +7995,207 @@
   <data name="&gt;&gt;Label71.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
+  <data name="btn_jPrint.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="btn_jPrint.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Franklin Gothic Medium Cond, 12pt</value>
+  </data>
+  <data name="btn_jPrint.Location" type="System.Drawing.Point, System.Drawing">
+    <value>699, 562</value>
+  </data>
+  <data name="btn_jPrint.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 5, 3, 5</value>
+  </data>
+  <data name="btn_jPrint.Size" type="System.Drawing.Size, System.Drawing">
+    <value>276, 35</value>
+  </data>
+  <data name="btn_jPrint.TabIndex" type="System.Int32, mscorlib">
+    <value>71</value>
+  </data>
+  <data name="btn_jPrint.Text" xml:space="preserve">
+    <value>PRINT</value>
+  </data>
+  <data name="&gt;&gt;btn_jPrint.Name" xml:space="preserve">
+    <value>btn_jPrint</value>
+  </data>
+  <data name="&gt;&gt;btn_jPrint.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuFlatButton, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btn_jPrint.Parent" xml:space="preserve">
+    <value>jh_dept</value>
+  </data>
+  <data name="&gt;&gt;btn_jPrint.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btn_jClear.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="btn_jClear.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Franklin Gothic Medium Cond, 12pt</value>
+  </data>
+  <data name="btn_jClear.Location" type="System.Drawing.Point, System.Drawing">
+    <value>675, 520</value>
+  </data>
+  <data name="btn_jClear.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 5, 3, 5</value>
+  </data>
+  <data name="btn_jClear.Size" type="System.Drawing.Size, System.Drawing">
+    <value>136, 35</value>
+  </data>
+  <data name="btn_jClear.TabIndex" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <data name="btn_jClear.Text" xml:space="preserve">
+    <value>CLEAR</value>
+  </data>
+  <data name="&gt;&gt;btn_jClear.Name" xml:space="preserve">
+    <value>btn_jClear</value>
+  </data>
+  <data name="&gt;&gt;btn_jClear.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuFlatButton, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btn_jClear.Parent" xml:space="preserve">
+    <value>jh_dept</value>
+  </data>
+  <data name="&gt;&gt;btn_jClear.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="btn_jSave.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="btn_jSave.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Franklin Gothic Medium Cond, 12pt</value>
+  </data>
+  <data name="btn_jSave.Location" type="System.Drawing.Point, System.Drawing">
+    <value>839, 520</value>
+  </data>
+  <data name="btn_jSave.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 5, 3, 5</value>
+  </data>
+  <data name="btn_jSave.Size" type="System.Drawing.Size, System.Drawing">
+    <value>136, 35</value>
+  </data>
+  <data name="btn_jSave.TabIndex" type="System.Int32, mscorlib">
+    <value>69</value>
+  </data>
+  <data name="btn_jSave.Text" xml:space="preserve">
+    <value>SAVE</value>
+  </data>
+  <data name="&gt;&gt;btn_jSave.Name" xml:space="preserve">
+    <value>btn_jSave</value>
+  </data>
+  <data name="&gt;&gt;btn_jSave.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuFlatButton, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btn_jSave.Parent" xml:space="preserve">
+    <value>jh_dept</value>
+  </data>
+  <data name="&gt;&gt;btn_jSave.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;Label31.Name" xml:space="preserve">
+    <value>Label31</value>
+  </data>
+  <data name="&gt;&gt;Label31.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label31.Parent" xml:space="preserve">
+    <value>GroupBox13</value>
+  </data>
+  <data name="&gt;&gt;Label31.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;txtb_jToAmnt.Name" xml:space="preserve">
+    <value>txtb_jToAmnt</value>
+  </data>
+  <data name="&gt;&gt;txtb_jToAmnt.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtb_jToAmnt.Parent" xml:space="preserve">
+    <value>GroupBox13</value>
+  </data>
+  <data name="&gt;&gt;txtb_jToAmnt.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;Label32.Name" xml:space="preserve">
+    <value>Label32</value>
+  </data>
+  <data name="&gt;&gt;Label32.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label32.Parent" xml:space="preserve">
+    <value>GroupBox13</value>
+  </data>
+  <data name="&gt;&gt;Label32.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;txtb_jOldAcct.Name" xml:space="preserve">
+    <value>txtb_jOldAcct</value>
+  </data>
+  <data name="&gt;&gt;txtb_jOldAcct.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtb_jOldAcct.Parent" xml:space="preserve">
+    <value>GroupBox13</value>
+  </data>
+  <data name="&gt;&gt;txtb_jOldAcct.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;Label34.Name" xml:space="preserve">
+    <value>Label34</value>
+  </data>
+  <data name="&gt;&gt;Label34.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label34.Parent" xml:space="preserve">
+    <value>GroupBox13</value>
+  </data>
+  <data name="&gt;&gt;Label34.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;txtb_jCurrAcct.Name" xml:space="preserve">
+    <value>txtb_jCurrAcct</value>
+  </data>
+  <data name="&gt;&gt;txtb_jCurrAcct.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtb_jCurrAcct.Parent" xml:space="preserve">
+    <value>GroupBox13</value>
+  </data>
+  <data name="&gt;&gt;txtb_jCurrAcct.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="GroupBox13.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="GroupBox13.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Franklin Gothic Medium Cond, 12pt, style=Bold</value>
+  </data>
+  <data name="GroupBox13.Location" type="System.Drawing.Point, System.Drawing">
+    <value>601, 108</value>
+  </data>
+  <data name="GroupBox13.Size" type="System.Drawing.Size, System.Drawing">
+    <value>415, 137</value>
+  </data>
+  <data name="GroupBox13.TabIndex" type="System.Int32, mscorlib">
+    <value>66</value>
+  </data>
+  <data name="GroupBox13.Text" xml:space="preserve">
+    <value>SUMMARY</value>
+  </data>
+  <data name="&gt;&gt;GroupBox13.Name" xml:space="preserve">
+    <value>GroupBox13</value>
+  </data>
+  <data name="&gt;&gt;GroupBox13.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupBox13.Parent" xml:space="preserve">
+    <value>jh_dept</value>
+  </data>
+  <data name="&gt;&gt;GroupBox13.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
   <data name="Label31.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -8832,6 +8391,477 @@
   <data name="&gt;&gt;txtb_jCurrAcct.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <data name="&gt;&gt;dg_jPayment.Name" xml:space="preserve">
+    <value>dg_jPayment</value>
+  </data>
+  <data name="&gt;&gt;dg_jPayment.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuCustomDataGrid, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dg_jPayment.Parent" xml:space="preserve">
+    <value>GroupBox14</value>
+  </data>
+  <data name="&gt;&gt;dg_jPayment.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btn_jAdd.Name" xml:space="preserve">
+    <value>btn_jAdd</value>
+  </data>
+  <data name="&gt;&gt;btn_jAdd.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuFlatButton, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btn_jAdd.Parent" xml:space="preserve">
+    <value>GroupBox14</value>
+  </data>
+  <data name="&gt;&gt;btn_jAdd.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;Label35.Name" xml:space="preserve">
+    <value>Label35</value>
+  </data>
+  <data name="&gt;&gt;Label35.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label35.Parent" xml:space="preserve">
+    <value>GroupBox14</value>
+  </data>
+  <data name="&gt;&gt;Label35.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;Label58.Name" xml:space="preserve">
+    <value>Label58</value>
+  </data>
+  <data name="&gt;&gt;Label58.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label58.Parent" xml:space="preserve">
+    <value>GroupBox14</value>
+  </data>
+  <data name="&gt;&gt;Label58.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;txtb_jCurrBal.Name" xml:space="preserve">
+    <value>txtb_jCurrBal</value>
+  </data>
+  <data name="&gt;&gt;txtb_jCurrBal.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtb_jCurrBal.Parent" xml:space="preserve">
+    <value>GroupBox14</value>
+  </data>
+  <data name="&gt;&gt;txtb_jCurrBal.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;cbo_jParticulars.Name" xml:space="preserve">
+    <value>cbo_jParticulars</value>
+  </data>
+  <data name="&gt;&gt;cbo_jParticulars.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbo_jParticulars.Parent" xml:space="preserve">
+    <value>GroupBox14</value>
+  </data>
+  <data name="&gt;&gt;cbo_jParticulars.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;Label59.Name" xml:space="preserve">
+    <value>Label59</value>
+  </data>
+  <data name="&gt;&gt;Label59.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label59.Parent" xml:space="preserve">
+    <value>GroupBox14</value>
+  </data>
+  <data name="&gt;&gt;Label59.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;txtb_jAmntPay.Name" xml:space="preserve">
+    <value>txtb_jAmntPay</value>
+  </data>
+  <data name="&gt;&gt;txtb_jAmntPay.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtb_jAmntPay.Parent" xml:space="preserve">
+    <value>GroupBox14</value>
+  </data>
+  <data name="&gt;&gt;txtb_jAmntPay.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="GroupBox14.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Franklin Gothic Medium Cond, 12pt, style=Bold</value>
+  </data>
+  <data name="GroupBox14.Location" type="System.Drawing.Point, System.Drawing">
+    <value>601, 251</value>
+  </data>
+  <data name="GroupBox14.Size" type="System.Drawing.Size, System.Drawing">
+    <value>415, 261</value>
+  </data>
+  <data name="GroupBox14.TabIndex" type="System.Int32, mscorlib">
+    <value>68</value>
+  </data>
+  <data name="GroupBox14.Text" xml:space="preserve">
+    <value>PAYMENT</value>
+  </data>
+  <data name="&gt;&gt;GroupBox14.Name" xml:space="preserve">
+    <value>GroupBox14</value>
+  </data>
+  <data name="&gt;&gt;GroupBox14.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupBox14.Parent" xml:space="preserve">
+    <value>jh_dept</value>
+  </data>
+  <data name="&gt;&gt;GroupBox14.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <metadata name="DataGridViewTextBoxColumn17.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="DataGridViewTextBoxColumn17.HeaderText" xml:space="preserve">
+    <value>Fees_Id</value>
+  </data>
+  <data name="DataGridViewTextBoxColumn17.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <metadata name="DataGridViewTextBoxColumn18.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="DataGridViewTextBoxColumn18.HeaderText" xml:space="preserve">
+    <value>Particular</value>
+  </data>
+  <metadata name="DataGridViewTextBoxColumn19.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="DataGridViewTextBoxColumn19.HeaderText" xml:space="preserve">
+    <value>Amount</value>
+  </data>
+  <metadata name="DataGridViewTextBoxColumn20.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="DataGridViewTextBoxColumn20.HeaderText" xml:space="preserve">
+    <value>balance</value>
+  </data>
+  <data name="DataGridViewTextBoxColumn20.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <metadata name="DataGridViewButtonColumn3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="DataGridViewButtonColumn3.HeaderText" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="dg_jPayment.Location" type="System.Drawing.Point, System.Drawing">
+    <value>25, 132</value>
+  </data>
+  <data name="dg_jPayment.Size" type="System.Drawing.Size, System.Drawing">
+    <value>362, 75</value>
+  </data>
+  <data name="dg_jPayment.TabIndex" type="System.Int32, mscorlib">
+    <value>61</value>
+  </data>
+  <data name="&gt;&gt;dg_jPayment.Name" xml:space="preserve">
+    <value>dg_jPayment</value>
+  </data>
+  <data name="&gt;&gt;dg_jPayment.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuCustomDataGrid, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dg_jPayment.Parent" xml:space="preserve">
+    <value>GroupBox14</value>
+  </data>
+  <data name="&gt;&gt;dg_jPayment.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btn_jAdd.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="btn_jAdd.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Franklin Gothic Medium Cond, 12pt</value>
+  </data>
+  <data name="btn_jAdd.Location" type="System.Drawing.Point, System.Drawing">
+    <value>307, 76</value>
+  </data>
+  <data name="btn_jAdd.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 5, 3, 5</value>
+  </data>
+  <data name="btn_jAdd.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 38</value>
+  </data>
+  <data name="btn_jAdd.TabIndex" type="System.Int32, mscorlib">
+    <value>60</value>
+  </data>
+  <data name="btn_jAdd.Text" xml:space="preserve">
+    <value>ADD</value>
+  </data>
+  <data name="&gt;&gt;btn_jAdd.Name" xml:space="preserve">
+    <value>btn_jAdd</value>
+  </data>
+  <data name="&gt;&gt;btn_jAdd.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuFlatButton, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btn_jAdd.Parent" xml:space="preserve">
+    <value>GroupBox14</value>
+  </data>
+  <data name="&gt;&gt;btn_jAdd.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Label35.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label35.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Franklin Gothic Medium Cond, 15pt, style=Bold</value>
+  </data>
+  <data name="Label35.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label35.Location" type="System.Drawing.Point, System.Drawing">
+    <value>44, 86</value>
+  </data>
+  <data name="Label35.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 25</value>
+  </data>
+  <data name="Label35.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="Label35.Text" xml:space="preserve">
+    <value>AMOUNT</value>
+  </data>
+  <data name="&gt;&gt;Label35.Name" xml:space="preserve">
+    <value>Label35</value>
+  </data>
+  <data name="&gt;&gt;Label35.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label35.Parent" xml:space="preserve">
+    <value>GroupBox14</value>
+  </data>
+  <data name="&gt;&gt;Label35.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="Label58.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label58.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Franklin Gothic Medium Cond, 15pt, style=Bold</value>
+  </data>
+  <data name="Label58.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label58.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 219</value>
+  </data>
+  <data name="Label58.Size" type="System.Drawing.Size, System.Drawing">
+    <value>173, 25</value>
+  </data>
+  <data name="Label58.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="Label58.Text" xml:space="preserve">
+    <value>CURRENT BALANCE</value>
+  </data>
+  <data name="&gt;&gt;Label58.Name" xml:space="preserve">
+    <value>Label58</value>
+  </data>
+  <data name="&gt;&gt;Label58.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label58.Parent" xml:space="preserve">
+    <value>GroupBox14</value>
+  </data>
+  <data name="&gt;&gt;Label58.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="txtb_jCurrBal.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="txtb_jCurrBal.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Franklin Gothic Medium Cond, 20.25pt</value>
+  </data>
+  <data name="txtb_jCurrBal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>196, 213</value>
+  </data>
+  <data name="txtb_jCurrBal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>191, 38</value>
+  </data>
+  <data name="txtb_jCurrBal.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="txtb_jCurrBal.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="txtb_jCurrBal.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="&gt;&gt;txtb_jCurrBal.Name" xml:space="preserve">
+    <value>txtb_jCurrBal</value>
+  </data>
+  <data name="&gt;&gt;txtb_jCurrBal.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtb_jCurrBal.Parent" xml:space="preserve">
+    <value>GroupBox14</value>
+  </data>
+  <data name="&gt;&gt;txtb_jCurrBal.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="cbo_jParticulars.Location" type="System.Drawing.Point, System.Drawing">
+    <value>133, 41</value>
+  </data>
+  <data name="cbo_jParticulars.Size" type="System.Drawing.Size, System.Drawing">
+    <value>254, 29</value>
+  </data>
+  <data name="cbo_jParticulars.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;cbo_jParticulars.Name" xml:space="preserve">
+    <value>cbo_jParticulars</value>
+  </data>
+  <data name="&gt;&gt;cbo_jParticulars.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbo_jParticulars.Parent" xml:space="preserve">
+    <value>GroupBox14</value>
+  </data>
+  <data name="&gt;&gt;cbo_jParticulars.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="Label59.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label59.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Franklin Gothic Medium Cond, 15pt, style=Bold</value>
+  </data>
+  <data name="Label59.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label59.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 44</value>
+  </data>
+  <data name="Label59.Size" type="System.Drawing.Size, System.Drawing">
+    <value>94, 25</value>
+  </data>
+  <data name="Label59.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="Label59.Text" xml:space="preserve">
+    <value>REMARKS</value>
+  </data>
+  <data name="&gt;&gt;Label59.Name" xml:space="preserve">
+    <value>Label59</value>
+  </data>
+  <data name="&gt;&gt;Label59.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label59.Parent" xml:space="preserve">
+    <value>GroupBox14</value>
+  </data>
+  <data name="&gt;&gt;Label59.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="txtb_jAmntPay.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Franklin Gothic Medium Cond, 20.25pt</value>
+  </data>
+  <data name="txtb_jAmntPay.Location" type="System.Drawing.Point, System.Drawing">
+    <value>133, 76</value>
+  </data>
+  <data name="txtb_jAmntPay.Size" type="System.Drawing.Size, System.Drawing">
+    <value>168, 38</value>
+  </data>
+  <data name="txtb_jAmntPay.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="txtb_jAmntPay.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="&gt;&gt;txtb_jAmntPay.Name" xml:space="preserve">
+    <value>txtb_jAmntPay</value>
+  </data>
+  <data name="&gt;&gt;txtb_jAmntPay.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtb_jAmntPay.Parent" xml:space="preserve">
+    <value>GroupBox14</value>
+  </data>
+  <data name="&gt;&gt;txtb_jAmntPay.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;Label60.Name" xml:space="preserve">
+    <value>Label60</value>
+  </data>
+  <data name="&gt;&gt;Label60.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label60.Parent" xml:space="preserve">
+    <value>GroupBox15</value>
+  </data>
+  <data name="&gt;&gt;Label60.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;txtb_jTD.Name" xml:space="preserve">
+    <value>txtb_jTD</value>
+  </data>
+  <data name="&gt;&gt;txtb_jTD.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtb_jTD.Parent" xml:space="preserve">
+    <value>GroupBox15</value>
+  </data>
+  <data name="&gt;&gt;txtb_jTD.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;Label61.Name" xml:space="preserve">
+    <value>Label61</value>
+  </data>
+  <data name="&gt;&gt;Label61.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label61.Parent" xml:space="preserve">
+    <value>GroupBox15</value>
+  </data>
+  <data name="&gt;&gt;Label61.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;txtb_jTN.Name" xml:space="preserve">
+    <value>txtb_jTN</value>
+  </data>
+  <data name="&gt;&gt;txtb_jTN.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtb_jTN.Parent" xml:space="preserve">
+    <value>GroupBox15</value>
+  </data>
+  <data name="&gt;&gt;txtb_jTN.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="GroupBox15.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="GroupBox15.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Franklin Gothic Medium Cond, 12pt</value>
+  </data>
+  <data name="GroupBox15.Location" type="System.Drawing.Point, System.Drawing">
+    <value>601, 17</value>
+  </data>
+  <data name="GroupBox15.Size" type="System.Drawing.Size, System.Drawing">
+    <value>415, 85</value>
+  </data>
+  <data name="GroupBox15.TabIndex" type="System.Int32, mscorlib">
+    <value>67</value>
+  </data>
+  <data name="GroupBox15.Text" xml:space="preserve">
+    <value>TRANSACTION DETAILS</value>
+  </data>
+  <data name="&gt;&gt;GroupBox15.Name" xml:space="preserve">
+    <value>GroupBox15</value>
+  </data>
+  <data name="&gt;&gt;GroupBox15.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupBox15.Parent" xml:space="preserve">
+    <value>jh_dept</value>
+  </data>
+  <data name="&gt;&gt;GroupBox15.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
   <data name="Label60.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -8939,6 +8969,141 @@
   </data>
   <data name="&gt;&gt;txtb_jTN.ZOrder" xml:space="preserve">
     <value>3</value>
+  </data>
+  <data name="&gt;&gt;btn_jManage.Name" xml:space="preserve">
+    <value>btn_jManage</value>
+  </data>
+  <data name="&gt;&gt;btn_jManage.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuFlatButton, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btn_jManage.Parent" xml:space="preserve">
+    <value>GroupBox17</value>
+  </data>
+  <data name="&gt;&gt;btn_jManage.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;txtb_jStudID.Name" xml:space="preserve">
+    <value>txtb_jStudID</value>
+  </data>
+  <data name="&gt;&gt;txtb_jStudID.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtb_jStudID.Parent" xml:space="preserve">
+    <value>GroupBox17</value>
+  </data>
+  <data name="&gt;&gt;txtb_jStudID.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;Label75.Name" xml:space="preserve">
+    <value>Label75</value>
+  </data>
+  <data name="&gt;&gt;Label75.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label75.Parent" xml:space="preserve">
+    <value>GroupBox17</value>
+  </data>
+  <data name="&gt;&gt;Label75.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;txtb_jSY.Name" xml:space="preserve">
+    <value>txtb_jSY</value>
+  </data>
+  <data name="&gt;&gt;txtb_jSY.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtb_jSY.Parent" xml:space="preserve">
+    <value>GroupBox17</value>
+  </data>
+  <data name="&gt;&gt;txtb_jSY.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;Label76.Name" xml:space="preserve">
+    <value>Label76</value>
+  </data>
+  <data name="&gt;&gt;Label76.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label76.Parent" xml:space="preserve">
+    <value>GroupBox17</value>
+  </data>
+  <data name="&gt;&gt;Label76.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;Label77.Name" xml:space="preserve">
+    <value>Label77</value>
+  </data>
+  <data name="&gt;&gt;Label77.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label77.Parent" xml:space="preserve">
+    <value>GroupBox17</value>
+  </data>
+  <data name="&gt;&gt;Label77.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;txtb_jGL.Name" xml:space="preserve">
+    <value>txtb_jGL</value>
+  </data>
+  <data name="&gt;&gt;txtb_jGL.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtb_jGL.Parent" xml:space="preserve">
+    <value>GroupBox17</value>
+  </data>
+  <data name="&gt;&gt;txtb_jGL.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;Label78.Name" xml:space="preserve">
+    <value>Label78</value>
+  </data>
+  <data name="&gt;&gt;Label78.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label78.Parent" xml:space="preserve">
+    <value>GroupBox17</value>
+  </data>
+  <data name="&gt;&gt;Label78.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;txtb_jStudName.Name" xml:space="preserve">
+    <value>txtb_jStudName</value>
+  </data>
+  <data name="&gt;&gt;txtb_jStudName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtb_jStudName.Parent" xml:space="preserve">
+    <value>GroupBox17</value>
+  </data>
+  <data name="&gt;&gt;txtb_jStudName.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="GroupBox17.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Franklin Gothic Medium Cond, 12pt</value>
+  </data>
+  <data name="GroupBox17.Location" type="System.Drawing.Point, System.Drawing">
+    <value>21, 127</value>
+  </data>
+  <data name="GroupBox17.Size" type="System.Drawing.Size, System.Drawing">
+    <value>574, 169</value>
+  </data>
+  <data name="GroupBox17.TabIndex" type="System.Int32, mscorlib">
+    <value>64</value>
+  </data>
+  <data name="GroupBox17.Text" xml:space="preserve">
+    <value>STUDENT DETAILS</value>
+  </data>
+  <data name="&gt;&gt;GroupBox17.Name" xml:space="preserve">
+    <value>GroupBox17</value>
+  </data>
+  <data name="&gt;&gt;GroupBox17.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupBox17.Parent" xml:space="preserve">
+    <value>jh_dept</value>
+  </data>
+  <data name="&gt;&gt;GroupBox17.ZOrder" xml:space="preserve">
+    <value>7</value>
   </data>
   <data name="btn_jManage.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Right</value>
@@ -9192,6 +9357,93 @@
   <data name="&gt;&gt;txtb_jStudName.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
+  <data name="&gt;&gt;btn_jEnter.Name" xml:space="preserve">
+    <value>btn_jEnter</value>
+  </data>
+  <data name="&gt;&gt;btn_jEnter.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuFlatButton, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btn_jEnter.Parent" xml:space="preserve">
+    <value>GroupBox18</value>
+  </data>
+  <data name="&gt;&gt;btn_jEnter.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;cbo_jSearchBY.Name" xml:space="preserve">
+    <value>cbo_jSearchBY</value>
+  </data>
+  <data name="&gt;&gt;cbo_jSearchBY.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbo_jSearchBY.Parent" xml:space="preserve">
+    <value>GroupBox18</value>
+  </data>
+  <data name="&gt;&gt;cbo_jSearchBY.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;Label79.Name" xml:space="preserve">
+    <value>Label79</value>
+  </data>
+  <data name="&gt;&gt;Label79.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label79.Parent" xml:space="preserve">
+    <value>GroupBox18</value>
+  </data>
+  <data name="&gt;&gt;Label79.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;Label80.Name" xml:space="preserve">
+    <value>Label80</value>
+  </data>
+  <data name="&gt;&gt;Label80.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label80.Parent" xml:space="preserve">
+    <value>GroupBox18</value>
+  </data>
+  <data name="&gt;&gt;Label80.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;txtb_jSearch.Name" xml:space="preserve">
+    <value>txtb_jSearch</value>
+  </data>
+  <data name="&gt;&gt;txtb_jSearch.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtb_jSearch.Parent" xml:space="preserve">
+    <value>GroupBox18</value>
+  </data>
+  <data name="&gt;&gt;txtb_jSearch.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="GroupBox18.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Franklin Gothic Medium Cond, 12pt</value>
+  </data>
+  <data name="GroupBox18.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 17</value>
+  </data>
+  <data name="GroupBox18.Size" type="System.Drawing.Size, System.Drawing">
+    <value>584, 104</value>
+  </data>
+  <data name="GroupBox18.TabIndex" type="System.Int32, mscorlib">
+    <value>63</value>
+  </data>
+  <data name="GroupBox18.Text" xml:space="preserve">
+    <value>SEARCH FOR STUDENT</value>
+  </data>
+  <data name="&gt;&gt;GroupBox18.Name" xml:space="preserve">
+    <value>GroupBox18</value>
+  </data>
+  <data name="&gt;&gt;GroupBox18.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupBox18.Parent" xml:space="preserve">
+    <value>jh_dept</value>
+  </data>
+  <data name="&gt;&gt;GroupBox18.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
   <data name="btn_jEnter.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Right</value>
   </data>
@@ -9339,12 +9591,6 @@
   <data name="&gt;&gt;txtb_jSearch.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <metadata name="Print_Receipts.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="PrintDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>157, 17</value>
-  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -9521,18 +9767,6 @@
   </data>
   <data name="&gt;&gt;DataGridViewButtonColumn3.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewButtonColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Print_Receipts.Name" xml:space="preserve">
-    <value>Print_Receipts</value>
-  </data>
-  <data name="&gt;&gt;Print_Receipts.Type" xml:space="preserve">
-    <value>System.Drawing.Printing.PrintDocument, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="&gt;&gt;PrintDialog1.Name" xml:space="preserve">
-    <value>PrintDialog1</value>
-  </data>
-  <data name="&gt;&gt;PrintDialog1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PrintDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>frm_SPayments</value>

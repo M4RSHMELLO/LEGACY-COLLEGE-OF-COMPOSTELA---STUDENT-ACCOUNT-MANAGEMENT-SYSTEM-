@@ -22,206 +22,67 @@ Partial Class frm_colReports
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.btn_seniordept = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.btn_juniordept = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.btn_elemdept = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.btn_collDept = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.dp_dailyWeekly = New System.Windows.Forms.DateTimePicker()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.cbo_dailyweekly = New System.Windows.Forms.ComboBox()
         Me.txtb_totalFeesAmount = New System.Windows.Forms.TextBox()
         Me.Label16 = New System.Windows.Forms.Label()
-        Me.dg_coll_rpt = New System.Windows.Forms.DataGridView()
-        Me.tran_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.fees_date = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.fees_name = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.btn_printrev = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.fees_amnt = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.BunifuFlatButton1 = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.fees_name = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.fees_date = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.tran_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dg_coll_rpt = New System.Windows.Forms.DataGridView()
         Me.lbl_total = New System.Windows.Forms.Label()
-        Me.TblstudaccountBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Coll_ds = New LCC_SAMS_Project.coll_ds()
-        Me.Tbl_studaccountTableAdapter = New LCC_SAMS_Project.coll_dsTableAdapters.tbl_studaccountTableAdapter()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.lbl_titleReport = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.cbo_department = New System.Windows.Forms.ComboBox()
         Me.Panel1.SuspendLayout()
         CType(Me.dg_coll_rpt, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TblstudaccountBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Coll_ds, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
         '
-        Me.Panel1.Controls.Add(Me.btn_seniordept)
-        Me.Panel1.Controls.Add(Me.btn_juniordept)
-        Me.Panel1.Controls.Add(Me.btn_elemdept)
-        Me.Panel1.Controls.Add(Me.btn_collDept)
+        Me.Panel1.Controls.Add(Me.Label1)
+        Me.Panel1.Controls.Add(Me.dp_dailyWeekly)
         Me.Panel1.Controls.Add(Me.Label8)
         Me.Panel1.Controls.Add(Me.cbo_dailyweekly)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1154, 85)
+        Me.Panel1.Size = New System.Drawing.Size(1154, 76)
         Me.Panel1.TabIndex = 0
         '
-        'btn_seniordept
+        'Label1
         '
-        Me.btn_seniordept.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
-        Me.btn_seniordept.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.btn_seniordept.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btn_seniordept.BorderRadius = 0
-        Me.btn_seniordept.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.btn_seniordept.ButtonText = "Senior-High Dept"
-        Me.btn_seniordept.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_seniordept.DisabledColor = System.Drawing.Color.Gray
-        Me.btn_seniordept.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!)
-        Me.btn_seniordept.ForeColor = System.Drawing.Color.SeaGreen
-        Me.btn_seniordept.Iconcolor = System.Drawing.Color.Transparent
-        Me.btn_seniordept.Iconimage = Nothing
-        Me.btn_seniordept.Iconimage_right = Nothing
-        Me.btn_seniordept.Iconimage_right_Selected = Nothing
-        Me.btn_seniordept.Iconimage_Selected = Nothing
-        Me.btn_seniordept.IconMarginLeft = 0
-        Me.btn_seniordept.IconMarginRight = 0
-        Me.btn_seniordept.IconRightVisible = False
-        Me.btn_seniordept.IconRightZoom = 0R
-        Me.btn_seniordept.IconVisible = False
-        Me.btn_seniordept.IconZoom = 90.0R
-        Me.btn_seniordept.IsTab = False
-        Me.btn_seniordept.Location = New System.Drawing.Point(885, 24)
-        Me.btn_seniordept.Margin = New System.Windows.Forms.Padding(3, 8, 3, 8)
-        Me.btn_seniordept.Name = "btn_seniordept"
-        Me.btn_seniordept.Normalcolor = System.Drawing.SystemColors.ButtonFace
-        Me.btn_seniordept.OnHovercolor = System.Drawing.Color.Goldenrod
-        Me.btn_seniordept.OnHoverTextColor = System.Drawing.Color.White
-        Me.btn_seniordept.selected = False
-        Me.btn_seniordept.Size = New System.Drawing.Size(158, 33)
-        Me.btn_seniordept.TabIndex = 53
-        Me.btn_seniordept.Text = "Senior-High Dept"
-        Me.btn_seniordept.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.btn_seniordept.Textcolor = System.Drawing.Color.SeaGreen
-        Me.btn_seniordept.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 17.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label1.Location = New System.Drawing.Point(687, 22)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(125, 29)
+        Me.Label1.TabIndex = 54
+        Me.Label1.Text = "SELECT DATE"
         '
-        'btn_juniordept
+        'dp_dailyWeekly
         '
-        Me.btn_juniordept.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
-        Me.btn_juniordept.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.btn_juniordept.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btn_juniordept.BorderRadius = 0
-        Me.btn_juniordept.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.btn_juniordept.ButtonText = "Junior-High Dept"
-        Me.btn_juniordept.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_juniordept.DisabledColor = System.Drawing.Color.Gray
-        Me.btn_juniordept.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!)
-        Me.btn_juniordept.ForeColor = System.Drawing.Color.SeaGreen
-        Me.btn_juniordept.Iconcolor = System.Drawing.Color.Transparent
-        Me.btn_juniordept.Iconimage = Nothing
-        Me.btn_juniordept.Iconimage_right = Nothing
-        Me.btn_juniordept.Iconimage_right_Selected = Nothing
-        Me.btn_juniordept.Iconimage_Selected = Nothing
-        Me.btn_juniordept.IconMarginLeft = 0
-        Me.btn_juniordept.IconMarginRight = 0
-        Me.btn_juniordept.IconRightVisible = False
-        Me.btn_juniordept.IconRightZoom = 0R
-        Me.btn_juniordept.IconVisible = False
-        Me.btn_juniordept.IconZoom = 90.0R
-        Me.btn_juniordept.IsTab = False
-        Me.btn_juniordept.Location = New System.Drawing.Point(720, 24)
-        Me.btn_juniordept.Margin = New System.Windows.Forms.Padding(3, 8, 3, 8)
-        Me.btn_juniordept.Name = "btn_juniordept"
-        Me.btn_juniordept.Normalcolor = System.Drawing.SystemColors.ButtonFace
-        Me.btn_juniordept.OnHovercolor = System.Drawing.Color.Goldenrod
-        Me.btn_juniordept.OnHoverTextColor = System.Drawing.Color.White
-        Me.btn_juniordept.selected = False
-        Me.btn_juniordept.Size = New System.Drawing.Size(158, 33)
-        Me.btn_juniordept.TabIndex = 53
-        Me.btn_juniordept.Text = "Junior-High Dept"
-        Me.btn_juniordept.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.btn_juniordept.Textcolor = System.Drawing.Color.SeaGreen
-        Me.btn_juniordept.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        '
-        'btn_elemdept
-        '
-        Me.btn_elemdept.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
-        Me.btn_elemdept.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.btn_elemdept.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btn_elemdept.BorderRadius = 0
-        Me.btn_elemdept.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.btn_elemdept.ButtonText = "Elementary Dept"
-        Me.btn_elemdept.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_elemdept.DisabledColor = System.Drawing.Color.Gray
-        Me.btn_elemdept.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!)
-        Me.btn_elemdept.ForeColor = System.Drawing.Color.SeaGreen
-        Me.btn_elemdept.Iconcolor = System.Drawing.Color.Transparent
-        Me.btn_elemdept.Iconimage = Nothing
-        Me.btn_elemdept.Iconimage_right = Nothing
-        Me.btn_elemdept.Iconimage_right_Selected = Nothing
-        Me.btn_elemdept.Iconimage_Selected = Nothing
-        Me.btn_elemdept.IconMarginLeft = 0
-        Me.btn_elemdept.IconMarginRight = 0
-        Me.btn_elemdept.IconRightVisible = False
-        Me.btn_elemdept.IconRightZoom = 0R
-        Me.btn_elemdept.IconVisible = False
-        Me.btn_elemdept.IconZoom = 90.0R
-        Me.btn_elemdept.IsTab = False
-        Me.btn_elemdept.Location = New System.Drawing.Point(552, 24)
-        Me.btn_elemdept.Margin = New System.Windows.Forms.Padding(3, 8, 3, 8)
-        Me.btn_elemdept.Name = "btn_elemdept"
-        Me.btn_elemdept.Normalcolor = System.Drawing.SystemColors.ButtonFace
-        Me.btn_elemdept.OnHovercolor = System.Drawing.Color.Goldenrod
-        Me.btn_elemdept.OnHoverTextColor = System.Drawing.Color.White
-        Me.btn_elemdept.selected = False
-        Me.btn_elemdept.Size = New System.Drawing.Size(158, 33)
-        Me.btn_elemdept.TabIndex = 53
-        Me.btn_elemdept.Text = "Elementary Dept"
-        Me.btn_elemdept.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.btn_elemdept.Textcolor = System.Drawing.Color.SeaGreen
-        Me.btn_elemdept.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        '
-        'btn_collDept
-        '
-        Me.btn_collDept.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
-        Me.btn_collDept.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.btn_collDept.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btn_collDept.BorderRadius = 0
-        Me.btn_collDept.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.btn_collDept.ButtonText = "College Dept"
-        Me.btn_collDept.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_collDept.DisabledColor = System.Drawing.Color.Gray
-        Me.btn_collDept.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!)
-        Me.btn_collDept.ForeColor = System.Drawing.Color.SeaGreen
-        Me.btn_collDept.Iconcolor = System.Drawing.Color.Transparent
-        Me.btn_collDept.Iconimage = Nothing
-        Me.btn_collDept.Iconimage_right = Nothing
-        Me.btn_collDept.Iconimage_right_Selected = Nothing
-        Me.btn_collDept.Iconimage_Selected = Nothing
-        Me.btn_collDept.IconMarginLeft = 0
-        Me.btn_collDept.IconMarginRight = 0
-        Me.btn_collDept.IconRightVisible = False
-        Me.btn_collDept.IconRightZoom = 0R
-        Me.btn_collDept.IconVisible = False
-        Me.btn_collDept.IconZoom = 90.0R
-        Me.btn_collDept.IsTab = False
-        Me.btn_collDept.Location = New System.Drawing.Point(388, 24)
-        Me.btn_collDept.Margin = New System.Windows.Forms.Padding(3, 8, 3, 8)
-        Me.btn_collDept.Name = "btn_collDept"
-        Me.btn_collDept.Normalcolor = System.Drawing.SystemColors.ButtonFace
-        Me.btn_collDept.OnHovercolor = System.Drawing.Color.Goldenrod
-        Me.btn_collDept.OnHoverTextColor = System.Drawing.Color.White
-        Me.btn_collDept.selected = False
-        Me.btn_collDept.Size = New System.Drawing.Size(158, 33)
-        Me.btn_collDept.TabIndex = 53
-        Me.btn_collDept.Text = "College Dept"
-        Me.btn_collDept.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.btn_collDept.Textcolor = System.Drawing.Color.SeaGreen
-        Me.btn_collDept.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dp_dailyWeekly.CustomFormat = "MM-dd-yyyy"
+        Me.dp_dailyWeekly.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dp_dailyWeekly.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.dp_dailyWeekly.Location = New System.Drawing.Point(818, 22)
+        Me.dp_dailyWeekly.Name = "dp_dailyWeekly"
+        Me.dp_dailyWeekly.Size = New System.Drawing.Size(228, 30)
+        Me.dp_dailyWeekly.TabIndex = 56
         '
         'Label8
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 17.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label8.Location = New System.Drawing.Point(16, 28)
+        Me.Label8.Location = New System.Drawing.Point(103, 24)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(161, 29)
         Me.Label8.TabIndex = 25
@@ -233,10 +94,10 @@ Partial Class frm_colReports
         Me.cbo_dailyweekly.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbo_dailyweekly.FormattingEnabled = True
         Me.cbo_dailyweekly.Items.AddRange(New Object() {"DAILY", "WEEKLY"})
-        Me.cbo_dailyweekly.Location = New System.Drawing.Point(217, 24)
+        Me.cbo_dailyweekly.Location = New System.Drawing.Point(270, 20)
         Me.cbo_dailyweekly.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
         Me.cbo_dailyweekly.Name = "cbo_dailyweekly"
-        Me.cbo_dailyweekly.Size = New System.Drawing.Size(161, 33)
+        Me.cbo_dailyweekly.Size = New System.Drawing.Size(228, 33)
         Me.cbo_dailyweekly.TabIndex = 26
         '
         'txtb_totalFeesAmount
@@ -260,6 +121,68 @@ Partial Class frm_colReports
         Me.Label16.TabIndex = 22
         Me.Label16.Text = "TOTAL AMOUNT"
         '
+        'btn_printrev
+        '
+        Me.btn_printrev.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
+        Me.btn_printrev.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.btn_printrev.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btn_printrev.BorderRadius = 0
+        Me.btn_printrev.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.btn_printrev.ButtonText = "PRINT PREVIEW"
+        Me.btn_printrev.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_printrev.DisabledColor = System.Drawing.Color.Gray
+        Me.btn_printrev.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.btn_printrev.ForeColor = System.Drawing.Color.SeaGreen
+        Me.btn_printrev.Iconcolor = System.Drawing.Color.Transparent
+        Me.btn_printrev.Iconimage = Nothing
+        Me.btn_printrev.Iconimage_right = Nothing
+        Me.btn_printrev.Iconimage_right_Selected = Nothing
+        Me.btn_printrev.Iconimage_Selected = Nothing
+        Me.btn_printrev.IconMarginLeft = 0
+        Me.btn_printrev.IconMarginRight = 0
+        Me.btn_printrev.IconRightVisible = False
+        Me.btn_printrev.IconRightZoom = 0R
+        Me.btn_printrev.IconVisible = False
+        Me.btn_printrev.IconZoom = 90.0R
+        Me.btn_printrev.IsTab = False
+        Me.btn_printrev.Location = New System.Drawing.Point(108, 605)
+        Me.btn_printrev.Margin = New System.Windows.Forms.Padding(3, 8, 3, 8)
+        Me.btn_printrev.Name = "btn_printrev"
+        Me.btn_printrev.Normalcolor = System.Drawing.SystemColors.ButtonFace
+        Me.btn_printrev.OnHovercolor = System.Drawing.Color.Goldenrod
+        Me.btn_printrev.OnHoverTextColor = System.Drawing.Color.White
+        Me.btn_printrev.selected = False
+        Me.btn_printrev.Size = New System.Drawing.Size(180, 33)
+        Me.btn_printrev.TabIndex = 54
+        Me.btn_printrev.Text = "PRINT PREVIEW"
+        Me.btn_printrev.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btn_printrev.Textcolor = System.Drawing.Color.SeaGreen
+        Me.btn_printrev.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        '
+        'fees_amnt
+        '
+        Me.fees_amnt.HeaderText = "Amount"
+        Me.fees_amnt.Name = "fees_amnt"
+        Me.fees_amnt.ReadOnly = True
+        '
+        'fees_name
+        '
+        Me.fees_name.HeaderText = "Particulars"
+        Me.fees_name.Name = "fees_name"
+        Me.fees_name.ReadOnly = True
+        '
+        'fees_date
+        '
+        Me.fees_date.HeaderText = "Date"
+        Me.fees_date.Name = "fees_date"
+        Me.fees_date.ReadOnly = True
+        '
+        'tran_id
+        '
+        Me.tran_id.HeaderText = "Invoice No."
+        Me.tran_id.Name = "tran_id"
+        Me.tran_id.ReadOnly = True
+        '
         'dg_coll_rpt
         '
         Me.dg_coll_rpt.AllowUserToAddRows = False
@@ -268,111 +191,67 @@ Partial Class frm_colReports
         Me.dg_coll_rpt.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dg_coll_rpt.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dg_coll_rpt.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.tran_id, Me.fees_date, Me.fees_name, Me.fees_amnt})
-        Me.dg_coll_rpt.Location = New System.Drawing.Point(109, 138)
+        Me.dg_coll_rpt.Location = New System.Drawing.Point(108, 183)
         Me.dg_coll_rpt.Name = "dg_coll_rpt"
+        Me.dg_coll_rpt.ReadOnly = True
         Me.dg_coll_rpt.RowHeadersVisible = False
         Me.dg_coll_rpt.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dg_coll_rpt.Size = New System.Drawing.Size(922, 318)
+        Me.dg_coll_rpt.Size = New System.Drawing.Size(938, 411)
         Me.dg_coll_rpt.TabIndex = 25
-        '
-        'tran_id
-        '
-        Me.tran_id.HeaderText = "Invoice No."
-        Me.tran_id.Name = "tran_id"
-        '
-        'fees_date
-        '
-        Me.fees_date.HeaderText = "Date"
-        Me.fees_date.Name = "fees_date"
-        '
-        'fees_name
-        '
-        Me.fees_name.HeaderText = "Particulars"
-        Me.fees_name.Name = "fees_name"
-        '
-        'fees_amnt
-        '
-        Me.fees_amnt.HeaderText = "Amount"
-        Me.fees_amnt.Name = "fees_amnt"
-        '
-        'BunifuFlatButton1
-        '
-        Me.BunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
-        Me.BunifuFlatButton1.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.BunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BunifuFlatButton1.BorderRadius = 0
-        Me.BunifuFlatButton1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.BunifuFlatButton1.ButtonText = "PRINT"
-        Me.BunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray
-        Me.BunifuFlatButton1.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.BunifuFlatButton1.ForeColor = System.Drawing.Color.SeaGreen
-        Me.BunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent
-        Me.BunifuFlatButton1.Iconimage = Nothing
-        Me.BunifuFlatButton1.Iconimage_right = Nothing
-        Me.BunifuFlatButton1.Iconimage_right_Selected = Nothing
-        Me.BunifuFlatButton1.Iconimage_Selected = Nothing
-        Me.BunifuFlatButton1.IconMarginLeft = 0
-        Me.BunifuFlatButton1.IconMarginRight = 0
-        Me.BunifuFlatButton1.IconRightVisible = False
-        Me.BunifuFlatButton1.IconRightZoom = 0R
-        Me.BunifuFlatButton1.IconVisible = False
-        Me.BunifuFlatButton1.IconZoom = 90.0R
-        Me.BunifuFlatButton1.IsTab = False
-        Me.BunifuFlatButton1.Location = New System.Drawing.Point(851, 566)
-        Me.BunifuFlatButton1.Margin = New System.Windows.Forms.Padding(3, 8, 3, 8)
-        Me.BunifuFlatButton1.Name = "BunifuFlatButton1"
-        Me.BunifuFlatButton1.Normalcolor = System.Drawing.SystemColors.ButtonFace
-        Me.BunifuFlatButton1.OnHovercolor = System.Drawing.Color.Goldenrod
-        Me.BunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White
-        Me.BunifuFlatButton1.selected = False
-        Me.BunifuFlatButton1.Size = New System.Drawing.Size(180, 33)
-        Me.BunifuFlatButton1.TabIndex = 54
-        Me.BunifuFlatButton1.Text = "PRINT"
-        Me.BunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.BunifuFlatButton1.Textcolor = System.Drawing.Color.SeaGreen
-        Me.BunifuFlatButton1.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
         'lbl_total
         '
         Me.lbl_total.AutoSize = True
         Me.lbl_total.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_total.Location = New System.Drawing.Point(733, 474)
+        Me.lbl_total.Location = New System.Drawing.Point(753, 613)
         Me.lbl_total.Name = "lbl_total"
-        Me.lbl_total.Size = New System.Drawing.Size(62, 25)
+        Me.lbl_total.Size = New System.Drawing.Size(68, 25)
         Me.lbl_total.TabIndex = 55
-        Me.lbl_total.Text = "TOTAL"
+        Me.lbl_total.Text = "TOTAL:"
         '
-        'TblstudaccountBindingSource
+        'lbl_titleReport
         '
-        Me.TblstudaccountBindingSource.DataMember = "tbl_studaccount"
-        Me.TblstudaccountBindingSource.DataSource = Me.Coll_ds
+        Me.lbl_titleReport.AutoSize = True
+        Me.lbl_titleReport.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 17.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_titleReport.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.lbl_titleReport.Location = New System.Drawing.Point(103, 151)
+        Me.lbl_titleReport.Name = "lbl_titleReport"
+        Me.lbl_titleReport.Size = New System.Drawing.Size(321, 29)
+        Me.lbl_titleReport.TabIndex = 57
+        Me.lbl_titleReport.Text = "DAILY COLLECTION REPORTS FOR"
         '
-        'Coll_ds
+        'Label2
         '
-        Me.Coll_ds.DataSetName = "coll_ds"
-        Me.Coll_ds.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 17.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label2.Location = New System.Drawing.Point(339, 93)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(197, 29)
+        Me.Label2.TabIndex = 57
+        Me.Label2.Text = "SELECT DEPARTMENT"
         '
-        'Tbl_studaccountTableAdapter
+        'cbo_department
         '
-        Me.Tbl_studaccountTableAdapter.ClearBeforeFill = True
-        '
-        'DateTimePicker1
-        '
-        Me.DateTimePicker1.CustomFormat = "dddd"
-        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.DateTimePicker1.Location = New System.Drawing.Point(109, 106)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 26)
-        Me.DateTimePicker1.TabIndex = 56
+        Me.cbo_department.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbo_department.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbo_department.FormattingEnabled = True
+        Me.cbo_department.Items.AddRange(New Object() {"College Dept.", "Elementary Dept.", "Senior-High Dept", "Junior-High Dept"})
+        Me.cbo_department.Location = New System.Drawing.Point(542, 89)
+        Me.cbo_department.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
+        Me.cbo_department.Name = "cbo_department"
+        Me.cbo_department.Size = New System.Drawing.Size(274, 33)
+        Me.cbo_department.TabIndex = 58
         '
         'frm_colReports
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 21.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.Controls.Add(Me.DateTimePicker1)
+        Me.Controls.Add(Me.cbo_department)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.lbl_titleReport)
         Me.Controls.Add(Me.lbl_total)
-        Me.Controls.Add(Me.BunifuFlatButton1)
+        Me.Controls.Add(Me.btn_printrev)
         Me.Controls.Add(Me.dg_coll_rpt)
         Me.Controls.Add(Me.txtb_totalFeesAmount)
         Me.Controls.Add(Me.Label16)
@@ -384,8 +263,6 @@ Partial Class frm_colReports
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.dg_coll_rpt, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TblstudaccountBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Coll_ds, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -393,22 +270,18 @@ Partial Class frm_colReports
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents cbo_dailyweekly As System.Windows.Forms.ComboBox
-    Friend WithEvents btn_seniordept As Bunifu.Framework.UI.BunifuFlatButton
-    Friend WithEvents btn_juniordept As Bunifu.Framework.UI.BunifuFlatButton
-    Friend WithEvents btn_elemdept As Bunifu.Framework.UI.BunifuFlatButton
-    Friend WithEvents btn_collDept As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents txtb_totalFeesAmount As System.Windows.Forms.TextBox
     Friend WithEvents Label16 As System.Windows.Forms.Label
-    Friend WithEvents CrystalReportViewer1 As CrystalDecisions.Windows.Forms.CrystalReportViewer
-    Friend WithEvents dg_coll_rpt As DataGridView
-    Friend WithEvents BunifuFlatButton1 As Bunifu.Framework.UI.BunifuFlatButton
-    Friend WithEvents lbl_total As Label
-    Friend WithEvents tran_id As DataGridViewTextBoxColumn
-    Friend WithEvents fees_date As DataGridViewTextBoxColumn
-    Friend WithEvents fees_name As DataGridViewTextBoxColumn
+    Friend WithEvents btn_printrev As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents dp_dailyWeekly As DateTimePicker
     Friend WithEvents fees_amnt As DataGridViewTextBoxColumn
-    Friend WithEvents TblstudaccountBindingSource As BindingSource
-    Friend WithEvents Coll_ds As coll_ds
-    Friend WithEvents Tbl_studaccountTableAdapter As coll_dsTableAdapters.tbl_studaccountTableAdapter
-    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents fees_name As DataGridViewTextBoxColumn
+    Friend WithEvents fees_date As DataGridViewTextBoxColumn
+    Friend WithEvents tran_id As DataGridViewTextBoxColumn
+    Friend WithEvents dg_coll_rpt As DataGridView
+    Friend WithEvents lbl_total As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents lbl_titleReport As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents cbo_department As ComboBox
 End Class

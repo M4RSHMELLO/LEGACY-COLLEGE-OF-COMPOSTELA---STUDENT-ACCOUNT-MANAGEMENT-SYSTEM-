@@ -438,7 +438,6 @@ Partial Public Class coll_ds
             Me.columnfees_name = New Global.System.Data.DataColumn("fees_name", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnfees_name)
             Me.columnfees_name.AllowDBNull = false
-            Me.columnfees_name.MaxLength = 45
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -727,13 +726,13 @@ Namespace coll_dsTableAdapters
     Partial Public Class tbl_studaccountTableAdapter
         Inherits Global.System.ComponentModel.Component
         
-        Private WithEvents _adapter As Global.MySql.Data.MySqlClient.MySqlDataAdapter
+        Private WithEvents _adapter As Global.Devart.Data.MySql.MySqlDataAdapter
         
-        Private _connection As Global.MySql.Data.MySqlClient.MySqlConnection
+        Private _connection As Global.Devart.Data.MySql.MySqlConnection
         
-        Private _transaction As Global.MySql.Data.MySqlClient.MySqlTransaction
+        Private _transaction As Global.System.Data.Common.DbTransaction
         
-        Private _commandCollection() As Global.MySql.Data.MySqlClient.MySqlCommand
+        Private _commandCollection() As Global.Devart.Data.MySql.MySqlCommand
         
         Private _clearBeforeFill As Boolean
         
@@ -746,7 +745,7 @@ Namespace coll_dsTableAdapters
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Protected Friend ReadOnly Property Adapter() As Global.MySql.Data.MySqlClient.MySqlDataAdapter
+        Protected Friend ReadOnly Property Adapter() As Global.Devart.Data.MySql.MySqlDataAdapter
             Get
                 If (Me._adapter Is Nothing) Then
                     Me.InitAdapter
@@ -757,7 +756,7 @@ Namespace coll_dsTableAdapters
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Friend Property Connection() As Global.MySql.Data.MySqlClient.MySqlConnection
+        Friend Property Connection() As Global.Devart.Data.MySql.MySqlConnection
             Get
                 If (Me._connection Is Nothing) Then
                     Me.InitConnection
@@ -778,7 +777,7 @@ Namespace coll_dsTableAdapters
                 Dim i As Integer = 0
                 Do While (i < Me.CommandCollection.Length)
                     If (Not (Me.CommandCollection(i)) Is Nothing) Then
-                        CType(Me.CommandCollection(i),Global.MySql.Data.MySqlClient.MySqlCommand).Connection = value
+                        CType(Me.CommandCollection(i),Global.Devart.Data.MySql.MySqlCommand).Connection = value
                     End If
                     i = (i + 1)
                 Loop
@@ -787,7 +786,7 @@ Namespace coll_dsTableAdapters
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Friend Property Transaction() As Global.MySql.Data.MySqlClient.MySqlTransaction
+        Friend Property Transaction() As Global.System.Data.Common.DbTransaction
             Get
                 Return Me._transaction
             End Get
@@ -815,7 +814,7 @@ Namespace coll_dsTableAdapters
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Protected ReadOnly Property CommandCollection() As Global.MySql.Data.MySqlClient.MySqlCommand()
+        Protected ReadOnly Property CommandCollection() As Global.Devart.Data.MySql.MySqlCommand()
             Get
                 If (Me._commandCollection Is Nothing) Then
                     Me.InitCommandCollection
@@ -838,7 +837,7 @@ Namespace coll_dsTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitAdapter()
-            Me._adapter = New Global.MySql.Data.MySqlClient.MySqlDataAdapter()
+            Me._adapter = New Global.Devart.Data.MySql.MySqlDataAdapter()
             Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
             tableMapping.SourceTable = "Table"
             tableMapping.DataSetTable = "tbl_studaccount"
@@ -852,19 +851,19 @@ Namespace coll_dsTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitConnection()
-            Me._connection = New Global.MySql.Data.MySqlClient.MySqlConnection()
-            Me._connection.ConnectionString = Global.LCC_SAMS_Project.My.MySettings.Default.db_connection
+            Me._connection = New Global.Devart.Data.MySql.MySqlConnection()
+            Me._connection.ConnectionString = Global.LCC_SAMS_Project.My.MySettings.Default.db_lccsams_connection
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.MySql.Data.MySqlClient.MySqlCommand(0) {}
-            Me._commandCollection(0) = New Global.MySql.Data.MySqlClient.MySqlCommand()
+            Me._commandCollection = New Global.Devart.Data.MySql.MySqlCommand(0) {}
+            Me._commandCollection(0) = New Global.Devart.Data.MySql.MySqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "Select sa.stdacct_tN,sa.stdacct_tDate,cf.fees_name,sa.stdacct_tAmount from tbl_st"& _ 
-                "udaccount sa inner join tbl_coll_fees cf on cf.fees_id=sa.stdacct_tName    order"& _ 
-                " by sa.stdacct_tDate desc"
+                "udaccount sa inner join tbl_coll_fees cf on cf.fees_id=sa.stdacct_tName  order b"& _ 
+                "y sa.stdacct_tDate asc"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         

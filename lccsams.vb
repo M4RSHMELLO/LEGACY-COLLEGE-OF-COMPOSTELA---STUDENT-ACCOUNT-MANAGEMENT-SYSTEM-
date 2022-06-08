@@ -130,7 +130,7 @@ Module lccsams
             dbConn.Close()
         End Try
     End Sub
-    Public rpt As New college_reports
+
     Public Sub _displayToReports(ByVal sql As String)
         Try
 
@@ -138,7 +138,7 @@ Module lccsams
             da = New MySqlDataAdapter(sql, dbConn)
             dt = New DataTable
             da.Fill(dt)
-            rpt.SetDataSource(dt)
+
 
         Catch ex As Exception
             erromessage("error 103: Display Record" & ex.Message)

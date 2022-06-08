@@ -1228,7 +1228,7 @@ Public Class frm_SPayments
 
 
 
-    Private Sub Print_Receipts_PrintPage(sender As Object, e As Printing.PrintPageEventArgs) Handles Print_Receipts.PrintPage
+    Private Sub Print_Receipts_PrintPage(sender As Object, e As Printing.PrintPageEventArgs)
         'Using Bm As New Bitmap(Me.pnl_receipts.Width)
     End Sub
 

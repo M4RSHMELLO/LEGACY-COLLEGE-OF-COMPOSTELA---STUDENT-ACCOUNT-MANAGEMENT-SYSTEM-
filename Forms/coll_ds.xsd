@@ -4,15 +4,15 @@
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="db_connection" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="db_connection (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.LCC_SAMS_Project.My.MySettings.GlobalReference.Default.db_connection" Provider="MySql.Data.MySqlClient" />
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="db_lccsams_connection" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="db_lccsams_connection (MySettings)" PropertyReference="ApplicationSettings.LCC_SAMS_Project.My.MySettings.GlobalReference.Default.db_lccsams_connection" Provider="Devart.Data.MySql" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tbl_studaccountTableAdapter" GeneratorDataComponentClassName="tbl_studaccountTableAdapter" Name="tbl_studaccount" UserDataComponentName="tbl_studaccountTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="db_connection (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="db_lccsams_connection (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>Select sa.stdacct_tN,sa.stdacct_tDate,cf.fees_name,sa.stdacct_tAmount from tbl_studaccount sa inner join tbl_coll_fees cf on cf.fees_id=sa.stdacct_tName    order by sa.stdacct_tDate desc</CommandText>
+                    <CommandText>Select sa.stdacct_tN,sa.stdacct_tDate,cf.fees_name,sa.stdacct_tAmount from tbl_studaccount sa inner join tbl_coll_fees cf on cf.fees_id=sa.stdacct_tName  order by sa.stdacct_tDate asc</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -40,13 +40,7 @@
               <xs:element name="stdacct_tN" msprop:Generator_ColumnVarNameInTable="columnstdacct_tN" msprop:Generator_ColumnPropNameInRow="stdacct_tN" msprop:Generator_ColumnPropNameInTable="stdacct_tNColumn" msprop:Generator_UserColumnName="stdacct_tN" type="xs:int" minOccurs="0" />
               <xs:element name="stdacct_tDate" msprop:Generator_ColumnVarNameInTable="columnstdacct_tDate" msprop:Generator_ColumnPropNameInRow="stdacct_tDate" msprop:Generator_ColumnPropNameInTable="stdacct_tDateColumn" msprop:Generator_UserColumnName="stdacct_tDate" type="xs:dateTime" minOccurs="0" />
               <xs:element name="stdacct_tAmount" msprop:Generator_ColumnVarNameInTable="columnstdacct_tAmount" msprop:Generator_ColumnPropNameInRow="stdacct_tAmount" msprop:Generator_ColumnPropNameInTable="stdacct_tAmountColumn" msprop:Generator_UserColumnName="stdacct_tAmount" type="xs:double" minOccurs="0" />
-              <xs:element name="fees_name" msprop:Generator_ColumnVarNameInTable="columnfees_name" msprop:Generator_ColumnPropNameInRow="fees_name" msprop:Generator_ColumnPropNameInTable="fees_nameColumn" msprop:Generator_UserColumnName="fees_name">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="45" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
+              <xs:element name="fees_name" msprop:Generator_ColumnVarNameInTable="columnfees_name" msprop:Generator_ColumnPropNameInRow="fees_name" msprop:Generator_ColumnPropNameInTable="fees_nameColumn" msprop:Generator_UserColumnName="fees_name" type="xs:string" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
