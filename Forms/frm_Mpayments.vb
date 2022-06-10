@@ -12,18 +12,22 @@
         'Sort by
 
         _loadToCombobox(slctSY, cbo_SortSY)
+
+
         _loadToCombobox(slctC, cbo_SortCrs)
         _loadToCombobox(slctS, cbo_SortSem)
         _loadToCombobox(slctYL, cbo_SortYL)
+
+        cbo_SortSY.SelectedIndex = -1
         cbo_SortCrs.SelectedIndex = -1
         cbo_SortSem.SelectedIndex = -1
         cbo_SortYL.SelectedIndex = -1
     End Sub
 
     Dim a As Integer = 0
-
+    Dim cfees_id As Integer
     Private Sub btn_add_Click(sender As Object, e As EventArgs) Handles btn_add.Click
-        If MessageBox.Show("", "Do You want to add new tertiary fees", MessageBoxButtons.YesNo) = DialogResult.Yes Then
+        If dlg_addfees.ShowDialog() = DialogResult.OK Then
             cbo_yl.Enabled = True
             cbo_course.Enabled = True
             cbo_MSY.Enabled = True
@@ -48,6 +52,8 @@
     End Sub
     Dim tuition_rpu_id As Integer = 0
     Private Sub btn_save_Click(sender As Object, e As EventArgs) Handles btn_save.Click
+
+
         Dim sFeesR As String = "select fees_id,fees_name,fees_amount,tuition_rpu_id from tbl_coll_fees where sy_id='" & cbo_MSY.SelectedValue & "' and yl_id='" & cbo_yl.SelectedValue & "' and sem_id='" & cbo_MS.SelectedValue & "' and crs_id='" & cbo_course.SelectedValue & "' "
         Dim querry1 = "Select tuition_rpu_id from tbl_coll_fees where sy_id='" & cbo_MSY.SelectedValue & "' and yl_id='" & cbo_yl.SelectedValue & "' and sem_id='" & cbo_MS.SelectedValue & "' and crs_id='" & cbo_course.SelectedValue & "'and tuition_rpu_id='" & 1 & "'"
 
@@ -60,7 +66,7 @@
                 End If
                 Try
                     dbConn.Open()
-                    sqlCommand = New MySql.Data.MySqlClient.MySqlCommand(querry1, dbConn)
+                    sqlCommand = New MySqlCommand(querry1, dbConn)
                     dr = sqlCommand.ExecuteReader
                     If dr.HasRows And checkb_tuitionfee_indicator.Checked = True Then
                         MessageBox.Show("Tuition fee is already exist!")
@@ -69,18 +75,21 @@
                         dbConn.Close()
                         _dbConnection("db_lccsams")
                         _insertData("insert into tbl_coll_fees values (0,'" & txtb_CollName.Text & "','" & txtb_collAmnt.Text & "','" & cbo_MSY.SelectedValue & "','" & cbo_yl.SelectedValue & "','" & cbo_MS.SelectedValue & "','" & cbo_course.SelectedValue & "','" & tuition_rpu_id & "')")
-                        btn_save.Enabled = False
-                        btn_add.Enabled = True
-                        btn_update.Enabled = True
-                        btn_cancel.Enabled = False
-                        _displayRecords(sFeesR, dg_pRecords)
-                        cbo_course.Enabled = False
-                        cbo_MSY.Enabled = False
-                        cbo_MS.Enabled = False
-                        cbo_yl.Enabled = False
-                        txtb_CollName.Enabled = False
-                        txtb_collAmnt.Enabled = False
-                        dg_pRecords.Enabled = True
+                        If dlg_savesuccessfully.ShowDialog = DialogResult.OK Then
+                            btn_save.Enabled = False
+                            btn_add.Enabled = True
+                            btn_update.Enabled = True
+                            btn_cancel.Enabled = False
+                            _displayRecords(sFeesR, dg_pRecords)
+                            cbo_course.Enabled = False
+                            cbo_MSY.Enabled = False
+                            cbo_MS.Enabled = False
+                            cbo_yl.Enabled = False
+                            txtb_CollName.Enabled = False
+                            txtb_collAmnt.Enabled = False
+                            dg_pRecords.Enabled = True
+                        End If
+
                     End If
                 Catch ex As Exception
                     MessageBox.Show("Error: ", ex.Message)
@@ -90,14 +99,20 @@
 
             Case 2
                 _dbConnection("db_lccsams")
-                _updateData("update tbl_coll_fees set fees_name='" & txtb_CollName.Text & "',fees_amount='" & txtb_collAmnt.Text & "', ")
-                btn_update.Enabled = True
-                btn_save.Enabled = False
-                _displayRecords(sFeesR, dg_pRecords)
+                _updateData("update tbl_coll_fees set fees_name='" & txtb_CollName.Text & "',fees_amount='" & txtb_collAmnt.Text & "' where fees_id='" & cfees_id & "'  ")
+                UpdatedSuccessfully.ShowDialog()
+                If UpdatedSuccessfully.DialogResult = DialogResult.OK Then
+                    btn_update.Enabled = True
+                    btn_cancel.Enabled = False
+                    btn_save.Enabled = False
+                    _displayRecords(sFeesR, dg_pRecords)
+                End If
+
+
         End Select
     End Sub
     Private Sub btn_update_Click(sender As Object, e As EventArgs) Handles btn_update.Click
-        If MessageBox.Show("", "Do You want to Update this fees?", MessageBoxButtons.YesNo) = DialogResult.Yes Then
+        If dlg_updatefees.ShowDialog() = DialogResult.OK Then
             a = 2
             'cbo_yl.Enabled = True
             'cbo_course.Enabled = True
@@ -124,8 +139,10 @@
                 cbo_MS.Text = cbo_SortSem.Text
                 cbo_yl.Text = cbo_SortYL.Text
                 cbo_course.Text = cbo_SortCrs.Text
+
                 txtb_CollName.Text = .Item("fees_name", s).Value.ToString
                 txtb_collAmnt.Text = .Item("fees_amount", s).Value.ToString
+                cfees_id = .Item(0, s).Value.ToString
                 If .Item("rpu_id", s).Value = 1 Then
                     checkb_tuitionfee_indicator.Checked = True
                 Else
@@ -147,25 +164,23 @@
 
     Private Sub cbo_SortCrs_SelectionChangeCommitted(sender As Object, e As EventArgs) Handles cbo_SortCrs.SelectionChangeCommitted
         Try
+
+            Dim cFeesR_sort As String = "select fees_id,fees_name, fees_amount, tuition_rpu_id from tbl_coll_fees  where sy_id='" & Integer.Parse(cbo_eSortSy.SelectedValue) & "' and sem_id='" & Integer.Parse(cbo_SortSem.SelectedValue) & "' and yl_id='" & Integer.Parse(cbo_SortYL.SelectedValue) & "' and  crs_id='" & Integer.Parse(cbo_SortCrs.SelectedValue) & "'"
             _dbConnection("db_lccsams")
-            Dim cFeesR_sort As String = "select fees_id,fees_name, fees_amount, tuition_rpu_id from tbl_coll_fees where sy_id='" & cbo_SortSY.SelectedValue & "' and sem_id='" & cbo_SortSem.SelectedValue & "' and yl_id='" & cbo_SortYL.SelectedValue & "' and  crs_id='" & cbo_SortCrs.SelectedValue & "'"
             cbo_MS.SelectedIndex = -1
             cbo_yl.SelectedIndex = -1
             cbo_course.SelectedIndex = -1
             txtb_CollName.Clear()
             txtb_collAmnt.Clear()
             _displayRecords(cFeesR_sort, dg_pRecords)
-
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
 
     End Sub
 
-    Dim departmentChange As Integer = 0
     Private Sub TabControl1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles TabControl1.SelectedIndexChanged
-        departmentChange = TabControl1.SelectedIndex
-        Select Case departmentChange
+        Select Case TabControl1.SelectedIndex
             Case 0
                 _dbConnection("db_lccsams")
                 _loadToCombobox(slctC, cbo_course)
@@ -207,12 +222,22 @@
         cbo_MS.SelectedIndex = -1
         cbo_yl.SelectedIndex = -1
         cbo_course.SelectedIndex = -1
+
         txtb_CollName.Clear()
         txtb_collAmnt.Clear()
         checkb_tuitionfee_indicator.Checked = False
         btn_add.Enabled = True
         btn_update.Enabled = True
         dg_pRecords.Enabled = True
+
+        txtb_CollName.Enabled = False
+        txtb_collAmnt.Enabled = False
+        cbo_yl.Enabled = False
+        cbo_course.Enabled = False
+        cbo_MSY.Enabled = False
+        cbo_MS.Enabled = False
+
+        btn_save.Enabled = False
     End Sub
 
 
@@ -271,26 +296,45 @@
 
                 _dbConnection("db_lccsams")
                 _insertData("insert into tbl_elem_fees values (0,'" & txtb_eFeeName.Text & "','" & txtb_eFeeAmnt.Text & "','" & cbo_eSY.SelectedValue & "')")
-                _displayRecords(efeesR, dg_eFeesRec)
-                dlg_savesuccessfully.ShowDialog()
+
+                If dlg_savesuccessfully.ShowDialog() = dlg_savesuccessfully.DialogResult.OK Then
+                    _displayRecords(efeesR, dg_eFeesRec)
+                    btn_eAdd.Enabled = True
+                    btn_eUpdate.Enabled = True
+                    btn_eCancel.Enabled = False
+                    btn_eSave.Enabled = False
+                    dg_eFeesRec.Enabled = True
+                    cbo_eSY.Enabled = False
+                    txtb_eFeeName.Enabled = False
+                    txtb_eFeeAmnt.Enabled = False
+                End If
             Case 2
                 _dbConnection("db_lccsams")
-                _updateData("update tbl_elem_fees set efees_name='" & txtb_eFeeName.Text & "',efees_amount= '" & txtb_eFeeName.Text & "' where efees_id='" & efees_id & "' ")
+                _updateData("update tbl_elem_fees set efees_name='" & txtb_eFeeName.Text & "',efees_amount= '" & txtb_eFeeAmnt.Text & "' where efees_id='" & efees_id & "' ")
 
-                _displayRecords(efeesR, dg_eFeesRec)
-                UpdatedSuccessfully.ShowDialog()
+
+                If UpdatedSuccessfully.ShowDialog() = UpdatedSuccessfully.DialogResult.OK Then
+                    _displayRecords(efeesR, dg_eFeesRec)
+                    btn_eAdd.Enabled = True
+                    btn_eUpdate.Enabled = True
+                    btn_eCancel.Enabled = False
+                    btn_eSave.Enabled = False
+                    dg_eFeesRec.Enabled = True
+                    cbo_eSY.Enabled = False
+                    txtb_eFeeName.Enabled = False
+                    txtb_eFeeAmnt.Enabled = False
+
+                End If
+
+
         End Select
-        btn_eAdd.Enabled = True
-        btn_eUpdate.Enabled = True
-        btn_eCancel.Enabled = False
-        btn_eSave.Enabled = False
-        dg_eFeesRec.Enabled = True
-        cbo_eSY.Enabled = False
-        txtb_eFeeName.Enabled = False
-        txtb_eFeeAmnt.Enabled = False
+
+
+
     End Sub
 
     Private Sub cbo_eSortSy_SelectionChangeCommitted(sender As Object, e As EventArgs) Handles cbo_eSortSy.SelectionChangeCommitted
+
         Try
             Dim eFeesR_sort As String = "select efees_id,efees_name, efees_amount from tbl_elem_fees where esy_id='" & cbo_eSortSy.SelectedValue & "' "
             _dbConnection("db_lccsams")
@@ -534,5 +578,6 @@
 
         End Try
     End Sub
+
 
 End Class

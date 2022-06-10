@@ -198,10 +198,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
-    <Compile Include="db_lccsamsDataSet.Designer.vb">
+    <Compile Include="dlg_addfees.designer.vb">
+      <DependentUpon>dlg_addfees.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlg_addfees.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlg_updatefees.designer.vb">
+      <DependentUpon>dlg_updatefees.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlg_updatefees.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="elem_ds.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>db_lccsamsDataSet.xsd</DependentUpon>
+      <DependentUpon>elem_ds.xsd</DependentUpon>
     </Compile>
     <Compile Include="Forms\coll_ds.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -328,6 +340,17 @@
     <Compile Include="Forms\frm_slists.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="junior_ds.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>junior_ds.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="print_elemPreview.Designer.vb">
+      <DependentUpon>print_elemPreview.vb</DependentUpon>
+    </Compile>
+    <Compile Include="print_elemPreview.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="print_preview.Designer.vb">
       <DependentUpon>print_preview.vb</DependentUpon>
     </Compile>
@@ -412,6 +435,11 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="senior_ds.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>senior_ds.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Settings.vb" />
     <Compile Include="UpdatedSuccessfully.designer.vb">
       <DependentUpon>UpdatedSuccessfully.vb</DependentUpon>
@@ -423,6 +451,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlg_addfees.resx">
+      <DependentUpon>dlg_addfees.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="dlg_addnewsy.resx">
       <DependentUpon>dlg_addnewsy.vb</DependentUpon>
@@ -463,6 +494,9 @@
     <EmbeddedResource Include="dlg_updateCourse.resx">
       <DependentUpon>dlg_updateCourse.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="dlg_updatefees.resx">
+      <DependentUpon>dlg_updatefees.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="dlg_updateGradeLevel.resx">
       <DependentUpon>dlg_updateGradeLevel.vb</DependentUpon>
     </EmbeddedResource>
@@ -480,6 +514,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frm_slists.resx">
       <DependentUpon>frm_slists.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="print_elemPreview.resx">
+      <DependentUpon>print_elemPreview.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="print_preview.resx">
       <DependentUpon>print_preview.vb</DependentUpon>
@@ -522,21 +559,23 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Report1.rdlc" />
     <EmbeddedResource Include="Report2.rdlc" />
+    <EmbeddedResource Include="Report3.rdlc" />
+    <EmbeddedResource Include="Report4.rdlc" />
     <EmbeddedResource Include="UpdatedSuccessfully.resx">
       <DependentUpon>UpdatedSuccessfully.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="db_lccsamsDataSet.xsc">
-      <DependentUpon>db_lccsamsDataSet.xsd</DependentUpon>
+    <None Include="elem_ds.xsc">
+      <DependentUpon>elem_ds.xsd</DependentUpon>
     </None>
-    <None Include="db_lccsamsDataSet.xsd">
+    <None Include="elem_ds.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>db_lccsamsDataSet.Designer.vb</LastGenOutput>
+      <LastGenOutput>elem_ds.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="db_lccsamsDataSet.xss">
-      <DependentUpon>db_lccsamsDataSet.xsd</DependentUpon>
+    <None Include="elem_ds.xss">
+      <DependentUpon>elem_ds.xsd</DependentUpon>
     </None>
     <None Include="Forms\coll_ds.xsc">
       <DependentUpon>coll_ds.xsd</DependentUpon>
@@ -548,6 +587,17 @@
     </None>
     <None Include="Forms\coll_ds.xss">
       <DependentUpon>coll_ds.xsd</DependentUpon>
+    </None>
+    <None Include="junior_ds.xsc">
+      <DependentUpon>junior_ds.xsd</DependentUpon>
+    </None>
+    <None Include="junior_ds.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>junior_ds.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="junior_ds.xss">
+      <DependentUpon>junior_ds.xsd</DependentUpon>
     </None>
     <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
@@ -621,6 +671,17 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+    <None Include="senior_ds.xsc">
+      <DependentUpon>senior_ds.xsd</DependentUpon>
+    </None>
+    <None Include="senior_ds.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>senior_ds.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="senior_ds.xss">
+      <DependentUpon>senior_ds.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -746,10 +807,12 @@
     <None Include="Resources\achup.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\updatefeesicon.png" />
     <None Include="Resources\loginerroricon.png" />
     <None Include="Resources\addstudentsicon.png" />
     <None Include="Resources\dlg_existed.png" />
     <None Include="Resources\dlg_logouticon.png" />
+    <None Include="Resources\addfeesicon.png" />
     <Content Include="Resources\dlg_studentsupdatedsuccessfully.png" />
     <None Include="Resources\dlg_studentsupdatedsuccessfully1.png" />
     <None Include="Resources\fillupform.png" />

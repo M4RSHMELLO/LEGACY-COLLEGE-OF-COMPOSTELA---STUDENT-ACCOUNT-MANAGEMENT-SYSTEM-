@@ -22,14 +22,14 @@ Partial Class frm_slists
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.college_dept = New System.Windows.Forms.TabPage()
         Me.Panel2 = New System.Windows.Forms.Panel()
@@ -329,20 +329,20 @@ Partial Class frm_slists
         Me.dg_studR.AllowUserToAddRows = False
         Me.dg_studR.AllowUserToDeleteRows = False
         Me.dg_studR.AllowUserToResizeRows = False
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.dg_studR.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.dg_studR.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle9
         Me.dg_studR.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dg_studR.BackgroundColor = System.Drawing.Color.Gainsboro
         Me.dg_studR.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dg_studR.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dg_studR.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle10.BackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle10.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle10.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dg_studR.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle10
         Me.dg_studR.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dg_studR.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.s_id, Me.s_fName, Me.s_lName, Me.s_Midi, Me.sy_id, Me.sem_id, Me.yl_id, Me.crs_id})
         Me.dg_studR.Dock = System.Windows.Forms.DockStyle.Fill
@@ -703,6 +703,7 @@ Partial Class frm_slists
         'txtb_studFname
         '
         Me.txtb_studFname.BackColor = System.Drawing.Color.White
+        Me.txtb_studFname.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtb_studFname.Enabled = False
         Me.txtb_studFname.Location = New System.Drawing.Point(117, 61)
         Me.txtb_studFname.Name = "txtb_studFname"
@@ -712,6 +713,7 @@ Partial Class frm_slists
         'txtb_studMI
         '
         Me.txtb_studMI.BackColor = System.Drawing.Color.White
+        Me.txtb_studMI.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtb_studMI.Enabled = False
         Me.txtb_studMI.Location = New System.Drawing.Point(117, 127)
         Me.txtb_studMI.Name = "txtb_studMI"
@@ -730,6 +732,7 @@ Partial Class frm_slists
         'txtb_studLname
         '
         Me.txtb_studLname.BackColor = System.Drawing.Color.White
+        Me.txtb_studLname.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtb_studLname.Enabled = False
         Me.txtb_studLname.Location = New System.Drawing.Point(117, 95)
         Me.txtb_studLname.Name = "txtb_studLname"
@@ -798,6 +801,7 @@ Partial Class frm_slists
         'txtb_studId
         '
         Me.txtb_studId.BackColor = System.Drawing.Color.White
+        Me.txtb_studId.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtb_studId.Enabled = False
         Me.txtb_studId.Location = New System.Drawing.Point(117, 24)
         Me.txtb_studId.Name = "txtb_studId"
@@ -892,6 +896,7 @@ Partial Class frm_slists
         'txtb_Search
         '
         Me.txtb_Search.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
+        Me.txtb_Search.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtb_Search.Location = New System.Drawing.Point(497, 20)
         Me.txtb_Search.Name = "txtb_Search"
         Me.txtb_Search.Size = New System.Drawing.Size(425, 30)
@@ -999,20 +1004,20 @@ Partial Class frm_slists
         Me.dg_eStudRecords.AllowUserToAddRows = False
         Me.dg_eStudRecords.AllowUserToDeleteRows = False
         Me.dg_eStudRecords.AllowUserToResizeRows = False
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.dg_eStudRecords.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.dg_eStudRecords.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle11
         Me.dg_eStudRecords.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dg_eStudRecords.BackgroundColor = System.Drawing.Color.Gainsboro
         Me.dg_eStudRecords.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dg_eStudRecords.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dg_eStudRecords.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle12.BackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle12.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle12.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dg_eStudRecords.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle12
         Me.dg_eStudRecords.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dg_eStudRecords.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.col_estud_id, Me.col_estud_fname, Me.col_estud_lname, Me.col_estud_mi, Me.col_esy_id, Me.col_egl_id})
         Me.dg_eStudRecords.Dock = System.Windows.Forms.DockStyle.Fill
@@ -1329,6 +1334,7 @@ Partial Class frm_slists
         'txtb_eStudFname
         '
         Me.txtb_eStudFname.BackColor = System.Drawing.Color.White
+        Me.txtb_eStudFname.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtb_eStudFname.Enabled = False
         Me.txtb_eStudFname.Location = New System.Drawing.Point(117, 65)
         Me.txtb_eStudFname.Name = "txtb_eStudFname"
@@ -1338,6 +1344,7 @@ Partial Class frm_slists
         'txtb_estudMI
         '
         Me.txtb_estudMI.BackColor = System.Drawing.Color.White
+        Me.txtb_estudMI.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtb_estudMI.Enabled = False
         Me.txtb_estudMI.Location = New System.Drawing.Point(117, 149)
         Me.txtb_estudMI.Name = "txtb_estudMI"
@@ -1347,6 +1354,7 @@ Partial Class frm_slists
         'txtb_estudLname
         '
         Me.txtb_estudLname.BackColor = System.Drawing.Color.White
+        Me.txtb_estudLname.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtb_estudLname.Enabled = False
         Me.txtb_estudLname.Location = New System.Drawing.Point(117, 107)
         Me.txtb_estudLname.Name = "txtb_estudLname"
@@ -1366,6 +1374,7 @@ Partial Class frm_slists
         'txtb_eStudID
         '
         Me.txtb_eStudID.BackColor = System.Drawing.Color.White
+        Me.txtb_eStudID.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtb_eStudID.Enabled = False
         Me.txtb_eStudID.Location = New System.Drawing.Point(117, 23)
         Me.txtb_eStudID.Name = "txtb_eStudID"
@@ -1460,6 +1469,7 @@ Partial Class frm_slists
         'txtb_eSearch
         '
         Me.txtb_eSearch.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
+        Me.txtb_eSearch.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtb_eSearch.Location = New System.Drawing.Point(497, 20)
         Me.txtb_eSearch.Name = "txtb_eSearch"
         Me.txtb_eSearch.Size = New System.Drawing.Size(425, 30)
@@ -1567,20 +1577,20 @@ Partial Class frm_slists
         Me.dg_sStudRec.AllowUserToAddRows = False
         Me.dg_sStudRec.AllowUserToDeleteRows = False
         Me.dg_sStudRec.AllowUserToResizeRows = False
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.dg_sStudRec.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.dg_sStudRec.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle13
         Me.dg_sStudRec.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dg_sStudRec.BackgroundColor = System.Drawing.Color.Gainsboro
         Me.dg_sStudRec.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dg_sStudRec.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dg_sStudRec.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle14.BackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle14.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle14.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dg_sStudRec.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle14
         Me.dg_sStudRec.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dg_sStudRec.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.col_sStud_id, Me.col_sStud_fname, Me.col_sStud_lname, Me.col_sStud_mi, Me.col_sSY, Me.col_sGL})
         Me.dg_sStudRec.Dock = System.Windows.Forms.DockStyle.Fill
@@ -1897,6 +1907,7 @@ Partial Class frm_slists
         'txtb_sFname
         '
         Me.txtb_sFname.BackColor = System.Drawing.Color.White
+        Me.txtb_sFname.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtb_sFname.Enabled = False
         Me.txtb_sFname.Location = New System.Drawing.Point(117, 65)
         Me.txtb_sFname.Name = "txtb_sFname"
@@ -1906,6 +1917,7 @@ Partial Class frm_slists
         'txtb_smi
         '
         Me.txtb_smi.BackColor = System.Drawing.Color.White
+        Me.txtb_smi.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtb_smi.Enabled = False
         Me.txtb_smi.Location = New System.Drawing.Point(117, 149)
         Me.txtb_smi.Name = "txtb_smi"
@@ -1915,6 +1927,7 @@ Partial Class frm_slists
         'txtb_sLname
         '
         Me.txtb_sLname.BackColor = System.Drawing.Color.White
+        Me.txtb_sLname.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtb_sLname.Enabled = False
         Me.txtb_sLname.Location = New System.Drawing.Point(117, 107)
         Me.txtb_sLname.Name = "txtb_sLname"
@@ -1934,6 +1947,7 @@ Partial Class frm_slists
         'txtb_sStud_id
         '
         Me.txtb_sStud_id.BackColor = System.Drawing.Color.White
+        Me.txtb_sStud_id.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtb_sStud_id.Enabled = False
         Me.txtb_sStud_id.Location = New System.Drawing.Point(117, 23)
         Me.txtb_sStud_id.Name = "txtb_sStud_id"
@@ -2028,6 +2042,7 @@ Partial Class frm_slists
         'txtb_sSearch
         '
         Me.txtb_sSearch.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
+        Me.txtb_sSearch.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtb_sSearch.Location = New System.Drawing.Point(497, 20)
         Me.txtb_sSearch.Name = "txtb_sSearch"
         Me.txtb_sSearch.Size = New System.Drawing.Size(425, 30)
@@ -2135,20 +2150,20 @@ Partial Class frm_slists
         Me.dg_jStudRec.AllowUserToAddRows = False
         Me.dg_jStudRec.AllowUserToDeleteRows = False
         Me.dg_jStudRec.AllowUserToResizeRows = False
-        DataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.dg_jStudRec.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.dg_jStudRec.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle15
         Me.dg_jStudRec.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dg_jStudRec.BackgroundColor = System.Drawing.Color.Gainsboro
         Me.dg_jStudRec.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dg_jStudRec.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle8.BackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dg_jStudRec.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle16.BackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle16.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle16.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dg_jStudRec.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle16
         Me.dg_jStudRec.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dg_jStudRec.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn14, Me.DataGridViewTextBoxColumn16, Me.DataGridViewTextBoxColumn17, Me.DataGridViewTextBoxColumn18})
         Me.dg_jStudRec.Dock = System.Windows.Forms.DockStyle.Fill
@@ -2465,6 +2480,7 @@ Partial Class frm_slists
         'txtb_jStudFname
         '
         Me.txtb_jStudFname.BackColor = System.Drawing.Color.White
+        Me.txtb_jStudFname.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtb_jStudFname.Enabled = False
         Me.txtb_jStudFname.Location = New System.Drawing.Point(117, 65)
         Me.txtb_jStudFname.Name = "txtb_jStudFname"
@@ -2474,6 +2490,7 @@ Partial Class frm_slists
         'txtb_jStudMI
         '
         Me.txtb_jStudMI.BackColor = System.Drawing.Color.White
+        Me.txtb_jStudMI.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtb_jStudMI.Enabled = False
         Me.txtb_jStudMI.Location = New System.Drawing.Point(117, 149)
         Me.txtb_jStudMI.Name = "txtb_jStudMI"
@@ -2483,6 +2500,7 @@ Partial Class frm_slists
         'txtb_jStudLname
         '
         Me.txtb_jStudLname.BackColor = System.Drawing.Color.White
+        Me.txtb_jStudLname.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtb_jStudLname.Enabled = False
         Me.txtb_jStudLname.Location = New System.Drawing.Point(117, 107)
         Me.txtb_jStudLname.Name = "txtb_jStudLname"
@@ -2502,6 +2520,7 @@ Partial Class frm_slists
         'txtb_jStud_id
         '
         Me.txtb_jStud_id.BackColor = System.Drawing.Color.White
+        Me.txtb_jStud_id.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtb_jStud_id.Enabled = False
         Me.txtb_jStud_id.Location = New System.Drawing.Point(117, 23)
         Me.txtb_jStud_id.Name = "txtb_jStud_id"

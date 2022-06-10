@@ -124,6 +124,7 @@ Module lccsams
             dt = New DataTable
             da.Fill(dt)
             dg.DataSource = dt
+
         Catch ex As Exception
             erromessage("error 103: Display Record" & ex.Message)
         Finally
@@ -258,7 +259,7 @@ Module lccsams
             sqlCommand = New MySqlCommand(sql, dbConn)
             dr = sqlCommand.ExecuteReader
             While dr.Read()
-                cbo.Text = dr(0).ToString
+                cbo.Text = dr(0).ToString.ToUpper
             End While
         Catch ex As Exception
             erromessage("error 108: selectComboBoxText " & ex.Message)

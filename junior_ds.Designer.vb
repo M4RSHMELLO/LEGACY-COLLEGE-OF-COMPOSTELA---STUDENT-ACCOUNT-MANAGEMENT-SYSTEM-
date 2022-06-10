@@ -20,12 +20,12 @@ Option Explicit On
  Global.System.ComponentModel.DesignerCategoryAttribute("code"),  _
  Global.System.ComponentModel.ToolboxItem(true),  _
  Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema"),  _
- Global.System.Xml.Serialization.XmlRootAttribute("db_lccsamsDataSet"),  _
+ Global.System.Xml.Serialization.XmlRootAttribute("junior_ds"),  _
  Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")>  _
-Partial Public Class db_lccsamsDataSet
+Partial Public Class junior_ds
     Inherits Global.System.Data.DataSet
     
-    Private tabletbl_elem_accounts As tbl_elem_accountsDataTable
+    Private tabletbl_junior_accounts As tbl_junior_accountsDataTable
     
     Private _schemaSerializationMode As Global.System.Data.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
     
@@ -56,8 +56,8 @@ Partial Public Class db_lccsamsDataSet
         If (Me.DetermineSchemaSerializationMode(info, context) = Global.System.Data.SchemaSerializationMode.IncludeSchema) Then
             Dim ds As Global.System.Data.DataSet = New Global.System.Data.DataSet()
             ds.ReadXmlSchema(New Global.System.Xml.XmlTextReader(New Global.System.IO.StringReader(strSchema)))
-            If (Not (ds.Tables("tbl_elem_accounts")) Is Nothing) Then
-                MyBase.Tables.Add(New tbl_elem_accountsDataTable(ds.Tables("tbl_elem_accounts")))
+            If (Not (ds.Tables("tbl_junior_accounts")) Is Nothing) Then
+                MyBase.Tables.Add(New tbl_junior_accountsDataTable(ds.Tables("tbl_junior_accounts")))
             End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
@@ -80,9 +80,9 @@ Partial Public Class db_lccsamsDataSet
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
      Global.System.ComponentModel.Browsable(false),  _
      Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
-    Public ReadOnly Property tbl_elem_accounts() As tbl_elem_accountsDataTable
+    Public ReadOnly Property tbl_junior_accounts() As tbl_junior_accountsDataTable
         Get
-            Return Me.tabletbl_elem_accounts
+            Return Me.tabletbl_junior_accounts
         End Get
     End Property
     
@@ -128,7 +128,7 @@ Partial Public Class db_lccsamsDataSet
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
     Public Overrides Function Clone() As Global.System.Data.DataSet
-        Dim cln As db_lccsamsDataSet = CType(MyBase.Clone,db_lccsamsDataSet)
+        Dim cln As junior_ds = CType(MyBase.Clone,junior_ds)
         cln.InitVars
         cln.SchemaSerializationMode = Me.SchemaSerializationMode
         Return cln
@@ -153,8 +153,8 @@ Partial Public Class db_lccsamsDataSet
             Me.Reset
             Dim ds As Global.System.Data.DataSet = New Global.System.Data.DataSet()
             ds.ReadXml(reader)
-            If (Not (ds.Tables("tbl_elem_accounts")) Is Nothing) Then
-                MyBase.Tables.Add(New tbl_elem_accountsDataTable(ds.Tables("tbl_elem_accounts")))
+            If (Not (ds.Tables("tbl_junior_accounts")) Is Nothing) Then
+                MyBase.Tables.Add(New tbl_junior_accountsDataTable(ds.Tables("tbl_junior_accounts")))
             End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
@@ -188,10 +188,10 @@ Partial Public Class db_lccsamsDataSet
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
     Friend Overloads Sub InitVars(ByVal initTable As Boolean)
-        Me.tabletbl_elem_accounts = CType(MyBase.Tables("tbl_elem_accounts"),tbl_elem_accountsDataTable)
+        Me.tabletbl_junior_accounts = CType(MyBase.Tables("tbl_junior_accounts"),tbl_junior_accountsDataTable)
         If (initTable = true) Then
-            If (Not (Me.tabletbl_elem_accounts) Is Nothing) Then
-                Me.tabletbl_elem_accounts.InitVars
+            If (Not (Me.tabletbl_junior_accounts) Is Nothing) Then
+                Me.tabletbl_junior_accounts.InitVars
             End If
         End If
     End Sub
@@ -199,18 +199,18 @@ Partial Public Class db_lccsamsDataSet
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
     Private Sub InitClass()
-        Me.DataSetName = "db_lccsamsDataSet"
+        Me.DataSetName = "junior_ds"
         Me.Prefix = ""
-        Me.Namespace = "http://tempuri.org/db_lccsamsDataSet.xsd"
+        Me.Namespace = "http://tempuri.org/junior_ds.xsd"
         Me.EnforceConstraints = true
         Me.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
-        Me.tabletbl_elem_accounts = New tbl_elem_accountsDataTable()
-        MyBase.Tables.Add(Me.tabletbl_elem_accounts)
+        Me.tabletbl_junior_accounts = New tbl_junior_accountsDataTable()
+        MyBase.Tables.Add(Me.tabletbl_junior_accounts)
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-    Private Function ShouldSerializetbl_elem_accounts() As Boolean
+    Private Function ShouldSerializetbl_junior_accounts() As Boolean
         Return false
     End Function
     
@@ -225,7 +225,7 @@ Partial Public Class db_lccsamsDataSet
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
     Public Shared Function GetTypedDataSetSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
-        Dim ds As db_lccsamsDataSet = New db_lccsamsDataSet()
+        Dim ds As junior_ds = New junior_ds()
         Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
         Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
         Dim any As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
@@ -273,29 +273,29 @@ Partial Public Class db_lccsamsDataSet
     End Function
     
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-    Public Delegate Sub tbl_elem_accountsRowChangeEventHandler(ByVal sender As Object, ByVal e As tbl_elem_accountsRowChangeEvent)
+    Public Delegate Sub tbl_junior_accountsRowChangeEventHandler(ByVal sender As Object, ByVal e As tbl_junior_accountsRowChangeEvent)
     
     '''<summary>
     '''Represents the strongly named DataTable class.
     '''</summary>
     <Global.System.Serializable(),  _
      Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
-    Partial Public Class tbl_elem_accountsDataTable
-        Inherits Global.System.Data.TypedTableBase(Of tbl_elem_accountsRow)
+    Partial Public Class tbl_junior_accountsDataTable
+        Inherits Global.System.Data.TypedTableBase(Of tbl_junior_accountsRow)
         
-        Private columnetan As Global.System.Data.DataColumn
+        Private columnjtan As Global.System.Data.DataColumn
         
-        Private columnedate_paidamount As Global.System.Data.DataColumn
+        Private columnjdate_paidamount As Global.System.Data.DataColumn
         
-        Private columnepay_amount As Global.System.Data.DataColumn
+        Private columnjpay_amount As Global.System.Data.DataColumn
         
-        Private columnefees_name As Global.System.Data.DataColumn
+        Private columnjfees_name As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub New()
             MyBase.New
-            Me.TableName = "tbl_elem_accounts"
+            Me.TableName = "tbl_junior_accounts"
             Me.BeginInit
             Me.InitClass
             Me.EndInit
@@ -328,33 +328,33 @@ Partial Public Class db_lccsamsDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property etanColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property jtanColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnetan
+                Return Me.columnjtan
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property edate_paidamountColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property jdate_paidamountColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnedate_paidamount
+                Return Me.columnjdate_paidamount
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property epay_amountColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property jpay_amountColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnepay_amount
+                Return Me.columnjpay_amount
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property efees_nameColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property jfees_nameColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnefees_name
+                Return Me.columnjfees_name
             End Get
         End Property
         
@@ -369,44 +369,44 @@ Partial Public Class db_lccsamsDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Default ReadOnly Property Item(ByVal index As Integer) As tbl_elem_accountsRow
+        Public Default ReadOnly Property Item(ByVal index As Integer) As tbl_junior_accountsRow
             Get
-                Return CType(Me.Rows(index),tbl_elem_accountsRow)
+                Return CType(Me.Rows(index),tbl_junior_accountsRow)
             End Get
         End Property
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Event tbl_elem_accountsRowChanging As tbl_elem_accountsRowChangeEventHandler
+        Public Event tbl_junior_accountsRowChanging As tbl_junior_accountsRowChangeEventHandler
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Event tbl_elem_accountsRowChanged As tbl_elem_accountsRowChangeEventHandler
+        Public Event tbl_junior_accountsRowChanged As tbl_junior_accountsRowChangeEventHandler
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Event tbl_elem_accountsRowDeleting As tbl_elem_accountsRowChangeEventHandler
+        Public Event tbl_junior_accountsRowDeleting As tbl_junior_accountsRowChangeEventHandler
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Event tbl_elem_accountsRowDeleted As tbl_elem_accountsRowChangeEventHandler
+        Public Event tbl_junior_accountsRowDeleted As tbl_junior_accountsRowChangeEventHandler
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overloads Sub Addtbl_elem_accountsRow(ByVal row As tbl_elem_accountsRow)
+        Public Overloads Sub Addtbl_junior_accountsRow(ByVal row As tbl_junior_accountsRow)
             Me.Rows.Add(row)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overloads Function Addtbl_elem_accountsRow(ByVal etan As Integer, ByVal edate_paidamount As Date, ByVal epay_amount As Double, ByVal efees_name As String) As tbl_elem_accountsRow
-            Dim rowtbl_elem_accountsRow As tbl_elem_accountsRow = CType(Me.NewRow,tbl_elem_accountsRow)
-            Dim columnValuesArray() As Object = New Object() {etan, edate_paidamount, epay_amount, efees_name}
-            rowtbl_elem_accountsRow.ItemArray = columnValuesArray
-            Me.Rows.Add(rowtbl_elem_accountsRow)
-            Return rowtbl_elem_accountsRow
+        Public Overloads Function Addtbl_junior_accountsRow(ByVal jtan As String, ByVal jdate_paidamount As Date, ByVal jpay_amount As Double, ByVal jfees_name As String) As tbl_junior_accountsRow
+            Dim rowtbl_junior_accountsRow As tbl_junior_accountsRow = CType(Me.NewRow,tbl_junior_accountsRow)
+            Dim columnValuesArray() As Object = New Object() {jtan, jdate_paidamount, jpay_amount, jfees_name}
+            rowtbl_junior_accountsRow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowtbl_junior_accountsRow)
+            Return rowtbl_junior_accountsRow
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Overrides Function Clone() As Global.System.Data.DataTable
-            Dim cln As tbl_elem_accountsDataTable = CType(MyBase.Clone,tbl_elem_accountsDataTable)
+            Dim cln As tbl_junior_accountsDataTable = CType(MyBase.Clone,tbl_junior_accountsDataTable)
             cln.InitVars
             Return cln
         End Function
@@ -414,59 +414,57 @@ Partial Public Class db_lccsamsDataSet
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
-            Return New tbl_elem_accountsDataTable()
+            Return New tbl_junior_accountsDataTable()
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Friend Sub InitVars()
-            Me.columnetan = MyBase.Columns("etan")
-            Me.columnedate_paidamount = MyBase.Columns("edate_paidamount")
-            Me.columnepay_amount = MyBase.Columns("epay_amount")
-            Me.columnefees_name = MyBase.Columns("efees_name")
+            Me.columnjtan = MyBase.Columns("jtan")
+            Me.columnjdate_paidamount = MyBase.Columns("jdate_paidamount")
+            Me.columnjpay_amount = MyBase.Columns("jpay_amount")
+            Me.columnjfees_name = MyBase.Columns("jfees_name")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitClass()
-            Me.columnetan = New Global.System.Data.DataColumn("etan", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnetan)
-            Me.columnedate_paidamount = New Global.System.Data.DataColumn("edate_paidamount", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnedate_paidamount)
-            Me.columnepay_amount = New Global.System.Data.DataColumn("epay_amount", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnepay_amount)
-            Me.columnefees_name = New Global.System.Data.DataColumn("efees_name", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnefees_name)
-            Me.columnetan.AllowDBNull = false
-            Me.columnedate_paidamount.AllowDBNull = false
-            Me.columnepay_amount.AllowDBNull = false
-            Me.columnefees_name.AllowDBNull = false
+            Me.columnjtan = New Global.System.Data.DataColumn("jtan", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnjtan)
+            Me.columnjdate_paidamount = New Global.System.Data.DataColumn("jdate_paidamount", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnjdate_paidamount)
+            Me.columnjpay_amount = New Global.System.Data.DataColumn("jpay_amount", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnjpay_amount)
+            Me.columnjfees_name = New Global.System.Data.DataColumn("jfees_name", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnjfees_name)
+            Me.columnjtan.AllowDBNull = false
+            Me.columnjdate_paidamount.AllowDBNull = false
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function Newtbl_elem_accountsRow() As tbl_elem_accountsRow
-            Return CType(Me.NewRow,tbl_elem_accountsRow)
+        Public Function Newtbl_junior_accountsRow() As tbl_junior_accountsRow
+            Return CType(Me.NewRow,tbl_junior_accountsRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
-            Return New tbl_elem_accountsRow(builder)
+            Return New tbl_junior_accountsRow(builder)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Protected Overrides Function GetRowType() As Global.System.Type
-            Return GetType(tbl_elem_accountsRow)
+            Return GetType(tbl_junior_accountsRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowChanged(e)
-            If (Not (Me.tbl_elem_accountsRowChangedEvent) Is Nothing) Then
-                RaiseEvent tbl_elem_accountsRowChanged(Me, New tbl_elem_accountsRowChangeEvent(CType(e.Row,tbl_elem_accountsRow), e.Action))
+            If (Not (Me.tbl_junior_accountsRowChangedEvent) Is Nothing) Then
+                RaiseEvent tbl_junior_accountsRowChanged(Me, New tbl_junior_accountsRowChangeEvent(CType(e.Row,tbl_junior_accountsRow), e.Action))
             End If
         End Sub
         
@@ -474,8 +472,8 @@ Partial Public Class db_lccsamsDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowChanging(e)
-            If (Not (Me.tbl_elem_accountsRowChangingEvent) Is Nothing) Then
-                RaiseEvent tbl_elem_accountsRowChanging(Me, New tbl_elem_accountsRowChangeEvent(CType(e.Row,tbl_elem_accountsRow), e.Action))
+            If (Not (Me.tbl_junior_accountsRowChangingEvent) Is Nothing) Then
+                RaiseEvent tbl_junior_accountsRowChanging(Me, New tbl_junior_accountsRowChangeEvent(CType(e.Row,tbl_junior_accountsRow), e.Action))
             End If
         End Sub
         
@@ -483,8 +481,8 @@ Partial Public Class db_lccsamsDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowDeleted(e)
-            If (Not (Me.tbl_elem_accountsRowDeletedEvent) Is Nothing) Then
-                RaiseEvent tbl_elem_accountsRowDeleted(Me, New tbl_elem_accountsRowChangeEvent(CType(e.Row,tbl_elem_accountsRow), e.Action))
+            If (Not (Me.tbl_junior_accountsRowDeletedEvent) Is Nothing) Then
+                RaiseEvent tbl_junior_accountsRowDeleted(Me, New tbl_junior_accountsRowChangeEvent(CType(e.Row,tbl_junior_accountsRow), e.Action))
             End If
         End Sub
         
@@ -492,14 +490,14 @@ Partial Public Class db_lccsamsDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowDeleting(e)
-            If (Not (Me.tbl_elem_accountsRowDeletingEvent) Is Nothing) Then
-                RaiseEvent tbl_elem_accountsRowDeleting(Me, New tbl_elem_accountsRowChangeEvent(CType(e.Row,tbl_elem_accountsRow), e.Action))
+            If (Not (Me.tbl_junior_accountsRowDeletingEvent) Is Nothing) Then
+                RaiseEvent tbl_junior_accountsRowDeleting(Me, New tbl_junior_accountsRowChangeEvent(CType(e.Row,tbl_junior_accountsRow), e.Action))
             End If
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub Removetbl_elem_accountsRow(ByVal row As tbl_elem_accountsRow)
+        Public Sub Removetbl_junior_accountsRow(ByVal row As tbl_junior_accountsRow)
             Me.Rows.Remove(row)
         End Sub
         
@@ -508,7 +506,7 @@ Partial Public Class db_lccsamsDataSet
         Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
             Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
             Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
-            Dim ds As db_lccsamsDataSet = New db_lccsamsDataSet()
+            Dim ds As junior_ds = New junior_ds()
             Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
             any1.Namespace = "http://www.w3.org/2001/XMLSchema"
             any1.MinOccurs = New Decimal(0)
@@ -526,7 +524,7 @@ Partial Public Class db_lccsamsDataSet
             type.Attributes.Add(attribute1)
             Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
             attribute2.Name = "tableTypeName"
-            attribute2.FixedValue = "tbl_elem_accountsDataTable"
+            attribute2.FixedValue = "tbl_junior_accountsDataTable"
             type.Attributes.Add(attribute2)
             type.Particle = sequence
             Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
@@ -573,77 +571,109 @@ Partial Public Class db_lccsamsDataSet
     '''<summary>
     '''Represents strongly named DataRow class.
     '''</summary>
-    Partial Public Class tbl_elem_accountsRow
+    Partial Public Class tbl_junior_accountsRow
         Inherits Global.System.Data.DataRow
         
-        Private tabletbl_elem_accounts As tbl_elem_accountsDataTable
+        Private tabletbl_junior_accounts As tbl_junior_accountsDataTable
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
             MyBase.New(rb)
-            Me.tabletbl_elem_accounts = CType(Me.Table,tbl_elem_accountsDataTable)
+            Me.tabletbl_junior_accounts = CType(Me.Table,tbl_junior_accountsDataTable)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property etan() As Integer
+        Public Property jtan() As String
             Get
-                Return CType(Me(Me.tabletbl_elem_accounts.etanColumn),Integer)
+                Return CType(Me(Me.tabletbl_junior_accounts.jtanColumn),String)
             End Get
             Set
-                Me(Me.tabletbl_elem_accounts.etanColumn) = value
+                Me(Me.tabletbl_junior_accounts.jtanColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property edate_paidamount() As Date
+        Public Property jdate_paidamount() As Date
             Get
-                Return CType(Me(Me.tabletbl_elem_accounts.edate_paidamountColumn),Date)
+                Return CType(Me(Me.tabletbl_junior_accounts.jdate_paidamountColumn),Date)
             End Get
             Set
-                Me(Me.tabletbl_elem_accounts.edate_paidamountColumn) = value
+                Me(Me.tabletbl_junior_accounts.jdate_paidamountColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property epay_amount() As Double
+        Public Property jpay_amount() As Double
             Get
-                Return CType(Me(Me.tabletbl_elem_accounts.epay_amountColumn),Double)
+                Try 
+                    Return CType(Me(Me.tabletbl_junior_accounts.jpay_amountColumn),Double)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'jpay_amount' in table 'tbl_junior_accounts' is DBNull.", e)
+                End Try
             End Get
             Set
-                Me(Me.tabletbl_elem_accounts.epay_amountColumn) = value
+                Me(Me.tabletbl_junior_accounts.jpay_amountColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property efees_name() As String
+        Public Property jfees_name() As String
             Get
-                Return CType(Me(Me.tabletbl_elem_accounts.efees_nameColumn),String)
+                Try 
+                    Return CType(Me(Me.tabletbl_junior_accounts.jfees_nameColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'jfees_name' in table 'tbl_junior_accounts' is DBNull.", e)
+                End Try
             End Get
             Set
-                Me(Me.tabletbl_elem_accounts.efees_nameColumn) = value
+                Me(Me.tabletbl_junior_accounts.jfees_nameColumn) = value
             End Set
         End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function Isjpay_amountNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_junior_accounts.jpay_amountColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub Setjpay_amountNull()
+            Me(Me.tabletbl_junior_accounts.jpay_amountColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function Isjfees_nameNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_junior_accounts.jfees_nameColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub Setjfees_nameNull()
+            Me(Me.tabletbl_junior_accounts.jfees_nameColumn) = Global.System.Convert.DBNull
+        End Sub
     End Class
     
     '''<summary>
     '''Row event argument class
     '''</summary>
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-    Public Class tbl_elem_accountsRowChangeEvent
+    Public Class tbl_junior_accountsRowChangeEvent
         Inherits Global.System.EventArgs
         
-        Private eventRow As tbl_elem_accountsRow
+        Private eventRow As tbl_junior_accountsRow
         
         Private eventAction As Global.System.Data.DataRowAction
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub New(ByVal row As tbl_elem_accountsRow, ByVal action As Global.System.Data.DataRowAction)
+        Public Sub New(ByVal row As tbl_junior_accountsRow, ByVal action As Global.System.Data.DataRowAction)
             MyBase.New
             Me.eventRow = row
             Me.eventAction = action
@@ -651,7 +681,7 @@ Partial Public Class db_lccsamsDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property Row() As tbl_elem_accountsRow
+        Public ReadOnly Property Row() As tbl_junior_accountsRow
             Get
                 Return Me.eventRow
             End Get
@@ -667,7 +697,7 @@ Partial Public Class db_lccsamsDataSet
     End Class
 End Class
 
-Namespace db_lccsamsDataSetTableAdapters
+Namespace junior_dsTableAdapters
     
     '''<summary>
     '''Represents the connection and commands used to retrieve and save data.
@@ -678,7 +708,7 @@ Namespace db_lccsamsDataSetTableAdapters
      Global.System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner"& _ 
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"),  _
      Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-    Partial Public Class tbl_elem_accountsTableAdapter
+    Partial Public Class tbl_junior_accountsTableAdapter
         Inherits Global.System.ComponentModel.Component
         
         Private WithEvents _adapter As Global.Devart.Data.MySql.MySqlDataAdapter
@@ -795,11 +825,11 @@ Namespace db_lccsamsDataSetTableAdapters
             Me._adapter = New Global.Devart.Data.MySql.MySqlDataAdapter()
             Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
             tableMapping.SourceTable = "Table"
-            tableMapping.DataSetTable = "tbl_elem_accounts"
-            tableMapping.ColumnMappings.Add("etan", "etan")
-            tableMapping.ColumnMappings.Add("edate_paidamount", "edate_paidamount")
-            tableMapping.ColumnMappings.Add("epay_amount", "epay_amount")
-            tableMapping.ColumnMappings.Add("efees_name", "efees_name")
+            tableMapping.DataSetTable = "tbl_junior_accounts"
+            tableMapping.ColumnMappings.Add("jtan", "jtan")
+            tableMapping.ColumnMappings.Add("jdate_paidamount", "jdate_paidamount")
+            tableMapping.ColumnMappings.Add("jpay_amount", "jpay_amount")
+            tableMapping.ColumnMappings.Add("jfees_name", "jfees_name")
             Me._adapter.TableMappings.Add(tableMapping)
         End Sub
         
@@ -816,9 +846,8 @@ Namespace db_lccsamsDataSetTableAdapters
             Me._commandCollection = New Global.Devart.Data.MySql.MySqlCommand(0) {}
             Me._commandCollection(0) = New Global.Devart.Data.MySql.MySqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT        tbl_elem_accounts.etan, tbl_elem_accounts.edate_paidamount, tbl_ele"& _ 
-                "m_fees.efees_name, tbl_elem_accounts.epay_amount"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            tbl_elem_accou"& _ 
-                "nts, tbl_elem_fees"
+            Me._commandCollection(0).CommandText = "Select sa.jtan,sa.jdate_paidamount,f.jfees_name,sa.jpay_amount from tbl_junior_ac"& _ 
+                "counts sa inner join tbl_junior_fees f on f.jfees_id=sa.jfees_id"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -826,7 +855,7 @@ Namespace db_lccsamsDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As db_lccsamsDataSet.tbl_elem_accountsDataTable) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As junior_ds.tbl_junior_accountsDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -839,9 +868,9 @@ Namespace db_lccsamsDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As db_lccsamsDataSet.tbl_elem_accountsDataTable
+        Public Overloads Overridable Function GetData() As junior_ds.tbl_junior_accountsDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As db_lccsamsDataSet.tbl_elem_accountsDataTable = New db_lccsamsDataSet.tbl_elem_accountsDataTable()
+            Dim dataTable As junior_ds.tbl_junior_accountsDataTable = New junior_ds.tbl_junior_accountsDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
@@ -916,7 +945,7 @@ Namespace db_lccsamsDataSetTableAdapters
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Private Function UpdateUpdatedRows(ByVal dataSet As db_lccsamsDataSet, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow), ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
+        Private Function UpdateUpdatedRows(ByVal dataSet As junior_ds, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow), ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
             Return result
         End Function
@@ -926,7 +955,7 @@ Namespace db_lccsamsDataSetTableAdapters
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Private Function UpdateInsertedRows(ByVal dataSet As db_lccsamsDataSet, ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
+        Private Function UpdateInsertedRows(ByVal dataSet As junior_ds, ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
             Return result
         End Function
@@ -936,7 +965,7 @@ Namespace db_lccsamsDataSetTableAdapters
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Private Function UpdateDeletedRows(ByVal dataSet As db_lccsamsDataSet, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
+        Private Function UpdateDeletedRows(ByVal dataSet As junior_ds, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
             Return result
         End Function
@@ -972,7 +1001,7 @@ Namespace db_lccsamsDataSetTableAdapters
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overridable Function UpdateAll(ByVal dataSet As db_lccsamsDataSet) As Integer
+        Public Overridable Function UpdateAll(ByVal dataSet As junior_ds) As Integer
             If (dataSet Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("dataSet")
             End If

@@ -23,22 +23,21 @@ Partial Class print_preview
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
         Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.coll_ds = New LCC_SAMS_Project.coll_ds()
         Me.tbl_studaccountBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.tbl_studaccountTableAdapter = New LCC_SAMS_Project.coll_dsTableAdapters.tbl_studaccountTableAdapter()
-        Me.db_lccsamsDataSet = New LCC_SAMS_Project.db_lccsamsDataSet()
-        Me.tbl_elem_accountsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.tbl_elem_accountsTableAdapter = New LCC_SAMS_Project.db_lccsamsDataSetTableAdapters.tbl_elem_accountsTableAdapter()
         CType(Me.coll_ds, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.tbl_studaccountBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.db_lccsamsDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.tbl_elem_accountsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ReportViewer1
         '
         Me.ReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
+        ReportDataSource1.Name = "coll_rpt"
+        ReportDataSource1.Value = Me.tbl_studaccountBindingSource
+        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
         Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "LCC_SAMS_Project.Report2.rdlc"
         Me.ReportViewer1.Location = New System.Drawing.Point(0, 0)
         Me.ReportViewer1.Name = "ReportViewer1"
@@ -60,20 +59,6 @@ Partial Class print_preview
         '
         Me.tbl_studaccountTableAdapter.ClearBeforeFill = True
         '
-        'db_lccsamsDataSet
-        '
-        Me.db_lccsamsDataSet.DataSetName = "db_lccsamsDataSet"
-        Me.db_lccsamsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'tbl_elem_accountsBindingSource
-        '
-        Me.tbl_elem_accountsBindingSource.DataMember = "tbl_elem_accounts"
-        Me.tbl_elem_accountsBindingSource.DataSource = Me.db_lccsamsDataSet
-        '
-        'tbl_elem_accountsTableAdapter
-        '
-        Me.tbl_elem_accountsTableAdapter.ClearBeforeFill = True
-        '
         'print_preview
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -84,8 +69,6 @@ Partial Class print_preview
         Me.Text = "PRINT PREVIEW"
         CType(Me.coll_ds, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.tbl_studaccountBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.db_lccsamsDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.tbl_elem_accountsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -93,8 +76,5 @@ Partial Class print_preview
     Friend WithEvents ReportViewer1 As Microsoft.Reporting.WinForms.ReportViewer
     Friend WithEvents tbl_studaccountBindingSource As BindingSource
     Friend WithEvents coll_ds As coll_ds
-    Friend WithEvents tbl_elem_accountsBindingSource As BindingSource
-    Friend WithEvents db_lccsamsDataSet As db_lccsamsDataSet
     Friend WithEvents tbl_studaccountTableAdapter As coll_dsTableAdapters.tbl_studaccountTableAdapter
-    Friend WithEvents tbl_elem_accountsTableAdapter As db_lccsamsDataSetTableAdapters.tbl_elem_accountsTableAdapter
 End Class

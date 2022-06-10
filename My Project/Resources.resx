@@ -118,11 +118,14 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="dlg_existed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dlg_existed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="updatefeesicon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\updatefeesicon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="500x5001" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\500x5001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="500X500px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\500X500px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="addstudentsicon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\addstudentsicon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -136,14 +139,14 @@
   <data name="updatedsuccessfully" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\updatedsuccessfully1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="v1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\v1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="500X500px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\500X500px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="600" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\600.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="490" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\490.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="4902" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\4902.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="success" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\success1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -151,14 +154,11 @@
   <data name="500x5002" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\500x5002.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="4902" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\4902.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="dlg_studentsupdatedsuccessfully" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dlg_studentsupdatedsuccessfully1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="dlg_existed" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dlg_existed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="490" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\490.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="lcc-logo-11-3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\lcc-logo-11-3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -184,6 +184,9 @@
   <data name="savesuccessfully1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\savesuccessfully2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="v1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\v1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="4901" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\4901.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -193,13 +196,16 @@
   <data name="paymentsicon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\paymentsicon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="schoolyearadd" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\schoolyearadd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="v2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\v2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="wewsssss" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\wewsssss.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="schoolyearadd" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\schoolyearadd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="addfeesicon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\addfeesicon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -33,6 +33,9 @@ Partial Class frm_Mpayments
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.Panel8 = New System.Windows.Forms.Panel()
         Me.dg_jFeesRec = New Bunifu.Framework.UI.BunifuCustomDataGrid()
+        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.Label29 = New System.Windows.Forms.Label()
         Me.cbo_jSortSY = New System.Windows.Forms.ComboBox()
@@ -129,9 +132,6 @@ Partial Class frm_Mpayments
         Me.cbo_course = New System.Windows.Forms.ComboBox()
         Me.btn_add = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
-        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TabPage3.SuspendLayout()
         Me.Panel8.SuspendLayout()
         CType(Me.dg_jFeesRec, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -158,6 +158,7 @@ Partial Class frm_Mpayments
         '
         'TabPage3
         '
+        Me.TabPage3.BackColor = System.Drawing.SystemColors.Control
         Me.TabPage3.Controls.Add(Me.Panel8)
         Me.TabPage3.Controls.Add(Me.Panel9)
         Me.TabPage3.Location = New System.Drawing.Point(4, 30)
@@ -166,7 +167,6 @@ Partial Class frm_Mpayments
         Me.TabPage3.Size = New System.Drawing.Size(1067, 684)
         Me.TabPage3.TabIndex = 3
         Me.TabPage3.Text = "Junior-High Dept"
-        Me.TabPage3.UseVisualStyleBackColor = True
         '
         'Panel8
         '
@@ -210,6 +210,28 @@ Partial Class frm_Mpayments
         Me.dg_jFeesRec.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dg_jFeesRec.Size = New System.Drawing.Size(609, 377)
         Me.dg_jFeesRec.TabIndex = 58
+        '
+        'DataGridViewTextBoxColumn9
+        '
+        Me.DataGridViewTextBoxColumn9.DataPropertyName = "jfees_id"
+        Me.DataGridViewTextBoxColumn9.HeaderText = "Fees ID"
+        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
+        Me.DataGridViewTextBoxColumn9.ReadOnly = True
+        Me.DataGridViewTextBoxColumn9.Visible = False
+        '
+        'DataGridViewTextBoxColumn10
+        '
+        Me.DataGridViewTextBoxColumn10.DataPropertyName = "jfees_name"
+        Me.DataGridViewTextBoxColumn10.HeaderText = "Fees Type"
+        Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
+        Me.DataGridViewTextBoxColumn10.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn11
+        '
+        Me.DataGridViewTextBoxColumn11.DataPropertyName = "jfees_amount"
+        Me.DataGridViewTextBoxColumn11.HeaderText = "Fees Amount"
+        Me.DataGridViewTextBoxColumn11.Name = "DataGridViewTextBoxColumn11"
+        Me.DataGridViewTextBoxColumn11.ReadOnly = True
         '
         'GroupBox3
         '
@@ -476,6 +498,7 @@ Partial Class frm_Mpayments
         '
         'TabPage2
         '
+        Me.TabPage2.BackColor = System.Drawing.SystemColors.Control
         Me.TabPage2.Controls.Add(Me.Panel6)
         Me.TabPage2.Controls.Add(Me.Panel7)
         Me.TabPage2.Location = New System.Drawing.Point(4, 30)
@@ -484,7 +507,6 @@ Partial Class frm_Mpayments
         Me.TabPage2.Size = New System.Drawing.Size(1067, 684)
         Me.TabPage2.TabIndex = 2
         Me.TabPage2.Text = "Senior-High Dept"
-        Me.TabPage2.UseVisualStyleBackColor = True
         '
         'Panel6
         '
@@ -869,6 +891,7 @@ Partial Class frm_Mpayments
         '
         'elem_dept
         '
+        Me.elem_dept.BackColor = System.Drawing.SystemColors.Control
         Me.elem_dept.Controls.Add(Me.Panel3)
         Me.elem_dept.Controls.Add(Me.Panel5)
         Me.elem_dept.Location = New System.Drawing.Point(4, 30)
@@ -877,7 +900,6 @@ Partial Class frm_Mpayments
         Me.elem_dept.Size = New System.Drawing.Size(1067, 684)
         Me.elem_dept.TabIndex = 1
         Me.elem_dept.Text = "Elementary Dept"
-        Me.elem_dept.UseVisualStyleBackColor = True
         '
         'Panel3
         '
@@ -1400,6 +1422,7 @@ Partial Class frm_Mpayments
         Me.cbo_SortSY.Name = "cbo_SortSY"
         Me.cbo_SortSY.Size = New System.Drawing.Size(218, 24)
         Me.cbo_SortSY.TabIndex = 11
+        Me.cbo_SortSY.ValueMember = "sy_id"
         '
         'Panel4
         '
@@ -1738,28 +1761,6 @@ Partial Class frm_Mpayments
         Me.TabControl1.SelectedIndex = 0
         Me.TabControl1.Size = New System.Drawing.Size(1075, 718)
         Me.TabControl1.TabIndex = 0
-        '
-        'DataGridViewTextBoxColumn9
-        '
-        Me.DataGridViewTextBoxColumn9.DataPropertyName = "jfees_id"
-        Me.DataGridViewTextBoxColumn9.HeaderText = "Fees ID"
-        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
-        Me.DataGridViewTextBoxColumn9.ReadOnly = True
-        Me.DataGridViewTextBoxColumn9.Visible = False
-        '
-        'DataGridViewTextBoxColumn10
-        '
-        Me.DataGridViewTextBoxColumn10.DataPropertyName = "jfees_name"
-        Me.DataGridViewTextBoxColumn10.HeaderText = "Fees Type"
-        Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
-        Me.DataGridViewTextBoxColumn10.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn11
-        '
-        Me.DataGridViewTextBoxColumn11.DataPropertyName = "jfees_amount"
-        Me.DataGridViewTextBoxColumn11.HeaderText = "Fees Amount"
-        Me.DataGridViewTextBoxColumn11.Name = "DataGridViewTextBoxColumn11"
-        Me.DataGridViewTextBoxColumn11.ReadOnly = True
         '
         'frm_Mpayments
         '

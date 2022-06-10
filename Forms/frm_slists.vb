@@ -353,6 +353,7 @@ Public Class frm_slists
         cbo_sem.SelectedIndex = -1
         cbo_yearlevel.SelectedIndex = -1
         cbo_course.SelectedIndex = -1
+
     End Sub
 
 
@@ -832,4 +833,10 @@ Public Class frm_slists
             MessageBox.Show("Error: " & ex.Message)
         End Try
     End Sub
+
+    Private Sub txtb_studMI_TextChanged(sender As Object, e As EventArgs) Handles txtb_studMI.TextChanged
+
+    End Sub
+
+
 End Class

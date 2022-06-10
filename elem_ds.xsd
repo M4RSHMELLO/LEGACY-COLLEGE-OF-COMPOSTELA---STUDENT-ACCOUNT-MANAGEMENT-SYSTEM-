@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="db_lccsamsDataSet" targetNamespace="http://tempuri.org/db_lccsamsDataSet.xsd" xmlns:mstns="http://tempuri.org/db_lccsamsDataSet.xsd" xmlns="http://tempuri.org/db_lccsamsDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="elem_ds" targetNamespace="http://tempuri.org/elem_ds.xsd" xmlns:mstns="http://tempuri.org/elem_ds.xsd" xmlns="http://tempuri.org/elem_ds.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
@@ -12,8 +12,7 @@
               <DbSource ConnectionRef="db_lccsams_connection (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT        tbl_elem_accounts.etan, tbl_elem_accounts.edate_paidamount, tbl_elem_fees.efees_name, tbl_elem_accounts.epay_amount
-FROM            tbl_elem_accounts, tbl_elem_fees</CommandText>
+                    <CommandText>Select sa.etan,sa.edate_paidamount,f.efees_name,sa.epay_amount from tbl_elem_accounts sa inner join tbl_elem_fees f on f.efees_id=sa.efees_id</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -32,7 +31,7 @@ FROM            tbl_elem_accounts, tbl_elem_fees</CommandText>
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="db_lccsamsDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="db_lccsamsDataSet" msprop:Generator_UserDSName="db_lccsamsDataSet">
+  <xs:element name="elem_ds" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="elem_ds" msprop:Generator_UserDSName="elem_ds">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element name="tbl_elem_accounts" msprop:Generator_TableClassName="tbl_elem_accountsDataTable" msprop:Generator_TableVarName="tabletbl_elem_accounts" msprop:Generator_RowChangedName="tbl_elem_accountsRowChanged" msprop:Generator_TablePropName="tbl_elem_accounts" msprop:Generator_RowDeletingName="tbl_elem_accountsRowDeleting" msprop:Generator_RowChangingName="tbl_elem_accountsRowChanging" msprop:Generator_RowEvHandlerName="tbl_elem_accountsRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_elem_accountsRowDeleted" msprop:Generator_RowClassName="tbl_elem_accountsRow" msprop:Generator_UserTableName="tbl_elem_accounts" msprop:Generator_RowEvArgName="tbl_elem_accountsRowChangeEvent">

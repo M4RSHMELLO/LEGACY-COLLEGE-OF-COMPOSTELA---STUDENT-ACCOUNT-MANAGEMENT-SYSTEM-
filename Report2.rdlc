@@ -652,13 +652,6 @@
       </ConnectionProperties>
       <rd:DataSourceID>c06f678a-5224-47c9-be30-dda8c476e3f4</rd:DataSourceID>
     </DataSource>
-    <DataSource Name="db_lccsamsDataSet">
-      <ConnectionProperties>
-        <DataProvider>System.Data.DataSet</DataProvider>
-        <ConnectString>/* Local Connection */</ConnectString>
-      </ConnectionProperties>
-      <rd:DataSourceID>76828bf8-1c76-48d4-9528-4909e7330478</rd:DataSourceID>
-    </DataSource>
   </DataSources>
   <DataSets>
     <DataSet Name="coll_rpt">
@@ -691,38 +684,6 @@
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
         <rd:TableAdapterName>tbl_studaccountTableAdapter</rd:TableAdapterName>
-      </rd:DataSetInfo>
-    </DataSet>
-    <DataSet Name="elem_rpt">
-      <Query>
-        <DataSourceName>db_lccsamsDataSet</DataSourceName>
-        <CommandText>/* Local Query */</CommandText>
-      </Query>
-      <Fields>
-        <Field Name="etan">
-          <DataField>etan</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="edate_paidamount">
-          <DataField>edate_paidamount</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
-        </Field>
-        <Field Name="epay_amount">
-          <DataField>epay_amount</DataField>
-          <rd:TypeName>System.Double</rd:TypeName>
-        </Field>
-        <Field Name="ebal_amount">
-          <DataField>ebal_amount</DataField>
-          <rd:TypeName>System.Double</rd:TypeName>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>db_lccsamsDataSet</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\RJR-PC\Documents\Visual Studio 2019\LCC-SAMS_Project\db_lccsamsDataSet.xsd</rd:SchemaPath>
-        <rd:TableName>tbl_elem_accounts</rd:TableName>
-        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
-        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>tbl_elem_accountsTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
