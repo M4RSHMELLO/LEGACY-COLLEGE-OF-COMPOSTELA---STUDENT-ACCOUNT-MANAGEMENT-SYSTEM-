@@ -7,7 +7,7 @@ Public Class form_login
         Me.Close()
     End Sub
     Private Sub btn_login_click(sender As Object, e As EventArgs) Handles btn_login.Click
-        strQuery = "Select username, password from tbl_users where username = '" & txtb_username.Text & "' and password = '" & txtb_password.Text & "' "
+        strQuery = "Select username, name ,user_type from tbl_users where username = '" & txtb_username.Text & "' and password = md5('" & txtb_password.Text & "') "
         _dbConnection("db_lccsams")
         _retrieveData(strQuery)
         If result = 1 Then

@@ -16,6 +16,9 @@ Module lccsams
     Public current_menu As Integer = 0
     Public current_date As Date = Date.Now()   'Caurrent Date OF THE transaction ocurred
     Public result As Integer
+    Public username As String
+    Public name As String
+    Public user_type As String
     '#################################################################COLLEGE PUBLIC VARIABLE###############################################################################
     Public slctC As String = "Select * from tbl_coll_course"
     Public slctS As String = "select * from tbl_semester"
@@ -173,6 +176,9 @@ Module lccsams
             dr = sqlCommand.ExecuteReader
             result = 0
             While dr.Read
+                username = dr(0).ToString
+                name = dr(1).ToString
+                user_type = dr(2).ToString
                 result += 1
             End While
         Catch ex As Exception

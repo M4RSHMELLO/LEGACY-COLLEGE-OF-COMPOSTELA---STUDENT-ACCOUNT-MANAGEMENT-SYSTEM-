@@ -29,7 +29,11 @@
 
     Public Sub BunifuFlatButton6_Click(sender As Object, e As EventArgs) Handles btn_menuStudentsList.Click
         addContent(frm_sL, btn_menuStudentsList)
-
+        If user_type = "STAFF" Then
+            frm_sL.btn_backStudAcct.Visible = False
+        ElseIf user_type = "ADMIN" Then
+            frm_sL.btn_backStudAcct.Visible = True
+        End If
     End Sub
     Public studIdClick As Integer
 

@@ -237,7 +237,9 @@
         End Try
     End Sub
 
-    Private Sub GroupBox3_Enter(sender As Object, e As EventArgs) Handles GroupBox3.Enter
+
+
+    Private Sub btn_add_Click(sender As Object, e As EventArgs) Handles btn_add.Click
 
     End Sub
 End Class

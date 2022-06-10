@@ -33,7 +33,7 @@ Partial Class Dashboard
         Me.BunifuGradientPanel4 = New Bunifu.Framework.UI.BunifuGradientPanel()
         Me.btn_logout = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.lbl_title = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.lbl_usertype = New System.Windows.Forms.Label()
         Me.BunifuGradientPanel2 = New Bunifu.Framework.UI.BunifuGradientPanel()
         Me.BunifuGradientPanel1 = New Bunifu.Framework.UI.BunifuGradientPanel()
         Me.Panel5 = New System.Windows.Forms.Panel()
@@ -160,7 +160,7 @@ Partial Class Dashboard
         Me.BunifuGradientPanel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BunifuGradientPanel4.Controls.Add(Me.btn_logout)
         Me.BunifuGradientPanel4.Controls.Add(Me.lbl_title)
-        Me.BunifuGradientPanel4.Controls.Add(Me.Label2)
+        Me.BunifuGradientPanel4.Controls.Add(Me.lbl_usertype)
         Me.BunifuGradientPanel4.Dock = System.Windows.Forms.DockStyle.Top
         Me.BunifuGradientPanel4.GradientBottomLeft = System.Drawing.Color.Black
         Me.BunifuGradientPanel4.GradientBottomRight = System.Drawing.Color.DarkGreen
@@ -224,18 +224,18 @@ Partial Class Dashboard
         Me.lbl_title.TabIndex = 2
         Me.lbl_title.Text = "DASHBOARD"
         '
-        'Label2
+        'lbl_usertype
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(786, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(131, 17)
-        Me.Label2.TabIndex = 0
-        Me.Label2.Text = "Welcome, Admin!"
+        Me.lbl_usertype.AutoSize = True
+        Me.lbl_usertype.BackColor = System.Drawing.Color.Transparent
+        Me.lbl_usertype.Dock = System.Windows.Forms.DockStyle.Right
+        Me.lbl_usertype.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_usertype.ForeColor = System.Drawing.Color.White
+        Me.lbl_usertype.Location = New System.Drawing.Point(786, 0)
+        Me.lbl_usertype.Name = "lbl_usertype"
+        Me.lbl_usertype.Size = New System.Drawing.Size(131, 17)
+        Me.lbl_usertype.TabIndex = 0
+        Me.lbl_usertype.Text = "Welcome, Admin!"
         '
         'BunifuGradientPanel2
         '
@@ -798,7 +798,7 @@ Partial Class Dashboard
     Friend WithEvents pnlContainer As Bunifu.Framework.UI.BunifuGradientPanel
     Friend WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
     Friend WithEvents BunifuGradientPanel4 As Bunifu.Framework.UI.BunifuGradientPanel
-    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents lbl_usertype As System.Windows.Forms.Label
     Friend WithEvents lbl_title As System.Windows.Forms.Label
     Friend WithEvents pnlMContainer As System.Windows.Forms.Panel
     Friend WithEvents btn_menuStudentsList As Bunifu.Framework.UI.BunifuFlatButton

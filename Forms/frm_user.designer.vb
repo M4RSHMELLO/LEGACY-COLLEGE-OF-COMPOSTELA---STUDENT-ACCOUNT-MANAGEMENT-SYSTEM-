@@ -36,17 +36,21 @@ Partial Class frm_user
         Me.cbo_usertype = New System.Windows.Forms.ComboBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txtb_pass = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btn_update = New System.Windows.Forms.Button()
         Me.dg_users = New System.Windows.Forms.DataGridView()
+        Me.id = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.M = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.user_type = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox1.SuspendLayout()
         CType(Me.dg_users, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'txtb_name
         '
+        Me.txtb_name.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.txtb_name.Enabled = False
         Me.txtb_name.Location = New System.Drawing.Point(140, 25)
         Me.txtb_name.Name = "txtb_name"
         Me.txtb_name.Size = New System.Drawing.Size(287, 26)
@@ -54,6 +58,7 @@ Partial Class frm_user
         '
         'txtb_Uname
         '
+        Me.txtb_Uname.Enabled = False
         Me.txtb_Uname.Location = New System.Drawing.Point(140, 60)
         Me.txtb_Uname.Name = "txtb_Uname"
         Me.txtb_Uname.Size = New System.Drawing.Size(287, 26)
@@ -97,7 +102,7 @@ Partial Class frm_user
         Me.btnSave.Name = "btnSave"
         Me.btnSave.Size = New System.Drawing.Size(81, 42)
         Me.btnSave.TabIndex = 57
-        Me.btnSave.Text = "ADD "
+        Me.btnSave.Text = "ADD"
         Me.btnSave.UseVisualStyleBackColor = False
         '
         'lblId
@@ -130,6 +135,7 @@ Partial Class frm_user
         '
         'cbo_usertype
         '
+        Me.cbo_usertype.Enabled = False
         Me.cbo_usertype.FormattingEnabled = True
         Me.cbo_usertype.Items.AddRange(New Object() {"ADMIN", "STAFF"})
         Me.cbo_usertype.Location = New System.Drawing.Point(140, 127)
@@ -148,6 +154,7 @@ Partial Class frm_user
         '
         'txtb_pass
         '
+        Me.txtb_pass.Enabled = False
         Me.txtb_pass.Location = New System.Drawing.Point(140, 94)
         Me.txtb_pass.Name = "txtb_pass"
         Me.txtb_pass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
@@ -155,22 +162,26 @@ Partial Class frm_user
         Me.txtb_pass.TabIndex = 16
         Me.txtb_pass.UseSystemPasswordChar = True
         '
-        'Button1
+        'btn_update
         '
-        Me.Button1.BackColor = System.Drawing.Color.ForestGreen
-        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGreen
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(460, 474)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(81, 42)
-        Me.Button1.TabIndex = 58
-        Me.Button1.Text = "UPDATE"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btn_update.BackColor = System.Drawing.Color.ForestGreen
+        Me.btn_update.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_update.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGreen
+        Me.btn_update.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_update.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_update.Location = New System.Drawing.Point(460, 474)
+        Me.btn_update.Name = "btn_update"
+        Me.btn_update.Size = New System.Drawing.Size(81, 42)
+        Me.btn_update.TabIndex = 58
+        Me.btn_update.Text = "UPDATE"
+        Me.btn_update.UseVisualStyleBackColor = False
         '
         'dg_users
         '
+        Me.dg_users.AllowUserToAddRows = False
+        Me.dg_users.AllowUserToDeleteRows = False
+        Me.dg_users.AllowUserToResizeColumns = False
+        Me.dg_users.AllowUserToResizeRows = False
         Me.dg_users.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
@@ -181,7 +192,7 @@ Partial Class frm_user
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dg_users.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dg_users.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dg_users.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.M, Me.Column2})
+        Me.dg_users.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id, Me.Column1, Me.M, Me.Column2, Me.user_type})
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
         DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -191,7 +202,9 @@ Partial Class frm_user
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.dg_users.DefaultCellStyle = DataGridViewCellStyle2
         Me.dg_users.Location = New System.Drawing.Point(219, 283)
+        Me.dg_users.MultiSelect = False
         Me.dg_users.Name = "dg_users"
+        Me.dg_users.ReadOnly = True
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
         DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -200,26 +213,46 @@ Partial Class frm_user
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dg_users.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+        Me.dg_users.RowHeadersVisible = False
+        Me.dg_users.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dg_users.Size = New System.Drawing.Size(462, 150)
         Me.dg_users.TabIndex = 59
+        '
+        'id
+        '
+        Me.id.DataPropertyName = "user_id"
+        Me.id.HeaderText = "ID"
+        Me.id.Name = "id"
+        Me.id.ReadOnly = True
+        Me.id.Visible = False
         '
         'Column1
         '
         Me.Column1.DataPropertyName = "Name"
         Me.Column1.HeaderText = "NAME"
         Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
         '
         'M
         '
         Me.M.DataPropertyName = "username"
         Me.M.HeaderText = "USERNAME"
         Me.M.Name = "M"
+        Me.M.ReadOnly = True
         '
         'Column2
         '
         Me.Column2.DataPropertyName = "password"
         Me.Column2.HeaderText = "PASSWORD"
         Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
+        '
+        'user_type
+        '
+        Me.user_type.DataPropertyName = "user_type"
+        Me.user_type.HeaderText = "USER TYPE"
+        Me.user_type.Name = "user_type"
+        Me.user_type.ReadOnly = True
         '
         'frm_user
         '
@@ -227,7 +260,7 @@ Partial Class frm_user
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DarkGray
         Me.Controls.Add(Me.dg_users)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btn_update)
         Me.Controls.Add(Me.btnSave)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "frm_user"
@@ -246,13 +279,14 @@ Partial Class frm_user
     Friend WithEvents btnSave As System.Windows.Forms.Button
     Friend WithEvents lblId As System.Windows.Forms.Label
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
-    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents btn_update As System.Windows.Forms.Button
     Friend WithEvents dg_users As System.Windows.Forms.DataGridView
     Friend WithEvents txtb_pass As System.Windows.Forms.TextBox
     Friend WithEvents cbo_usertype As System.Windows.Forms.ComboBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents Column1 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents M As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Column2 As System.Windows.Forms.DataGridViewTextBoxColumn
-
+    Friend WithEvents id As DataGridViewTextBoxColumn
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents M As DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents user_type As DataGridViewTextBoxColumn
 End Class
