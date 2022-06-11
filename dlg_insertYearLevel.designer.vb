@@ -97,7 +97,6 @@ Partial Class dlg_insertYearLevel
         Me.Name = "dlg_insertYearLevel"
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "dlg_insertYearLevel"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

@@ -186,7 +186,7 @@ Public Class frm_slists
     End Sub
 
     Private Sub btn_updtStud_Click(sender As Object, e As EventArgs) Handles btn_updtStud.Click
-        If MessageBox.Show("", "Do You want to Update a Student?", MessageBoxButtons.YesNo) = DialogResult.Yes Then
+        If dlg_updatestudents.ShowDialog = DialogResult.Yes Then
             txtb_studFname.Enabled = True
             txtb_studLname.Enabled = True
             txtb_studMI.Enabled = True
@@ -211,6 +211,7 @@ Public Class frm_slists
             txtb_noUnits.Clear()
             txtb_RpU.Clear()
         End If
+
     End Sub
 
     Private Sub btn_enter_Click(sender As Object, e As EventArgs)
@@ -277,7 +278,7 @@ Public Class frm_slists
     Private Sub btn_gotoAcct_Click(sender As Object, e As EventArgs) Handles btn_gotoAcct.Click
         Try
             If txtb_studId.Text = "" Then
-                MessageBox.Show("Pag select sag estudyanto bago ka mo proceed")
+                MessageBox.Show("Please select student first")
             Else
                 current_menu = 2
                 Dashboard.btn_menuStudentsAccount_click(sender, e)

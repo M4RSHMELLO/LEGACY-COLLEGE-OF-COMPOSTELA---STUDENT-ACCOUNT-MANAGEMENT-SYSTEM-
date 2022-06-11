@@ -183,6 +183,16 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property adduser() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("adduser", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property dlg_existed() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("dlg_existed", resourceCulture)
@@ -283,6 +293,26 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property scholarship_add_icon() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("scholarship_add_icon", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property scholarship_update_icon() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("scholarship_update_icon", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property schoolyear() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("schoolyear", resourceCulture)
@@ -326,6 +356,16 @@ Namespace My.Resources
         Friend ReadOnly Property updatefeesicon() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("updatefeesicon", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property updateuser() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("updateuser", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

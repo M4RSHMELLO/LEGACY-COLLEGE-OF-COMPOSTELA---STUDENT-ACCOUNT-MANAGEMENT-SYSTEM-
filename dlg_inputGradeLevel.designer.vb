@@ -97,7 +97,6 @@ Partial Class dlg_inputGradeLevel
         Me.Name = "dlg_inputGradeLevel"
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "dlg_inputGradeLevel"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

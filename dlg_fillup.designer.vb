@@ -92,7 +92,6 @@ Partial Class dlg_fillup
         Me.Name = "dlg_fillup"
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "FILL UP ALL THESE FIELDS DIALOG"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

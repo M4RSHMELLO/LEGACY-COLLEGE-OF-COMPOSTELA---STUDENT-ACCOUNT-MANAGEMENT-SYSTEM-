@@ -97,7 +97,6 @@ Partial Class dlg_updateGradeLevel
         Me.Name = "dlg_updateGradeLevel"
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "dlg_updateGradeLevel"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

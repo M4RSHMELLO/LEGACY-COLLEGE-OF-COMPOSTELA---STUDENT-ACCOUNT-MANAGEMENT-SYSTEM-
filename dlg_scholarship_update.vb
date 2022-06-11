@@ -1,10 +1,10 @@
 ﻿Imports System.Windows.Forms
 
-Public Class dlg_newCourse
+Public Class dlg_scholarship_update
 
 
     Private Sub dlg_addsdnt_yes_Click(sender As Object, e As EventArgs) Handles dlg_addsdnt_yes.Click
-        Me.DialogResult = System.Windows.Forms.DialogResult.Yes
+        Me.DialogResult = System.Windows.Forms.DialogResult.OK
         Me.Close()
     End Sub
 

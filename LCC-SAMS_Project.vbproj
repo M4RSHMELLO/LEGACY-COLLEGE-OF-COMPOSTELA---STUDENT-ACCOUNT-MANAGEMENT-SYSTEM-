@@ -204,10 +204,34 @@
     <Compile Include="dlg_addfees.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="dlg_addusers.designer.vb">
+      <DependentUpon>dlg_addusers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlg_addusers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlg_scholarship_add.designer.vb">
+      <DependentUpon>dlg_scholarship_add.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlg_scholarship_add.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlg_scholarship_update.designer.vb">
+      <DependentUpon>dlg_scholarship_update.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlg_scholarship_update.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="dlg_updatefees.designer.vb">
       <DependentUpon>dlg_updatefees.vb</DependentUpon>
     </Compile>
     <Compile Include="dlg_updatefees.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlg_updateuser.designer.vb">
+      <DependentUpon>dlg_updateuser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlg_updateuser.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="elem_ds.Designer.vb">
@@ -461,6 +485,9 @@
     <EmbeddedResource Include="dlg_addstudents.resx">
       <DependentUpon>dlg_addstudents.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="dlg_addusers.resx">
+      <DependentUpon>dlg_addusers.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="dlg_delete.resx">
       <DependentUpon>dlg_delete.vb</DependentUpon>
     </EmbeddedResource>
@@ -491,6 +518,12 @@
     <EmbeddedResource Include="dlg_savesuccessfully.resx">
       <DependentUpon>dlg_savesuccessfully.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="dlg_scholarship_add.resx">
+      <DependentUpon>dlg_scholarship_add.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlg_scholarship_update.resx">
+      <DependentUpon>dlg_scholarship_update.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="dlg_updateCourse.resx">
       <DependentUpon>dlg_updateCourse.vb</DependentUpon>
     </EmbeddedResource>
@@ -508,6 +541,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="dlg_updatesy.resx">
       <DependentUpon>dlg_updatesy.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlg_updateuser.resx">
+      <DependentUpon>dlg_updateuser.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="dlg_updateYearLevel.resx">
       <DependentUpon>dlg_updateYearLevel.vb</DependentUpon>
@@ -807,12 +843,14 @@
     <None Include="Resources\achup.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\updateuser.png" />
     <None Include="Resources\updatefeesicon.png" />
     <None Include="Resources\loginerroricon.png" />
     <None Include="Resources\addstudentsicon.png" />
     <None Include="Resources\dlg_existed.png" />
     <None Include="Resources\dlg_logouticon.png" />
     <None Include="Resources\addfeesicon.png" />
+    <None Include="Resources\adduser.png" />
     <Content Include="Resources\dlg_studentsupdatedsuccessfully.png" />
     <None Include="Resources\dlg_studentsupdatedsuccessfully1.png" />
     <None Include="Resources\fillupform.png" />
@@ -822,6 +860,8 @@
     <None Include="Resources\savesuccessfully2.png" />
     <None Include="Resources\schoolyear.png" />
     <None Include="Resources\schoolyearadd.png" />
+    <None Include="Resources\scholarship_add_icon.png" />
+    <None Include="Resources\scholarship_update_icon.png" />
     <Content Include="Resources\success.png" />
     <Content Include="Resources\updatedsuccessfully.png" />
     <None Include="Resources\success1.png" />

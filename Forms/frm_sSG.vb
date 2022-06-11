@@ -1,7 +1,6 @@
 ﻿Public Class frm_sSG
 
-    Private Sub cbo_SelectDept_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbo_SelectDept.SelectedIndexChanged
-
+    Sub _displayScholarList()
         ''txtb_Search.Clear()
         If cbo_SelectDept.SelectedIndex = 0 Then
             dg_StudScholarRec.Columns(0).DataPropertyName = "stud_id"
@@ -70,7 +69,9 @@
             Dim junior_studScholar As String = "select  s.jstud_id,s.jstud_fname,s.jstud_lname,s.jstud_mi,sl.sl_name,sy.jsy_name,gl.jgl_name from tbl_juniorhigh_students s inner join tbl_juniorhigh_sy sy  on s.jsy_id=sy.jsy_id inner join tbl_juniorhigh_gradelevel gl on s.jgl_id=gl.jgl_id  inner join tbl_elem_scholarlist sl on sl.stud_id=s.jstud_id  order by s.jstud_lname asc"
             _displayRecords(junior_studScholar, dg_StudScholarRec)
         End If
-
+    End Sub
+    Private Sub cbo_SelectDept_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbo_SelectDept.SelectedIndexChanged
+        _displayScholarList()
     End Sub
 
 
@@ -241,5 +242,76 @@
 
     Private Sub btn_add_Click(sender As Object, e As EventArgs) Handles btn_add.Click
 
+        If btn_add.Text = "ADD" Then
+            If dlg_scholarship_add.ShowDialog = DialogResult.OK Then
+                btn_add.Text = "SAVE"
+                txtb_ScholarType.Enabled = True
+                txtb_ScholarAmnt.Enabled = True
+            End If
+        ElseIf btn_add.Text = "SAVE" Then
+            Dim status As Integer = 0
+            If txtb_ScholarType.Text = "" Or txtb_ScholarAmnt.Text = "" Then
+                dlg_fillup.ShowDialog()
+            Else
+                If rb_active.Checked = True Then
+                    status = 1
+                ElseIf rb_inactive.Checked = True Then
+                    status = 0
+                End If
+                Dim insert_sl As String = "Insert into tbl_coll_scholarlist values(0,'" & txtb_studid.Text & "','" & txtb_ScholarType.Text & "','" & txtb_ScholarAmnt.Text & "','" & status & "')"
+                _insertData(insert_sl)
+                If dlg_savesuccessfully.ShowDialog() = DialogResult.OK Then
+                    txtb_ScholarType.Enabled = False
+                    txtb_ScholarAmnt.Enabled = False
+                    _displayScholarList()
+                    btn_add.Text = "ADD"
+                End If
+            End If
+        End If
+
+    End Sub
+
+    Private Sub btn_update_Click(sender As Object, e As EventArgs) Handles btn_update.Click
+        If btn_update.Text = "UPDATE" Then
+            If dlg_scholarship_update.ShowDialog = DialogResult.OK Then
+                btn_update.Text = "SAVE"
+                txtb_ScholarType.Enabled = True
+                txtb_ScholarAmnt.Enabled = True
+            End If
+        ElseIf btn_update.Text = "SAVE" Then
+            Dim status As Integer = 0
+            If txtb_ScholarType.Text = "" Or txtb_ScholarAmnt.Text = "" Then
+                dlg_fillup.ShowDialog()
+                txtb_ScholarType.Enabled = True
+                txtb_ScholarAmnt.Enabled = True
+            Else
+                If rb_active.Checked = True Then
+                    status = 1
+                ElseIf rb_inactive.Checked = True Then
+                    status = 0
+                End If
+                Dim update_sl As String = "update  tbl_coll_scholarlist set sl_name='" & txtb_ScholarType.Text & "',sl_amnt='" & txtb_ScholarAmnt.Text & "',sl_status='" & status & "' where stud_id='" & txtb_studid.Text & "' "
+                _updateData(update_sl)
+                If dlg_savesuccessfully.ShowDialog() = DialogResult.OK Then
+                    txtb_ScholarType.Enabled = False
+                    txtb_ScholarAmnt.Enabled = False
+                    _displayScholarList()
+                    btn_update.Text = "UPDATE"
+                End If
+            End If
+        End If
+
+
+
+    End Sub
+
+    Private Sub btn_cancel_Click(sender As Object, e As EventArgs) Handles btn_cancel.Click
+        _displayScholarList()
+        txtb_ScholarType.Clear()
+        txtb_ScholarAmnt.Clear()
+        txtb_ScholarType.Enabled = False
+        txtb_ScholarAmnt.Enabled = False
+        btn_add.Text = "ADD"
+        btn_update.Text = "UPDATE"
     End Sub
 End Class

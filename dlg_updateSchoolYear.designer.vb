@@ -95,7 +95,6 @@ Partial Class dlg_updateSchoolYear
         Me.Name = "dlg_updateSchoolYear"
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "dlg_updateSchoolYear"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

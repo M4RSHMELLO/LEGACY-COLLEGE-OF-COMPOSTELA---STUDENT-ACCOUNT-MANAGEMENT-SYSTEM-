@@ -97,7 +97,6 @@ Partial Class dlg_updateCourse
         Me.Name = "dlg_updateCourse"
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "dlg_updateCourse"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

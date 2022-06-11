@@ -5,7 +5,7 @@ Public Class frm_user
     Dim creationDate As String = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")
     Private Sub btn_update_Click(sender As Object, e As EventArgs) Handles btn_update.Click
         If btn_update.Text = "UPDATE" Then
-            If dlg_updatefees.ShowDialog() = DialogResult.OK Then
+            If dlg_updateuser.ShowDialog() = DialogResult.OK Then
                 btn_update.Text = "SAVE"
                 txtb_name.Enabled = True
                 txtb_Uname.Enabled = True
@@ -26,7 +26,7 @@ Public Class frm_user
                     txtb_pass.Enabled = False
                     cbo_usertype.Enabled = False
                     _displayRecords(strQuerry, dg_users)
-
+                    btn_update.Text = "UPDATE"
                 End If
             End If
         End If
@@ -42,7 +42,7 @@ Public Class frm_user
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
         If btnSave.Text = "ADD" Then
-            If dlg_addfees.ShowDialog() = DialogResult.OK Then
+            If dlg_addusers.ShowDialog() = DialogResult.OK Then
                 btnSave.Text = "SAVE"
                 txtb_name.Enabled = True
                 txtb_Uname.Enabled = True
@@ -67,7 +67,7 @@ Public Class frm_user
                     txtb_pass.Enabled = False
                     cbo_usertype.Enabled = False
                     _displayRecords(strQuerry, dg_users)
-
+                    btnSave.Text = "ADD"
                 End If
             End If
 

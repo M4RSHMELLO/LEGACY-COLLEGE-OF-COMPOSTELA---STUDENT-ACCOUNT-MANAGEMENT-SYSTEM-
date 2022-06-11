@@ -48,6 +48,8 @@ Partial Class frm_sSG
         Me.txtb_studFname = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.btn_add = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.btn_update = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.rb_inactive = New System.Windows.Forms.RadioButton()
         Me.rb_active = New System.Windows.Forms.RadioButton()
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
@@ -71,8 +73,7 @@ Partial Class frm_sSG
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.cbo_SelectDept = New System.Windows.Forms.ComboBox()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.btn_update = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.btn_add = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.btn_cancel = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -325,6 +326,7 @@ Partial Class frm_sSG
         '
         'GroupBox3
         '
+        Me.GroupBox3.Controls.Add(Me.btn_cancel)
         Me.GroupBox3.Controls.Add(Me.btn_add)
         Me.GroupBox3.Controls.Add(Me.btn_update)
         Me.GroupBox3.Controls.Add(Me.rb_inactive)
@@ -343,6 +345,84 @@ Partial Class frm_sSG
         Me.GroupBox3.TabIndex = 39
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "SCHOLARSHIP INFORMATION"
+        '
+        'btn_add
+        '
+        Me.btn_add.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
+        Me.btn_add.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.btn_add.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.btn_add.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btn_add.BorderRadius = 0
+        Me.btn_add.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.btn_add.ButtonText = "ADD"
+        Me.btn_add.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_add.DisabledColor = System.Drawing.Color.Gray
+        Me.btn_add.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!)
+        Me.btn_add.ForeColor = System.Drawing.Color.SeaGreen
+        Me.btn_add.Iconcolor = System.Drawing.Color.Transparent
+        Me.btn_add.Iconimage = Nothing
+        Me.btn_add.Iconimage_right = Nothing
+        Me.btn_add.Iconimage_right_Selected = Nothing
+        Me.btn_add.Iconimage_Selected = Nothing
+        Me.btn_add.IconMarginLeft = 0
+        Me.btn_add.IconMarginRight = 0
+        Me.btn_add.IconRightVisible = False
+        Me.btn_add.IconRightZoom = 0R
+        Me.btn_add.IconVisible = False
+        Me.btn_add.IconZoom = 90.0R
+        Me.btn_add.IsTab = False
+        Me.btn_add.Location = New System.Drawing.Point(151, 149)
+        Me.btn_add.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
+        Me.btn_add.Name = "btn_add"
+        Me.btn_add.Normalcolor = System.Drawing.SystemColors.ButtonFace
+        Me.btn_add.OnHovercolor = System.Drawing.Color.Goldenrod
+        Me.btn_add.OnHoverTextColor = System.Drawing.Color.White
+        Me.btn_add.selected = False
+        Me.btn_add.Size = New System.Drawing.Size(136, 35)
+        Me.btn_add.TabIndex = 54
+        Me.btn_add.Text = "ADD"
+        Me.btn_add.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btn_add.Textcolor = System.Drawing.Color.SeaGreen
+        Me.btn_add.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        '
+        'btn_update
+        '
+        Me.btn_update.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
+        Me.btn_update.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.btn_update.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.btn_update.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btn_update.BorderRadius = 0
+        Me.btn_update.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.btn_update.ButtonText = "UPDATE"
+        Me.btn_update.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_update.DisabledColor = System.Drawing.Color.Gray
+        Me.btn_update.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!)
+        Me.btn_update.ForeColor = System.Drawing.Color.SeaGreen
+        Me.btn_update.Iconcolor = System.Drawing.Color.Transparent
+        Me.btn_update.Iconimage = Nothing
+        Me.btn_update.Iconimage_right = Nothing
+        Me.btn_update.Iconimage_right_Selected = Nothing
+        Me.btn_update.Iconimage_Selected = Nothing
+        Me.btn_update.IconMarginLeft = 0
+        Me.btn_update.IconMarginRight = 0
+        Me.btn_update.IconRightVisible = False
+        Me.btn_update.IconRightZoom = 0R
+        Me.btn_update.IconVisible = False
+        Me.btn_update.IconZoom = 90.0R
+        Me.btn_update.IsTab = False
+        Me.btn_update.Location = New System.Drawing.Point(293, 149)
+        Me.btn_update.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
+        Me.btn_update.Name = "btn_update"
+        Me.btn_update.Normalcolor = System.Drawing.SystemColors.ButtonFace
+        Me.btn_update.OnHovercolor = System.Drawing.Color.Goldenrod
+        Me.btn_update.OnHoverTextColor = System.Drawing.Color.White
+        Me.btn_update.selected = False
+        Me.btn_update.Size = New System.Drawing.Size(136, 35)
+        Me.btn_update.TabIndex = 53
+        Me.btn_update.Text = "UPDATE"
+        Me.btn_update.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btn_update.Textcolor = System.Drawing.Color.SeaGreen
+        Me.btn_update.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
         'rb_inactive
         '
@@ -576,85 +656,44 @@ Partial Class frm_sSG
         Me.Label14.TabIndex = 8
         Me.Label14.Text = "SELECT DEPARTMENT"
         '
-        'btn_update
+        'btn_cancel
         '
-        Me.btn_update.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
-        Me.btn_update.Anchor = System.Windows.Forms.AnchorStyles.Right
-        Me.btn_update.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.btn_update.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btn_update.BorderRadius = 0
-        Me.btn_update.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.btn_update.ButtonText = "UPDATE"
-        Me.btn_update.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_update.DisabledColor = System.Drawing.Color.Gray
-        Me.btn_update.Enabled = False
-        Me.btn_update.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!)
-        Me.btn_update.ForeColor = System.Drawing.Color.SeaGreen
-        Me.btn_update.Iconcolor = System.Drawing.Color.Transparent
-        Me.btn_update.Iconimage = Nothing
-        Me.btn_update.Iconimage_right = Nothing
-        Me.btn_update.Iconimage_right_Selected = Nothing
-        Me.btn_update.Iconimage_Selected = Nothing
-        Me.btn_update.IconMarginLeft = 0
-        Me.btn_update.IconMarginRight = 0
-        Me.btn_update.IconRightVisible = False
-        Me.btn_update.IconRightZoom = 0R
-        Me.btn_update.IconVisible = False
-        Me.btn_update.IconZoom = 90.0R
-        Me.btn_update.IsTab = False
-        Me.btn_update.Location = New System.Drawing.Point(279, 149)
-        Me.btn_update.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
-        Me.btn_update.Name = "btn_update"
-        Me.btn_update.Normalcolor = System.Drawing.SystemColors.ButtonFace
-        Me.btn_update.OnHovercolor = System.Drawing.Color.Goldenrod
-        Me.btn_update.OnHoverTextColor = System.Drawing.Color.White
-        Me.btn_update.selected = False
-        Me.btn_update.Size = New System.Drawing.Size(136, 35)
-        Me.btn_update.TabIndex = 53
-        Me.btn_update.Text = "UPDATE"
-        Me.btn_update.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.btn_update.Textcolor = System.Drawing.Color.SeaGreen
-        Me.btn_update.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        '
-        'btn_add
-        '
-        Me.btn_add.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
-        Me.btn_add.Anchor = System.Windows.Forms.AnchorStyles.Right
-        Me.btn_add.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.btn_add.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btn_add.BorderRadius = 0
-        Me.btn_add.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.btn_add.ButtonText = "ADD"
-        Me.btn_add.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_add.DisabledColor = System.Drawing.Color.Gray
-        Me.btn_add.Enabled = False
-        Me.btn_add.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!)
-        Me.btn_add.ForeColor = System.Drawing.Color.SeaGreen
-        Me.btn_add.Iconcolor = System.Drawing.Color.Transparent
-        Me.btn_add.Iconimage = Nothing
-        Me.btn_add.Iconimage_right = Nothing
-        Me.btn_add.Iconimage_right_Selected = Nothing
-        Me.btn_add.Iconimage_Selected = Nothing
-        Me.btn_add.IconMarginLeft = 0
-        Me.btn_add.IconMarginRight = 0
-        Me.btn_add.IconRightVisible = False
-        Me.btn_add.IconRightZoom = 0R
-        Me.btn_add.IconVisible = False
-        Me.btn_add.IconZoom = 90.0R
-        Me.btn_add.IsTab = False
-        Me.btn_add.Location = New System.Drawing.Point(129, 149)
-        Me.btn_add.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
-        Me.btn_add.Name = "btn_add"
-        Me.btn_add.Normalcolor = System.Drawing.SystemColors.ButtonFace
-        Me.btn_add.OnHovercolor = System.Drawing.Color.Goldenrod
-        Me.btn_add.OnHoverTextColor = System.Drawing.Color.White
-        Me.btn_add.selected = False
-        Me.btn_add.Size = New System.Drawing.Size(136, 35)
-        Me.btn_add.TabIndex = 54
-        Me.btn_add.Text = "ADD"
-        Me.btn_add.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.btn_add.Textcolor = System.Drawing.Color.SeaGreen
-        Me.btn_add.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_cancel.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
+        Me.btn_cancel.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.btn_cancel.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.btn_cancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btn_cancel.BorderRadius = 0
+        Me.btn_cancel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.btn_cancel.ButtonText = "CANCEL"
+        Me.btn_cancel.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_cancel.DisabledColor = System.Drawing.Color.Gray
+        Me.btn_cancel.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!)
+        Me.btn_cancel.ForeColor = System.Drawing.Color.SeaGreen
+        Me.btn_cancel.Iconcolor = System.Drawing.Color.Transparent
+        Me.btn_cancel.Iconimage = Nothing
+        Me.btn_cancel.Iconimage_right = Nothing
+        Me.btn_cancel.Iconimage_right_Selected = Nothing
+        Me.btn_cancel.Iconimage_Selected = Nothing
+        Me.btn_cancel.IconMarginLeft = 0
+        Me.btn_cancel.IconMarginRight = 0
+        Me.btn_cancel.IconRightVisible = False
+        Me.btn_cancel.IconRightZoom = 0R
+        Me.btn_cancel.IconVisible = False
+        Me.btn_cancel.IconZoom = 90.0R
+        Me.btn_cancel.IsTab = False
+        Me.btn_cancel.Location = New System.Drawing.Point(11, 149)
+        Me.btn_cancel.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
+        Me.btn_cancel.Name = "btn_cancel"
+        Me.btn_cancel.Normalcolor = System.Drawing.SystemColors.ButtonFace
+        Me.btn_cancel.OnHovercolor = System.Drawing.Color.Goldenrod
+        Me.btn_cancel.OnHoverTextColor = System.Drawing.Color.White
+        Me.btn_cancel.selected = False
+        Me.btn_cancel.Size = New System.Drawing.Size(136, 35)
+        Me.btn_cancel.TabIndex = 55
+        Me.btn_cancel.Text = "CANCEL"
+        Me.btn_cancel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btn_cancel.Textcolor = System.Drawing.Color.SeaGreen
+        Me.btn_cancel.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
         'frm_sSG
         '
@@ -731,4 +770,5 @@ Partial Class frm_sSG
     Friend WithEvents level As DataGridViewTextBoxColumn
     Friend WithEvents btn_add As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents btn_update As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents btn_cancel As Bunifu.Framework.UI.BunifuFlatButton
 End Class

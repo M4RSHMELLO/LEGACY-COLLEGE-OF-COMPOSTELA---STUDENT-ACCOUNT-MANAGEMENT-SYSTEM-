@@ -112,7 +112,7 @@ Partial Class dlg_logout
         Me.Name = "dlg_logout"
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "LOGOUT FORM"
+        Me.Text = "LOGOUT"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

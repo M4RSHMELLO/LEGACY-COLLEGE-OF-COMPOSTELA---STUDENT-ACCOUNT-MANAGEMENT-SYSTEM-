@@ -97,7 +97,6 @@ Partial Class dlg_updateYearLevel
         Me.Name = "dlg_updateYearLevel"
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "dlg_updateYearLevel"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

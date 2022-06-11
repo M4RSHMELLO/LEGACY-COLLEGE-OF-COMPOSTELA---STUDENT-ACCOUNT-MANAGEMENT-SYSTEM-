@@ -111,7 +111,7 @@ Partial Class dlg_addfees
         Me.Name = "dlg_addfees"
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "ADD FEES"
+        Me.Text = "Add Fees"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

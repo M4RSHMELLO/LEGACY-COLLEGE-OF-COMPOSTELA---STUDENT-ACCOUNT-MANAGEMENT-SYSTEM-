@@ -92,7 +92,6 @@ Partial Class dlg_exist
         Me.Name = "dlg_exist"
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "EXISTED DIALOG FORM!"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
