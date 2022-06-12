@@ -75,11 +75,11 @@ Partial Class dlg_newCourse
         'txtb_nCourse
         '
         Me.txtb_nCourse.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.txtb_nCourse.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtb_nCourse.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtb_nCourse.Location = New System.Drawing.Point(63, 78)
         Me.txtb_nCourse.MaxLength = 100
         Me.txtb_nCourse.Name = "txtb_nCourse"
-        Me.txtb_nCourse.Size = New System.Drawing.Size(312, 35)
+        Me.txtb_nCourse.Size = New System.Drawing.Size(312, 30)
         Me.txtb_nCourse.TabIndex = 36
         '
         'dlg_newCourse

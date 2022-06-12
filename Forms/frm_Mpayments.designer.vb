@@ -1415,6 +1415,7 @@ Partial Class frm_Mpayments
         '
         'cbo_SortSY
         '
+        Me.cbo_SortSY.DisplayMember = "sy_id"
         Me.cbo_SortSY.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbo_SortSY.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbo_SortSY.FormattingEnabled = True

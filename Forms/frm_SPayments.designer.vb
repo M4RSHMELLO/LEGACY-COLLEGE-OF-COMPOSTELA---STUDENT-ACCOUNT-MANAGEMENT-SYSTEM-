@@ -22,12 +22,6 @@ Partial Class frm_SPayments
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle29 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle30 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle31 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle32 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_SPayments))
-        Dim DataGridViewCellStyle33 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle34 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle35 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle36 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -42,18 +36,28 @@ Partial Class frm_SPayments
         Dim DataGridViewCellStyle45 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle46 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle47 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle48 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle49 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle50 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle51 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle52 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle53 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle54 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle55 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle30 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle31 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle32 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle33 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle56 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle57 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle48 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle55 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle58 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_SPayments))
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.coll_dept = New System.Windows.Forms.TabPage()
         Me.pnl_receipts = New System.Windows.Forms.Panel()
+        Me.lbl_cashier = New System.Windows.Forms.Label()
+        Me.Label43 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.dg_receipts = New Bunifu.Framework.UI.BunifuCustomDataGrid()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -123,7 +127,12 @@ Partial Class frm_SPayments
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtb_name = New System.Windows.Forms.TextBox()
         Me.elem_dept = New System.Windows.Forms.TabPage()
-        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.pnl_elemReceipts = New System.Windows.Forms.Panel()
+        Me.lbl_cashierE = New System.Windows.Forms.Label()
+        Me.Label47 = New System.Windows.Forms.Label()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.Label37 = New System.Windows.Forms.Label()
         Me.dg_eReceipts = New Bunifu.Framework.UI.BunifuCustomDataGrid()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -133,8 +142,6 @@ Partial Class frm_SPayments
         Me.lbl_eBal = New System.Windows.Forms.Label()
         Me.Label38 = New System.Windows.Forms.Label()
         Me.lbl_eDate = New System.Windows.Forms.Label()
-        Me.Label40 = New System.Windows.Forms.Label()
-        Me.Label41 = New System.Windows.Forms.Label()
         Me.lbl_eTamnt = New System.Windows.Forms.Label()
         Me.lbl_eTn = New System.Windows.Forms.Label()
         Me.btn_ePrint = New Bunifu.Framework.UI.BunifuFlatButton()
@@ -149,11 +156,6 @@ Partial Class frm_SPayments
         Me.txtb_eStudCurrAcct = New System.Windows.Forms.TextBox()
         Me.GroupBox11 = New System.Windows.Forms.GroupBox()
         Me.dg_ePayment = New Bunifu.Framework.UI.BunifuCustomDataGrid()
-        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewButtonColumn1 = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.btn_eAdd = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.Label53 = New System.Windows.Forms.Label()
         Me.Label54 = New System.Windows.Forms.Label()
@@ -183,7 +185,10 @@ Partial Class frm_SPayments
         Me.Label14 = New System.Windows.Forms.Label()
         Me.txtb_eSearch = New System.Windows.Forms.TextBox()
         Me.sh_dept = New System.Windows.Forms.TabPage()
-        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.pnl_sReceipts = New System.Windows.Forms.Panel()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.Label39 = New System.Windows.Forms.Label()
+        Me.Label40 = New System.Windows.Forms.Label()
         Me.dg_sReceipts = New Bunifu.Framework.UI.BunifuCustomDataGrid()
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -193,10 +198,8 @@ Partial Class frm_SPayments
         Me.lbl_sBal = New System.Windows.Forms.Label()
         Me.Label48 = New System.Windows.Forms.Label()
         Me.lbl_sDate = New System.Windows.Forms.Label()
-        Me.Label89 = New System.Windows.Forms.Label()
-        Me.Label90 = New System.Windows.Forms.Label()
         Me.lbl_sTamnt = New System.Windows.Forms.Label()
-        Me.Label92 = New System.Windows.Forms.Label()
+        Me.lbl_sTn = New System.Windows.Forms.Label()
         Me.btn_sPrint = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.btn_sClear = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.btn_sSave = New Bunifu.Framework.UI.BunifuFlatButton()
@@ -209,11 +212,6 @@ Partial Class frm_SPayments
         Me.txtb_sCurrAcct = New System.Windows.Forms.TextBox()
         Me.GroupBox20 = New System.Windows.Forms.GroupBox()
         Me.dg_sPayment = New Bunifu.Framework.UI.BunifuCustomDataGrid()
-        Me.DataGridViewTextBoxColumn13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn16 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewButtonColumn2 = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.btn_sAdd = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.Label84 = New System.Windows.Forms.Label()
         Me.Label85 = New System.Windows.Forms.Label()
@@ -243,7 +241,10 @@ Partial Class frm_SPayments
         Me.Label107 = New System.Windows.Forms.Label()
         Me.txtb_sSearch = New System.Windows.Forms.TextBox()
         Me.jh_dept = New System.Windows.Forms.TabPage()
-        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.pnl_jReceipts = New System.Windows.Forms.Panel()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.Label41 = New System.Windows.Forms.Label()
+        Me.Label42 = New System.Windows.Forms.Label()
         Me.dg_jReceipts = New Bunifu.Framework.UI.BunifuCustomDataGrid()
         Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -253,10 +254,8 @@ Partial Class frm_SPayments
         Me.lbl_jBal = New System.Windows.Forms.Label()
         Me.Label66 = New System.Windows.Forms.Label()
         Me.lbl_jDate = New System.Windows.Forms.Label()
-        Me.Label68 = New System.Windows.Forms.Label()
-        Me.Label69 = New System.Windows.Forms.Label()
         Me.lbl_jTamnt = New System.Windows.Forms.Label()
-        Me.Label71 = New System.Windows.Forms.Label()
+        Me.lbl_jOn = New System.Windows.Forms.Label()
         Me.btn_jPrint = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.btn_jClear = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.btn_jSave = New Bunifu.Framework.UI.BunifuFlatButton()
@@ -269,11 +268,6 @@ Partial Class frm_SPayments
         Me.txtb_jCurrAcct = New System.Windows.Forms.TextBox()
         Me.GroupBox14 = New System.Windows.Forms.GroupBox()
         Me.dg_jPayment = New Bunifu.Framework.UI.BunifuCustomDataGrid()
-        Me.DataGridViewTextBoxColumn17 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn18 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn19 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn20 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewButtonColumn3 = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.btn_jAdd = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.Label35 = New System.Windows.Forms.Label()
         Me.Label58 = New System.Windows.Forms.Label()
@@ -302,9 +296,30 @@ Partial Class frm_SPayments
         Me.Label79 = New System.Windows.Forms.Label()
         Me.Label80 = New System.Windows.Forms.Label()
         Me.txtb_jSearch = New System.Windows.Forms.TextBox()
+        Me.print_collR = New System.Drawing.Printing.PrintDocument()
+        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.delete_elemP = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.DataGridViewTextBoxColumn13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn16 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.delete_seniorP = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.DataGridViewTextBoxColumn17 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn18 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn19 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn20 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.delete_juniorP = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.lbl_cashierS = New System.Windows.Forms.Label()
+        Me.Label49 = New System.Windows.Forms.Label()
+        Me.lbl_cashierJ = New System.Windows.Forms.Label()
+        Me.Label65 = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.coll_dept.SuspendLayout()
         Me.pnl_receipts.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dg_receipts, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox8.SuspendLayout()
@@ -313,7 +328,8 @@ Partial Class frm_SPayments
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.elem_dept.SuspendLayout()
-        Me.Panel1.SuspendLayout()
+        Me.pnl_elemReceipts.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dg_eReceipts, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox10.SuspendLayout()
         Me.GroupBox11.SuspendLayout()
@@ -322,7 +338,8 @@ Partial Class frm_SPayments
         Me.GroupBox6.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
         Me.sh_dept.SuspendLayout()
-        Me.Panel2.SuspendLayout()
+        Me.pnl_sReceipts.SuspendLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dg_sReceipts, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox19.SuspendLayout()
         Me.GroupBox20.SuspendLayout()
@@ -331,7 +348,8 @@ Partial Class frm_SPayments
         Me.GroupBox23.SuspendLayout()
         Me.GroupBox24.SuspendLayout()
         Me.jh_dept.SuspendLayout()
-        Me.Panel3.SuspendLayout()
+        Me.pnl_jReceipts.SuspendLayout()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dg_jReceipts, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox13.SuspendLayout()
         Me.GroupBox14.SuspendLayout()
@@ -369,7 +387,11 @@ Partial Class frm_SPayments
         '
         'pnl_receipts
         '
-        Me.pnl_receipts.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        resources.ApplyResources(Me.pnl_receipts, "pnl_receipts")
+        Me.pnl_receipts.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.pnl_receipts.Controls.Add(Me.lbl_cashier)
+        Me.pnl_receipts.Controls.Add(Me.Label43)
+        Me.pnl_receipts.Controls.Add(Me.PictureBox1)
         Me.pnl_receipts.Controls.Add(Me.dg_receipts)
         Me.pnl_receipts.Controls.Add(Me.Label23)
         Me.pnl_receipts.Controls.Add(Me.lbl_name)
@@ -381,55 +403,73 @@ Partial Class frm_SPayments
         Me.pnl_receipts.Controls.Add(Me.Label8)
         Me.pnl_receipts.Controls.Add(Me.lbl_tAmnt)
         Me.pnl_receipts.Controls.Add(Me.lbl_orN)
-        resources.ApplyResources(Me.pnl_receipts, "pnl_receipts")
         Me.pnl_receipts.Name = "pnl_receipts"
+        '
+        'lbl_cashier
+        '
+        resources.ApplyResources(Me.lbl_cashier, "lbl_cashier")
+        Me.lbl_cashier.Name = "lbl_cashier"
+        '
+        'Label43
+        '
+        resources.ApplyResources(Me.Label43, "Label43")
+        Me.Label43.Name = "Label43"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.LCC_SAMS_Project.My.Resources.Resources._500x5001
+        resources.ApplyResources(Me.PictureBox1, "PictureBox1")
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.TabStop = False
         '
         'dg_receipts
         '
         Me.dg_receipts.AllowUserToAddRows = False
         Me.dg_receipts.AllowUserToResizeColumns = False
         Me.dg_receipts.AllowUserToResizeRows = False
-        DataGridViewCellStyle29.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.dg_receipts.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle29
+        DataGridViewCellStyle34.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.dg_receipts.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle34
         Me.dg_receipts.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dg_receipts.BackgroundColor = System.Drawing.SystemColors.Control
         Me.dg_receipts.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dg_receipts.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
         Me.dg_receipts.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle30.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle30.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle30.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle30.SelectionBackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle30.SelectionForeColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dg_receipts.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle30
+        DataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle35.BackColor = System.Drawing.Color.Transparent
+        DataGridViewCellStyle35.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle35.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle35.SelectionBackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle35.SelectionForeColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle35.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dg_receipts.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle35
         Me.dg_receipts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dg_receipts.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3})
-        DataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle31.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle31.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle31.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle31.SelectionBackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle31.SelectionForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dg_receipts.DefaultCellStyle = DataGridViewCellStyle31
+        DataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle36.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle36.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle36.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle36.SelectionBackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle36.SelectionForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle36.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dg_receipts.DefaultCellStyle = DataGridViewCellStyle36
         Me.dg_receipts.DoubleBuffered = True
         Me.dg_receipts.EnableHeadersVisualStyles = False
-        Me.dg_receipts.HeaderBgColor = System.Drawing.SystemColors.Control
+        Me.dg_receipts.HeaderBgColor = System.Drawing.Color.Transparent
         Me.dg_receipts.HeaderForeColor = System.Drawing.SystemColors.WindowText
         resources.ApplyResources(Me.dg_receipts, "dg_receipts")
         Me.dg_receipts.Name = "dg_receipts"
         Me.dg_receipts.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle32.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle32.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle32.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle32.SelectionBackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle32.SelectionForeColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dg_receipts.RowHeadersDefaultCellStyle = DataGridViewCellStyle32
+        DataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle37.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle37.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle37.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle37.SelectionBackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle37.SelectionForeColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle37.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dg_receipts.RowHeadersDefaultCellStyle = DataGridViewCellStyle37
         Me.dg_receipts.RowHeadersVisible = False
+        DataGridViewCellStyle38.BackColor = System.Drawing.Color.Transparent
+        Me.dg_receipts.RowsDefaultCellStyle = DataGridViewCellStyle38
         Me.dg_receipts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         '
         'DataGridViewTextBoxColumn2
@@ -496,7 +536,7 @@ Partial Class frm_SPayments
         '
         resources.ApplyResources(Me.lbl_orN, "lbl_orN")
         Me.lbl_orN.BackColor = System.Drawing.SystemColors.MenuBar
-        Me.lbl_orN.ForeColor = System.Drawing.SystemColors.AppWorkspace
+        Me.lbl_orN.ForeColor = System.Drawing.Color.Red
         Me.lbl_orN.Name = "lbl_orN"
         '
         'btn_PrintCreceipts
@@ -699,20 +739,20 @@ Partial Class frm_SPayments
         Me.dg_viewCurrentPayment.AllowUserToAddRows = False
         Me.dg_viewCurrentPayment.AllowUserToResizeColumns = False
         Me.dg_viewCurrentPayment.AllowUserToResizeRows = False
-        DataGridViewCellStyle33.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.dg_viewCurrentPayment.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle33
+        DataGridViewCellStyle39.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.dg_viewCurrentPayment.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle39
         Me.dg_viewCurrentPayment.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dg_viewCurrentPayment.BackgroundColor = System.Drawing.SystemColors.Control
         Me.dg_viewCurrentPayment.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dg_viewCurrentPayment.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle34.BackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle34.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle34.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle34.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle34.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dg_viewCurrentPayment.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle34
+        DataGridViewCellStyle40.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle40.BackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle40.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle40.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle40.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle40.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle40.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dg_viewCurrentPayment.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle40
         Me.dg_viewCurrentPayment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dg_viewCurrentPayment.ColumnHeadersVisible = False
         Me.dg_viewCurrentPayment.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.fees_id, Me.Column1, Me.t_amount, Me.t_balance, Me.delete})
@@ -753,9 +793,9 @@ Partial Class frm_SPayments
         '
         'delete
         '
-        DataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle35.NullValue = "Delete"
-        Me.delete.DefaultCellStyle = DataGridViewCellStyle35
+        DataGridViewCellStyle41.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle41.NullValue = "Delete"
+        Me.delete.DefaultCellStyle = DataGridViewCellStyle41
         Me.delete.FillWeight = 52.79189!
         Me.delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         resources.ApplyResources(Me.delete, "delete")
@@ -1063,7 +1103,7 @@ Partial Class frm_SPayments
         'elem_dept
         '
         Me.elem_dept.BackColor = System.Drawing.SystemColors.Control
-        Me.elem_dept.Controls.Add(Me.Panel1)
+        Me.elem_dept.Controls.Add(Me.pnl_elemReceipts)
         Me.elem_dept.Controls.Add(Me.btn_ePrint)
         Me.elem_dept.Controls.Add(Me.btn_eClear)
         Me.elem_dept.Controls.Add(Me.btn_eSave)
@@ -1075,53 +1115,83 @@ Partial Class frm_SPayments
         resources.ApplyResources(Me.elem_dept, "elem_dept")
         Me.elem_dept.Name = "elem_dept"
         '
-        'Panel1
+        'pnl_elemReceipts
         '
-        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel1.Controls.Add(Me.dg_eReceipts)
-        Me.Panel1.Controls.Add(Me.Label24)
-        Me.Panel1.Controls.Add(Me.lbl_eName)
-        Me.Panel1.Controls.Add(Me.Label26)
-        Me.Panel1.Controls.Add(Me.lbl_eBal)
-        Me.Panel1.Controls.Add(Me.Label38)
-        Me.Panel1.Controls.Add(Me.lbl_eDate)
-        Me.Panel1.Controls.Add(Me.Label40)
-        Me.Panel1.Controls.Add(Me.Label41)
-        Me.Panel1.Controls.Add(Me.lbl_eTamnt)
-        Me.Panel1.Controls.Add(Me.lbl_eTn)
-        resources.ApplyResources(Me.Panel1, "Panel1")
-        Me.Panel1.Name = "Panel1"
+        Me.pnl_elemReceipts.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.pnl_elemReceipts.Controls.Add(Me.lbl_cashierE)
+        Me.pnl_elemReceipts.Controls.Add(Me.Label47)
+        Me.pnl_elemReceipts.Controls.Add(Me.PictureBox2)
+        Me.pnl_elemReceipts.Controls.Add(Me.Label25)
+        Me.pnl_elemReceipts.Controls.Add(Me.Label37)
+        Me.pnl_elemReceipts.Controls.Add(Me.dg_eReceipts)
+        Me.pnl_elemReceipts.Controls.Add(Me.Label24)
+        Me.pnl_elemReceipts.Controls.Add(Me.lbl_eName)
+        Me.pnl_elemReceipts.Controls.Add(Me.Label26)
+        Me.pnl_elemReceipts.Controls.Add(Me.lbl_eBal)
+        Me.pnl_elemReceipts.Controls.Add(Me.Label38)
+        Me.pnl_elemReceipts.Controls.Add(Me.lbl_eDate)
+        Me.pnl_elemReceipts.Controls.Add(Me.lbl_eTamnt)
+        Me.pnl_elemReceipts.Controls.Add(Me.lbl_eTn)
+        resources.ApplyResources(Me.pnl_elemReceipts, "pnl_elemReceipts")
+        Me.pnl_elemReceipts.Name = "pnl_elemReceipts"
+        '
+        'lbl_cashierE
+        '
+        resources.ApplyResources(Me.lbl_cashierE, "lbl_cashierE")
+        Me.lbl_cashierE.Name = "lbl_cashierE"
+        '
+        'Label47
+        '
+        resources.ApplyResources(Me.Label47, "Label47")
+        Me.Label47.Name = "Label47"
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = Global.LCC_SAMS_Project.My.Resources.Resources._500x5001
+        resources.ApplyResources(Me.PictureBox2, "PictureBox2")
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.TabStop = False
+        '
+        'Label25
+        '
+        resources.ApplyResources(Me.Label25, "Label25")
+        Me.Label25.Name = "Label25"
+        '
+        'Label37
+        '
+        resources.ApplyResources(Me.Label37, "Label37")
+        Me.Label37.Name = "Label37"
         '
         'dg_eReceipts
         '
         Me.dg_eReceipts.AllowUserToAddRows = False
         Me.dg_eReceipts.AllowUserToResizeColumns = False
         Me.dg_eReceipts.AllowUserToResizeRows = False
-        DataGridViewCellStyle36.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.dg_eReceipts.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle36
+        DataGridViewCellStyle42.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.dg_eReceipts.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle42
         Me.dg_eReceipts.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dg_eReceipts.BackgroundColor = System.Drawing.SystemColors.Control
         Me.dg_eReceipts.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dg_eReceipts.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
         Me.dg_eReceipts.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle37.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle37.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle37.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle37.SelectionBackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle37.SelectionForeColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle37.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dg_eReceipts.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle37
+        DataGridViewCellStyle43.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle43.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle43.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle43.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle43.SelectionBackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle43.SelectionForeColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle43.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dg_eReceipts.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle43
         Me.dg_eReceipts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dg_eReceipts.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn4})
-        DataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle38.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle38.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle38.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle38.SelectionBackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle38.SelectionForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle38.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dg_eReceipts.DefaultCellStyle = DataGridViewCellStyle38
+        DataGridViewCellStyle44.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle44.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle44.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle44.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle44.SelectionBackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle44.SelectionForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle44.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dg_eReceipts.DefaultCellStyle = DataGridViewCellStyle44
         Me.dg_eReceipts.DoubleBuffered = True
         Me.dg_eReceipts.EnableHeadersVisualStyles = False
         Me.dg_eReceipts.HeaderBgColor = System.Drawing.SystemColors.Control
@@ -1129,14 +1199,14 @@ Partial Class frm_SPayments
         resources.ApplyResources(Me.dg_eReceipts, "dg_eReceipts")
         Me.dg_eReceipts.Name = "dg_eReceipts"
         Me.dg_eReceipts.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle39.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle39.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle39.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle39.SelectionBackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle39.SelectionForeColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle39.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dg_eReceipts.RowHeadersDefaultCellStyle = DataGridViewCellStyle39
+        DataGridViewCellStyle45.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle45.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle45.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle45.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle45.SelectionBackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle45.SelectionForeColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle45.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dg_eReceipts.RowHeadersDefaultCellStyle = DataGridViewCellStyle45
         Me.dg_eReceipts.RowHeadersVisible = False
         Me.dg_eReceipts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         '
@@ -1185,16 +1255,6 @@ Partial Class frm_SPayments
         Me.lbl_eDate.ForeColor = System.Drawing.SystemColors.AppWorkspace
         Me.lbl_eDate.Name = "lbl_eDate"
         '
-        'Label40
-        '
-        resources.ApplyResources(Me.Label40, "Label40")
-        Me.Label40.Name = "Label40"
-        '
-        'Label41
-        '
-        resources.ApplyResources(Me.Label41, "Label41")
-        Me.Label41.Name = "Label41"
-        '
         'lbl_eTamnt
         '
         resources.ApplyResources(Me.lbl_eTamnt, "lbl_eTamnt")
@@ -1204,7 +1264,7 @@ Partial Class frm_SPayments
         '
         resources.ApplyResources(Me.lbl_eTn, "lbl_eTn")
         Me.lbl_eTn.BackColor = System.Drawing.SystemColors.MenuBar
-        Me.lbl_eTn.ForeColor = System.Drawing.SystemColors.AppWorkspace
+        Me.lbl_eTn.ForeColor = System.Drawing.Color.Red
         Me.lbl_eTn.Name = "lbl_eTn"
         '
         'btn_ePrint
@@ -1367,23 +1427,23 @@ Partial Class frm_SPayments
         Me.dg_ePayment.AllowUserToAddRows = False
         Me.dg_ePayment.AllowUserToResizeColumns = False
         Me.dg_ePayment.AllowUserToResizeRows = False
-        DataGridViewCellStyle40.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.dg_ePayment.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle40
+        DataGridViewCellStyle46.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.dg_ePayment.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle46
         Me.dg_ePayment.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dg_ePayment.BackgroundColor = System.Drawing.SystemColors.Control
         Me.dg_ePayment.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dg_ePayment.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle41.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle41.BackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle41.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle41.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle41.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle41.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle41.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dg_ePayment.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle41
+        DataGridViewCellStyle47.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle47.BackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle47.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle47.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle47.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle47.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle47.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dg_ePayment.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle47
         Me.dg_ePayment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dg_ePayment.ColumnHeadersVisible = False
-        Me.dg_ePayment.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn9, Me.DataGridViewTextBoxColumn10, Me.DataGridViewTextBoxColumn11, Me.DataGridViewTextBoxColumn12, Me.DataGridViewButtonColumn1})
+        Me.dg_ePayment.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn9, Me.DataGridViewTextBoxColumn10, Me.DataGridViewTextBoxColumn11, Me.DataGridViewTextBoxColumn12, Me.delete_elemP})
         Me.dg_ePayment.DoubleBuffered = True
         Me.dg_ePayment.EnableHeadersVisualStyles = False
         Me.dg_ePayment.HeaderBgColor = System.Drawing.Color.SeaGreen
@@ -1393,42 +1453,6 @@ Partial Class frm_SPayments
         Me.dg_ePayment.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.dg_ePayment.RowHeadersVisible = False
         Me.dg_ePayment.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        '
-        'DataGridViewTextBoxColumn9
-        '
-        resources.ApplyResources(Me.DataGridViewTextBoxColumn9, "DataGridViewTextBoxColumn9")
-        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
-        Me.DataGridViewTextBoxColumn9.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn10
-        '
-        Me.DataGridViewTextBoxColumn10.FillWeight = 147.2081!
-        resources.ApplyResources(Me.DataGridViewTextBoxColumn10, "DataGridViewTextBoxColumn10")
-        Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
-        Me.DataGridViewTextBoxColumn10.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn11
-        '
-        resources.ApplyResources(Me.DataGridViewTextBoxColumn11, "DataGridViewTextBoxColumn11")
-        Me.DataGridViewTextBoxColumn11.Name = "DataGridViewTextBoxColumn11"
-        Me.DataGridViewTextBoxColumn11.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn12
-        '
-        resources.ApplyResources(Me.DataGridViewTextBoxColumn12, "DataGridViewTextBoxColumn12")
-        Me.DataGridViewTextBoxColumn12.Name = "DataGridViewTextBoxColumn12"
-        Me.DataGridViewTextBoxColumn12.ReadOnly = True
-        '
-        'DataGridViewButtonColumn1
-        '
-        DataGridViewCellStyle42.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle42.NullValue = "Delete"
-        Me.DataGridViewButtonColumn1.DefaultCellStyle = DataGridViewCellStyle42
-        Me.DataGridViewButtonColumn1.FillWeight = 52.79189!
-        Me.DataGridViewButtonColumn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        resources.ApplyResources(Me.DataGridViewButtonColumn1, "DataGridViewButtonColumn1")
-        Me.DataGridViewButtonColumn1.Name = "DataGridViewButtonColumn1"
-        Me.DataGridViewButtonColumn1.UseColumnTextForButtonValue = True
         '
         'btn_eAdd
         '
@@ -1691,7 +1715,7 @@ Partial Class frm_SPayments
         'sh_dept
         '
         Me.sh_dept.BackColor = System.Drawing.SystemColors.Control
-        Me.sh_dept.Controls.Add(Me.Panel2)
+        Me.sh_dept.Controls.Add(Me.pnl_sReceipts)
         Me.sh_dept.Controls.Add(Me.btn_sPrint)
         Me.sh_dept.Controls.Add(Me.btn_sClear)
         Me.sh_dept.Controls.Add(Me.btn_sSave)
@@ -1703,53 +1727,73 @@ Partial Class frm_SPayments
         resources.ApplyResources(Me.sh_dept, "sh_dept")
         Me.sh_dept.Name = "sh_dept"
         '
-        'Panel2
+        'pnl_sReceipts
         '
-        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel2.Controls.Add(Me.dg_sReceipts)
-        Me.Panel2.Controls.Add(Me.Label44)
-        Me.Panel2.Controls.Add(Me.lbl_sName)
-        Me.Panel2.Controls.Add(Me.Label46)
-        Me.Panel2.Controls.Add(Me.lbl_sBal)
-        Me.Panel2.Controls.Add(Me.Label48)
-        Me.Panel2.Controls.Add(Me.lbl_sDate)
-        Me.Panel2.Controls.Add(Me.Label89)
-        Me.Panel2.Controls.Add(Me.Label90)
-        Me.Panel2.Controls.Add(Me.lbl_sTamnt)
-        Me.Panel2.Controls.Add(Me.Label92)
-        resources.ApplyResources(Me.Panel2, "Panel2")
-        Me.Panel2.Name = "Panel2"
+        Me.pnl_sReceipts.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.pnl_sReceipts.Controls.Add(Me.lbl_cashierS)
+        Me.pnl_sReceipts.Controls.Add(Me.Label49)
+        Me.pnl_sReceipts.Controls.Add(Me.PictureBox3)
+        Me.pnl_sReceipts.Controls.Add(Me.Label39)
+        Me.pnl_sReceipts.Controls.Add(Me.Label40)
+        Me.pnl_sReceipts.Controls.Add(Me.dg_sReceipts)
+        Me.pnl_sReceipts.Controls.Add(Me.Label44)
+        Me.pnl_sReceipts.Controls.Add(Me.lbl_sName)
+        Me.pnl_sReceipts.Controls.Add(Me.Label46)
+        Me.pnl_sReceipts.Controls.Add(Me.lbl_sBal)
+        Me.pnl_sReceipts.Controls.Add(Me.Label48)
+        Me.pnl_sReceipts.Controls.Add(Me.lbl_sDate)
+        Me.pnl_sReceipts.Controls.Add(Me.lbl_sTamnt)
+        Me.pnl_sReceipts.Controls.Add(Me.lbl_sTn)
+        resources.ApplyResources(Me.pnl_sReceipts, "pnl_sReceipts")
+        Me.pnl_sReceipts.Name = "pnl_sReceipts"
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.Image = Global.LCC_SAMS_Project.My.Resources.Resources._500x5001
+        resources.ApplyResources(Me.PictureBox3, "PictureBox3")
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.TabStop = False
+        '
+        'Label39
+        '
+        resources.ApplyResources(Me.Label39, "Label39")
+        Me.Label39.Name = "Label39"
+        '
+        'Label40
+        '
+        resources.ApplyResources(Me.Label40, "Label40")
+        Me.Label40.Name = "Label40"
         '
         'dg_sReceipts
         '
         Me.dg_sReceipts.AllowUserToAddRows = False
         Me.dg_sReceipts.AllowUserToResizeColumns = False
         Me.dg_sReceipts.AllowUserToResizeRows = False
-        DataGridViewCellStyle43.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.dg_sReceipts.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle43
+        DataGridViewCellStyle49.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.dg_sReceipts.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle49
         Me.dg_sReceipts.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dg_sReceipts.BackgroundColor = System.Drawing.SystemColors.Control
         Me.dg_sReceipts.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dg_sReceipts.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
         Me.dg_sReceipts.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle44.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle44.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle44.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle44.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle44.SelectionBackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle44.SelectionForeColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle44.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dg_sReceipts.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle44
+        DataGridViewCellStyle50.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle50.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle50.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle50.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle50.SelectionBackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle50.SelectionForeColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle50.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dg_sReceipts.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle50
         Me.dg_sReceipts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dg_sReceipts.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6})
-        DataGridViewCellStyle45.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle45.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle45.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle45.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle45.SelectionBackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle45.SelectionForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle45.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dg_sReceipts.DefaultCellStyle = DataGridViewCellStyle45
+        DataGridViewCellStyle51.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle51.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle51.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle51.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle51.SelectionBackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle51.SelectionForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle51.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dg_sReceipts.DefaultCellStyle = DataGridViewCellStyle51
         Me.dg_sReceipts.DoubleBuffered = True
         Me.dg_sReceipts.EnableHeadersVisualStyles = False
         Me.dg_sReceipts.HeaderBgColor = System.Drawing.SystemColors.Control
@@ -1757,14 +1801,14 @@ Partial Class frm_SPayments
         resources.ApplyResources(Me.dg_sReceipts, "dg_sReceipts")
         Me.dg_sReceipts.Name = "dg_sReceipts"
         Me.dg_sReceipts.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle46.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle46.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle46.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle46.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle46.SelectionBackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle46.SelectionForeColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle46.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dg_sReceipts.RowHeadersDefaultCellStyle = DataGridViewCellStyle46
+        DataGridViewCellStyle52.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle52.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle52.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle52.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle52.SelectionBackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle52.SelectionForeColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle52.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dg_sReceipts.RowHeadersDefaultCellStyle = DataGridViewCellStyle52
         Me.dg_sReceipts.RowHeadersVisible = False
         Me.dg_sReceipts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         '
@@ -1813,27 +1857,17 @@ Partial Class frm_SPayments
         Me.lbl_sDate.ForeColor = System.Drawing.SystemColors.AppWorkspace
         Me.lbl_sDate.Name = "lbl_sDate"
         '
-        'Label89
-        '
-        resources.ApplyResources(Me.Label89, "Label89")
-        Me.Label89.Name = "Label89"
-        '
-        'Label90
-        '
-        resources.ApplyResources(Me.Label90, "Label90")
-        Me.Label90.Name = "Label90"
-        '
         'lbl_sTamnt
         '
         resources.ApplyResources(Me.lbl_sTamnt, "lbl_sTamnt")
         Me.lbl_sTamnt.Name = "lbl_sTamnt"
         '
-        'Label92
+        'lbl_sTn
         '
-        resources.ApplyResources(Me.Label92, "Label92")
-        Me.Label92.BackColor = System.Drawing.SystemColors.MenuBar
-        Me.Label92.ForeColor = System.Drawing.SystemColors.AppWorkspace
-        Me.Label92.Name = "Label92"
+        resources.ApplyResources(Me.lbl_sTn, "lbl_sTn")
+        Me.lbl_sTn.BackColor = System.Drawing.SystemColors.MenuBar
+        Me.lbl_sTn.ForeColor = System.Drawing.Color.Red
+        Me.lbl_sTn.Name = "lbl_sTn"
         '
         'btn_sPrint
         '
@@ -1995,23 +2029,23 @@ Partial Class frm_SPayments
         Me.dg_sPayment.AllowUserToAddRows = False
         Me.dg_sPayment.AllowUserToResizeColumns = False
         Me.dg_sPayment.AllowUserToResizeRows = False
-        DataGridViewCellStyle47.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.dg_sPayment.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle47
+        DataGridViewCellStyle53.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.dg_sPayment.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle53
         Me.dg_sPayment.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dg_sPayment.BackgroundColor = System.Drawing.SystemColors.Control
         Me.dg_sPayment.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dg_sPayment.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle48.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle48.BackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle48.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle48.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle48.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle48.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle48.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dg_sPayment.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle48
+        DataGridViewCellStyle54.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle54.BackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle54.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle54.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle54.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle54.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle54.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dg_sPayment.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle54
         Me.dg_sPayment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dg_sPayment.ColumnHeadersVisible = False
-        Me.dg_sPayment.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn13, Me.DataGridViewTextBoxColumn14, Me.DataGridViewTextBoxColumn15, Me.DataGridViewTextBoxColumn16, Me.DataGridViewButtonColumn2})
+        Me.dg_sPayment.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn13, Me.DataGridViewTextBoxColumn14, Me.DataGridViewTextBoxColumn15, Me.DataGridViewTextBoxColumn16, Me.delete_seniorP})
         Me.dg_sPayment.DoubleBuffered = True
         Me.dg_sPayment.EnableHeadersVisualStyles = False
         Me.dg_sPayment.HeaderBgColor = System.Drawing.Color.SeaGreen
@@ -2021,42 +2055,6 @@ Partial Class frm_SPayments
         Me.dg_sPayment.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.dg_sPayment.RowHeadersVisible = False
         Me.dg_sPayment.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        '
-        'DataGridViewTextBoxColumn13
-        '
-        resources.ApplyResources(Me.DataGridViewTextBoxColumn13, "DataGridViewTextBoxColumn13")
-        Me.DataGridViewTextBoxColumn13.Name = "DataGridViewTextBoxColumn13"
-        Me.DataGridViewTextBoxColumn13.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn14
-        '
-        Me.DataGridViewTextBoxColumn14.FillWeight = 147.2081!
-        resources.ApplyResources(Me.DataGridViewTextBoxColumn14, "DataGridViewTextBoxColumn14")
-        Me.DataGridViewTextBoxColumn14.Name = "DataGridViewTextBoxColumn14"
-        Me.DataGridViewTextBoxColumn14.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn15
-        '
-        resources.ApplyResources(Me.DataGridViewTextBoxColumn15, "DataGridViewTextBoxColumn15")
-        Me.DataGridViewTextBoxColumn15.Name = "DataGridViewTextBoxColumn15"
-        Me.DataGridViewTextBoxColumn15.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn16
-        '
-        resources.ApplyResources(Me.DataGridViewTextBoxColumn16, "DataGridViewTextBoxColumn16")
-        Me.DataGridViewTextBoxColumn16.Name = "DataGridViewTextBoxColumn16"
-        Me.DataGridViewTextBoxColumn16.ReadOnly = True
-        '
-        'DataGridViewButtonColumn2
-        '
-        DataGridViewCellStyle49.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle49.NullValue = "Delete"
-        Me.DataGridViewButtonColumn2.DefaultCellStyle = DataGridViewCellStyle49
-        Me.DataGridViewButtonColumn2.FillWeight = 52.79189!
-        Me.DataGridViewButtonColumn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        resources.ApplyResources(Me.DataGridViewButtonColumn2, "DataGridViewButtonColumn2")
-        Me.DataGridViewButtonColumn2.Name = "DataGridViewButtonColumn2"
-        Me.DataGridViewButtonColumn2.UseColumnTextForButtonValue = True
         '
         'btn_sAdd
         '
@@ -2319,7 +2317,7 @@ Partial Class frm_SPayments
         'jh_dept
         '
         Me.jh_dept.BackColor = System.Drawing.SystemColors.Control
-        Me.jh_dept.Controls.Add(Me.Panel3)
+        Me.jh_dept.Controls.Add(Me.pnl_jReceipts)
         Me.jh_dept.Controls.Add(Me.btn_jPrint)
         Me.jh_dept.Controls.Add(Me.btn_jClear)
         Me.jh_dept.Controls.Add(Me.btn_jSave)
@@ -2331,53 +2329,73 @@ Partial Class frm_SPayments
         resources.ApplyResources(Me.jh_dept, "jh_dept")
         Me.jh_dept.Name = "jh_dept"
         '
-        'Panel3
+        'pnl_jReceipts
         '
-        Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel3.Controls.Add(Me.dg_jReceipts)
-        Me.Panel3.Controls.Add(Me.Label62)
-        Me.Panel3.Controls.Add(Me.lbl_jName)
-        Me.Panel3.Controls.Add(Me.Label64)
-        Me.Panel3.Controls.Add(Me.lbl_jBal)
-        Me.Panel3.Controls.Add(Me.Label66)
-        Me.Panel3.Controls.Add(Me.lbl_jDate)
-        Me.Panel3.Controls.Add(Me.Label68)
-        Me.Panel3.Controls.Add(Me.Label69)
-        Me.Panel3.Controls.Add(Me.lbl_jTamnt)
-        Me.Panel3.Controls.Add(Me.Label71)
-        resources.ApplyResources(Me.Panel3, "Panel3")
-        Me.Panel3.Name = "Panel3"
+        Me.pnl_jReceipts.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.pnl_jReceipts.Controls.Add(Me.lbl_cashierJ)
+        Me.pnl_jReceipts.Controls.Add(Me.Label65)
+        Me.pnl_jReceipts.Controls.Add(Me.PictureBox4)
+        Me.pnl_jReceipts.Controls.Add(Me.Label41)
+        Me.pnl_jReceipts.Controls.Add(Me.Label42)
+        Me.pnl_jReceipts.Controls.Add(Me.dg_jReceipts)
+        Me.pnl_jReceipts.Controls.Add(Me.Label62)
+        Me.pnl_jReceipts.Controls.Add(Me.lbl_jName)
+        Me.pnl_jReceipts.Controls.Add(Me.Label64)
+        Me.pnl_jReceipts.Controls.Add(Me.lbl_jBal)
+        Me.pnl_jReceipts.Controls.Add(Me.Label66)
+        Me.pnl_jReceipts.Controls.Add(Me.lbl_jDate)
+        Me.pnl_jReceipts.Controls.Add(Me.lbl_jTamnt)
+        Me.pnl_jReceipts.Controls.Add(Me.lbl_jOn)
+        resources.ApplyResources(Me.pnl_jReceipts, "pnl_jReceipts")
+        Me.pnl_jReceipts.Name = "pnl_jReceipts"
+        '
+        'PictureBox4
+        '
+        Me.PictureBox4.Image = Global.LCC_SAMS_Project.My.Resources.Resources._500x5001
+        resources.ApplyResources(Me.PictureBox4, "PictureBox4")
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.TabStop = False
+        '
+        'Label41
+        '
+        resources.ApplyResources(Me.Label41, "Label41")
+        Me.Label41.Name = "Label41"
+        '
+        'Label42
+        '
+        resources.ApplyResources(Me.Label42, "Label42")
+        Me.Label42.Name = "Label42"
         '
         'dg_jReceipts
         '
         Me.dg_jReceipts.AllowUserToAddRows = False
         Me.dg_jReceipts.AllowUserToResizeColumns = False
         Me.dg_jReceipts.AllowUserToResizeRows = False
-        DataGridViewCellStyle50.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.dg_jReceipts.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle50
+        DataGridViewCellStyle30.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.dg_jReceipts.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle30
         Me.dg_jReceipts.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dg_jReceipts.BackgroundColor = System.Drawing.SystemColors.Control
         Me.dg_jReceipts.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dg_jReceipts.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
         Me.dg_jReceipts.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle51.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle51.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle51.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle51.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle51.SelectionBackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle51.SelectionForeColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle51.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dg_jReceipts.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle51
+        DataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle31.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle31.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle31.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle31.SelectionBackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle31.SelectionForeColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dg_jReceipts.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle31
         Me.dg_jReceipts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dg_jReceipts.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8})
-        DataGridViewCellStyle52.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle52.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle52.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle52.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle52.SelectionBackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle52.SelectionForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle52.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dg_jReceipts.DefaultCellStyle = DataGridViewCellStyle52
+        DataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle32.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle32.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle32.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle32.SelectionBackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle32.SelectionForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dg_jReceipts.DefaultCellStyle = DataGridViewCellStyle32
         Me.dg_jReceipts.DoubleBuffered = True
         Me.dg_jReceipts.EnableHeadersVisualStyles = False
         Me.dg_jReceipts.HeaderBgColor = System.Drawing.SystemColors.Control
@@ -2385,14 +2403,14 @@ Partial Class frm_SPayments
         resources.ApplyResources(Me.dg_jReceipts, "dg_jReceipts")
         Me.dg_jReceipts.Name = "dg_jReceipts"
         Me.dg_jReceipts.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle53.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle53.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle53.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle53.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle53.SelectionBackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle53.SelectionForeColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle53.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dg_jReceipts.RowHeadersDefaultCellStyle = DataGridViewCellStyle53
+        DataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle33.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle33.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle33.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle33.SelectionBackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle33.SelectionForeColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dg_jReceipts.RowHeadersDefaultCellStyle = DataGridViewCellStyle33
         Me.dg_jReceipts.RowHeadersVisible = False
         Me.dg_jReceipts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         '
@@ -2441,27 +2459,17 @@ Partial Class frm_SPayments
         Me.lbl_jDate.ForeColor = System.Drawing.SystemColors.AppWorkspace
         Me.lbl_jDate.Name = "lbl_jDate"
         '
-        'Label68
-        '
-        resources.ApplyResources(Me.Label68, "Label68")
-        Me.Label68.Name = "Label68"
-        '
-        'Label69
-        '
-        resources.ApplyResources(Me.Label69, "Label69")
-        Me.Label69.Name = "Label69"
-        '
         'lbl_jTamnt
         '
         resources.ApplyResources(Me.lbl_jTamnt, "lbl_jTamnt")
         Me.lbl_jTamnt.Name = "lbl_jTamnt"
         '
-        'Label71
+        'lbl_jOn
         '
-        resources.ApplyResources(Me.Label71, "Label71")
-        Me.Label71.BackColor = System.Drawing.SystemColors.MenuBar
-        Me.Label71.ForeColor = System.Drawing.SystemColors.AppWorkspace
-        Me.Label71.Name = "Label71"
+        resources.ApplyResources(Me.lbl_jOn, "lbl_jOn")
+        Me.lbl_jOn.BackColor = System.Drawing.SystemColors.MenuBar
+        Me.lbl_jOn.ForeColor = System.Drawing.Color.Red
+        Me.lbl_jOn.Name = "lbl_jOn"
         '
         'btn_jPrint
         '
@@ -2623,23 +2631,23 @@ Partial Class frm_SPayments
         Me.dg_jPayment.AllowUserToAddRows = False
         Me.dg_jPayment.AllowUserToResizeColumns = False
         Me.dg_jPayment.AllowUserToResizeRows = False
-        DataGridViewCellStyle54.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.dg_jPayment.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle54
+        DataGridViewCellStyle56.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.dg_jPayment.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle56
         Me.dg_jPayment.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dg_jPayment.BackgroundColor = System.Drawing.SystemColors.Control
         Me.dg_jPayment.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dg_jPayment.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle55.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle55.BackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle55.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle55.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle55.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle55.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle55.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dg_jPayment.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle55
+        DataGridViewCellStyle57.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle57.BackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle57.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle57.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle57.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle57.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle57.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dg_jPayment.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle57
         Me.dg_jPayment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dg_jPayment.ColumnHeadersVisible = False
-        Me.dg_jPayment.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn17, Me.DataGridViewTextBoxColumn18, Me.DataGridViewTextBoxColumn19, Me.DataGridViewTextBoxColumn20, Me.DataGridViewButtonColumn3})
+        Me.dg_jPayment.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn17, Me.DataGridViewTextBoxColumn18, Me.DataGridViewTextBoxColumn19, Me.DataGridViewTextBoxColumn20, Me.delete_juniorP})
         Me.dg_jPayment.DoubleBuffered = True
         Me.dg_jPayment.EnableHeadersVisualStyles = False
         Me.dg_jPayment.HeaderBgColor = System.Drawing.Color.SeaGreen
@@ -2649,42 +2657,6 @@ Partial Class frm_SPayments
         Me.dg_jPayment.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.dg_jPayment.RowHeadersVisible = False
         Me.dg_jPayment.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        '
-        'DataGridViewTextBoxColumn17
-        '
-        resources.ApplyResources(Me.DataGridViewTextBoxColumn17, "DataGridViewTextBoxColumn17")
-        Me.DataGridViewTextBoxColumn17.Name = "DataGridViewTextBoxColumn17"
-        Me.DataGridViewTextBoxColumn17.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn18
-        '
-        Me.DataGridViewTextBoxColumn18.FillWeight = 147.2081!
-        resources.ApplyResources(Me.DataGridViewTextBoxColumn18, "DataGridViewTextBoxColumn18")
-        Me.DataGridViewTextBoxColumn18.Name = "DataGridViewTextBoxColumn18"
-        Me.DataGridViewTextBoxColumn18.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn19
-        '
-        resources.ApplyResources(Me.DataGridViewTextBoxColumn19, "DataGridViewTextBoxColumn19")
-        Me.DataGridViewTextBoxColumn19.Name = "DataGridViewTextBoxColumn19"
-        Me.DataGridViewTextBoxColumn19.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn20
-        '
-        resources.ApplyResources(Me.DataGridViewTextBoxColumn20, "DataGridViewTextBoxColumn20")
-        Me.DataGridViewTextBoxColumn20.Name = "DataGridViewTextBoxColumn20"
-        Me.DataGridViewTextBoxColumn20.ReadOnly = True
-        '
-        'DataGridViewButtonColumn3
-        '
-        DataGridViewCellStyle56.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle56.NullValue = "Delete"
-        Me.DataGridViewButtonColumn3.DefaultCellStyle = DataGridViewCellStyle56
-        Me.DataGridViewButtonColumn3.FillWeight = 52.79189!
-        Me.DataGridViewButtonColumn3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        resources.ApplyResources(Me.DataGridViewButtonColumn3, "DataGridViewButtonColumn3")
-        Me.DataGridViewButtonColumn3.Name = "DataGridViewButtonColumn3"
-        Me.DataGridViewButtonColumn3.UseColumnTextForButtonValue = True
         '
         'btn_jAdd
         '
@@ -2944,6 +2916,137 @@ Partial Class frm_SPayments
         resources.ApplyResources(Me.txtb_jSearch, "txtb_jSearch")
         Me.txtb_jSearch.Name = "txtb_jSearch"
         '
+        'print_collR
+        '
+        '
+        'DataGridViewTextBoxColumn9
+        '
+        resources.ApplyResources(Me.DataGridViewTextBoxColumn9, "DataGridViewTextBoxColumn9")
+        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
+        Me.DataGridViewTextBoxColumn9.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn10
+        '
+        Me.DataGridViewTextBoxColumn10.FillWeight = 147.2081!
+        resources.ApplyResources(Me.DataGridViewTextBoxColumn10, "DataGridViewTextBoxColumn10")
+        Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
+        Me.DataGridViewTextBoxColumn10.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn11
+        '
+        resources.ApplyResources(Me.DataGridViewTextBoxColumn11, "DataGridViewTextBoxColumn11")
+        Me.DataGridViewTextBoxColumn11.Name = "DataGridViewTextBoxColumn11"
+        Me.DataGridViewTextBoxColumn11.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn12
+        '
+        resources.ApplyResources(Me.DataGridViewTextBoxColumn12, "DataGridViewTextBoxColumn12")
+        Me.DataGridViewTextBoxColumn12.Name = "DataGridViewTextBoxColumn12"
+        Me.DataGridViewTextBoxColumn12.ReadOnly = True
+        '
+        'delete_elemP
+        '
+        DataGridViewCellStyle48.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle48.NullValue = "Delete"
+        Me.delete_elemP.DefaultCellStyle = DataGridViewCellStyle48
+        Me.delete_elemP.FillWeight = 52.79189!
+        Me.delete_elemP.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        resources.ApplyResources(Me.delete_elemP, "delete_elemP")
+        Me.delete_elemP.Name = "delete_elemP"
+        Me.delete_elemP.UseColumnTextForButtonValue = True
+        '
+        'DataGridViewTextBoxColumn13
+        '
+        resources.ApplyResources(Me.DataGridViewTextBoxColumn13, "DataGridViewTextBoxColumn13")
+        Me.DataGridViewTextBoxColumn13.Name = "DataGridViewTextBoxColumn13"
+        Me.DataGridViewTextBoxColumn13.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn14
+        '
+        Me.DataGridViewTextBoxColumn14.FillWeight = 147.2081!
+        resources.ApplyResources(Me.DataGridViewTextBoxColumn14, "DataGridViewTextBoxColumn14")
+        Me.DataGridViewTextBoxColumn14.Name = "DataGridViewTextBoxColumn14"
+        Me.DataGridViewTextBoxColumn14.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn15
+        '
+        resources.ApplyResources(Me.DataGridViewTextBoxColumn15, "DataGridViewTextBoxColumn15")
+        Me.DataGridViewTextBoxColumn15.Name = "DataGridViewTextBoxColumn15"
+        Me.DataGridViewTextBoxColumn15.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn16
+        '
+        resources.ApplyResources(Me.DataGridViewTextBoxColumn16, "DataGridViewTextBoxColumn16")
+        Me.DataGridViewTextBoxColumn16.Name = "DataGridViewTextBoxColumn16"
+        Me.DataGridViewTextBoxColumn16.ReadOnly = True
+        '
+        'delete_seniorP
+        '
+        DataGridViewCellStyle55.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle55.NullValue = "Delete"
+        Me.delete_seniorP.DefaultCellStyle = DataGridViewCellStyle55
+        Me.delete_seniorP.FillWeight = 52.79189!
+        Me.delete_seniorP.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        resources.ApplyResources(Me.delete_seniorP, "delete_seniorP")
+        Me.delete_seniorP.Name = "delete_seniorP"
+        Me.delete_seniorP.UseColumnTextForButtonValue = True
+        '
+        'DataGridViewTextBoxColumn17
+        '
+        resources.ApplyResources(Me.DataGridViewTextBoxColumn17, "DataGridViewTextBoxColumn17")
+        Me.DataGridViewTextBoxColumn17.Name = "DataGridViewTextBoxColumn17"
+        Me.DataGridViewTextBoxColumn17.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn18
+        '
+        Me.DataGridViewTextBoxColumn18.FillWeight = 147.2081!
+        resources.ApplyResources(Me.DataGridViewTextBoxColumn18, "DataGridViewTextBoxColumn18")
+        Me.DataGridViewTextBoxColumn18.Name = "DataGridViewTextBoxColumn18"
+        Me.DataGridViewTextBoxColumn18.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn19
+        '
+        resources.ApplyResources(Me.DataGridViewTextBoxColumn19, "DataGridViewTextBoxColumn19")
+        Me.DataGridViewTextBoxColumn19.Name = "DataGridViewTextBoxColumn19"
+        Me.DataGridViewTextBoxColumn19.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn20
+        '
+        resources.ApplyResources(Me.DataGridViewTextBoxColumn20, "DataGridViewTextBoxColumn20")
+        Me.DataGridViewTextBoxColumn20.Name = "DataGridViewTextBoxColumn20"
+        Me.DataGridViewTextBoxColumn20.ReadOnly = True
+        '
+        'delete_juniorP
+        '
+        DataGridViewCellStyle58.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle58.NullValue = "Delete"
+        Me.delete_juniorP.DefaultCellStyle = DataGridViewCellStyle58
+        Me.delete_juniorP.FillWeight = 52.79189!
+        Me.delete_juniorP.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        resources.ApplyResources(Me.delete_juniorP, "delete_juniorP")
+        Me.delete_juniorP.Name = "delete_juniorP"
+        Me.delete_juniorP.UseColumnTextForButtonValue = True
+        '
+        'lbl_cashierS
+        '
+        resources.ApplyResources(Me.lbl_cashierS, "lbl_cashierS")
+        Me.lbl_cashierS.Name = "lbl_cashierS"
+        '
+        'Label49
+        '
+        resources.ApplyResources(Me.Label49, "Label49")
+        Me.Label49.Name = "Label49"
+        '
+        'lbl_cashierJ
+        '
+        resources.ApplyResources(Me.lbl_cashierJ, "lbl_cashierJ")
+        Me.lbl_cashierJ.Name = "lbl_cashierJ"
+        '
+        'Label65
+        '
+        resources.ApplyResources(Me.Label65, "Label65")
+        Me.Label65.Name = "Label65"
+        '
         'frm_SPayments
         '
         resources.ApplyResources(Me, "$this")
@@ -2955,6 +3058,7 @@ Partial Class frm_SPayments
         Me.coll_dept.ResumeLayout(False)
         Me.pnl_receipts.ResumeLayout(False)
         Me.pnl_receipts.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dg_receipts, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
@@ -2968,8 +3072,9 @@ Partial Class frm_SPayments
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.elem_dept.ResumeLayout(False)
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
+        Me.pnl_elemReceipts.ResumeLayout(False)
+        Me.pnl_elemReceipts.PerformLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dg_eReceipts, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox10.ResumeLayout(False)
         Me.GroupBox10.PerformLayout()
@@ -2983,8 +3088,9 @@ Partial Class frm_SPayments
         Me.GroupBox5.ResumeLayout(False)
         Me.GroupBox5.PerformLayout()
         Me.sh_dept.ResumeLayout(False)
-        Me.Panel2.ResumeLayout(False)
-        Me.Panel2.PerformLayout()
+        Me.pnl_sReceipts.ResumeLayout(False)
+        Me.pnl_sReceipts.PerformLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dg_sReceipts, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox19.ResumeLayout(False)
         Me.GroupBox19.PerformLayout()
@@ -2998,8 +3104,9 @@ Partial Class frm_SPayments
         Me.GroupBox24.ResumeLayout(False)
         Me.GroupBox24.PerformLayout()
         Me.jh_dept.ResumeLayout(False)
-        Me.Panel3.ResumeLayout(False)
-        Me.Panel3.PerformLayout()
+        Me.pnl_jReceipts.ResumeLayout(False)
+        Me.pnl_jReceipts.PerformLayout()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dg_jReceipts, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox13.ResumeLayout(False)
         Me.GroupBox13.PerformLayout()
@@ -3204,7 +3311,7 @@ Partial Class frm_SPayments
     Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
     Friend WithEvents Label23 As Label
-    Friend WithEvents Panel1 As Panel
+    Friend WithEvents pnl_elemReceipts As Panel
     Friend WithEvents dg_eReceipts As Bunifu.Framework.UI.BunifuCustomDataGrid
     Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
@@ -3214,11 +3321,9 @@ Partial Class frm_SPayments
     Friend WithEvents lbl_eBal As Label
     Friend WithEvents Label38 As Label
     Friend WithEvents lbl_eDate As Label
-    Friend WithEvents Label40 As Label
-    Friend WithEvents Label41 As Label
     Friend WithEvents lbl_eTamnt As Label
     Friend WithEvents lbl_eTn As Label
-    Friend WithEvents Panel2 As Panel
+    Friend WithEvents pnl_sReceipts As Panel
     Friend WithEvents dg_sReceipts As Bunifu.Framework.UI.BunifuCustomDataGrid
     Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
@@ -3228,11 +3333,9 @@ Partial Class frm_SPayments
     Friend WithEvents lbl_sBal As Label
     Friend WithEvents Label48 As Label
     Friend WithEvents lbl_sDate As Label
-    Friend WithEvents Label89 As Label
-    Friend WithEvents Label90 As Label
     Friend WithEvents lbl_sTamnt As Label
-    Friend WithEvents Label92 As Label
-    Friend WithEvents Panel3 As Panel
+    Friend WithEvents lbl_sTn As Label
+    Friend WithEvents pnl_jReceipts As Panel
     Friend WithEvents dg_jReceipts As Bunifu.Framework.UI.BunifuCustomDataGrid
     Friend WithEvents DataGridViewTextBoxColumn7 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn8 As DataGridViewTextBoxColumn
@@ -3242,29 +3345,46 @@ Partial Class frm_SPayments
     Friend WithEvents lbl_jBal As Label
     Friend WithEvents Label66 As Label
     Friend WithEvents lbl_jDate As Label
-    Friend WithEvents Label68 As Label
-    Friend WithEvents Label69 As Label
     Friend WithEvents lbl_jTamnt As Label
-    Friend WithEvents Label71 As Label
+    Friend WithEvents lbl_jOn As Label
     Friend WithEvents dg_ePayment As Bunifu.Framework.UI.BunifuCustomDataGrid
+    Friend WithEvents btn_eAdd As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents dg_sPayment As Bunifu.Framework.UI.BunifuCustomDataGrid
+    Friend WithEvents btn_sAdd As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents dg_jPayment As Bunifu.Framework.UI.BunifuCustomDataGrid
+    Friend WithEvents btn_jAdd As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents print_collR As Printing.PrintDocument
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents Label25 As Label
+    Friend WithEvents Label37 As Label
+    Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents Label39 As Label
+    Friend WithEvents Label40 As Label
+    Friend WithEvents PictureBox4 As PictureBox
+    Friend WithEvents Label41 As Label
+    Friend WithEvents Label42 As Label
+    Friend WithEvents lbl_cashier As Label
+    Friend WithEvents Label43 As Label
+    Friend WithEvents lbl_cashierE As Label
+    Friend WithEvents Label47 As Label
     Friend WithEvents DataGridViewTextBoxColumn9 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn10 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn11 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn12 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewButtonColumn1 As DataGridViewButtonColumn
-    Friend WithEvents btn_eAdd As Bunifu.Framework.UI.BunifuFlatButton
-    Friend WithEvents dg_sPayment As Bunifu.Framework.UI.BunifuCustomDataGrid
+    Friend WithEvents delete_elemP As DataGridViewButtonColumn
     Friend WithEvents DataGridViewTextBoxColumn13 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn14 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn15 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn16 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewButtonColumn2 As DataGridViewButtonColumn
-    Friend WithEvents btn_sAdd As Bunifu.Framework.UI.BunifuFlatButton
-    Friend WithEvents dg_jPayment As Bunifu.Framework.UI.BunifuCustomDataGrid
+    Friend WithEvents delete_seniorP As DataGridViewButtonColumn
     Friend WithEvents DataGridViewTextBoxColumn17 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn18 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn19 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn20 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewButtonColumn3 As DataGridViewButtonColumn
-    Friend WithEvents btn_jAdd As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents delete_juniorP As DataGridViewButtonColumn
+    Friend WithEvents lbl_cashierS As Label
+    Friend WithEvents Label49 As Label
+    Friend WithEvents lbl_cashierJ As Label
+    Friend WithEvents Label65 As Label
 End Class

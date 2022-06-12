@@ -49,7 +49,16 @@
     Private Sub dg_syR_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dg_syR.CellClick
         Dim i = e.RowIndex
         With dg_syR
-            sy_id = .Item("col_sy_id", i).Value
+            sy_id = .Item(0, i).Value
+            esy_spSTARTEND = .Item(1, i).Value.ToString.Split("-")
+            txtb_syS.Text = esy_spSTARTEND(0)
+            txtb_syE.Text = esy_spSTARTEND(1)
+
+            cbo_semester.Text = .Item(2, i).Value
+            Dim sd As Date = .Item(3, i).Value
+            Dim ed As Date = .Item(4, i).Value
+            dp_ssy_sDate.Text = sd.ToString("yyyy-MM-dd")
+            dp_ssy_eDate.Text = ed.ToString("yyyy-MM-dd")
         End With
     End Sub
 
@@ -59,10 +68,6 @@
         If dlg_updateCourse.DialogResult = DialogResult.Yes Then
             _updateData("Update tbl_course set crs_name='" & dlg_updateCourse.txtb_uCourse.Text & "' where crs_id='" & lbo_courses.SelectedValue & "'")
             _loadToListBox(slctC, lbo_courses)
-        End If
-
-        If MessageBox.Show("Do you want to update this course? " & vbNewLine & "Name: " & lbo_courses.Text, "", MessageBoxButtons.YesNo) = DialogResult.Yes Then
-            inputedV = InputBox("Enter a new name ")
         End If
     End Sub
 
@@ -88,41 +93,82 @@
     End Sub
 
     Private Sub btn_updateSchY_Click(sender As Object, e As EventArgs) Handles btn_updateSchY.Click
-        dlg_updatesy.ShowDialog()
-        If dlg_updatesy.DialogResult = DialogResult.OK Then
-            txtb_syS.Enabled = True
-            txtb_syE.Enabled = True
-            btn_save.Enabled = True
-            a = 2
+        If btn_updateSchY.Text = "UPDATE" Then
+            If txtb_syS.Text = "" Then
+                MessageBox.Show("Please select school year to update")
+            Else
+                If dlg_updatesy.ShowDialog() = DialogResult.OK Then
+                    btn_updateSchY.Text = "CANCEL"
+                    txtb_syS.Enabled = True
+                    txtb_syE.Enabled = True
+                    cbo_semester.Enabled = True
+                    btn_save.Enabled = True
+                    dg_syR.Enabled = False
+                    a = 2
+                End If
+            End If
+        ElseIf btn_updateSchY.Text = "CANCEL" Then
+            btn_updateSchY.Text = "UPDATE"
+            txtb_syS.Enabled = False
+            txtb_syE.Enabled = False
+            cbo_semester.Enabled = False
+            btn_save.Enabled = False
+            dg_syR.Enabled = True
         End If
-
-
 
     End Sub
 
     Private Sub btn_new_Click(sender As Object, e As EventArgs) Handles btn_new.Click
-        dlg_addnewsy.ShowDialog()
-        If dlg_addnewsy.DialogResult = DialogResult.OK Then
-            txtb_syS.Enabled = True
-            txtb_syE.Enabled = True
-            btn_save.Enabled = True
-            a = 1
+
+        If btn_updateSchY.Text = "NEW" Then
+            If dlg_addnewsy.ShowDialog = DialogResult.OK Then
+                btn_updateSchY.Text = "CANCEL"
+                txtb_syS.Enabled = True
+
+                txtb_syE.Enabled = True
+                btn_save.Enabled = True
+                cbo_semester.Enabled = True
+                a = 1
+            End If
+        ElseIf btn_updateSchY.Text = "CANCEL" Then
+            btn_updateSchY.Text = "NEW"
+            txtb_syS.Enabled = False
+            txtb_syE.Enabled = False
+            btn_save.Enabled = False
+            cbo_semester.Enabled = False
         End If
+
     End Sub
 
     Private Sub btn_save_Click(sender As Object, e As EventArgs) Handles btn_save.Click
+
         Select Case a
+
             Case 1
                 Dim syN As String = txtb_syS.Text & "-" & txtb_syE.Text
                 Dim strQueery6 As String = "Insert Into tbl_sch_year values(0,'" & syN & "','" & dp_Start.Text & "','" & dp_End.Text & "','" & cbo_semester.SelectedValue & "')"
                 _dbConnection("db_lccsams")
                 _insertData(strQueery6)
                 _displayRecords(s_msyR, dg_syR)
+                If dlg_savesuccessfully.ShowDialog() = DialogResult.OK Then
+                    txtb_syS.Enabled = False
+                    txtb_syE.Enabled = False
+                    btn_save.Enabled = False
+                    cbo_semester.Enabled = False
+                End If
             Case 2
                 Dim syName As String = txtb_syS.Text & "-" & txtb_syE.Text
                 _dbConnection("db_lccsams")
                 _updateData("update tbl_sch_year  set sy_name='" & syName & "',ssy_sDate='" & dp_Start.Text & "',sy_eDate='" & dp_End.Text & "',sem_id='" & cbo_semester.SelectedValue & "' where sy_id ='" & sy_id & "' ")
                 _displayRecords(s_msyR, dg_syR)
+                If UpdatedSuccessfully.ShowDialog() = DialogResult.OK Then
+                    txtb_syS.Enabled = False
+                    txtb_syE.Enabled = False
+                    btn_save.Enabled = False
+                    cbo_semester.Enabled = False
+                    dg_syR.Enabled = True
+
+                End If
         End Select
     End Sub
     ''###########################################################Elementary Section ################################################################################
@@ -131,26 +177,42 @@
     Dim egl_name As String
 
     Private Sub btn_esy_New_Click(sender As Object, e As EventArgs) Handles btn_esy_New.Click
-        dlg_addnewsy.ShowDialog()
-        If dlg_addnewsy.DialogResult = DialogResult.OK Then
-            txtb_esy_start.Enabled = True
-            txtb_esy_end.Enabled = True
-            btn_esy_save.Enabled = True
-            b = 1
+        If btn_esy_New.Text = "new" Then
+            If dlg_addnewsy.ShowDialog = DialogResult.OK Then
+                btn_esy_New.Text = "CANCEL"
+                txtb_esy_start.Enabled = True
+                txtb_esy_end.Enabled = True
+                btn_esy_save.Enabled = True
+                b = 1
+            End If
+        ElseIf btn_esy_New.Text = "CANCEL" Then
+            btn_esy_New.Text = "new"
+            txtb_esy_end.Enabled = False
+            txtb_esy_start.Enabled = False
+            btn_esy_save.Enabled = False
         End If
+
+
 
     End Sub
 
     Private Sub btn_esy_update_Click(sender As Object, e As EventArgs) Handles btn_esy_update.Click
-
-        dlg_updatesy.ShowDialog()
-        If dlg_updatesy.DialogResult = DialogResult.OK Then
-            txtb_esy_start.Enabled = True
-            txtb_esy_end.Enabled = True
-            btn_esy_save.Enabled = True
-            b = 2
+        If btn_esy_update.Text = "UPDATE" Then
+            If dlg_updatesy.ShowDialog = DialogResult.OK Then
+                btn_esy_update.Text = "CANCEL"
+                btn_esy_update.Enabled = True
+                txtb_esy_end.Enabled = True
+                btn_esy_save.Enabled = True
+                dg_esyRec.Enabled = False
+                b = 2
+            End If
+        ElseIf btn_esy_update.Text = "CANCEL" Then
+            btn_esy_update.Text = "UPDATE"
+            btn_esy_update.Enabled = False
+            txtb_esy_end.Enabled = False
+            btn_esy_save.Enabled = False
+            dg_esyRec.Enabled = True
         End If
-
     End Sub
 
     Private Sub btn_esy_save_Click(sender As Object, e As EventArgs) Handles btn_esy_save.Click
@@ -161,11 +223,24 @@
                 _dbConnection("db_lccsams")
                 _insertData(strQueery6)
                 _displayRecords(eSelect_SY, dg_esyRec)
+                If dlg_savesuccessfully.ShowDialog() = DialogResult.OK Then
+                    txtb_esy_start.Enabled = False
+                    txtb_esy_end.Enabled = False
+                    btn_esy_save.Enabled = False
+                    cbo_semester.Enabled = False
+                End If
             Case 2
                 Dim esyName As String = txtb_esy_start.Text & "-" & txtb_esy_end.Text
                 _dbConnection("db_lccsams")
                 _updateData("update tbl_elem_sy  set esy_name='" & esyName & "',esy_sdate='" & dp_Start.Text & "',esy_edate='" & dp_End.Text & "' where esy_id ='" & esy_id & "' ")
                 _displayRecords(eSelect_SY, dg_esyRec)
+                If UpdatedSuccessfully.ShowDialog() = DialogResult.OK Then
+                    txtb_esy_start.Enabled = False
+                    txtb_esy_end.Enabled = False
+                    btn_esy_save.Enabled = False
+                    cbo_semester.Enabled = False
+                    dg_esyRec.Enabled = True
+                End If
         End Select
     End Sub
 
@@ -215,25 +290,43 @@
     Dim sgl_name As String
 
     Private Sub btn_new_sSY_Click(sender As Object, e As EventArgs) Handles btn_new_sSY.Click
-        dlg_addnewsy.ShowDialog()
-        If dlg_addnewsy.DialogResult = DialogResult.OK Then
-            txtb_ssy_start.Enabled = True
-            txtb_ssy_end.Enabled = True
-            btn_save_ssy.Enabled = True
-            c = 1
+
+        If btn_new_sSY.Text = "new" Then
+            If dlg_addnewsy.ShowDialog = DialogResult.OK Then
+                btn_new_sSY.Text = "CANCEL"
+                txtb_ssy_start.Enabled = True
+                txtb_ssy_end.Enabled = True
+                btn_save_ssy.Enabled = True
+                c = 1
+            End If
+        ElseIf btn_new_sSY.Text = "CANCEL" Then
+            btn_new_sSY.Text = "new"
+            txtb_ssy_start.Enabled = False
+            txtb_ssy_end.Enabled = False
+            btn_save_ssy.Enabled = False
         End If
 
     End Sub
 
     Private Sub btn_update_ssy_Click(sender As Object, e As EventArgs) Handles btn_update_ssy.Click
 
-        dlg_updatesy.ShowDialog()
-        If dlg_updatesy.DialogResult = DialogResult.OK Then
-            txtb_ssy_start.Enabled = True
-            txtb_ssy_end.Enabled = True
-            btn_save_ssy.Enabled = True
 
-            c = 2
+        If btn_update_ssy.Text = "UPDATE" Then
+            If dlg_updatesy.ShowDialog = DialogResult.OK Then
+                btn_update_ssy.Text = "cancel"
+                txtb_ssy_start.Enabled = True
+                txtb_ssy_end.Enabled = True
+                btn_save_ssy.Enabled = True
+                c = 2
+                dg_ssyRec.Enabled = False
+                b = 2
+            End If
+        ElseIf btn_update_ssy.Text = "CANCEL" Then
+            btn_update_ssy.Text = "UPDATE"
+            txtb_ssy_start.Enabled = False
+            txtb_ssy_end.Enabled = False
+            btn_save_ssy.Enabled = False
+            dg_ssyRec.Enabled = True
         End If
 
     End Sub
@@ -302,23 +395,41 @@
     Dim jsy_id As Integer
     Dim jgl_name As String
     Private Sub btn_jsy_new_Click(sender As Object, e As EventArgs) Handles btn_jsy_new.Click
-        dlg_addnewsy.ShowDialog()
-        If dlg_addnewsy.DialogResult = DialogResult.OK Then
-            txtb_jsy_start.Enabled = True
-            txtb_jsy_end.Enabled = True
-            btn_jsy_save.Enabled = True
-            d = 1
-        End If
 
+        If btn_jsy_new.Text = "new" Then
+            If dlg_addnewsy.ShowDialog = DialogResult.OK Then
+                btn_jsy_new.Text = "CANCEL"
+                txtb_jsy_start.Enabled = True
+                txtb_jsy_end.Enabled = True
+                btn_jsy_save.Enabled = True
+                d = 1
+            End If
+        ElseIf btn_jsy_new.Text = "CANCEL" Then
+            btn_jsy_new.Text = "new"
+            txtb_jsy_start.Enabled = False
+            txtb_jsy_end.Enabled = False
+            btn_jsy_save.Enabled = False
+        End If
     End Sub
 
     Private Sub btn_jsy_update_Click(sender As Object, e As EventArgs) Handles btn_jsy_update.Click
-        dlg_updatesy.ShowDialog()
-        If dlg_updatesy.DialogResult = DialogResult.OK Then
-            txtb_jsy_start.Enabled = True
-            txtb_jsy_end.Enabled = True
-            btn_jsy_save.Enabled = True
-            d = 2
+
+        If btn_jsy_update.Text = "UPDATE" Then
+            If dlg_updatesy.ShowDialog = DialogResult.OK Then
+                btn_jsy_update.Text = "cancel"
+                txtb_jsy_start.Enabled = True
+                txtb_jsy_end.Enabled = True
+                btn_jsy_save.Enabled = True
+                d = 2
+                dg_jsyRec.Enabled = False
+
+            End If
+        ElseIf btn_jsy_update.Text = "CANCEL" Then
+            btn_jsy_update.Text = "UPDATE"
+            txtb_jsy_start.Enabled = False
+            txtb_jsy_end.Enabled = False
+            btn_jsy_save.Enabled = False
+            dg_jsyRec.Enabled = True
         End If
     End Sub
 

@@ -12,12 +12,9 @@
         'Sort by
 
         _loadToCombobox(slctSY, cbo_SortSY)
-
-
-        _loadToCombobox(slctC, cbo_SortCrs)
         _loadToCombobox(slctS, cbo_SortSem)
         _loadToCombobox(slctYL, cbo_SortYL)
-
+        _loadToCombobox(slctC, cbo_SortCrs)
         cbo_SortSY.SelectedIndex = -1
         cbo_SortCrs.SelectedIndex = -1
         cbo_SortSem.SelectedIndex = -1
@@ -165,7 +162,7 @@
     Private Sub cbo_SortCrs_SelectionChangeCommitted(sender As Object, e As EventArgs) Handles cbo_SortCrs.SelectionChangeCommitted
         Try
 
-            Dim cFeesR_sort As String = "select fees_id,fees_name, fees_amount, tuition_rpu_id from tbl_coll_fees  where sy_id='" & Integer.Parse(cbo_eSortSy.SelectedValue) & "' and sem_id='" & Integer.Parse(cbo_SortSem.SelectedValue) & "' and yl_id='" & Integer.Parse(cbo_SortYL.SelectedValue) & "' and  crs_id='" & Integer.Parse(cbo_SortCrs.SelectedValue) & "'"
+            Dim cFeesR_sort As String = "select fees_id,fees_name, fees_amount, tuition_rpu_id from tbl_coll_fees  where sy_id='" & Integer.Parse(cbo_SortSY.SelectedValue) & "' and sem_id='" & cbo_SortSem.SelectedValue & "' and yl_id='" & cbo_SortYL.SelectedValue & "' and  crs_id='" & cbo_SortCrs.SelectedValue & "'"
             _dbConnection("db_lccsams")
             cbo_MS.SelectedIndex = -1
             cbo_yl.SelectedIndex = -1
@@ -247,7 +244,7 @@
 
 
     Private Sub btn_eAdd_Click(sender As Object, e As EventArgs) Handles btn_eAdd.Click
-        If MessageBox.Show("", "Do You want to add new elementary fees", MessageBoxButtons.YesNo) = DialogResult.Yes Then
+        If dlg_addfees.ShowDialog() = DialogResult.OK Then
             cbo_eSY.Enabled = True
             txtb_eFeeName.Enabled = True
             txtb_eFeeAmnt.Enabled = True
@@ -258,12 +255,12 @@
             btn_eSave.Enabled = True
             dg_eFeesRec.Enabled = False
             b = 1
-
         End If
+
     End Sub
 
     Private Sub btn_eUpdate_Click(sender As Object, e As EventArgs) Handles btn_eUpdate.Click
-        If MessageBox.Show("", "Do You want to Update this fees?", MessageBoxButtons.YesNo) = DialogResult.Yes Then
+        If dlg_updatefees.ShowDialog() = DialogResult.OK Then
             b = 2
             cbo_eSY.Enabled = True
             txtb_eFeeName.Enabled = True
@@ -275,6 +272,7 @@
             btn_eSave.Enabled = True
             dg_eFeesRec.Enabled = False
         End If
+
     End Sub
 
     Private Sub btn_eCancel_Click(sender As Object, e As EventArgs) Handles btn_eCancel.Click
@@ -368,7 +366,7 @@
     Dim ssy_id As Integer = 0
 
     Private Sub btn_sAdd_Click(sender As Object, e As EventArgs) Handles btn_sAdd.Click
-        If MessageBox.Show("", "Do You want to add new Senior High fees", MessageBoxButtons.YesNo) = DialogResult.Yes Then
+        If dlg_addfees.ShowDialog() = DialogResult.OK Then
             cbo_sSY.Enabled = True
             txtb_sfeeName.Enabled = True
             txtb_sFeeAmnt.Enabled = True
@@ -380,12 +378,11 @@
             btn_sSave.Enabled = True
             dg_sfeesRec.Enabled = False
             c = 1
-
         End If
     End Sub
 
     Private Sub btn_sUpdate_Click(sender As Object, e As EventArgs) Handles btn_sUpdate.Click
-        If MessageBox.Show("", "Do You want to Update this fees?", MessageBoxButtons.YesNo) = DialogResult.Yes Then
+        If dlg_updatefees.ShowDialog() = DialogResult.OK Then
             c = 2
             cbo_sSY.Enabled = True
             txtb_sfeeName.Enabled = True
@@ -398,6 +395,8 @@
             btn_sSave.Enabled = True
             dg_sfeesRec.Enabled = False
         End If
+
+
     End Sub
 
     Private Sub btn_sCancel_Click(sender As Object, e As EventArgs) Handles btn_sCancel.Click
@@ -422,26 +421,37 @@
                 _dbConnection("db_lccsams")
                 _insertData("insert into tbl_senior_fees values (0,'" & txtb_sfeeName.Text & "','" & txtb_sFeeAmnt.Text & "','" & cbo_sSY.SelectedValue & "')")
                 _displayRecords(sFeesR, dg_sfeesRec)
-                dlg_savesuccessfully.ShowDialog()
+                If dlg_savesuccessfully.ShowDialog() = DialogResult.OK Then
+                    cbo_sSY.Enabled = False
+                    txtb_sfeeName.Enabled = False
+                    txtb_sFeeAmnt.Enabled = False
+
+
+                    btn_sAdd.Enabled = True
+                    btn_sUpdate.Enabled = True
+                    btn_sCancel.Enabled = False
+                    btn_sSave.Enabled = False
+                    dg_sfeesRec.Enabled = True
+                End If
             Case 2
                 _dbConnection("db_lccsams")
                 _updateData("update tbl_senior_fees  set sfees_name='" & txtb_sfeeName.Text & "', sfees_amount='" & txtb_sFeeAmnt.Text & "' where sfees_id='" & sfees_id & "'")
                 btn_sUpdate.Enabled = True
                 btn_sSave.Enabled = False
-                UpdatedSuccessfully.ShowDialog()
-                _displayRecords(sFeesR, dg_sfeesRec)
+                If UpdatedSuccessfully.ShowDialog() = DialogResult.OK Then
+                    _displayRecords(sFeesR, dg_sfeesRec)
+
+
+                    btn_sAdd.Enabled = True
+                    btn_sUpdate.Enabled = True
+                    btn_sCancel.Enabled = False
+                    btn_sSave.Enabled = False
+                    dg_sfeesRec.Enabled = True
+                End If
+
 
         End Select
-        cbo_sSY.Enabled = False
-        txtb_sfeeName.Enabled = False
-        txtb_sFeeAmnt.Enabled = False
 
-
-        btn_sAdd.Enabled = True
-        btn_sUpdate.Enabled = True
-        btn_sCancel.Enabled = False
-        btn_sSave.Enabled = False
-        dg_sfeesRec.Enabled = True
     End Sub
 
     Private Sub cbo_sSortSY_SelectionChangeCommitted(sender As Object, e As EventArgs) Handles cbo_sSortSY.SelectionChangeCommitted
@@ -479,7 +489,7 @@
     Dim jfees_id As Integer = 0
 
     Private Sub btn_jAdd_Click(sender As Object, e As EventArgs) Handles btn_jAdd.Click
-        If MessageBox.Show("", "Do You want to add new Junior High fees", MessageBoxButtons.YesNo) = DialogResult.Yes Then
+        If dlg_addfees.ShowDialog() = DialogResult.OK Then
             cbo_jSY.Enabled = True
             txtb_jFeesName.Enabled = True
             txtb_jFeesAmnt.Enabled = True
@@ -491,12 +501,12 @@
             btn_jSave.Enabled = True
             dg_jFeesRec.Enabled = False
             d = 1
-
         End If
+
     End Sub
 
     Private Sub btn_jUpdate_Click(sender As Object, e As EventArgs) Handles btn_jUpdate.Click
-        If MessageBox.Show("", "Do You want to Update this fees?", MessageBoxButtons.YesNo) = DialogResult.Yes Then
+        If dlg_updatefees.ShowDialog() = DialogResult.OK Then
             d = 2
             cbo_jSY.Enabled = True
             txtb_jFeesName.Enabled = True
@@ -510,6 +520,7 @@
             dg_jFeesRec.Enabled = False
 
         End If
+
     End Sub
 
     Private Sub btn_jCancel_Click(sender As Object, e As EventArgs) Handles btn_jCancel.Click
@@ -531,25 +542,38 @@
 
                 _dbConnection("db_lccsams")
                 _insertData("insert into tbl_junior_fees values (0,'" & txtb_sfeeName.Text & "','" & txtb_sFeeAmnt.Text & "','" & cbo_sSY.SelectedValue & "')")
-                _displayRecords(jFeesR, dg_jFeesRec)
-                dlg_savesuccessfully.ShowDialog()
+
+                If dlg_savesuccessfully.ShowDialog() = DialogResult.OK Then
+                    cbo_jSY.Enabled = False
+                    txtb_jFeesName.Enabled = False
+                    txtb_jFeesAmnt.Enabled = False
+                    btn_jAdd.Enabled = True
+                    btn_jUpdate.Enabled = True
+                    btn_jCancel.Enabled = False
+                    btn_jSave.Enabled = False
+                    dg_jFeesRec.Enabled = True
+                    _displayRecords(jFeesR, dg_jFeesRec)
+                End If
             Case 2
                 _dbConnection("db_lccsams")
                 _updateData("update tbl_junior_fees set jfees_name='" & txtb_jFeesName.Text & "', jfees_amount='" & txtb_jFeesAmnt.Text & "' where jfees_id='" & jfees_id & "'")
                 btn_sUpdate.Enabled = True
                 btn_sSave.Enabled = False
 
-                UpdatedSuccessfully.ShowDialog()
-                _displayRecords(jFeesR, dg_jFeesRec)
+                If UpdatedSuccessfully.ShowDialog() = DialogResult.OK Then
+                    cbo_jSY.Enabled = False
+                    txtb_jFeesName.Enabled = False
+                    txtb_jFeesAmnt.Enabled = False
+                    btn_jAdd.Enabled = True
+                    btn_jUpdate.Enabled = True
+                    btn_jCancel.Enabled = False
+                    btn_jSave.Enabled = False
+                    dg_jFeesRec.Enabled = True
+                    _displayRecords(jFeesR, dg_jFeesRec)
+                End If
+
         End Select
-        cbo_jSY.Enabled = False
-        txtb_jFeesName.Enabled = False
-        txtb_jFeesAmnt.Enabled = False
-        btn_jAdd.Enabled = True
-        btn_jUpdate.Enabled = True
-        btn_jCancel.Enabled = False
-        btn_jSave.Enabled = False
-        dg_jFeesRec.Enabled = True
+
     End Sub
     Private Sub cbo_jSortSY_SelectionChangeCommitted(sender As Object, e As EventArgs) Handles cbo_jSortSY.SelectionChangeCommitted
         Try
@@ -579,5 +603,7 @@
         End Try
     End Sub
 
+    Private Sub Panel5_Paint(sender As Object, e As PaintEventArgs) Handles Panel5.Paint
 
+    End Sub
 End Class

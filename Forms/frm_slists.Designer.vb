@@ -34,18 +34,7 @@ Partial Class frm_slists
         Me.college_dept = New System.Windows.Forms.TabPage()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.btn_backStudAcct = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
         Me.dg_studR = New Bunifu.Framework.UI.BunifuCustomDataGrid()
-        Me.s_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.s_fName = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.s_lName = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.s_Midi = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.sy_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.sem_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.yl_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.crs_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btn_cancel = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.btn_gotoAcct = New Bunifu.Framework.UI.BunifuFlatButton()
@@ -80,9 +69,6 @@ Partial Class frm_slists
         Me.elem_dept = New System.Windows.Forms.TabPage()
         Me.Panel8 = New System.Windows.Forms.Panel()
         Me.Panel9 = New System.Windows.Forms.Panel()
-        Me.BunifuFlatButton11 = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.RadioButton5 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton6 = New System.Windows.Forms.RadioButton()
         Me.dg_eStudRecords = New Bunifu.Framework.UI.BunifuCustomDataGrid()
         Me.col_estud_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.col_estud_fname = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -116,9 +102,6 @@ Partial Class frm_slists
         Me.seniorHigh_dept = New System.Windows.Forms.TabPage()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Panel6 = New System.Windows.Forms.Panel()
-        Me.BunifuFlatButton6 = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.RadioButton3 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton4 = New System.Windows.Forms.RadioButton()
         Me.dg_sStudRec = New Bunifu.Framework.UI.BunifuCustomDataGrid()
         Me.col_sStud_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.col_sStud_fname = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -152,9 +135,6 @@ Partial Class frm_slists
         Me.juniorHigh_dept = New System.Windows.Forms.TabPage()
         Me.Panel11 = New System.Windows.Forms.Panel()
         Me.Panel12 = New System.Windows.Forms.Panel()
-        Me.BunifuFlatButton13 = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.RadioButton7 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton8 = New System.Windows.Forms.RadioButton()
         Me.dg_jStudRec = New Bunifu.Framework.UI.BunifuCustomDataGrid()
         Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -185,28 +165,32 @@ Partial Class frm_slists
         Me.Label17 = New System.Windows.Forms.Label()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.txtb_jSearch = New System.Windows.Forms.TextBox()
+        Me.s_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.s_fName = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.s_lName = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.s_Midi = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.sy_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.sem_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.yl_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.crs_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TabControl1.SuspendLayout()
         Me.college_dept.SuspendLayout()
         Me.Panel2.SuspendLayout()
-        Me.Panel3.SuspendLayout()
         CType(Me.dg_studR, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.elem_dept.SuspendLayout()
         Me.Panel8.SuspendLayout()
-        Me.Panel9.SuspendLayout()
         CType(Me.dg_eStudRecords, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel7.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
         Me.seniorHigh_dept.SuspendLayout()
         Me.Panel5.SuspendLayout()
-        Me.Panel6.SuspendLayout()
         CType(Me.dg_sStudRec, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel4.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.juniorHigh_dept.SuspendLayout()
         Me.Panel11.SuspendLayout()
-        Me.Panel12.SuspendLayout()
         CType(Me.dg_jStudRec, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel10.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
@@ -252,77 +236,11 @@ Partial Class frm_slists
         '
         'Panel3
         '
-        Me.Panel3.Controls.Add(Me.btn_backStudAcct)
-        Me.Panel3.Controls.Add(Me.RadioButton1)
-        Me.Panel3.Controls.Add(Me.RadioButton2)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel3.Location = New System.Drawing.Point(0, 497)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(770, 57)
         Me.Panel3.TabIndex = 48
-        '
-        'btn_backStudAcct
-        '
-        Me.btn_backStudAcct.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
-        Me.btn_backStudAcct.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.btn_backStudAcct.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.btn_backStudAcct.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btn_backStudAcct.BorderRadius = 0
-        Me.btn_backStudAcct.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.btn_backStudAcct.ButtonText = "BACKUP STUDENTS ACCOUNT"
-        Me.btn_backStudAcct.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_backStudAcct.DisabledColor = System.Drawing.Color.Gray
-        Me.btn_backStudAcct.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!)
-        Me.btn_backStudAcct.ForeColor = System.Drawing.Color.SeaGreen
-        Me.btn_backStudAcct.Iconcolor = System.Drawing.Color.Transparent
-        Me.btn_backStudAcct.Iconimage = Nothing
-        Me.btn_backStudAcct.Iconimage_right = Nothing
-        Me.btn_backStudAcct.Iconimage_right_Selected = Nothing
-        Me.btn_backStudAcct.Iconimage_Selected = Nothing
-        Me.btn_backStudAcct.IconMarginLeft = 0
-        Me.btn_backStudAcct.IconMarginRight = 0
-        Me.btn_backStudAcct.IconRightVisible = False
-        Me.btn_backStudAcct.IconRightZoom = 0R
-        Me.btn_backStudAcct.IconVisible = False
-        Me.btn_backStudAcct.IconZoom = 90.0R
-        Me.btn_backStudAcct.IsTab = False
-        Me.btn_backStudAcct.Location = New System.Drawing.Point(43, 8)
-        Me.btn_backStudAcct.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
-        Me.btn_backStudAcct.Name = "btn_backStudAcct"
-        Me.btn_backStudAcct.Normalcolor = System.Drawing.SystemColors.ButtonFace
-        Me.btn_backStudAcct.OnHovercolor = System.Drawing.Color.Goldenrod
-        Me.btn_backStudAcct.OnHoverTextColor = System.Drawing.Color.White
-        Me.btn_backStudAcct.selected = False
-        Me.btn_backStudAcct.Size = New System.Drawing.Size(212, 35)
-        Me.btn_backStudAcct.TabIndex = 52
-        Me.btn_backStudAcct.Text = "BACKUP STUDENTS ACCOUNT"
-        Me.btn_backStudAcct.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.btn_backStudAcct.Textcolor = System.Drawing.Color.SeaGreen
-        Me.btn_backStudAcct.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        '
-        'RadioButton1
-        '
-        Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Checked = True
-        Me.RadioButton1.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton1.Location = New System.Drawing.Point(341, 18)
-        Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(133, 25)
-        Me.RadioButton1.TabIndex = 50
-        Me.RadioButton1.TabStop = True
-        Me.RadioButton1.Text = "ACTIVE STUDENTS"
-        Me.RadioButton1.UseVisualStyleBackColor = True
-        '
-        'RadioButton2
-        '
-        Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton2.Location = New System.Drawing.Point(489, 18)
-        Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(146, 25)
-        Me.RadioButton2.TabIndex = 1
-        Me.RadioButton2.Text = "INACTIVE STUDENTS"
-        Me.RadioButton2.UseVisualStyleBackColor = True
         '
         'dg_studR
         '
@@ -345,79 +263,21 @@ Partial Class frm_slists
         Me.dg_studR.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle10
         Me.dg_studR.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dg_studR.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.s_id, Me.s_fName, Me.s_lName, Me.s_Midi, Me.sy_id, Me.sem_id, Me.yl_id, Me.crs_id})
-        Me.dg_studR.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dg_studR.Dock = System.Windows.Forms.DockStyle.Top
         Me.dg_studR.DoubleBuffered = True
         Me.dg_studR.EnableHeadersVisualStyles = False
         Me.dg_studR.HeaderBgColor = System.Drawing.Color.SeaGreen
         Me.dg_studR.HeaderForeColor = System.Drawing.Color.White
         Me.dg_studR.Location = New System.Drawing.Point(0, 0)
+        Me.dg_studR.MaximumSize = New System.Drawing.Size(0, 554)
         Me.dg_studR.Name = "dg_studR"
         Me.dg_studR.ReadOnly = True
         Me.dg_studR.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.dg_studR.RowHeadersVisible = False
+        Me.dg_studR.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.dg_studR.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dg_studR.Size = New System.Drawing.Size(770, 554)
+        Me.dg_studR.Size = New System.Drawing.Size(770, 491)
         Me.dg_studR.TabIndex = 47
-        '
-        's_id
-        '
-        Me.s_id.DataPropertyName = "stud_id"
-        Me.s_id.HeaderText = "Stud. id"
-        Me.s_id.Name = "s_id"
-        Me.s_id.ReadOnly = True
-        '
-        's_fName
-        '
-        Me.s_fName.DataPropertyName = "stud_fname"
-        Me.s_fName.HeaderText = "First Name"
-        Me.s_fName.Name = "s_fName"
-        Me.s_fName.ReadOnly = True
-        '
-        's_lName
-        '
-        Me.s_lName.DataPropertyName = "stud_Lname"
-        Me.s_lName.HeaderText = "Last Name"
-        Me.s_lName.Name = "s_lName"
-        Me.s_lName.ReadOnly = True
-        '
-        's_Midi
-        '
-        Me.s_Midi.DataPropertyName = "stud_midI"
-        Me.s_Midi.HeaderText = "Middle Initial"
-        Me.s_Midi.Name = "s_Midi"
-        Me.s_Midi.ReadOnly = True
-        '
-        'sy_id
-        '
-        Me.sy_id.DataPropertyName = "sy_id"
-        Me.sy_id.HeaderText = "S/Y"
-        Me.sy_id.Name = "sy_id"
-        Me.sy_id.ReadOnly = True
-        Me.sy_id.Visible = False
-        '
-        'sem_id
-        '
-        Me.sem_id.DataPropertyName = "sem_id"
-        Me.sem_id.HeaderText = "sem"
-        Me.sem_id.Name = "sem_id"
-        Me.sem_id.ReadOnly = True
-        Me.sem_id.Visible = False
-        '
-        'yl_id
-        '
-        Me.yl_id.DataPropertyName = "yl_id"
-        Me.yl_id.HeaderText = "YL"
-        Me.yl_id.Name = "yl_id"
-        Me.yl_id.ReadOnly = True
-        Me.yl_id.Visible = False
-        '
-        'crs_id
-        '
-        Me.crs_id.DataPropertyName = "crs_id"
-        Me.crs_id.HeaderText = "course"
-        Me.crs_id.Name = "crs_id"
-        Me.crs_id.ReadOnly = True
-        Me.crs_id.Visible = False
         '
         'Panel1
         '
@@ -927,77 +787,11 @@ Partial Class frm_slists
         '
         'Panel9
         '
-        Me.Panel9.Controls.Add(Me.BunifuFlatButton11)
-        Me.Panel9.Controls.Add(Me.RadioButton5)
-        Me.Panel9.Controls.Add(Me.RadioButton6)
         Me.Panel9.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel9.Location = New System.Drawing.Point(0, 503)
         Me.Panel9.Name = "Panel9"
         Me.Panel9.Size = New System.Drawing.Size(776, 57)
         Me.Panel9.TabIndex = 48
-        '
-        'BunifuFlatButton11
-        '
-        Me.BunifuFlatButton11.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
-        Me.BunifuFlatButton11.Anchor = System.Windows.Forms.AnchorStyles.Right
-        Me.BunifuFlatButton11.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.BunifuFlatButton11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BunifuFlatButton11.BorderRadius = 0
-        Me.BunifuFlatButton11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.BunifuFlatButton11.ButtonText = "BACKUP STUDENTS ACCOUNT"
-        Me.BunifuFlatButton11.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BunifuFlatButton11.DisabledColor = System.Drawing.Color.Gray
-        Me.BunifuFlatButton11.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!)
-        Me.BunifuFlatButton11.ForeColor = System.Drawing.Color.SeaGreen
-        Me.BunifuFlatButton11.Iconcolor = System.Drawing.Color.Transparent
-        Me.BunifuFlatButton11.Iconimage = Nothing
-        Me.BunifuFlatButton11.Iconimage_right = Nothing
-        Me.BunifuFlatButton11.Iconimage_right_Selected = Nothing
-        Me.BunifuFlatButton11.Iconimage_Selected = Nothing
-        Me.BunifuFlatButton11.IconMarginLeft = 0
-        Me.BunifuFlatButton11.IconMarginRight = 0
-        Me.BunifuFlatButton11.IconRightVisible = False
-        Me.BunifuFlatButton11.IconRightZoom = 0R
-        Me.BunifuFlatButton11.IconVisible = False
-        Me.BunifuFlatButton11.IconZoom = 90.0R
-        Me.BunifuFlatButton11.IsTab = False
-        Me.BunifuFlatButton11.Location = New System.Drawing.Point(49, 8)
-        Me.BunifuFlatButton11.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
-        Me.BunifuFlatButton11.Name = "BunifuFlatButton11"
-        Me.BunifuFlatButton11.Normalcolor = System.Drawing.SystemColors.ButtonFace
-        Me.BunifuFlatButton11.OnHovercolor = System.Drawing.Color.Goldenrod
-        Me.BunifuFlatButton11.OnHoverTextColor = System.Drawing.Color.White
-        Me.BunifuFlatButton11.selected = False
-        Me.BunifuFlatButton11.Size = New System.Drawing.Size(212, 35)
-        Me.BunifuFlatButton11.TabIndex = 52
-        Me.BunifuFlatButton11.Text = "BACKUP STUDENTS ACCOUNT"
-        Me.BunifuFlatButton11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.BunifuFlatButton11.Textcolor = System.Drawing.Color.SeaGreen
-        Me.BunifuFlatButton11.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        '
-        'RadioButton5
-        '
-        Me.RadioButton5.AutoSize = True
-        Me.RadioButton5.Checked = True
-        Me.RadioButton5.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton5.Location = New System.Drawing.Point(341, 18)
-        Me.RadioButton5.Name = "RadioButton5"
-        Me.RadioButton5.Size = New System.Drawing.Size(133, 25)
-        Me.RadioButton5.TabIndex = 50
-        Me.RadioButton5.TabStop = True
-        Me.RadioButton5.Text = "ACTIVE STUDENTS"
-        Me.RadioButton5.UseVisualStyleBackColor = True
-        '
-        'RadioButton6
-        '
-        Me.RadioButton6.AutoSize = True
-        Me.RadioButton6.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton6.Location = New System.Drawing.Point(489, 18)
-        Me.RadioButton6.Name = "RadioButton6"
-        Me.RadioButton6.Size = New System.Drawing.Size(146, 25)
-        Me.RadioButton6.TabIndex = 1
-        Me.RadioButton6.Text = "INACTIVE STUDENTS"
-        Me.RadioButton6.UseVisualStyleBackColor = True
         '
         'dg_eStudRecords
         '
@@ -1020,7 +814,7 @@ Partial Class frm_slists
         Me.dg_eStudRecords.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle12
         Me.dg_eStudRecords.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dg_eStudRecords.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.col_estud_id, Me.col_estud_fname, Me.col_estud_lname, Me.col_estud_mi, Me.col_esy_id, Me.col_egl_id})
-        Me.dg_eStudRecords.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dg_eStudRecords.Dock = System.Windows.Forms.DockStyle.Top
         Me.dg_eStudRecords.DoubleBuffered = True
         Me.dg_eStudRecords.EnableHeadersVisualStyles = False
         Me.dg_eStudRecords.HeaderBgColor = System.Drawing.Color.SeaGreen
@@ -1031,7 +825,7 @@ Partial Class frm_slists
         Me.dg_eStudRecords.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.dg_eStudRecords.RowHeadersVisible = False
         Me.dg_eStudRecords.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dg_eStudRecords.Size = New System.Drawing.Size(776, 560)
+        Me.dg_eStudRecords.Size = New System.Drawing.Size(776, 503)
         Me.dg_eStudRecords.TabIndex = 47
         '
         'col_estud_id
@@ -1500,77 +1294,11 @@ Partial Class frm_slists
         '
         'Panel6
         '
-        Me.Panel6.Controls.Add(Me.BunifuFlatButton6)
-        Me.Panel6.Controls.Add(Me.RadioButton3)
-        Me.Panel6.Controls.Add(Me.RadioButton4)
         Me.Panel6.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel6.Location = New System.Drawing.Point(0, 503)
         Me.Panel6.Name = "Panel6"
         Me.Panel6.Size = New System.Drawing.Size(776, 57)
         Me.Panel6.TabIndex = 48
-        '
-        'BunifuFlatButton6
-        '
-        Me.BunifuFlatButton6.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
-        Me.BunifuFlatButton6.Anchor = System.Windows.Forms.AnchorStyles.Right
-        Me.BunifuFlatButton6.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.BunifuFlatButton6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BunifuFlatButton6.BorderRadius = 0
-        Me.BunifuFlatButton6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.BunifuFlatButton6.ButtonText = "BACKUP STUDENTS ACCOUNT"
-        Me.BunifuFlatButton6.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BunifuFlatButton6.DisabledColor = System.Drawing.Color.Gray
-        Me.BunifuFlatButton6.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!)
-        Me.BunifuFlatButton6.ForeColor = System.Drawing.Color.SeaGreen
-        Me.BunifuFlatButton6.Iconcolor = System.Drawing.Color.Transparent
-        Me.BunifuFlatButton6.Iconimage = Nothing
-        Me.BunifuFlatButton6.Iconimage_right = Nothing
-        Me.BunifuFlatButton6.Iconimage_right_Selected = Nothing
-        Me.BunifuFlatButton6.Iconimage_Selected = Nothing
-        Me.BunifuFlatButton6.IconMarginLeft = 0
-        Me.BunifuFlatButton6.IconMarginRight = 0
-        Me.BunifuFlatButton6.IconRightVisible = False
-        Me.BunifuFlatButton6.IconRightZoom = 0R
-        Me.BunifuFlatButton6.IconVisible = False
-        Me.BunifuFlatButton6.IconZoom = 90.0R
-        Me.BunifuFlatButton6.IsTab = False
-        Me.BunifuFlatButton6.Location = New System.Drawing.Point(49, 8)
-        Me.BunifuFlatButton6.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
-        Me.BunifuFlatButton6.Name = "BunifuFlatButton6"
-        Me.BunifuFlatButton6.Normalcolor = System.Drawing.SystemColors.ButtonFace
-        Me.BunifuFlatButton6.OnHovercolor = System.Drawing.Color.Goldenrod
-        Me.BunifuFlatButton6.OnHoverTextColor = System.Drawing.Color.White
-        Me.BunifuFlatButton6.selected = False
-        Me.BunifuFlatButton6.Size = New System.Drawing.Size(212, 35)
-        Me.BunifuFlatButton6.TabIndex = 52
-        Me.BunifuFlatButton6.Text = "BACKUP STUDENTS ACCOUNT"
-        Me.BunifuFlatButton6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.BunifuFlatButton6.Textcolor = System.Drawing.Color.SeaGreen
-        Me.BunifuFlatButton6.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        '
-        'RadioButton3
-        '
-        Me.RadioButton3.AutoSize = True
-        Me.RadioButton3.Checked = True
-        Me.RadioButton3.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton3.Location = New System.Drawing.Point(341, 18)
-        Me.RadioButton3.Name = "RadioButton3"
-        Me.RadioButton3.Size = New System.Drawing.Size(133, 25)
-        Me.RadioButton3.TabIndex = 50
-        Me.RadioButton3.TabStop = True
-        Me.RadioButton3.Text = "ACTIVE STUDENTS"
-        Me.RadioButton3.UseVisualStyleBackColor = True
-        '
-        'RadioButton4
-        '
-        Me.RadioButton4.AutoSize = True
-        Me.RadioButton4.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton4.Location = New System.Drawing.Point(489, 18)
-        Me.RadioButton4.Name = "RadioButton4"
-        Me.RadioButton4.Size = New System.Drawing.Size(146, 25)
-        Me.RadioButton4.TabIndex = 1
-        Me.RadioButton4.Text = "INACTIVE STUDENTS"
-        Me.RadioButton4.UseVisualStyleBackColor = True
         '
         'dg_sStudRec
         '
@@ -1593,7 +1321,7 @@ Partial Class frm_slists
         Me.dg_sStudRec.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle14
         Me.dg_sStudRec.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dg_sStudRec.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.col_sStud_id, Me.col_sStud_fname, Me.col_sStud_lname, Me.col_sStud_mi, Me.col_sSY, Me.col_sGL})
-        Me.dg_sStudRec.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dg_sStudRec.Dock = System.Windows.Forms.DockStyle.Top
         Me.dg_sStudRec.DoubleBuffered = True
         Me.dg_sStudRec.EnableHeadersVisualStyles = False
         Me.dg_sStudRec.HeaderBgColor = System.Drawing.Color.SeaGreen
@@ -1604,7 +1332,7 @@ Partial Class frm_slists
         Me.dg_sStudRec.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.dg_sStudRec.RowHeadersVisible = False
         Me.dg_sStudRec.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dg_sStudRec.Size = New System.Drawing.Size(776, 560)
+        Me.dg_sStudRec.Size = New System.Drawing.Size(776, 503)
         Me.dg_sStudRec.TabIndex = 47
         '
         'col_sStud_id
@@ -2073,77 +1801,11 @@ Partial Class frm_slists
         '
         'Panel12
         '
-        Me.Panel12.Controls.Add(Me.BunifuFlatButton13)
-        Me.Panel12.Controls.Add(Me.RadioButton7)
-        Me.Panel12.Controls.Add(Me.RadioButton8)
         Me.Panel12.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel12.Location = New System.Drawing.Point(0, 503)
         Me.Panel12.Name = "Panel12"
         Me.Panel12.Size = New System.Drawing.Size(776, 57)
         Me.Panel12.TabIndex = 48
-        '
-        'BunifuFlatButton13
-        '
-        Me.BunifuFlatButton13.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
-        Me.BunifuFlatButton13.Anchor = System.Windows.Forms.AnchorStyles.Right
-        Me.BunifuFlatButton13.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.BunifuFlatButton13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BunifuFlatButton13.BorderRadius = 0
-        Me.BunifuFlatButton13.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.BunifuFlatButton13.ButtonText = "BACKUP STUDENTS ACCOUNT"
-        Me.BunifuFlatButton13.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BunifuFlatButton13.DisabledColor = System.Drawing.Color.Gray
-        Me.BunifuFlatButton13.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!)
-        Me.BunifuFlatButton13.ForeColor = System.Drawing.Color.SeaGreen
-        Me.BunifuFlatButton13.Iconcolor = System.Drawing.Color.Transparent
-        Me.BunifuFlatButton13.Iconimage = Nothing
-        Me.BunifuFlatButton13.Iconimage_right = Nothing
-        Me.BunifuFlatButton13.Iconimage_right_Selected = Nothing
-        Me.BunifuFlatButton13.Iconimage_Selected = Nothing
-        Me.BunifuFlatButton13.IconMarginLeft = 0
-        Me.BunifuFlatButton13.IconMarginRight = 0
-        Me.BunifuFlatButton13.IconRightVisible = False
-        Me.BunifuFlatButton13.IconRightZoom = 0R
-        Me.BunifuFlatButton13.IconVisible = False
-        Me.BunifuFlatButton13.IconZoom = 90.0R
-        Me.BunifuFlatButton13.IsTab = False
-        Me.BunifuFlatButton13.Location = New System.Drawing.Point(49, 8)
-        Me.BunifuFlatButton13.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
-        Me.BunifuFlatButton13.Name = "BunifuFlatButton13"
-        Me.BunifuFlatButton13.Normalcolor = System.Drawing.SystemColors.ButtonFace
-        Me.BunifuFlatButton13.OnHovercolor = System.Drawing.Color.Goldenrod
-        Me.BunifuFlatButton13.OnHoverTextColor = System.Drawing.Color.White
-        Me.BunifuFlatButton13.selected = False
-        Me.BunifuFlatButton13.Size = New System.Drawing.Size(212, 35)
-        Me.BunifuFlatButton13.TabIndex = 52
-        Me.BunifuFlatButton13.Text = "BACKUP STUDENTS ACCOUNT"
-        Me.BunifuFlatButton13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.BunifuFlatButton13.Textcolor = System.Drawing.Color.SeaGreen
-        Me.BunifuFlatButton13.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        '
-        'RadioButton7
-        '
-        Me.RadioButton7.AutoSize = True
-        Me.RadioButton7.Checked = True
-        Me.RadioButton7.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton7.Location = New System.Drawing.Point(341, 18)
-        Me.RadioButton7.Name = "RadioButton7"
-        Me.RadioButton7.Size = New System.Drawing.Size(133, 25)
-        Me.RadioButton7.TabIndex = 50
-        Me.RadioButton7.TabStop = True
-        Me.RadioButton7.Text = "ACTIVE STUDENTS"
-        Me.RadioButton7.UseVisualStyleBackColor = True
-        '
-        'RadioButton8
-        '
-        Me.RadioButton8.AutoSize = True
-        Me.RadioButton8.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton8.Location = New System.Drawing.Point(489, 18)
-        Me.RadioButton8.Name = "RadioButton8"
-        Me.RadioButton8.Size = New System.Drawing.Size(146, 25)
-        Me.RadioButton8.TabIndex = 1
-        Me.RadioButton8.Text = "INACTIVE STUDENTS"
-        Me.RadioButton8.UseVisualStyleBackColor = True
         '
         'dg_jStudRec
         '
@@ -2166,7 +1828,7 @@ Partial Class frm_slists
         Me.dg_jStudRec.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle16
         Me.dg_jStudRec.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dg_jStudRec.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn14, Me.DataGridViewTextBoxColumn16, Me.DataGridViewTextBoxColumn17, Me.DataGridViewTextBoxColumn18})
-        Me.dg_jStudRec.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dg_jStudRec.Dock = System.Windows.Forms.DockStyle.Top
         Me.dg_jStudRec.DoubleBuffered = True
         Me.dg_jStudRec.EnableHeadersVisualStyles = False
         Me.dg_jStudRec.HeaderBgColor = System.Drawing.Color.SeaGreen
@@ -2177,7 +1839,7 @@ Partial Class frm_slists
         Me.dg_jStudRec.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.dg_jStudRec.RowHeadersVisible = False
         Me.dg_jStudRec.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dg_jStudRec.Size = New System.Drawing.Size(776, 560)
+        Me.dg_jStudRec.Size = New System.Drawing.Size(776, 503)
         Me.dg_jStudRec.TabIndex = 47
         '
         'DataGridViewTextBoxColumn7
@@ -2620,6 +2282,78 @@ Partial Class frm_slists
         Me.txtb_jSearch.Size = New System.Drawing.Size(425, 30)
         Me.txtb_jSearch.TabIndex = 13
         '
+        's_id
+        '
+        Me.s_id.DataPropertyName = "stud_id"
+        Me.s_id.FillWeight = 349.2386!
+        Me.s_id.HeaderText = "Stud. id"
+        Me.s_id.MinimumWidth = 172
+        Me.s_id.Name = "s_id"
+        Me.s_id.ReadOnly = True
+        '
+        's_fName
+        '
+        Me.s_fName.DataPropertyName = "stud_fname"
+        Me.s_fName.FillWeight = 15.18528!
+        Me.s_fName.HeaderText = "First Name"
+        Me.s_fName.MinimumWidth = 172
+        Me.s_fName.Name = "s_fName"
+        Me.s_fName.ReadOnly = True
+        '
+        's_lName
+        '
+        Me.s_lName.DataPropertyName = "stud_Lname"
+        Me.s_lName.FillWeight = 28.00853!
+        Me.s_lName.HeaderText = "Last Name"
+        Me.s_lName.MinimumWidth = 172
+        Me.s_lName.Name = "s_lName"
+        Me.s_lName.ReadOnly = True
+        '
+        's_Midi
+        '
+        Me.s_Midi.DataPropertyName = "stud_midI"
+        Me.s_Midi.FillWeight = 7.567604!
+        Me.s_Midi.HeaderText = "Middle Initial"
+        Me.s_Midi.MinimumWidth = 100
+        Me.s_Midi.Name = "s_Midi"
+        Me.s_Midi.ReadOnly = True
+        '
+        'sy_id
+        '
+        Me.sy_id.DataPropertyName = "sy_id"
+        Me.sy_id.HeaderText = "S/Y"
+        Me.sy_id.MinimumWidth = 100
+        Me.sy_id.Name = "sy_id"
+        Me.sy_id.ReadOnly = True
+        Me.sy_id.Visible = False
+        '
+        'sem_id
+        '
+        Me.sem_id.DataPropertyName = "sem_id"
+        Me.sem_id.HeaderText = "sem"
+        Me.sem_id.MinimumWidth = 100
+        Me.sem_id.Name = "sem_id"
+        Me.sem_id.ReadOnly = True
+        Me.sem_id.Visible = False
+        '
+        'yl_id
+        '
+        Me.yl_id.DataPropertyName = "yl_id"
+        Me.yl_id.HeaderText = "YL"
+        Me.yl_id.MinimumWidth = 100
+        Me.yl_id.Name = "yl_id"
+        Me.yl_id.ReadOnly = True
+        Me.yl_id.Visible = False
+        '
+        'crs_id
+        '
+        Me.crs_id.DataPropertyName = "crs_id"
+        Me.crs_id.HeaderText = "course"
+        Me.crs_id.MinimumWidth = 100
+        Me.crs_id.Name = "crs_id"
+        Me.crs_id.ReadOnly = True
+        Me.crs_id.Visible = False
+        '
         'frm_slists
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -2630,8 +2364,6 @@ Partial Class frm_slists
         Me.TabControl1.ResumeLayout(False)
         Me.college_dept.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
-        Me.Panel3.ResumeLayout(False)
-        Me.Panel3.PerformLayout()
         CType(Me.dg_studR, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
@@ -2639,8 +2371,6 @@ Partial Class frm_slists
         Me.GroupBox1.PerformLayout()
         Me.elem_dept.ResumeLayout(False)
         Me.Panel8.ResumeLayout(False)
-        Me.Panel9.ResumeLayout(False)
-        Me.Panel9.PerformLayout()
         CType(Me.dg_eStudRecords, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel7.ResumeLayout(False)
         Me.Panel7.PerformLayout()
@@ -2648,8 +2378,6 @@ Partial Class frm_slists
         Me.GroupBox5.PerformLayout()
         Me.seniorHigh_dept.ResumeLayout(False)
         Me.Panel5.ResumeLayout(False)
-        Me.Panel6.ResumeLayout(False)
-        Me.Panel6.PerformLayout()
         CType(Me.dg_sStudRec, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
@@ -2657,8 +2385,6 @@ Partial Class frm_slists
         Me.GroupBox3.PerformLayout()
         Me.juniorHigh_dept.ResumeLayout(False)
         Me.Panel11.ResumeLayout(False)
-        Me.Panel12.ResumeLayout(False)
-        Me.Panel12.PerformLayout()
         CType(Me.dg_jStudRec, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel10.ResumeLayout(False)
         Me.Panel10.PerformLayout()
@@ -2697,9 +2423,6 @@ Partial Class frm_slists
     Friend WithEvents Label12 As System.Windows.Forms.Label
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
     Friend WithEvents Panel3 As System.Windows.Forms.Panel
-    Friend WithEvents btn_backStudAcct As Bunifu.Framework.UI.BunifuFlatButton
-    Friend WithEvents RadioButton1 As System.Windows.Forms.RadioButton
-    Friend WithEvents RadioButton2 As System.Windows.Forms.RadioButton
     Friend WithEvents dg_studR As Bunifu.Framework.UI.BunifuCustomDataGrid
     Friend WithEvents cbo_SearchBy As System.Windows.Forms.ComboBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
@@ -2721,9 +2444,6 @@ Partial Class frm_slists
     Friend WithEvents btn_cancel As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents Panel8 As System.Windows.Forms.Panel
     Friend WithEvents Panel9 As System.Windows.Forms.Panel
-    Friend WithEvents BunifuFlatButton11 As Bunifu.Framework.UI.BunifuFlatButton
-    Friend WithEvents RadioButton5 As System.Windows.Forms.RadioButton
-    Friend WithEvents RadioButton6 As System.Windows.Forms.RadioButton
     Friend WithEvents dg_eStudRecords As Bunifu.Framework.UI.BunifuCustomDataGrid
     Friend WithEvents Panel7 As System.Windows.Forms.Panel
     Friend WithEvents btn_eCancel As Bunifu.Framework.UI.BunifuFlatButton
@@ -2768,15 +2488,9 @@ Partial Class frm_slists
     Friend WithEvents Label25 As System.Windows.Forms.Label
     Friend WithEvents Panel5 As System.Windows.Forms.Panel
     Friend WithEvents Panel6 As System.Windows.Forms.Panel
-    Friend WithEvents BunifuFlatButton6 As Bunifu.Framework.UI.BunifuFlatButton
-    Friend WithEvents RadioButton3 As System.Windows.Forms.RadioButton
-    Friend WithEvents RadioButton4 As System.Windows.Forms.RadioButton
     Friend WithEvents dg_sStudRec As Bunifu.Framework.UI.BunifuCustomDataGrid
     Friend WithEvents Panel11 As System.Windows.Forms.Panel
     Friend WithEvents Panel12 As System.Windows.Forms.Panel
-    Friend WithEvents BunifuFlatButton13 As Bunifu.Framework.UI.BunifuFlatButton
-    Friend WithEvents RadioButton7 As System.Windows.Forms.RadioButton
-    Friend WithEvents RadioButton8 As System.Windows.Forms.RadioButton
     Friend WithEvents dg_jStudRec As Bunifu.Framework.UI.BunifuCustomDataGrid
     Friend WithEvents Panel10 As System.Windows.Forms.Panel
     Friend WithEvents btn_jCancel As Bunifu.Framework.UI.BunifuFlatButton
@@ -2796,14 +2510,6 @@ Partial Class frm_slists
     Friend WithEvents Label29 As System.Windows.Forms.Label
     Friend WithEvents Label31 As System.Windows.Forms.Label
     Friend WithEvents Label32 As System.Windows.Forms.Label
-    Friend WithEvents s_id As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents s_fName As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents s_lName As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents s_Midi As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents sy_id As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents sem_id As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents yl_id As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents crs_id As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents col_estud_id As DataGridViewTextBoxColumn
     Friend WithEvents col_estud_fname As DataGridViewTextBoxColumn
     Friend WithEvents col_estud_lname As DataGridViewTextBoxColumn
@@ -2822,4 +2528,12 @@ Partial Class frm_slists
     Friend WithEvents DataGridViewTextBoxColumn16 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn17 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn18 As DataGridViewTextBoxColumn
+    Friend WithEvents s_id As DataGridViewTextBoxColumn
+    Friend WithEvents s_fName As DataGridViewTextBoxColumn
+    Friend WithEvents s_lName As DataGridViewTextBoxColumn
+    Friend WithEvents s_Midi As DataGridViewTextBoxColumn
+    Friend WithEvents sy_id As DataGridViewTextBoxColumn
+    Friend WithEvents sem_id As DataGridViewTextBoxColumn
+    Friend WithEvents yl_id As DataGridViewTextBoxColumn
+    Friend WithEvents crs_id As DataGridViewTextBoxColumn
 End Class

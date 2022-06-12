@@ -31,11 +31,11 @@ Partial Class dlg_insertYearLevel
         'txtb_yearlevel
         '
         Me.txtb_yearlevel.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.txtb_yearlevel.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtb_yearlevel.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtb_yearlevel.Location = New System.Drawing.Point(63, 79)
         Me.txtb_yearlevel.MaxLength = 100
         Me.txtb_yearlevel.Name = "txtb_yearlevel"
-        Me.txtb_yearlevel.Size = New System.Drawing.Size(312, 38)
+        Me.txtb_yearlevel.Size = New System.Drawing.Size(312, 35)
         Me.txtb_yearlevel.TabIndex = 0
         '
         'Label1

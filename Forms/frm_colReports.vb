@@ -23,7 +23,7 @@ Public Class frm_colReports
                 print_preview.ReportViewer1.Refresh()
                 With print_preview.ReportViewer1.LocalReport
                     .DataSources.Clear()
-                    .ReportPath = "C:\Users\RJR-PC\Documents\Visual Studio 2019\LCC-SAMS_Project\Report2.rdlc"
+                    .ReportPath = "C:\Users\RJR-PC\Documents\Visual Studio 2019\LCC-SAMS_Project\bin\Debug\Reports\Report2.rdlc"
                     .DataSources.Add(New ReportDataSource("coll_rpt", dt))
                 End With
                 print_preview.ReportViewer1.RefreshReport()
@@ -137,6 +137,7 @@ Public Class frm_colReports
     End Sub
 
     Private Sub cbo_department_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbo_department.SelectedIndexChanged
+        Dim totalColl As Integer
         If cbo_department.SelectedIndex = 0 Then
             dg_coll_rpt.Columns(0).DataPropertyName = "stdacct_tN"
             dg_coll_rpt.Columns(1).DataPropertyName = "stdacct_tDate"
@@ -146,11 +147,16 @@ Public Class frm_colReports
                 lbl_titleReport.Text = cbo_dailyweekly.Text.ToUpper & " COLLECTION REPORT FOR COLLEGE DEPARTMENT AS OF"
             End If
             If cbo_dailyweekly.Text = "DAILY" Then
+                totalColl = 0
                 Dim selectDate As String = dp_dailyWeekly.Value.ToString("yyyy-MM-dd")
                 lbl_titleReport.Text = cbo_dailyweekly.Text.ToUpper & " COLLECTION REPORT FOR COLLEGE DEPARTMENT AS OF " & dp_dailyWeekly.Text
                 Dim coll_rpt As String = "Select sa.stdacct_tN,sa.stdacct_tDate,cf.fees_name,sa.stdacct_tAmount from tbl_studaccount sa inner join tbl_coll_fees cf on cf.fees_id=sa.stdacct_tName  where sa.stdacct_tDate='" & selectDate & "' order by sa.stdacct_tDate asc"
                 _displayRecords(coll_rpt, dg_coll_rpt)
             End If
+            For Each rowX As DataGridViewRow In dg_coll_rpt.Rows
+                totalColl += rowX.Cells(3).Value
+            Next
+            lbl_total.Text = totalColl
         End If
         If cbo_department.SelectedIndex = 1 Then
             dg_coll_rpt.Columns(0).DataPropertyName = "etan"

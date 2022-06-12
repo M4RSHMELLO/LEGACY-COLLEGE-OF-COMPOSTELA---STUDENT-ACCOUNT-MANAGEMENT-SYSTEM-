@@ -364,6 +364,7 @@ Partial Class frm_MSY
         'cbo_semester
         '
         Me.cbo_semester.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbo_semester.Enabled = False
         Me.cbo_semester.FormattingEnabled = True
         Me.cbo_semester.Location = New System.Drawing.Point(149, 57)
         Me.cbo_semester.Name = "cbo_semester"

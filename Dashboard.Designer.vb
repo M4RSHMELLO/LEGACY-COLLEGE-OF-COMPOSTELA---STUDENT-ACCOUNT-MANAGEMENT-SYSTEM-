@@ -332,7 +332,7 @@ Partial Class Dashboard
         Me.btn_menuMU.OnHovercolor = System.Drawing.Color.Goldenrod
         Me.btn_menuMU.OnHoverTextColor = System.Drawing.Color.White
         Me.btn_menuMU.selected = False
-        Me.btn_menuMU.Size = New System.Drawing.Size(247, 34)
+        Me.btn_menuMU.Size = New System.Drawing.Size(247, 27)
         Me.btn_menuMU.TabIndex = 7
         Me.btn_menuMU.Text = "MANAGE USERS"
         Me.btn_menuMU.TextAlign = System.Drawing.ContentAlignment.MiddleCenter

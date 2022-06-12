@@ -62,6 +62,7 @@ Public Class frm_SPayments
             _displayToTextbox_id()
         End If
         lbl_name.Text = "Name: " + txtb_name.Text
+        lbl_cashier.Text = cashier_name.ToUpper
         txtb_TransNo.Text = random_TaN()
         txtb_TransDate.Text = current_date.ToString("yyyy-MM-dd")
         _dateforSemester()
@@ -380,9 +381,7 @@ Public Class frm_SPayments
                 txtb_TotalAmount.Text = 0
                 txtb_CurrentBalance.Text = 0
                 dg_viewCurrentPayment.Rows.Clear()
-                dg_receipts.Rows.Clear()
-                lbl_tAmnt.Text = "TOTAL AMOUNT:"
-                lbl_Tbal.Text = "BALANCE:"
+
                 totalAmount = 0
 
             Case "CLEAR"
@@ -479,7 +478,41 @@ Public Class frm_SPayments
 
     '    End If
     'End Sub
+    <System.Runtime.InteropServices.DllImport("gdi32.dll")>
+    Public Shared Function BitBlt(ByVal hdcDest As IntPtr, ByVal nXDest As Integer, ByVal nYDest As Integer, ByVal nWidth As Integer, ByVal nHeight As Integer, ByVal hdcSrc As IntPtr,
+ ByVal nXSrc As Integer, ByVal nYSrc As Integer, ByVal dwRop As Integer) As Long
+    End Function
+    'get the screenshot
+    Private memoryImage As Bitmap
+    Private Sub CaptureScreen()
+        Dim mygraphics As Graphics = Me.pnl_receipts.CreateGraphics()
+        Dim s As Size = Me.pnl_receipts.Size
+        memoryImage = New Bitmap(s.Width, s.Height, mygraphics)
+        Dim memoryGraphics As Graphics = Graphics.FromImage(memoryImage)
+        Dim dc1 As IntPtr = mygraphics.GetHdc()
+        Dim dc2 As IntPtr = memoryGraphics.GetHdc()
+        BitBlt(dc2, 0, 0, Me.pnl_receipts.ClientRectangle.Width, Me.pnl_receipts.ClientRectangle.Height, dc1,
+     0, 0, 13369376)
+        mygraphics.ReleaseHdc(dc1)
+        memoryGraphics.ReleaseHdc(dc2)
+    End Sub
+    Private Sub print_collR_PrintPage(sender As Object, e As Printing.PrintPageEventArgs) Handles print_collR.PrintPage
+        e.Graphics.DrawImage(memoryImage, 0, 0)
+    End Sub
     Private Sub btn_PrintCreceipts_Click(sender As Object, e As EventArgs) Handles btn_PrintCreceipts.Click
+        CaptureScreen()
+        print_collR.Print()
+
+        If dlg_printedsuccessfully.ShowDialog = DialogResult.OK Then
+            dg_receipts.Rows.Clear()
+            dg_viewCurrentPayment.Rows.Clear()
+            dg_receipts.Rows.Clear()
+            lbl_tAmnt.Text = "TOTAL AMOUNT:"
+            lbl_Tbal.Text = "BALANCE:"
+            lbl_name.Text = "Name: "
+            lbl_orN.Text = "No. 00000"
+            lbl_date.Text = "0000-00-00"
+        End If
 
     End Sub
     ''###########################################################Elementary Section ################################################################################
@@ -678,6 +711,11 @@ Public Class frm_SPayments
         txtb_eStudTotAmnt.Text = _addOldCurrent(txtb_eStudCurrAcct, txtb_eStudOldAcct)
         totalAmount = Double.Parse(txtb_eStudTotAmnt.Text)
 
+
+        lbl_eName.Text = "Name: " & txtb_eStudName.Text.ToUpper
+        lbl_eTn.Text = "No. " & txtb_eTN.Text
+        lbl_eDate.Text = "Date: " & txtb_eTD.Text
+        lbl_cashierE.Text = cashier_name.ToUpper
         'transfer data to string
         eStud_id = txtb_eStudID.Text
         eStudname = txtb_eStudName.Text
@@ -719,8 +757,31 @@ Public Class frm_SPayments
         Catch ex As Exception
         End Try
     End Sub
-    Private Sub btn_ePrint_Click(sender As Object, e As EventArgs) Handles btn_ePrint.Click
 
+    Private Sub CaptureEScreen()
+        Dim mygraphics As Graphics = Me.pnl_elemReceipts.CreateGraphics()
+        Dim s As Size = Me.pnl_elemReceipts.Size
+        memoryImage = New Bitmap(s.Width, s.Height, mygraphics)
+        Dim memoryGraphics As Graphics = Graphics.FromImage(memoryImage)
+        Dim dc1 As IntPtr = mygraphics.GetHdc()
+        Dim dc2 As IntPtr = memoryGraphics.GetHdc()
+        BitBlt(dc2, 0, 0, Me.pnl_elemReceipts.ClientRectangle.Width, Me.pnl_elemReceipts.ClientRectangle.Height, dc1,
+     0, 0, 13369376)
+        mygraphics.ReleaseHdc(dc1)
+        memoryGraphics.ReleaseHdc(dc2)
+    End Sub
+
+    Private Sub btn_ePrint_Click(sender As Object, e As EventArgs) Handles btn_ePrint.Click
+        CaptureEScreen()
+        print_collR.Print()
+        If dlg_printedsuccessfully.ShowDialog = DialogResult.OK Then
+            dg_eReceipts.Rows.Clear()
+            lbl_eTamnt.Text = "TOTAL AMOUNT:"
+            lbl_eBal.Text = "BALANCE:"
+            lbl_eName.Text = "Name: "
+            lbl_eTn.Text = "No. 00000"
+            lbl_eDate.Text = "0000-00-00"
+        End If
     End Sub
 
     Private Sub btn_eAdd_Click(sender As Object, e As EventArgs) Handles btn_eAdd.Click
@@ -741,7 +802,7 @@ Public Class frm_SPayments
 
     Private Sub dg_ePayment_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dg_ePayment.CellClick
         Try
-            If dg_ePayment.Columns(e.ColumnIndex).Name = "delete" Then
+            If dg_ePayment.Columns(e.ColumnIndex).Name = "delete_elemP" Then
 
                 totalAmount += Double.Parse(dg_ePayment.Rows(e.RowIndex).Cells(2).Value)
                 dg_ePayment.Rows.RemoveAt(dg_ePayment.SelectedRows(0).Index)
@@ -896,6 +957,11 @@ Public Class frm_SPayments
         txtb_sToAmnt.Text = _addOldCurrent(txtb_sCurrAcct, txtb_sOldAcct)
         totalAmount = Double.Parse(txtb_sToAmnt.Text)
 
+        lbl_cashierS.Text = cashier_name.ToUpper
+        lbl_sName.Text = "Name: " & txtb_sStudName.Text
+        lbl_sTn.Text = "No. " & txtb_sTN.Text
+        lbl_sDate.Text = "Date: " & txtb_sTD.Text
+        lbl_cashierS.Text = cashier_name.ToUpper
 
         'transfer data to string
         sStud_id = txtb_sStudID.Text
@@ -963,14 +1029,35 @@ Public Class frm_SPayments
         End Try
 
     End Sub
+    Private Sub CapturesScreen()
+        Dim mygraphics As Graphics = Me.pnl_sReceipts.CreateGraphics()
+        Dim s As Size = Me.pnl_sReceipts.Size
+        memoryImage = New Bitmap(s.Width, s.Height, mygraphics)
+        Dim memoryGraphics As Graphics = Graphics.FromImage(memoryImage)
+        Dim dc1 As IntPtr = mygraphics.GetHdc()
+        Dim dc2 As IntPtr = memoryGraphics.GetHdc()
+        BitBlt(dc2, 0, 0, Me.pnl_sReceipts.ClientRectangle.Width, Me.pnl_sReceipts.ClientRectangle.Height, dc1,
+     0, 0, 13369376)
+        mygraphics.ReleaseHdc(dc1)
+        memoryGraphics.ReleaseHdc(dc2)
+    End Sub
     Private Sub btn_sPrint_Click(sender As Object, e As EventArgs) Handles btn_sPrint.Click
-
+        CapturesScreen()
+        print_collR.Print()
+        If dlg_printedsuccessfully.ShowDialog = DialogResult.OK Then
+            dg_sReceipts.Rows.Clear()
+            lbl_sTamnt.Text = "TOTAL AMOUNT:"
+            lbl_sBal.Text = "BALANCE:"
+            lbl_sName.Text = "Name: "
+            lbl_sTn.Text = "No. 00000"
+            lbl_sDate.Text = "0000-00-00"
+        End If
     End Sub
 
 
     Private Sub dg_sPayment_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dg_sPayment.CellClick
         Try
-            If dg_sPayment.Columns(e.ColumnIndex).Name = "delete" Then
+            If dg_sPayment.Columns(e.ColumnIndex).Name = "delete_seniorP" Then
 
                 totalAmount += Double.Parse(dg_sPayment.Rows(e.RowIndex).Cells(2).Value)
                 dg_sPayment.Rows.RemoveAt(dg_sPayment.SelectedRows(0).Index)
@@ -1152,6 +1239,12 @@ Public Class frm_SPayments
         txtb_jToAmnt.Text = _addOldCurrent(txtb_jCurrAcct, txtb_jOldAcct)
         totalAmount = Double.Parse(txtb_jToAmnt.Text)
 
+
+        lbl_cashierJ.Text = cashier_name.ToUpper
+        lbl_jName.Text = "Name: " & txtb_jStudName.Text
+        lbl_jOn.Text = "No. " & txtb_jTN.Text
+        lbl_jDate.Text = "Date: " & txtb_jTD.Text
+        lbl_cashierJ.Text = cashier_name.ToUpper
         'transfer data to string
         jStud_id = txtb_jStudID.Text
         jStudname = txtb_jStudName.Text
@@ -1221,9 +1314,30 @@ Public Class frm_SPayments
 
 
     End Sub
-
+    Private Sub CapturejScreen()
+        Dim mygraphics As Graphics = Me.pnl_jReceipts.CreateGraphics()
+        Dim s As Size = Me.pnl_jReceipts.Size
+        memoryImage = New Bitmap(s.Width, s.Height, mygraphics)
+        Dim memoryGraphics As Graphics = Graphics.FromImage(memoryImage)
+        Dim dc1 As IntPtr = mygraphics.GetHdc()
+        Dim dc2 As IntPtr = memoryGraphics.GetHdc()
+        BitBlt(dc2, 0, 0, Me.pnl_jReceipts.ClientRectangle.Width, Me.pnl_jReceipts.ClientRectangle.Height, dc1,
+     0, 0, 13369376)
+        mygraphics.ReleaseHdc(dc1)
+        memoryGraphics.ReleaseHdc(dc2)
+    End Sub
     Private Sub btn_jPrint_Click(sender As Object, e As EventArgs) Handles btn_jPrint.Click
 
+        CapturejScreen()
+        print_collR.Print()
+        If dlg_printedsuccessfully.ShowDialog = DialogResult.OK Then
+            dg_jReceipts.Rows.Clear()
+            lbl_jTamnt.Text = "TOTAL AMOUNT:"
+            lbl_jBal.Text = "BALANCE:"
+            lbl_jName.Text = "Name: "
+            lbl_jOn.Text = "No. 00000"
+            lbl_jDate.Text = "0000-00-00"
+        End If
     End Sub
 
 
@@ -1238,7 +1352,7 @@ Public Class frm_SPayments
 
     Private Sub dg_jPayment_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dg_jPayment.CellClick
         Try
-            If dg_jPayment.Columns(e.ColumnIndex).Name = "delete" Then
+            If dg_jPayment.Columns(e.ColumnIndex).Name = "delete_juniorP" Then
 
                 totalAmount += Double.Parse(dg_jPayment.Rows(e.RowIndex).Cells(2).Value)
                 dg_jPayment.Rows.RemoveAt(dg_jPayment.SelectedRows(0).Index)
@@ -1286,5 +1400,34 @@ Public Class frm_SPayments
 
         End Try
 
+    End Sub
+
+
+
+    Private Sub dg_eReceipts_RowsAdded_1(sender As Object, e As DataGridViewRowsAddedEventArgs) Handles dg_eReceipts.RowsAdded
+        Dim total_amnt As Double
+        For Each rowX As DataGridViewRow In dg_eReceipts.Rows
+            total_amnt += Double.Parse(rowX.Cells(1).Value)
+        Next
+        lbl_eTamnt.Text = "TOTAL AMOUNT: " & total_amnt
+        lbl_eBal.Text = "BALANCE: " & Double.Parse(txtb_eStudTotAmnt.Text) - total_amnt
+    End Sub
+
+    Private Sub dg_sReceipts_RowsAdded(sender As Object, e As DataGridViewRowsAddedEventArgs) Handles dg_sReceipts.RowsAdded
+        Dim total_amnt As Double
+        For Each rowX As DataGridViewRow In dg_sReceipts.Rows
+            total_amnt += Double.Parse(rowX.Cells(1).Value)
+        Next
+        lbl_sTamnt.Text = "TOTAL AMOUNT: " & total_amnt
+        lbl_sBal.Text = "BALANCE: " & Double.Parse(txtb_sToAmnt.Text) - total_amnt
+    End Sub
+
+    Private Sub dg_jReceipts_RowsAdded(sender As Object, e As DataGridViewRowsAddedEventArgs) Handles dg_jReceipts.RowsAdded
+        Dim total_amnt As Double
+        For Each rowX As DataGridViewRow In dg_jReceipts.Rows
+            total_amnt += Double.Parse(rowX.Cells(1).Value)
+        Next
+        lbl_jTamnt.Text = "TOTAL AMOUNT: " & total_amnt
+        lbl_jBal.Text = "BALANCE: " & Double.Parse(txtb_jToAmnt.Text) - total_amnt
     End Sub
 End Class

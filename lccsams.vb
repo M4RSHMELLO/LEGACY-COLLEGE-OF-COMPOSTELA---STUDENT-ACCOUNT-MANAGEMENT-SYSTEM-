@@ -17,7 +17,7 @@ Module lccsams
     Public current_date As Date = Date.Now()   'Caurrent Date OF THE transaction ocurred
     Public result As Integer
     Public username As String
-    Public name As String
+    Public cashier_name As String
     Public user_type As String
     '#################################################################COLLEGE PUBLIC VARIABLE###############################################################################
     Public slctC As String = "Select * from tbl_coll_course"
@@ -177,7 +177,7 @@ Module lccsams
             result = 0
             While dr.Read
                 username = dr(0).ToString
-                name = dr(1).ToString
+                cashier_name = dr(1)
                 user_type = dr(2).ToString
                 result += 1
             End While
@@ -295,6 +295,16 @@ Module lccsams
         End Try
     End Sub
 
+    Function _cancel(ByVal btn As Button, ByVal btnText As String) As String
+        If btn.Text = "UPDATE" Then
+            btn.Text = "CANCEL"
+            Return btn.Text
+        ElseIf btn.Text = "CANCEL" Then
+            btn.Text = btnText
+            Return btn.Text
+        End If
+
+    End Function
     Public Sub erromessage(ByVal errMsg As String)
         MessageBox.Show(errMsg)
     End Sub

@@ -75,11 +75,11 @@ Partial Class dlg_updateGradeLevel
         'txtb_gradelevel
         '
         Me.txtb_gradelevel.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.txtb_gradelevel.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtb_gradelevel.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtb_gradelevel.Location = New System.Drawing.Point(63, 72)
         Me.txtb_gradelevel.MaxLength = 100
         Me.txtb_gradelevel.Name = "txtb_gradelevel"
-        Me.txtb_gradelevel.Size = New System.Drawing.Size(312, 38)
+        Me.txtb_gradelevel.Size = New System.Drawing.Size(312, 35)
         Me.txtb_gradelevel.TabIndex = 41
         '
         'dlg_updateGradeLevel

@@ -66,20 +66,20 @@ Partial Class dlg_updateYearLevel
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 24.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(63, 24)
+        Me.Label1.Location = New System.Drawing.Point(91, 24)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(320, 38)
+        Me.Label1.Size = New System.Drawing.Size(257, 38)
         Me.Label1.TabIndex = 37
-        Me.Label1.Text = "UPDATE NEW YEAR LEVEL"
+        Me.Label1.Text = "UPDATE YEAR LEVEL"
         '
         'txtb_updateYL
         '
         Me.txtb_updateYL.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.txtb_updateYL.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtb_updateYL.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtb_updateYL.Location = New System.Drawing.Point(63, 78)
         Me.txtb_updateYL.MaxLength = 100
         Me.txtb_updateYL.Name = "txtb_updateYL"
-        Me.txtb_updateYL.Size = New System.Drawing.Size(312, 38)
+        Me.txtb_updateYL.Size = New System.Drawing.Size(312, 35)
         Me.txtb_updateYL.TabIndex = 36
         '
         'dlg_updateYearLevel

@@ -99,6 +99,9 @@
   <PropertyGroup>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>LCCSAMS_LOGO.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="BouncyCastle.Crypto, Version=1.8.5.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
@@ -208,6 +211,24 @@
       <DependentUpon>dlg_addusers.vb</DependentUpon>
     </Compile>
     <Compile Include="dlg_addusers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlg_backuprestoresuccessfully.designer.vb">
+      <DependentUpon>dlg_backuprestoresuccessfully.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlg_backuprestoresuccessfully.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlg_backupsuccessfully.designer.vb">
+      <DependentUpon>dlg_backupsuccessfully.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlg_backupsuccessfully.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlg_printedsuccessfully.designer.vb">
+      <DependentUpon>dlg_printedsuccessfully.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlg_printedsuccessfully.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="dlg_scholarship_add.designer.vb">
@@ -488,6 +509,12 @@
     <EmbeddedResource Include="dlg_addusers.resx">
       <DependentUpon>dlg_addusers.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="dlg_backuprestoresuccessfully.resx">
+      <DependentUpon>dlg_backuprestoresuccessfully.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlg_backupsuccessfully.resx">
+      <DependentUpon>dlg_backupsuccessfully.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="dlg_delete.resx">
       <DependentUpon>dlg_delete.vb</DependentUpon>
     </EmbeddedResource>
@@ -511,6 +538,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="dlg_payments.resx">
       <DependentUpon>dlg_payments.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlg_printedsuccessfully.resx">
+      <DependentUpon>dlg_printedsuccessfully.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="dlg_proceduralform.resx">
       <DependentUpon>dlg_proceduralform.vb</DependentUpon>
@@ -851,10 +881,16 @@
     <None Include="Resources\dlg_logouticon.png" />
     <None Include="Resources\addfeesicon.png" />
     <None Include="Resources\adduser.png" />
+    <Content Include="lccsams_icon_jpeg.ico" />
+    <Content Include="LCCSAMS_LOGO.ico" />
+    <None Include="Resources\backupsuccessfully.png" />
+    <None Include="Resources\backuprestoredsuccessfully.png" />
     <Content Include="Resources\dlg_studentsupdatedsuccessfully.png" />
     <None Include="Resources\dlg_studentsupdatedsuccessfully1.png" />
     <None Include="Resources\fillupform.png" />
     <None Include="Resources\paymentsicon.png" />
+    <None Include="Resources\lccsams_logowatermark.png" />
+    <None Include="Resources\printedsuc.png" />
     <Content Include="Resources\savesuccessfully.png" />
     <None Include="Resources\savesuccessfully1.png" />
     <None Include="Resources\savesuccessfully2.png" />

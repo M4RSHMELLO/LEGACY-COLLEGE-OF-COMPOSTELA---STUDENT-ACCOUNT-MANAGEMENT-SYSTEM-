@@ -219,6 +219,7 @@ Partial Class form_login
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(813, 490)
+        Me.ControlBox = False
         Me.Controls.Add(Me.txtb_password)
         Me.Controls.Add(Me.txtb_username)
         Me.Controls.Add(Me.BunifuGradientPanel1)

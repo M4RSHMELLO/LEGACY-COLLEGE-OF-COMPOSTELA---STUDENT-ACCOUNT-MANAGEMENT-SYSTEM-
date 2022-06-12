@@ -16,6 +16,7 @@
                 Dashboard.BunifuGradientPanel4.GradientTopRight = Color.Chartreuse
                 Dashboard.TableLayoutPanel1.BackColor = Color.Chartreuse
             ElseIf user_type = "ADMIN" Then
+
                 Dashboard.btn_manageP.Visible = True
                 Dashboard.btn_colRprt.Visible = True
                 Dashboard.btn_dropmenu2.Visible = True

@@ -12,6 +12,8 @@ Public Class frm_SAccounts
     End Sub
 
     Public Sub txtb_studAcct_ID_Click(sender As Object, e As EventArgs) Handles txtb_studAcct_ID.Click
+
+
         _dbConnection("db_lccsams")
         _shareID(txtb_studAcct_ID)
         load_stud_data()
@@ -353,6 +355,10 @@ Public Class frm_SAccounts
     End Sub
 
     Private Sub BunifuThinButton23_Click(sender As Object, e As EventArgs) Handles BunifuThinButton23.Click
+
+    End Sub
+
+    Private Sub txtb_studAcct_ID_TextChanged(sender As Object, e As EventArgs) Handles txtb_studAcct_ID.TextChanged
 
     End Sub
 End Class
