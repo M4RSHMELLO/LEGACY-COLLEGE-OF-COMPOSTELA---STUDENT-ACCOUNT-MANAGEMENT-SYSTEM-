@@ -492,6 +492,12 @@
     <Compile Include="UpdatedSuccessfully.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="update_studAcct.Designer.vb">
+      <DependentUpon>update_studAcct.vb</DependentUpon>
+    </Compile>
+    <Compile Include="update_studAcct.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Dashboard.resx">
@@ -629,6 +635,9 @@
     <EmbeddedResource Include="Report4.rdlc" />
     <EmbeddedResource Include="UpdatedSuccessfully.resx">
       <DependentUpon>UpdatedSuccessfully.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="update_studAcct.resx">
+      <DependentUpon>update_studAcct.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -129,10 +129,10 @@ Public Class frm_SAccounts
     End Sub
 
     Sub _loadeFees()
-        Dim displayFees = "Select  f.efees_id,f.efees_name,f.efees_amount  from tbl_elem_fees f inner join tbl_elem_students s on s.esy_id=f.esy_id  where estud_id='" & eStud_id & "'"
+        Dim displayFees = "Select  f.efees_id,f.efees_name,f.efees_amount  from tbl_elem_fees f inner join tbl_elem_students s on s.esy_id=f.esy_id  where s.estud_id='" & eStud_id & "'"
         Dim total_fees As Double = 0
-        _displayRecords(displayFees, dg_studFeesType)
-        For Each rowX As DataGridViewRow In dg_studFeesType.Rows
+        _displayRecords(displayFees, dg_eStudFees)
+        For Each rowX As DataGridViewRow In dg_eStudFees.Rows
             total_fees += rowX.Cells(2).Value
         Next
         txtb_eTotalFees.Text = total_fees
@@ -179,7 +179,7 @@ Public Class frm_SAccounts
             dt = New DataTable
             da.Fill(dt)
             For Each r As DataRow In dt.Rows
-                Dim displayTotalFees As String = " select f.efees_name,sum(epay_amount)  as totalpay from tbl_elem_accounts inner join tbl_elem_fees f on efees_id=f.fees_id where estud_id ='" & eStud_id & "' and efees_id='" & Integer.Parse(r.Item(0).ToString) & "' "
+                Dim displayTotalFees As String = " select f.efees_name,sum(sa.epay_amount)  as totalpay from tbl_elem_accounts sa inner join tbl_elem_fees f on sa.efees_id=f.fees_id where sa.estud_id ='" & eStud_id & "' and sa.efees_id='" & Integer.Parse(r.Item(0).ToString) & "' "
                 sqlCommand = New MySqlCommand(displayTotalFees, dbConn)
                 dr = sqlCommand.ExecuteReader
                 While dr.Read
@@ -205,13 +205,15 @@ Public Class frm_SAccounts
         txtb_sStud_name.Text = sStudname
         txtb_sSY.Text = sStudSY
         txtb_sGL.Text = sStudGL
-
+        _loadsFees()
+        _displaysStudAccount()
+        _display_TotalForEachsSY()
     End Sub
     Sub _loadsFees()
         Dim displayFees = "Select  f.sfees_id,f.sfees_name,f.sfees_amount  from tbl_senior_fees f inner join tbl_seniorhigh_students s on s.ssy_id=f.ssy_id  where sstud_id='" & sStud_id & "'"
         Dim total_fees As Double = 0
-        _displayRecords(displayFees, dg_studFeesType)
-        For Each rowX As DataGridViewRow In dg_studFeesType.Rows
+        _displayRecords(displayFees, dg_sFeesRec)
+        For Each rowX As DataGridViewRow In dg_sFeesRec.Rows
             total_fees += rowX.Cells(2).Value
         Next
         txtb_sTFees.Text = total_fees
@@ -282,13 +284,16 @@ Public Class frm_SAccounts
         txtb_jStud_name.Text = jStudname
         txtb_jSY.Text = jStudSY
         txtb_jGL.Text = jStudGL
+        _loadjFees()
+        _displayjStudAccount()
+        _display_TotalForEachjSY()
     End Sub
 
     Sub _loadjFees()
         Dim displayFees = "Select  f.jfees_id,f.jfees_name,f.jfees_amount  from tbl_junior_fees f inner join tbl_juniorhigh_students j on j.jsy_id=f.jsy_id  where jstud_id='" & jStud_id & "'"
         Dim total_fees As Double = 0
-        _displayRecords(displayFees, dg_studFeesType)
-        For Each rowX As DataGridViewRow In dg_studFeesType.Rows
+        _displayRecords(displayFees, dg_jFees)
+        For Each rowX As DataGridViewRow In dg_jFees.Rows
             total_fees += rowX.Cells(2).Value
         Next
         txtb_jTFees.Text = total_fees
@@ -313,7 +318,7 @@ Public Class frm_SAccounts
             da = New MySqlDataAdapter(querry2, dbConn)
             dt = New DataTable
             da.Fill(dt)
-            dg_sStudAcctRec.DataSource = dt
+            dg_jStudAcctRec.DataSource = dt
         Catch ex As Exception
             erromessage("error 108: Retrieve Specific Data to DataGrid " & ex.Message)
         Finally
@@ -325,9 +330,9 @@ Public Class frm_SAccounts
         Try
             Dim totalStudFees As Double = 0
             _dbConnection("db_lccsams")
-            dg_sStudFees.Rows.Clear()
-            txtb_sStud_TAmount.Clear()
-            txtb_sStud_Bal.Clear()
+            dg_jStudFees.Rows.Clear()
+            txtb_jStudTAmount.Clear()
+            txtb_jStudTBal.Clear()
 
             Dim getFeesType As String = "Select jfees_id from tbl_junior_accounts  where jstud_id='" & jStud_id & "' group by jfees_id having count(*) > 0 "
             dbConn.Open()
@@ -354,11 +359,15 @@ Public Class frm_SAccounts
 
     End Sub
 
-    Private Sub BunifuThinButton23_Click(sender As Object, e As EventArgs) Handles BunifuThinButton23.Click
 
+    Private Sub dg_acctRec_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dg_acctRec.CellDoubleClick
+        Dim i = e.RowIndex
+        With dg_acctRec
+
+        End With
     End Sub
 
-    Private Sub txtb_studAcct_ID_TextChanged(sender As Object, e As EventArgs) Handles txtb_studAcct_ID.TextChanged
+    Private Sub btn_UpdateCacct_Click(sender As Object, e As EventArgs) Handles btn_UpdateCacct.Click
 
     End Sub
 End Class

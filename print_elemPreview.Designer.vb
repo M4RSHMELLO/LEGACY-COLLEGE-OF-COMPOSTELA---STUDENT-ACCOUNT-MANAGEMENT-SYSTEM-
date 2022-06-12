@@ -24,25 +24,13 @@ Partial Class print_elemPreview
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
-        Me.elemrpt_viewer = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.tbl_elem_accountsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.elem_ds = New LCC_SAMS_Project.elem_ds()
         Me.tbl_elem_accountsTableAdapter = New LCC_SAMS_Project.elem_dsTableAdapters.tbl_elem_accountsTableAdapter()
+        Me.elemrpt_viewer = New Microsoft.Reporting.WinForms.ReportViewer()
         CType(Me.tbl_elem_accountsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.elem_ds, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'elemrpt_viewer
-        '
-        Me.elemrpt_viewer.Dock = System.Windows.Forms.DockStyle.Fill
-        ReportDataSource1.Name = "elem_ds"
-        ReportDataSource1.Value = Me.tbl_elem_accountsBindingSource
-        Me.elemrpt_viewer.LocalReport.DataSources.Add(ReportDataSource1)
-        Me.elemrpt_viewer.LocalReport.ReportEmbeddedResource = "LCC_SAMS_Project.Report1.rdlc"
-        Me.elemrpt_viewer.Location = New System.Drawing.Point(0, 0)
-        Me.elemrpt_viewer.Name = "elemrpt_viewer"
-        Me.elemrpt_viewer.Size = New System.Drawing.Size(774, 466)
-        Me.elemrpt_viewer.TabIndex = 0
         '
         'tbl_elem_accountsBindingSource
         '
@@ -58,6 +46,18 @@ Partial Class print_elemPreview
         '
         Me.tbl_elem_accountsTableAdapter.ClearBeforeFill = True
         '
+        'elemrpt_viewer
+        '
+        Me.elemrpt_viewer.Dock = System.Windows.Forms.DockStyle.Fill
+        ReportDataSource1.Name = "elem_ds"
+        ReportDataSource1.Value = Me.tbl_elem_accountsBindingSource
+        Me.elemrpt_viewer.LocalReport.DataSources.Add(ReportDataSource1)
+        Me.elemrpt_viewer.LocalReport.ReportEmbeddedResource = "LCC_SAMS_Project.Report1.rdlc"
+        Me.elemrpt_viewer.Location = New System.Drawing.Point(0, 0)
+        Me.elemrpt_viewer.Name = "elemrpt_viewer"
+        Me.elemrpt_viewer.Size = New System.Drawing.Size(774, 466)
+        Me.elemrpt_viewer.TabIndex = 0
+        '
         'print_elemPreview
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -71,9 +71,8 @@ Partial Class print_elemPreview
         Me.ResumeLayout(False)
 
     End Sub
-
-    Friend WithEvents elemrpt_viewer As Microsoft.Reporting.WinForms.ReportViewer
     Friend WithEvents tbl_elem_accountsBindingSource As BindingSource
     Friend WithEvents elem_ds As elem_ds
     Friend WithEvents tbl_elem_accountsTableAdapter As elem_dsTableAdapters.tbl_elem_accountsTableAdapter
+    Friend WithEvents elemrpt_viewer As Microsoft.Reporting.WinForms.ReportViewer
 End Class

@@ -265,7 +265,7 @@ Module lccsams
             sqlCommand = New MySqlCommand(sql, dbConn)
             dr = sqlCommand.ExecuteReader
             While dr.Read()
-                cbo.Text = dr(0).ToString.ToUpper
+                cbo.Text = dr(0).ToString
             End While
         Catch ex As Exception
             erromessage("error 108: selectComboBoxText " & ex.Message)

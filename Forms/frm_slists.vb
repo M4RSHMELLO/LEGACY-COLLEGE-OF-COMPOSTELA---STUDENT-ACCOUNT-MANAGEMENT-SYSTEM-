@@ -813,20 +813,18 @@ Public Class frm_slists
             Dim i = e.RowIndex
             With dg_jStudRec
 
-                Dim querry As String = "Select jsy_name from tbl_juniorhigh_sy where jsy_id='" & .Item(0, i).Value & "'"
-                Dim querry2 As String = "Select jgl_name from tbl_juniorhigh_gradelevel where jgl_id='" & .Item(0, i).Value & "'"
+                Dim querry As String = "Select jsy_name from tbl_juniorhigh_sy where jsy_id='" & .Item(4, i).Value & "'"
+                Dim querry2 As String = "Select jgl_name from tbl_juniorhigh_gradelevel where jgl_id='" & .Item(5, i).Value & "'"
                 _dbConnection("db_lccsams")
                 jStud_id = .Item(0, i).Value
                 jStudname = .Item(1, i).Value.ToString.ToUpper + " " + .Item(2, i).Value.ToString.ToUpper + " " + .Item(3, i).Value.ToString.ToUpper
-                jStudSY = .Item(4, i).Value
-                jStudGL = .Item(5, i).Value
+                jStudSY = _selectComboBoxText(querry, cbo_jSY)
+                jStudGL = _selectComboBoxText(querry2, cbo_jGL)
 
                 txtb_jStud_id.Text = .Item(0, i).Value
                 txtb_jStudFname.Text = .Item(1, i).Value.ToString.ToUpper
                 txtb_jStudLname.Text = .Item(2, i).Value.ToString.ToUpper
                 txtb_jStudMI.Text = .Item(3, i).Value.ToString.ToUpper
-                _selectComboBoxText(querry, cbo_jSY)
-                _selectComboBoxText(querry2, cbo_jGL)
 
             End With
 

@@ -54,6 +54,8 @@ Public Class frm_SPayments
     End Sub
 
     '######################################################################College dept section####################################################################
+    Dim cRtotal As Integer = 0
+
     Public Sub btn_Enter_Click(sender As Object, e As EventArgs) Handles btn_enter.Click
         If cboSearchBy.SelectedIndex = 1 Then
             _displayToTextbox_name()
@@ -277,7 +279,7 @@ Public Class frm_SPayments
             If txtb_studID.Text = "" Then
                 MessageBox.Show("Please Select a student First!")
             Else
-                If txtb_Payment.Text = 0 And txtb_Payment.Text = "" Then
+                If txtb_Payment.Text = 0 And txtb_Payment.Text = "" And cbo_particular.Text = "" Then
                     MessageBox.Show("Please add payment!")
                 Else
 
@@ -287,9 +289,8 @@ Public Class frm_SPayments
                         _insertData(InsertPayments)
                     Next
                     If dlg_payments.ShowDialog = DialogResult.OK Then
-
-                        lbl_tAmnt.Text = "TOTAL AMOUNT: " & txtb_Payment.Text
-                        lbl_Tbal.Text = "BALANCE: " & txtb_CurrentBalance.Text
+                        lbl_date.Text = txtb_TransDate.Text
+                        lbl_orN.Text = "No. " + txtb_TransNo.Text
                         _clearCurrentStudData(btn_save.Text)
                         btn_Enter_Click(sender, e)
                     End If
@@ -348,15 +349,11 @@ Public Class frm_SPayments
             total_amnt += Double.Parse(rowX.Cells(1).Value)
         Next
         lbl_tAmnt.Text = "TOTAL AMOUNT: " & total_amnt
-        lbl_Tbal.Text = "BALANCE: " & Double.Parse(txtb_TotalAmount.Text) - total_amnt
-    End Sub
-    Private Sub txtb_TransNo_TextChanged(sender As Object, e As EventArgs) Handles txtb_TransNo.TextChanged
-        lbl_orN.Text = "No. " + txtb_TransNo.Text
+        lbl_Tbal.Text = "BALANCE: " & totalAmount - total_amnt
     End Sub
 
-    Private Sub txtb_TransDate_TextChanged(sender As Object, e As EventArgs) Handles txtb_TransDate.TextChanged
-        lbl_date.Text = txtb_TransDate.Text
-    End Sub
+
+
 
     Private Sub btn_manage_Click(sender As Object, e As EventArgs) Handles btn_manage.Click
         Try
@@ -382,7 +379,6 @@ Public Class frm_SPayments
                 txtb_CurrentBalance.Text = 0
                 dg_viewCurrentPayment.Rows.Clear()
 
-                totalAmount = 0
 
             Case "CLEAR"
 
@@ -512,6 +508,7 @@ Public Class frm_SPayments
             lbl_name.Text = "Name: "
             lbl_orN.Text = "No. 00000"
             lbl_date.Text = "0000-00-00"
+            totalAmount = 0
         End If
 
     End Sub
@@ -665,7 +662,7 @@ Public Class frm_SPayments
     End Sub
 
     Sub _loadToEoldAccount()
-        Dim querry1 As String = "SELECT ifNull(SUM(f.efees_amount),0) - ifnull(SUM(sa.epay_amount),0) as oldbal from tbl_elem_fees f  left join tbl_elem_accounts sa on f.esy_id=sa.esy_id  where sa.estud_id='" & txtb_eStudID.Text & "'  and edate_paidamount < '" & esy_sDate & "' order by edate_paidamount desc "
+        Dim querry1 As String = "SELECT ifNull(SUM(f.efees_amount),0) - ifnull(SUM(sa.epay_amount),0) as oldbal from tbl_elem_fees f  left join tbl_elem_accounts sa on f.esy_id=sa.esy_id  where sa.estud_id='" & txtb_eStudID.Text & "'  and sa.edate_paidamount < '" & esy_sDate & "' order by sa.edate_paidamount desc "
         Try
             dbConn.Open()
             sqlCommand = New MySqlCommand(querry1, dbConn)
@@ -714,7 +711,7 @@ Public Class frm_SPayments
 
         lbl_eName.Text = "Name: " & txtb_eStudName.Text.ToUpper
         lbl_eTn.Text = "No. " & txtb_eTN.Text
-        lbl_eDate.Text = "Date: " & txtb_eTD.Text
+        lbl_eDate.Text = txtb_eTD.Text
         lbl_cashierE.Text = cashier_name.ToUpper
         'transfer data to string
         eStud_id = txtb_eStudID.Text
@@ -960,7 +957,7 @@ Public Class frm_SPayments
         lbl_cashierS.Text = cashier_name.ToUpper
         lbl_sName.Text = "Name: " & txtb_sStudName.Text
         lbl_sTn.Text = "No. " & txtb_sTN.Text
-        lbl_sDate.Text = "Date: " & txtb_sTD.Text
+        lbl_sDate.Text = txtb_sTD.Text
         lbl_cashierS.Text = cashier_name.ToUpper
 
         'transfer data to string
@@ -1243,7 +1240,7 @@ Public Class frm_SPayments
         lbl_cashierJ.Text = cashier_name.ToUpper
         lbl_jName.Text = "Name: " & txtb_jStudName.Text
         lbl_jOn.Text = "No. " & txtb_jTN.Text
-        lbl_jDate.Text = "Date: " & txtb_jTD.Text
+        lbl_jDate.Text = txtb_jTD.Text
         lbl_cashierJ.Text = cashier_name.ToUpper
         'transfer data to string
         jStud_id = txtb_jStudID.Text
