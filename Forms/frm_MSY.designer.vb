@@ -123,6 +123,10 @@ Partial Class frm_MSY
         Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.btn_cancelC = New System.Windows.Forms.Button()
+        Me.btn_cancelE = New System.Windows.Forms.Button()
+        Me.btn_cancelS = New System.Windows.Forms.Button()
+        Me.btn_cancelJ = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.college_dept.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -283,6 +287,7 @@ Partial Class frm_MSY
         '
         Me.Panel3.BackColor = System.Drawing.SystemColors.Control
         Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel3.Controls.Add(Me.btn_cancelC)
         Me.Panel3.Controls.Add(Me.Panel2)
         Me.Panel3.Controls.Add(Me.btn_new)
         Me.Panel3.Controls.Add(Me.btn_save)
@@ -415,7 +420,7 @@ Partial Class frm_MSY
         Me.btn_new.BackColor = System.Drawing.Color.FromArgb(CType(CType(108, Byte), Integer), CType(CType(105, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.btn_new.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_new.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_new.Location = New System.Drawing.Point(25, 454)
+        Me.btn_new.Location = New System.Drawing.Point(106, 454)
         Me.btn_new.Name = "btn_new"
         Me.btn_new.Size = New System.Drawing.Size(68, 33)
         Me.btn_new.TabIndex = 8
@@ -428,7 +433,7 @@ Partial Class frm_MSY
         Me.btn_save.Enabled = False
         Me.btn_save.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_save.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_save.Location = New System.Drawing.Point(173, 454)
+        Me.btn_save.Location = New System.Drawing.Point(301, 454)
         Me.btn_save.Name = "btn_save"
         Me.btn_save.Size = New System.Drawing.Size(68, 33)
         Me.btn_save.TabIndex = 9
@@ -440,7 +445,7 @@ Partial Class frm_MSY
         Me.btn_updateSchY.BackColor = System.Drawing.Color.FromArgb(CType(CType(108, Byte), Integer), CType(CType(105, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.btn_updateSchY.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_updateSchY.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_updateSchY.Location = New System.Drawing.Point(99, 454)
+        Me.btn_updateSchY.Location = New System.Drawing.Point(204, 454)
         Me.btn_updateSchY.Name = "btn_updateSchY"
         Me.btn_updateSchY.Size = New System.Drawing.Size(68, 33)
         Me.btn_updateSchY.TabIndex = 10
@@ -562,6 +567,7 @@ Partial Class frm_MSY
         '
         Me.Panel4.BackColor = System.Drawing.SystemColors.Control
         Me.Panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel4.Controls.Add(Me.btn_cancelE)
         Me.Panel4.Controls.Add(Me.Panel5)
         Me.Panel4.Controls.Add(Me.btn_esy_New)
         Me.Panel4.Controls.Add(Me.btn_esy_save)
@@ -672,7 +678,7 @@ Partial Class frm_MSY
         Me.btn_esy_New.BackColor = System.Drawing.Color.FromArgb(CType(CType(108, Byte), Integer), CType(CType(105, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.btn_esy_New.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_esy_New.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_esy_New.Location = New System.Drawing.Point(25, 454)
+        Me.btn_esy_New.Location = New System.Drawing.Point(87, 465)
         Me.btn_esy_New.Name = "btn_esy_New"
         Me.btn_esy_New.Size = New System.Drawing.Size(68, 33)
         Me.btn_esy_New.TabIndex = 8
@@ -685,7 +691,7 @@ Partial Class frm_MSY
         Me.btn_esy_save.Enabled = False
         Me.btn_esy_save.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_esy_save.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_esy_save.Location = New System.Drawing.Point(173, 454)
+        Me.btn_esy_save.Location = New System.Drawing.Point(303, 465)
         Me.btn_esy_save.Name = "btn_esy_save"
         Me.btn_esy_save.Size = New System.Drawing.Size(68, 33)
         Me.btn_esy_save.TabIndex = 9
@@ -697,7 +703,7 @@ Partial Class frm_MSY
         Me.btn_esy_update.BackColor = System.Drawing.Color.FromArgb(CType(CType(108, Byte), Integer), CType(CType(105, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.btn_esy_update.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_esy_update.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_esy_update.Location = New System.Drawing.Point(99, 454)
+        Me.btn_esy_update.Location = New System.Drawing.Point(189, 465)
         Me.btn_esy_update.Name = "btn_esy_update"
         Me.btn_esy_update.Size = New System.Drawing.Size(68, 33)
         Me.btn_esy_update.TabIndex = 10
@@ -812,6 +818,7 @@ Partial Class frm_MSY
         '
         Me.Panel6.BackColor = System.Drawing.SystemColors.Control
         Me.Panel6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel6.Controls.Add(Me.btn_cancelS)
         Me.Panel6.Controls.Add(Me.Panel7)
         Me.Panel6.Controls.Add(Me.btn_new_sSY)
         Me.Panel6.Controls.Add(Me.btn_save_ssy)
@@ -926,7 +933,7 @@ Partial Class frm_MSY
         Me.btn_new_sSY.BackColor = System.Drawing.Color.FromArgb(CType(CType(108, Byte), Integer), CType(CType(105, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.btn_new_sSY.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_new_sSY.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_new_sSY.Location = New System.Drawing.Point(25, 454)
+        Me.btn_new_sSY.Location = New System.Drawing.Point(81, 454)
         Me.btn_new_sSY.Name = "btn_new_sSY"
         Me.btn_new_sSY.Size = New System.Drawing.Size(68, 33)
         Me.btn_new_sSY.TabIndex = 8
@@ -939,7 +946,7 @@ Partial Class frm_MSY
         Me.btn_save_ssy.Enabled = False
         Me.btn_save_ssy.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_save_ssy.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_save_ssy.Location = New System.Drawing.Point(173, 454)
+        Me.btn_save_ssy.Location = New System.Drawing.Point(309, 454)
         Me.btn_save_ssy.Name = "btn_save_ssy"
         Me.btn_save_ssy.Size = New System.Drawing.Size(68, 33)
         Me.btn_save_ssy.TabIndex = 9
@@ -951,7 +958,7 @@ Partial Class frm_MSY
         Me.btn_update_ssy.BackColor = System.Drawing.Color.FromArgb(CType(CType(108, Byte), Integer), CType(CType(105, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.btn_update_ssy.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_update_ssy.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_update_ssy.Location = New System.Drawing.Point(99, 454)
+        Me.btn_update_ssy.Location = New System.Drawing.Point(195, 454)
         Me.btn_update_ssy.Name = "btn_update_ssy"
         Me.btn_update_ssy.Size = New System.Drawing.Size(68, 33)
         Me.btn_update_ssy.TabIndex = 10
@@ -1066,6 +1073,7 @@ Partial Class frm_MSY
         '
         Me.Panel8.BackColor = System.Drawing.SystemColors.Control
         Me.Panel8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel8.Controls.Add(Me.btn_cancelJ)
         Me.Panel8.Controls.Add(Me.Panel9)
         Me.Panel8.Controls.Add(Me.btn_jsy_new)
         Me.Panel8.Controls.Add(Me.btn_jsy_save)
@@ -1176,7 +1184,7 @@ Partial Class frm_MSY
         Me.btn_jsy_new.BackColor = System.Drawing.Color.FromArgb(CType(CType(108, Byte), Integer), CType(CType(105, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.btn_jsy_new.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_jsy_new.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_jsy_new.Location = New System.Drawing.Point(25, 454)
+        Me.btn_jsy_new.Location = New System.Drawing.Point(82, 454)
         Me.btn_jsy_new.Name = "btn_jsy_new"
         Me.btn_jsy_new.Size = New System.Drawing.Size(68, 33)
         Me.btn_jsy_new.TabIndex = 8
@@ -1189,7 +1197,7 @@ Partial Class frm_MSY
         Me.btn_jsy_save.Enabled = False
         Me.btn_jsy_save.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_jsy_save.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_jsy_save.Location = New System.Drawing.Point(173, 454)
+        Me.btn_jsy_save.Location = New System.Drawing.Point(310, 454)
         Me.btn_jsy_save.Name = "btn_jsy_save"
         Me.btn_jsy_save.Size = New System.Drawing.Size(68, 33)
         Me.btn_jsy_save.TabIndex = 9
@@ -1201,7 +1209,7 @@ Partial Class frm_MSY
         Me.btn_jsy_update.BackColor = System.Drawing.Color.FromArgb(CType(CType(108, Byte), Integer), CType(CType(105, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.btn_jsy_update.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_jsy_update.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_jsy_update.Location = New System.Drawing.Point(99, 454)
+        Me.btn_jsy_update.Location = New System.Drawing.Point(196, 454)
         Me.btn_jsy_update.Name = "btn_jsy_update"
         Me.btn_jsy_update.Size = New System.Drawing.Size(68, 33)
         Me.btn_jsy_update.TabIndex = 10
@@ -1254,6 +1262,54 @@ Partial Class frm_MSY
         Me.DataGridViewTextBoxColumn11.HeaderText = "END DATE"
         Me.DataGridViewTextBoxColumn11.Name = "DataGridViewTextBoxColumn11"
         Me.DataGridViewTextBoxColumn11.ReadOnly = True
+        '
+        'btn_cancelC
+        '
+        Me.btn_cancelC.BackColor = System.Drawing.Color.FromArgb(CType(CType(108, Byte), Integer), CType(CType(105, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.btn_cancelC.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_cancelC.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_cancelC.Location = New System.Drawing.Point(399, 454)
+        Me.btn_cancelC.Name = "btn_cancelC"
+        Me.btn_cancelC.Size = New System.Drawing.Size(68, 33)
+        Me.btn_cancelC.TabIndex = 21
+        Me.btn_cancelC.Text = "CANCEL"
+        Me.btn_cancelC.UseVisualStyleBackColor = False
+        '
+        'btn_cancelE
+        '
+        Me.btn_cancelE.BackColor = System.Drawing.Color.FromArgb(CType(CType(108, Byte), Integer), CType(CType(105, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.btn_cancelE.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_cancelE.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_cancelE.Location = New System.Drawing.Point(417, 465)
+        Me.btn_cancelE.Name = "btn_cancelE"
+        Me.btn_cancelE.Size = New System.Drawing.Size(68, 33)
+        Me.btn_cancelE.TabIndex = 22
+        Me.btn_cancelE.Text = "CANCEL"
+        Me.btn_cancelE.UseVisualStyleBackColor = False
+        '
+        'btn_cancelS
+        '
+        Me.btn_cancelS.BackColor = System.Drawing.Color.FromArgb(CType(CType(108, Byte), Integer), CType(CType(105, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.btn_cancelS.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_cancelS.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_cancelS.Location = New System.Drawing.Point(423, 454)
+        Me.btn_cancelS.Name = "btn_cancelS"
+        Me.btn_cancelS.Size = New System.Drawing.Size(68, 33)
+        Me.btn_cancelS.TabIndex = 22
+        Me.btn_cancelS.Text = "CANCEL"
+        Me.btn_cancelS.UseVisualStyleBackColor = False
+        '
+        'btn_cancelJ
+        '
+        Me.btn_cancelJ.BackColor = System.Drawing.Color.FromArgb(CType(CType(108, Byte), Integer), CType(CType(105, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.btn_cancelJ.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_cancelJ.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_cancelJ.Location = New System.Drawing.Point(423, 454)
+        Me.btn_cancelJ.Name = "btn_cancelJ"
+        Me.btn_cancelJ.Size = New System.Drawing.Size(68, 33)
+        Me.btn_cancelJ.TabIndex = 22
+        Me.btn_cancelJ.Text = "CANCEL"
+        Me.btn_cancelJ.UseVisualStyleBackColor = False
         '
         'frm_MSY
         '
@@ -1394,4 +1450,8 @@ Partial Class frm_MSY
     Friend WithEvents DataGridViewTextBoxColumn9 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn10 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn11 As DataGridViewTextBoxColumn
+    Friend WithEvents btn_cancelC As Button
+    Friend WithEvents btn_cancelE As Button
+    Friend WithEvents btn_cancelS As Button
+    Friend WithEvents btn_cancelJ As Button
 End Class

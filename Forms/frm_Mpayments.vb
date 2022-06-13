@@ -201,6 +201,9 @@
                 _dbConnection("db_lccsams")
                 _loadToCombobox(sSelect_SY, cbo_sSY)
                 _loadToCombobox(sSelect_SY, cbo_sSortSY)
+
+
+
                 cbo_sSortSY.SelectedIndex = -1
             Case 3
                 _dbConnection("db_lccsams")
@@ -541,7 +544,7 @@
             Case 1
 
                 _dbConnection("db_lccsams")
-                _insertData("insert into tbl_junior_fees values (0,'" & txtb_sfeeName.Text & "','" & txtb_sFeeAmnt.Text & "','" & cbo_sSY.SelectedValue & "')")
+                _insertData("insert into tbl_junior_fees values (0,'" & txtb_jFeesName.Text & "','" & txtb_jFeesAmnt.Text & "','" & cbo_jSY.SelectedValue & "')")
 
                 If dlg_savesuccessfully.ShowDialog() = DialogResult.OK Then
                     cbo_jSY.Enabled = False

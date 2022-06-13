@@ -495,11 +495,11 @@ Public Class frm_slists
             Dim i = e.RowIndex
             With dg_eStudRecords
 
-                Dim querry As String = "Select esy_name from tbl_elem_sy where esy_id='" & .Item("col_esy_id", i).Value & "'"
-                Dim querry2 As String = "Select egl_name from tbl_elem_gradelevel where egl_id='" & .Item("col_egl_id", i).Value & "'"
+                Dim querry As String = "Select esy_name from tbl_elem_sy where esy_id='" & .Item(4, i).Value & "'"
+                Dim querry2 As String = "Select egl_name from tbl_elem_gradelevel where egl_id='" & .Item(5, i).Value & "'"
                 _dbConnection("db_lccsams")
-                eStud_id = .Item("col_estud_id", i).Value
-                eStudname = .Item("col_estud_fname", i).Value.ToString.ToUpper + " " + .Item("col_estud_mi", i).Value.ToString.ToUpper + " " + .Item("col_estud_lname", i).Value.ToString.ToUpper
+                eStud_id = .Item(0, i).Value
+                eStudname = .Item(1, i).Value.ToString.ToUpper + " " + .Item(2, i).Value.ToString.ToUpper + " " + .Item(3, i).Value.ToString.ToUpper
                 eStudSY = _selectComboBoxText(querry, cbo_eSYName)
                 eStudGL = _selectComboBoxText(querry2, cbo_eGradeLevel)
 

@@ -71,6 +71,8 @@
         End If
     End Sub
     Private Sub cbo_SelectDept_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbo_SelectDept.SelectedIndexChanged
+        txtb_ScholarType.Clear()
+        txtb_ScholarAmnt.Clear()
         _displayScholarList()
     End Sub
 
@@ -119,13 +121,14 @@
         Try
             Dim i = e.RowIndex
             With dg_StudScholarRec
-
+                txtb_ScholarAmnt.Text = 0
+                txtb_ScholarType.Clear()
                 Dim Course As String = "Select c.crs_name from tbl_coll_course  c inner join tbl_student sc on sc.crs_id=c.crs_id  where sc.stud_id='" & .Item(0, i).Value & "'"
                 Dim Semester As String = "Select sm.sem_name from tbl_semester sm inner join tbl_student s on s.sem_id=sm.sem_id where s.stud_id='" & .Item(0, i).Value & "'"
                 Dim coll_sl As String = "Select sl.sl_amnt,sl.sl_status  from  tbl_coll_scholarlist sl inner join tbl_student s on sl.stud_id=s.stud_id where s.stud_id='" & .Item(0, i).Value & "'"
                 Dim elem_sl As String = "Select sl.sl_amnt,sl.sl_status  from  tbl_coll_scholarlist sl inner join tbl_elem_students s on sl.stud_id=s.estud_id where s.estud_id='" & .Item(0, i).Value & "'"
                 Dim senior_sl As String = "Select sl.sl_amnt,sl.sl_status  from  tbl_coll_scholarlist sl inner join tbl_seniorhigh_students s on sl.stud_id=s.sstud_id where s.sstud_id='" & .Item(0, i).Value & "'"
-                Dim junior_sl As String = "Select sl.sl_amnt,sl.sl_status  from  tbl_coll_scholarlist sl inner join tbl_student s on sl.stud_id=s.jstud_id where s.jstud_id='" & .Item(0, i).Value & "'"
+                Dim junior_sl As String = "Select sl.sl_amnt,sl.sl_status  from  tbl_coll_scholarlist sl inner join tbl_juniorhigh_students s on sl.stud_id=s.jstud_id where s.jstud_id='" & .Item(0, i).Value & "'"
 
 
                 _dbConnection("db_lccsams")
@@ -237,7 +240,24 @@
             MessageBox.Show("Error: " & ex.Message)
         End Try
     End Sub
-
+    Sub _insert_slist(ByVal stat As Integer)
+        If cbo_SelectDept.SelectedIndex = 0 Then
+            Dim insert_sl As String = "Insert into tbl_coll_scholarlist values(0,'" & txtb_studid.Text & "','" & txtb_ScholarType.Text & "','" & txtb_ScholarAmnt.Text & "','" & stat & "')"
+            _insertData(insert_sl)
+        End If
+        If cbo_SelectDept.SelectedIndex = 1 Then
+            Dim insert_sl As String = "Insert into tbl_elem_scholarlist values(0,'" & txtb_studid.Text & "','" & txtb_ScholarType.Text & "','" & txtb_ScholarAmnt.Text & "','" & stat & "')"
+            _insertData(insert_sl)
+        End If
+        If cbo_SelectDept.SelectedIndex = 2 Then
+            Dim insert_sl As String = "Insert into tbl_senior_scholarlist values(0,'" & txtb_studid.Text & "','" & txtb_ScholarType.Text & "','" & txtb_ScholarAmnt.Text & "','" & stat & "')"
+            _insertData(insert_sl)
+        End If
+        If cbo_SelectDept.SelectedIndex = 3 Then
+            Dim insert_sl As String = "Insert into tbl_junior_scholarlist values(0,'" & txtb_studid.Text & "','" & txtb_ScholarType.Text & "','" & txtb_ScholarAmnt.Text & "','" & stat & "')"
+            _insertData(insert_sl)
+        End If
+    End Sub
 
 
     Private Sub btn_add_Click(sender As Object, e As EventArgs) Handles btn_add.Click
@@ -258,8 +278,7 @@
                 ElseIf rb_inactive.Checked = True Then
                     status = 0
                 End If
-                Dim insert_sl As String = "Insert into tbl_coll_scholarlist values(0,'" & txtb_studid.Text & "','" & txtb_ScholarType.Text & "','" & txtb_ScholarAmnt.Text & "','" & status & "')"
-                _insertData(insert_sl)
+                _insert_slist(status)
                 If dlg_savesuccessfully.ShowDialog() = DialogResult.OK Then
                     txtb_ScholarType.Enabled = False
                     txtb_ScholarAmnt.Enabled = False
@@ -270,7 +289,28 @@
         End If
 
     End Sub
+    Sub update_sl(ByVal stat As Integer)
+        If cbo_SelectDept.SelectedIndex = 0 Then
+            Dim update_sl As String = "update  tbl_coll_scholarlist set sl_name='" & txtb_ScholarType.Text & "',sl_amnt='" & txtb_ScholarAmnt.Text & "',sl_status='" & stat & "' where stud_id='" & txtb_studid.Text & "' "
+            _updateData(update_sl)
 
+        End If
+        If cbo_SelectDept.SelectedIndex = 1 Then
+            Dim update_sl As String = "update  tbl_elem_scholarlist set sl_name='" & txtb_ScholarType.Text & "',sl_amnt='" & txtb_ScholarAmnt.Text & "',sl_status='" & stat & "' where stud_id='" & txtb_studid.Text & "' "
+            _updateData(update_sl)
+
+        End If
+        If cbo_SelectDept.SelectedIndex = 2 Then
+            Dim update_sl As String = "update  tbl_senior_scholarlist set sl_name='" & txtb_ScholarType.Text & "',sl_amnt='" & txtb_ScholarAmnt.Text & "',sl_status='" & stat & "' where stud_id='" & txtb_studid.Text & "' "
+            _updateData(update_sl)
+
+        End If
+        If cbo_SelectDept.SelectedIndex = 3 Then
+            Dim update_sl As String = "update  tbl_junior_scholarlist set sl_name='" & txtb_ScholarType.Text & "',sl_amnt='" & txtb_ScholarAmnt.Text & "',sl_status='" & stat & "' where stud_id='" & txtb_studid.Text & "' "
+            _updateData(update_sl)
+
+        End If
+    End Sub
     Private Sub btn_update_Click(sender As Object, e As EventArgs) Handles btn_update.Click
         If btn_update.Text = "UPDATE" Then
             If dlg_scholarship_update.ShowDialog = DialogResult.OK Then
@@ -290,8 +330,7 @@
                 ElseIf rb_inactive.Checked = True Then
                     status = 0
                 End If
-                Dim update_sl As String = "update  tbl_coll_scholarlist set sl_name='" & txtb_ScholarType.Text & "',sl_amnt='" & txtb_ScholarAmnt.Text & "',sl_status='" & status & "' where stud_id='" & txtb_studid.Text & "' "
-                _updateData(update_sl)
+                update_sl(status)
                 If dlg_savesuccessfully.ShowDialog() = DialogResult.OK Then
                     txtb_ScholarType.Enabled = False
                     txtb_ScholarAmnt.Enabled = False

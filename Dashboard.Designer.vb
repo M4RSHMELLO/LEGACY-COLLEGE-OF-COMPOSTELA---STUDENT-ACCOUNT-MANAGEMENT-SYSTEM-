@@ -25,6 +25,8 @@ Partial Class Dashboard
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Dashboard))
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.pnlContainer = New Bunifu.Framework.UI.BunifuGradientPanel()
         Me.pnlMContainer = New System.Windows.Forms.Panel()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -54,8 +56,6 @@ Partial Class Dashboard
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.TableLayoutPanel1.SuspendLayout()
         Me.pnlContainer.SuspendLayout()
         Me.pnlMContainer.SuspendLayout()
@@ -86,6 +86,14 @@ Partial Class Dashboard
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(1183, 698)
         Me.TableLayoutPanel1.TabIndex = 0
+        '
+        'Timer1
+        '
+        Me.Timer1.Interval = 50
+        '
+        'Timer2
+        '
+        Me.Timer2.Interval = 50
         '
         'pnlContainer
         '
@@ -750,14 +758,6 @@ Partial Class Dashboard
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 4
         Me.PictureBox1.TabStop = False
-        '
-        'Timer1
-        '
-        Me.Timer1.Interval = 50
-        '
-        'Timer2
-        '
-        Me.Timer2.Interval = 50
         '
         'Dashboard
         '

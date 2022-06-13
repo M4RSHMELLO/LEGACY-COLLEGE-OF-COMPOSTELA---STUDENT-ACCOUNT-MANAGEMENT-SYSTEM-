@@ -457,37 +457,38 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>coll_rpt</DataSetName>
-        <Top>0.51263in</Top>
+        <Top>0.5543in</Top>
         <Left>0.41542in</Left>
         <Height>0.75in</Height>
-        <Width>5.64583in</Width>
+        <Width>5.64584in</Width>
         <Style>
           <Border>
             <Style>None</Style>
           </Border>
         </Style>
       </Tablix>
-      <Textbox Name="stdacct_tDate">
+      <Textbox Name="ReportName1">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!stdacct_tDate.Value, "coll_rpt")</Value>
+                <Value> COLLECTION REPORT FOR COLLEGE DEPARTMENT</Value>
                 <Style>
-                  <Format>dd-MM-yyyy</Format>
+                  <FontFamily>franklin Gothic Book</FontFamily>
+                  <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
-        <rd:DefaultName>stdacct_tDate</rd:DefaultName>
-        <Top>0.19319in</Top>
-        <Left>4.78in</Left>
+        <rd:DefaultName>ReportName1</rd:DefaultName>
+        <Top>0.18972in</Top>
+        <Left>0.41542in</Left>
         <Height>0.25in</Height>
-        <Width>1.28125in</Width>
+        <Width>3.61458in</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>

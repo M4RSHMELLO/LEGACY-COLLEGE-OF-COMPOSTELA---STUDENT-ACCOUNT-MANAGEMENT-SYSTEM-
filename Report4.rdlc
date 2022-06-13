@@ -450,7 +450,7 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>junior_ds</DataSetName>
-        <Top>0.25917in</Top>
+        <Top>0.66542in</Top>
         <Left>0.405in</Left>
         <Height>0.75in</Height>
         <Width>5.57292in</Width>
@@ -460,6 +460,39 @@
           </Border>
         </Style>
       </Tablix>
+      <Textbox Name="ReportName1">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value> COLLECTION REPORT FOR JUNIOR-HIGH DEPARTMENT</Value>
+                <Style>
+                  <FontFamily>franklin Gothic Book</FontFamily>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>ReportName1</rd:DefaultName>
+        <Top>0.34598in</Top>
+        <Left>0.42708in</Left>
+        <Height>0.25in</Height>
+        <Width>3.88541in</Width>
+        <ZIndex>1</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
     </ReportItems>
     <Height>4.01042in</Height>
     <Style />

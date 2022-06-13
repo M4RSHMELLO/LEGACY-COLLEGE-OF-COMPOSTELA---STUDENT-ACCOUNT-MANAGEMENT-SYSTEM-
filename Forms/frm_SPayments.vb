@@ -528,13 +528,12 @@ Public Class frm_SPayments
     Sub _clearECurrentStudData(ByVal btn As String)
         Select Case btn
             Case "SAVE"
-                txtb_eTN.Clear()
-                txtb_eTD.Clear()
+
                 cbo_eParticulars.SelectedIndex = -1
                 txtb_eStudAmntPay.Text = 0
                 txtb_eStudCurrAcct.Text = 0
                 txtb_eStudCurrBal.Text = 0
-                txtb_eStudTotAmnt.Text = 0
+
 
                 totalAmount = 0
 
@@ -562,7 +561,7 @@ Public Class frm_SPayments
     Sub _retrieve_eStudData()
         Try
             _dbConnection("db_lccsams")
-            Dim querry2 As String = "Select s.estud_id,s.estud_Fname,s.estud_mi,s.estud_Lname,sy.esy_name,gl.egl_name,s.esy_id,s.egl_id from tbl_elem_students s inner join tbl_elem_sy  sy on  sy.esy_id=s.esy_id inner join tbl_elem_gradelevel gl on gl.egl_id=s.egl_id  where s.estud_Fname='" & eFname & "' and s.estud_Lname='" & eLname & "'"
+            Dim querry2 As String = "Select s.estud_id,s.estud_Fname,s.estud_mi,s.estud_Lname,sy.esy_name,gl.egl_name,s.esy_id from tbl_elem_students s inner join tbl_elem_sy  sy on  sy.esy_id=s.esy_id inner join tbl_elem_gradelevel gl on gl.egl_id=s.egl_id  where s.estud_Fname='" & eFname & "' and s.estud_Lname='" & eLname & "'"
             dbConn.Open()
             sqlCommand = New MySqlCommand(querry2, dbConn)
             dr = sqlCommand.ExecuteReader
@@ -572,7 +571,7 @@ Public Class frm_SPayments
                 txtb_eSY.Text = dr(4).ToString
                 txtb_eGL.Text = dr(5).ToString
                 eSy_id = dr(6).ToString
-                egl_id = dr(7).ToString
+
             End While
             dbConn.Close()
             Dim particular_list As String = "select f.efees_id, f.efees_name from tbl_elem_fees f inner join tbl_elem_students s on s.esy_id=f.esy_id where s.estud_id='" & txtb_eStudID.Text & "'"
@@ -600,7 +599,7 @@ Public Class frm_SPayments
                         txtb_eSY.Text = dr(4).ToString
                         txtb_eGL.Text = dr(5).ToString
                         eSy_id = dr(6).ToString
-                        egl_id = dr(7).ToString
+
 
                     End While
                     dbConn.Close()
@@ -650,6 +649,7 @@ Public Class frm_SPayments
             While dr.Read()
                 Dim sd As Date = dr(0).ToString()
                 Dim ed As Date = dr(1).ToString()
+
                 esy_sDate = sd.ToString("yyyy-MM-dd")
                 esy_eDate = ed.ToString("yyyy-MM-dd")
             End While
@@ -662,32 +662,56 @@ Public Class frm_SPayments
     End Sub
 
     Sub _loadToEoldAccount()
-        Dim querry1 As String = "SELECT ifNull(SUM(f.efees_amount),0) - ifnull(SUM(sa.epay_amount),0) as oldbal from tbl_elem_fees f  left join tbl_elem_accounts sa on f.esy_id=sa.esy_id  where sa.estud_id='" & txtb_eStudID.Text & "'  and sa.edate_paidamount < '" & esy_sDate & "' order by sa.edate_paidamount desc "
+        txtb_eStudOldAcct.Text = 0
+        Dim totalFee As Double
+        Dim totalPay As Double
+        Dim querry1 As String = "SELECT ifnull(SUM(epay_amount),0) as total from tbl_elem_accounts  where estud_id='" & txtb_eStudID.Text & "' and  esy_id='" & eSy_id - 1 & "'  "
+        Dim totalFees As String = "SELECT ifNull(SUM(efees_amount),0) as total from tbl_elem_fees where esy_id='" & eSy_id - 1 & "' "
+
         Try
+            dbConn.Open()
+            sqlCommand = New MySqlCommand(totalFees, dbConn)
+            dr = sqlCommand.ExecuteReader
+            While dr.Read()
+                totalFee = dr(0)
+            End While
+            dbConn.Close()
             dbConn.Open()
             sqlCommand = New MySqlCommand(querry1, dbConn)
             dr = sqlCommand.ExecuteReader
             While dr.Read()
-                txtb_eStudOldAcct.Text = dr(0)
-
+                totalPay = dr(0)
             End While
+            txtb_eStudOldAcct.Text = totalFee - totalPay
         Catch ex As Exception
             erromessage("error 108: loadToTextbox " & ex.Message)
         Finally
             dbConn.Close()
         End Try
+
     End Sub
     Sub _loadToECurrentAccount()
+        Dim totalFee As Double
+        Dim totalPay As Double
+        txtb_eStudCurrAcct.Text = 0
+        Dim querry1 As String = "SELECT ifnull(SUM(epay_amount),0) as total from tbl_elem_accounts  where estud_id='" & txtb_eStudID.Text & "' and esy_id='" & eSy_id& & "' "
+        Dim totalFees As String = "SELECT ifNull(SUM(efees_amount),0) as total from tbl_elem_fees where esy_id='" & eSy_id & "' "
 
-        Dim querry1 As String = "SELECT ifNull(SUM(f.efees_amount),0) - ifnull(SUM(sa.epay_amount),0) as total from tbl_elem_fees f inner join tbl_elem_students s on s.esy_id=f.esy_id left join tbl_elem_accounts sa on f.esy_id=sa.esy_id  where s.estud_id='" & txtb_eStudID.Text & "' "
         Try
+            dbConn.Open()
+            sqlCommand = New MySqlCommand(totalFees, dbConn)
+            dr = sqlCommand.ExecuteReader
+            While dr.Read()
+                totalFee = dr(0)
+            End While
+            dbConn.Close()
             dbConn.Open()
             sqlCommand = New MySqlCommand(querry1, dbConn)
             dr = sqlCommand.ExecuteReader
             While dr.Read()
-                txtb_eStudCurrAcct.Text = dr(0)
-
+                totalPay = dr(0)
             End While
+            txtb_eStudCurrAcct.Text = totalFee - totalPay
         Catch ex As Exception
             erromessage("error 108: loadToTextbox " & ex.Message)
         Finally
@@ -699,6 +723,7 @@ Public Class frm_SPayments
         _clearECurrentStudData(btn_eClear.Text)
     End Sub
     Private Sub btn_eEnter_Click(sender As Object, e As EventArgs) Handles btn_eEnter.Click
+
         display_estudData()
         txtb_eTN.Text = random_TaN()
         _dateforeSy()
@@ -714,7 +739,7 @@ Public Class frm_SPayments
         lbl_eDate.Text = txtb_eTD.Text
         lbl_cashierE.Text = cashier_name.ToUpper
         'transfer data to string
-        eStud_id = txtb_eStudID.Text
+        eStud_id = Integer.Parse(txtb_eStudID.Text)
         eStudname = txtb_eStudName.Text
         eStudSY = txtb_eSY.Text
         eStudGL = txtb_eGL.Text
@@ -724,20 +749,18 @@ Public Class frm_SPayments
             If txtb_eStudID.Text = "" Then
                 MessageBox.Show("Please Select a student First!")
             Else
-                If txtb_eStudAmntPay.Text = 0 And txtb_eStudAmntPay.Text = "" Then
-                    MessageBox.Show("Please add payment!")
-                Else
 
-                    For Each row As DataGridViewRow In dg_ePayment.Rows
+
+                For Each row As DataGridViewRow In dg_ePayment.Rows
                         Dim InsertPayments As String = "Insert into tbl_elem_accounts values('" & txtb_eStudID.Text & "','" & txtb_eTN.Text & "','" & txtb_eTD.Text & "','" & Integer.Parse(row.Cells(0).Value) & "','" & Double.Parse(row.Cells(2).Value) & "','" & Double.Parse(row.Cells(3).Value) & "','" & eSy_id & "','" & egl_id & "')"
                         _dbConnection("db_lccsams")
                         _insertData(InsertPayments)
                     Next
                     If dlg_payments.ShowDialog = DialogResult.OK Then
                         _clearECurrentStudData(btn_eSave.Text)
-                        btn_eEnter_Click(sender, e)
-                    End If
+                    dg_eReceipts.Rows.Clear()
                 End If
+
             End If
         Catch ex As Exception
             MessageBox.Show(ex.Message)
@@ -772,7 +795,11 @@ Public Class frm_SPayments
         CaptureEScreen()
         print_collR.Print()
         If dlg_printedsuccessfully.ShowDialog = DialogResult.OK Then
+            txtb_eTN.Clear()
+            txtb_eTD.Clear()
             dg_eReceipts.Rows.Clear()
+            txtb_eStudTotAmnt.Text = 0
+            btn_eEnter_Click(sender, e)
             lbl_eTamnt.Text = "TOTAL AMOUNT:"
             lbl_eBal.Text = "BALANCE:"
             lbl_eName.Text = "Name: "
@@ -783,7 +810,7 @@ Public Class frm_SPayments
 
     Private Sub btn_eAdd_Click(sender As Object, e As EventArgs) Handles btn_eAdd.Click
         Try
-            If txtb_eStudAmntPay.Text = "" Or txtb_eStudAmntPay.Text = 0 Then
+            If txtb_eStudAmntPay.Text = "" Or txtb_eStudAmntPay.Text = 0 Or cbo_eParticulars.Text = "" Then
                 MessageBox.Show("Please Input a payment")
             Else
                 dg_ePayment.Rows.Add(cbo_eParticulars.SelectedValue, cbo_eParticulars.Text, txtb_eStudAmntPay.Text, txtb_eStudCurrBal.Text)
@@ -820,7 +847,7 @@ Public Class frm_SPayments
     Sub _retrieve_sStudData()
         Try
             _dbConnection("db_lccsams")
-            Dim querry2 As String = " Select s.sstud_id,s.sstud_Fname,s.sstud_mi,s.sstud_Lname,sy.ssy_name,gl.sgl_name,s.ssy_id,s.sgl_id  from tbl_seniorhigh_students s inner join tbl_seniorhigh_sy  sy on  sy.ssy_id=s.ssy_id inner join tbl_seniorhigh_gl  gl on gl.sgl_id=s.sgl_id  where s.sstud_Fname='" & sFname & "' and s.sstud_Lname='" & sLname & "'"
+            Dim querry2 As String = " Select s.sstud_id,s.sstud_Fname,s.sstud_mi,s.sstud_Lname,sy.ssy_name,gl.sgl_name,s.ssy_id  from tbl_seniorhigh_students s inner join tbl_seniorhigh_sy  sy on  sy.ssy_id=s.ssy_id inner join tbl_seniorhigh_gl  gl on gl.sgl_id=s.sgl_id  where s.sstud_Fname='" & sFname & "' and s.sstud_Lname='" & sLname & "'"
             dbConn.Open()
             sqlCommand = New MySqlCommand(querry2, dbConn)
             dr = sqlCommand.ExecuteReader
@@ -830,7 +857,7 @@ Public Class frm_SPayments
                 txtb_sSY.Text = dr(4).ToString
                 txtb_sGL.Text = dr(5).ToString
                 sSy_id = dr(6).ToString
-                sSy_id = dr(7).ToString
+
             End While
             dbConn.Close()
             Dim particular_list As String = "select f.sfees_id, f.sfees_name from tbl_senior_fees f inner join tbl_seniorhigh_students s on s.ssy_id=f.ssy_id inner join tbl_seniorhigh_gl gl on s.sgl_id=gl.sgl_id  where s.sstud_id='" & txtb_sStudID.Text & "'"
@@ -846,7 +873,7 @@ Public Class frm_SPayments
             Case "Id Number"
                 _dbConnection("db_lccsams")
                 Try
-                    Dim querry3 As String = " Select s.sstud_id,s.sstud_Fname,s.sstud_mi,s.sstud_Lname,sy.ssy_name,gl.sgl_name,s.ssy_id,s.sgl_id from tbl_seniorhigh_students s inner join tbl_seniorhigh_sy  sy on  sy.ssy_id=s.ssy_id inner join tbl_seniorhigh_gl  gl on gl.sgl_id=s.sgl_id   where s.sstud_id='" & txtb_sSearch.Text & "'"
+                    Dim querry3 As String = " Select s.sstud_id,s.sstud_Fname,s.sstud_mi,s.sstud_Lname,sy.ssy_name,gl.sgl_name,s.ssy_id from tbl_seniorhigh_students s inner join tbl_seniorhigh_sy  sy on  sy.ssy_id=s.ssy_id inner join tbl_seniorhigh_gl  gl on gl.sgl_id=s.sgl_id   where s.sstud_id='" & txtb_sSearch.Text & "'"
                     dbConn.Open()
                     sqlCommand = New MySqlCommand(querry3, dbConn)
                     dr = sqlCommand.ExecuteReader
@@ -856,7 +883,7 @@ Public Class frm_SPayments
                         txtb_sSY.Text = dr(4).ToString
                         txtb_sGL.Text = dr(5).ToString
                         sSy_id = dr(6).ToString
-                        sSy_id = dr(7).ToString
+
                     End While
                     dbConn.Close()
                     Dim particular_list As String = "select f.sfees_id, f.sfees_name from tbl_senior_fees f inner join tbl_seniorhigh_students s on s.ssy_id=f.ssy_id inner join tbl_seniorhigh_gl gl on s.sgl_id=gl.sgl_id  where s.sstud_id='" & txtb_sStudID.Text & "'"
@@ -890,7 +917,7 @@ Public Class frm_SPayments
         End Select
     End Sub
     Sub _dateforsSy()
-        Dim querry1 = "Select ssy_sDate,ssy_edate   tbl_seniorhigh_sy  where ssy_name='" & txtb_sSY.Text & "' "
+        Dim querry1 = "Select ssy_sdate,ssy_edate  from  tbl_seniorhigh_sy  where ssy_name='" & txtb_sSY.Text & "' "
         Try
             _dbConnection("db_lccsams")
             dbConn.Open()
@@ -911,37 +938,63 @@ Public Class frm_SPayments
 
     End Sub
     Sub _loadtosOldAccount()
-        Dim querry1 As String = "SELECT ifNull(SUM(f.sfees_amount),0) - ifnull(SUM(sa.spay_amount),0) as oldbal from tbl_senior_fees f  left join tbl_senior_accounts sa on f.ssy_id=sa.ssy_id  where sa.sstud_id='" & txtb_sStudID.Text & "'  and sdate_paidamount < '" & sSy_sDate & "' order by sdate_paidamount desc "
+
+        txtb_sOldAcct.Text = 0
+        Dim totalFee As Double
+        Dim totalPay As Double
+        Dim querry1 As String = "SELECT ifnull(SUM(spay_amount),0)  as totalpay  from tbl_senior_accounts where sstud_id='" & txtb_sStudID.Text & "'  and ssy_id='" & sSy_id - 1 & "' "
+        Dim totalFees As String = "SELECT ifNull(SUM(sfees_amount),0) as total from tbl_senior_fees where ssy_id='" & sSy_id - 1 & "' "
+
         Try
+            dbConn.Open()
+            sqlCommand = New MySqlCommand(totalFees, dbConn)
+            dr = sqlCommand.ExecuteReader
+            While dr.Read()
+                totalFee = dr(0)
+            End While
+            dbConn.Close()
             dbConn.Open()
             sqlCommand = New MySqlCommand(querry1, dbConn)
             dr = sqlCommand.ExecuteReader
             While dr.Read()
-                txtb_sOldAcct.Text = dr(0)
+                totalPay = dr(0)
             End While
+            txtb_sOldAcct.Text = totalFee - totalPay
         Catch ex As Exception
             erromessage("error 108: loadToTextbox " & ex.Message)
         Finally
             dbConn.Close()
         End Try
+
 
     End Sub
     Sub _loadTosCurrentAccount()
-        Dim querry1 As String = "SELECT ifNull(SUM(f.sfees_amount),0) - ifnull(SUM(sa.spay_amount),0) as total from tbl_senior_fees f inner join tbl_seniorhigh_students s on s.ssy_id=f.ssy_id left join tbl_senior_accounts sa on f.ssy_id=sa.ssy_id  where s.sstud_id='" & txtb_sStudID.Text & "' "
+        Dim totalFee As Double
+        Dim totalPay As Double
+        txtb_sCurrAcct.Text = 0
+        Dim querry1 As String = "SELECT ifnull(SUM(spay_amount),0) as total from tbl_senior_accounts   where sstud_id='" & txtb_sStudID.Text & "' AND ssy_id='" & sSy_id & "' "
+        Dim totalFees As String = "SELECT ifNull(SUM(sfees_amount),0) as total from tbl_senior_fees where ssy_id='" & sSy_id & "' "
+
         Try
+            dbConn.Open()
+            sqlCommand = New MySqlCommand(totalFees, dbConn)
+            dr = sqlCommand.ExecuteReader
+            While dr.Read()
+                totalFee = dr(0)
+            End While
+            dbConn.Close()
             dbConn.Open()
             sqlCommand = New MySqlCommand(querry1, dbConn)
             dr = sqlCommand.ExecuteReader
             While dr.Read()
-                txtb_sCurrAcct.Text = dr(0)
-
+                totalPay = dr(0)
             End While
+            txtb_sCurrAcct.Text = totalFee - totalPay
         Catch ex As Exception
             erromessage("error 108: loadToTextbox " & ex.Message)
         Finally
             dbConn.Close()
         End Try
-
     End Sub
 
     Private Sub btn_sEnter_Click(sender As Object, e As EventArgs) Handles btn_sEnter.Click
@@ -1102,17 +1155,17 @@ Public Class frm_SPayments
     Sub _retrieve_jStudData()
         Try
             _dbConnection("db_lccsams")
-            Dim querry5 As String = " Select s.jstud_id,s.jstud_Fname,s.jstud_mi,s.jstud_Lname,sy.jsy_name,gl.jgl_name,s.jsy_id,s.jgl_id from tbl_juniorhigh_students s inner join tbl_juniorhigh_sy  sy on  sy.jsy_id=s.jsy_id inner join tbl_juniorhigh_gradelevel  gl on gl.jgl_id=s.jgl_id  where s.jstud_Fname='" & jFname & "' and s.jstud_Lname='" & jLname & "'"
+            Dim querry5 As String = " Select s.jstud_id,s.jstud_Fname,s.jstud_mi,s.jstud_Lname,sy.jsy_name,gl.jgl_name,s.jsy_id from tbl_juniorhigh_students s inner join tbl_juniorhigh_sy  sy on  sy.jsy_id=s.jsy_id inner join tbl_juniorhigh_gradelevel  gl on gl.jgl_id=s.jgl_id  where s.jstud_Fname='" & jFname & "' and s.jstud_Lname='" & jLname & "'"
             dbConn.Open()
             sqlCommand = New MySqlCommand(querry5, dbConn)
             dr = sqlCommand.ExecuteReader
-            While dr.Read
+            While dr.Read()
                 txtb_jStudID.Text = dr(0).ToString
                 txtb_jStudName.Text = dr(1).ToString.ToUpper + " " + dr(2).ToString.ToUpper + " " + dr(3).ToString.ToUpper
                 txtb_jSY.Text = dr(4).ToString
                 txtb_jGL.Text = dr(5).ToString
                 jSy_id = dr(6).ToString
-                jSy_id = dr(7).ToString
+
             End While
             dbConn.Close()
             Dim particular_list As String = "select f.jfees_id, f.jfees_name from tbl_junior_fees f inner join tbl_juniorhigh_students s on s.jsy_id=f.jsy_id  where s.jstud_id='" & txtb_jStudID.Text & "'"
@@ -1128,17 +1181,17 @@ Public Class frm_SPayments
             Case "Id Number"
                 Try
                     _dbConnection("db_lccsams")
-                    Dim selectjStudAcct As String = " Select s.jstud_id,s.jstud_Fname,s.jstud_mi,s.jstud_Lname,sy.jsy_name,gl.jgl_name,s.jsy_id,s.jgl_id from tbl_juniorhigh_students s inner join tbl_juniorhigh_sy sy on  sy.jsy_id=s.jsy_id  where s.jstud_id='" & txtb_jSearch.Text & "'"
+                    Dim selectjStudAcct As String = " Select s.jstud_id,s.jstud_Fname,s.jstud_mi,s.jstud_Lname,sy.jsy_name,gl.jgl_name,s.jsy_id from tbl_juniorhigh_students s inner join tbl_juniorhigh_sy sy on  sy.jsy_id=s.jsy_id inner join tbl_junior_gradelevel gl on s.jgl_id=gl.jgl_id   where s.jstud_id='" & txtb_jSearch.Text & "'"
                     dbConn.Open()
                     sqlCommand = New MySqlCommand(selectjStudAcct, dbConn)
                     dr = sqlCommand.ExecuteReader
-                    While dr.Read
+                    While dr.Read()
                         txtb_jStudID.Text = dr(0).ToString
                         txtb_jStudName.Text = dr(1).ToString.ToUpper + " " + dr(2).ToString.ToUpper + " " + dr(3).ToString.ToUpper
                         txtb_jSY.Text = dr(4).ToString
                         txtb_jGL.Text = dr(5).ToString
                         jSy_id = dr(6).ToString
-                        jSy_id = dr(7).ToString
+
                     End While
                     dbConn.Close()
                     Dim particular_list As String = "select f.jfees_id, f.jfees_name from tbl_junior_fees f inner join tbl_juniorhigh_students s on s.jsy_id=f.jsy_id where s.jstud_id='" & txtb_jStudID.Text & "'"
@@ -1172,7 +1225,7 @@ Public Class frm_SPayments
         End Select
     End Sub
     Sub _dateforjSy()
-        Dim querry1 = "Select jsy_sDate,jsy_edate   tbl_juniorhigh_sy  where jsy_name='" & txtb_jSY.Text & "' "
+        Dim querry1 = "Select jsy_sdate,jsy_edate from  tbl_juniorhigh_sy  where jsy_name='" & txtb_jSY.Text & "' "
         Try
             _dbConnection("db_lccsams")
             dbConn.Open()
@@ -1193,37 +1246,62 @@ Public Class frm_SPayments
 
     End Sub
     Sub _loadtojOldAccount()
-        Dim querry1 As String = "SELECT ifNull(SUM(f.jfees_amount),0) - ifnull(SUM(sa.jpay_amount),0) as oldbal from tbl_junior_fees f  left join tbl_junior_accounts sa on f.jsy_id=sa.jsy_id  where sa.jstud_id='" & txtb_jStudID.Text & "'  and jdate_paidamount < '" & jSy_sDate & "' order by jdate_paidamount desc "
+
+        txtb_jOldAcct.Text = 0
+        Dim totalFee As Double
+        Dim totalPay As Double
+        Dim querry1 As String = "SELECT  ifnull(SUM(jpay_amount),0) as total from tbl_junior_accounts  where jstud_id='" & txtb_jStudID.Text & "'and jsy_id='" & jSy_id - 1 & "'"
+        Dim totalFees As String = "SELECT ifNull(SUM(jfees_amount),0) as total from tbl_junior_fees where jsy_id='" & jSy_id - 1 & "' "
+
         Try
+            dbConn.Open()
+            sqlCommand = New MySqlCommand(totalFees, dbConn)
+            dr = sqlCommand.ExecuteReader
+            While dr.Read()
+                totalFee = dr(0)
+            End While
+            dbConn.Close()
             dbConn.Open()
             sqlCommand = New MySqlCommand(querry1, dbConn)
             dr = sqlCommand.ExecuteReader
             While dr.Read()
-                txtb_jOldAcct.Text = dr(0)
+                totalPay = dr(0)
             End While
+            txtb_jOldAcct.Text = totalFee - totalPay
         Catch ex As Exception
             erromessage("error 108: loadToTextbox " & ex.Message)
         Finally
             dbConn.Close()
         End Try
-
     End Sub
     Sub _loadTojCurrentAccount()
-        Dim querry1 As String = "SELECT ifNull(SUM(f.jfees_amount),0) - ifnull(SUM(sa.jpay_amount),0) as total from tbl_junior_fees f inner join tbl_juniorhigh_students s on s.jsy_id=f.jsy_id left join tbl_junior_accounts sa on f.jsy_id=sa.jsy_id  where s.jstud_id='" & txtb_jStudID.Text & "' "
+
+        Dim totalFee As Double
+        Dim totalPay As Double
+        txtb_jCurrAcct.Text = 0
+        Dim querry1 As String = "SELECT  ifnull(SUM(jpay_amount),0) as  total from tbl_junior_accounts  where jstud_id='" & txtb_jStudID.Text & "' and jsy_id='" & jSy_id & "'"
+        Dim totalFees As String = "SELECT ifNull(SUM(jfees_amount),0) as total from tbl_junior_fees where jsy_id='" & jSy_id & "' "
+
         Try
+            dbConn.Open()
+            sqlCommand = New MySqlCommand(totalFees, dbConn)
+            dr = sqlCommand.ExecuteReader
+            While dr.Read()
+                totalFee = dr(0)
+            End While
+            dbConn.Close()
             dbConn.Open()
             sqlCommand = New MySqlCommand(querry1, dbConn)
             dr = sqlCommand.ExecuteReader
             While dr.Read()
-                txtb_jCurrAcct.Text = dr(0)
-
+                totalPay = dr(0)
             End While
+            txtb_jCurrAcct.Text = totalFee - totalPay
         Catch ex As Exception
             erromessage("error 108: loadToTextbox " & ex.Message)
         Finally
             dbConn.Close()
         End Try
-
     End Sub
 
     Private Sub btn_jEnter_Click(sender As Object, e As EventArgs) Handles btn_jEnter.Click
@@ -1427,4 +1505,24 @@ Public Class frm_SPayments
         lbl_jTamnt.Text = "TOTAL AMOUNT: " & total_amnt
         lbl_jBal.Text = "BALANCE: " & Double.Parse(txtb_jToAmnt.Text) - total_amnt
     End Sub
+
+    Private Sub btn_sManage_Click(sender As Object, e As EventArgs) Handles btn_sManage.Click
+        Try
+            current_menu = 1
+            Dashboard.btn_menuStudentsAccount_click(sender, e)
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
+
+    Private Sub btn_jManage_Click(sender As Object, e As EventArgs) Handles btn_jManage.Click
+        Try
+            current_menu = 1
+            Dashboard.btn_menuStudentsAccount_click(sender, e)
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
+
+
 End Class

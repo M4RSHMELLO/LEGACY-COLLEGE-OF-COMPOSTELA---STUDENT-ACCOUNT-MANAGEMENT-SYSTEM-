@@ -209,7 +209,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!edate_paidamount.Value</Value>
-                              <Style />
+                              <Style>
+                                <Format>dd-MM-yyyy</Format>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -229,6 +231,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -465,16 +468,49 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>elem_ds</DataSetName>
-        <Top>0.29042in</Top>
+        <Top>0.68625in</Top>
         <Left>0.52083in</Left>
         <Height>0.75in</Height>
-        <Width>5.45833in</Width>
+        <Width>5.45832in</Width>
         <Style>
           <Border>
             <Style>None</Style>
           </Border>
         </Style>
       </Tablix>
+      <Textbox Name="ReportName1">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value> COLLECTION REPORT FOR ELEMENTARY DEPARTMENT</Value>
+                <Style>
+                  <FontFamily>franklin Gothic Book</FontFamily>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>ReportName1</rd:DefaultName>
+        <Top>0.36681in</Top>
+        <Left>0.52083in</Left>
+        <Height>0.25in</Height>
+        <Width>3.86458in</Width>
+        <ZIndex>1</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
     </ReportItems>
     <Height>4.09375in</Height>
     <Style />

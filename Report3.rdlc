@@ -460,18 +460,51 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>senior_ds</DataSetName>
-        <Top>0.39458in</Top>
+        <Top>0.66888in</Top>
         <Left>0.45312in</Left>
         <Height>0.75in</Height>
-        <Width>5.59375in</Width>
+        <Width>5.59376in</Width>
         <Style>
           <Border>
             <Style>None</Style>
           </Border>
         </Style>
       </Tablix>
+      <Textbox Name="ReportName1">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value> COLLECTION REPORT FOR SENIOR-HIGH DEPARTMENT</Value>
+                <Style>
+                  <FontFamily>franklin Gothic Book</FontFamily>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>ReportName1</rd:DefaultName>
+        <Top>0.34944in</Top>
+        <Left>0.45312in</Left>
+        <Height>0.25in</Height>
+        <Width>3.95833in</Width>
+        <ZIndex>1</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
     </ReportItems>
-    <Height>3.98958in</Height>
+    <Height>4.06597in</Height>
     <Style />
   </Body>
   <Width>6.5in</Width>

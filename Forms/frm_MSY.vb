@@ -177,42 +177,32 @@
     Dim egl_name As String
 
     Private Sub btn_esy_New_Click(sender As Object, e As EventArgs) Handles btn_esy_New.Click
-        If btn_esy_New.Text = "new" Then
-            If dlg_addnewsy.ShowDialog = DialogResult.OK Then
-                btn_esy_New.Text = "CANCEL"
-                txtb_esy_start.Enabled = True
+
+        If dlg_addnewsy.ShowDialog = DialogResult.OK Then
+
+            txtb_esy_start.Enabled = True
                 txtb_esy_end.Enabled = True
                 btn_esy_save.Enabled = True
                 b = 1
             End If
-        ElseIf btn_esy_New.Text = "CANCEL" Then
-            btn_esy_New.Text = "new"
-            txtb_esy_end.Enabled = False
-            txtb_esy_start.Enabled = False
-            btn_esy_save.Enabled = False
-        End If
+
+
 
 
 
     End Sub
 
     Private Sub btn_esy_update_Click(sender As Object, e As EventArgs) Handles btn_esy_update.Click
-        If btn_esy_update.Text = "UPDATE" Then
-            If dlg_updatesy.ShowDialog = DialogResult.OK Then
-                btn_esy_update.Text = "CANCEL"
+
+        If dlg_updatesy.ShowDialog = DialogResult.OK Then
+
                 btn_esy_update.Enabled = True
                 txtb_esy_end.Enabled = True
                 btn_esy_save.Enabled = True
                 dg_esyRec.Enabled = False
                 b = 2
             End If
-        ElseIf btn_esy_update.Text = "CANCEL" Then
-            btn_esy_update.Text = "UPDATE"
-            btn_esy_update.Enabled = False
-            txtb_esy_end.Enabled = False
-            btn_esy_save.Enabled = False
-            dg_esyRec.Enabled = True
-        End If
+
     End Sub
 
     Private Sub btn_esy_save_Click(sender As Object, e As EventArgs) Handles btn_esy_save.Click
@@ -227,7 +217,8 @@
                     txtb_esy_start.Enabled = False
                     txtb_esy_end.Enabled = False
                     btn_esy_save.Enabled = False
-                    cbo_semester.Enabled = False
+
+
                 End If
             Case 2
                 Dim esyName As String = txtb_esy_start.Text & "-" & txtb_esy_end.Text
@@ -238,7 +229,6 @@
                     txtb_esy_start.Enabled = False
                     txtb_esy_end.Enabled = False
                     btn_esy_save.Enabled = False
-                    cbo_semester.Enabled = False
                     dg_esyRec.Enabled = True
                 End If
         End Select
@@ -291,43 +281,28 @@
 
     Private Sub btn_new_sSY_Click(sender As Object, e As EventArgs) Handles btn_new_sSY.Click
 
-        If btn_new_sSY.Text = "new" Then
-            If dlg_addnewsy.ShowDialog = DialogResult.OK Then
-                btn_new_sSY.Text = "CANCEL"
-                txtb_ssy_start.Enabled = True
+
+        If dlg_addnewsy.ShowDialog = DialogResult.OK Then
+
+            txtb_ssy_start.Enabled = True
                 txtb_ssy_end.Enabled = True
                 btn_save_ssy.Enabled = True
                 c = 1
             End If
-        ElseIf btn_new_sSY.Text = "CANCEL" Then
-            btn_new_sSY.Text = "new"
-            txtb_ssy_start.Enabled = False
-            txtb_ssy_end.Enabled = False
-            btn_save_ssy.Enabled = False
-        End If
 
     End Sub
 
     Private Sub btn_update_ssy_Click(sender As Object, e As EventArgs) Handles btn_update_ssy.Click
 
+        If dlg_updatesy.ShowDialog = DialogResult.OK Then
 
-        If btn_update_ssy.Text = "UPDATE" Then
-            If dlg_updatesy.ShowDialog = DialogResult.OK Then
-                btn_update_ssy.Text = "cancel"
-                txtb_ssy_start.Enabled = True
-                txtb_ssy_end.Enabled = True
-                btn_save_ssy.Enabled = True
-                c = 2
-                dg_ssyRec.Enabled = False
-                b = 2
-            End If
-        ElseIf btn_update_ssy.Text = "CANCEL" Then
-            btn_update_ssy.Text = "UPDATE"
-            txtb_ssy_start.Enabled = False
-            txtb_ssy_end.Enabled = False
-            btn_save_ssy.Enabled = False
-            dg_ssyRec.Enabled = True
+            txtb_ssy_start.Enabled = True
+            txtb_ssy_end.Enabled = True
+            btn_save_ssy.Enabled = True
+            dg_ssyRec.Enabled = False
+            c = 2
         End If
+
 
     End Sub
 
@@ -338,12 +313,27 @@
                 Dim strQueery6 As String = "Insert Into tbl_seniorhigh_sy values(0,'" & ssyN & "','" & dp_ssy_sDate.Text & "','" & dp_ssy_eDate.Text & "')"
                 _dbConnection("db_lccsams")
                 _insertData(strQueery6)
-                _displayRecords(sSelect_SY, dg_ssyRec)
+                If dlg_savesuccessfully.ShowDialog() = DialogResult.OK Then
+                    _displayRecords(sSelect_SY, dg_ssyRec)
+
+                    txtb_ssy_start.Enabled = False
+                    txtb_ssy_end.Enabled = False
+                    btn_save_ssy.Enabled = False
+                End If
+
             Case 2
                 Dim ssyName As String = txtb_ssy_start.Text & "-" & txtb_ssy_end.Text
                 _dbConnection("db_lccsams")
                 _updateData("update tbl_seniorhigh_sy  set ssy_name='" & ssyName & "',ssy_sdate='" & dp_ssy_sDate.Text & "',ssy_edate='" & dp_ssy_eDate.Text & "' where ssy_id ='" & ssy_id & "' ")
-                _displayRecords(sSelect_SY, dg_ssyRec)
+                If UpdatedSuccessfully.ShowDialog() = DialogResult.OK Then
+
+                    _displayRecords(sSelect_SY, dg_ssyRec)
+                    txtb_ssy_start.Enabled = False
+                    txtb_ssy_end.Enabled = False
+                    btn_save_ssy.Enabled = False
+                    dg_ssyRec.Enabled = True
+                End If
+
         End Select
     End Sub
 
@@ -396,27 +386,22 @@
     Dim jgl_name As String
     Private Sub btn_jsy_new_Click(sender As Object, e As EventArgs) Handles btn_jsy_new.Click
 
-        If btn_jsy_new.Text = "new" Then
-            If dlg_addnewsy.ShowDialog = DialogResult.OK Then
-                btn_jsy_new.Text = "CANCEL"
-                txtb_jsy_start.Enabled = True
+
+        If dlg_addnewsy.ShowDialog = DialogResult.OK Then
+
+            txtb_jsy_start.Enabled = True
                 txtb_jsy_end.Enabled = True
                 btn_jsy_save.Enabled = True
                 d = 1
             End If
-        ElseIf btn_jsy_new.Text = "CANCEL" Then
-            btn_jsy_new.Text = "new"
-            txtb_jsy_start.Enabled = False
-            txtb_jsy_end.Enabled = False
-            btn_jsy_save.Enabled = False
-        End If
+
     End Sub
 
     Private Sub btn_jsy_update_Click(sender As Object, e As EventArgs) Handles btn_jsy_update.Click
 
-        If btn_jsy_update.Text = "UPDATE" Then
-            If dlg_updatesy.ShowDialog = DialogResult.OK Then
-                btn_jsy_update.Text = "cancel"
+
+        If dlg_updatesy.ShowDialog = DialogResult.OK Then
+
                 txtb_jsy_start.Enabled = True
                 txtb_jsy_end.Enabled = True
                 btn_jsy_save.Enabled = True
@@ -424,13 +409,7 @@
                 dg_jsyRec.Enabled = False
 
             End If
-        ElseIf btn_jsy_update.Text = "CANCEL" Then
-            btn_jsy_update.Text = "UPDATE"
-            txtb_jsy_start.Enabled = False
-            txtb_jsy_end.Enabled = False
-            btn_jsy_save.Enabled = False
-            dg_jsyRec.Enabled = True
-        End If
+
     End Sub
 
     Private Sub btn_jsy_save_Click(sender As Object, e As EventArgs) Handles btn_jsy_save.Click
@@ -440,12 +419,25 @@
                 Dim strQueery6 As String = "Insert Into tbl_juniorhigh_sy values(0,'" & jsyN & "','" & dp_jsy_sDate.Text & "','" & dp_jsy_eDate.Text & "')"
                 _dbConnection("db_lccsams")
                 _insertData(strQueery6)
-                _displayRecords(jSelect_SY, dg_jsyRec)
+                If dlg_savesuccessfully.ShowDialog() = DialogResult.OK Then
+                    _displayRecords(jSelect_SY, dg_jsyRec)
+                    txtb_jsy_start.Enabled = False
+                    txtb_jsy_end.Enabled = False
+                    btn_jsy_save.Enabled = False
+                End If
+
             Case 2
                 Dim esyName As String = txtb_jsy_start.Text & "-" & txtb_jsy_end.Text
                 _dbConnection("db_lccsams")
                 _updateData("update tbl_juniorhigh_sy  set jsy_name='" & jsyName & "',jsy_sdate='" & dp_jsy_sDate.Text & "',jsy_edate='" & dp_jsy_eDate.Text & "' where jsy_id ='" & esy_id & "' ")
-                _displayRecords(eSelect_SY, dg_esyRec)
+                If UpdatedSuccessfully.ShowDialog() = DialogResult.OK Then
+                    _displayRecords(eSelect_SY, dg_esyRec)
+                    txtb_jsy_start.Enabled = False
+                    txtb_jsy_end.Enabled = False
+                    btn_jsy_save.Enabled = False
+                    dg_jsyRec.Enabled = True
+                End If
+
         End Select
     End Sub
 
@@ -482,5 +474,34 @@
             _loadToListBox(jSelect_GL, lbo_jglRec)
         End If
 
+    End Sub
+
+    Private Sub btn_cancelC_Click(sender As Object, e As EventArgs) Handles btn_cancelC.Click
+        txtb_syS.Enabled = False
+        txtb_syE.Enabled = False
+        btn_save.Enabled = False
+        cbo_semester.Enabled = False
+        dg_syR.Enabled = True
+    End Sub
+
+    Private Sub btn_cancelE_Click(sender As Object, e As EventArgs) Handles btn_cancelE.Click
+        txtb_esy_start.Enabled = False
+        txtb_esy_end.Enabled = False
+        btn_esy_save.Enabled = False
+        dg_esyRec.Enabled = True
+    End Sub
+
+    Private Sub btn_cancelS_Click(sender As Object, e As EventArgs) Handles btn_cancelS.Click
+        txtb_ssy_start.Enabled = False
+        txtb_ssy_end.Enabled = False
+        btn_save_ssy.Enabled = False
+        dg_ssyRec.Enabled = True
+    End Sub
+
+    Private Sub btn_cancelJ_Click(sender As Object, e As EventArgs) Handles btn_cancelJ.Click
+        txtb_jsy_start.Enabled = False
+        txtb_jsy_end.Enabled = False
+        btn_jsy_save.Enabled = False
+        dg_jsyRec.Enabled = True
     End Sub
 End Class

@@ -131,8 +131,8 @@ Public Class frm_SAccounts
     Sub _loadeFees()
         Dim displayFees = "Select  f.efees_id,f.efees_name,f.efees_amount  from tbl_elem_fees f inner join tbl_elem_students s on s.esy_id=f.esy_id  where s.estud_id='" & eStud_id & "'"
         Dim total_fees As Double = 0
-        _displayRecords(displayFees, dg_eStudFees)
-        For Each rowX As DataGridViewRow In dg_eStudFees.Rows
+        _displayRecords(displayFees, dg_Fees)
+        For Each rowX As DataGridViewRow In dg_Fees.Rows
             total_fees += rowX.Cells(2).Value
         Next
         txtb_eTotalFees.Text = total_fees
@@ -170,20 +170,20 @@ Public Class frm_SAccounts
             Dim totalStudFees As Double = 0
             _dbConnection("db_lccsams")
             dg_eStudFees.Rows.Clear()
-            txtb_eStudFees_TAmount.Clear()
-            txtb_eStud_TBal.Clear()
+            txtb_eStudFees_TAmount.Text = 0
+            txtb_eStud_TBal.Text = 0
 
-            Dim getFeesType As String = "Select efees_id from tbl_elem_accounts  where estud_id='" & eStud_id & "' group by efees_id having count(*) > 0 "
+            Dim getFeesType As String = "Select efees_id from tbl_elem_accounts  where estud_id='" & txtb_eStud_id.Text & "' group by efees_id having count(*) > 0 "
             dbConn.Open()
             da = New MySqlDataAdapter(getFeesType, dbConn)
             dt = New DataTable
             da.Fill(dt)
             For Each r As DataRow In dt.Rows
-                Dim displayTotalFees As String = " select f.efees_name,sum(sa.epay_amount)  as totalpay from tbl_elem_accounts sa inner join tbl_elem_fees f on sa.efees_id=f.fees_id where sa.estud_id ='" & eStud_id & "' and sa.efees_id='" & Integer.Parse(r.Item(0).ToString) & "' "
+                Dim displayTotalFees As String = " select f.efees_id,f.efees_name,sum(sa.epay_amount)  as totalpay from tbl_elem_accounts sa inner join tbl_elem_fees f on sa.efees_id=f.efees_id where sa.estud_id ='" & eStud_id & "' and sa.efees_id='" & Integer.Parse(r.Item(0).ToString) & "' "
                 sqlCommand = New MySqlCommand(displayTotalFees, dbConn)
                 dr = sqlCommand.ExecuteReader
-                While dr.Read
-                    dg_eStudFees.Rows.Add(dr("fees_name").ToString, dr("totalpay").ToString)
+                While dr.Read()
+                    dg_eStudFees.Rows.Add(dr("efees_id").ToString, dr("efees_name").ToString, dr("totalpay").ToString)
                     totalStudFees += Double.Parse(dr("totalpay").ToString)
                 End While
                 dr.Close()
@@ -220,7 +220,7 @@ Public Class frm_SAccounts
     End Sub
 
     Sub _displaysStudAccount()
-        Dim querry1 = "SELECT ssy_sdate,ssy_edate FROM tbl_seniorhigh_sy where esy_name='" & cbo_sSortBY.Text & "' "
+        Dim querry1 = "SELECT ssy_sdate,ssy_edate FROM tbl_seniorhigh_sy where ssy_name='" & cbo_sSortBY.Text & "' "
         Try
             _dbConnection("db_lccsams")
             dbConn.Open()
@@ -260,12 +260,12 @@ Public Class frm_SAccounts
             dt = New DataTable
             da.Fill(dt)
             For Each r As DataRow In dt.Rows
-                Dim displayTotalFees As String = " select f.sfees_name,sum(spay_amount)  as totalpay from tbl_senior_accounts inner join tbl_senior_fees f on sfees_id=f.sfees_id where estud_id ='" & sStud_id & "' and sfees_id='" & Integer.Parse(r.Item(0).ToString) & "' "
+                Dim displayTotalFees As String = " sfees_id,select f.sfees_name,sum(spay_amount)  as totalpay from tbl_senior_accounts inner join tbl_senior_fees f on sfees_id=f.sfees_id where estud_id ='" & sStud_id & "' and sfees_id='" & Integer.Parse(r.Item(0).ToString) & "' "
                 sqlCommand = New MySqlCommand(displayTotalFees, dbConn)
                 dr = sqlCommand.ExecuteReader
-                While dr.Read
-                    dg_sStudFees.Rows.Add(dr(0).ToString, dr(1).ToString)
-                    totalStudFees += Double.Parse(dr(1).ToString)
+                While dr.Read()
+                    dg_sStudFees.Rows.Add(dr(0).ToString, dr(1).ToString, dr(2).ToString)
+                    totalStudFees += Double.Parse(dr(2).ToString)
                 End While
                 dr.Close()
             Next
@@ -340,7 +340,7 @@ Public Class frm_SAccounts
             dt = New DataTable
             da.Fill(dt)
             For Each r As DataRow In dt.Rows
-                Dim displayTotalFees As String = " select f.jfees_name,sum(jpay_amount)  as totalpay from tbl_junior_accounts inner join tbl_junior_fees f on jfees_id=f.jfees_id where jstud_id ='" & jStud_id & "' and jfees_id='" & Integer.Parse(r.Item(0).ToString) & "' "
+                Dim displayTotalFees As String = " select f.jfees_id,f.jfees_name,sum(ja.jpay_amount)  as totalpay from tbl_junior_accounts ja inner join tbl_junior_fees f on ja.jfees_id=f.jfees_id where ja.jstud_id ='" & jStud_id & "' and ja.jfees_id='" & Integer.Parse(r.Item(0).ToString) & "' "
                 sqlCommand = New MySqlCommand(displayTotalFees, dbConn)
                 dr = sqlCommand.ExecuteReader
                 While dr.Read
@@ -367,7 +367,18 @@ Public Class frm_SAccounts
         End With
     End Sub
 
-    Private Sub btn_UpdateCacct_Click(sender As Object, e As EventArgs) Handles btn_UpdateCacct.Click
 
+    Private Sub cbo_eSortSY_SelectionChangeCommitted(sender As Object, e As EventArgs) Handles cbo_eSortSY.SelectionChangeCommitted
+        _displayeStudAccount()
     End Sub
+
+    Private Sub cbo_sSortBY_SelectionChangeCommitted(sender As Object, e As EventArgs) Handles cbo_sSortBY.SelectionChangeCommitted
+        _displaysStudAccount()
+    End Sub
+
+    Private Sub cbo_jSortBY_SelectionChangeCommitted(sender As Object, e As EventArgs) Handles cbo_jSortBY.SelectionChangeCommitted
+        _displayjStudAccount()
+    End Sub
+
+
 End Class
