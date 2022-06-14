@@ -57,8 +57,8 @@
             cbo_semester.Text = .Item(2, i).Value
             Dim sd As Date = .Item(3, i).Value
             Dim ed As Date = .Item(4, i).Value
-            dp_ssy_sDate.Text = sd.ToString("yyyy-MM-dd")
-            dp_ssy_eDate.Text = ed.ToString("yyyy-MM-dd")
+            dp_Start.Text = sd.ToString("yyyy-MM-dd")
+            dp_End.Text = ed.ToString("yyyy-MM-dd")
         End With
     End Sub
 
@@ -193,15 +193,13 @@
     End Sub
 
     Private Sub btn_esy_update_Click(sender As Object, e As EventArgs) Handles btn_esy_update.Click
-
         If dlg_updatesy.ShowDialog = DialogResult.OK Then
-
-                btn_esy_update.Enabled = True
-                txtb_esy_end.Enabled = True
-                btn_esy_save.Enabled = True
-                dg_esyRec.Enabled = False
-                b = 2
-            End If
+            btn_esy_update.Enabled = True
+            txtb_esy_end.Enabled = True
+            btn_esy_save.Enabled = True
+            dg_esyRec.Enabled = False
+            b = 2
+        End If
 
     End Sub
 
@@ -223,7 +221,7 @@
             Case 2
                 Dim esyName As String = txtb_esy_start.Text & "-" & txtb_esy_end.Text
                 _dbConnection("db_lccsams")
-                _updateData("update tbl_elem_sy  set esy_name='" & esyName & "',esy_sdate='" & dp_Start.Text & "',esy_edate='" & dp_End.Text & "' where esy_id ='" & esy_id & "' ")
+                _updateData("update tbl_elem_sy  set esy_name='" & esyName & "',esy_sdate='" & dp_esy_startDate.Text & "',esy_edate='" & dp_esy_endDate.Text & "' where esy_id ='" & esy_id & "' ")
                 _displayRecords(eSelect_SY, dg_esyRec)
                 If UpdatedSuccessfully.ShowDialog() = DialogResult.OK Then
                     txtb_esy_start.Enabled = False
@@ -262,13 +260,12 @@
         With dg_esyRec
             esy_id = .Item(0, i).Value
             esy_spSTARTEND = .Item(1, i).Value.ToString.Split("-")
-
             txtb_esy_start.Text = esy_spSTARTEND(0)
             txtb_esy_end.Text = esy_spSTARTEND(1)
             Dim esd As Date = .Item(2, i).Value
             Dim eed As Date = .Item(3, i).Value
-            dp_ssy_sDate.Text = esd.ToString("yyyy-MM-dd")
-            dp_ssy_eDate.Text = eed.ToString("yyyy-MM-dd")
+            dp_esy_startDate.Text = esd.ToString("yyyy-MM-dd")
+            dp_esy_endDate.Text = eed.ToString("yyyy-MM-dd")
         End With
     End Sub
 
@@ -431,7 +428,7 @@
                 _dbConnection("db_lccsams")
                 _updateData("update tbl_juniorhigh_sy  set jsy_name='" & jsyName & "',jsy_sdate='" & dp_jsy_sDate.Text & "',jsy_edate='" & dp_jsy_eDate.Text & "' where jsy_id ='" & esy_id & "' ")
                 If UpdatedSuccessfully.ShowDialog() = DialogResult.OK Then
-                    _displayRecords(eSelect_SY, dg_esyRec)
+                    _displayRecords(jSelect_SY, dg_esyRec)
                     txtb_jsy_start.Enabled = False
                     txtb_jsy_end.Enabled = False
                     btn_jsy_save.Enabled = False
@@ -442,18 +439,23 @@
     End Sub
 
     Private Sub dg_jsyRec_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dg_jsyRec.CellClick
-        Dim i = e.RowIndex
-        Dim jsy_spSTARTEND() As String
-        With dg_jsyRec
-            jsy_id = .Item(0, i).Value
-            jsy_spSTARTEND = .Item(1, i).Value.ToString.Split("-")
-            txtb_jsy_start.Text = jsy_spSTARTEND(0)
-            txtb_jsy_end.Text = jsy_spSTARTEND(1)
-            Dim jsd As Date = .Item(2, i).Value
-            Dim jed As Date = .Item(3, i).Value
-            dp_jsy_sDate.Text = jsd.ToString("yyyy-MM-dd")
-            dp_jsy_eDate.Text = jed.ToString("yyyy-MM-dd")
-        End With
+        Try
+            Dim i = e.RowIndex
+            Dim jsy_spSTARTEND() As String
+            With dg_jsyRec
+                jsy_id = .Item(0, i).Value
+                jsy_spSTARTEND = .Item(1, i).Value.ToString.Split("-")
+                txtb_jsy_start.Text = jsy_spSTARTEND(0)
+                txtb_jsy_end.Text = jsy_spSTARTEND(1)
+                Dim jsd As Date = .Item(2, i).Value
+                Dim jed As Date = .Item(3, i).Value
+                dp_jsy_sDate.Text = jsd.ToString("yyyy-MM-dd")
+                dp_jsy_eDate.Text = jed.ToString("yyyy-MM-dd")
+            End With
+        Catch ex As Exception
+
+        End Try
+
     End Sub
 
     Private Sub btn_jgl_new_Click(sender As Object, e As EventArgs) Handles btn_jgl_new.Click
@@ -503,5 +505,9 @@
         txtb_jsy_end.Enabled = False
         btn_jsy_save.Enabled = False
         dg_jsyRec.Enabled = True
+    End Sub
+
+    Private Sub jh_dept_Click(sender As Object, e As EventArgs) Handles jh_dept.Click
+
     End Sub
 End Class

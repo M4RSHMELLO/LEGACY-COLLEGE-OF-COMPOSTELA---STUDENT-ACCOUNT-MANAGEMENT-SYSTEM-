@@ -681,18 +681,18 @@ Public Class frm_slists
         Select Case cbo_jSearchBy.SelectedItem.ToString
             Case "Name"
                 _dbConnection("db_lccsams")
-                _displayRecords(" select * from tbl_juniorhigh_students where jstud_fname Like '%" & txtb_jSearch.Text & "%' or jstud_lname  Like '%" & txtb_jSearch.Text & "%' ", dg_jStudRecords)
+                _displayRecords(" select * from tbl_juniorhigh_students where jstud_fname Like '%" & txtb_jSearch.Text & "%' or jstud_lname  Like '%" & txtb_jSearch.Text & "%' ", dg_jStudRec)
 
             Case "ID Number"
                 _dbConnection("db_lccsams")
-                _displayRecords("select * from tbl_juniorhigh_students where jstud_id Like '" & txtb_jSearch.Text & "%' ", dg_jStudRecords)
+                _displayRecords("select * from tbl_juniorhigh_students where jstud_id Like '" & txtb_jSearch.Text & "%' ", dg_jStudRec)
         End Select
     End Sub
 
     Private Sub btn_jViewAcct_Click(sender As Object, e As EventArgs) Handles btn_jViewAcct.Click
         Try
             If txtb_jStud_id.Text = "" Then
-                MessageBox.Show("Pag select sag estudyanto bago ka mo proceed")
+                MessageBox.Show("Please select student first to proceed")
             Else
                 current_menu = 2
                 Dashboard.btn_menuStudentsAccount_click(sender, e)

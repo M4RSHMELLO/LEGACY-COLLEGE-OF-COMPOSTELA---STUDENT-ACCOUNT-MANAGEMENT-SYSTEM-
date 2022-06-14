@@ -224,6 +224,7 @@ Partial Class form_login
         Me.Controls.Add(Me.txtb_username)
         Me.Controls.Add(Me.BunifuGradientPanel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
+        Me.MaximizeBox = False
         Me.Name = "form_login"
         Me.Text = "LCC SAMS - LOGIN "
         Me.BunifuGradientPanel1.ResumeLayout(False)

@@ -561,7 +561,7 @@ Public Class frm_SPayments
     Sub _retrieve_eStudData()
         Try
             _dbConnection("db_lccsams")
-            Dim querry2 As String = "Select s.estud_id,s.estud_Fname,s.estud_mi,s.estud_Lname,sy.esy_name,gl.egl_name,s.esy_id from tbl_elem_students s inner join tbl_elem_sy  sy on  sy.esy_id=s.esy_id inner join tbl_elem_gradelevel gl on gl.egl_id=s.egl_id  where s.estud_Fname='" & eFname & "' and s.estud_Lname='" & eLname & "'"
+            Dim querry2 As String = "Select s.estud_id,s.estud_Fname,s.estud_mi,s.estud_Lname,sy.esy_name,gl.egl_name,s.esy_id,s.egl_id from tbl_elem_students s inner join tbl_elem_sy  sy on  sy.esy_id=s.esy_id inner join tbl_elem_gradelevel gl on gl.egl_id=s.egl_id  where s.estud_Fname='" & eFname & "' and s.estud_Lname='" & eLname & "'"
             dbConn.Open()
             sqlCommand = New MySqlCommand(querry2, dbConn)
             dr = sqlCommand.ExecuteReader
@@ -571,6 +571,7 @@ Public Class frm_SPayments
                 txtb_eSY.Text = dr(4).ToString
                 txtb_eGL.Text = dr(5).ToString
                 eSy_id = dr(6).ToString
+                egl_id = dr(7).ToString
 
             End While
             dbConn.Close()
@@ -589,7 +590,7 @@ Public Class frm_SPayments
             Case "Id Number"
                 _dbConnection("db_lccsams")
                 Try
-                    Dim querry3 As String = " Select s.estud_id,s.estud_Fname,s.estud_mi,s.estud_Lname,sy.esy_name,gl.egl_name,s.esy_id,s.egl_id  from tbl_elem_students s inner join tbl_elem_sy  sy on  sy.esy_id=s.esy_id inner join tbl_elem_gradelevel gl on gl.egl_id=s.egl_id   where s.estud_id='" & txtb_eSearch.Text & "'"
+                    Dim querry3 As String = " Select s.estud_id,s.estud_Fname,s.estud_mi,s.estud_Lname,sy.esy_name,gl.egl_name,s.esy_id,gl.egl_id  from tbl_elem_students s inner join tbl_elem_sy  sy on  sy.esy_id=s.esy_id inner join tbl_elem_gradelevel gl on gl.egl_id=s.egl_id   where s.estud_id='" & txtb_eSearch.Text & "'"
                     dbConn.Open()
                     sqlCommand = New MySqlCommand(querry3, dbConn)
                     dr = sqlCommand.ExecuteReader
@@ -599,6 +600,7 @@ Public Class frm_SPayments
                         txtb_eSY.Text = dr(4).ToString
                         txtb_eGL.Text = dr(5).ToString
                         eSy_id = dr(6).ToString
+                        egl_id = dr(7).ToString
 
 
                     End While
@@ -756,9 +758,10 @@ Public Class frm_SPayments
                         _dbConnection("db_lccsams")
                         _insertData(InsertPayments)
                     Next
-                    If dlg_payments.ShowDialog = DialogResult.OK Then
-                        _clearECurrentStudData(btn_eSave.Text)
-                    dg_eReceipts.Rows.Clear()
+                If dlg_payments.ShowDialog = DialogResult.OK Then
+                    dg_ePayment.Rows.Clear()
+                    _clearECurrentStudData(btn_eSave.Text)
+
                 End If
 
             End If
@@ -797,6 +800,7 @@ Public Class frm_SPayments
         If dlg_printedsuccessfully.ShowDialog = DialogResult.OK Then
             txtb_eTN.Clear()
             txtb_eTD.Clear()
+
             dg_eReceipts.Rows.Clear()
             txtb_eStudTotAmnt.Text = 0
             btn_eEnter_Click(sender, e)
@@ -847,7 +851,7 @@ Public Class frm_SPayments
     Sub _retrieve_sStudData()
         Try
             _dbConnection("db_lccsams")
-            Dim querry2 As String = " Select s.sstud_id,s.sstud_Fname,s.sstud_mi,s.sstud_Lname,sy.ssy_name,gl.sgl_name,s.ssy_id  from tbl_seniorhigh_students s inner join tbl_seniorhigh_sy  sy on  sy.ssy_id=s.ssy_id inner join tbl_seniorhigh_gl  gl on gl.sgl_id=s.sgl_id  where s.sstud_Fname='" & sFname & "' and s.sstud_Lname='" & sLname & "'"
+            Dim querry2 As String = " Select s.sstud_id,s.sstud_Fname,s.sstud_mi,s.sstud_Lname,sy.ssy_name,gl.sgl_name,s.ssy_id,gl.sgl_id  from tbl_seniorhigh_students s inner join tbl_seniorhigh_sy  sy on  sy.ssy_id=s.ssy_id inner join tbl_seniorhigh_gl  gl on gl.sgl_id=s.sgl_id  where s.sstud_Fname='" & sFname & "' and s.sstud_Lname='" & sLname & "'"
             dbConn.Open()
             sqlCommand = New MySqlCommand(querry2, dbConn)
             dr = sqlCommand.ExecuteReader
@@ -857,6 +861,7 @@ Public Class frm_SPayments
                 txtb_sSY.Text = dr(4).ToString
                 txtb_sGL.Text = dr(5).ToString
                 sSy_id = dr(6).ToString
+                sgl_id = dr(7).ToString
 
             End While
             dbConn.Close()
@@ -873,7 +878,7 @@ Public Class frm_SPayments
             Case "Id Number"
                 _dbConnection("db_lccsams")
                 Try
-                    Dim querry3 As String = " Select s.sstud_id,s.sstud_Fname,s.sstud_mi,s.sstud_Lname,sy.ssy_name,gl.sgl_name,s.ssy_id from tbl_seniorhigh_students s inner join tbl_seniorhigh_sy  sy on  sy.ssy_id=s.ssy_id inner join tbl_seniorhigh_gl  gl on gl.sgl_id=s.sgl_id   where s.sstud_id='" & txtb_sSearch.Text & "'"
+                    Dim querry3 As String = " Select s.sstud_id,s.sstud_Fname,s.sstud_mi,s.sstud_Lname,sy.ssy_name,gl.sgl_name,s.ssy_id,gl.sgl_id from tbl_seniorhigh_students s inner join tbl_seniorhigh_sy  sy on  sy.ssy_id=s.ssy_id inner join tbl_seniorhigh_gl  gl on gl.sgl_id=s.sgl_id   where s.sstud_id='" & txtb_sSearch.Text & "'"
                     dbConn.Open()
                     sqlCommand = New MySqlCommand(querry3, dbConn)
                     dr = sqlCommand.ExecuteReader
@@ -883,6 +888,7 @@ Public Class frm_SPayments
                         txtb_sSY.Text = dr(4).ToString
                         txtb_sGL.Text = dr(5).ToString
                         sSy_id = dr(6).ToString
+                        sgl_id = dr(7).ToString
 
                     End While
                     dbConn.Close()
@@ -1022,13 +1028,11 @@ Public Class frm_SPayments
     Sub _clearsCurrentStudData(ByVal btn As String)
         Select Case btn
             Case "SAVE"
-                txtb_sTN.Clear()
-                txtb_sTD.Clear()
+
                 cbo_sParticulars.SelectedIndex = -1
                 txtb_sAmntPay.Text = 0
                 txtb_sCurrAcct.Text = 0
                 txtb_sOldAcct.Text = 0
-                txtb_sToAmnt.Text = 0
                 txtb_sCurrBal.Text = 0
                 totalAmount = 0
             Case "CLEAR"
@@ -1069,8 +1073,8 @@ Public Class frm_SPayments
                         _insertData(InsertPayments)
                     Next
                     If dlg_payments.ShowDialog = DialogResult.OK Then
-                        _clearECurrentStudData(btn_eSave.Text)
-                        btn_eEnter_Click(sender, e)
+                        _clearsCurrentStudData(btn_eSave.Text)
+                        dg_sPayment.Rows.Clear()
                     End If
                 End If
             End If
@@ -1095,7 +1099,11 @@ Public Class frm_SPayments
         CapturesScreen()
         print_collR.Print()
         If dlg_printedsuccessfully.ShowDialog = DialogResult.OK Then
+            txtb_sTN.Clear()
+            txtb_sTD.Clear()
             dg_sReceipts.Rows.Clear()
+            txtb_sToAmnt.Text = 0
+            btn_sEnter_Click(sender, e)
             lbl_sTamnt.Text = "TOTAL AMOUNT:"
             lbl_sBal.Text = "BALANCE:"
             lbl_sName.Text = "Name: "
@@ -1155,7 +1163,7 @@ Public Class frm_SPayments
     Sub _retrieve_jStudData()
         Try
             _dbConnection("db_lccsams")
-            Dim querry5 As String = " Select s.jstud_id,s.jstud_Fname,s.jstud_mi,s.jstud_Lname,sy.jsy_name,gl.jgl_name,s.jsy_id from tbl_juniorhigh_students s inner join tbl_juniorhigh_sy  sy on  sy.jsy_id=s.jsy_id inner join tbl_juniorhigh_gradelevel  gl on gl.jgl_id=s.jgl_id  where s.jstud_Fname='" & jFname & "' and s.jstud_Lname='" & jLname & "'"
+            Dim querry5 As String = " Select s.jstud_id,s.jstud_Fname,s.jstud_mi,s.jstud_Lname,sy.jsy_name,gl.jgl_name,s.jsy_id,gl.jgl_id from tbl_juniorhigh_students s inner join tbl_juniorhigh_sy  sy on  sy.jsy_id=s.jsy_id inner join tbl_juniorhigh_gradelevel  gl on gl.jgl_id=s.jgl_id  where s.jstud_Fname='" & jFname & "' and s.jstud_Lname='" & jLname & "'"
             dbConn.Open()
             sqlCommand = New MySqlCommand(querry5, dbConn)
             dr = sqlCommand.ExecuteReader
@@ -1165,6 +1173,7 @@ Public Class frm_SPayments
                 txtb_jSY.Text = dr(4).ToString
                 txtb_jGL.Text = dr(5).ToString
                 jSy_id = dr(6).ToString
+                jgl_id = dr(7).ToString
 
             End While
             dbConn.Close()
@@ -1181,7 +1190,7 @@ Public Class frm_SPayments
             Case "Id Number"
                 Try
                     _dbConnection("db_lccsams")
-                    Dim selectjStudAcct As String = " Select s.jstud_id,s.jstud_Fname,s.jstud_mi,s.jstud_Lname,sy.jsy_name,gl.jgl_name,s.jsy_id from tbl_juniorhigh_students s inner join tbl_juniorhigh_sy sy on  sy.jsy_id=s.jsy_id inner join tbl_junior_gradelevel gl on s.jgl_id=gl.jgl_id   where s.jstud_id='" & txtb_jSearch.Text & "'"
+                    Dim selectjStudAcct As String = " Select s.jstud_id,s.jstud_Fname,s.jstud_mi,s.jstud_Lname,sy.jsy_name,gl.jgl_name,s.jsy_id,gl.jgl_id from tbl_juniorhigh_students s inner join tbl_juniorhigh_sy sy on  sy.jsy_id=s.jsy_id inner join tbl_junior_gradelevel gl on s.jgl_id=gl.jgl_id   where s.jstud_id='" & txtb_jSearch.Text & "'"
                     dbConn.Open()
                     sqlCommand = New MySqlCommand(selectjStudAcct, dbConn)
                     dr = sqlCommand.ExecuteReader
@@ -1191,6 +1200,7 @@ Public Class frm_SPayments
                         txtb_jSY.Text = dr(4).ToString
                         txtb_jGL.Text = dr(5).ToString
                         jSy_id = dr(6).ToString
+                        jgl_id = dr(7).ToString
 
                     End While
                     dbConn.Close()
@@ -1329,13 +1339,12 @@ Public Class frm_SPayments
     Sub _clearjCurrentStudData(ByVal btn As String)
         Select Case btn
             Case "SAVE"
-                txtb_jSY.Clear()
-                txtb_jTD.Clear()
+
                 cbo_jParticulars.SelectedIndex = -1
                 txtb_jAmntPay.Text = 0
                 txtb_jCurrAcct.Text = 0
                 txtb_jOldAcct.Text = 0
-                txtb_jToAmnt.Text = 0
+
                 txtb_jCurrBal.Text = 0
                 totalAmount = 0
             Case "CLEAR"
@@ -1378,8 +1387,9 @@ Public Class frm_SPayments
                         _insertData(InsertPayments)
                     Next
                     If dlg_payments.ShowDialog = DialogResult.OK Then
-                        _clearECurrentStudData(btn_jSave.Text)
-                        btn_jEnter_Click(sender, e)
+                        dg_jPayment.Rows.Clear()
+                        _clearjCurrentStudData(btn_jSave.Text)
+
                     End If
                 End If
             End If
@@ -1406,7 +1416,11 @@ Public Class frm_SPayments
         CapturejScreen()
         print_collR.Print()
         If dlg_printedsuccessfully.ShowDialog = DialogResult.OK Then
+            txtb_jSY.Clear()
+            txtb_jTD.Clear()
+            txtb_jToAmnt.Text = 0
             dg_jReceipts.Rows.Clear()
+            btn_jEnter_Click(sender, e)
             lbl_jTamnt.Text = "TOTAL AMOUNT:"
             lbl_jBal.Text = "BALANCE:"
             lbl_jName.Text = "Name: "
