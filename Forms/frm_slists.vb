@@ -28,7 +28,7 @@ Public Class frm_slists
                 cbo_sem.SelectedIndex = -1
                 cbo_yearlevel.SelectedIndex = -1
                 cbo_course.SelectedIndex = -1
-
+                cbo_studType.SelectedIndex = -1
                 _dbConnection("db_lccsams")
                 _displayRecords(sStudR, dg_studR)
                 cbo_SearchBy.SelectedIndex = 1
@@ -89,6 +89,7 @@ Public Class frm_slists
             cbo_yearlevel.Enabled = True
             cbo_sem.Enabled = True
             cbo_course.Enabled = True
+            cbo_studType.Enabled = True
             dg_studR.Enabled = False
             btn_gotoAcct.Enabled = False
             btn_cancel.Enabled = True
@@ -123,8 +124,14 @@ Public Class frm_slists
             If dr.HasRows Then
                 MessageBox.Show("This data already Exist!")
             Else
+                Dim stype As Integer
                 dbConn.Close()
-                Dim querry1 = "insert into tbl_student (stud_id,stud_Fname,stud_Lname,stud_midI,crs_id,sem_id,yl_id,sy_id,educ_level) values('" & randomNumber & "','" & txtb_studFname.Text & "','" & txtb_studLname.Text & "','" & txtb_studMI.Text & "','" & cbo_course.SelectedValue & "','" & cbo_sem.SelectedValue & "','" & cbo_yearlevel.SelectedValue & "','" & cbo_schyear.SelectedValue & "','" & 0 & "')"
+                If cbo_yearlevel.SelectedValue = 1 Then
+                    stype = 1
+                ElseIf cbo_yearlevel.SelectedValue > 1 Then
+
+                End If
+                Dim querry1 = "insert into tbl_student (stud_id,stud_Fname,stud_Lname,stud_midI,crs_id,sem_id,yl_id,sy_id,educ_level,stype_id) values('" & randomNumber & "','" & txtb_studFname.Text & "','" & txtb_studLname.Text & "','" & txtb_studMI.Text & "','" & cbo_course.SelectedValue & "','" & cbo_sem.SelectedValue & "','" & cbo_yearlevel.SelectedValue & "','" & cbo_schyear.SelectedValue & "','" & 0 & "','" & cbo_studType.SelectedValue & "')"
                 _insertData(querry1)
                 _insertData(querry2)
             End If
@@ -147,6 +154,7 @@ Public Class frm_slists
             cbo_course.Enabled = False
             txtb_noUnits.Enabled = False
             btn_cancel.Enabled = False
+            cbo_studType.Enabled = False
             Select Case a
                 Case 1
                     _insertdataOfStudents()
@@ -224,7 +232,9 @@ Public Class frm_slists
         Try
             Dim i = e.RowIndex
             With dg_studR
+                If .Item("yl_id", i).Value = 1 Then
 
+                End If
                 stud_id = .Item("s_id", i).Value
                 stud_name = .Item("s_fName", i).Value.ToString.ToUpper + " " + .Item("s_Midi", i).Value.ToString.ToUpper + " " + .Item("s_lName", i).Value.ToString.ToUpper
 
@@ -235,6 +245,7 @@ Public Class frm_slists
                 Dim querry4 As String = "Select sy.sy_name from tbl_student s inner join tbl_sch_year sy  on s.sy_id=sy.sy_id where s.stud_id = '" & txtb_studId.Text & "' group by sy_name having count(*) > 0"
                 Dim querry6 As String = "select  st_rateperunit  from tbl_studnounits where stud_id = '" & stud_id & "' and sy_id='" & .Item("sy_id", i).Value & "' and sem_id='" & .Item("sem_id", i).Value & "' and yl_id='" & .Item("yl_id", i).Value & "' and  crs_id='" & .Item("crs_id", i).Value & "'"
                 Dim querry5 As String = "select  st_noUnits from tbl_studnounits where stud_id ='" & stud_id & "' and sy_id='" & .Item("sy_id", i).Value & "' and sem_id='" & .Item("sem_id", i).Value & "' and yl_id='" & .Item("yl_id", i).Value & "' and  crs_id='" & .Item("crs_id", i).Value & "'"
+                Dim querry7 As String = "select  st.stype_name from tbl_student_type st inner join tbl_student s on st.stype_id=s.stype_id  where s.stud_id ='" & stud_id & "'"
                 _dbConnection("db_lccsams")
                 txtb_studFname.Text = .Item("s_fName", i).Value
                 txtb_studLname.Text = .Item("s_lName", i).Value
@@ -249,6 +260,7 @@ Public Class frm_slists
                 _selectComboBoxText(querry2, cbo_yearlevel)
                 _selectComboBoxText(querry3, cbo_sem)
                 _selectComboBoxText(querry4, cbo_schyear)
+                _selectComboBoxText(querry7, cbo_studType)
 
                 stud_sy = cbo_schyear.Text
                 stud_sem = cbo_sem.Text
@@ -258,8 +270,8 @@ Public Class frm_slists
                 stud_rpu = txtb_RpU.Text
 
                 sy_fid = .Item("sy_id", i).Value
-            End With
 
+            End With
         Catch ex As Exception
             MessageBox.Show("Error: " & ex.Message)
         End Try
@@ -349,6 +361,7 @@ Public Class frm_slists
         _loadToCombobox(slctYL, cbo_yearlevel)
         _displayRecords(sStudR, dg_studR)
         _loadToCombobox(slctSY, cbo_schyear)
+        _loadToCombobox(student_type, cbo_studType)
         cbo_SearchBy.SelectedIndex = 1
         cbo_schyear.SelectedIndex = -1
         cbo_sem.SelectedIndex = -1

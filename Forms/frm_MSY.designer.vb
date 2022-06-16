@@ -34,6 +34,7 @@ Partial Class frm_MSY
         Me.lbo_courses = New System.Windows.Forms.ListBox()
         Me.btn_nCourse = New System.Windows.Forms.Button()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.btn_cancelC = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.dp_End = New System.Windows.Forms.DateTimePicker()
@@ -60,6 +61,7 @@ Partial Class frm_MSY
         Me.lbo_eglRec = New System.Windows.Forms.ListBox()
         Me.btn_egl_new = New System.Windows.Forms.Button()
         Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.btn_cancelE = New System.Windows.Forms.Button()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.dp_esy_endDate = New System.Windows.Forms.DateTimePicker()
@@ -83,6 +85,7 @@ Partial Class frm_MSY
         Me.lbo_sglRec = New System.Windows.Forms.ListBox()
         Me.btn_new_sGL = New System.Windows.Forms.Button()
         Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.btn_cancelS = New System.Windows.Forms.Button()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.dp_ssy_eDate = New System.Windows.Forms.DateTimePicker()
@@ -106,6 +109,7 @@ Partial Class frm_MSY
         Me.lbo_jglRec = New System.Windows.Forms.ListBox()
         Me.btn_jgl_new = New System.Windows.Forms.Button()
         Me.Panel8 = New System.Windows.Forms.Panel()
+        Me.btn_cancelJ = New System.Windows.Forms.Button()
         Me.Panel9 = New System.Windows.Forms.Panel()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.dp_jsy_eDate = New System.Windows.Forms.DateTimePicker()
@@ -123,10 +127,6 @@ Partial Class frm_MSY
         Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.btn_cancelC = New System.Windows.Forms.Button()
-        Me.btn_cancelE = New System.Windows.Forms.Button()
-        Me.btn_cancelS = New System.Windows.Forms.Button()
-        Me.btn_cancelJ = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.college_dept.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -297,6 +297,18 @@ Partial Class frm_MSY
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(576, 505)
         Me.Panel3.TabIndex = 21
+        '
+        'btn_cancelC
+        '
+        Me.btn_cancelC.BackColor = System.Drawing.Color.FromArgb(CType(CType(108, Byte), Integer), CType(CType(105, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.btn_cancelC.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_cancelC.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_cancelC.Location = New System.Drawing.Point(399, 454)
+        Me.btn_cancelC.Name = "btn_cancelC"
+        Me.btn_cancelC.Size = New System.Drawing.Size(68, 33)
+        Me.btn_cancelC.TabIndex = 21
+        Me.btn_cancelC.Text = "CANCEL"
+        Me.btn_cancelC.UseVisualStyleBackColor = False
         '
         'Panel2
         '
@@ -578,6 +590,18 @@ Partial Class frm_MSY
         Me.Panel4.Size = New System.Drawing.Size(576, 505)
         Me.Panel4.TabIndex = 22
         '
+        'btn_cancelE
+        '
+        Me.btn_cancelE.BackColor = System.Drawing.Color.FromArgb(CType(CType(108, Byte), Integer), CType(CType(105, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.btn_cancelE.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_cancelE.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_cancelE.Location = New System.Drawing.Point(417, 465)
+        Me.btn_cancelE.Name = "btn_cancelE"
+        Me.btn_cancelE.Size = New System.Drawing.Size(68, 33)
+        Me.btn_cancelE.TabIndex = 22
+        Me.btn_cancelE.Text = "CANCEL"
+        Me.btn_cancelE.UseVisualStyleBackColor = False
+        '
         'Panel5
         '
         Me.Panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
@@ -828,6 +852,18 @@ Partial Class frm_MSY
         Me.Panel6.Name = "Panel6"
         Me.Panel6.Size = New System.Drawing.Size(576, 505)
         Me.Panel6.TabIndex = 27
+        '
+        'btn_cancelS
+        '
+        Me.btn_cancelS.BackColor = System.Drawing.Color.FromArgb(CType(CType(108, Byte), Integer), CType(CType(105, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.btn_cancelS.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_cancelS.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_cancelS.Location = New System.Drawing.Point(423, 454)
+        Me.btn_cancelS.Name = "btn_cancelS"
+        Me.btn_cancelS.Size = New System.Drawing.Size(68, 33)
+        Me.btn_cancelS.TabIndex = 22
+        Me.btn_cancelS.Text = "CANCEL"
+        Me.btn_cancelS.UseVisualStyleBackColor = False
         '
         'Panel7
         '
@@ -1084,6 +1120,18 @@ Partial Class frm_MSY
         Me.Panel8.Size = New System.Drawing.Size(576, 505)
         Me.Panel8.TabIndex = 27
         '
+        'btn_cancelJ
+        '
+        Me.btn_cancelJ.BackColor = System.Drawing.Color.FromArgb(CType(CType(108, Byte), Integer), CType(CType(105, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.btn_cancelJ.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_cancelJ.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_cancelJ.Location = New System.Drawing.Point(423, 454)
+        Me.btn_cancelJ.Name = "btn_cancelJ"
+        Me.btn_cancelJ.Size = New System.Drawing.Size(68, 33)
+        Me.btn_cancelJ.TabIndex = 22
+        Me.btn_cancelJ.Text = "CANCEL"
+        Me.btn_cancelJ.UseVisualStyleBackColor = False
+        '
         'Panel9
         '
         Me.Panel9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
@@ -1262,54 +1310,6 @@ Partial Class frm_MSY
         Me.DataGridViewTextBoxColumn11.HeaderText = "END DATE"
         Me.DataGridViewTextBoxColumn11.Name = "DataGridViewTextBoxColumn11"
         Me.DataGridViewTextBoxColumn11.ReadOnly = True
-        '
-        'btn_cancelC
-        '
-        Me.btn_cancelC.BackColor = System.Drawing.Color.FromArgb(CType(CType(108, Byte), Integer), CType(CType(105, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.btn_cancelC.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_cancelC.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_cancelC.Location = New System.Drawing.Point(399, 454)
-        Me.btn_cancelC.Name = "btn_cancelC"
-        Me.btn_cancelC.Size = New System.Drawing.Size(68, 33)
-        Me.btn_cancelC.TabIndex = 21
-        Me.btn_cancelC.Text = "CANCEL"
-        Me.btn_cancelC.UseVisualStyleBackColor = False
-        '
-        'btn_cancelE
-        '
-        Me.btn_cancelE.BackColor = System.Drawing.Color.FromArgb(CType(CType(108, Byte), Integer), CType(CType(105, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.btn_cancelE.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_cancelE.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_cancelE.Location = New System.Drawing.Point(417, 465)
-        Me.btn_cancelE.Name = "btn_cancelE"
-        Me.btn_cancelE.Size = New System.Drawing.Size(68, 33)
-        Me.btn_cancelE.TabIndex = 22
-        Me.btn_cancelE.Text = "CANCEL"
-        Me.btn_cancelE.UseVisualStyleBackColor = False
-        '
-        'btn_cancelS
-        '
-        Me.btn_cancelS.BackColor = System.Drawing.Color.FromArgb(CType(CType(108, Byte), Integer), CType(CType(105, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.btn_cancelS.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_cancelS.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_cancelS.Location = New System.Drawing.Point(423, 454)
-        Me.btn_cancelS.Name = "btn_cancelS"
-        Me.btn_cancelS.Size = New System.Drawing.Size(68, 33)
-        Me.btn_cancelS.TabIndex = 22
-        Me.btn_cancelS.Text = "CANCEL"
-        Me.btn_cancelS.UseVisualStyleBackColor = False
-        '
-        'btn_cancelJ
-        '
-        Me.btn_cancelJ.BackColor = System.Drawing.Color.FromArgb(CType(CType(108, Byte), Integer), CType(CType(105, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.btn_cancelJ.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_cancelJ.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_cancelJ.Location = New System.Drawing.Point(423, 454)
-        Me.btn_cancelJ.Name = "btn_cancelJ"
-        Me.btn_cancelJ.Size = New System.Drawing.Size(68, 33)
-        Me.btn_cancelJ.TabIndex = 22
-        Me.btn_cancelJ.Text = "CANCEL"
-        Me.btn_cancelJ.UseVisualStyleBackColor = False
         '
         'frm_MSY
         '

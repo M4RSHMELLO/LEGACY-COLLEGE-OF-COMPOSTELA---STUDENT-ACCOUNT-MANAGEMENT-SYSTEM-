@@ -48,18 +48,19 @@ Partial Class frm_sSG
         Me.txtb_studFname = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.btn_add = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.btn_update = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.cbo_scholarType = New System.Windows.Forms.ComboBox()
         Me.rb_inactive = New System.Windows.Forms.RadioButton()
         Me.rb_active = New System.Windows.Forms.RadioButton()
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.txtb_ScholarAmnt = New System.Windows.Forms.TextBox()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.txtb_ScholarType = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.Label16 = New System.Windows.Forms.Label()
+        Me.btn_cancel = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.btn_add = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.btn_update = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.btn_manageScholar = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.dg_StudScholarRec = New Bunifu.Framework.UI.BunifuCustomDataGrid()
@@ -70,10 +71,12 @@ Partial Class frm_sSG
         Me.StudmidIDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.sy = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.level = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.txtb_ScholarType = New System.Windows.Forms.TextBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.cbo_SelectDept = New System.Windows.Forms.ComboBox()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.btn_cancel = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.txtb_refNo = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -326,25 +329,141 @@ Partial Class frm_sSG
         '
         'GroupBox3
         '
-        Me.GroupBox3.Controls.Add(Me.btn_cancel)
-        Me.GroupBox3.Controls.Add(Me.btn_add)
-        Me.GroupBox3.Controls.Add(Me.btn_update)
+        Me.GroupBox3.Controls.Add(Me.Label4)
+        Me.GroupBox3.Controls.Add(Me.txtb_refNo)
+        Me.GroupBox3.Controls.Add(Me.cbo_scholarType)
         Me.GroupBox3.Controls.Add(Me.rb_inactive)
         Me.GroupBox3.Controls.Add(Me.rb_active)
         Me.GroupBox3.Controls.Add(Me.RadioButton1)
         Me.GroupBox3.Controls.Add(Me.Label13)
         Me.GroupBox3.Controls.Add(Me.txtb_ScholarAmnt)
         Me.GroupBox3.Controls.Add(Me.Label12)
-        Me.GroupBox3.Controls.Add(Me.txtb_ScholarType)
-        Me.GroupBox3.Controls.Add(Me.TextBox5)
         Me.GroupBox3.Controls.Add(Me.Label16)
         Me.GroupBox3.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox3.Location = New System.Drawing.Point(11, 235)
+        Me.GroupBox3.Location = New System.Drawing.Point(11, 280)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(441, 201)
+        Me.GroupBox3.Size = New System.Drawing.Size(441, 165)
         Me.GroupBox3.TabIndex = 39
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "SCHOLARSHIP INFORMATION"
+        '
+        'cbo_scholarType
+        '
+        Me.cbo_scholarType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbo_scholarType.FormattingEnabled = True
+        Me.cbo_scholarType.Items.AddRange(New Object() {"Id Number", "Name"})
+        Me.cbo_scholarType.Location = New System.Drawing.Point(180, 59)
+        Me.cbo_scholarType.Name = "cbo_scholarType"
+        Me.cbo_scholarType.Size = New System.Drawing.Size(252, 29)
+        Me.cbo_scholarType.TabIndex = 8
+        '
+        'rb_inactive
+        '
+        Me.rb_inactive.AutoSize = True
+        Me.rb_inactive.Location = New System.Drawing.Point(265, 136)
+        Me.rb_inactive.Name = "rb_inactive"
+        Me.rb_inactive.Size = New System.Drawing.Size(81, 25)
+        Me.rb_inactive.TabIndex = 21
+        Me.rb_inactive.Text = "INACTIVE"
+        Me.rb_inactive.UseVisualStyleBackColor = True
+        '
+        'rb_active
+        '
+        Me.rb_active.AutoSize = True
+        Me.rb_active.Location = New System.Drawing.Point(176, 136)
+        Me.rb_active.Name = "rb_active"
+        Me.rb_active.Size = New System.Drawing.Size(68, 25)
+        Me.rb_active.TabIndex = 20
+        Me.rb_active.Text = "ACTIVE"
+        Me.rb_active.UseVisualStyleBackColor = True
+        '
+        'RadioButton1
+        '
+        Me.RadioButton1.AutoSize = True
+        Me.RadioButton1.Location = New System.Drawing.Point(176, 136)
+        Me.RadioButton1.Name = "RadioButton1"
+        Me.RadioButton1.Size = New System.Drawing.Size(64, 25)
+        Me.RadioButton1.TabIndex = 20
+        Me.RadioButton1.Text = "Active"
+        Me.RadioButton1.UseVisualStyleBackColor = True
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label13.Location = New System.Drawing.Point(19, 138)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(144, 21)
+        Me.Label13.TabIndex = 19
+        Me.Label13.Text = "SCHOLARSHIP STATUS"
+        '
+        'txtb_ScholarAmnt
+        '
+        Me.txtb_ScholarAmnt.BackColor = System.Drawing.Color.White
+        Me.txtb_ScholarAmnt.Enabled = False
+        Me.txtb_ScholarAmnt.Location = New System.Drawing.Point(176, 99)
+        Me.txtb_ScholarAmnt.Name = "txtb_ScholarAmnt"
+        Me.txtb_ScholarAmnt.Size = New System.Drawing.Size(252, 26)
+        Me.txtb_ScholarAmnt.TabIndex = 18
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label12.Location = New System.Drawing.Point(19, 104)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(151, 21)
+        Me.Label12.TabIndex = 17
+        Me.Label12.Text = "SCHOLARSHIP AMOUNT"
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label16.Location = New System.Drawing.Point(19, 62)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(127, 21)
+        Me.Label16.TabIndex = 15
+        Me.Label16.Text = "SCHOLARSHIP TYPE"
+        '
+        'btn_cancel
+        '
+        Me.btn_cancel.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
+        Me.btn_cancel.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.btn_cancel.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.btn_cancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btn_cancel.BorderRadius = 0
+        Me.btn_cancel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.btn_cancel.ButtonText = "CANCEL"
+        Me.btn_cancel.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_cancel.DisabledColor = System.Drawing.Color.Gray
+        Me.btn_cancel.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!)
+        Me.btn_cancel.ForeColor = System.Drawing.Color.SeaGreen
+        Me.btn_cancel.Iconcolor = System.Drawing.Color.Transparent
+        Me.btn_cancel.Iconimage = Nothing
+        Me.btn_cancel.Iconimage_right = Nothing
+        Me.btn_cancel.Iconimage_right_Selected = Nothing
+        Me.btn_cancel.Iconimage_Selected = Nothing
+        Me.btn_cancel.IconMarginLeft = 0
+        Me.btn_cancel.IconMarginRight = 0
+        Me.btn_cancel.IconRightVisible = False
+        Me.btn_cancel.IconRightZoom = 0R
+        Me.btn_cancel.IconVisible = False
+        Me.btn_cancel.IconZoom = 90.0R
+        Me.btn_cancel.IsTab = False
+        Me.btn_cancel.Location = New System.Drawing.Point(21, 462)
+        Me.btn_cancel.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
+        Me.btn_cancel.Name = "btn_cancel"
+        Me.btn_cancel.Normalcolor = System.Drawing.SystemColors.ButtonFace
+        Me.btn_cancel.OnHovercolor = System.Drawing.Color.Goldenrod
+        Me.btn_cancel.OnHoverTextColor = System.Drawing.Color.White
+        Me.btn_cancel.selected = False
+        Me.btn_cancel.Size = New System.Drawing.Size(136, 35)
+        Me.btn_cancel.TabIndex = 55
+        Me.btn_cancel.Text = "CANCEL"
+        Me.btn_cancel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btn_cancel.Textcolor = System.Drawing.Color.SeaGreen
+        Me.btn_cancel.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
         'btn_add
         '
@@ -371,7 +490,7 @@ Partial Class frm_sSG
         Me.btn_add.IconVisible = False
         Me.btn_add.IconZoom = 90.0R
         Me.btn_add.IsTab = False
-        Me.btn_add.Location = New System.Drawing.Point(151, 149)
+        Me.btn_add.Location = New System.Drawing.Point(161, 462)
         Me.btn_add.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
         Me.btn_add.Name = "btn_add"
         Me.btn_add.Normalcolor = System.Drawing.SystemColors.ButtonFace
@@ -410,7 +529,7 @@ Partial Class frm_sSG
         Me.btn_update.IconVisible = False
         Me.btn_update.IconZoom = 90.0R
         Me.btn_update.IsTab = False
-        Me.btn_update.Location = New System.Drawing.Point(293, 149)
+        Me.btn_update.Location = New System.Drawing.Point(303, 462)
         Me.btn_update.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
         Me.btn_update.Name = "btn_update"
         Me.btn_update.Normalcolor = System.Drawing.SystemColors.ButtonFace
@@ -424,112 +543,68 @@ Partial Class frm_sSG
         Me.btn_update.Textcolor = System.Drawing.Color.SeaGreen
         Me.btn_update.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
-        'rb_inactive
-        '
-        Me.rb_inactive.AutoSize = True
-        Me.rb_inactive.Location = New System.Drawing.Point(252, 105)
-        Me.rb_inactive.Name = "rb_inactive"
-        Me.rb_inactive.Size = New System.Drawing.Size(81, 25)
-        Me.rb_inactive.TabIndex = 21
-        Me.rb_inactive.Text = "INACTIVE"
-        Me.rb_inactive.UseVisualStyleBackColor = True
-        '
-        'rb_active
-        '
-        Me.rb_active.AutoSize = True
-        Me.rb_active.Location = New System.Drawing.Point(163, 105)
-        Me.rb_active.Name = "rb_active"
-        Me.rb_active.Size = New System.Drawing.Size(68, 25)
-        Me.rb_active.TabIndex = 20
-        Me.rb_active.Text = "ACTIVE"
-        Me.rb_active.UseVisualStyleBackColor = True
-        '
-        'RadioButton1
-        '
-        Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Location = New System.Drawing.Point(163, 105)
-        Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(64, 25)
-        Me.RadioButton1.TabIndex = 20
-        Me.RadioButton1.Text = "Active"
-        Me.RadioButton1.UseVisualStyleBackColor = True
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label13.Location = New System.Drawing.Point(6, 107)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(144, 21)
-        Me.Label13.TabIndex = 19
-        Me.Label13.Text = "SCHOLARSHIP STATUS"
-        '
-        'txtb_ScholarAmnt
-        '
-        Me.txtb_ScholarAmnt.BackColor = System.Drawing.Color.White
-        Me.txtb_ScholarAmnt.Enabled = False
-        Me.txtb_ScholarAmnt.Location = New System.Drawing.Point(163, 68)
-        Me.txtb_ScholarAmnt.Name = "txtb_ScholarAmnt"
-        Me.txtb_ScholarAmnt.Size = New System.Drawing.Size(252, 26)
-        Me.txtb_ScholarAmnt.TabIndex = 18
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label12.Location = New System.Drawing.Point(6, 73)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(151, 21)
-        Me.Label12.TabIndex = 17
-        Me.Label12.Text = "SCHOLARSHIP AMOUNT"
-        '
-        'txtb_ScholarType
-        '
-        Me.txtb_ScholarType.BackColor = System.Drawing.Color.White
-        Me.txtb_ScholarType.Enabled = False
-        Me.txtb_ScholarType.Location = New System.Drawing.Point(163, 25)
-        Me.txtb_ScholarType.Name = "txtb_ScholarType"
-        Me.txtb_ScholarType.Size = New System.Drawing.Size(252, 26)
-        Me.txtb_ScholarType.TabIndex = 16
-        '
-        'TextBox5
-        '
-        Me.TextBox5.BackColor = System.Drawing.Color.White
-        Me.TextBox5.Enabled = False
-        Me.TextBox5.Location = New System.Drawing.Point(163, 25)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(252, 26)
-        Me.TextBox5.TabIndex = 16
-        Me.TextBox5.Text = "CHED-UniFAST"
-        '
-        'Label16
-        '
-        Me.Label16.AutoSize = True
-        Me.Label16.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label16.Location = New System.Drawing.Point(6, 31)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(127, 21)
-        Me.Label16.TabIndex = 15
-        Me.Label16.Text = "SCHOLARSHIP TYPE"
-        '
         'Panel1
         '
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel1.Controls.Add(Me.btn_manageScholar)
+        Me.Panel1.Controls.Add(Me.btn_cancel)
+        Me.Panel1.Controls.Add(Me.btn_add)
         Me.Panel1.Controls.Add(Me.GroupBox2)
+        Me.Panel1.Controls.Add(Me.btn_update)
         Me.Panel1.Controls.Add(Me.GroupBox3)
         Me.Panel1.Location = New System.Drawing.Point(15, 135)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(459, 448)
+        Me.Panel1.Size = New System.Drawing.Size(459, 506)
         Me.Panel1.TabIndex = 49
+        '
+        'btn_manageScholar
+        '
+        Me.btn_manageScholar.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
+        Me.btn_manageScholar.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.btn_manageScholar.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.btn_manageScholar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btn_manageScholar.BorderRadius = 0
+        Me.btn_manageScholar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.btn_manageScholar.ButtonText = "MANAGE SCHOLARSHIP DETAILS"
+        Me.btn_manageScholar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_manageScholar.DisabledColor = System.Drawing.Color.Gray
+        Me.btn_manageScholar.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!)
+        Me.btn_manageScholar.ForeColor = System.Drawing.Color.SeaGreen
+        Me.btn_manageScholar.Iconcolor = System.Drawing.Color.Transparent
+        Me.btn_manageScholar.Iconimage = Nothing
+        Me.btn_manageScholar.Iconimage_right = Nothing
+        Me.btn_manageScholar.Iconimage_right_Selected = Nothing
+        Me.btn_manageScholar.Iconimage_Selected = Nothing
+        Me.btn_manageScholar.IconMarginLeft = 0
+        Me.btn_manageScholar.IconMarginRight = 0
+        Me.btn_manageScholar.IconRightVisible = False
+        Me.btn_manageScholar.IconRightZoom = 0R
+        Me.btn_manageScholar.IconVisible = False
+        Me.btn_manageScholar.IconZoom = 90.0R
+        Me.btn_manageScholar.IsTab = False
+        Me.btn_manageScholar.Location = New System.Drawing.Point(227, 221)
+        Me.btn_manageScholar.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
+        Me.btn_manageScholar.Name = "btn_manageScholar"
+        Me.btn_manageScholar.Normalcolor = System.Drawing.SystemColors.ButtonFace
+        Me.btn_manageScholar.OnHovercolor = System.Drawing.Color.Goldenrod
+        Me.btn_manageScholar.OnHoverTextColor = System.Drawing.Color.White
+        Me.btn_manageScholar.selected = False
+        Me.btn_manageScholar.Size = New System.Drawing.Size(216, 35)
+        Me.btn_manageScholar.TabIndex = 56
+        Me.btn_manageScholar.Text = "MANAGE SCHOLARSHIP DETAILS"
+        Me.btn_manageScholar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btn_manageScholar.Textcolor = System.Drawing.Color.SeaGreen
+        Me.btn_manageScholar.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
         'FlowLayoutPanel1
         '
         Me.FlowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.FlowLayoutPanel1.Controls.Add(Me.GroupBox1)
         Me.FlowLayoutPanel1.Controls.Add(Me.Panel3)
+        Me.FlowLayoutPanel1.Controls.Add(Me.txtb_ScholarType)
         Me.FlowLayoutPanel1.Location = New System.Drawing.Point(480, 135)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(564, 448)
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(564, 506)
         Me.FlowLayoutPanel1.TabIndex = 50
         '
         'Panel3
@@ -539,7 +614,7 @@ Partial Class frm_sSG
         Me.Panel3.Font = New System.Drawing.Font("Franklin Gothic Demi", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Panel3.Location = New System.Drawing.Point(3, 79)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(557, 367)
+        Me.Panel3.Size = New System.Drawing.Size(557, 312)
         Me.Panel3.TabIndex = 38
         '
         'dg_StudScholarRec
@@ -574,7 +649,7 @@ Partial Class frm_sSG
         Me.dg_StudScholarRec.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.dg_StudScholarRec.RowHeadersVisible = False
         Me.dg_StudScholarRec.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dg_StudScholarRec.Size = New System.Drawing.Size(557, 367)
+        Me.dg_StudScholarRec.Size = New System.Drawing.Size(557, 312)
         Me.dg_StudScholarRec.TabIndex = 53
         '
         'StudidDataGridViewTextBoxColumn
@@ -623,6 +698,15 @@ Partial Class frm_sSG
         Me.level.ReadOnly = True
         Me.level.Visible = False
         '
+        'txtb_ScholarType
+        '
+        Me.txtb_ScholarType.BackColor = System.Drawing.Color.White
+        Me.txtb_ScholarType.Enabled = False
+        Me.txtb_ScholarType.Location = New System.Drawing.Point(3, 397)
+        Me.txtb_ScholarType.Name = "txtb_ScholarType"
+        Me.txtb_ScholarType.Size = New System.Drawing.Size(252, 20)
+        Me.txtb_ScholarType.TabIndex = 16
+        '
         'Panel2
         '
         Me.Panel2.Controls.Add(Me.cbo_SelectDept)
@@ -656,44 +740,23 @@ Partial Class frm_sSG
         Me.Label14.TabIndex = 8
         Me.Label14.Text = "SELECT DEPARTMENT"
         '
-        'btn_cancel
+        'txtb_refNo
         '
-        Me.btn_cancel.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
-        Me.btn_cancel.Anchor = System.Windows.Forms.AnchorStyles.Right
-        Me.btn_cancel.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.btn_cancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btn_cancel.BorderRadius = 0
-        Me.btn_cancel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.btn_cancel.ButtonText = "CANCEL"
-        Me.btn_cancel.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_cancel.DisabledColor = System.Drawing.Color.Gray
-        Me.btn_cancel.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!)
-        Me.btn_cancel.ForeColor = System.Drawing.Color.SeaGreen
-        Me.btn_cancel.Iconcolor = System.Drawing.Color.Transparent
-        Me.btn_cancel.Iconimage = Nothing
-        Me.btn_cancel.Iconimage_right = Nothing
-        Me.btn_cancel.Iconimage_right_Selected = Nothing
-        Me.btn_cancel.Iconimage_Selected = Nothing
-        Me.btn_cancel.IconMarginLeft = 0
-        Me.btn_cancel.IconMarginRight = 0
-        Me.btn_cancel.IconRightVisible = False
-        Me.btn_cancel.IconRightZoom = 0R
-        Me.btn_cancel.IconVisible = False
-        Me.btn_cancel.IconZoom = 90.0R
-        Me.btn_cancel.IsTab = False
-        Me.btn_cancel.Location = New System.Drawing.Point(11, 149)
-        Me.btn_cancel.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
-        Me.btn_cancel.Name = "btn_cancel"
-        Me.btn_cancel.Normalcolor = System.Drawing.SystemColors.ButtonFace
-        Me.btn_cancel.OnHovercolor = System.Drawing.Color.Goldenrod
-        Me.btn_cancel.OnHoverTextColor = System.Drawing.Color.White
-        Me.btn_cancel.selected = False
-        Me.btn_cancel.Size = New System.Drawing.Size(136, 35)
-        Me.btn_cancel.TabIndex = 55
-        Me.btn_cancel.Text = "CANCEL"
-        Me.btn_cancel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.btn_cancel.Textcolor = System.Drawing.Color.SeaGreen
-        Me.btn_cancel.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtb_refNo.AutoCompleteCustomSource.AddRange(New String() {"Niño Agsoy", "Tajmahal Amarila", "Joshua Avila", "Harvey Baloria", "Faith Claire Bawan", "Mark Bello", "Charmel Camposo", "Kristel Ann Corpuz", "Princess Anne Dadul", "Vj Debuque", "Juvy Dela Cruz", "Laica Joy Delostrico", "Charles Deragosa", "Chris Lyn Joyce Diaz", "Amado Doverte", "John Mark Dulce", "James Bryan N. Dumail", "Junelyn Gumia", "Jessa Langwas", "Annalyn Larita", "Rhea Lynn Legaspi", "Mayter Lumiguid", "Charlene Manabat", "John Vincent A. Medillo", "Jericho Montealto", "Wendel Odilao", "Kurt Randall Oviedo", "Elson Patac", "Kate Pendon", "Carren Polinio", "Jhon Philip Pondar", "Arnic Reponte", "Quirjhon Dave Rivera", "Hanna Gladys Sala", "ARIEL SAOCEJO", "Rea Siarot", "Robel Sta Teresa", "Venus Torrevillas", "Tyrone Vibas", "Jerald Jose"})
+        Me.txtb_refNo.Location = New System.Drawing.Point(180, 23)
+        Me.txtb_refNo.Name = "txtb_refNo"
+        Me.txtb_refNo.Size = New System.Drawing.Size(252, 26)
+        Me.txtb_refNo.TabIndex = 8
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label4.Location = New System.Drawing.Point(19, 23)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(121, 21)
+        Me.Label4.TabIndex = 22
+        Me.Label4.Text = "SCHOLAR REF. NO."
         '
         'frm_sSG
         '
@@ -713,6 +776,7 @@ Partial Class frm_sSG
         Me.GroupBox3.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.FlowLayoutPanel1.ResumeLayout(False)
+        Me.FlowLayoutPanel1.PerformLayout()
         Me.Panel3.ResumeLayout(False)
         CType(Me.dg_StudScholarRec, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
@@ -750,10 +814,8 @@ Partial Class frm_sSG
     Friend WithEvents Label13 As System.Windows.Forms.Label
     Friend WithEvents txtb_ScholarAmnt As System.Windows.Forms.TextBox
     Friend WithEvents Label12 As System.Windows.Forms.Label
-    Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
     Friend WithEvents Label16 As System.Windows.Forms.Label
     Friend WithEvents rb_active As System.Windows.Forms.RadioButton
-    Friend WithEvents txtb_ScholarType As System.Windows.Forms.TextBox
     Friend WithEvents Panel1 As Panel
     Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
     Friend WithEvents Panel2 As Panel
@@ -771,4 +833,9 @@ Partial Class frm_sSG
     Friend WithEvents btn_add As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents btn_update As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents btn_cancel As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents txtb_ScholarType As TextBox
+    Friend WithEvents btn_manageScholar As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents cbo_scholarType As ComboBox
+    Friend WithEvents Label4 As Label
+    Friend WithEvents txtb_refNo As TextBox
 End Class

@@ -19,6 +19,9 @@ Module lccsams
     Public username As String
     Public cashier_name As String
     Public user_type As String
+    Public student_type As String = "select * from tbl_student_type order by sType_id asc"
+    Public scholar_list As String = "select * from tbl_scholar_type order by scholar_id asc"
+
     '#################################################################COLLEGE PUBLIC VARIABLE###############################################################################
     Public slctC As String = "Select * from tbl_coll_course"
     Public slctS As String = "select * from tbl_semester"

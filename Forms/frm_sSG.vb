@@ -7,7 +7,7 @@
             dg_StudScholarRec.Columns(1).DataPropertyName = "stud_fname"
             dg_StudScholarRec.Columns(2).DataPropertyName = "stud_lname"
             dg_StudScholarRec.Columns(3).DataPropertyName = "stud_midI"
-            dg_StudScholarRec.Columns(4).DataPropertyName = "sl_name"
+            dg_StudScholarRec.Columns(4).DataPropertyName = "scholar_name"
             dg_StudScholarRec.Columns(5).DataPropertyName = "sy_name"
             dg_StudScholarRec.Columns(6).DataPropertyName = "yl_name"
             lbl_level.Text = "YEAR LEVEL"
@@ -15,7 +15,7 @@
             lbl_sem.Visible = True
             txtb_studCourse.Visible = True
             txtb_studSem.Visible = True
-            Dim coll_studScholar As String = "select s.stud_id,s.stud_fname,s.stud_lname,s.stud_midI,sl.sl_name,sy.sy_name,yl.yl_name  from tbl_student s  inner join tbl_sch_year sy  on s.sy_id=sy.sy_id inner join tbl_year_level yl on s.yl_id=yl.yl_id  inner join tbl_coll_scholarlist sl on sl.stud_id=s.stud_id order by stud_lname asc"
+            Dim coll_studScholar As String = "select s.stud_id,s.stud_fname,s.stud_lname,s.stud_midI,st.scholar_name,sy.sy_name,yl.yl_name  from tbl_student s  inner join tbl_sch_year sy  on s.sy_id=sy.sy_id inner join tbl_year_level yl on s.yl_id=yl.yl_id  inner join tbl_coll_scholarlist sl on sl.stud_id=s.stud_id inner join tbl_scholar_type st on sl.sl_name=st.scholar_id order by stud_lname asc"
             _displayRecords(coll_studScholar, dg_StudScholarRec)
 
         End If
@@ -113,8 +113,9 @@
 
     End Sub
 
-    Private Sub frm_sSG_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Public Sub frm_sSG_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         cbo_SearchBy.SelectedIndex = 1
+        _loadToCombobox(scholar_list, cbo_scholarType)
     End Sub
 
     Private Sub dg_StudScholarRec_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dg_StudScholarRec.CellClick
@@ -129,6 +130,8 @@
                 Dim elem_sl As String = "Select sl.sl_amnt,sl.sl_status  from  tbl_coll_scholarlist sl inner join tbl_elem_students s on sl.stud_id=s.estud_id where s.estud_id='" & .Item(0, i).Value & "'"
                 Dim senior_sl As String = "Select sl.sl_amnt,sl.sl_status  from  tbl_coll_scholarlist sl inner join tbl_seniorhigh_students s on sl.stud_id=s.sstud_id where s.sstud_id='" & .Item(0, i).Value & "'"
                 Dim junior_sl As String = "Select sl.sl_amnt,sl.sl_status  from  tbl_coll_scholarlist sl inner join tbl_juniorhigh_students s on sl.stud_id=s.jstud_id where s.jstud_id='" & .Item(0, i).Value & "'"
+                Dim collSNo As String = "Select ifnull(sl.reference_no,'N/a') as ref_no from  tbl_coll_scholarlist sl inner join tbl_student s on sl.stud_id=s.stud_id where s.stud_id='" & .Item(0, i).Value & "'"
+
 
 
                 _dbConnection("db_lccsams")
@@ -136,14 +139,18 @@
                 txtb_studFname.Text = .Item(1, i).Value.ToString
                 txtb_studLname.Text = .Item(2, i).Value.ToString
                 txtb_studMI.Text = .Item(3, i).Value.ToString
-                txtb_ScholarType.Text = .Item(4, i).Value.ToString
+                cbo_scholarType.Text = .Item(4, i).Value.ToString
                 txtb_SY.Text = .Item(5, i).Value.ToString
                 txtb_studLevel.Text = .Item(6, i).Value.ToString
+
                 _loadToTextbox(Course, txtb_studCourse)
                 _loadToTextbox(Semester, txtb_studSem)
 
+
+
                 If cbo_SelectDept.SelectedIndex = 0 Then
                     Try
+                        _loadToTextbox(collSNo, txtb_refNo)
                         dbConn.Open()
                         sqlCommand = New MySqlCommand(coll_sl, dbConn)
                         dr = sqlCommand.ExecuteReader
@@ -242,11 +249,11 @@
     End Sub
     Sub _insert_slist(ByVal stat As Integer)
         If cbo_SelectDept.SelectedIndex = 0 Then
-            Dim insert_sl As String = "Insert into tbl_coll_scholarlist values(0,'" & txtb_studid.Text & "','" & txtb_ScholarType.Text & "','" & txtb_ScholarAmnt.Text & "','" & stat & "')"
+            Dim insert_sl As String = "Insert into tbl_coll_scholarlist values(0,'" & txtb_studid.Text & "','" & cbo_scholarType.SelectedValue & "','" & txtb_ScholarAmnt.Text & "','" & txtb_refNo.Text & "','" & stat & "')"
             _insertData(insert_sl)
         End If
         If cbo_SelectDept.SelectedIndex = 1 Then
-            Dim insert_sl As String = "Insert into tbl_elem_scholarlist values(0,'" & txtb_studid.Text & "','" & txtb_ScholarType.Text & "','" & txtb_ScholarAmnt.Text & "','" & stat & "')"
+            Dim insert_sl As String = "Insert into tbl_elem_scholarlist values(0,'" & txtb_studid.Text & "','" & txtb_ScholarType.Text & "','" & txtb_refNo.Text & "','" & stat & "')"
             _insertData(insert_sl)
         End If
         If cbo_SelectDept.SelectedIndex = 2 Then
@@ -352,5 +359,12 @@
         txtb_ScholarAmnt.Enabled = False
         btn_add.Text = "ADD"
         btn_update.Text = "UPDATE"
+    End Sub
+
+
+
+    Private Sub btn_manageScholar_Click(sender As Object, e As EventArgs) Handles btn_manageScholar.Click
+        _displayRecords(scholar_list, ScholarshipDetails.dg_scholarTypeList)
+        ScholarshipDetails.ShowDialog()
     End Sub
 End Class

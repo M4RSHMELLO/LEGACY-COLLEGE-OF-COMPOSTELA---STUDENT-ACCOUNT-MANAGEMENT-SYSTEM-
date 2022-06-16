@@ -110,8 +110,9 @@
     Private Sub BunifuFlatButton3_Click(sender As Object, e As EventArgs) Handles btn_menuMU.Click
         addContent(frm_U, btn_menuMU)
     End Sub
-    Private Sub BunifuFlatButton4_Click(sender As Object, e As EventArgs) Handles BunifuFlatButton4.Click
+    Public Sub BunifuFlatButton4_Click(sender As Object, e As EventArgs) Handles BunifuFlatButton4.Click
         addContent(frm_sSg, BunifuFlatButton4)
+        frm_sSg.frm_sSG_Load(sender, e)
     End Sub
     Private Sub btn_logout_Click(sender As Object, e As EventArgs) Handles btn_logout.Click
         dlg_logout.ShowDialog()
