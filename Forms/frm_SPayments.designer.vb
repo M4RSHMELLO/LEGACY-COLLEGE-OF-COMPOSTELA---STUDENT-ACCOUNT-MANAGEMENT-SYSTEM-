@@ -316,6 +316,10 @@ Partial Class frm_SPayments
         Me.Label80 = New System.Windows.Forms.Label()
         Me.txtb_jSearch = New System.Windows.Forms.TextBox()
         Me.print_collR = New System.Drawing.Printing.PrintDocument()
+        Me.lbl_scholar = New System.Windows.Forms.LinkLabel()
+        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
+        Me.LinkLabel2 = New System.Windows.Forms.LinkLabel()
+        Me.LinkLabel3 = New System.Windows.Forms.LinkLabel()
         Me.TabControl1.SuspendLayout()
         Me.coll_dept.SuspendLayout()
         Me.pnl_receipts.SuspendLayout()
@@ -445,7 +449,7 @@ Partial Class frm_SPayments
         Me.dg_receipts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dg_receipts.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3})
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
         DataGridViewCellStyle3.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold)
         DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText
         DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Control
@@ -891,6 +895,7 @@ Partial Class frm_SPayments
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.lbl_scholar)
         Me.GroupBox1.Controls.Add(Me.btn_enter)
         Me.GroupBox1.Controls.Add(Me.cboSearchBy)
         Me.GroupBox1.Controls.Add(Me.Label1)
@@ -1683,6 +1688,7 @@ Partial Class frm_SPayments
         '
         'GroupBox5
         '
+        Me.GroupBox5.Controls.Add(Me.LinkLabel1)
         Me.GroupBox5.Controls.Add(Me.btn_eEnter)
         Me.GroupBox5.Controls.Add(Me.cbo_eSearchBy)
         Me.GroupBox5.Controls.Add(Me.Label5)
@@ -2332,6 +2338,7 @@ Partial Class frm_SPayments
         '
         'GroupBox24
         '
+        Me.GroupBox24.Controls.Add(Me.LinkLabel2)
         Me.GroupBox24.Controls.Add(Me.btn_sEnter)
         Me.GroupBox24.Controls.Add(Me.cbo_sSearchBY)
         Me.GroupBox24.Controls.Add(Me.Label106)
@@ -2981,6 +2988,7 @@ Partial Class frm_SPayments
         '
         'GroupBox18
         '
+        Me.GroupBox18.Controls.Add(Me.LinkLabel3)
         Me.GroupBox18.Controls.Add(Me.btn_jEnter)
         Me.GroupBox18.Controls.Add(Me.cbo_jSearchBY)
         Me.GroupBox18.Controls.Add(Me.Label79)
@@ -3050,6 +3058,38 @@ Partial Class frm_SPayments
         '
         'print_collR
         '
+        '
+        'lbl_scholar
+        '
+        resources.ApplyResources(Me.lbl_scholar, "lbl_scholar")
+        Me.lbl_scholar.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
+        Me.lbl_scholar.LinkColor = System.Drawing.Color.DarkGreen
+        Me.lbl_scholar.Name = "lbl_scholar"
+        Me.lbl_scholar.TabStop = True
+        '
+        'LinkLabel1
+        '
+        resources.ApplyResources(Me.LinkLabel1, "LinkLabel1")
+        Me.LinkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
+        Me.LinkLabel1.LinkColor = System.Drawing.Color.DarkGreen
+        Me.LinkLabel1.Name = "LinkLabel1"
+        Me.LinkLabel1.TabStop = True
+        '
+        'LinkLabel2
+        '
+        resources.ApplyResources(Me.LinkLabel2, "LinkLabel2")
+        Me.LinkLabel2.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
+        Me.LinkLabel2.LinkColor = System.Drawing.Color.DarkGreen
+        Me.LinkLabel2.Name = "LinkLabel2"
+        Me.LinkLabel2.TabStop = True
+        '
+        'LinkLabel3
+        '
+        resources.ApplyResources(Me.LinkLabel3, "LinkLabel3")
+        Me.LinkLabel3.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
+        Me.LinkLabel3.LinkColor = System.Drawing.Color.DarkGreen
+        Me.LinkLabel3.Name = "LinkLabel3"
+        Me.LinkLabel3.TabStop = True
         '
         'frm_SPayments
         '
@@ -3391,4 +3431,8 @@ Partial Class frm_SPayments
     Friend WithEvents Label49 As Label
     Friend WithEvents lbl_cashierJ As Label
     Friend WithEvents Label65 As Label
+    Friend WithEvents lbl_scholar As LinkLabel
+    Friend WithEvents LinkLabel1 As LinkLabel
+    Friend WithEvents LinkLabel2 As LinkLabel
+    Friend WithEvents LinkLabel3 As LinkLabel
 End Class

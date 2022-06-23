@@ -127,6 +127,8 @@ Partial Class frm_MSY
         Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.btn_manageStudentAcct = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.btn_manageFees = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.TabControl1.SuspendLayout()
         Me.college_dept.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -158,12 +160,12 @@ Partial Class frm_MSY
         Me.TabControl1.Controls.Add(Me.elem_dep)
         Me.TabControl1.Controls.Add(Me.sh_dept)
         Me.TabControl1.Controls.Add(Me.jh_dept)
-        Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Top
         Me.TabControl1.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TabControl1.Location = New System.Drawing.Point(0, 0)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(924, 571)
+        Me.TabControl1.Size = New System.Drawing.Size(924, 568)
         Me.TabControl1.TabIndex = 0
         '
         'college_dept
@@ -173,22 +175,22 @@ Partial Class frm_MSY
         Me.college_dept.Location = New System.Drawing.Point(4, 30)
         Me.college_dept.Name = "college_dept"
         Me.college_dept.Padding = New System.Windows.Forms.Padding(3)
-        Me.college_dept.Size = New System.Drawing.Size(916, 537)
+        Me.college_dept.Size = New System.Drawing.Size(916, 534)
         Me.college_dept.TabIndex = 0
         Me.college_dept.Text = "College Dept"
         '
         'Panel1
         '
-        Me.Panel1.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Panel1.BackColor = System.Drawing.SystemColors.Control
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Panel1.Controls.Add(Me.GroupBox2)
         Me.Panel1.Controls.Add(Me.GroupBox1)
         Me.Panel1.Controls.Add(Me.Panel3)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel1.Location = New System.Drawing.Point(-1, -13)
+        Me.Panel1.Location = New System.Drawing.Point(3, 3)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(918, 570)
+        Me.Panel1.Size = New System.Drawing.Size(910, 528)
         Me.Panel1.TabIndex = 15
         '
         'GroupBox2
@@ -197,7 +199,7 @@ Partial Class frm_MSY
         Me.GroupBox2.Controls.Add(Me.lbo_yearL)
         Me.GroupBox2.Controls.Add(Me.btn_nYearlevel)
         Me.GroupBox2.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox2.Location = New System.Drawing.Point(585, 293)
+        Me.GroupBox2.Location = New System.Drawing.Point(597, 275)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(301, 246)
         Me.GroupBox2.TabIndex = 25
@@ -243,7 +245,7 @@ Partial Class frm_MSY
         Me.GroupBox1.Controls.Add(Me.lbo_courses)
         Me.GroupBox1.Controls.Add(Me.btn_nCourse)
         Me.GroupBox1.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(585, 34)
+        Me.GroupBox1.Location = New System.Drawing.Point(591, 23)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(301, 246)
         Me.GroupBox1.TabIndex = 24
@@ -295,7 +297,7 @@ Partial Class frm_MSY
         Me.Panel3.Controls.Add(Me.dg_syR)
         Me.Panel3.Location = New System.Drawing.Point(3, 34)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(576, 505)
+        Me.Panel3.Size = New System.Drawing.Size(576, 487)
         Me.Panel3.TabIndex = 21
         '
         'btn_cancelC
@@ -303,7 +305,7 @@ Partial Class frm_MSY
         Me.btn_cancelC.BackColor = System.Drawing.Color.FromArgb(CType(CType(108, Byte), Integer), CType(CType(105, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.btn_cancelC.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_cancelC.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_cancelC.Location = New System.Drawing.Point(399, 454)
+        Me.btn_cancelC.Location = New System.Drawing.Point(399, 441)
         Me.btn_cancelC.Name = "btn_cancelC"
         Me.btn_cancelC.Size = New System.Drawing.Size(68, 33)
         Me.btn_cancelC.TabIndex = 21
@@ -323,7 +325,7 @@ Partial Class frm_MSY
         Me.Panel2.Controls.Add(Me.Label3)
         Me.Panel2.Controls.Add(Me.Label1)
         Me.Panel2.Controls.Add(Me.Label2)
-        Me.Panel2.Location = New System.Drawing.Point(24, 27)
+        Me.Panel2.Location = New System.Drawing.Point(24, 14)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(525, 148)
         Me.Panel2.TabIndex = 20
@@ -432,7 +434,7 @@ Partial Class frm_MSY
         Me.btn_new.BackColor = System.Drawing.Color.FromArgb(CType(CType(108, Byte), Integer), CType(CType(105, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.btn_new.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_new.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_new.Location = New System.Drawing.Point(106, 454)
+        Me.btn_new.Location = New System.Drawing.Point(106, 441)
         Me.btn_new.Name = "btn_new"
         Me.btn_new.Size = New System.Drawing.Size(68, 33)
         Me.btn_new.TabIndex = 8
@@ -445,7 +447,7 @@ Partial Class frm_MSY
         Me.btn_save.Enabled = False
         Me.btn_save.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_save.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_save.Location = New System.Drawing.Point(301, 454)
+        Me.btn_save.Location = New System.Drawing.Point(301, 441)
         Me.btn_save.Name = "btn_save"
         Me.btn_save.Size = New System.Drawing.Size(68, 33)
         Me.btn_save.TabIndex = 9
@@ -457,7 +459,7 @@ Partial Class frm_MSY
         Me.btn_updateSchY.BackColor = System.Drawing.Color.FromArgb(CType(CType(108, Byte), Integer), CType(CType(105, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.btn_updateSchY.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_updateSchY.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_updateSchY.Location = New System.Drawing.Point(204, 454)
+        Me.btn_updateSchY.Location = New System.Drawing.Point(204, 441)
         Me.btn_updateSchY.Name = "btn_updateSchY"
         Me.btn_updateSchY.Size = New System.Drawing.Size(68, 33)
         Me.btn_updateSchY.TabIndex = 10
@@ -473,7 +475,7 @@ Partial Class frm_MSY
         Me.dg_syR.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.dg_syR.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dg_syR.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.col_sy_id, Me.Column1, Me.Column2, Me.Column3, Me.Column4})
-        Me.dg_syR.Location = New System.Drawing.Point(24, 187)
+        Me.dg_syR.Location = New System.Drawing.Point(24, 174)
         Me.dg_syR.Name = "dg_syR"
         Me.dg_syR.ReadOnly = True
         Me.dg_syR.RowHeadersVisible = False
@@ -1311,14 +1313,92 @@ Partial Class frm_MSY
         Me.DataGridViewTextBoxColumn11.Name = "DataGridViewTextBoxColumn11"
         Me.DataGridViewTextBoxColumn11.ReadOnly = True
         '
+        'btn_manageStudentAcct
+        '
+        Me.btn_manageStudentAcct.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
+        Me.btn_manageStudentAcct.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.btn_manageStudentAcct.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btn_manageStudentAcct.BorderRadius = 0
+        Me.btn_manageStudentAcct.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.btn_manageStudentAcct.ButtonText = "MANAGE STUDENT ACCOUNT"
+        Me.btn_manageStudentAcct.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_manageStudentAcct.DisabledColor = System.Drawing.Color.Gray
+        Me.btn_manageStudentAcct.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!)
+        Me.btn_manageStudentAcct.ForeColor = System.Drawing.Color.SeaGreen
+        Me.btn_manageStudentAcct.Iconcolor = System.Drawing.Color.Transparent
+        Me.btn_manageStudentAcct.Iconimage = Nothing
+        Me.btn_manageStudentAcct.Iconimage_right = Nothing
+        Me.btn_manageStudentAcct.Iconimage_right_Selected = Nothing
+        Me.btn_manageStudentAcct.Iconimage_Selected = Nothing
+        Me.btn_manageStudentAcct.IconMarginLeft = 0
+        Me.btn_manageStudentAcct.IconMarginRight = 0
+        Me.btn_manageStudentAcct.IconRightVisible = False
+        Me.btn_manageStudentAcct.IconRightZoom = 0R
+        Me.btn_manageStudentAcct.IconVisible = False
+        Me.btn_manageStudentAcct.IconZoom = 90.0R
+        Me.btn_manageStudentAcct.IsTab = False
+        Me.btn_manageStudentAcct.Location = New System.Drawing.Point(249, 572)
+        Me.btn_manageStudentAcct.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
+        Me.btn_manageStudentAcct.Name = "btn_manageStudentAcct"
+        Me.btn_manageStudentAcct.Normalcolor = System.Drawing.SystemColors.ButtonFace
+        Me.btn_manageStudentAcct.OnHovercolor = System.Drawing.Color.Goldenrod
+        Me.btn_manageStudentAcct.OnHoverTextColor = System.Drawing.Color.White
+        Me.btn_manageStudentAcct.selected = False
+        Me.btn_manageStudentAcct.Size = New System.Drawing.Size(210, 29)
+        Me.btn_manageStudentAcct.TabIndex = 55
+        Me.btn_manageStudentAcct.Text = "MANAGE STUDENT ACCOUNT"
+        Me.btn_manageStudentAcct.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btn_manageStudentAcct.Textcolor = System.Drawing.Color.SeaGreen
+        Me.btn_manageStudentAcct.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        '
+        'btn_manageFees
+        '
+        Me.btn_manageFees.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
+        Me.btn_manageFees.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.btn_manageFees.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btn_manageFees.BorderRadius = 0
+        Me.btn_manageFees.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.btn_manageFees.ButtonText = "MANAGE FEES"
+        Me.btn_manageFees.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_manageFees.DisabledColor = System.Drawing.Color.Gray
+        Me.btn_manageFees.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!)
+        Me.btn_manageFees.ForeColor = System.Drawing.Color.SeaGreen
+        Me.btn_manageFees.Iconcolor = System.Drawing.Color.Transparent
+        Me.btn_manageFees.Iconimage = Nothing
+        Me.btn_manageFees.Iconimage_right = Nothing
+        Me.btn_manageFees.Iconimage_right_Selected = Nothing
+        Me.btn_manageFees.Iconimage_Selected = Nothing
+        Me.btn_manageFees.IconMarginLeft = 0
+        Me.btn_manageFees.IconMarginRight = 0
+        Me.btn_manageFees.IconRightVisible = False
+        Me.btn_manageFees.IconRightZoom = 0R
+        Me.btn_manageFees.IconVisible = False
+        Me.btn_manageFees.IconZoom = 90.0R
+        Me.btn_manageFees.IsTab = False
+        Me.btn_manageFees.Location = New System.Drawing.Point(465, 572)
+        Me.btn_manageFees.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
+        Me.btn_manageFees.Name = "btn_manageFees"
+        Me.btn_manageFees.Normalcolor = System.Drawing.SystemColors.ButtonFace
+        Me.btn_manageFees.OnHovercolor = System.Drawing.Color.Goldenrod
+        Me.btn_manageFees.OnHoverTextColor = System.Drawing.Color.White
+        Me.btn_manageFees.selected = False
+        Me.btn_manageFees.Size = New System.Drawing.Size(210, 29)
+        Me.btn_manageFees.TabIndex = 64
+        Me.btn_manageFees.Text = "MANAGE FEES"
+        Me.btn_manageFees.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btn_manageFees.Textcolor = System.Drawing.Color.SeaGreen
+        Me.btn_manageFees.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        '
         'frm_MSY
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Controls.Add(Me.btn_manageFees)
+        Me.Controls.Add(Me.btn_manageStudentAcct)
         Me.Controls.Add(Me.TabControl1)
         Me.Name = "frm_MSY"
-        Me.Size = New System.Drawing.Size(924, 571)
+        Me.Size = New System.Drawing.Size(924, 607)
         Me.TabControl1.ResumeLayout(False)
         Me.college_dept.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
@@ -1454,4 +1534,6 @@ Partial Class frm_MSY
     Friend WithEvents btn_cancelE As Button
     Friend WithEvents btn_cancelS As Button
     Friend WithEvents btn_cancelJ As Button
+    Friend WithEvents btn_manageStudentAcct As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents btn_manageFees As Bunifu.Framework.UI.BunifuFlatButton
 End Class

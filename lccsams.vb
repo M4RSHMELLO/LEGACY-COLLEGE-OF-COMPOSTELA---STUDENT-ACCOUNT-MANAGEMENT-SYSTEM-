@@ -14,16 +14,22 @@ Module lccsams
     Public dr As MySqlDataReader
     Public ds As DataSet
     Public current_menu As Integer = 0
+    Public manageSY As Integer = 0
+    Public manageFees As Integer = 0
+    Public manageStudentList As Integer = 0
     Public current_date As Date = Date.Now()   'Caurrent Date OF THE transaction ocurred
     Public result As Integer
+    Public scholar_No As Integer
     Public username As String
     Public cashier_name As String
     Public user_type As String
     Public student_type As String = "select * from tbl_student_type order by sType_id asc"
     Public scholar_list As String = "select * from tbl_scholar_type order by scholar_id asc"
+    Public slctFeesType As String = "Select * from tbl_fees_type"
 
     '#################################################################COLLEGE PUBLIC VARIABLE###############################################################################
     Public slctC As String = "Select * from tbl_coll_course"
+
     Public slctS As String = "select * from tbl_semester"
     Public slctYL As String = "select * from tbl_year_level order by yl_id desc"
     Public slctSY As String = "select * from tbl_sch_year group by sy_name having count(*) > 0 order by sy_eDate desc "

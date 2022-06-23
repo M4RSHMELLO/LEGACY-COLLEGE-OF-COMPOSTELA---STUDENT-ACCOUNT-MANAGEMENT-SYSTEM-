@@ -22,8 +22,8 @@ Partial Class frm_sSG
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.cbo_SearchBy = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -48,6 +48,8 @@ Partial Class frm_sSG
         Me.txtb_studFname = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.txtb_refNo = New System.Windows.Forms.TextBox()
         Me.cbo_scholarType = New System.Windows.Forms.ComboBox()
         Me.rb_inactive = New System.Windows.Forms.RadioButton()
         Me.rb_active = New System.Windows.Forms.RadioButton()
@@ -71,12 +73,9 @@ Partial Class frm_sSG
         Me.StudmidIDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.sy = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.level = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.txtb_ScholarType = New System.Windows.Forms.TextBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.cbo_SelectDept = New System.Windows.Forms.ComboBox()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.txtb_refNo = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -347,9 +346,29 @@ Partial Class frm_sSG
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "SCHOLARSHIP INFORMATION"
         '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label4.Location = New System.Drawing.Point(19, 23)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(121, 21)
+        Me.Label4.TabIndex = 22
+        Me.Label4.Text = "SCHOLAR REF. NO."
+        '
+        'txtb_refNo
+        '
+        Me.txtb_refNo.AutoCompleteCustomSource.AddRange(New String() {"Niño Agsoy", "Tajmahal Amarila", "Joshua Avila", "Harvey Baloria", "Faith Claire Bawan", "Mark Bello", "Charmel Camposo", "Kristel Ann Corpuz", "Princess Anne Dadul", "Vj Debuque", "Juvy Dela Cruz", "Laica Joy Delostrico", "Charles Deragosa", "Chris Lyn Joyce Diaz", "Amado Doverte", "John Mark Dulce", "James Bryan N. Dumail", "Junelyn Gumia", "Jessa Langwas", "Annalyn Larita", "Rhea Lynn Legaspi", "Mayter Lumiguid", "Charlene Manabat", "John Vincent A. Medillo", "Jericho Montealto", "Wendel Odilao", "Kurt Randall Oviedo", "Elson Patac", "Kate Pendon", "Carren Polinio", "Jhon Philip Pondar", "Arnic Reponte", "Quirjhon Dave Rivera", "Hanna Gladys Sala", "ARIEL SAOCEJO", "Rea Siarot", "Robel Sta Teresa", "Venus Torrevillas", "Tyrone Vibas", "Jerald Jose"})
+        Me.txtb_refNo.Enabled = False
+        Me.txtb_refNo.Location = New System.Drawing.Point(180, 23)
+        Me.txtb_refNo.Name = "txtb_refNo"
+        Me.txtb_refNo.Size = New System.Drawing.Size(252, 26)
+        Me.txtb_refNo.TabIndex = 8
+        '
         'cbo_scholarType
         '
         Me.cbo_scholarType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbo_scholarType.Enabled = False
         Me.cbo_scholarType.FormattingEnabled = True
         Me.cbo_scholarType.Items.AddRange(New Object() {"Id Number", "Name"})
         Me.cbo_scholarType.Location = New System.Drawing.Point(180, 59)
@@ -401,7 +420,7 @@ Partial Class frm_sSG
         '
         Me.txtb_ScholarAmnt.BackColor = System.Drawing.Color.White
         Me.txtb_ScholarAmnt.Enabled = False
-        Me.txtb_ScholarAmnt.Location = New System.Drawing.Point(176, 99)
+        Me.txtb_ScholarAmnt.Location = New System.Drawing.Point(180, 99)
         Me.txtb_ScholarAmnt.Name = "txtb_ScholarAmnt"
         Me.txtb_ScholarAmnt.Size = New System.Drawing.Size(252, 26)
         Me.txtb_ScholarAmnt.TabIndex = 18
@@ -601,7 +620,6 @@ Partial Class frm_sSG
         Me.FlowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.FlowLayoutPanel1.Controls.Add(Me.GroupBox1)
         Me.FlowLayoutPanel1.Controls.Add(Me.Panel3)
-        Me.FlowLayoutPanel1.Controls.Add(Me.txtb_ScholarType)
         Me.FlowLayoutPanel1.Location = New System.Drawing.Point(480, 135)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
         Me.FlowLayoutPanel1.Size = New System.Drawing.Size(564, 506)
@@ -614,7 +632,7 @@ Partial Class frm_sSG
         Me.Panel3.Font = New System.Drawing.Font("Franklin Gothic Demi", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Panel3.Location = New System.Drawing.Point(3, 79)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(557, 312)
+        Me.Panel3.Size = New System.Drawing.Size(557, 418)
         Me.Panel3.TabIndex = 38
         '
         'dg_StudScholarRec
@@ -622,20 +640,20 @@ Partial Class frm_sSG
         Me.dg_StudScholarRec.AllowUserToAddRows = False
         Me.dg_StudScholarRec.AllowUserToDeleteRows = False
         Me.dg_StudScholarRec.AllowUserToResizeRows = False
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.dg_StudScholarRec.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.dg_StudScholarRec.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle5
         Me.dg_StudScholarRec.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dg_StudScholarRec.BackgroundColor = System.Drawing.Color.Gainsboro
         Me.dg_StudScholarRec.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dg_StudScholarRec.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Franklin Gothic Demi", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dg_StudScholarRec.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Franklin Gothic Demi", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dg_StudScholarRec.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle6
         Me.dg_StudScholarRec.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dg_StudScholarRec.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.StudidDataGridViewTextBoxColumn, Me.StudFnameDataGridViewTextBoxColumn, Me.StudLnameDataGridViewTextBoxColumn, Me.Column1, Me.StudmidIDataGridViewTextBoxColumn, Me.sy, Me.level})
         Me.dg_StudScholarRec.Dock = System.Windows.Forms.DockStyle.Fill
@@ -649,7 +667,7 @@ Partial Class frm_sSG
         Me.dg_StudScholarRec.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.dg_StudScholarRec.RowHeadersVisible = False
         Me.dg_StudScholarRec.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dg_StudScholarRec.Size = New System.Drawing.Size(557, 312)
+        Me.dg_StudScholarRec.Size = New System.Drawing.Size(557, 418)
         Me.dg_StudScholarRec.TabIndex = 53
         '
         'StudidDataGridViewTextBoxColumn
@@ -698,15 +716,6 @@ Partial Class frm_sSG
         Me.level.ReadOnly = True
         Me.level.Visible = False
         '
-        'txtb_ScholarType
-        '
-        Me.txtb_ScholarType.BackColor = System.Drawing.Color.White
-        Me.txtb_ScholarType.Enabled = False
-        Me.txtb_ScholarType.Location = New System.Drawing.Point(3, 397)
-        Me.txtb_ScholarType.Name = "txtb_ScholarType"
-        Me.txtb_ScholarType.Size = New System.Drawing.Size(252, 20)
-        Me.txtb_ScholarType.TabIndex = 16
-        '
         'Panel2
         '
         Me.Panel2.Controls.Add(Me.cbo_SelectDept)
@@ -740,24 +749,6 @@ Partial Class frm_sSG
         Me.Label14.TabIndex = 8
         Me.Label14.Text = "SELECT DEPARTMENT"
         '
-        'txtb_refNo
-        '
-        Me.txtb_refNo.AutoCompleteCustomSource.AddRange(New String() {"Niño Agsoy", "Tajmahal Amarila", "Joshua Avila", "Harvey Baloria", "Faith Claire Bawan", "Mark Bello", "Charmel Camposo", "Kristel Ann Corpuz", "Princess Anne Dadul", "Vj Debuque", "Juvy Dela Cruz", "Laica Joy Delostrico", "Charles Deragosa", "Chris Lyn Joyce Diaz", "Amado Doverte", "John Mark Dulce", "James Bryan N. Dumail", "Junelyn Gumia", "Jessa Langwas", "Annalyn Larita", "Rhea Lynn Legaspi", "Mayter Lumiguid", "Charlene Manabat", "John Vincent A. Medillo", "Jericho Montealto", "Wendel Odilao", "Kurt Randall Oviedo", "Elson Patac", "Kate Pendon", "Carren Polinio", "Jhon Philip Pondar", "Arnic Reponte", "Quirjhon Dave Rivera", "Hanna Gladys Sala", "ARIEL SAOCEJO", "Rea Siarot", "Robel Sta Teresa", "Venus Torrevillas", "Tyrone Vibas", "Jerald Jose"})
-        Me.txtb_refNo.Location = New System.Drawing.Point(180, 23)
-        Me.txtb_refNo.Name = "txtb_refNo"
-        Me.txtb_refNo.Size = New System.Drawing.Size(252, 26)
-        Me.txtb_refNo.TabIndex = 8
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label4.Location = New System.Drawing.Point(19, 23)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(121, 21)
-        Me.Label4.TabIndex = 22
-        Me.Label4.Text = "SCHOLAR REF. NO."
-        '
         'frm_sSG
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -776,7 +767,6 @@ Partial Class frm_sSG
         Me.GroupBox3.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.FlowLayoutPanel1.ResumeLayout(False)
-        Me.FlowLayoutPanel1.PerformLayout()
         Me.Panel3.ResumeLayout(False)
         CType(Me.dg_StudScholarRec, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
@@ -819,7 +809,6 @@ Partial Class frm_sSG
     Friend WithEvents Panel1 As Panel
     Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents cbo_SelectDept As ComboBox
     Friend WithEvents Label14 As Label
     Friend WithEvents Panel3 As Panel
     Friend WithEvents dg_StudScholarRec As Bunifu.Framework.UI.BunifuCustomDataGrid
@@ -833,9 +822,9 @@ Partial Class frm_sSG
     Friend WithEvents btn_add As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents btn_update As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents btn_cancel As Bunifu.Framework.UI.BunifuFlatButton
-    Friend WithEvents txtb_ScholarType As TextBox
     Friend WithEvents btn_manageScholar As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents cbo_scholarType As ComboBox
     Friend WithEvents Label4 As Label
     Friend WithEvents txtb_refNo As TextBox
+    Friend WithEvents cbo_SelectDept As ComboBox
 End Class

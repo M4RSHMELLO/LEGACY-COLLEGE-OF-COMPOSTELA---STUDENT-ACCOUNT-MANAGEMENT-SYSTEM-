@@ -119,19 +119,17 @@
     End Sub
 
     Private Sub btn_new_Click(sender As Object, e As EventArgs) Handles btn_new.Click
-
-        If btn_updateSchY.Text = "NEW" Then
+        If btn_new.Text = "NEW" Then
             If dlg_addnewsy.ShowDialog = DialogResult.OK Then
-                btn_updateSchY.Text = "CANCEL"
+                btn_new.Text = "CANCEL"
                 txtb_syS.Enabled = True
-
                 txtb_syE.Enabled = True
                 btn_save.Enabled = True
                 cbo_semester.Enabled = True
                 a = 1
             End If
-        ElseIf btn_updateSchY.Text = "CANCEL" Then
-            btn_updateSchY.Text = "NEW"
+        ElseIf btn_new.Text = "CANCEL" Then
+            btn_new.Text = "NEW"
             txtb_syS.Enabled = False
             txtb_syE.Enabled = False
             btn_save.Enabled = False
@@ -509,5 +507,15 @@
 
     Private Sub jh_dept_Click(sender As Object, e As EventArgs) Handles jh_dept.Click
 
+    End Sub
+
+    Private Sub btn_manageStudentAcct_Click(sender As Object, e As EventArgs) Handles btn_manageStudentAcct.Click
+        Dashboard.BunifuFlatButton6_Click(sender, e)
+        manageStudentList = 2
+    End Sub
+
+    Private Sub btn_manageFees_Click(sender As Object, e As EventArgs) Handles btn_manageFees.Click
+        Dashboard.BunifuFlatButton8_Click(sender, e)
+        manageFees = 2
     End Sub
 End Class

@@ -59,13 +59,51 @@ Public Class frm_SPayments
     Public Sub btn_Enter_Click(sender As Object, e As EventArgs) Handles btn_enter.Click
         If cboSearchBy.SelectedIndex = 1 Then
             _displayToTextbox_name()
+            Dim hasScholar1 As String = "Select sl.reference_no,st.scholar_name from tbl_coll_scholarlist sl inner join tbl_scholar_type st on st.scholar_id=sl.sl_name  where stud_id='" & txtb_studID.Text & "'"
+            Try
+                dbConn.Open()
+                sqlCommand = New MySqlCommand(hasScholar1, dbConn)
+                dr = sqlCommand.ExecuteReader
+                dr.Read()
+                If dr.HasRows Then
+                    lbl_scholar.Visible = True
+                    txtb_TransNo.Text = dr(0)
+                Else
+                    lbl_scholar.Visible = False
+                    txtb_TransNo.Text = random_TaN()
+                End If
+
+            Catch ex As Exception
+                erromessage("error 108: loadToTextbox " & ex.Message)
+            Finally
+                dbConn.Close()
+            End Try
 
         Else
             _displayToTextbox_id()
+            Dim hasScholar2 As String = "Select reference_no from tbl_coll_scholarlist where stud_id='" & txtb_studID.Text & "'"
+            Try
+                dbConn.Open()
+                sqlCommand = New MySqlCommand(hasScholar2, dbConn)
+                dr = sqlCommand.ExecuteReader
+                dr.Read()
+                If dr.HasRows Then
+                    lbl_scholar.Visible = True
+                    txtb_TransNo.Text = dr(0)
+                Else
+                    lbl_scholar.Visible = False
+                    txtb_TransNo.Text = random_TaN()
+                End If
+
+            Catch ex As Exception
+                erromessage("error 108: loadToTextbox " & ex.Message)
+            Finally
+                dbConn.Close()
+            End Try
+
         End If
         lbl_name.Text = "Name: " + txtb_name.Text
         lbl_cashier.Text = cashier_name.ToUpper
-        txtb_TransNo.Text = random_TaN()
         txtb_TransDate.Text = current_date.ToString("yyyy-MM-dd")
         _dateforSemester()
         _loadToCurrentAccount()
@@ -159,6 +197,7 @@ Public Class frm_SPayments
         _dbConnection("db_lccsams")
         Try
             Dim querry3 As String = " Select s.stud_id,s.stud_Fname,s.stud_midI,s.stud_Lname,sy.sy_name,sem.sem_name,yl.yl_name ,c.crs_name,sn.st_noUnits,sn.st_rateperunit,s.sy_id,s.yl_id,s.sem_id,s.crs_id from tbl_student s inner join tbl_sch_year sy on  sy.sy_id=s.sy_id inner join tbl_semester sem  on sem.sem_id=s.sem_id inner join tbl_year_level yl on yl.yl_id=s.yl_id inner join tbl_coll_course c on c.crs_id=s.crs_id  inner join tbl_studnounits sn   on s.sy_id=sn.sy_id and s.yl_id=sn.yl_id and s.sem_id=sn.sem_id and s.crs_id=sn.crs_id and s.stud_id=sn.stud_id where s.stud_id='" & txtb_Search.Text & "'"
+
             dbConn.Open()
             sqlCommand = New MySqlCommand(querry3, dbConn)
             dr = sqlCommand.ExecuteReader
@@ -1538,5 +1577,8 @@ Public Class frm_SPayments
         End Try
     End Sub
 
+    Private Sub lbl_scholar_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles lbl_scholar.LinkClicked
+        Dashboard.BunifuFlatButton4_Click(sender, e)
 
+    End Sub
 End Class

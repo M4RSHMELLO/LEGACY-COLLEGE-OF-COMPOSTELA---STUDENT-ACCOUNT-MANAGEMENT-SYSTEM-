@@ -232,7 +232,7 @@
     <value>Amount</value>
   </data>
   <data name="dg_receipts.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 149</value>
+    <value>10, 148</value>
   </data>
   <data name="dg_receipts.Size" type="System.Drawing.Size, System.Drawing">
     <value>289, 105</value>
@@ -1440,6 +1440,39 @@
   <data name="&gt;&gt;GroupBox7.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
+  <data name="lbl_scholar.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbl_scholar.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Franklin Gothic Medium Cond, 12pt, style=Italic</value>
+  </data>
+  <data name="lbl_scholar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>234, 65</value>
+  </data>
+  <data name="lbl_scholar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>187, 21</value>
+  </data>
+  <data name="lbl_scholar.TabIndex" type="System.Int32, mscorlib">
+    <value>56</value>
+  </data>
+  <data name="lbl_scholar.Text" xml:space="preserve">
+    <value>HAS AN ACTIVE SCHOLARSHIP</value>
+  </data>
+  <data name="lbl_scholar.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;lbl_scholar.Name" xml:space="preserve">
+    <value>lbl_scholar</value>
+  </data>
+  <data name="&gt;&gt;lbl_scholar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_scholar.Parent" xml:space="preserve">
+    <value>GroupBox1</value>
+  </data>
+  <data name="&gt;&gt;lbl_scholar.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="btn_enter.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Right</value>
   </data>
@@ -1474,7 +1507,7 @@
     <value>GroupBox1</value>
   </data>
   <data name="&gt;&gt;btn_enter.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="cboSearchBy.Items" xml:space="preserve">
     <value>Id Number</value>
@@ -1501,7 +1534,7 @@
     <value>GroupBox1</value>
   </data>
   <data name="&gt;&gt;cboSearchBy.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="Label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1531,7 +1564,7 @@
     <value>GroupBox1</value>
   </data>
   <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="Label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1561,7 +1594,7 @@
     <value>GroupBox1</value>
   </data>
   <data name="&gt;&gt;Label2.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="txtb_Search.Font" type="System.Drawing.Font, System.Drawing">
     <value>Franklin Gothic Medium Cond, 12pt, style=Bold</value>
@@ -1585,7 +1618,7 @@
     <value>GroupBox1</value>
   </data>
   <data name="&gt;&gt;txtb_Search.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="GroupBox1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Franklin Gothic Medium Cond, 12pt</value>
@@ -3654,6 +3687,42 @@
   <data name="&gt;&gt;GroupBox6.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
+  <data name="LinkLabel1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="LinkLabel1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Franklin Gothic Medium Cond, 12pt, style=Italic</value>
+  </data>
+  <data name="LinkLabel1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="LinkLabel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>217, 62</value>
+  </data>
+  <data name="LinkLabel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>187, 21</value>
+  </data>
+  <data name="LinkLabel1.TabIndex" type="System.Int32, mscorlib">
+    <value>57</value>
+  </data>
+  <data name="LinkLabel1.Text" xml:space="preserve">
+    <value>HAS AN ACTIVE SCHOLARSHIP</value>
+  </data>
+  <data name="LinkLabel1.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;LinkLabel1.Name" xml:space="preserve">
+    <value>LinkLabel1</value>
+  </data>
+  <data name="&gt;&gt;LinkLabel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LinkLabel1.Parent" xml:space="preserve">
+    <value>GroupBox5</value>
+  </data>
+  <data name="&gt;&gt;LinkLabel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="btn_eEnter.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Right</value>
   </data>
@@ -3688,7 +3757,7 @@
     <value>GroupBox5</value>
   </data>
   <data name="&gt;&gt;btn_eEnter.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="cbo_eSearchBy.Items" xml:space="preserve">
     <value>Id Number</value>
@@ -3715,7 +3784,7 @@
     <value>GroupBox5</value>
   </data>
   <data name="&gt;&gt;cbo_eSearchBy.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="Label5.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -3745,7 +3814,7 @@
     <value>GroupBox5</value>
   </data>
   <data name="&gt;&gt;Label5.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="Label14.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -3775,7 +3844,7 @@
     <value>GroupBox5</value>
   </data>
   <data name="&gt;&gt;Label14.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="txtb_eSearch.Font" type="System.Drawing.Font, System.Drawing">
     <value>Franklin Gothic Medium Cond, 12pt, style=Bold</value>
@@ -3799,7 +3868,7 @@
     <value>GroupBox5</value>
   </data>
   <data name="&gt;&gt;txtb_eSearch.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="GroupBox5.Font" type="System.Drawing.Font, System.Drawing">
     <value>Franklin Gothic Medium Cond, 12pt</value>
@@ -5373,6 +5442,42 @@
   <data name="&gt;&gt;GroupBox23.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
+  <data name="LinkLabel2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="LinkLabel2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Franklin Gothic Medium Cond, 12pt, style=Italic</value>
+  </data>
+  <data name="LinkLabel2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="LinkLabel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>234, 60</value>
+  </data>
+  <data name="LinkLabel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>187, 21</value>
+  </data>
+  <data name="LinkLabel2.TabIndex" type="System.Int32, mscorlib">
+    <value>57</value>
+  </data>
+  <data name="LinkLabel2.Text" xml:space="preserve">
+    <value>HAS AN ACTIVE SCHOLARSHIP</value>
+  </data>
+  <data name="LinkLabel2.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;LinkLabel2.Name" xml:space="preserve">
+    <value>LinkLabel2</value>
+  </data>
+  <data name="&gt;&gt;LinkLabel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LinkLabel2.Parent" xml:space="preserve">
+    <value>GroupBox24</value>
+  </data>
+  <data name="&gt;&gt;LinkLabel2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="btn_sEnter.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Right</value>
   </data>
@@ -5407,7 +5512,7 @@
     <value>GroupBox24</value>
   </data>
   <data name="&gt;&gt;btn_sEnter.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="cbo_sSearchBY.Items" xml:space="preserve">
     <value>Id Number</value>
@@ -5434,7 +5539,7 @@
     <value>GroupBox24</value>
   </data>
   <data name="&gt;&gt;cbo_sSearchBY.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="Label106.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -5464,7 +5569,7 @@
     <value>GroupBox24</value>
   </data>
   <data name="&gt;&gt;Label106.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="Label107.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -5494,7 +5599,7 @@
     <value>GroupBox24</value>
   </data>
   <data name="&gt;&gt;Label107.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="txtb_sSearch.Font" type="System.Drawing.Font, System.Drawing">
     <value>Franklin Gothic Medium Cond, 12pt, style=Bold</value>
@@ -5518,7 +5623,7 @@
     <value>GroupBox24</value>
   </data>
   <data name="&gt;&gt;txtb_sSearch.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="GroupBox24.Font" type="System.Drawing.Font, System.Drawing">
     <value>Franklin Gothic Medium Cond, 12pt</value>
@@ -7089,6 +7194,42 @@
   <data name="&gt;&gt;GroupBox17.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
+  <data name="LinkLabel3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="LinkLabel3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Franklin Gothic Medium Cond, 12pt, style=Italic</value>
+  </data>
+  <data name="LinkLabel3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="LinkLabel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>225, 60</value>
+  </data>
+  <data name="LinkLabel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>187, 21</value>
+  </data>
+  <data name="LinkLabel3.TabIndex" type="System.Int32, mscorlib">
+    <value>57</value>
+  </data>
+  <data name="LinkLabel3.Text" xml:space="preserve">
+    <value>HAS AN ACTIVE SCHOLARSHIP</value>
+  </data>
+  <data name="LinkLabel3.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;LinkLabel3.Name" xml:space="preserve">
+    <value>LinkLabel3</value>
+  </data>
+  <data name="&gt;&gt;LinkLabel3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LinkLabel3.Parent" xml:space="preserve">
+    <value>GroupBox18</value>
+  </data>
+  <data name="&gt;&gt;LinkLabel3.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="btn_jEnter.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Right</value>
   </data>
@@ -7123,7 +7264,7 @@
     <value>GroupBox18</value>
   </data>
   <data name="&gt;&gt;btn_jEnter.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="cbo_jSearchBY.Items" xml:space="preserve">
     <value>Id Number</value>
@@ -7150,7 +7291,7 @@
     <value>GroupBox18</value>
   </data>
   <data name="&gt;&gt;cbo_jSearchBY.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="Label79.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -7180,7 +7321,7 @@
     <value>GroupBox18</value>
   </data>
   <data name="&gt;&gt;Label79.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="Label80.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -7210,7 +7351,7 @@
     <value>GroupBox18</value>
   </data>
   <data name="&gt;&gt;Label80.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="txtb_jSearch.Font" type="System.Drawing.Font, System.Drawing">
     <value>Franklin Gothic Medium Cond, 12pt, style=Bold</value>
@@ -7234,7 +7375,7 @@
     <value>GroupBox18</value>
   </data>
   <data name="&gt;&gt;txtb_jSearch.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="GroupBox18.Font" type="System.Drawing.Font, System.Drawing">
     <value>Franklin Gothic Medium Cond, 12pt</value>

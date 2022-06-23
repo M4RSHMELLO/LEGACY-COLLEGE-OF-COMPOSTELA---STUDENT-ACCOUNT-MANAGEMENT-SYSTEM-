@@ -313,6 +313,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>elem_ds.xsd</DependentUpon>
     </Compile>
+    <Compile Include="manage_feesType.Designer.vb">
+      <DependentUpon>manage_feesType.vb</DependentUpon>
+    </Compile>
+    <Compile Include="manage_feesType.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\coll_ds.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -443,10 +449,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>junior_ds.xsd</DependentUpon>
     </Compile>
-    <Compile Include="print_elemPreview.Designer.vb">
-      <DependentUpon>print_elemPreview.vb</DependentUpon>
+    <Compile Include="print_studStateOfAcct.Designer.vb">
+      <DependentUpon>print_studStateOfAcct.vb</DependentUpon>
     </Compile>
-    <Compile Include="print_elemPreview.vb">
+    <Compile Include="print_studStateOfAcct.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="print_preview.Designer.vb">
@@ -545,6 +551,11 @@
       <DependentUpon>senior_ds.xsd</DependentUpon>
     </Compile>
     <Compile Include="Settings.vb" />
+    <Compile Include="tfees_byC.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>tfees_byC.xsd</DependentUpon>
+    </Compile>
     <Compile Include="UpdatedSuccessfully.designer.vb">
       <DependentUpon>UpdatedSuccessfully.vb</DependentUpon>
     </Compile>
@@ -646,11 +657,14 @@
     <EmbeddedResource Include="dlg_updateYearLevel.resx">
       <DependentUpon>dlg_updateYearLevel.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="manage_feesType.resx">
+      <DependentUpon>manage_feesType.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frm_slists.resx">
       <DependentUpon>frm_slists.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="print_elemPreview.resx">
-      <DependentUpon>print_elemPreview.vb</DependentUpon>
+    <EmbeddedResource Include="print_studStateOfAcct.resx">
+      <DependentUpon>print_studStateOfAcct.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="print_preview.resx">
       <DependentUpon>print_preview.vb</DependentUpon>
@@ -821,6 +835,17 @@
     </None>
     <None Include="senior_ds.xss">
       <DependentUpon>senior_ds.xsd</DependentUpon>
+    </None>
+    <None Include="tfees_byC.xsc">
+      <DependentUpon>tfees_byC.xsd</DependentUpon>
+    </None>
+    <None Include="tfees_byC.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>tfees_byC.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="tfees_byC.xss">
+      <DependentUpon>tfees_byC.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

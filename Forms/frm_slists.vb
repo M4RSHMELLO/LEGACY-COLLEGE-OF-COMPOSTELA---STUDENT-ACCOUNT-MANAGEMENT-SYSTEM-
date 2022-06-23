@@ -846,9 +846,59 @@ Public Class frm_slists
         End Try
     End Sub
 
-    Private Sub txtb_studMI_TextChanged(sender As Object, e As EventArgs) Handles txtb_studMI.TextChanged
-
+    Private Sub btn_manageCollSY_Click(sender As Object, e As EventArgs) Handles btn_manageCollSY.Click
+        Dashboard.BunifuFlatButton5_Click(sender, e)
+        manageSY = 1
     End Sub
 
+    Private Sub btn_manageCollPayment_Click(sender As Object, e As EventArgs) Handles btn_manageCollPayment.Click
+        Dashboard.BunifuFlatButton1_Click(sender, e)
+    End Sub
 
+    Private Sub btn_manageCollFees_Click(sender As Object, e As EventArgs) Handles btn_manageCollFees.Click
+        Dashboard.BunifuFlatButton8_Click(sender, e)
+        manageFees = 1
+    End Sub
+
+    Private Sub btn_manageElemSy_Click(sender As Object, e As EventArgs) Handles btn_manageElemSy.Click
+        Dashboard.BunifuFlatButton5_Click(sender, e)
+        manageSY = 1
+    End Sub
+
+    Private Sub btn_manageElemPayment_Click(sender As Object, e As EventArgs) Handles btn_manageElemPayment.Click
+        Dashboard.BunifuFlatButton1_Click(sender, e)
+    End Sub
+
+    Private Sub btn_manageElemFees_Click(sender As Object, e As EventArgs) Handles btn_manageElemFees.Click
+        Dashboard.BunifuFlatButton8_Click(sender, e)
+        manageFees = 1
+    End Sub
+
+    Private Sub btn_manageSeniorSy_Click(sender As Object, e As EventArgs) Handles btn_manageSeniorSy.Click
+        Dashboard.BunifuFlatButton5_Click(sender, e)
+        manageSY = 1
+    End Sub
+
+    Private Sub btn_manageSeniorPayment_Click(sender As Object, e As EventArgs) Handles btn_manageSeniorPayment.Click
+        Dashboard.BunifuFlatButton1_Click(sender, e)
+    End Sub
+
+    Private Sub btn_manageSeniorFees_Click(sender As Object, e As EventArgs) Handles btn_manageSeniorFees.Click
+        Dashboard.BunifuFlatButton8_Click(sender, e)
+        manageFees = 1
+    End Sub
+
+    Private Sub btn_manageJuniorSy_Click(sender As Object, e As EventArgs) Handles btn_manageJuniorSy.Click
+        Dashboard.BunifuFlatButton5_Click(sender, e)
+        manageSY = 1
+    End Sub
+
+    Private Sub btn_manageJuniorPayment_Click(sender As Object, e As EventArgs) Handles btn_manageJuniorPayment.Click
+        Dashboard.BunifuFlatButton1_Click(sender, e)
+    End Sub
+
+    Private Sub btn_manageJuniorFees_Click(sender As Object, e As EventArgs) Handles btn_manageJuniorFees.Click
+        Dashboard.BunifuFlatButton8_Click(sender, e)
+        manageFees = 1
+    End Sub
 End Class

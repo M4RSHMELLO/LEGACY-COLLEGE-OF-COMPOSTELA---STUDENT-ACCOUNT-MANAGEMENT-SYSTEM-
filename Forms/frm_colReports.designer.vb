@@ -39,8 +39,10 @@ Partial Class frm_colReports
         Me.lbl_titleReport = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.cbo_department = New System.Windows.Forms.ComboBox()
+        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
         CType(Me.dg_coll_rpt, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
@@ -53,7 +55,7 @@ Partial Class frm_colReports
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1154, 76)
+        Me.Panel1.Size = New System.Drawing.Size(1154, 64)
         Me.Panel1.TabIndex = 0
         '
         'Label1
@@ -145,7 +147,7 @@ Partial Class frm_colReports
         Me.btn_printrev.IconVisible = False
         Me.btn_printrev.IconZoom = 90.0R
         Me.btn_printrev.IsTab = False
-        Me.btn_printrev.Location = New System.Drawing.Point(108, 605)
+        Me.btn_printrev.Location = New System.Drawing.Point(878, 620)
         Me.btn_printrev.Margin = New System.Windows.Forms.Padding(3, 8, 3, 8)
         Me.btn_printrev.Name = "btn_printrev"
         Me.btn_printrev.Normalcolor = System.Drawing.SystemColors.ButtonFace
@@ -191,19 +193,19 @@ Partial Class frm_colReports
         Me.dg_coll_rpt.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dg_coll_rpt.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dg_coll_rpt.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.tran_id, Me.fees_date, Me.fees_name, Me.fees_amnt})
-        Me.dg_coll_rpt.Location = New System.Drawing.Point(108, 183)
+        Me.dg_coll_rpt.Location = New System.Drawing.Point(32, 49)
         Me.dg_coll_rpt.Name = "dg_coll_rpt"
         Me.dg_coll_rpt.ReadOnly = True
         Me.dg_coll_rpt.RowHeadersVisible = False
         Me.dg_coll_rpt.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dg_coll_rpt.Size = New System.Drawing.Size(938, 411)
+        Me.dg_coll_rpt.Size = New System.Drawing.Size(938, 382)
         Me.dg_coll_rpt.TabIndex = 25
         '
         'lbl_total
         '
         Me.lbl_total.AutoSize = True
         Me.lbl_total.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_total.Location = New System.Drawing.Point(753, 613)
+        Me.lbl_total.Location = New System.Drawing.Point(705, 434)
         Me.lbl_total.Name = "lbl_total"
         Me.lbl_total.Size = New System.Drawing.Size(68, 25)
         Me.lbl_total.TabIndex = 55
@@ -214,7 +216,7 @@ Partial Class frm_colReports
         Me.lbl_titleReport.AutoSize = True
         Me.lbl_titleReport.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 17.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_titleReport.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.lbl_titleReport.Location = New System.Drawing.Point(103, 151)
+        Me.lbl_titleReport.Location = New System.Drawing.Point(36, 17)
         Me.lbl_titleReport.Name = "lbl_titleReport"
         Me.lbl_titleReport.Size = New System.Drawing.Size(321, 29)
         Me.lbl_titleReport.TabIndex = 57
@@ -225,7 +227,7 @@ Partial Class frm_colReports
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 17.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label2.Location = New System.Drawing.Point(339, 93)
+        Me.Label2.Location = New System.Drawing.Point(341, 78)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(197, 29)
         Me.Label2.TabIndex = 57
@@ -237,11 +239,21 @@ Partial Class frm_colReports
         Me.cbo_department.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbo_department.FormattingEnabled = True
         Me.cbo_department.Items.AddRange(New Object() {"College Dept.", "Elementary Dept.", "Senior-High Dept", "Junior-High Dept"})
-        Me.cbo_department.Location = New System.Drawing.Point(542, 89)
+        Me.cbo_department.Location = New System.Drawing.Point(544, 74)
         Me.cbo_department.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
         Me.cbo_department.Name = "cbo_department"
         Me.cbo_department.Size = New System.Drawing.Size(274, 33)
         Me.cbo_department.TabIndex = 58
+        '
+        'Panel2
+        '
+        Me.Panel2.Controls.Add(Me.dg_coll_rpt)
+        Me.Panel2.Controls.Add(Me.lbl_total)
+        Me.Panel2.Controls.Add(Me.lbl_titleReport)
+        Me.Panel2.Location = New System.Drawing.Point(76, 134)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(982, 475)
+        Me.Panel2.TabIndex = 60
         '
         'frm_colReports
         '
@@ -249,13 +261,11 @@ Partial Class frm_colReports
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.cbo_department)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.lbl_titleReport)
-        Me.Controls.Add(Me.lbl_total)
         Me.Controls.Add(Me.btn_printrev)
-        Me.Controls.Add(Me.dg_coll_rpt)
         Me.Controls.Add(Me.txtb_totalFeesAmount)
         Me.Controls.Add(Me.Label16)
         Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.Panel2)
         Me.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
         Me.Name = "frm_colReports"
@@ -263,6 +273,8 @@ Partial Class frm_colReports
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.dg_coll_rpt, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -284,4 +296,5 @@ Partial Class frm_colReports
     Friend WithEvents lbl_titleReport As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents cbo_department As ComboBox
+    Friend WithEvents Panel2 As Panel
 End Class

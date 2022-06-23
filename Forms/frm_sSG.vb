@@ -17,7 +17,7 @@
             txtb_studSem.Visible = True
             Dim coll_studScholar As String = "select s.stud_id,s.stud_fname,s.stud_lname,s.stud_midI,st.scholar_name,sy.sy_name,yl.yl_name  from tbl_student s  inner join tbl_sch_year sy  on s.sy_id=sy.sy_id inner join tbl_year_level yl on s.yl_id=yl.yl_id  inner join tbl_coll_scholarlist sl on sl.stud_id=s.stud_id inner join tbl_scholar_type st on sl.sl_name=st.scholar_id order by stud_lname asc"
             _displayRecords(coll_studScholar, dg_StudScholarRec)
-
+            _loadToCombobox(scholar_list, cbo_scholarType)
         End If
         If cbo_SelectDept.SelectedIndex = 1 Then
 
@@ -25,7 +25,7 @@
             dg_StudScholarRec.Columns(1).DataPropertyName = "estud_fname"
             dg_StudScholarRec.Columns(2).DataPropertyName = "estud_lname"
             dg_StudScholarRec.Columns(3).DataPropertyName = "estud_mi"
-            dg_StudScholarRec.Columns(4).DataPropertyName = "sl_name"
+            dg_StudScholarRec.Columns(4).DataPropertyName = "scholar_name"
             dg_StudScholarRec.Columns(5).DataPropertyName = "esy_name"
             dg_StudScholarRec.Columns(6).DataPropertyName = "egl_name"
             lbl_level.Text = "GRADE LEVEL"
@@ -33,15 +33,16 @@
             lbl_sem.Visible = False
             txtb_studCourse.Visible = False
             txtb_studSem.Visible = False
-            Dim elem_studScholar As String = "select s.estud_id,s.estud_fname,s.estud_lname,s.estud_mi,sl.sl_name ,sy.esy_name,gl.egl_name from tbl_elem_students  s inner join tbl_elem_sy sy  on sy.esy_id=s.esy_id inner join tbl_elem_gradelevel gl on  s.egl_id=gl.egl_id  inner join tbl_elem_scholarlist sl on sl.stud_id=s.estud_id  order by s.estud_lname asc"
+            Dim elem_studScholar As String = "select s.estud_id,s.estud_fname,s.estud_lname,s.estud_mi,st.scholar_name ,sy.esy_name,gl.egl_name from tbl_elem_students  s inner join tbl_elem_sy sy  on sy.esy_id=s.esy_id inner join tbl_elem_gradelevel gl on  s.egl_id=gl.egl_id  inner join tbl_elem_scholarlist sl on sl.stud_id=s.estud_id  inner join tbl_scholar_type st on sl.sl_name=st.scholar_id order by s.estud_lname asc"
             _displayRecords(elem_studScholar, dg_StudScholarRec)
+            _loadToCombobox(scholar_list, cbo_scholarType)
         End If
         If cbo_SelectDept.SelectedIndex = 2 Then
             dg_StudScholarRec.Columns(0).DataPropertyName = "sstud_id"
             dg_StudScholarRec.Columns(1).DataPropertyName = "sstud_fname"
             dg_StudScholarRec.Columns(2).DataPropertyName = "sstud_lname"
             dg_StudScholarRec.Columns(3).DataPropertyName = "sstud_mi"
-            dg_StudScholarRec.Columns(4).DataPropertyName = "sl_name"
+            dg_StudScholarRec.Columns(4).DataPropertyName = "scholar_name"
             dg_StudScholarRec.Columns(5).DataPropertyName = "ssy_name"
             dg_StudScholarRec.Columns(6).DataPropertyName = "sgl_name"
             lbl_level.Text = "GRADE LEVEL"
@@ -50,28 +51,29 @@
 
             txtb_studCourse.Visible = False
             txtb_studSem.Visible = False
-            Dim senior_studScholar As String = "select  s.sstud_id,s.sstud_fname,s.sstud_lname,s.sstud_mi,sl.sl_name,sy.ssy_name,gl.sgl_name from tbl_seniorhigh_students  s inner join tbl_seniorhigh_sy sy  on s.ssy_id=sy.ssy_id inner join tbl_seniorhigh_gl gl on s.sgl_id=gl.sgl_id inner join tbl_senior_scholarlist sl on sl.stud_id=s.sstud_id  order by s.sstud_lname asc"
+            Dim senior_studScholar As String = "select  s.sstud_id,s.sstud_fname,s.sstud_lname,s.sstud_mi,st.scholar_name,sy.ssy_name,gl.sgl_name from tbl_seniorhigh_students  s inner join tbl_seniorhigh_sy sy  on s.ssy_id=sy.ssy_id inner join tbl_seniorhigh_gl gl on s.sgl_id=gl.sgl_id inner join tbl_senior_scholarlist sl on sl.stud_id=s.sstud_id inner join tbl_scholar_type st on sl.sl_name=st.scholar_id order by s.sstud_lname asc"
             _displayRecords(senior_studScholar, dg_StudScholarRec)
-
+            _loadToCombobox(scholar_list, cbo_scholarType)
         End If
         If cbo_SelectDept.SelectedIndex = 3 Then
             dg_StudScholarRec.Columns(0).DataPropertyName = "jstud_id"
             dg_StudScholarRec.Columns(1).DataPropertyName = "jstud_fname"
             dg_StudScholarRec.Columns(2).DataPropertyName = "jstud_lname"
             dg_StudScholarRec.Columns(3).DataPropertyName = "jstud_mi"
-            dg_StudScholarRec.Columns(4).DataPropertyName = "sl_name"
+            dg_StudScholarRec.Columns(4).DataPropertyName = "scholar_name"
             dg_StudScholarRec.Columns(5).DataPropertyName = "jsy_name"
             dg_StudScholarRec.Columns(6).DataPropertyName = "jgl_name"
             lbl_level.Text = "GRADE LEVEL"
 
             txtb_studCourse.Visible = False
             txtb_studSem.Visible = False
-            Dim junior_studScholar As String = "select  s.jstud_id,s.jstud_fname,s.jstud_lname,s.jstud_mi,sl.sl_name,sy.jsy_name,gl.jgl_name from tbl_juniorhigh_students s inner join tbl_juniorhigh_sy sy  on s.jsy_id=sy.jsy_id inner join tbl_juniorhigh_gradelevel gl on s.jgl_id=gl.jgl_id  inner join tbl_elem_scholarlist sl on sl.stud_id=s.jstud_id  order by s.jstud_lname asc"
+            Dim junior_studScholar As String = "select  s.jstud_id,s.jstud_fname,s.jstud_lname,s.jstud_mi,st.scholar_name,sy.jsy_name,gl.jgl_name from tbl_juniorhigh_students s inner join tbl_juniorhigh_sy sy  on s.jsy_id=sy.jsy_id inner join tbl_juniorhigh_gradelevel gl on s.jgl_id=gl.jgl_id  inner join tbl_elem_scholarlist sl on sl.stud_id=s.jstud_id inner join tbl_scholar_type st on sl.sl_name=st.scholar_id order by s.jstud_lname asc"
             _displayRecords(junior_studScholar, dg_StudScholarRec)
+            _loadToCombobox(scholar_list, cbo_scholarType)
         End If
     End Sub
     Private Sub cbo_SelectDept_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbo_SelectDept.SelectedIndexChanged
-        txtb_ScholarType.Clear()
+        cbo_scholarType.SelectedIndex = -1
         txtb_ScholarAmnt.Clear()
         _displayScholarList()
     End Sub
@@ -84,13 +86,13 @@
                 Select Case cbo_SelectDept.SelectedIndex
                     Case 0
 
-                        _displayRecords("select s.stud_id,s.stud_fname,s.stud_lname,s.stud_midI,sl.sl_name,sy.sy_name,yl.yl_name from tbl_student s  inner join tbl_sch_year sy  on s.sy_id=sy.sy_id inner join tbl_year_level yl on s.yl_id=yl.yl_id left join tbl_coll_scholarlist sl on sl.stud_id=s.stud_id where stud_Lname Like '%" & txtb_Search.Text & "%' or stud_Fname  Like '%" & txtb_Search.Text & "%' ", dg_StudScholarRec)
+                        _displayRecords("select s.stud_id,s.stud_fname,s.stud_lname,s.stud_midI,st.scholar_name,sy.sy_name,yl.yl_name from tbl_student s  inner join tbl_sch_year sy  on s.sy_id=sy.sy_id inner join tbl_year_level yl on s.yl_id=yl.yl_id left join tbl_coll_scholarlist sl on sl.stud_id=s.stud_id  left join tbl_scholar_type st on sl.sl_name=st.scholar_id  where stud_Lname Like '%" & txtb_Search.Text & "%' or stud_Fname  Like '%" & txtb_Search.Text & "%' ", dg_StudScholarRec)
                     Case 1
-                        _displayRecords("select s.estud_id,s.estud_fname,s.estud_lname,s.estud_mi,sl.sl_name ,sy.esy_name,gl.egl_name from tbl_elem_students  s inner join tbl_elem_sy sy  on sy.esy_id=s.esy_id inner join tbl_elem_gradelevel gl on  s.egl_id=gl.egl_id    left join tbl_elem_scholarlist sl on sl.stud_id=estud_id where estud_lname Like '%" & txtb_Search.Text & "%' or estud_fname  Like '%" & txtb_Search.Text & "%' ", dg_StudScholarRec)
+                        _displayRecords("select s.estud_id,s.estud_fname,s.estud_lname,s.estud_mi,st.scholar_name ,sy.esy_name,gl.egl_name from tbl_elem_students  s inner join tbl_elem_sy sy  on sy.esy_id=s.esy_id inner join tbl_elem_gradelevel gl on  s.egl_id=gl.egl_id    left join tbl_elem_scholarlist sl on sl.stud_id=estud_id  left join tbl_scholar_type st on sl.sl_name=st.scholar_id where estud_lname Like '%" & txtb_Search.Text & "%' or estud_fname  Like '%" & txtb_Search.Text & "%' ", dg_StudScholarRec)
                     Case 2
-                        _displayRecords("select  s.sstud_id,s.sstud_fname,s.sstud_lname,s.sstud_mi,sl.sl_name,sy.ssy_name,gl.sgl_name from tbl_seniorhigh_students  s inner join tbl_seniorhigh_sy sy  on s.ssy_id=sy.ssy_id inner join tbl_seniorhigh_gl gl on s.sgl_id=gl.sgl_id  left join tbl_senior_scholarlist sl on sl.stud_id=sstud_id where sstud_lname Like '%" & txtb_Search.Text & "%' or sstud_fname  Like '%" & txtb_Search.Text & "%' ", dg_StudScholarRec)
+                        _displayRecords("select  s.sstud_id,s.sstud_fname,s.sstud_lname,s.sstud_mi,st.scholar_name,sy.ssy_name,gl.sgl_name from tbl_seniorhigh_students  s inner join tbl_seniorhigh_sy sy  on s.ssy_id=sy.ssy_id inner join tbl_seniorhigh_gl gl on s.sgl_id=gl.sgl_id  left join tbl_senior_scholarlist sl on sl.stud_id=sstud_id left join tbl_scholar_type st on sl.sl_name=st.scholar_id where sstud_lname Like '%" & txtb_Search.Text & "%' or sstud_fname  Like '%" & txtb_Search.Text & "%' ", dg_StudScholarRec)
                     Case 3
-                        _displayRecords("select  s.jstud_id,s.jstud_fname,s.jstud_lname,s.jstud_mi,sl.sl_name,sy.jsy_name,gl.jgl_name from tbl_juniorhigh_students s inner join tbl_juniorhigh_sy sy  on s.jsy_id=sy.jsy_id inner join tbl_juniorhigh_gradelevel gl on s.jgl_id=gl.jgl_id  left join tbl_junior_scholarlist sl on sl.stud_id=jstud_id  where jstud_lname Like '%" & txtb_Search.Text & "%' or jstud_fname  Like '%" & txtb_Search.Text & "%' ", dg_StudScholarRec)
+                        _displayRecords("select  s.jstud_id,s.jstud_fname,s.jstud_lname,s.jstud_mi,st.scholar_name,sy.jsy_name,gl.jgl_name from tbl_juniorhigh_students s inner join tbl_juniorhigh_sy sy  on s.jsy_id=sy.jsy_id inner join tbl_juniorhigh_gradelevel gl on s.jgl_id=gl.jgl_id  left join tbl_junior_scholarlist sl on sl.stud_id=jstud_id left join tbl_scholar_type st on sl.sl_name=st.scholar_id where jstud_lname Like '%" & txtb_Search.Text & "%' or jstud_fname  Like '%" & txtb_Search.Text & "%' ", dg_StudScholarRec)
 
 
                 End Select
@@ -98,13 +100,13 @@
                 Select Case cbo_SelectDept.SelectedIndex
                     Case 0
 
-                        _displayRecords(" select s.stud_id,s.stud_fname,s.stud_lname,s.stud_midI,sl.sl_name,sy.sy_name,yl.yl_name from tbl_student s  inner join tbl_sch_year sy  on s.sy_id=sy.sy_id inner join tbl_year_level yl on s.yl_id=yl.yl_id  left join tbl_coll_scholarlist sl on sl.stud_id=stud_id  where stud_id Like '" & txtb_Search.Text & "%' ", dg_StudScholarRec)
+                        _displayRecords(" select s.stud_id,s.stud_fname,s.stud_lname,s.stud_midI,st.scholar_name,sy.sy_name,yl.yl_name from tbl_student s  inner join tbl_sch_year sy  on s.sy_id=sy.sy_id inner join tbl_year_level yl on s.yl_id=yl.yl_id  left join tbl_coll_scholarlist sl on sl.stud_id=stud_id left join tbl_scholar_type st on sl.sl_name=st.scholar_id where stud_id Like '" & txtb_Search.Text & "%' ", dg_StudScholarRec)
                     Case 1
-                        _displayRecords("select s.estud_id,s.estud_fname,s.estud_lname,s.estud_mi,sl.sl_name ,sy.esy_name,gl.egl_name from tbl_elem_students  s inner join tbl_elem_sy sy  on sy.esy_id=s.esy_id inner join tbl_elem_gradelevel gl on  s.egl_id=gl.egl_id    left join tbl_elem_scholarlist sl on sl.stud_id=estud_id where estud_id='" & txtb_Search.Text & "' ", dg_StudScholarRec)
+                        _displayRecords("select s.estud_id,s.estud_fname,s.estud_lname,s.estud_mi,st.scholar_name ,sy.esy_name,gl.egl_name from tbl_elem_students  s inner join tbl_elem_sy sy  on sy.esy_id=s.esy_id inner join tbl_elem_gradelevel gl on  s.egl_id=gl.egl_id    left join tbl_elem_scholarlist sl on sl.stud_id=estud_id left join tbl_scholar_type st on sl.sl_name=st.scholar_id where estud_id='" & txtb_Search.Text & "' ", dg_StudScholarRec)
                     Case 2
-                        _displayRecords("select  s.sstud_id,s.sstud_fname,s.sstud_lname,s.sstud_mi,sl.sl_name,sy.ssy_name,gl.sgl_name from tbl_seniorhigh_students  s inner join tbl_seniorhigh_sy sy  on s.ssy_id=sy.ssy_id inner join tbl_seniorhigh_gl gl on s.sgl_id=gl.sgl_id  left join tbl_senior_scholarlist sl on sl.stud_id=sstud_id where sstud_id='" & txtb_Search.Text & "' ", dg_StudScholarRec)
+                        _displayRecords("select  s.sstud_id,s.sstud_fname,s.sstud_lname,s.sstud_mi,st.scholar_name,sy.ssy_name,gl.sgl_name from tbl_seniorhigh_students  s inner join tbl_seniorhigh_sy sy  on s.ssy_id=sy.ssy_id inner join tbl_seniorhigh_gl gl on s.sgl_id=gl.sgl_id  left join tbl_senior_scholarlist sl on sl.stud_id=sstud_id left join tbl_scholar_type st on sl.sl_name=st.scholar_id  where sstud_id='" & txtb_Search.Text & "' ", dg_StudScholarRec)
                     Case 3
-                        _displayRecords("select  s.jstud_id,s.jstud_fname,s.jstud_lname,s.jstud_mi,sl.sl_name,sy.jsy_name,gl.jgl_name from tbl_juniorhigh_students s inner join tbl_juniorhigh_sy sy  on s.jsy_id=sy.jsy_id inner join tbl_juniorhigh_gradelevel gl on s.jgl_id=gl.jgl_id   left join tbl_junior_scholarlist sl on sl.stud_id=s.jstud_id where jstud_id='" & txtb_Search.Text & "' ", dg_StudScholarRec)
+                        _displayRecords("select  s.jstud_id,s.jstud_fname,s.jstud_lname,s.jstud_mi,st.scholar_name,sy.jsy_name,gl.jgl_name from tbl_juniorhigh_students s inner join tbl_juniorhigh_sy sy  on s.jsy_id=sy.jsy_id inner join tbl_juniorhigh_gradelevel gl on s.jgl_id=gl.jgl_id   left join tbl_junior_scholarlist sl on sl.stud_id=s.jstud_id left join tbl_scholar_type st on sl.sl_name=st.scholar_id where jstud_id='" & txtb_Search.Text & "' ", dg_StudScholarRec)
 
                 End Select
             Case False
@@ -122,8 +124,11 @@
         Try
             Dim i = e.RowIndex
             With dg_StudScholarRec
+                cbo_scholarType.SelectedIndex = -1
                 txtb_ScholarAmnt.Text = 0
-                txtb_ScholarType.Clear()
+                txtb_refNo.Clear()
+
+
                 Dim Course As String = "Select c.crs_name from tbl_coll_course  c inner join tbl_student sc on sc.crs_id=c.crs_id  where sc.stud_id='" & .Item(0, i).Value & "'"
                 Dim Semester As String = "Select sm.sem_name from tbl_semester sm inner join tbl_student s on s.sem_id=sm.sem_id where s.stud_id='" & .Item(0, i).Value & "'"
                 Dim coll_sl As String = "Select sl.sl_amnt,sl.sl_status  from  tbl_coll_scholarlist sl inner join tbl_student s on sl.stud_id=s.stud_id where s.stud_id='" & .Item(0, i).Value & "'"
@@ -253,15 +258,15 @@
             _insertData(insert_sl)
         End If
         If cbo_SelectDept.SelectedIndex = 1 Then
-            Dim insert_sl As String = "Insert into tbl_elem_scholarlist values(0,'" & txtb_studid.Text & "','" & txtb_ScholarType.Text & "','" & txtb_refNo.Text & "','" & stat & "')"
+            Dim insert_sl As String = "Insert into tbl_elem_scholarlist values(0,'" & txtb_studid.Text & "','" & cbo_scholarType.SelectedValue & "','" & txtb_ScholarAmnt.Text & "','" & txtb_refNo.Text & "','" & stat & "')"
             _insertData(insert_sl)
         End If
         If cbo_SelectDept.SelectedIndex = 2 Then
-            Dim insert_sl As String = "Insert into tbl_senior_scholarlist values(0,'" & txtb_studid.Text & "','" & txtb_ScholarType.Text & "','" & txtb_ScholarAmnt.Text & "','" & stat & "')"
+            Dim insert_sl As String = "Insert into tbl_senior_scholarlist values(0,'" & txtb_studid.Text & "','" & cbo_scholarType.SelectedValue & "','" & txtb_ScholarAmnt.Text & "','" & txtb_refNo.Text & "','" & stat & "')"
             _insertData(insert_sl)
         End If
         If cbo_SelectDept.SelectedIndex = 3 Then
-            Dim insert_sl As String = "Insert into tbl_junior_scholarlist values(0,'" & txtb_studid.Text & "','" & txtb_ScholarType.Text & "','" & txtb_ScholarAmnt.Text & "','" & stat & "')"
+            Dim insert_sl As String = "Insert into tbl_junior_scholarlist values(0,'" & txtb_studid.Text & "','" & cbo_scholarType.SelectedValue & "','" & txtb_ScholarAmnt.Text & "','" & txtb_refNo.Text & "','" & stat & "')"
             _insertData(insert_sl)
         End If
     End Sub
@@ -272,12 +277,13 @@
         If btn_add.Text = "ADD" Then
             If dlg_scholarship_add.ShowDialog = DialogResult.OK Then
                 btn_add.Text = "SAVE"
-                txtb_ScholarType.Enabled = True
+                cbo_scholarType.Enabled = True
                 txtb_ScholarAmnt.Enabled = True
+                txtb_refNo.Enabled = True
             End If
         ElseIf btn_add.Text = "SAVE" Then
             Dim status As Integer = 0
-            If txtb_ScholarType.Text = "" Or txtb_ScholarAmnt.Text = "" Then
+            If cbo_scholarType.Text = "" Or txtb_ScholarAmnt.Text = "" Then
                 dlg_fillup.ShowDialog()
             Else
                 If rb_active.Checked = True Then
@@ -287,8 +293,9 @@
                 End If
                 _insert_slist(status)
                 If dlg_savesuccessfully.ShowDialog() = DialogResult.OK Then
-                    txtb_ScholarType.Enabled = False
+                    cbo_scholarType.Enabled = False
                     txtb_ScholarAmnt.Enabled = False
+                    txtb_refNo.Enabled = False
                     _displayScholarList()
                     btn_add.Text = "ADD"
                 End If
@@ -298,22 +305,22 @@
     End Sub
     Sub update_sl(ByVal stat As Integer)
         If cbo_SelectDept.SelectedIndex = 0 Then
-            Dim update_sl As String = "update  tbl_coll_scholarlist set sl_name='" & txtb_ScholarType.Text & "',sl_amnt='" & txtb_ScholarAmnt.Text & "',sl_status='" & stat & "' where stud_id='" & txtb_studid.Text & "' "
+            Dim update_sl As String = "update  tbl_coll_scholarlist set sl_name='" & cbo_scholarType.SelectedValue & "',sl_amnt='" & txtb_ScholarAmnt.Text & "',reference_no='" & txtb_refNo.Text & "',sl_status='" & stat & "' where stud_id='" & txtb_studid.Text & "' "
             _updateData(update_sl)
 
         End If
         If cbo_SelectDept.SelectedIndex = 1 Then
-            Dim update_sl As String = "update  tbl_elem_scholarlist set sl_name='" & txtb_ScholarType.Text & "',sl_amnt='" & txtb_ScholarAmnt.Text & "',sl_status='" & stat & "' where stud_id='" & txtb_studid.Text & "' "
+            Dim update_sl As String = "update  tbl_elem_scholarlist set sl_name='" & cbo_scholarType.SelectedValue & "',sl_amnt='" & txtb_ScholarAmnt.Text & "',sl_status='" & stat & "' where stud_id='" & txtb_studid.Text & "' "
             _updateData(update_sl)
 
         End If
         If cbo_SelectDept.SelectedIndex = 2 Then
-            Dim update_sl As String = "update  tbl_senior_scholarlist set sl_name='" & txtb_ScholarType.Text & "',sl_amnt='" & txtb_ScholarAmnt.Text & "',sl_status='" & stat & "' where stud_id='" & txtb_studid.Text & "' "
+            Dim update_sl As String = "update  tbl_senior_scholarlist set sl_name='" & cbo_scholarType.SelectedValue & "',sl_amnt='" & txtb_ScholarAmnt.Text & "',sl_status='" & stat & "' where stud_id='" & txtb_studid.Text & "' "
             _updateData(update_sl)
 
         End If
         If cbo_SelectDept.SelectedIndex = 3 Then
-            Dim update_sl As String = "update  tbl_junior_scholarlist set sl_name='" & txtb_ScholarType.Text & "',sl_amnt='" & txtb_ScholarAmnt.Text & "',sl_status='" & stat & "' where stud_id='" & txtb_studid.Text & "' "
+            Dim update_sl As String = "update  tbl_junior_scholarlist set sl_name='" & cbo_scholarType.SelectedValue & "',sl_amnt='" & txtb_ScholarAmnt.Text & "',sl_status='" & stat & "' where stud_id='" & txtb_studid.Text & "' "
             _updateData(update_sl)
 
         End If
@@ -322,15 +329,14 @@
         If btn_update.Text = "UPDATE" Then
             If dlg_scholarship_update.ShowDialog = DialogResult.OK Then
                 btn_update.Text = "SAVE"
-                txtb_ScholarType.Enabled = True
+                cbo_scholarType.Enabled = True
                 txtb_ScholarAmnt.Enabled = True
+                txtb_refNo.Enabled = True
             End If
         ElseIf btn_update.Text = "SAVE" Then
             Dim status As Integer = 0
-            If txtb_ScholarType.Text = "" Or txtb_ScholarAmnt.Text = "" Then
+            If cbo_scholarType.Text = "" Or txtb_ScholarAmnt.Text = "" Then
                 dlg_fillup.ShowDialog()
-                txtb_ScholarType.Enabled = True
-                txtb_ScholarAmnt.Enabled = True
             Else
                 If rb_active.Checked = True Then
                     status = 1
@@ -338,11 +344,13 @@
                     status = 0
                 End If
                 update_sl(status)
+
                 If dlg_savesuccessfully.ShowDialog() = DialogResult.OK Then
-                    txtb_ScholarType.Enabled = False
+                    cbo_scholarType.Enabled = False
                     txtb_ScholarAmnt.Enabled = False
                     _displayScholarList()
                     btn_update.Text = "UPDATE"
+                    txtb_refNo.Enabled = False
                 End If
             End If
         End If
@@ -353,9 +361,8 @@
 
     Private Sub btn_cancel_Click(sender As Object, e As EventArgs) Handles btn_cancel.Click
         _displayScholarList()
-        txtb_ScholarType.Clear()
         txtb_ScholarAmnt.Clear()
-        txtb_ScholarType.Enabled = False
+        cbo_scholarType.Enabled = False
         txtb_ScholarAmnt.Enabled = False
         btn_add.Text = "ADD"
         btn_update.Text = "UPDATE"
@@ -366,5 +373,13 @@
     Private Sub btn_manageScholar_Click(sender As Object, e As EventArgs) Handles btn_manageScholar.Click
         _displayRecords(scholar_list, ScholarshipDetails.dg_scholarTypeList)
         ScholarshipDetails.ShowDialog()
+    End Sub
+
+    Private Sub dg_StudScholarRec_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dg_StudScholarRec.CellContentClick
+
+    End Sub
+
+    Private Sub FlowLayoutPanel1_Paint(sender As Object, e As PaintEventArgs) Handles FlowLayoutPanel1.Paint
+
     End Sub
 End Class

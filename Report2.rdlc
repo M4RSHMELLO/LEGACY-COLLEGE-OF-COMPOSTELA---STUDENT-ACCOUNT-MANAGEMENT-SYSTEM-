@@ -457,8 +457,8 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>coll_rpt</DataSetName>
-        <Top>0.5543in</Top>
-        <Left>0.41542in</Left>
+        <Top>0.06944in</Top>
+        <Left>0.37695in</Left>
         <Height>0.75in</Height>
         <Width>5.64584in</Width>
         <Style>
@@ -467,47 +467,14 @@
           </Border>
         </Style>
       </Tablix>
-      <Textbox Name="ReportName1">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value> COLLECTION REPORT FOR COLLEGE DEPARTMENT</Value>
-                <Style>
-                  <FontFamily>franklin Gothic Book</FontFamily>
-                  <FontWeight>Bold</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>ReportName1</rd:DefaultName>
-        <Top>0.18972in</Top>
-        <Left>0.41542in</Left>
-        <Height>0.25in</Height>
-        <Width>3.61458in</Width>
-        <ZIndex>1</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
     </ReportItems>
-    <Height>3.4375in</Height>
+    <Height>4.68972in</Height>
     <Style />
   </Body>
   <Width>6.5in</Width>
   <Page>
     <PageHeader>
-      <Height>1.0382in</Height>
+      <Height>1.57987in</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -631,6 +598,50 @@
             <PaddingBottom>2pt</PaddingBottom>
           </Style>
         </Textbox>
+        <Line Name="Line1">
+          <Top>1.13417in</Top>
+          <Height>0in</Height>
+          <Width>6.5in</Width>
+          <ZIndex>4</ZIndex>
+          <Style>
+            <Border>
+              <Style>Solid</Style>
+            </Border>
+          </Style>
+        </Line>
+        <Textbox Name="ReportName4">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value> COLLECTION REPORT FOR COLLEGE DEPARTMENT</Value>
+                  <Style>
+                    <FontFamily>franklin Gothic Book</FontFamily>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>ReportName1</rd:DefaultName>
+          <Top>1.2882in</Top>
+          <Left>0.16542in</Left>
+          <Height>0.25in</Height>
+          <Width>3.41666in</Width>
+          <ZIndex>5</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
       </ReportItems>
       <Style>
         <Border>
@@ -652,6 +663,13 @@
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
       <rd:DataSourceID>c06f678a-5224-47c9-be30-dda8c476e3f4</rd:DataSourceID>
+    </DataSource>
+    <DataSource Name="tfees_byC">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>5e41e232-01cf-4e4d-91a0-e160565b06bf</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>

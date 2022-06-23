@@ -22,15 +22,50 @@
             erromessage(ex.Message)
         End Try
     End Sub
-    Private Sub BunifuFlatButton1_Click(sender As Object, e As EventArgs) Handles btn_manageP.Click
+    Public Sub BunifuFlatButton1_Click(sender As Object, e As EventArgs) Handles btn_manageP.Click
         addContent(frm_sP, btn_manageP)
         frm_sP.lbl_cashier.Text = cashier_name.ToUpper
+        selected_menu_managePayment(frm_sL.TabControl1)
+    End Sub
+    Sub selected_menu_managePayment(tabCTRL As TabControl)
+        Select Case tabCTRL.SelectedIndex
+            Case 0
+                frm_sP.TabControl1.SelectedIndex = 0
+            Case 1
+                frm_sP.TabControl1.SelectedIndex = 1
+            Case 2
+                frm_sP.TabControl1.SelectedIndex = 2
+            Case 3
+                frm_sP.TabControl1.SelectedIndex = 3
+            Case Else
+        End Select
     End Sub
 
     Public Sub BunifuFlatButton6_Click(sender As Object, e As EventArgs) Handles btn_menuStudentsList.Click
+
         addContent(frm_sL, btn_menuStudentsList)
+        If manageStudentList = 1 Then
+            selected_menu_StudentList(frm_mP.TabControl1)
+        ElseIf manageStudentList = 2 Then
+            selected_menu_StudentList(frm_mY.TabControl1)
+
+        End If
+
     End Sub
     Public studIdClick As Integer
+    Sub selected_menu_StudentList(tabCTRL As TabControl)
+        Select Case tabCTRL.SelectedIndex
+            Case 0
+                frm_sL.TabControl1.SelectedIndex = 0
+            Case 1
+                frm_sL.TabControl1.SelectedIndex = 1
+            Case 2
+                frm_sL.TabControl1.SelectedIndex = 2
+            Case 3
+                frm_sL.TabControl1.SelectedIndex = 3
+            Case Else
+        End Select
+    End Sub
 
     Sub selected_menu(tabCTRL As TabControl)
         studIdClick = tabCTRL.SelectedIndex
@@ -43,6 +78,20 @@
                 frm_sA.TabControl1.SelectedIndex = 2
             Case 3
                 frm_sA.TabControl1.SelectedIndex = 3
+            Case Else
+        End Select
+    End Sub
+    Sub selected_cbo(tabCTRL As TabControl)
+        Select Case tabCTRL.SelectedIndex
+            Case 0
+                frm_sSg.cbo_SelectDept.SelectedIndex = 0
+            Case 1
+                frm_sSg.cbo_SelectDept.SelectedIndex = 1
+            Case 2
+                frm_sSg.cbo_SelectDept.SelectedIndex = 2
+            Case 3
+                frm_sSg.cbo_SelectDept.SelectedIndex = 3
+
             Case Else
         End Select
     End Sub
@@ -98,21 +147,61 @@
         addContent(frm_sTR, btn_colRprt)
     End Sub
 
-    Private Sub BunifuFlatButton8_Click(sender As Object, e As EventArgs) Handles btn_menuMP.Click
+    Public Sub BunifuFlatButton8_Click(sender As Object, e As EventArgs) Handles btn_menuMP.Click
         addContent(frm_mP, btn_menuMP)
         frm_mP.frm_Mpayments_Load(sender, e)
+        If manageFees = 1 Then
+            selected_menu_manageFees(frm_sL.TabControl1)
+        ElseIf manageFees = 2 Then
+            selected_menu_manageFees(frm_mY.TabControl1)
+        End If
 
     End Sub
-    Private Sub BunifuFlatButton5_Click(sender As Object, e As EventArgs) Handles btn_menuMSY.Click
+    Sub selected_menu_manageFees(tabCTRL As TabControl)
+        Select Case tabCTRL.SelectedIndex
+            Case 0
+                frm_mP.TabControl1.SelectedIndex = 0
+            Case 1
+                frm_mP.TabControl1.SelectedIndex = 1
+            Case 2
+                frm_mP.TabControl1.SelectedIndex = 2
+            Case 3
+                frm_mP.TabControl1.SelectedIndex = 3
+            Case Else
+        End Select
+    End Sub
+
+    Public Sub BunifuFlatButton5_Click(sender As Object, e As EventArgs) Handles btn_menuMSY.Click
         addContent(frm_mY, btn_menuMSY)
+        If manageSY = 1 Then
+            selected_menu_ScoolYear(frm_sL.TabControl1)
+        ElseIf manageSY = 2 Then
+            selected_menu_ScoolYear(frm_mP.TabControl1)
+        End If
+
+    End Sub
+    Sub selected_menu_ScoolYear(tabCTRL As TabControl)
+        Select Case tabCTRL.SelectedIndex
+            Case 0
+                frm_mY.TabControl1.SelectedIndex = 0
+            Case 1
+                frm_mY.TabControl1.SelectedIndex = 1
+            Case 2
+                frm_mY.TabControl1.SelectedIndex = 2
+            Case 3
+                frm_mY.TabControl1.SelectedIndex = 3
+            Case Else
+        End Select
     End Sub
 
     Private Sub BunifuFlatButton3_Click(sender As Object, e As EventArgs) Handles btn_menuMU.Click
         addContent(frm_U, btn_menuMU)
+
     End Sub
     Public Sub BunifuFlatButton4_Click(sender As Object, e As EventArgs) Handles BunifuFlatButton4.Click
         addContent(frm_sSg, BunifuFlatButton4)
         frm_sSg.frm_sSG_Load(sender, e)
+        selected_cbo(frm_sP.TabControl1)
     End Sub
     Private Sub btn_logout_Click(sender As Object, e As EventArgs) Handles btn_logout.Click
         dlg_logout.ShowDialog()

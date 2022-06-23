@@ -22,18 +22,21 @@ Partial Class frm_slists
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle57 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle58 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle59 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle60 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle61 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle62 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle63 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle64 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.college_dept = New System.Windows.Forms.TabPage()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.btn_manageCollFees = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.btn_manageCollPayment = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.btn_manageCollSY = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.dg_studR = New Bunifu.Framework.UI.BunifuCustomDataGrid()
         Me.s_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.s_fName = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -44,6 +47,8 @@ Partial Class frm_slists
         Me.yl_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.crs_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.cbo_studType = New System.Windows.Forms.ComboBox()
+        Me.lbl_studentType = New System.Windows.Forms.Label()
         Me.btn_cancel = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.btn_gotoAcct = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.btn_save = New Bunifu.Framework.UI.BunifuFlatButton()
@@ -77,6 +82,9 @@ Partial Class frm_slists
         Me.elem_dept = New System.Windows.Forms.TabPage()
         Me.Panel8 = New System.Windows.Forms.Panel()
         Me.Panel9 = New System.Windows.Forms.Panel()
+        Me.btn_manageElemFees = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.btn_manageElemPayment = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.btn_manageElemSy = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.dg_eStudRecords = New Bunifu.Framework.UI.BunifuCustomDataGrid()
         Me.col_estud_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.col_estud_fname = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -110,6 +118,9 @@ Partial Class frm_slists
         Me.seniorHigh_dept = New System.Windows.Forms.TabPage()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.btn_manageSeniorFees = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.btn_manageSeniorPayment = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.btn_manageSeniorSy = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.dg_sStudRec = New Bunifu.Framework.UI.BunifuCustomDataGrid()
         Me.col_sStud_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.col_sStud_fname = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -143,6 +154,9 @@ Partial Class frm_slists
         Me.juniorHigh_dept = New System.Windows.Forms.TabPage()
         Me.Panel11 = New System.Windows.Forms.Panel()
         Me.Panel12 = New System.Windows.Forms.Panel()
+        Me.btn_manageJuniorFees = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.btn_manageJuniorPayment = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.btn_manageJuniorSy = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.dg_jStudRec = New Bunifu.Framework.UI.BunifuCustomDataGrid()
         Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -173,26 +187,34 @@ Partial Class frm_slists
         Me.Label17 = New System.Windows.Forms.Label()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.txtb_jSearch = New System.Windows.Forms.TextBox()
-        Me.lbl_studentType = New System.Windows.Forms.Label()
-        Me.cbo_studType = New System.Windows.Forms.ComboBox()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Label37 = New System.Windows.Forms.Label()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.Label38 = New System.Windows.Forms.Label()
+        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
+        Me.Label39 = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.college_dept.SuspendLayout()
         Me.Panel2.SuspendLayout()
+        Me.Panel3.SuspendLayout()
         CType(Me.dg_studR, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.elem_dept.SuspendLayout()
         Me.Panel8.SuspendLayout()
+        Me.Panel9.SuspendLayout()
         CType(Me.dg_eStudRecords, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel7.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
         Me.seniorHigh_dept.SuspendLayout()
         Me.Panel5.SuspendLayout()
+        Me.Panel6.SuspendLayout()
         CType(Me.dg_sStudRec, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel4.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.juniorHigh_dept.SuspendLayout()
         Me.Panel11.SuspendLayout()
+        Me.Panel12.SuspendLayout()
         CType(Me.dg_jStudRec, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel10.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
@@ -238,31 +260,148 @@ Partial Class frm_slists
         '
         'Panel3
         '
+        Me.Panel3.Controls.Add(Me.btn_manageCollFees)
+        Me.Panel3.Controls.Add(Me.btn_manageCollPayment)
+        Me.Panel3.Controls.Add(Me.btn_manageCollSY)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel3.Location = New System.Drawing.Point(0, 497)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(770, 57)
         Me.Panel3.TabIndex = 48
         '
+        'btn_manageCollFees
+        '
+        Me.btn_manageCollFees.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
+        Me.btn_manageCollFees.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.btn_manageCollFees.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btn_manageCollFees.BorderRadius = 0
+        Me.btn_manageCollFees.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.btn_manageCollFees.ButtonText = "MANAGE FEES"
+        Me.btn_manageCollFees.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_manageCollFees.DisabledColor = System.Drawing.Color.Gray
+        Me.btn_manageCollFees.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!)
+        Me.btn_manageCollFees.ForeColor = System.Drawing.Color.SeaGreen
+        Me.btn_manageCollFees.Iconcolor = System.Drawing.Color.Transparent
+        Me.btn_manageCollFees.Iconimage = Nothing
+        Me.btn_manageCollFees.Iconimage_right = Nothing
+        Me.btn_manageCollFees.Iconimage_right_Selected = Nothing
+        Me.btn_manageCollFees.Iconimage_Selected = Nothing
+        Me.btn_manageCollFees.IconMarginLeft = 0
+        Me.btn_manageCollFees.IconMarginRight = 0
+        Me.btn_manageCollFees.IconRightVisible = False
+        Me.btn_manageCollFees.IconRightZoom = 0R
+        Me.btn_manageCollFees.IconVisible = False
+        Me.btn_manageCollFees.IconZoom = 90.0R
+        Me.btn_manageCollFees.IsTab = False
+        Me.btn_manageCollFees.Location = New System.Drawing.Point(496, 14)
+        Me.btn_manageCollFees.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
+        Me.btn_manageCollFees.Name = "btn_manageCollFees"
+        Me.btn_manageCollFees.Normalcolor = System.Drawing.SystemColors.ButtonFace
+        Me.btn_manageCollFees.OnHovercolor = System.Drawing.Color.Goldenrod
+        Me.btn_manageCollFees.OnHoverTextColor = System.Drawing.Color.White
+        Me.btn_manageCollFees.selected = False
+        Me.btn_manageCollFees.Size = New System.Drawing.Size(210, 29)
+        Me.btn_manageCollFees.TabIndex = 60
+        Me.btn_manageCollFees.Text = "MANAGE FEES"
+        Me.btn_manageCollFees.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btn_manageCollFees.Textcolor = System.Drawing.Color.SeaGreen
+        Me.btn_manageCollFees.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        '
+        'btn_manageCollPayment
+        '
+        Me.btn_manageCollPayment.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
+        Me.btn_manageCollPayment.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.btn_manageCollPayment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btn_manageCollPayment.BorderRadius = 0
+        Me.btn_manageCollPayment.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.btn_manageCollPayment.ButtonText = "MANAGE PAYMENT"
+        Me.btn_manageCollPayment.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_manageCollPayment.DisabledColor = System.Drawing.Color.Gray
+        Me.btn_manageCollPayment.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!)
+        Me.btn_manageCollPayment.ForeColor = System.Drawing.Color.SeaGreen
+        Me.btn_manageCollPayment.Iconcolor = System.Drawing.Color.Transparent
+        Me.btn_manageCollPayment.Iconimage = Nothing
+        Me.btn_manageCollPayment.Iconimage_right = Nothing
+        Me.btn_manageCollPayment.Iconimage_right_Selected = Nothing
+        Me.btn_manageCollPayment.Iconimage_Selected = Nothing
+        Me.btn_manageCollPayment.IconMarginLeft = 0
+        Me.btn_manageCollPayment.IconMarginRight = 0
+        Me.btn_manageCollPayment.IconRightVisible = False
+        Me.btn_manageCollPayment.IconRightZoom = 0R
+        Me.btn_manageCollPayment.IconVisible = False
+        Me.btn_manageCollPayment.IconZoom = 90.0R
+        Me.btn_manageCollPayment.IsTab = False
+        Me.btn_manageCollPayment.Location = New System.Drawing.Point(280, 14)
+        Me.btn_manageCollPayment.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
+        Me.btn_manageCollPayment.Name = "btn_manageCollPayment"
+        Me.btn_manageCollPayment.Normalcolor = System.Drawing.SystemColors.ButtonFace
+        Me.btn_manageCollPayment.OnHovercolor = System.Drawing.Color.Goldenrod
+        Me.btn_manageCollPayment.OnHoverTextColor = System.Drawing.Color.White
+        Me.btn_manageCollPayment.selected = False
+        Me.btn_manageCollPayment.Size = New System.Drawing.Size(210, 29)
+        Me.btn_manageCollPayment.TabIndex = 59
+        Me.btn_manageCollPayment.Text = "MANAGE PAYMENT"
+        Me.btn_manageCollPayment.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btn_manageCollPayment.Textcolor = System.Drawing.Color.SeaGreen
+        Me.btn_manageCollPayment.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        '
+        'btn_manageCollSY
+        '
+        Me.btn_manageCollSY.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
+        Me.btn_manageCollSY.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.btn_manageCollSY.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btn_manageCollSY.BorderRadius = 0
+        Me.btn_manageCollSY.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.btn_manageCollSY.ButtonText = "MANAGE SCHOOL YEAR"
+        Me.btn_manageCollSY.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_manageCollSY.DisabledColor = System.Drawing.Color.Gray
+        Me.btn_manageCollSY.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!)
+        Me.btn_manageCollSY.ForeColor = System.Drawing.Color.SeaGreen
+        Me.btn_manageCollSY.Iconcolor = System.Drawing.Color.Transparent
+        Me.btn_manageCollSY.Iconimage = Nothing
+        Me.btn_manageCollSY.Iconimage_right = Nothing
+        Me.btn_manageCollSY.Iconimage_right_Selected = Nothing
+        Me.btn_manageCollSY.Iconimage_Selected = Nothing
+        Me.btn_manageCollSY.IconMarginLeft = 0
+        Me.btn_manageCollSY.IconMarginRight = 0
+        Me.btn_manageCollSY.IconRightVisible = False
+        Me.btn_manageCollSY.IconRightZoom = 0R
+        Me.btn_manageCollSY.IconVisible = False
+        Me.btn_manageCollSY.IconZoom = 90.0R
+        Me.btn_manageCollSY.IsTab = False
+        Me.btn_manageCollSY.Location = New System.Drawing.Point(64, 14)
+        Me.btn_manageCollSY.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
+        Me.btn_manageCollSY.Name = "btn_manageCollSY"
+        Me.btn_manageCollSY.Normalcolor = System.Drawing.SystemColors.ButtonFace
+        Me.btn_manageCollSY.OnHovercolor = System.Drawing.Color.Goldenrod
+        Me.btn_manageCollSY.OnHoverTextColor = System.Drawing.Color.White
+        Me.btn_manageCollSY.selected = False
+        Me.btn_manageCollSY.Size = New System.Drawing.Size(210, 29)
+        Me.btn_manageCollSY.TabIndex = 58
+        Me.btn_manageCollSY.Text = "MANAGE SCHOOL YEAR"
+        Me.btn_manageCollSY.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btn_manageCollSY.Textcolor = System.Drawing.Color.SeaGreen
+        Me.btn_manageCollSY.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        '
         'dg_studR
         '
         Me.dg_studR.AllowUserToAddRows = False
         Me.dg_studR.AllowUserToDeleteRows = False
         Me.dg_studR.AllowUserToResizeRows = False
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.dg_studR.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle57.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.dg_studR.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle57
         Me.dg_studR.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dg_studR.BackgroundColor = System.Drawing.Color.Gainsboro
         Me.dg_studR.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dg_studR.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dg_studR.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle58.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle58.BackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle58.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle58.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle58.SelectionBackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle58.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle58.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dg_studR.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle58
         Me.dg_studR.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dg_studR.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.s_id, Me.s_fName, Me.s_lName, Me.s_Midi, Me.sy_id, Me.sem_id, Me.yl_id, Me.crs_id})
         Me.dg_studR.Dock = System.Windows.Forms.DockStyle.Top
@@ -388,6 +527,26 @@ Partial Class frm_slists
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(370, 554)
         Me.Panel1.TabIndex = 47
+        '
+        'cbo_studType
+        '
+        Me.cbo_studType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbo_studType.Enabled = False
+        Me.cbo_studType.FormattingEnabled = True
+        Me.cbo_studType.Location = New System.Drawing.Point(123, 309)
+        Me.cbo_studType.Name = "cbo_studType"
+        Me.cbo_studType.Size = New System.Drawing.Size(223, 29)
+        Me.cbo_studType.TabIndex = 56
+        '
+        'lbl_studentType
+        '
+        Me.lbl_studentType.AutoSize = True
+        Me.lbl_studentType.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.lbl_studentType.Location = New System.Drawing.Point(27, 317)
+        Me.lbl_studentType.Name = "lbl_studentType"
+        Me.lbl_studentType.Size = New System.Drawing.Size(95, 21)
+        Me.lbl_studentType.TabIndex = 55
+        Me.lbl_studentType.Text = "STUDENT TYPE"
         '
         'btn_cancel
         '
@@ -863,31 +1022,148 @@ Partial Class frm_slists
         '
         'Panel9
         '
+        Me.Panel9.Controls.Add(Me.btn_manageElemFees)
+        Me.Panel9.Controls.Add(Me.btn_manageElemPayment)
+        Me.Panel9.Controls.Add(Me.btn_manageElemSy)
         Me.Panel9.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel9.Location = New System.Drawing.Point(0, 503)
         Me.Panel9.Name = "Panel9"
         Me.Panel9.Size = New System.Drawing.Size(776, 57)
         Me.Panel9.TabIndex = 48
         '
+        'btn_manageElemFees
+        '
+        Me.btn_manageElemFees.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
+        Me.btn_manageElemFees.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.btn_manageElemFees.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btn_manageElemFees.BorderRadius = 0
+        Me.btn_manageElemFees.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.btn_manageElemFees.ButtonText = "MANAGE FEES"
+        Me.btn_manageElemFees.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_manageElemFees.DisabledColor = System.Drawing.Color.Gray
+        Me.btn_manageElemFees.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!)
+        Me.btn_manageElemFees.ForeColor = System.Drawing.Color.SeaGreen
+        Me.btn_manageElemFees.Iconcolor = System.Drawing.Color.Transparent
+        Me.btn_manageElemFees.Iconimage = Nothing
+        Me.btn_manageElemFees.Iconimage_right = Nothing
+        Me.btn_manageElemFees.Iconimage_right_Selected = Nothing
+        Me.btn_manageElemFees.Iconimage_Selected = Nothing
+        Me.btn_manageElemFees.IconMarginLeft = 0
+        Me.btn_manageElemFees.IconMarginRight = 0
+        Me.btn_manageElemFees.IconRightVisible = False
+        Me.btn_manageElemFees.IconRightZoom = 0R
+        Me.btn_manageElemFees.IconVisible = False
+        Me.btn_manageElemFees.IconZoom = 90.0R
+        Me.btn_manageElemFees.IsTab = False
+        Me.btn_manageElemFees.Location = New System.Drawing.Point(499, 14)
+        Me.btn_manageElemFees.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
+        Me.btn_manageElemFees.Name = "btn_manageElemFees"
+        Me.btn_manageElemFees.Normalcolor = System.Drawing.SystemColors.ButtonFace
+        Me.btn_manageElemFees.OnHovercolor = System.Drawing.Color.Goldenrod
+        Me.btn_manageElemFees.OnHoverTextColor = System.Drawing.Color.White
+        Me.btn_manageElemFees.selected = False
+        Me.btn_manageElemFees.Size = New System.Drawing.Size(210, 29)
+        Me.btn_manageElemFees.TabIndex = 63
+        Me.btn_manageElemFees.Text = "MANAGE FEES"
+        Me.btn_manageElemFees.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btn_manageElemFees.Textcolor = System.Drawing.Color.SeaGreen
+        Me.btn_manageElemFees.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        '
+        'btn_manageElemPayment
+        '
+        Me.btn_manageElemPayment.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
+        Me.btn_manageElemPayment.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.btn_manageElemPayment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btn_manageElemPayment.BorderRadius = 0
+        Me.btn_manageElemPayment.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.btn_manageElemPayment.ButtonText = "MANAGE PAYMENT"
+        Me.btn_manageElemPayment.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_manageElemPayment.DisabledColor = System.Drawing.Color.Gray
+        Me.btn_manageElemPayment.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!)
+        Me.btn_manageElemPayment.ForeColor = System.Drawing.Color.SeaGreen
+        Me.btn_manageElemPayment.Iconcolor = System.Drawing.Color.Transparent
+        Me.btn_manageElemPayment.Iconimage = Nothing
+        Me.btn_manageElemPayment.Iconimage_right = Nothing
+        Me.btn_manageElemPayment.Iconimage_right_Selected = Nothing
+        Me.btn_manageElemPayment.Iconimage_Selected = Nothing
+        Me.btn_manageElemPayment.IconMarginLeft = 0
+        Me.btn_manageElemPayment.IconMarginRight = 0
+        Me.btn_manageElemPayment.IconRightVisible = False
+        Me.btn_manageElemPayment.IconRightZoom = 0R
+        Me.btn_manageElemPayment.IconVisible = False
+        Me.btn_manageElemPayment.IconZoom = 90.0R
+        Me.btn_manageElemPayment.IsTab = False
+        Me.btn_manageElemPayment.Location = New System.Drawing.Point(283, 14)
+        Me.btn_manageElemPayment.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
+        Me.btn_manageElemPayment.Name = "btn_manageElemPayment"
+        Me.btn_manageElemPayment.Normalcolor = System.Drawing.SystemColors.ButtonFace
+        Me.btn_manageElemPayment.OnHovercolor = System.Drawing.Color.Goldenrod
+        Me.btn_manageElemPayment.OnHoverTextColor = System.Drawing.Color.White
+        Me.btn_manageElemPayment.selected = False
+        Me.btn_manageElemPayment.Size = New System.Drawing.Size(210, 29)
+        Me.btn_manageElemPayment.TabIndex = 62
+        Me.btn_manageElemPayment.Text = "MANAGE PAYMENT"
+        Me.btn_manageElemPayment.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btn_manageElemPayment.Textcolor = System.Drawing.Color.SeaGreen
+        Me.btn_manageElemPayment.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        '
+        'btn_manageElemSy
+        '
+        Me.btn_manageElemSy.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
+        Me.btn_manageElemSy.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.btn_manageElemSy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btn_manageElemSy.BorderRadius = 0
+        Me.btn_manageElemSy.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.btn_manageElemSy.ButtonText = "MANAGE SCHOOL YEAR"
+        Me.btn_manageElemSy.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_manageElemSy.DisabledColor = System.Drawing.Color.Gray
+        Me.btn_manageElemSy.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!)
+        Me.btn_manageElemSy.ForeColor = System.Drawing.Color.SeaGreen
+        Me.btn_manageElemSy.Iconcolor = System.Drawing.Color.Transparent
+        Me.btn_manageElemSy.Iconimage = Nothing
+        Me.btn_manageElemSy.Iconimage_right = Nothing
+        Me.btn_manageElemSy.Iconimage_right_Selected = Nothing
+        Me.btn_manageElemSy.Iconimage_Selected = Nothing
+        Me.btn_manageElemSy.IconMarginLeft = 0
+        Me.btn_manageElemSy.IconMarginRight = 0
+        Me.btn_manageElemSy.IconRightVisible = False
+        Me.btn_manageElemSy.IconRightZoom = 0R
+        Me.btn_manageElemSy.IconVisible = False
+        Me.btn_manageElemSy.IconZoom = 90.0R
+        Me.btn_manageElemSy.IsTab = False
+        Me.btn_manageElemSy.Location = New System.Drawing.Point(67, 14)
+        Me.btn_manageElemSy.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
+        Me.btn_manageElemSy.Name = "btn_manageElemSy"
+        Me.btn_manageElemSy.Normalcolor = System.Drawing.SystemColors.ButtonFace
+        Me.btn_manageElemSy.OnHovercolor = System.Drawing.Color.Goldenrod
+        Me.btn_manageElemSy.OnHoverTextColor = System.Drawing.Color.White
+        Me.btn_manageElemSy.selected = False
+        Me.btn_manageElemSy.Size = New System.Drawing.Size(210, 29)
+        Me.btn_manageElemSy.TabIndex = 61
+        Me.btn_manageElemSy.Text = "MANAGE SCHOOL YEAR"
+        Me.btn_manageElemSy.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btn_manageElemSy.Textcolor = System.Drawing.Color.SeaGreen
+        Me.btn_manageElemSy.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        '
         'dg_eStudRecords
         '
         Me.dg_eStudRecords.AllowUserToAddRows = False
         Me.dg_eStudRecords.AllowUserToDeleteRows = False
         Me.dg_eStudRecords.AllowUserToResizeRows = False
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.dg_eStudRecords.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle59.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.dg_eStudRecords.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle59
         Me.dg_eStudRecords.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dg_eStudRecords.BackgroundColor = System.Drawing.Color.Gainsboro
         Me.dg_eStudRecords.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dg_eStudRecords.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dg_eStudRecords.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle60.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle60.BackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle60.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle60.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle60.SelectionBackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle60.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle60.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dg_eStudRecords.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle60
         Me.dg_eStudRecords.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dg_eStudRecords.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.col_estud_id, Me.col_estud_fname, Me.col_estud_lname, Me.col_estud_mi, Me.col_esy_id, Me.col_egl_id})
         Me.dg_eStudRecords.Dock = System.Windows.Forms.DockStyle.Top
@@ -950,6 +1226,8 @@ Partial Class frm_slists
         '
         'Panel7
         '
+        Me.Panel7.Controls.Add(Me.ComboBox1)
+        Me.Panel7.Controls.Add(Me.Label37)
         Me.Panel7.Controls.Add(Me.btn_eCancel)
         Me.Panel7.Controls.Add(Me.btn_eViewAccount)
         Me.Panel7.Controls.Add(Me.btn_eSave)
@@ -1196,9 +1474,9 @@ Partial Class frm_slists
         Me.cbo_eGradeLevel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbo_eGradeLevel.Enabled = False
         Me.cbo_eGradeLevel.FormattingEnabled = True
-        Me.cbo_eGradeLevel.Location = New System.Drawing.Point(116, 236)
+        Me.cbo_eGradeLevel.Location = New System.Drawing.Point(117, 236)
         Me.cbo_eGradeLevel.Name = "cbo_eGradeLevel"
-        Me.cbo_eGradeLevel.Size = New System.Drawing.Size(223, 29)
+        Me.cbo_eGradeLevel.Size = New System.Drawing.Size(222, 29)
         Me.cbo_eGradeLevel.TabIndex = 46
         '
         'txtb_eStudFname
@@ -1370,31 +1648,148 @@ Partial Class frm_slists
         '
         'Panel6
         '
+        Me.Panel6.Controls.Add(Me.btn_manageSeniorFees)
+        Me.Panel6.Controls.Add(Me.btn_manageSeniorPayment)
+        Me.Panel6.Controls.Add(Me.btn_manageSeniorSy)
         Me.Panel6.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel6.Location = New System.Drawing.Point(0, 503)
         Me.Panel6.Name = "Panel6"
         Me.Panel6.Size = New System.Drawing.Size(776, 57)
         Me.Panel6.TabIndex = 48
         '
+        'btn_manageSeniorFees
+        '
+        Me.btn_manageSeniorFees.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
+        Me.btn_manageSeniorFees.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.btn_manageSeniorFees.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btn_manageSeniorFees.BorderRadius = 0
+        Me.btn_manageSeniorFees.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.btn_manageSeniorFees.ButtonText = "MANAGE FEES"
+        Me.btn_manageSeniorFees.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_manageSeniorFees.DisabledColor = System.Drawing.Color.Gray
+        Me.btn_manageSeniorFees.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!)
+        Me.btn_manageSeniorFees.ForeColor = System.Drawing.Color.SeaGreen
+        Me.btn_manageSeniorFees.Iconcolor = System.Drawing.Color.Transparent
+        Me.btn_manageSeniorFees.Iconimage = Nothing
+        Me.btn_manageSeniorFees.Iconimage_right = Nothing
+        Me.btn_manageSeniorFees.Iconimage_right_Selected = Nothing
+        Me.btn_manageSeniorFees.Iconimage_Selected = Nothing
+        Me.btn_manageSeniorFees.IconMarginLeft = 0
+        Me.btn_manageSeniorFees.IconMarginRight = 0
+        Me.btn_manageSeniorFees.IconRightVisible = False
+        Me.btn_manageSeniorFees.IconRightZoom = 0R
+        Me.btn_manageSeniorFees.IconVisible = False
+        Me.btn_manageSeniorFees.IconZoom = 90.0R
+        Me.btn_manageSeniorFees.IsTab = False
+        Me.btn_manageSeniorFees.Location = New System.Drawing.Point(499, 14)
+        Me.btn_manageSeniorFees.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
+        Me.btn_manageSeniorFees.Name = "btn_manageSeniorFees"
+        Me.btn_manageSeniorFees.Normalcolor = System.Drawing.SystemColors.ButtonFace
+        Me.btn_manageSeniorFees.OnHovercolor = System.Drawing.Color.Goldenrod
+        Me.btn_manageSeniorFees.OnHoverTextColor = System.Drawing.Color.White
+        Me.btn_manageSeniorFees.selected = False
+        Me.btn_manageSeniorFees.Size = New System.Drawing.Size(210, 29)
+        Me.btn_manageSeniorFees.TabIndex = 63
+        Me.btn_manageSeniorFees.Text = "MANAGE FEES"
+        Me.btn_manageSeniorFees.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btn_manageSeniorFees.Textcolor = System.Drawing.Color.SeaGreen
+        Me.btn_manageSeniorFees.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        '
+        'btn_manageSeniorPayment
+        '
+        Me.btn_manageSeniorPayment.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
+        Me.btn_manageSeniorPayment.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.btn_manageSeniorPayment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btn_manageSeniorPayment.BorderRadius = 0
+        Me.btn_manageSeniorPayment.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.btn_manageSeniorPayment.ButtonText = "MANAGE PAYMENT"
+        Me.btn_manageSeniorPayment.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_manageSeniorPayment.DisabledColor = System.Drawing.Color.Gray
+        Me.btn_manageSeniorPayment.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!)
+        Me.btn_manageSeniorPayment.ForeColor = System.Drawing.Color.SeaGreen
+        Me.btn_manageSeniorPayment.Iconcolor = System.Drawing.Color.Transparent
+        Me.btn_manageSeniorPayment.Iconimage = Nothing
+        Me.btn_manageSeniorPayment.Iconimage_right = Nothing
+        Me.btn_manageSeniorPayment.Iconimage_right_Selected = Nothing
+        Me.btn_manageSeniorPayment.Iconimage_Selected = Nothing
+        Me.btn_manageSeniorPayment.IconMarginLeft = 0
+        Me.btn_manageSeniorPayment.IconMarginRight = 0
+        Me.btn_manageSeniorPayment.IconRightVisible = False
+        Me.btn_manageSeniorPayment.IconRightZoom = 0R
+        Me.btn_manageSeniorPayment.IconVisible = False
+        Me.btn_manageSeniorPayment.IconZoom = 90.0R
+        Me.btn_manageSeniorPayment.IsTab = False
+        Me.btn_manageSeniorPayment.Location = New System.Drawing.Point(283, 14)
+        Me.btn_manageSeniorPayment.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
+        Me.btn_manageSeniorPayment.Name = "btn_manageSeniorPayment"
+        Me.btn_manageSeniorPayment.Normalcolor = System.Drawing.SystemColors.ButtonFace
+        Me.btn_manageSeniorPayment.OnHovercolor = System.Drawing.Color.Goldenrod
+        Me.btn_manageSeniorPayment.OnHoverTextColor = System.Drawing.Color.White
+        Me.btn_manageSeniorPayment.selected = False
+        Me.btn_manageSeniorPayment.Size = New System.Drawing.Size(210, 29)
+        Me.btn_manageSeniorPayment.TabIndex = 62
+        Me.btn_manageSeniorPayment.Text = "MANAGE PAYMENT"
+        Me.btn_manageSeniorPayment.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btn_manageSeniorPayment.Textcolor = System.Drawing.Color.SeaGreen
+        Me.btn_manageSeniorPayment.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        '
+        'btn_manageSeniorSy
+        '
+        Me.btn_manageSeniorSy.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
+        Me.btn_manageSeniorSy.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.btn_manageSeniorSy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btn_manageSeniorSy.BorderRadius = 0
+        Me.btn_manageSeniorSy.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.btn_manageSeniorSy.ButtonText = "MANAGE SCHOOL YEAR"
+        Me.btn_manageSeniorSy.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_manageSeniorSy.DisabledColor = System.Drawing.Color.Gray
+        Me.btn_manageSeniorSy.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!)
+        Me.btn_manageSeniorSy.ForeColor = System.Drawing.Color.SeaGreen
+        Me.btn_manageSeniorSy.Iconcolor = System.Drawing.Color.Transparent
+        Me.btn_manageSeniorSy.Iconimage = Nothing
+        Me.btn_manageSeniorSy.Iconimage_right = Nothing
+        Me.btn_manageSeniorSy.Iconimage_right_Selected = Nothing
+        Me.btn_manageSeniorSy.Iconimage_Selected = Nothing
+        Me.btn_manageSeniorSy.IconMarginLeft = 0
+        Me.btn_manageSeniorSy.IconMarginRight = 0
+        Me.btn_manageSeniorSy.IconRightVisible = False
+        Me.btn_manageSeniorSy.IconRightZoom = 0R
+        Me.btn_manageSeniorSy.IconVisible = False
+        Me.btn_manageSeniorSy.IconZoom = 90.0R
+        Me.btn_manageSeniorSy.IsTab = False
+        Me.btn_manageSeniorSy.Location = New System.Drawing.Point(67, 14)
+        Me.btn_manageSeniorSy.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
+        Me.btn_manageSeniorSy.Name = "btn_manageSeniorSy"
+        Me.btn_manageSeniorSy.Normalcolor = System.Drawing.SystemColors.ButtonFace
+        Me.btn_manageSeniorSy.OnHovercolor = System.Drawing.Color.Goldenrod
+        Me.btn_manageSeniorSy.OnHoverTextColor = System.Drawing.Color.White
+        Me.btn_manageSeniorSy.selected = False
+        Me.btn_manageSeniorSy.Size = New System.Drawing.Size(210, 29)
+        Me.btn_manageSeniorSy.TabIndex = 61
+        Me.btn_manageSeniorSy.Text = "MANAGE SCHOOL YEAR"
+        Me.btn_manageSeniorSy.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btn_manageSeniorSy.Textcolor = System.Drawing.Color.SeaGreen
+        Me.btn_manageSeniorSy.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        '
         'dg_sStudRec
         '
         Me.dg_sStudRec.AllowUserToAddRows = False
         Me.dg_sStudRec.AllowUserToDeleteRows = False
         Me.dg_sStudRec.AllowUserToResizeRows = False
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.dg_sStudRec.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle61.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.dg_sStudRec.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle61
         Me.dg_sStudRec.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dg_sStudRec.BackgroundColor = System.Drawing.Color.Gainsboro
         Me.dg_sStudRec.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dg_sStudRec.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dg_sStudRec.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle62.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle62.BackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle62.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle62.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle62.SelectionBackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle62.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle62.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dg_sStudRec.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle62
         Me.dg_sStudRec.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dg_sStudRec.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.col_sStud_id, Me.col_sStud_fname, Me.col_sStud_lname, Me.col_sStud_mi, Me.col_sSY, Me.col_sGL})
         Me.dg_sStudRec.Dock = System.Windows.Forms.DockStyle.Top
@@ -1457,6 +1852,8 @@ Partial Class frm_slists
         '
         'Panel4
         '
+        Me.Panel4.Controls.Add(Me.ComboBox2)
+        Me.Panel4.Controls.Add(Me.Label38)
         Me.Panel4.Controls.Add(Me.btn_sCancel)
         Me.Panel4.Controls.Add(Me.btn_sViewAccount)
         Me.Panel4.Controls.Add(Me.btn_sSave)
@@ -1877,31 +2274,148 @@ Partial Class frm_slists
         '
         'Panel12
         '
+        Me.Panel12.Controls.Add(Me.btn_manageJuniorFees)
+        Me.Panel12.Controls.Add(Me.btn_manageJuniorPayment)
+        Me.Panel12.Controls.Add(Me.btn_manageJuniorSy)
         Me.Panel12.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel12.Location = New System.Drawing.Point(0, 503)
         Me.Panel12.Name = "Panel12"
         Me.Panel12.Size = New System.Drawing.Size(776, 57)
         Me.Panel12.TabIndex = 48
         '
+        'btn_manageJuniorFees
+        '
+        Me.btn_manageJuniorFees.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
+        Me.btn_manageJuniorFees.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.btn_manageJuniorFees.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btn_manageJuniorFees.BorderRadius = 0
+        Me.btn_manageJuniorFees.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.btn_manageJuniorFees.ButtonText = "MANAGE FEES"
+        Me.btn_manageJuniorFees.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_manageJuniorFees.DisabledColor = System.Drawing.Color.Gray
+        Me.btn_manageJuniorFees.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!)
+        Me.btn_manageJuniorFees.ForeColor = System.Drawing.Color.SeaGreen
+        Me.btn_manageJuniorFees.Iconcolor = System.Drawing.Color.Transparent
+        Me.btn_manageJuniorFees.Iconimage = Nothing
+        Me.btn_manageJuniorFees.Iconimage_right = Nothing
+        Me.btn_manageJuniorFees.Iconimage_right_Selected = Nothing
+        Me.btn_manageJuniorFees.Iconimage_Selected = Nothing
+        Me.btn_manageJuniorFees.IconMarginLeft = 0
+        Me.btn_manageJuniorFees.IconMarginRight = 0
+        Me.btn_manageJuniorFees.IconRightVisible = False
+        Me.btn_manageJuniorFees.IconRightZoom = 0R
+        Me.btn_manageJuniorFees.IconVisible = False
+        Me.btn_manageJuniorFees.IconZoom = 90.0R
+        Me.btn_manageJuniorFees.IsTab = False
+        Me.btn_manageJuniorFees.Location = New System.Drawing.Point(499, 14)
+        Me.btn_manageJuniorFees.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
+        Me.btn_manageJuniorFees.Name = "btn_manageJuniorFees"
+        Me.btn_manageJuniorFees.Normalcolor = System.Drawing.SystemColors.ButtonFace
+        Me.btn_manageJuniorFees.OnHovercolor = System.Drawing.Color.Goldenrod
+        Me.btn_manageJuniorFees.OnHoverTextColor = System.Drawing.Color.White
+        Me.btn_manageJuniorFees.selected = False
+        Me.btn_manageJuniorFees.Size = New System.Drawing.Size(210, 29)
+        Me.btn_manageJuniorFees.TabIndex = 63
+        Me.btn_manageJuniorFees.Text = "MANAGE FEES"
+        Me.btn_manageJuniorFees.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btn_manageJuniorFees.Textcolor = System.Drawing.Color.SeaGreen
+        Me.btn_manageJuniorFees.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        '
+        'btn_manageJuniorPayment
+        '
+        Me.btn_manageJuniorPayment.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
+        Me.btn_manageJuniorPayment.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.btn_manageJuniorPayment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btn_manageJuniorPayment.BorderRadius = 0
+        Me.btn_manageJuniorPayment.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.btn_manageJuniorPayment.ButtonText = "MANAGE PAYMENT"
+        Me.btn_manageJuniorPayment.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_manageJuniorPayment.DisabledColor = System.Drawing.Color.Gray
+        Me.btn_manageJuniorPayment.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!)
+        Me.btn_manageJuniorPayment.ForeColor = System.Drawing.Color.SeaGreen
+        Me.btn_manageJuniorPayment.Iconcolor = System.Drawing.Color.Transparent
+        Me.btn_manageJuniorPayment.Iconimage = Nothing
+        Me.btn_manageJuniorPayment.Iconimage_right = Nothing
+        Me.btn_manageJuniorPayment.Iconimage_right_Selected = Nothing
+        Me.btn_manageJuniorPayment.Iconimage_Selected = Nothing
+        Me.btn_manageJuniorPayment.IconMarginLeft = 0
+        Me.btn_manageJuniorPayment.IconMarginRight = 0
+        Me.btn_manageJuniorPayment.IconRightVisible = False
+        Me.btn_manageJuniorPayment.IconRightZoom = 0R
+        Me.btn_manageJuniorPayment.IconVisible = False
+        Me.btn_manageJuniorPayment.IconZoom = 90.0R
+        Me.btn_manageJuniorPayment.IsTab = False
+        Me.btn_manageJuniorPayment.Location = New System.Drawing.Point(283, 14)
+        Me.btn_manageJuniorPayment.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
+        Me.btn_manageJuniorPayment.Name = "btn_manageJuniorPayment"
+        Me.btn_manageJuniorPayment.Normalcolor = System.Drawing.SystemColors.ButtonFace
+        Me.btn_manageJuniorPayment.OnHovercolor = System.Drawing.Color.Goldenrod
+        Me.btn_manageJuniorPayment.OnHoverTextColor = System.Drawing.Color.White
+        Me.btn_manageJuniorPayment.selected = False
+        Me.btn_manageJuniorPayment.Size = New System.Drawing.Size(210, 29)
+        Me.btn_manageJuniorPayment.TabIndex = 62
+        Me.btn_manageJuniorPayment.Text = "MANAGE PAYMENT"
+        Me.btn_manageJuniorPayment.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btn_manageJuniorPayment.Textcolor = System.Drawing.Color.SeaGreen
+        Me.btn_manageJuniorPayment.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        '
+        'btn_manageJuniorSy
+        '
+        Me.btn_manageJuniorSy.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
+        Me.btn_manageJuniorSy.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.btn_manageJuniorSy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btn_manageJuniorSy.BorderRadius = 0
+        Me.btn_manageJuniorSy.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.btn_manageJuniorSy.ButtonText = "MANAGE SCHOOL YEAR"
+        Me.btn_manageJuniorSy.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_manageJuniorSy.DisabledColor = System.Drawing.Color.Gray
+        Me.btn_manageJuniorSy.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!)
+        Me.btn_manageJuniorSy.ForeColor = System.Drawing.Color.SeaGreen
+        Me.btn_manageJuniorSy.Iconcolor = System.Drawing.Color.Transparent
+        Me.btn_manageJuniorSy.Iconimage = Nothing
+        Me.btn_manageJuniorSy.Iconimage_right = Nothing
+        Me.btn_manageJuniorSy.Iconimage_right_Selected = Nothing
+        Me.btn_manageJuniorSy.Iconimage_Selected = Nothing
+        Me.btn_manageJuniorSy.IconMarginLeft = 0
+        Me.btn_manageJuniorSy.IconMarginRight = 0
+        Me.btn_manageJuniorSy.IconRightVisible = False
+        Me.btn_manageJuniorSy.IconRightZoom = 0R
+        Me.btn_manageJuniorSy.IconVisible = False
+        Me.btn_manageJuniorSy.IconZoom = 90.0R
+        Me.btn_manageJuniorSy.IsTab = False
+        Me.btn_manageJuniorSy.Location = New System.Drawing.Point(67, 14)
+        Me.btn_manageJuniorSy.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
+        Me.btn_manageJuniorSy.Name = "btn_manageJuniorSy"
+        Me.btn_manageJuniorSy.Normalcolor = System.Drawing.SystemColors.ButtonFace
+        Me.btn_manageJuniorSy.OnHovercolor = System.Drawing.Color.Goldenrod
+        Me.btn_manageJuniorSy.OnHoverTextColor = System.Drawing.Color.White
+        Me.btn_manageJuniorSy.selected = False
+        Me.btn_manageJuniorSy.Size = New System.Drawing.Size(210, 29)
+        Me.btn_manageJuniorSy.TabIndex = 61
+        Me.btn_manageJuniorSy.Text = "MANAGE SCHOOL YEAR"
+        Me.btn_manageJuniorSy.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btn_manageJuniorSy.Textcolor = System.Drawing.Color.SeaGreen
+        Me.btn_manageJuniorSy.TextFont = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        '
         'dg_jStudRec
         '
         Me.dg_jStudRec.AllowUserToAddRows = False
         Me.dg_jStudRec.AllowUserToDeleteRows = False
         Me.dg_jStudRec.AllowUserToResizeRows = False
-        DataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.dg_jStudRec.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle63.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.dg_jStudRec.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle63
         Me.dg_jStudRec.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dg_jStudRec.BackgroundColor = System.Drawing.Color.Gainsboro
         Me.dg_jStudRec.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dg_jStudRec.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle8.BackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dg_jStudRec.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle64.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle64.BackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle64.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle64.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle64.SelectionBackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle64.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle64.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dg_jStudRec.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle64
         Me.dg_jStudRec.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dg_jStudRec.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn14, Me.DataGridViewTextBoxColumn16, Me.DataGridViewTextBoxColumn17, Me.DataGridViewTextBoxColumn18})
         Me.dg_jStudRec.Dock = System.Windows.Forms.DockStyle.Top
@@ -1964,6 +2478,8 @@ Partial Class frm_slists
         '
         'Panel10
         '
+        Me.Panel10.Controls.Add(Me.ComboBox3)
+        Me.Panel10.Controls.Add(Me.Label39)
         Me.Panel10.Controls.Add(Me.btn_jCancel)
         Me.Panel10.Controls.Add(Me.btn_jViewAcct)
         Me.Panel10.Controls.Add(Me.btn_jSave)
@@ -2358,25 +2874,65 @@ Partial Class frm_slists
         Me.txtb_jSearch.Size = New System.Drawing.Size(425, 30)
         Me.txtb_jSearch.TabIndex = 13
         '
-        'lbl_studentType
+        'ComboBox1
         '
-        Me.lbl_studentType.AutoSize = True
-        Me.lbl_studentType.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.lbl_studentType.Location = New System.Drawing.Point(27, 317)
-        Me.lbl_studentType.Name = "lbl_studentType"
-        Me.lbl_studentType.Size = New System.Drawing.Size(95, 21)
-        Me.lbl_studentType.TabIndex = 55
-        Me.lbl_studentType.Text = "STUDENT TYPE"
+        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox1.Enabled = False
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(116, 276)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(223, 29)
+        Me.ComboBox1.TabIndex = 58
         '
-        'cbo_studType
+        'Label37
         '
-        Me.cbo_studType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbo_studType.Enabled = False
-        Me.cbo_studType.FormattingEnabled = True
-        Me.cbo_studType.Location = New System.Drawing.Point(123, 309)
-        Me.cbo_studType.Name = "cbo_studType"
-        Me.cbo_studType.Size = New System.Drawing.Size(223, 29)
-        Me.cbo_studType.TabIndex = 56
+        Me.Label37.AutoSize = True
+        Me.Label37.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label37.Location = New System.Drawing.Point(15, 279)
+        Me.Label37.Name = "Label37"
+        Me.Label37.Size = New System.Drawing.Size(95, 21)
+        Me.Label37.TabIndex = 57
+        Me.Label37.Text = "STUDENT TYPE"
+        '
+        'ComboBox2
+        '
+        Me.ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox2.Enabled = False
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Location = New System.Drawing.Point(117, 280)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(223, 29)
+        Me.ComboBox2.TabIndex = 60
+        '
+        'Label38
+        '
+        Me.Label38.AutoSize = True
+        Me.Label38.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label38.Location = New System.Drawing.Point(16, 283)
+        Me.Label38.Name = "Label38"
+        Me.Label38.Size = New System.Drawing.Size(95, 21)
+        Me.Label38.TabIndex = 59
+        Me.Label38.Text = "STUDENT TYPE"
+        '
+        'ComboBox3
+        '
+        Me.ComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox3.Enabled = False
+        Me.ComboBox3.FormattingEnabled = True
+        Me.ComboBox3.Location = New System.Drawing.Point(117, 280)
+        Me.ComboBox3.Name = "ComboBox3"
+        Me.ComboBox3.Size = New System.Drawing.Size(223, 29)
+        Me.ComboBox3.TabIndex = 60
+        '
+        'Label39
+        '
+        Me.Label39.AutoSize = True
+        Me.Label39.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label39.Location = New System.Drawing.Point(16, 283)
+        Me.Label39.Name = "Label39"
+        Me.Label39.Size = New System.Drawing.Size(95, 21)
+        Me.Label39.TabIndex = 59
+        Me.Label39.Text = "STUDENT TYPE"
         '
         'frm_slists
         '
@@ -2388,6 +2944,7 @@ Partial Class frm_slists
         Me.TabControl1.ResumeLayout(False)
         Me.college_dept.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
+        Me.Panel3.ResumeLayout(False)
         CType(Me.dg_studR, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
@@ -2395,6 +2952,7 @@ Partial Class frm_slists
         Me.GroupBox1.PerformLayout()
         Me.elem_dept.ResumeLayout(False)
         Me.Panel8.ResumeLayout(False)
+        Me.Panel9.ResumeLayout(False)
         CType(Me.dg_eStudRecords, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel7.ResumeLayout(False)
         Me.Panel7.PerformLayout()
@@ -2402,6 +2960,7 @@ Partial Class frm_slists
         Me.GroupBox5.PerformLayout()
         Me.seniorHigh_dept.ResumeLayout(False)
         Me.Panel5.ResumeLayout(False)
+        Me.Panel6.ResumeLayout(False)
         CType(Me.dg_sStudRec, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
@@ -2409,6 +2968,7 @@ Partial Class frm_slists
         Me.GroupBox3.PerformLayout()
         Me.juniorHigh_dept.ResumeLayout(False)
         Me.Panel11.ResumeLayout(False)
+        Me.Panel12.ResumeLayout(False)
         CType(Me.dg_jStudRec, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel10.ResumeLayout(False)
         Me.Panel10.PerformLayout()
@@ -2562,4 +3122,22 @@ Partial Class frm_slists
     Friend WithEvents crs_id As DataGridViewTextBoxColumn
     Friend WithEvents lbl_studentType As Label
     Friend WithEvents cbo_studType As ComboBox
+    Friend WithEvents btn_manageCollFees As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents btn_manageCollPayment As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents btn_manageCollSY As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents btn_manageElemFees As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents btn_manageElemPayment As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents btn_manageElemSy As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents btn_manageSeniorFees As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents btn_manageSeniorPayment As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents btn_manageSeniorSy As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents btn_manageJuniorFees As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents btn_manageJuniorPayment As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents btn_manageJuniorSy As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents Label37 As Label
+    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents Label38 As Label
+    Friend WithEvents ComboBox3 As ComboBox
+    Friend WithEvents Label39 As Label
 End Class

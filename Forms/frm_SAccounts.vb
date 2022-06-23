@@ -45,7 +45,25 @@ Public Class frm_SAccounts
             txtb_yl.Text = stud_yl
             txtb_nUnits.Text = stud_nUnits
             txtb_rpu.Text = stud_rpu
+            Dim hasScholar1 As String = "Select sl.reference_no,st.scholar_name,sl.sl_amnt from tbl_coll_scholarlist sl inner join tbl_scholar_type st on st.scholar_id=sl.sl_name  where sl.stud_id='" & stud_id & "'"
+
+            dbConn.Open()
+            sqlCommand = New MySqlCommand(hasScholar1, dbConn)
+            dr = sqlCommand.ExecuteReader
+            dr.Read()
+            If dr.HasRows Then
+                pnl_scholar.Visible = True
+                scholar_No = dr(0)
+                txtb_sType.Text = dr(1)
+                txtb_sAmnt.Text = dr(2)
+            Else
+                pnl_scholar.Visible = False
+
+            End If
+
         Catch ex As Exception
+        Finally
+            dbConn.Close()
         End Try
     End Sub
 
@@ -75,6 +93,15 @@ Public Class frm_SAccounts
             dt = New DataTable
             da.Fill(dt)
             dg_acctRec.DataSource = dt
+            Dim tpaidByScholar As Double = 0
+            For Each r As DataRow In dt.Rows
+                If Integer.Parse(r.Item(1).ToString) = scholar_No Then
+                    tpaidByScholar += Double.Parse(r.Item(4).ToString)
+                End If
+
+            Next
+            txtb_sPaidAmnt.Text = tpaidByScholar
+
         Catch ex As Exception
             erromessage("error 108: Retrieve Specific Data to DataGrid " & ex.Message)
         Finally

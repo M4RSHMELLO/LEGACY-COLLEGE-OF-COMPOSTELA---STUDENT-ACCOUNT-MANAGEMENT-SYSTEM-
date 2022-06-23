@@ -33,7 +33,7 @@ Public Class frm_colReports
                 print_preview.ReportViewer1.Refresh()
                 With print_preview.ReportViewer1.LocalReport
                     .DataSources.Clear()
-                    .ReportPath = "C:\Users\RJR-PC\Documents\Visual Studio 2019\LCC-SAMS_Project\bin\Debug\Reports\Report2.rdlc"
+                    .ReportPath = "C:\Users\RJR-PC\Documents\Visual Studio 2019\LCC-SAMS_Project\Report2.rdlc"
                     .DataSources.Add(New ReportDataSource("coll_rpt", dt))
                 End With
                 print_preview.ReportViewer1.RefreshReport()
@@ -100,8 +100,8 @@ Public Class frm_colReports
                 End If
                 dt = New DataTable
                 da.Fill(dt)
-                print_elemPreview.elemrpt_viewer.Refresh()
-                With print_elemPreview.elemrpt_viewer.LocalReport
+                print_studStateOfAcct.elemrpt_viewer.Refresh()
+                With print_studStateOfAcct.elemrpt_viewer.LocalReport
                     .DataSources.Clear()
                     .ReportPath = "C:\Users\RJR-PC\Documents\Visual Studio 2019\LCC-SAMS_Project\Report3.rdlc"
                     .DataSources.Add(New ReportDataSource("senior_ds", dt))
@@ -137,8 +137,8 @@ Public Class frm_colReports
                 End If
                 dt = New DataTable
                 da.Fill(dt)
-                print_elemPreview.elemrpt_viewer.Refresh()
-                With print_elemPreview.elemrpt_viewer.LocalReport
+                print_studStateOfAcct.elemrpt_viewer.Refresh()
+                With print_studStateOfAcct.elemrpt_viewer.LocalReport
                     .DataSources.Clear()
                     .ReportPath = "C:\Users\RJR-PC\Documents\Visual Studio 2019\LCC-SAMS_Project\Report4.rdlc"
                     .DataSources.Add(New ReportDataSource("junior_ds", dt))
@@ -173,6 +173,9 @@ Public Class frm_colReports
     Private Sub cbo_department_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbo_department.SelectedIndexChanged
         Dim totalColl As Integer
         If cbo_department.SelectedIndex = 0 Then
+
+            '_loadToCombobox(slctYL, ComboBox1)
+
             totalColl = 0
             dg_coll_rpt.Columns(0).DataPropertyName = "stdacct_tN"
             dg_coll_rpt.Columns(1).DataPropertyName = "stdacct_tDate"
@@ -183,7 +186,36 @@ Public Class frm_colReports
                 Dim selectDate As String = CultureInfo.InvariantCulture.Calendar.GetWeekOfYear(dp_dailyWeekly.Text, CalendarWeekRule.FirstFourDayWeek, DayOfWeek.Monday)
                 Dim coll_rpt As String = "Select sa.stdacct_tN,sa.stdacct_tDate,cf.fees_name,sa.stdacct_tAmount from tbl_studaccount sa inner join tbl_coll_fees cf on cf.fees_id=sa.stdacct_tName  where  DATE_FORMAT(sa.stdacct_tDate, '%u')='" & selectDate & "' order by sa.stdacct_tDate asc"
                 _displayRecords(coll_rpt, dg_coll_rpt)
+                'For Each rowX As DataGridViewRow In dg_coll_rpt.Rows
+                '    If rowX.Cells("rpu_id").Value = 1 Then
+                '        rowX.Cells("FeesAmount").Value = rowX.Cells("FeesAmount").Value * txtb_nUnits.Text
+                '    End If
+                '    total_fees += rowX.Cells("FeesAmount").Value
+                'Next
+                'Try
+                '    Dim totalStudFees As Double = 0
+                '    _dbConnection("db_lccsams")
 
+                '    Dim getFeesType As String = "Select stdacct_tName from tbl_studaccount  group by stdacct_tName having count(*) > 0 "
+                '    dbConn.Open()
+                '    da = New MySqlDataAdapter(getFeesType, dbConn)
+                '    dt = New DataTable
+                '    da.Fill(dt)
+                '    For Each r As DataRow In dt.Rows
+                '        Dim displayTotalFees As String = " select f.fees_name,sum(sa.stdacct_tAmount)  as totalpay from tbl_studaccount sa inner join tbl_coll_fees f on sa.stdacct_tName=f.fees_id where  DATE_FORMAT(sa.stdacct_tDate, '%u')='" & selectDate & "' "
+                '        sqlCommand = New MySqlCommand(displayTotalFees, dbConn)
+                '        dr = sqlCommand.ExecuteReader
+                '        While dr.Read
+                '            dg_FeesCategory_report.Rows.Add(dr("fees_name").ToString, dr("totalpay").ToString)
+                '            totalStudFees += Double.Parse(dr("totalpay").ToString)
+                '        End While
+                '        dr.Close()
+                '    Next
+                'Catch ex As Exception
+                '    MessageBox.Show(ex.Message)
+                'Finally
+                '    dbConn.Close()
+                'End Try
             End If
             If cbo_dailyweekly.Text = "DAILY" Then
                 totalColl = 0
@@ -191,6 +223,31 @@ Public Class frm_colReports
                 lbl_titleReport.Text = cbo_dailyweekly.Text.ToUpper & " COLLECTION REPORT FOR COLLEGE DEPARTMENT AS OF " & dp_dailyWeekly.Text
                 Dim coll_rpt As String = "Select sa.stdacct_tN,sa.stdacct_tDate,cf.fees_name,sa.stdacct_tAmount from tbl_studaccount sa inner join tbl_coll_fees cf on cf.fees_id=sa.stdacct_tName  where sa.stdacct_tDate='" & selectDate & "' order by sa.stdacct_tDate asc"
                 _displayRecords(coll_rpt, dg_coll_rpt)
+                'Try
+                '    Dim totalStudFees As Double = 0
+                '    _dbConnection("db_lccsams")
+
+                '    Dim getFeesType As String = "Select sa.stdacct_tName from tbl_studaccount sa inner join tbl_year_level yl sa.yl_id=yl.yl_id where yl.yl_id    group by stdacct_tName having count(*) > 0 "
+                '    dbConn.Open()
+                '    da = New MySqlDataAdapter(getFeesType, dbConn)
+                '    dt = New DataTable
+                '    da.Fill(dt)
+                '    For Each r As DataRow In dt.Rows
+                '        Dim displayTotalFees As String = " select f.fees_name,sum(sa.stdacct_tAmount)  as totalpay from tbl_studaccount sa inner join tbl_coll_fees f on sa.stdacct_tName=f.fees_id where  DATE_FORMAT(sa.stdacct_tDate, '%u')='" & selectDate & "' "
+                '        sqlCommand = New MySqlCommand(displayTotalFees, dbConn)
+                '        dr = sqlCommand.ExecuteReader
+                '        While dr.Read
+                '            dg_FeesCategory_report.Rows.Add(dr("fees_name").ToString, dr("totalpay").ToString)
+                '            totalStudFees += Double.Parse(dr("totalpay").ToString)
+                '        End While
+                '        dr.Close()
+                '    Next
+                'Catch ex As Exception
+                '    MessageBox.Show(ex.Message)
+                'Finally
+                '    dbConn.Close()
+                'End Try
+
             End If
 
         End If
