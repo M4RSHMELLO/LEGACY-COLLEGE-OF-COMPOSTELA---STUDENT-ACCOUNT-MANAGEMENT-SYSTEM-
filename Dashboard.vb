@@ -1,5 +1,6 @@
 ﻿Public Class Dashboard
     Dim frm_sP As New frm_SPayments
+    Dim procPayment As proceespayment
     Dim frm_sA As New frm_SAccounts
     Dim frm_sL As New frm_slists
     Dim frm_sTR As New frm_colReports
@@ -24,6 +25,7 @@
     End Sub
     Public Sub BunifuFlatButton1_Click(sender As Object, e As EventArgs) Handles btn_manageP.Click
         addContent(frm_sP, btn_manageP)
+        'pnlMContainer.Controls.Add(procPayment)
         frm_sP.lbl_cashier.Text = cashier_name.ToUpper
         selected_menu_managePayment(frm_sL.TabControl1)
     End Sub
@@ -109,9 +111,7 @@
                         Case 2
                             frm_sA.txtb_sStud_id_Click(sender, e)
                         Case 3
-                            frm_sA.txtb_jStud_id_Click(sender, e)
-
-
+                            frm_sA.txtb_jStud_ID_Click(sender, e)
                         Case Else
                             MessageBox.Show("")
                     End Select

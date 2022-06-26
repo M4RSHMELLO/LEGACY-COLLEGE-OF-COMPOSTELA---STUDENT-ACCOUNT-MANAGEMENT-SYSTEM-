@@ -17,10 +17,18 @@
         _loadToCombobox(slctS, cbo_SortSem)
         _loadToCombobox(slctYL, cbo_SortYL)
         _loadToCombobox(slctC, cbo_SortCrs)
-        cbo_SortSY.SelectedIndex = -1
-        cbo_SortCrs.SelectedIndex = -1
-        cbo_SortSem.SelectedIndex = -1
-        cbo_SortYL.SelectedIndex = -1
+
+        If manageFees = 1 Then
+            cbo_SortSY.Text = stud_sy
+            cbo_SortSem.Text = stud_sem
+            cbo_SortYL.Text = stud_yl
+
+        Else
+            cbo_SortSY.SelectedIndex = -1
+            cbo_SortCrs.SelectedIndex = -1
+            cbo_SortSem.SelectedIndex = -1
+            cbo_SortYL.SelectedIndex = -1
+        End If
     End Sub
 
     Dim a As Integer = 0
@@ -189,10 +197,17 @@
                 _loadToCombobox(slctC, cbo_SortCrs)
                 _loadToCombobox(slctS, cbo_SortSem)
                 _loadToCombobox(slctYL, cbo_SortYL)
-                cbo_SortCrs.SelectedIndex = -1
-                cbo_SortSem.SelectedIndex = -1
-                cbo_SortYL.SelectedIndex = -1
-                cbo_collFeesName.SelectedIndex = -1
+                If manageFees = 1 Then
+                    cbo_SortSY.Text = stud_sy
+                    cbo_SortSem.Text = stud_sem
+                    cbo_SortYL.Text = stud_yl
+
+                Else
+                    cbo_SortCrs.SelectedIndex = -1
+                    cbo_SortSem.SelectedIndex = -1
+                    cbo_SortYL.SelectedIndex = -1
+                    cbo_collFeesName.SelectedIndex = -1
+                End If
             Case 1
                 _dbConnection("db_lccsams")
                 _loadToCombobox(eSelect_SY, cbo_eSY)
@@ -543,7 +558,7 @@
     End Sub
 
     Private Sub btn_jSave_Click(sender As Object, e As EventArgs) Handles btn_jSave.Click
-        Dim jFeesR As String = "select f.jfees_id,ft.feestype_name, f.jfees_amount from tbl_junior_fees f inner join tbl_fees_type on  f.jfees_name=ft.feestype_id where jsy_id='" & cbo_jSortSY.SelectedValue & "' "
+        Dim jFeesR As String = "select f.jfees_id,ft.feestype_name, f.jfees_amount from tbl_junior_fees f inner join tbl_fees_type  ft on  f.jfees_name=ft.feestype_id where jsy_id='" & cbo_jSortSY.SelectedValue & "' "
 
         Select Case d
             Case 1
@@ -585,7 +600,7 @@
     End Sub
     Private Sub cbo_jSortSY_SelectionChangeCommitted(sender As Object, e As EventArgs) Handles cbo_jSortSY.SelectionChangeCommitted
         Try
-            Dim jFeesR_sort As String = "select f.jfees_id,ft.feestype_name, f.jfees_amount from tbl_junior_fees f inner join tbl_fees_type on  f.jfees_name=ft.feestype_id  where jsy_id='" & cbo_jSortSY.SelectedValue & "' "
+            Dim jFeesR_sort As String = "select f.jfees_id,ft.feestype_name, f.jfees_amount from tbl_junior_fees f inner join tbl_fees_type ft on  f.jfees_name=ft.feestype_id  where jsy_id='" & cbo_jSortSY.SelectedValue & "' "
             _dbConnection("db_lccsams")
             txtb_jFeesAmnt.Clear()
             cbo_juniorFeesType.SelectedIndex = -1

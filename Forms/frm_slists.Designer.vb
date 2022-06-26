@@ -22,14 +22,14 @@ Partial Class frm_slists
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle57 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle58 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle59 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle60 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle61 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle62 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle63 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle64 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.college_dept = New System.Windows.Forms.TabPage()
         Me.Panel2 = New System.Windows.Forms.Panel()
@@ -38,14 +38,6 @@ Partial Class frm_slists
         Me.btn_manageCollPayment = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.btn_manageCollSY = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.dg_studR = New Bunifu.Framework.UI.BunifuCustomDataGrid()
-        Me.s_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.s_fName = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.s_lName = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.s_Midi = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.sy_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.sem_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.yl_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.crs_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.cbo_studType = New System.Windows.Forms.ComboBox()
         Me.lbl_studentType = New System.Windows.Forms.Label()
@@ -86,12 +78,6 @@ Partial Class frm_slists
         Me.btn_manageElemPayment = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.btn_manageElemSy = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.dg_eStudRecords = New Bunifu.Framework.UI.BunifuCustomDataGrid()
-        Me.col_estud_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.col_estud_fname = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.col_estud_lname = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.col_estud_mi = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.col_esy_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.col_egl_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.btn_eCancel = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.btn_eViewAccount = New Bunifu.Framework.UI.BunifuFlatButton()
@@ -122,12 +108,6 @@ Partial Class frm_slists
         Me.btn_manageSeniorPayment = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.btn_manageSeniorSy = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.dg_sStudRec = New Bunifu.Framework.UI.BunifuCustomDataGrid()
-        Me.col_sStud_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.col_sStud_fname = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.col_sStud_lname = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.col_sStud_mi = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.col_sSY = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.col_sGL = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.btn_sCancel = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.btn_sViewAccount = New Bunifu.Framework.UI.BunifuFlatButton()
@@ -158,12 +138,6 @@ Partial Class frm_slists
         Me.btn_manageJuniorPayment = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.btn_manageJuniorSy = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.dg_jStudRec = New Bunifu.Framework.UI.BunifuCustomDataGrid()
-        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn16 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn17 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn18 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel10 = New System.Windows.Forms.Panel()
         Me.btn_jCancel = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.btn_jViewAcct = New Bunifu.Framework.UI.BunifuFlatButton()
@@ -187,12 +161,43 @@ Partial Class frm_slists
         Me.Label17 = New System.Windows.Forms.Label()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.txtb_jSearch = New System.Windows.Forms.TextBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.cbo_elemStudType = New System.Windows.Forms.ComboBox()
         Me.Label37 = New System.Windows.Forms.Label()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.cbo_seniorStudType = New System.Windows.Forms.ComboBox()
         Me.Label38 = New System.Windows.Forms.Label()
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
+        Me.cbo_juniorStudType = New System.Windows.Forms.ComboBox()
         Me.Label39 = New System.Windows.Forms.Label()
+        Me.s_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.s_fName = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.s_lName = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.s_Midi = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.sy_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.sem_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.yl_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.crs_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.noUnits = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.rate_perunits = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.col_estud_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.col_estud_fname = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.col_estud_lname = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.col_estud_mi = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.col_esy_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.col_egl_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.stype_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.col_sStud_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.col_sStud_fname = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.col_sStud_lname = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.col_sStud_mi = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.col_sSY = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.col_sGL = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.sStype_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn16 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn17 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn18 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.jStype_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TabControl1.SuspendLayout()
         Me.college_dept.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -388,22 +393,22 @@ Partial Class frm_slists
         Me.dg_studR.AllowUserToAddRows = False
         Me.dg_studR.AllowUserToDeleteRows = False
         Me.dg_studR.AllowUserToResizeRows = False
-        DataGridViewCellStyle57.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.dg_studR.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle57
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.dg_studR.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.dg_studR.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dg_studR.BackgroundColor = System.Drawing.Color.Gainsboro
         Me.dg_studR.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dg_studR.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle58.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle58.BackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle58.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle58.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle58.SelectionBackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle58.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle58.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dg_studR.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle58
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dg_studR.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.dg_studR.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dg_studR.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.s_id, Me.s_fName, Me.s_lName, Me.s_Midi, Me.sy_id, Me.sem_id, Me.yl_id, Me.crs_id})
+        Me.dg_studR.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.s_id, Me.s_fName, Me.s_lName, Me.s_Midi, Me.sy_id, Me.sem_id, Me.yl_id, Me.crs_id, Me.noUnits, Me.rate_perunits})
         Me.dg_studR.Dock = System.Windows.Forms.DockStyle.Top
         Me.dg_studR.DoubleBuffered = True
         Me.dg_studR.EnableHeadersVisualStyles = False
@@ -419,78 +424,6 @@ Partial Class frm_slists
         Me.dg_studR.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dg_studR.Size = New System.Drawing.Size(770, 491)
         Me.dg_studR.TabIndex = 47
-        '
-        's_id
-        '
-        Me.s_id.DataPropertyName = "stud_id"
-        Me.s_id.FillWeight = 349.2386!
-        Me.s_id.HeaderText = "Stud. id"
-        Me.s_id.MinimumWidth = 172
-        Me.s_id.Name = "s_id"
-        Me.s_id.ReadOnly = True
-        '
-        's_fName
-        '
-        Me.s_fName.DataPropertyName = "stud_fname"
-        Me.s_fName.FillWeight = 15.18528!
-        Me.s_fName.HeaderText = "First Name"
-        Me.s_fName.MinimumWidth = 172
-        Me.s_fName.Name = "s_fName"
-        Me.s_fName.ReadOnly = True
-        '
-        's_lName
-        '
-        Me.s_lName.DataPropertyName = "stud_Lname"
-        Me.s_lName.FillWeight = 28.00853!
-        Me.s_lName.HeaderText = "Last Name"
-        Me.s_lName.MinimumWidth = 172
-        Me.s_lName.Name = "s_lName"
-        Me.s_lName.ReadOnly = True
-        '
-        's_Midi
-        '
-        Me.s_Midi.DataPropertyName = "stud_midI"
-        Me.s_Midi.FillWeight = 7.567604!
-        Me.s_Midi.HeaderText = "Middle Initial"
-        Me.s_Midi.MinimumWidth = 100
-        Me.s_Midi.Name = "s_Midi"
-        Me.s_Midi.ReadOnly = True
-        '
-        'sy_id
-        '
-        Me.sy_id.DataPropertyName = "sy_id"
-        Me.sy_id.HeaderText = "S/Y"
-        Me.sy_id.MinimumWidth = 100
-        Me.sy_id.Name = "sy_id"
-        Me.sy_id.ReadOnly = True
-        Me.sy_id.Visible = False
-        '
-        'sem_id
-        '
-        Me.sem_id.DataPropertyName = "sem_id"
-        Me.sem_id.HeaderText = "sem"
-        Me.sem_id.MinimumWidth = 100
-        Me.sem_id.Name = "sem_id"
-        Me.sem_id.ReadOnly = True
-        Me.sem_id.Visible = False
-        '
-        'yl_id
-        '
-        Me.yl_id.DataPropertyName = "yl_id"
-        Me.yl_id.HeaderText = "YL"
-        Me.yl_id.MinimumWidth = 100
-        Me.yl_id.Name = "yl_id"
-        Me.yl_id.ReadOnly = True
-        Me.yl_id.Visible = False
-        '
-        'crs_id
-        '
-        Me.crs_id.DataPropertyName = "crs_id"
-        Me.crs_id.HeaderText = "course"
-        Me.crs_id.MinimumWidth = 100
-        Me.crs_id.Name = "crs_id"
-        Me.crs_id.ReadOnly = True
-        Me.crs_id.Visible = False
         '
         'Panel1
         '
@@ -1150,22 +1083,22 @@ Partial Class frm_slists
         Me.dg_eStudRecords.AllowUserToAddRows = False
         Me.dg_eStudRecords.AllowUserToDeleteRows = False
         Me.dg_eStudRecords.AllowUserToResizeRows = False
-        DataGridViewCellStyle59.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.dg_eStudRecords.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle59
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.dg_eStudRecords.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle3
         Me.dg_eStudRecords.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dg_eStudRecords.BackgroundColor = System.Drawing.Color.Gainsboro
         Me.dg_eStudRecords.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dg_eStudRecords.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle60.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle60.BackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle60.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle60.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle60.SelectionBackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle60.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle60.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dg_eStudRecords.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle60
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dg_eStudRecords.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.dg_eStudRecords.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dg_eStudRecords.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.col_estud_id, Me.col_estud_fname, Me.col_estud_lname, Me.col_estud_mi, Me.col_esy_id, Me.col_egl_id})
+        Me.dg_eStudRecords.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.col_estud_id, Me.col_estud_fname, Me.col_estud_lname, Me.col_estud_mi, Me.col_esy_id, Me.col_egl_id, Me.stype_id})
         Me.dg_eStudRecords.Dock = System.Windows.Forms.DockStyle.Top
         Me.dg_eStudRecords.DoubleBuffered = True
         Me.dg_eStudRecords.EnableHeadersVisualStyles = False
@@ -1180,53 +1113,9 @@ Partial Class frm_slists
         Me.dg_eStudRecords.Size = New System.Drawing.Size(776, 503)
         Me.dg_eStudRecords.TabIndex = 47
         '
-        'col_estud_id
-        '
-        Me.col_estud_id.DataPropertyName = "estud_id"
-        Me.col_estud_id.HeaderText = "Stud. id"
-        Me.col_estud_id.Name = "col_estud_id"
-        Me.col_estud_id.ReadOnly = True
-        '
-        'col_estud_fname
-        '
-        Me.col_estud_fname.DataPropertyName = "estud_fname"
-        Me.col_estud_fname.HeaderText = "First Name"
-        Me.col_estud_fname.Name = "col_estud_fname"
-        Me.col_estud_fname.ReadOnly = True
-        '
-        'col_estud_lname
-        '
-        Me.col_estud_lname.DataPropertyName = "estud_Lname"
-        Me.col_estud_lname.HeaderText = "Last Name"
-        Me.col_estud_lname.Name = "col_estud_lname"
-        Me.col_estud_lname.ReadOnly = True
-        '
-        'col_estud_mi
-        '
-        Me.col_estud_mi.DataPropertyName = "estud_mi"
-        Me.col_estud_mi.HeaderText = "Middle Initial"
-        Me.col_estud_mi.Name = "col_estud_mi"
-        Me.col_estud_mi.ReadOnly = True
-        '
-        'col_esy_id
-        '
-        Me.col_esy_id.DataPropertyName = "esy_id"
-        Me.col_esy_id.HeaderText = "S/Y"
-        Me.col_esy_id.Name = "col_esy_id"
-        Me.col_esy_id.ReadOnly = True
-        Me.col_esy_id.Visible = False
-        '
-        'col_egl_id
-        '
-        Me.col_egl_id.DataPropertyName = "egl_id"
-        Me.col_egl_id.HeaderText = "GL"
-        Me.col_egl_id.Name = "col_egl_id"
-        Me.col_egl_id.ReadOnly = True
-        Me.col_egl_id.Visible = False
-        '
         'Panel7
         '
-        Me.Panel7.Controls.Add(Me.ComboBox1)
+        Me.Panel7.Controls.Add(Me.cbo_elemStudType)
         Me.Panel7.Controls.Add(Me.Label37)
         Me.Panel7.Controls.Add(Me.btn_eCancel)
         Me.Panel7.Controls.Add(Me.btn_eViewAccount)
@@ -1776,22 +1665,22 @@ Partial Class frm_slists
         Me.dg_sStudRec.AllowUserToAddRows = False
         Me.dg_sStudRec.AllowUserToDeleteRows = False
         Me.dg_sStudRec.AllowUserToResizeRows = False
-        DataGridViewCellStyle61.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.dg_sStudRec.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle61
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.dg_sStudRec.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle5
         Me.dg_sStudRec.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dg_sStudRec.BackgroundColor = System.Drawing.Color.Gainsboro
         Me.dg_sStudRec.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dg_sStudRec.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle62.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle62.BackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle62.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle62.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle62.SelectionBackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle62.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle62.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dg_sStudRec.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle62
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dg_sStudRec.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle6
         Me.dg_sStudRec.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dg_sStudRec.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.col_sStud_id, Me.col_sStud_fname, Me.col_sStud_lname, Me.col_sStud_mi, Me.col_sSY, Me.col_sGL})
+        Me.dg_sStudRec.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.col_sStud_id, Me.col_sStud_fname, Me.col_sStud_lname, Me.col_sStud_mi, Me.col_sSY, Me.col_sGL, Me.sStype_id})
         Me.dg_sStudRec.Dock = System.Windows.Forms.DockStyle.Top
         Me.dg_sStudRec.DoubleBuffered = True
         Me.dg_sStudRec.EnableHeadersVisualStyles = False
@@ -1806,53 +1695,9 @@ Partial Class frm_slists
         Me.dg_sStudRec.Size = New System.Drawing.Size(776, 503)
         Me.dg_sStudRec.TabIndex = 47
         '
-        'col_sStud_id
-        '
-        Me.col_sStud_id.DataPropertyName = "sstud_id"
-        Me.col_sStud_id.HeaderText = "Stud. id"
-        Me.col_sStud_id.Name = "col_sStud_id"
-        Me.col_sStud_id.ReadOnly = True
-        '
-        'col_sStud_fname
-        '
-        Me.col_sStud_fname.DataPropertyName = "sstud_fname"
-        Me.col_sStud_fname.HeaderText = "First Name"
-        Me.col_sStud_fname.Name = "col_sStud_fname"
-        Me.col_sStud_fname.ReadOnly = True
-        '
-        'col_sStud_lname
-        '
-        Me.col_sStud_lname.DataPropertyName = "sstud_Lname"
-        Me.col_sStud_lname.HeaderText = "Last Name"
-        Me.col_sStud_lname.Name = "col_sStud_lname"
-        Me.col_sStud_lname.ReadOnly = True
-        '
-        'col_sStud_mi
-        '
-        Me.col_sStud_mi.DataPropertyName = "sstud_mi"
-        Me.col_sStud_mi.HeaderText = "Middle Initial"
-        Me.col_sStud_mi.Name = "col_sStud_mi"
-        Me.col_sStud_mi.ReadOnly = True
-        '
-        'col_sSY
-        '
-        Me.col_sSY.DataPropertyName = "ssy_id"
-        Me.col_sSY.HeaderText = "S/Y"
-        Me.col_sSY.Name = "col_sSY"
-        Me.col_sSY.ReadOnly = True
-        Me.col_sSY.Visible = False
-        '
-        'col_sGL
-        '
-        Me.col_sGL.DataPropertyName = "sgl_id"
-        Me.col_sGL.HeaderText = "G/L"
-        Me.col_sGL.Name = "col_sGL"
-        Me.col_sGL.ReadOnly = True
-        Me.col_sGL.Visible = False
-        '
         'Panel4
         '
-        Me.Panel4.Controls.Add(Me.ComboBox2)
+        Me.Panel4.Controls.Add(Me.cbo_seniorStudType)
         Me.Panel4.Controls.Add(Me.Label38)
         Me.Panel4.Controls.Add(Me.btn_sCancel)
         Me.Panel4.Controls.Add(Me.btn_sViewAccount)
@@ -2402,22 +2247,22 @@ Partial Class frm_slists
         Me.dg_jStudRec.AllowUserToAddRows = False
         Me.dg_jStudRec.AllowUserToDeleteRows = False
         Me.dg_jStudRec.AllowUserToResizeRows = False
-        DataGridViewCellStyle63.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.dg_jStudRec.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle63
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.dg_jStudRec.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle7
         Me.dg_jStudRec.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dg_jStudRec.BackgroundColor = System.Drawing.Color.Gainsboro
         Me.dg_jStudRec.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dg_jStudRec.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle64.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle64.BackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle64.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle64.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle64.SelectionBackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle64.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle64.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dg_jStudRec.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle64
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dg_jStudRec.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle8
         Me.dg_jStudRec.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dg_jStudRec.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn14, Me.DataGridViewTextBoxColumn16, Me.DataGridViewTextBoxColumn17, Me.DataGridViewTextBoxColumn18})
+        Me.dg_jStudRec.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn14, Me.DataGridViewTextBoxColumn16, Me.DataGridViewTextBoxColumn17, Me.DataGridViewTextBoxColumn18, Me.jStype_id})
         Me.dg_jStudRec.Dock = System.Windows.Forms.DockStyle.Top
         Me.dg_jStudRec.DoubleBuffered = True
         Me.dg_jStudRec.EnableHeadersVisualStyles = False
@@ -2432,53 +2277,9 @@ Partial Class frm_slists
         Me.dg_jStudRec.Size = New System.Drawing.Size(776, 503)
         Me.dg_jStudRec.TabIndex = 47
         '
-        'DataGridViewTextBoxColumn7
-        '
-        Me.DataGridViewTextBoxColumn7.DataPropertyName = "jstud_id"
-        Me.DataGridViewTextBoxColumn7.HeaderText = "Stud. id"
-        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
-        Me.DataGridViewTextBoxColumn7.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn8
-        '
-        Me.DataGridViewTextBoxColumn8.DataPropertyName = "jstud_fname"
-        Me.DataGridViewTextBoxColumn8.HeaderText = "First Name"
-        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
-        Me.DataGridViewTextBoxColumn8.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn14
-        '
-        Me.DataGridViewTextBoxColumn14.DataPropertyName = "jstud_Lname"
-        Me.DataGridViewTextBoxColumn14.HeaderText = "Last Name"
-        Me.DataGridViewTextBoxColumn14.Name = "DataGridViewTextBoxColumn14"
-        Me.DataGridViewTextBoxColumn14.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn16
-        '
-        Me.DataGridViewTextBoxColumn16.DataPropertyName = "jstud_mi"
-        Me.DataGridViewTextBoxColumn16.HeaderText = "Middle Initial"
-        Me.DataGridViewTextBoxColumn16.Name = "DataGridViewTextBoxColumn16"
-        Me.DataGridViewTextBoxColumn16.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn17
-        '
-        Me.DataGridViewTextBoxColumn17.DataPropertyName = "jsy_id"
-        Me.DataGridViewTextBoxColumn17.HeaderText = "S/Y"
-        Me.DataGridViewTextBoxColumn17.Name = "DataGridViewTextBoxColumn17"
-        Me.DataGridViewTextBoxColumn17.ReadOnly = True
-        Me.DataGridViewTextBoxColumn17.Visible = False
-        '
-        'DataGridViewTextBoxColumn18
-        '
-        Me.DataGridViewTextBoxColumn18.DataPropertyName = "jgl_id"
-        Me.DataGridViewTextBoxColumn18.HeaderText = "YL"
-        Me.DataGridViewTextBoxColumn18.Name = "DataGridViewTextBoxColumn18"
-        Me.DataGridViewTextBoxColumn18.ReadOnly = True
-        Me.DataGridViewTextBoxColumn18.Visible = False
-        '
         'Panel10
         '
-        Me.Panel10.Controls.Add(Me.ComboBox3)
+        Me.Panel10.Controls.Add(Me.cbo_juniorStudType)
         Me.Panel10.Controls.Add(Me.Label39)
         Me.Panel10.Controls.Add(Me.btn_jCancel)
         Me.Panel10.Controls.Add(Me.btn_jViewAcct)
@@ -2874,15 +2675,15 @@ Partial Class frm_slists
         Me.txtb_jSearch.Size = New System.Drawing.Size(425, 30)
         Me.txtb_jSearch.TabIndex = 13
         '
-        'ComboBox1
+        'cbo_elemStudType
         '
-        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox1.Enabled = False
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(116, 276)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(223, 29)
-        Me.ComboBox1.TabIndex = 58
+        Me.cbo_elemStudType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbo_elemStudType.Enabled = False
+        Me.cbo_elemStudType.FormattingEnabled = True
+        Me.cbo_elemStudType.Location = New System.Drawing.Point(116, 276)
+        Me.cbo_elemStudType.Name = "cbo_elemStudType"
+        Me.cbo_elemStudType.Size = New System.Drawing.Size(223, 29)
+        Me.cbo_elemStudType.TabIndex = 58
         '
         'Label37
         '
@@ -2894,15 +2695,15 @@ Partial Class frm_slists
         Me.Label37.TabIndex = 57
         Me.Label37.Text = "STUDENT TYPE"
         '
-        'ComboBox2
+        'cbo_seniorStudType
         '
-        Me.ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox2.Enabled = False
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(117, 280)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(223, 29)
-        Me.ComboBox2.TabIndex = 60
+        Me.cbo_seniorStudType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbo_seniorStudType.Enabled = False
+        Me.cbo_seniorStudType.FormattingEnabled = True
+        Me.cbo_seniorStudType.Location = New System.Drawing.Point(117, 280)
+        Me.cbo_seniorStudType.Name = "cbo_seniorStudType"
+        Me.cbo_seniorStudType.Size = New System.Drawing.Size(223, 29)
+        Me.cbo_seniorStudType.TabIndex = 60
         '
         'Label38
         '
@@ -2914,15 +2715,15 @@ Partial Class frm_slists
         Me.Label38.TabIndex = 59
         Me.Label38.Text = "STUDENT TYPE"
         '
-        'ComboBox3
+        'cbo_juniorStudType
         '
-        Me.ComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox3.Enabled = False
-        Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Location = New System.Drawing.Point(117, 280)
-        Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(223, 29)
-        Me.ComboBox3.TabIndex = 60
+        Me.cbo_juniorStudType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbo_juniorStudType.Enabled = False
+        Me.cbo_juniorStudType.FormattingEnabled = True
+        Me.cbo_juniorStudType.Location = New System.Drawing.Point(117, 280)
+        Me.cbo_juniorStudType.Name = "cbo_juniorStudType"
+        Me.cbo_juniorStudType.Size = New System.Drawing.Size(223, 29)
+        Me.cbo_juniorStudType.TabIndex = 60
         '
         'Label39
         '
@@ -2933,6 +2734,250 @@ Partial Class frm_slists
         Me.Label39.Size = New System.Drawing.Size(95, 21)
         Me.Label39.TabIndex = 59
         Me.Label39.Text = "STUDENT TYPE"
+        '
+        's_id
+        '
+        Me.s_id.DataPropertyName = "stud_id"
+        Me.s_id.FillWeight = 349.2386!
+        Me.s_id.HeaderText = "Stud. id"
+        Me.s_id.MinimumWidth = 172
+        Me.s_id.Name = "s_id"
+        Me.s_id.ReadOnly = True
+        '
+        's_fName
+        '
+        Me.s_fName.DataPropertyName = "stud_fname"
+        Me.s_fName.FillWeight = 15.18528!
+        Me.s_fName.HeaderText = "First Name"
+        Me.s_fName.MinimumWidth = 172
+        Me.s_fName.Name = "s_fName"
+        Me.s_fName.ReadOnly = True
+        '
+        's_lName
+        '
+        Me.s_lName.DataPropertyName = "stud_Lname"
+        Me.s_lName.FillWeight = 28.00853!
+        Me.s_lName.HeaderText = "Last Name"
+        Me.s_lName.MinimumWidth = 172
+        Me.s_lName.Name = "s_lName"
+        Me.s_lName.ReadOnly = True
+        '
+        's_Midi
+        '
+        Me.s_Midi.DataPropertyName = "stud_midI"
+        Me.s_Midi.FillWeight = 7.567604!
+        Me.s_Midi.HeaderText = "Middle Initial"
+        Me.s_Midi.MinimumWidth = 100
+        Me.s_Midi.Name = "s_Midi"
+        Me.s_Midi.ReadOnly = True
+        '
+        'sy_id
+        '
+        Me.sy_id.DataPropertyName = "sy_id"
+        Me.sy_id.HeaderText = "S/Y"
+        Me.sy_id.MinimumWidth = 100
+        Me.sy_id.Name = "sy_id"
+        Me.sy_id.ReadOnly = True
+        Me.sy_id.Visible = False
+        '
+        'sem_id
+        '
+        Me.sem_id.DataPropertyName = "sem_id"
+        Me.sem_id.HeaderText = "sem"
+        Me.sem_id.MinimumWidth = 100
+        Me.sem_id.Name = "sem_id"
+        Me.sem_id.ReadOnly = True
+        Me.sem_id.Visible = False
+        '
+        'yl_id
+        '
+        Me.yl_id.DataPropertyName = "yl_id"
+        Me.yl_id.HeaderText = "YL"
+        Me.yl_id.MinimumWidth = 100
+        Me.yl_id.Name = "yl_id"
+        Me.yl_id.ReadOnly = True
+        Me.yl_id.Visible = False
+        '
+        'crs_id
+        '
+        Me.crs_id.DataPropertyName = "crs_id"
+        Me.crs_id.HeaderText = "course"
+        Me.crs_id.MinimumWidth = 100
+        Me.crs_id.Name = "crs_id"
+        Me.crs_id.ReadOnly = True
+        Me.crs_id.Visible = False
+        '
+        'noUnits
+        '
+        Me.noUnits.DataPropertyName = "no_units"
+        Me.noUnits.HeaderText = "No. Units"
+        Me.noUnits.Name = "noUnits"
+        Me.noUnits.ReadOnly = True
+        Me.noUnits.Visible = False
+        '
+        'rate_perunits
+        '
+        Me.rate_perunits.DataPropertyName = "rate_perunits"
+        Me.rate_perunits.HeaderText = "Rate per Units"
+        Me.rate_perunits.Name = "rate_perunits"
+        Me.rate_perunits.ReadOnly = True
+        Me.rate_perunits.Visible = False
+        '
+        'col_estud_id
+        '
+        Me.col_estud_id.DataPropertyName = "estud_id"
+        Me.col_estud_id.HeaderText = "Stud. id"
+        Me.col_estud_id.Name = "col_estud_id"
+        Me.col_estud_id.ReadOnly = True
+        '
+        'col_estud_fname
+        '
+        Me.col_estud_fname.DataPropertyName = "estud_fname"
+        Me.col_estud_fname.HeaderText = "First Name"
+        Me.col_estud_fname.Name = "col_estud_fname"
+        Me.col_estud_fname.ReadOnly = True
+        '
+        'col_estud_lname
+        '
+        Me.col_estud_lname.DataPropertyName = "estud_Lname"
+        Me.col_estud_lname.HeaderText = "Last Name"
+        Me.col_estud_lname.Name = "col_estud_lname"
+        Me.col_estud_lname.ReadOnly = True
+        '
+        'col_estud_mi
+        '
+        Me.col_estud_mi.DataPropertyName = "estud_mi"
+        Me.col_estud_mi.HeaderText = "Middle Initial"
+        Me.col_estud_mi.Name = "col_estud_mi"
+        Me.col_estud_mi.ReadOnly = True
+        '
+        'col_esy_id
+        '
+        Me.col_esy_id.DataPropertyName = "esy_id"
+        Me.col_esy_id.HeaderText = "S/Y"
+        Me.col_esy_id.Name = "col_esy_id"
+        Me.col_esy_id.ReadOnly = True
+        Me.col_esy_id.Visible = False
+        '
+        'col_egl_id
+        '
+        Me.col_egl_id.DataPropertyName = "egl_id"
+        Me.col_egl_id.HeaderText = "GL"
+        Me.col_egl_id.Name = "col_egl_id"
+        Me.col_egl_id.ReadOnly = True
+        Me.col_egl_id.Visible = False
+        '
+        'stype_id
+        '
+        Me.stype_id.DataPropertyName = "stype_id"
+        Me.stype_id.HeaderText = "Stud Type"
+        Me.stype_id.Name = "stype_id"
+        Me.stype_id.ReadOnly = True
+        Me.stype_id.Visible = False
+        '
+        'col_sStud_id
+        '
+        Me.col_sStud_id.DataPropertyName = "sstud_id"
+        Me.col_sStud_id.HeaderText = "Stud. id"
+        Me.col_sStud_id.Name = "col_sStud_id"
+        Me.col_sStud_id.ReadOnly = True
+        '
+        'col_sStud_fname
+        '
+        Me.col_sStud_fname.DataPropertyName = "sstud_fname"
+        Me.col_sStud_fname.HeaderText = "First Name"
+        Me.col_sStud_fname.Name = "col_sStud_fname"
+        Me.col_sStud_fname.ReadOnly = True
+        '
+        'col_sStud_lname
+        '
+        Me.col_sStud_lname.DataPropertyName = "sstud_Lname"
+        Me.col_sStud_lname.HeaderText = "Last Name"
+        Me.col_sStud_lname.Name = "col_sStud_lname"
+        Me.col_sStud_lname.ReadOnly = True
+        '
+        'col_sStud_mi
+        '
+        Me.col_sStud_mi.DataPropertyName = "sstud_mi"
+        Me.col_sStud_mi.HeaderText = "Middle Initial"
+        Me.col_sStud_mi.Name = "col_sStud_mi"
+        Me.col_sStud_mi.ReadOnly = True
+        '
+        'col_sSY
+        '
+        Me.col_sSY.DataPropertyName = "ssy_id"
+        Me.col_sSY.HeaderText = "S/Y"
+        Me.col_sSY.Name = "col_sSY"
+        Me.col_sSY.ReadOnly = True
+        Me.col_sSY.Visible = False
+        '
+        'col_sGL
+        '
+        Me.col_sGL.DataPropertyName = "sgl_id"
+        Me.col_sGL.HeaderText = "G/L"
+        Me.col_sGL.Name = "col_sGL"
+        Me.col_sGL.ReadOnly = True
+        Me.col_sGL.Visible = False
+        '
+        'sStype_id
+        '
+        Me.sStype_id.DataPropertyName = "stype_id"
+        Me.sStype_id.HeaderText = "stud type"
+        Me.sStype_id.Name = "sStype_id"
+        Me.sStype_id.ReadOnly = True
+        Me.sStype_id.Visible = False
+        '
+        'DataGridViewTextBoxColumn7
+        '
+        Me.DataGridViewTextBoxColumn7.DataPropertyName = "jstud_id"
+        Me.DataGridViewTextBoxColumn7.HeaderText = "Stud. id"
+        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
+        Me.DataGridViewTextBoxColumn7.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn8
+        '
+        Me.DataGridViewTextBoxColumn8.DataPropertyName = "jstud_fname"
+        Me.DataGridViewTextBoxColumn8.HeaderText = "First Name"
+        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
+        Me.DataGridViewTextBoxColumn8.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn14
+        '
+        Me.DataGridViewTextBoxColumn14.DataPropertyName = "jstud_Lname"
+        Me.DataGridViewTextBoxColumn14.HeaderText = "Last Name"
+        Me.DataGridViewTextBoxColumn14.Name = "DataGridViewTextBoxColumn14"
+        Me.DataGridViewTextBoxColumn14.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn16
+        '
+        Me.DataGridViewTextBoxColumn16.DataPropertyName = "jstud_mi"
+        Me.DataGridViewTextBoxColumn16.HeaderText = "Middle Initial"
+        Me.DataGridViewTextBoxColumn16.Name = "DataGridViewTextBoxColumn16"
+        Me.DataGridViewTextBoxColumn16.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn17
+        '
+        Me.DataGridViewTextBoxColumn17.DataPropertyName = "jsy_id"
+        Me.DataGridViewTextBoxColumn17.HeaderText = "S/Y"
+        Me.DataGridViewTextBoxColumn17.Name = "DataGridViewTextBoxColumn17"
+        Me.DataGridViewTextBoxColumn17.ReadOnly = True
+        Me.DataGridViewTextBoxColumn17.Visible = False
+        '
+        'DataGridViewTextBoxColumn18
+        '
+        Me.DataGridViewTextBoxColumn18.DataPropertyName = "jgl_id"
+        Me.DataGridViewTextBoxColumn18.HeaderText = "YL"
+        Me.DataGridViewTextBoxColumn18.Name = "DataGridViewTextBoxColumn18"
+        Me.DataGridViewTextBoxColumn18.ReadOnly = True
+        Me.DataGridViewTextBoxColumn18.Visible = False
+        '
+        'jStype_id
+        '
+        Me.jStype_id.DataPropertyName = "stype_id"
+        Me.jStype_id.HeaderText = "stud type"
+        Me.jStype_id.Name = "jStype_id"
+        Me.jStype_id.ReadOnly = True
+        Me.jStype_id.Visible = False
         '
         'frm_slists
         '
@@ -3094,32 +3139,6 @@ Partial Class frm_slists
     Friend WithEvents Label29 As System.Windows.Forms.Label
     Friend WithEvents Label31 As System.Windows.Forms.Label
     Friend WithEvents Label32 As System.Windows.Forms.Label
-    Friend WithEvents col_estud_id As DataGridViewTextBoxColumn
-    Friend WithEvents col_estud_fname As DataGridViewTextBoxColumn
-    Friend WithEvents col_estud_lname As DataGridViewTextBoxColumn
-    Friend WithEvents col_estud_mi As DataGridViewTextBoxColumn
-    Friend WithEvents col_esy_id As DataGridViewTextBoxColumn
-    Friend WithEvents col_egl_id As DataGridViewTextBoxColumn
-    Friend WithEvents col_sStud_id As DataGridViewTextBoxColumn
-    Friend WithEvents col_sStud_fname As DataGridViewTextBoxColumn
-    Friend WithEvents col_sStud_lname As DataGridViewTextBoxColumn
-    Friend WithEvents col_sStud_mi As DataGridViewTextBoxColumn
-    Friend WithEvents col_sSY As DataGridViewTextBoxColumn
-    Friend WithEvents col_sGL As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn7 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn8 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn14 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn16 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn17 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn18 As DataGridViewTextBoxColumn
-    Friend WithEvents s_id As DataGridViewTextBoxColumn
-    Friend WithEvents s_fName As DataGridViewTextBoxColumn
-    Friend WithEvents s_lName As DataGridViewTextBoxColumn
-    Friend WithEvents s_Midi As DataGridViewTextBoxColumn
-    Friend WithEvents sy_id As DataGridViewTextBoxColumn
-    Friend WithEvents sem_id As DataGridViewTextBoxColumn
-    Friend WithEvents yl_id As DataGridViewTextBoxColumn
-    Friend WithEvents crs_id As DataGridViewTextBoxColumn
     Friend WithEvents lbl_studentType As Label
     Friend WithEvents cbo_studType As ComboBox
     Friend WithEvents btn_manageCollFees As Bunifu.Framework.UI.BunifuFlatButton
@@ -3134,10 +3153,41 @@ Partial Class frm_slists
     Friend WithEvents btn_manageJuniorFees As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents btn_manageJuniorPayment As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents btn_manageJuniorSy As Bunifu.Framework.UI.BunifuFlatButton
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents cbo_elemStudType As ComboBox
     Friend WithEvents Label37 As Label
-    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents cbo_seniorStudType As ComboBox
     Friend WithEvents Label38 As Label
-    Friend WithEvents ComboBox3 As ComboBox
+    Friend WithEvents cbo_juniorStudType As ComboBox
     Friend WithEvents Label39 As Label
+    Friend WithEvents s_id As DataGridViewTextBoxColumn
+    Friend WithEvents s_fName As DataGridViewTextBoxColumn
+    Friend WithEvents s_lName As DataGridViewTextBoxColumn
+    Friend WithEvents s_Midi As DataGridViewTextBoxColumn
+    Friend WithEvents sy_id As DataGridViewTextBoxColumn
+    Friend WithEvents sem_id As DataGridViewTextBoxColumn
+    Friend WithEvents yl_id As DataGridViewTextBoxColumn
+    Friend WithEvents crs_id As DataGridViewTextBoxColumn
+    Friend WithEvents noUnits As DataGridViewTextBoxColumn
+    Friend WithEvents rate_perunits As DataGridViewTextBoxColumn
+    Friend WithEvents col_estud_id As DataGridViewTextBoxColumn
+    Friend WithEvents col_estud_fname As DataGridViewTextBoxColumn
+    Friend WithEvents col_estud_lname As DataGridViewTextBoxColumn
+    Friend WithEvents col_estud_mi As DataGridViewTextBoxColumn
+    Friend WithEvents col_esy_id As DataGridViewTextBoxColumn
+    Friend WithEvents col_egl_id As DataGridViewTextBoxColumn
+    Friend WithEvents stype_id As DataGridViewTextBoxColumn
+    Friend WithEvents col_sStud_id As DataGridViewTextBoxColumn
+    Friend WithEvents col_sStud_fname As DataGridViewTextBoxColumn
+    Friend WithEvents col_sStud_lname As DataGridViewTextBoxColumn
+    Friend WithEvents col_sStud_mi As DataGridViewTextBoxColumn
+    Friend WithEvents col_sSY As DataGridViewTextBoxColumn
+    Friend WithEvents col_sGL As DataGridViewTextBoxColumn
+    Friend WithEvents sStype_id As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn7 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn8 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn14 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn16 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn17 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn18 As DataGridViewTextBoxColumn
+    Friend WithEvents jStype_id As DataGridViewTextBoxColumn
 End Class

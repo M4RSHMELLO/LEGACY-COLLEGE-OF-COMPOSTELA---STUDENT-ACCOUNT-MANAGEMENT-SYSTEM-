@@ -22,6 +22,10 @@ Partial Class frm_colReports
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.dp_dailyWeekly = New System.Windows.Forms.DateTimePicker()
@@ -40,9 +44,14 @@ Partial Class frm_colReports
         Me.Label2 = New System.Windows.Forms.Label()
         Me.cbo_department = New System.Windows.Forms.ComboBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.dg_FeesCategory_report = New Bunifu.Framework.UI.BunifuCustomDataGrid()
+        Me.DataGridViewTextBoxColumn21 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn22 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.dg_coll_rpt, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
+        CType(Me.dg_FeesCategory_report, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -147,7 +156,7 @@ Partial Class frm_colReports
         Me.btn_printrev.IconVisible = False
         Me.btn_printrev.IconZoom = 90.0R
         Me.btn_printrev.IsTab = False
-        Me.btn_printrev.Location = New System.Drawing.Point(878, 620)
+        Me.btn_printrev.Location = New System.Drawing.Point(790, 8)
         Me.btn_printrev.Margin = New System.Windows.Forms.Padding(3, 8, 3, 8)
         Me.btn_printrev.Name = "btn_printrev"
         Me.btn_printrev.Normalcolor = System.Drawing.SystemColors.ButtonFace
@@ -198,14 +207,14 @@ Partial Class frm_colReports
         Me.dg_coll_rpt.ReadOnly = True
         Me.dg_coll_rpt.RowHeadersVisible = False
         Me.dg_coll_rpt.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dg_coll_rpt.Size = New System.Drawing.Size(938, 382)
+        Me.dg_coll_rpt.Size = New System.Drawing.Size(938, 304)
         Me.dg_coll_rpt.TabIndex = 25
         '
         'lbl_total
         '
         Me.lbl_total.AutoSize = True
         Me.lbl_total.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_total.Location = New System.Drawing.Point(705, 434)
+        Me.lbl_total.Location = New System.Drawing.Point(668, 363)
         Me.lbl_total.Name = "lbl_total"
         Me.lbl_total.Size = New System.Drawing.Size(68, 25)
         Me.lbl_total.TabIndex = 55
@@ -247,13 +256,92 @@ Partial Class frm_colReports
         '
         'Panel2
         '
+        Me.Panel2.Controls.Add(Me.Label3)
+        Me.Panel2.Controls.Add(Me.dg_FeesCategory_report)
         Me.Panel2.Controls.Add(Me.dg_coll_rpt)
+        Me.Panel2.Controls.Add(Me.btn_printrev)
         Me.Panel2.Controls.Add(Me.lbl_total)
         Me.Panel2.Controls.Add(Me.lbl_titleReport)
-        Me.Panel2.Location = New System.Drawing.Point(76, 134)
+        Me.Panel2.Location = New System.Drawing.Point(76, 122)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(982, 475)
+        Me.Panel2.Size = New System.Drawing.Size(982, 527)
         Me.Panel2.TabIndex = 60
+        '
+        'dg_FeesCategory_report
+        '
+        Me.dg_FeesCategory_report.AllowUserToAddRows = False
+        Me.dg_FeesCategory_report.AllowUserToDeleteRows = False
+        Me.dg_FeesCategory_report.AllowUserToResizeColumns = False
+        Me.dg_FeesCategory_report.AllowUserToResizeRows = False
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.dg_FeesCategory_report.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        Me.dg_FeesCategory_report.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dg_FeesCategory_report.BackgroundColor = System.Drawing.SystemColors.Control
+        Me.dg_FeesCategory_report.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.dg_FeesCategory_report.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
+        Me.dg_FeesCategory_report.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dg_FeesCategory_report.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        Me.dg_FeesCategory_report.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dg_FeesCategory_report.ColumnHeadersVisible = False
+        Me.dg_FeesCategory_report.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn21, Me.DataGridViewTextBoxColumn22})
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dg_FeesCategory_report.DefaultCellStyle = DataGridViewCellStyle3
+        Me.dg_FeesCategory_report.DoubleBuffered = True
+        Me.dg_FeesCategory_report.EnableHeadersVisualStyles = False
+        Me.dg_FeesCategory_report.HeaderBgColor = System.Drawing.SystemColors.Control
+        Me.dg_FeesCategory_report.HeaderForeColor = System.Drawing.SystemColors.WindowText
+        Me.dg_FeesCategory_report.Location = New System.Drawing.Point(65, 391)
+        Me.dg_FeesCategory_report.Name = "dg_FeesCategory_report"
+        Me.dg_FeesCategory_report.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dg_FeesCategory_report.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
+        Me.dg_FeesCategory_report.RowHeadersVisible = False
+        Me.dg_FeesCategory_report.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dg_FeesCategory_report.Size = New System.Drawing.Size(357, 124)
+        Me.dg_FeesCategory_report.TabIndex = 66
+        '
+        'DataGridViewTextBoxColumn21
+        '
+        Me.DataGridViewTextBoxColumn21.FillWeight = 147.2081!
+        Me.DataGridViewTextBoxColumn21.HeaderText = "Particular"
+        Me.DataGridViewTextBoxColumn21.Name = "DataGridViewTextBoxColumn21"
+        Me.DataGridViewTextBoxColumn21.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn22
+        '
+        Me.DataGridViewTextBoxColumn22.HeaderText = "Amount"
+        Me.DataGridViewTextBoxColumn22.Name = "DataGridViewTextBoxColumn22"
+        Me.DataGridViewTextBoxColumn22.ReadOnly = True
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 17.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label3.Location = New System.Drawing.Point(36, 359)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(421, 29)
+        Me.Label3.TabIndex = 67
+        Me.Label3.Text = "TOTAL COLLECTION REPORT FOR EACH FEES"
         '
         'frm_colReports
         '
@@ -261,7 +349,6 @@ Partial Class frm_colReports
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.cbo_department)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.btn_printrev)
         Me.Controls.Add(Me.txtb_totalFeesAmount)
         Me.Controls.Add(Me.Label16)
         Me.Controls.Add(Me.Panel1)
@@ -275,6 +362,7 @@ Partial Class frm_colReports
         CType(Me.dg_coll_rpt, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
+        CType(Me.dg_FeesCategory_report, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -297,4 +385,8 @@ Partial Class frm_colReports
     Friend WithEvents Label2 As Label
     Friend WithEvents cbo_department As ComboBox
     Friend WithEvents Panel2 As Panel
+    Friend WithEvents dg_FeesCategory_report As Bunifu.Framework.UI.BunifuCustomDataGrid
+    Friend WithEvents DataGridViewTextBoxColumn21 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn22 As DataGridViewTextBoxColumn
+    Friend WithEvents Label3 As Label
 End Class

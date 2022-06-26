@@ -289,7 +289,7 @@ Partial Public Class senior_ds
         
         Private columnspay_amount As Global.System.Data.DataColumn
         
-        Private columnsfees_name As Global.System.Data.DataColumn
+        Private columnfeestype_name As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
@@ -352,9 +352,9 @@ Partial Public Class senior_ds
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property sfees_nameColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property feestype_nameColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnsfees_name
+                Return Me.columnfeestype_name
             End Get
         End Property
         
@@ -395,9 +395,9 @@ Partial Public Class senior_ds
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overloads Function Addtbl_senior_accountsRow(ByVal stan As Integer, ByVal sdate_paidamount As Date, ByVal spay_amount As Double, ByVal sfees_name As String) As tbl_senior_accountsRow
+        Public Overloads Function Addtbl_senior_accountsRow(ByVal stan As Integer, ByVal sdate_paidamount As Date, ByVal spay_amount As Double, ByVal feestype_name As String) As tbl_senior_accountsRow
             Dim rowtbl_senior_accountsRow As tbl_senior_accountsRow = CType(Me.NewRow,tbl_senior_accountsRow)
-            Dim columnValuesArray() As Object = New Object() {stan, sdate_paidamount, spay_amount, sfees_name}
+            Dim columnValuesArray() As Object = New Object() {stan, sdate_paidamount, spay_amount, feestype_name}
             rowtbl_senior_accountsRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowtbl_senior_accountsRow)
             Return rowtbl_senior_accountsRow
@@ -423,7 +423,7 @@ Partial Public Class senior_ds
             Me.columnstan = MyBase.Columns("stan")
             Me.columnsdate_paidamount = MyBase.Columns("sdate_paidamount")
             Me.columnspay_amount = MyBase.Columns("spay_amount")
-            Me.columnsfees_name = MyBase.Columns("sfees_name")
+            Me.columnfeestype_name = MyBase.Columns("feestype_name")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -435,11 +435,11 @@ Partial Public Class senior_ds
             MyBase.Columns.Add(Me.columnsdate_paidamount)
             Me.columnspay_amount = New Global.System.Data.DataColumn("spay_amount", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnspay_amount)
-            Me.columnsfees_name = New Global.System.Data.DataColumn("sfees_name", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnsfees_name)
+            Me.columnfeestype_name = New Global.System.Data.DataColumn("feestype_name", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnfeestype_name)
             Me.columnstan.AllowDBNull = false
             Me.columnsdate_paidamount.AllowDBNull = false
-            Me.columnsfees_name.AllowDBNull = false
+            Me.columnfeestype_name.AllowDBNull = false
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -623,12 +623,12 @@ Partial Public Class senior_ds
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property sfees_name() As String
+        Public Property feestype_name() As String
             Get
-                Return CType(Me(Me.tabletbl_senior_accounts.sfees_nameColumn),String)
+                Return CType(Me(Me.tabletbl_senior_accounts.feestype_nameColumn),String)
             End Get
             Set
-                Me(Me.tabletbl_senior_accounts.sfees_nameColumn) = value
+                Me(Me.tabletbl_senior_accounts.feestype_nameColumn) = value
             End Set
         End Property
         
@@ -814,7 +814,7 @@ Namespace senior_dsTableAdapters
             tableMapping.ColumnMappings.Add("stan", "stan")
             tableMapping.ColumnMappings.Add("sdate_paidamount", "sdate_paidamount")
             tableMapping.ColumnMappings.Add("spay_amount", "spay_amount")
-            tableMapping.ColumnMappings.Add("sfees_name", "sfees_name")
+            tableMapping.ColumnMappings.Add("feestype_name", "feestype_name")
             Me._adapter.TableMappings.Add(tableMapping)
         End Sub
         
@@ -831,8 +831,8 @@ Namespace senior_dsTableAdapters
             Me._commandCollection = New Global.Devart.Data.MySql.MySqlCommand(0) {}
             Me._commandCollection(0) = New Global.Devart.Data.MySql.MySqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "Select sa.stan,sa.sdate_paidamount,f.sfees_name,sa.spay_amount from tbl_senior_ac"& _ 
-                "counts sa inner join tbl_senior_fees f on f.sfees_id=sa.sfees_id"
+            Me._commandCollection(0).CommandText = "Select sa.stan,sa.sdate_paidamount,ft.feestype_name,sa.spay_amount from tbl_senio"& _ 
+                "r_accounts sa inner join tbl_fees_type ft on ft.feestype_id=sa.sfees_id"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         

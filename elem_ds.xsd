@@ -12,7 +12,7 @@
               <DbSource ConnectionRef="db_lccsams_connection (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>Select sa.etan,sa.edate_paidamount,f.efees_name,sa.epay_amount from tbl_elem_accounts sa inner join tbl_elem_fees f on f.efees_id=sa.efees_id</CommandText>
+                    <CommandText>Select sa.etan,sa.edate_paidamount,ft.feestype_name,sa.epay_amount from tbl_elem_accounts sa inner join tbl_fees_type ft on ft.feestype_id=sa.efees_id</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -22,7 +22,7 @@
               <Mapping SourceColumn="etan" DataSetColumn="etan" />
               <Mapping SourceColumn="edate_paidamount" DataSetColumn="edate_paidamount" />
               <Mapping SourceColumn="epay_amount" DataSetColumn="epay_amount" />
-              <Mapping SourceColumn="efees_name" DataSetColumn="efees_name" />
+              <Mapping SourceColumn="feestype_name" DataSetColumn="feestype_name" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -34,13 +34,13 @@
   <xs:element name="elem_ds" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="elem_ds" msprop:Generator_UserDSName="elem_ds">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="tbl_elem_accounts" msprop:Generator_TableClassName="tbl_elem_accountsDataTable" msprop:Generator_TableVarName="tabletbl_elem_accounts" msprop:Generator_RowChangedName="tbl_elem_accountsRowChanged" msprop:Generator_TablePropName="tbl_elem_accounts" msprop:Generator_RowDeletingName="tbl_elem_accountsRowDeleting" msprop:Generator_RowChangingName="tbl_elem_accountsRowChanging" msprop:Generator_RowEvHandlerName="tbl_elem_accountsRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_elem_accountsRowDeleted" msprop:Generator_RowClassName="tbl_elem_accountsRow" msprop:Generator_UserTableName="tbl_elem_accounts" msprop:Generator_RowEvArgName="tbl_elem_accountsRowChangeEvent">
+        <xs:element name="tbl_elem_accounts" msprop:Generator_TableClassName="tbl_elem_accountsDataTable" msprop:Generator_TableVarName="tabletbl_elem_accounts" msprop:Generator_TablePropName="tbl_elem_accounts" msprop:Generator_RowDeletingName="tbl_elem_accountsRowDeleting" msprop:Generator_RowChangingName="tbl_elem_accountsRowChanging" msprop:Generator_RowEvHandlerName="tbl_elem_accountsRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_elem_accountsRowDeleted" msprop:Generator_UserTableName="tbl_elem_accounts" msprop:Generator_RowChangedName="tbl_elem_accountsRowChanged" msprop:Generator_RowEvArgName="tbl_elem_accountsRowChangeEvent" msprop:Generator_RowClassName="tbl_elem_accountsRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="etan" msprop:Generator_ColumnVarNameInTable="columnetan" msprop:Generator_ColumnPropNameInRow="etan" msprop:Generator_ColumnPropNameInTable="etanColumn" msprop:Generator_UserColumnName="etan" type="xs:int" />
               <xs:element name="edate_paidamount" msprop:Generator_ColumnVarNameInTable="columnedate_paidamount" msprop:Generator_ColumnPropNameInRow="edate_paidamount" msprop:Generator_ColumnPropNameInTable="edate_paidamountColumn" msprop:Generator_UserColumnName="edate_paidamount" type="xs:dateTime" />
               <xs:element name="epay_amount" msprop:Generator_ColumnVarNameInTable="columnepay_amount" msprop:Generator_ColumnPropNameInRow="epay_amount" msprop:Generator_ColumnPropNameInTable="epay_amountColumn" msprop:Generator_UserColumnName="epay_amount" type="xs:double" />
-              <xs:element name="efees_name" msprop:Generator_ColumnVarNameInTable="columnefees_name" msprop:Generator_ColumnPropNameInRow="efees_name" msprop:Generator_ColumnPropNameInTable="efees_nameColumn" msprop:Generator_UserColumnName="efees_name" type="xs:string" />
+              <xs:element name="feestype_name" msprop:Generator_ColumnVarNameInTable="columnfeestype_name" msprop:Generator_ColumnPropNameInRow="feestype_name" msprop:Generator_ColumnPropNameInTable="feestype_nameColumn" msprop:Generator_UserColumnName="feestype_name" type="xs:string" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

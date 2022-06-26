@@ -12,7 +12,7 @@
               <DbSource ConnectionRef="db_lccsams_connection (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>Select sa.stdacct_tN,sa.stdacct_tDate,cf.fees_name,sa.stdacct_tAmount from tbl_studaccount sa inner join tbl_coll_fees cf on cf.fees_id=sa.stdacct_tName  order by sa.stdacct_tDate asc</CommandText>
+                    <CommandText>Select sa.stdacct_tN,sa.stdacct_tDate,ft.feestype_name,sa.stdacct_tAmount from tbl_studaccount sa inner join tbl_fees_type ft on ft.feestype_id=sa.stdacct_tName  order by sa.stdacct_tDate asc</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -22,7 +22,7 @@
               <Mapping SourceColumn="stdacct_tN" DataSetColumn="stdacct_tN" />
               <Mapping SourceColumn="stdacct_tDate" DataSetColumn="stdacct_tDate" />
               <Mapping SourceColumn="stdacct_tAmount" DataSetColumn="stdacct_tAmount" />
-              <Mapping SourceColumn="fees_name" DataSetColumn="fees_name" />
+              <Mapping SourceColumn="feestype_name" DataSetColumn="feestype_name" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -34,13 +34,13 @@
   <xs:element name="coll_ds" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="coll_ds" msprop:Generator_UserDSName="coll_ds">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="tbl_studaccount" msprop:Generator_TableClassName="tbl_studaccountDataTable" msprop:Generator_TableVarName="tabletbl_studaccount" msprop:Generator_RowChangedName="tbl_studaccountRowChanged" msprop:Generator_TablePropName="tbl_studaccount" msprop:Generator_RowDeletingName="tbl_studaccountRowDeleting" msprop:Generator_RowChangingName="tbl_studaccountRowChanging" msprop:Generator_RowEvHandlerName="tbl_studaccountRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_studaccountRowDeleted" msprop:Generator_RowClassName="tbl_studaccountRow" msprop:Generator_UserTableName="tbl_studaccount" msprop:Generator_RowEvArgName="tbl_studaccountRowChangeEvent">
+        <xs:element name="tbl_studaccount" msprop:Generator_TableClassName="tbl_studaccountDataTable" msprop:Generator_TableVarName="tabletbl_studaccount" msprop:Generator_TablePropName="tbl_studaccount" msprop:Generator_RowDeletingName="tbl_studaccountRowDeleting" msprop:Generator_RowChangingName="tbl_studaccountRowChanging" msprop:Generator_RowEvHandlerName="tbl_studaccountRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_studaccountRowDeleted" msprop:Generator_UserTableName="tbl_studaccount" msprop:Generator_RowChangedName="tbl_studaccountRowChanged" msprop:Generator_RowEvArgName="tbl_studaccountRowChangeEvent" msprop:Generator_RowClassName="tbl_studaccountRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="stdacct_tN" msprop:Generator_ColumnVarNameInTable="columnstdacct_tN" msprop:Generator_ColumnPropNameInRow="stdacct_tN" msprop:Generator_ColumnPropNameInTable="stdacct_tNColumn" msprop:Generator_UserColumnName="stdacct_tN" type="xs:int" minOccurs="0" />
               <xs:element name="stdacct_tDate" msprop:Generator_ColumnVarNameInTable="columnstdacct_tDate" msprop:Generator_ColumnPropNameInRow="stdacct_tDate" msprop:Generator_ColumnPropNameInTable="stdacct_tDateColumn" msprop:Generator_UserColumnName="stdacct_tDate" type="xs:dateTime" minOccurs="0" />
               <xs:element name="stdacct_tAmount" msprop:Generator_ColumnVarNameInTable="columnstdacct_tAmount" msprop:Generator_ColumnPropNameInRow="stdacct_tAmount" msprop:Generator_ColumnPropNameInTable="stdacct_tAmountColumn" msprop:Generator_UserColumnName="stdacct_tAmount" type="xs:double" minOccurs="0" />
-              <xs:element name="fees_name" msprop:Generator_ColumnVarNameInTable="columnfees_name" msprop:Generator_ColumnPropNameInRow="fees_name" msprop:Generator_ColumnPropNameInTable="fees_nameColumn" msprop:Generator_UserColumnName="fees_name" type="xs:string" />
+              <xs:element name="feestype_name" msprop:Generator_ColumnVarNameInTable="columnfeestype_name" msprop:Generator_ColumnPropNameInRow="feestype_name" msprop:Generator_ColumnPropNameInTable="feestype_nameColumn" msprop:Generator_UserColumnName="feestype_name" type="xs:string" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

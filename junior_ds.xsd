@@ -12,7 +12,7 @@
               <DbSource ConnectionRef="db_lccsams_connection (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>Select sa.jtan,sa.jdate_paidamount,f.jfees_name,sa.jpay_amount from tbl_junior_accounts sa inner join tbl_junior_fees f on f.jfees_id=sa.jfees_id</CommandText>
+                    <CommandText>Select sa.jtan,sa.jdate_paidamount,ft.feestype_name,sa.jpay_amount from tbl_junior_accounts sa inner join tbl_fees_type ft on ft.feestype_id=sa.jfees_id</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -22,7 +22,7 @@
               <Mapping SourceColumn="jtan" DataSetColumn="jtan" />
               <Mapping SourceColumn="jdate_paidamount" DataSetColumn="jdate_paidamount" />
               <Mapping SourceColumn="jpay_amount" DataSetColumn="jpay_amount" />
-              <Mapping SourceColumn="jfees_name" DataSetColumn="jfees_name" />
+              <Mapping SourceColumn="feestype_name" DataSetColumn="feestype_name" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -34,13 +34,13 @@
   <xs:element name="junior_ds" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="junior_ds" msprop:Generator_UserDSName="junior_ds">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="tbl_junior_accounts" msprop:Generator_TableClassName="tbl_junior_accountsDataTable" msprop:Generator_TableVarName="tabletbl_junior_accounts" msprop:Generator_RowChangedName="tbl_junior_accountsRowChanged" msprop:Generator_TablePropName="tbl_junior_accounts" msprop:Generator_RowDeletingName="tbl_junior_accountsRowDeleting" msprop:Generator_RowChangingName="tbl_junior_accountsRowChanging" msprop:Generator_RowEvHandlerName="tbl_junior_accountsRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_junior_accountsRowDeleted" msprop:Generator_RowClassName="tbl_junior_accountsRow" msprop:Generator_UserTableName="tbl_junior_accounts" msprop:Generator_RowEvArgName="tbl_junior_accountsRowChangeEvent">
+        <xs:element name="tbl_junior_accounts" msprop:Generator_TableClassName="tbl_junior_accountsDataTable" msprop:Generator_TableVarName="tabletbl_junior_accounts" msprop:Generator_TablePropName="tbl_junior_accounts" msprop:Generator_RowDeletingName="tbl_junior_accountsRowDeleting" msprop:Generator_RowChangingName="tbl_junior_accountsRowChanging" msprop:Generator_RowEvHandlerName="tbl_junior_accountsRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_junior_accountsRowDeleted" msprop:Generator_UserTableName="tbl_junior_accounts" msprop:Generator_RowChangedName="tbl_junior_accountsRowChanged" msprop:Generator_RowEvArgName="tbl_junior_accountsRowChangeEvent" msprop:Generator_RowClassName="tbl_junior_accountsRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="jtan" msprop:Generator_ColumnVarNameInTable="columnjtan" msprop:Generator_ColumnPropNameInRow="jtan" msprop:Generator_ColumnPropNameInTable="jtanColumn" msprop:Generator_UserColumnName="jtan" type="xs:string" />
               <xs:element name="jdate_paidamount" msprop:Generator_ColumnVarNameInTable="columnjdate_paidamount" msprop:Generator_ColumnPropNameInRow="jdate_paidamount" msprop:Generator_ColumnPropNameInTable="jdate_paidamountColumn" msprop:Generator_UserColumnName="jdate_paidamount" type="xs:dateTime" />
               <xs:element name="jpay_amount" msprop:Generator_ColumnVarNameInTable="columnjpay_amount" msprop:Generator_ColumnPropNameInRow="jpay_amount" msprop:Generator_ColumnPropNameInTable="jpay_amountColumn" msprop:Generator_UserColumnName="jpay_amount" type="xs:double" minOccurs="0" />
-              <xs:element name="jfees_name" msprop:Generator_ColumnVarNameInTable="columnjfees_name" msprop:Generator_ColumnPropNameInRow="jfees_name" msprop:Generator_ColumnPropNameInTable="jfees_nameColumn" msprop:Generator_UserColumnName="jfees_name" type="xs:string" minOccurs="0" />
+              <xs:element name="feestype_name" msprop:Generator_ColumnVarNameInTable="columnfeestype_name" msprop:Generator_ColumnPropNameInRow="feestype_name" msprop:Generator_ColumnPropNameInTable="feestype_nameColumn" msprop:Generator_UserColumnName="feestype_name" type="xs:string" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

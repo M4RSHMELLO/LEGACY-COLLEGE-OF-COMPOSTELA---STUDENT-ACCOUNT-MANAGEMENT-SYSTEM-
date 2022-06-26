@@ -23,27 +23,26 @@ Partial Class frm_SAccounts
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_SAccounts))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle19 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle20 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle22 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle23 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle21 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle24 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.college_dept = New System.Windows.Forms.TabPage()
         Me.btn_UpdateCacct = New Bunifu.Framework.UI.BunifuThinButton2()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.dg_studFeesType = New System.Windows.Forms.DataGridView()
-        Me.fees_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FeesType = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.fees_name = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.fFeestype_name = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.FeesAmount = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.rpu_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.txtb_totalFees = New System.Windows.Forms.TextBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
@@ -78,6 +77,14 @@ Partial Class frm_SAccounts
         Me.Label20 = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label19 = New System.Windows.Forms.Label()
+        Me.pnl_scholar = New System.Windows.Forms.Panel()
+        Me.txtb_sPaidAmnt = New System.Windows.Forms.TextBox()
+        Me.Label49 = New System.Windows.Forms.Label()
+        Me.txtb_sType = New System.Windows.Forms.TextBox()
+        Me.Label48 = New System.Windows.Forms.Label()
+        Me.Label47 = New System.Windows.Forms.Label()
+        Me.txtb_sAmnt = New System.Windows.Forms.TextBox()
+        Me.Label46 = New System.Windows.Forms.Label()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
         Me.dg_acctRec = New Bunifu.Framework.UI.BunifuCustomDataGrid()
         Me.stdacct_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -92,13 +99,15 @@ Partial Class frm_SAccounts
         Me.Label44 = New System.Windows.Forms.Label()
         Me.GroupBox9 = New System.Windows.Forms.GroupBox()
         Me.dg_eStudAcctRec = New Bunifu.Framework.UI.BunifuCustomDataGrid()
-        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox8 = New System.Windows.Forms.GroupBox()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label50 = New System.Windows.Forms.Label()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Label51 = New System.Windows.Forms.Label()
+        Me.Label52 = New System.Windows.Forms.Label()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.Label53 = New System.Windows.Forms.Label()
         Me.dg_eStudFees = New System.Windows.Forms.DataGridView()
         Me.ef_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -110,9 +119,6 @@ Partial Class frm_SAccounts
         Me.Label23 = New System.Windows.Forms.Label()
         Me.GroupBox7 = New System.Windows.Forms.GroupBox()
         Me.dg_Fees = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.txtb_eTotalFees = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
@@ -131,12 +137,6 @@ Partial Class frm_SAccounts
         Me.Label43 = New System.Windows.Forms.Label()
         Me.GroupBox14 = New System.Windows.Forms.GroupBox()
         Me.dg_sStudAcctRec = New Bunifu.Framework.UI.BunifuCustomDataGrid()
-        Me.DataGridViewTextBoxColumn25 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn26 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn27 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn28 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn29 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn30 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox15 = New System.Windows.Forms.GroupBox()
         Me.dg_sStudFees = New System.Windows.Forms.DataGridView()
         Me.sfees_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -149,9 +149,6 @@ Partial Class frm_SAccounts
         Me.Label36 = New System.Windows.Forms.Label()
         Me.GroupBox16 = New System.Windows.Forms.GroupBox()
         Me.dg_sFeesRec = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn33 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn34 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn35 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.txtb_sTFees = New System.Windows.Forms.TextBox()
         Me.Label37 = New System.Windows.Forms.Label()
         Me.Label38 = New System.Windows.Forms.Label()
@@ -170,17 +167,8 @@ Partial Class frm_SAccounts
         Me.Label45 = New System.Windows.Forms.Label()
         Me.GroupBox10 = New System.Windows.Forms.GroupBox()
         Me.dg_jStudAcctRec = New Bunifu.Framework.UI.BunifuCustomDataGrid()
-        Me.DataGridViewTextBoxColumn13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn16 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn17 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn18 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox11 = New System.Windows.Forms.GroupBox()
         Me.dg_jStudFees = New System.Windows.Forms.DataGridView()
-        Me.jf_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn19 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn20 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.txtb_jStudTBal = New System.Windows.Forms.TextBox()
         Me.txtb_jStudTAmount = New System.Windows.Forms.TextBox()
         Me.Label24 = New System.Windows.Forms.Label()
@@ -188,9 +176,6 @@ Partial Class frm_SAccounts
         Me.Label26 = New System.Windows.Forms.Label()
         Me.GroupBox12 = New System.Windows.Forms.GroupBox()
         Me.dg_jFees = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn21 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn22 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn23 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.txtb_jTFees = New System.Windows.Forms.TextBox()
         Me.Label27 = New System.Windows.Forms.Label()
         Me.Label28 = New System.Windows.Forms.Label()
@@ -204,14 +189,52 @@ Partial Class frm_SAccounts
         Me.txtb_jSY = New System.Windows.Forms.TextBox()
         Me.Label33 = New System.Windows.Forms.Label()
         Me.sp_balance = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.txtb_sAmnt = New System.Windows.Forms.TextBox()
-        Me.Label46 = New System.Windows.Forms.Label()
-        Me.pnl_scholar = New System.Windows.Forms.Panel()
-        Me.Label47 = New System.Windows.Forms.Label()
-        Me.Label48 = New System.Windows.Forms.Label()
-        Me.txtb_sType = New System.Windows.Forms.TextBox()
-        Me.Label49 = New System.Windows.Forms.Label()
-        Me.txtb_sPaidAmnt = New System.Windows.Forms.TextBox()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.Label54 = New System.Windows.Forms.Label()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.Label55 = New System.Windows.Forms.Label()
+        Me.Label56 = New System.Windows.Forms.Label()
+        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.Label57 = New System.Windows.Forms.Label()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.Label58 = New System.Windows.Forms.Label()
+        Me.TextBox8 = New System.Windows.Forms.TextBox()
+        Me.Label59 = New System.Windows.Forms.Label()
+        Me.Label60 = New System.Windows.Forms.Label()
+        Me.TextBox9 = New System.Windows.Forms.TextBox()
+        Me.Label61 = New System.Windows.Forms.Label()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn33 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn34 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn35 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.jf_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn19 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn20 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn25 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn26 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn27 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn28 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn29 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn30 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn16 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn17 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn18 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn21 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn22 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn23 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TabControl1.SuspendLayout()
         Me.college_dept.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -220,6 +243,7 @@ Partial Class frm_SAccounts
         Me.GroupBox6.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
         CType(Me.dg_displayTotalFees, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnl_scholar.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
         CType(Me.dg_acctRec, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.elem_dept.SuspendLayout()
@@ -227,6 +251,7 @@ Partial Class frm_SAccounts
         Me.GroupBox9.SuspendLayout()
         CType(Me.dg_eStudAcctRec, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox8.SuspendLayout()
+        Me.Panel1.SuspendLayout()
         CType(Me.dg_eStudFees, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox7.SuspendLayout()
         CType(Me.dg_Fees, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -249,7 +274,8 @@ Partial Class frm_SAccounts
         Me.GroupBox12.SuspendLayout()
         CType(Me.dg_jFees, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox13.SuspendLayout()
-        Me.pnl_scholar.SuspendLayout()
+        Me.Panel2.SuspendLayout()
+        Me.Panel3.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -330,7 +356,7 @@ Partial Class frm_SAccounts
         Me.dg_studFeesType.AllowUserToResizeRows = False
         Me.dg_studFeesType.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dg_studFeesType.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dg_studFeesType.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.fees_id, Me.FeesType, Me.FeesAmount, Me.rpu_id})
+        Me.dg_studFeesType.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.fees_name, Me.fFeestype_name, Me.FeesAmount})
         Me.dg_studFeesType.Location = New System.Drawing.Point(13, 25)
         Me.dg_studFeesType.Name = "dg_studFeesType"
         Me.dg_studFeesType.ReadOnly = True
@@ -339,20 +365,20 @@ Partial Class frm_SAccounts
         Me.dg_studFeesType.Size = New System.Drawing.Size(506, 107)
         Me.dg_studFeesType.TabIndex = 23
         '
-        'fees_id
+        'fees_name
         '
-        Me.fees_id.DataPropertyName = "fees_id"
-        Me.fees_id.HeaderText = "Fees ID"
-        Me.fees_id.Name = "fees_id"
-        Me.fees_id.ReadOnly = True
-        Me.fees_id.Visible = False
+        Me.fees_name.DataPropertyName = "fees_name"
+        Me.fees_name.HeaderText = "Fees ID"
+        Me.fees_name.Name = "fees_name"
+        Me.fees_name.ReadOnly = True
+        Me.fees_name.Visible = False
         '
-        'FeesType
+        'fFeestype_name
         '
-        Me.FeesType.DataPropertyName = "fees_name"
-        Me.FeesType.HeaderText = "Fees Type"
-        Me.FeesType.Name = "FeesType"
-        Me.FeesType.ReadOnly = True
+        Me.fFeestype_name.DataPropertyName = "feestype_name"
+        Me.fFeestype_name.HeaderText = "Fees Type"
+        Me.fFeestype_name.Name = "fFeestype_name"
+        Me.fFeestype_name.ReadOnly = True
         '
         'FeesAmount
         '
@@ -360,14 +386,6 @@ Partial Class frm_SAccounts
         Me.FeesAmount.HeaderText = "Fees Amount"
         Me.FeesAmount.Name = "FeesAmount"
         Me.FeesAmount.ReadOnly = True
-        '
-        'rpu_id
-        '
-        Me.rpu_id.DataPropertyName = "tuition_rpu_id"
-        Me.rpu_id.HeaderText = "RPU ID"
-        Me.rpu_id.Name = "rpu_id"
-        Me.rpu_id.ReadOnly = True
-        Me.rpu_id.Visible = False
         '
         'txtb_totalFees
         '
@@ -728,6 +746,94 @@ Partial Class frm_SAccounts
         Me.Label19.TabIndex = 15
         Me.Label19.Text = "TUITION FEE"
         '
+        'pnl_scholar
+        '
+        Me.pnl_scholar.Controls.Add(Me.txtb_sPaidAmnt)
+        Me.pnl_scholar.Controls.Add(Me.Label49)
+        Me.pnl_scholar.Controls.Add(Me.txtb_sType)
+        Me.pnl_scholar.Controls.Add(Me.Label48)
+        Me.pnl_scholar.Controls.Add(Me.Label47)
+        Me.pnl_scholar.Controls.Add(Me.txtb_sAmnt)
+        Me.pnl_scholar.Controls.Add(Me.Label46)
+        Me.pnl_scholar.Location = New System.Drawing.Point(11, 128)
+        Me.pnl_scholar.Name = "pnl_scholar"
+        Me.pnl_scholar.Size = New System.Drawing.Size(290, 94)
+        Me.pnl_scholar.TabIndex = 26
+        Me.pnl_scholar.Visible = False
+        '
+        'txtb_sPaidAmnt
+        '
+        Me.txtb_sPaidAmnt.BackColor = System.Drawing.Color.White
+        Me.txtb_sPaidAmnt.Enabled = False
+        Me.txtb_sPaidAmnt.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtb_sPaidAmnt.Location = New System.Drawing.Point(192, 68)
+        Me.txtb_sPaidAmnt.Name = "txtb_sPaidAmnt"
+        Me.txtb_sPaidAmnt.Size = New System.Drawing.Size(93, 20)
+        Me.txtb_sPaidAmnt.TabIndex = 30
+        '
+        'Label49
+        '
+        Me.Label49.AutoSize = True
+        Me.Label49.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label49.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label49.Location = New System.Drawing.Point(-1, 68)
+        Me.Label49.Name = "Label49"
+        Me.Label49.Size = New System.Drawing.Size(187, 18)
+        Me.Label49.TabIndex = 29
+        Me.Label49.Text = "TOTAL PAID BY SCHOLARSHIP"
+        '
+        'txtb_sType
+        '
+        Me.txtb_sType.BackColor = System.Drawing.Color.White
+        Me.txtb_sType.Enabled = False
+        Me.txtb_sType.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtb_sType.Location = New System.Drawing.Point(121, 24)
+        Me.txtb_sType.Name = "txtb_sType"
+        Me.txtb_sType.Size = New System.Drawing.Size(104, 20)
+        Me.txtb_sType.TabIndex = 28
+        '
+        'Label48
+        '
+        Me.Label48.AutoSize = True
+        Me.Label48.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label48.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label48.Location = New System.Drawing.Point(12, 47)
+        Me.Label48.Name = "Label48"
+        Me.Label48.Size = New System.Drawing.Size(107, 18)
+        Me.Label48.TabIndex = 27
+        Me.Label48.Text = "SCHOLAR AMOUNT"
+        '
+        'Label47
+        '
+        Me.Label47.AutoSize = True
+        Me.Label47.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label47.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label47.Location = New System.Drawing.Point(12, 26)
+        Me.Label47.Name = "Label47"
+        Me.Label47.Size = New System.Drawing.Size(85, 18)
+        Me.Label47.TabIndex = 26
+        Me.Label47.Text = "SCHOLAR TYPE"
+        '
+        'txtb_sAmnt
+        '
+        Me.txtb_sAmnt.BackColor = System.Drawing.Color.White
+        Me.txtb_sAmnt.Enabled = False
+        Me.txtb_sAmnt.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtb_sAmnt.Location = New System.Drawing.Point(121, 46)
+        Me.txtb_sAmnt.Name = "txtb_sAmnt"
+        Me.txtb_sAmnt.Size = New System.Drawing.Size(104, 20)
+        Me.txtb_sAmnt.TabIndex = 25
+        '
+        'Label46
+        '
+        Me.Label46.AutoSize = True
+        Me.Label46.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label46.Location = New System.Drawing.Point(66, 0)
+        Me.Label46.Name = "Label46"
+        Me.Label46.Size = New System.Drawing.Size(158, 21)
+        Me.Label46.TabIndex = 24
+        Me.Label46.Text = "HAS AN ACTIVE SCHOLAR"
+        '
         'GroupBox5
         '
         Me.GroupBox5.Controls.Add(Me.dg_acctRec)
@@ -743,20 +849,20 @@ Partial Class frm_SAccounts
         '
         Me.dg_acctRec.AllowUserToAddRows = False
         Me.dg_acctRec.AllowUserToDeleteRows = False
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.dg_acctRec.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.dg_acctRec.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle13
         Me.dg_acctRec.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dg_acctRec.BackgroundColor = System.Drawing.Color.Gainsboro
         Me.dg_acctRec.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dg_acctRec.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dg_acctRec.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle14.BackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle14.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle14.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dg_acctRec.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle14
         Me.dg_acctRec.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dg_acctRec.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.stdacct_id, Me.or_id, Me.sa_date, Me.sa_particulars, Me.sa_amountPaid, Me.sa_balance})
         Me.dg_acctRec.Dock = System.Windows.Forms.DockStyle.Fill
@@ -792,16 +898,16 @@ Partial Class frm_SAccounts
         'sa_date
         '
         Me.sa_date.DataPropertyName = "stdacct_tDate"
-        DataGridViewCellStyle3.Format = "yyyy-MM-dd"
-        DataGridViewCellStyle3.NullValue = Nothing
-        Me.sa_date.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle15.Format = "yyyy-MM-dd"
+        DataGridViewCellStyle15.NullValue = Nothing
+        Me.sa_date.DefaultCellStyle = DataGridViewCellStyle15
         Me.sa_date.HeaderText = "DATE"
         Me.sa_date.Name = "sa_date"
         Me.sa_date.ReadOnly = True
         '
         'sa_particulars
         '
-        Me.sa_particulars.DataPropertyName = "fees_name"
+        Me.sa_particulars.DataPropertyName = "feestype_name"
         Me.sa_particulars.HeaderText = "PARTICULARS"
         Me.sa_particulars.Name = "sa_particulars"
         Me.sa_particulars.ReadOnly = True
@@ -831,7 +937,7 @@ Partial Class frm_SAccounts
         Me.elem_dept.Location = New System.Drawing.Point(4, 30)
         Me.elem_dept.Name = "elem_dept"
         Me.elem_dept.Padding = New System.Windows.Forms.Padding(3)
-        Me.elem_dept.Size = New System.Drawing.Size(1035, 559)
+        Me.elem_dept.Size = New System.Drawing.Size(1035, 576)
         Me.elem_dept.TabIndex = 1
         Me.elem_dept.Text = "Elementary Dept"
         '
@@ -882,20 +988,20 @@ Partial Class frm_SAccounts
         '
         Me.dg_eStudAcctRec.AllowUserToAddRows = False
         Me.dg_eStudAcctRec.AllowUserToDeleteRows = False
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.dg_eStudAcctRec.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.dg_eStudAcctRec.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle16
         Me.dg_eStudAcctRec.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dg_eStudAcctRec.BackgroundColor = System.Drawing.Color.Gainsboro
         Me.dg_eStudAcctRec.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dg_eStudAcctRec.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dg_eStudAcctRec.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle17.BackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle17.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle17.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dg_eStudAcctRec.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle17
         Me.dg_eStudAcctRec.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dg_eStudAcctRec.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn9, Me.DataGridViewTextBoxColumn10, Me.DataGridViewTextBoxColumn11, Me.DataGridViewTextBoxColumn12})
         Me.dg_eStudAcctRec.Dock = System.Windows.Forms.DockStyle.Fill
@@ -913,54 +1019,9 @@ Partial Class frm_SAccounts
         Me.dg_eStudAcctRec.Size = New System.Drawing.Size(532, 279)
         Me.dg_eStudAcctRec.TabIndex = 0
         '
-        'DataGridViewTextBoxColumn7
-        '
-        Me.DataGridViewTextBoxColumn7.DataPropertyName = "estud_id"
-        Me.DataGridViewTextBoxColumn7.HeaderText = "ID"
-        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
-        Me.DataGridViewTextBoxColumn7.ReadOnly = True
-        Me.DataGridViewTextBoxColumn7.Visible = False
-        '
-        'DataGridViewTextBoxColumn8
-        '
-        Me.DataGridViewTextBoxColumn8.DataPropertyName = "etan"
-        Me.DataGridViewTextBoxColumn8.HeaderText = "OR No."
-        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
-        Me.DataGridViewTextBoxColumn8.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn9
-        '
-        Me.DataGridViewTextBoxColumn9.DataPropertyName = "edate_paidamount"
-        DataGridViewCellStyle6.Format = "yyyy-MM-dd"
-        DataGridViewCellStyle6.NullValue = Nothing
-        Me.DataGridViewTextBoxColumn9.DefaultCellStyle = DataGridViewCellStyle6
-        Me.DataGridViewTextBoxColumn9.HeaderText = "DATE"
-        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
-        Me.DataGridViewTextBoxColumn9.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn10
-        '
-        Me.DataGridViewTextBoxColumn10.DataPropertyName = "efees_name"
-        Me.DataGridViewTextBoxColumn10.HeaderText = "PARTICULARS"
-        Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
-        Me.DataGridViewTextBoxColumn10.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn11
-        '
-        Me.DataGridViewTextBoxColumn11.DataPropertyName = "epay_amount"
-        Me.DataGridViewTextBoxColumn11.HeaderText = "AMOUNT PAID"
-        Me.DataGridViewTextBoxColumn11.Name = "DataGridViewTextBoxColumn11"
-        Me.DataGridViewTextBoxColumn11.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn12
-        '
-        Me.DataGridViewTextBoxColumn12.DataPropertyName = "ebal_amount"
-        Me.DataGridViewTextBoxColumn12.HeaderText = "Balance"
-        Me.DataGridViewTextBoxColumn12.Name = "DataGridViewTextBoxColumn12"
-        Me.DataGridViewTextBoxColumn12.ReadOnly = True
-        '
         'GroupBox8
         '
+        Me.GroupBox8.Controls.Add(Me.Panel1)
         Me.GroupBox8.Controls.Add(Me.dg_eStudFees)
         Me.GroupBox8.Controls.Add(Me.txtb_eStud_TBal)
         Me.GroupBox8.Controls.Add(Me.txtb_eStudFees_TAmount)
@@ -969,12 +1030,100 @@ Partial Class frm_SAccounts
         Me.GroupBox8.Controls.Add(Me.Label23)
         Me.GroupBox8.Enabled = False
         Me.GroupBox8.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox8.Location = New System.Drawing.Point(6, 216)
+        Me.GroupBox8.Location = New System.Drawing.Point(6, 175)
         Me.GroupBox8.Name = "GroupBox8"
-        Me.GroupBox8.Size = New System.Drawing.Size(456, 337)
+        Me.GroupBox8.Size = New System.Drawing.Size(456, 375)
         Me.GroupBox8.TabIndex = 49
         Me.GroupBox8.TabStop = False
         Me.GroupBox8.Text = " TOTAL STUDENT PAYMENTS FOR THE SCHOOL YEAR"
+        '
+        'Panel1
+        '
+        Me.Panel1.Controls.Add(Me.TextBox1)
+        Me.Panel1.Controls.Add(Me.Label50)
+        Me.Panel1.Controls.Add(Me.TextBox2)
+        Me.Panel1.Controls.Add(Me.Label51)
+        Me.Panel1.Controls.Add(Me.Label52)
+        Me.Panel1.Controls.Add(Me.TextBox3)
+        Me.Panel1.Controls.Add(Me.Label53)
+        Me.Panel1.Location = New System.Drawing.Point(18, 219)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(290, 94)
+        Me.Panel1.TabIndex = 27
+        Me.Panel1.Visible = False
+        '
+        'TextBox1
+        '
+        Me.TextBox1.BackColor = System.Drawing.Color.White
+        Me.TextBox1.Enabled = False
+        Me.TextBox1.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(192, 68)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(93, 20)
+        Me.TextBox1.TabIndex = 30
+        '
+        'Label50
+        '
+        Me.Label50.AutoSize = True
+        Me.Label50.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label50.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label50.Location = New System.Drawing.Point(-1, 68)
+        Me.Label50.Name = "Label50"
+        Me.Label50.Size = New System.Drawing.Size(187, 18)
+        Me.Label50.TabIndex = 29
+        Me.Label50.Text = "TOTAL PAID BY SCHOLARSHIP"
+        '
+        'TextBox2
+        '
+        Me.TextBox2.BackColor = System.Drawing.Color.White
+        Me.TextBox2.Enabled = False
+        Me.TextBox2.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox2.Location = New System.Drawing.Point(121, 24)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(104, 20)
+        Me.TextBox2.TabIndex = 28
+        '
+        'Label51
+        '
+        Me.Label51.AutoSize = True
+        Me.Label51.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label51.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label51.Location = New System.Drawing.Point(12, 47)
+        Me.Label51.Name = "Label51"
+        Me.Label51.Size = New System.Drawing.Size(107, 18)
+        Me.Label51.TabIndex = 27
+        Me.Label51.Text = "SCHOLAR AMOUNT"
+        '
+        'Label52
+        '
+        Me.Label52.AutoSize = True
+        Me.Label52.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label52.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label52.Location = New System.Drawing.Point(12, 26)
+        Me.Label52.Name = "Label52"
+        Me.Label52.Size = New System.Drawing.Size(85, 18)
+        Me.Label52.TabIndex = 26
+        Me.Label52.Text = "SCHOLAR TYPE"
+        '
+        'TextBox3
+        '
+        Me.TextBox3.BackColor = System.Drawing.Color.White
+        Me.TextBox3.Enabled = False
+        Me.TextBox3.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox3.Location = New System.Drawing.Point(121, 46)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(104, 20)
+        Me.TextBox3.TabIndex = 25
+        '
+        'Label53
+        '
+        Me.Label53.AutoSize = True
+        Me.Label53.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label53.Location = New System.Drawing.Point(66, 0)
+        Me.Label53.Name = "Label53"
+        Me.Label53.Size = New System.Drawing.Size(158, 21)
+        Me.Label53.TabIndex = 24
+        Me.Label53.Text = "HAS AN ACTIVE SCHOLAR"
         '
         'dg_eStudFees
         '
@@ -1015,7 +1164,7 @@ Partial Class frm_SAccounts
         '
         Me.txtb_eStud_TBal.BackColor = System.Drawing.Color.White
         Me.txtb_eStud_TBal.Enabled = False
-        Me.txtb_eStud_TBal.Location = New System.Drawing.Point(328, 265)
+        Me.txtb_eStud_TBal.Location = New System.Drawing.Point(350, 346)
         Me.txtb_eStud_TBal.Name = "txtb_eStud_TBal"
         Me.txtb_eStud_TBal.Size = New System.Drawing.Size(102, 26)
         Me.txtb_eStud_TBal.TabIndex = 21
@@ -1024,7 +1173,7 @@ Partial Class frm_SAccounts
         '
         Me.txtb_eStudFees_TAmount.BackColor = System.Drawing.Color.White
         Me.txtb_eStudFees_TAmount.Enabled = False
-        Me.txtb_eStudFees_TAmount.Location = New System.Drawing.Point(328, 229)
+        Me.txtb_eStudFees_TAmount.Location = New System.Drawing.Point(350, 310)
         Me.txtb_eStudFees_TAmount.Name = "txtb_eStudFees_TAmount"
         Me.txtb_eStudFees_TAmount.Size = New System.Drawing.Size(102, 26)
         Me.txtb_eStudFees_TAmount.TabIndex = 21
@@ -1033,7 +1182,7 @@ Partial Class frm_SAccounts
         '
         Me.Label17.AutoSize = True
         Me.Label17.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label17.Location = New System.Drawing.Point(212, 270)
+        Me.Label17.Location = New System.Drawing.Point(234, 351)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(105, 21)
         Me.Label17.TabIndex = 19
@@ -1043,7 +1192,7 @@ Partial Class frm_SAccounts
         '
         Me.Label18.AutoSize = True
         Me.Label18.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label18.Location = New System.Drawing.Point(212, 234)
+        Me.Label18.Location = New System.Drawing.Point(234, 315)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(101, 21)
         Me.Label18.TabIndex = 19
@@ -1090,28 +1239,6 @@ Partial Class frm_SAccounts
         Me.dg_Fees.Size = New System.Drawing.Size(505, 114)
         Me.dg_Fees.TabIndex = 23
         '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "efees_id"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "Fees ID"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        Me.DataGridViewTextBoxColumn1.ReadOnly = True
-        Me.DataGridViewTextBoxColumn1.Visible = False
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "efees_name"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "Fees Type"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        Me.DataGridViewTextBoxColumn2.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "efees_amount"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "Fees Amount"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        Me.DataGridViewTextBoxColumn3.ReadOnly = True
-        '
         'txtb_eTotalFees
         '
         Me.txtb_eTotalFees.BackColor = System.Drawing.Color.White
@@ -1154,7 +1281,7 @@ Partial Class frm_SAccounts
         Me.GroupBox1.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!)
         Me.GroupBox1.Location = New System.Drawing.Point(6, 6)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(456, 191)
+        Me.GroupBox1.Size = New System.Drawing.Size(456, 163)
         Me.GroupBox1.TabIndex = 47
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "STUDENT DETAILS"
@@ -1245,7 +1372,7 @@ Partial Class frm_SAccounts
         Me.sh_dept.Controls.Add(Me.GroupBox17)
         Me.sh_dept.Location = New System.Drawing.Point(4, 30)
         Me.sh_dept.Name = "sh_dept"
-        Me.sh_dept.Size = New System.Drawing.Size(1035, 559)
+        Me.sh_dept.Size = New System.Drawing.Size(1035, 576)
         Me.sh_dept.TabIndex = 3
         Me.sh_dept.Text = "Senior-High Dept"
         '
@@ -1295,20 +1422,20 @@ Partial Class frm_SAccounts
         '
         Me.dg_sStudAcctRec.AllowUserToAddRows = False
         Me.dg_sStudAcctRec.AllowUserToDeleteRows = False
-        DataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.dg_sStudAcctRec.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.dg_sStudAcctRec.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle19
         Me.dg_sStudAcctRec.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dg_sStudAcctRec.BackgroundColor = System.Drawing.Color.Gainsboro
         Me.dg_sStudAcctRec.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dg_sStudAcctRec.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle8.BackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dg_sStudAcctRec.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle20.BackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle20.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle20.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dg_sStudAcctRec.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle20
         Me.dg_sStudAcctRec.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dg_sStudAcctRec.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn25, Me.DataGridViewTextBoxColumn26, Me.DataGridViewTextBoxColumn27, Me.DataGridViewTextBoxColumn28, Me.DataGridViewTextBoxColumn29, Me.DataGridViewTextBoxColumn30})
         Me.dg_sStudAcctRec.Dock = System.Windows.Forms.DockStyle.Fill
@@ -1326,54 +1453,9 @@ Partial Class frm_SAccounts
         Me.dg_sStudAcctRec.Size = New System.Drawing.Size(532, 259)
         Me.dg_sStudAcctRec.TabIndex = 0
         '
-        'DataGridViewTextBoxColumn25
-        '
-        Me.DataGridViewTextBoxColumn25.DataPropertyName = "sstud_id"
-        Me.DataGridViewTextBoxColumn25.HeaderText = "ID"
-        Me.DataGridViewTextBoxColumn25.Name = "DataGridViewTextBoxColumn25"
-        Me.DataGridViewTextBoxColumn25.ReadOnly = True
-        Me.DataGridViewTextBoxColumn25.Visible = False
-        '
-        'DataGridViewTextBoxColumn26
-        '
-        Me.DataGridViewTextBoxColumn26.DataPropertyName = "stan"
-        Me.DataGridViewTextBoxColumn26.HeaderText = "OR No."
-        Me.DataGridViewTextBoxColumn26.Name = "DataGridViewTextBoxColumn26"
-        Me.DataGridViewTextBoxColumn26.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn27
-        '
-        Me.DataGridViewTextBoxColumn27.DataPropertyName = "sdate_paidamount"
-        DataGridViewCellStyle9.Format = "yyyy-MM-dd"
-        DataGridViewCellStyle9.NullValue = Nothing
-        Me.DataGridViewTextBoxColumn27.DefaultCellStyle = DataGridViewCellStyle9
-        Me.DataGridViewTextBoxColumn27.HeaderText = "DATE"
-        Me.DataGridViewTextBoxColumn27.Name = "DataGridViewTextBoxColumn27"
-        Me.DataGridViewTextBoxColumn27.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn28
-        '
-        Me.DataGridViewTextBoxColumn28.DataPropertyName = "sfees_name"
-        Me.DataGridViewTextBoxColumn28.HeaderText = "PARTICULARS"
-        Me.DataGridViewTextBoxColumn28.Name = "DataGridViewTextBoxColumn28"
-        Me.DataGridViewTextBoxColumn28.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn29
-        '
-        Me.DataGridViewTextBoxColumn29.DataPropertyName = "spay_amount"
-        Me.DataGridViewTextBoxColumn29.HeaderText = "AMOUNT PAID"
-        Me.DataGridViewTextBoxColumn29.Name = "DataGridViewTextBoxColumn29"
-        Me.DataGridViewTextBoxColumn29.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn30
-        '
-        Me.DataGridViewTextBoxColumn30.DataPropertyName = "sbal_amount"
-        Me.DataGridViewTextBoxColumn30.HeaderText = "Balance"
-        Me.DataGridViewTextBoxColumn30.Name = "DataGridViewTextBoxColumn30"
-        Me.DataGridViewTextBoxColumn30.ReadOnly = True
-        '
         'GroupBox15
         '
+        Me.GroupBox15.Controls.Add(Me.Panel2)
         Me.GroupBox15.Controls.Add(Me.dg_sStudFees)
         Me.GroupBox15.Controls.Add(Me.txtb_sStud_Bal)
         Me.GroupBox15.Controls.Add(Me.txtb_sStud_TAmount)
@@ -1382,9 +1464,9 @@ Partial Class frm_SAccounts
         Me.GroupBox15.Controls.Add(Me.Label36)
         Me.GroupBox15.Enabled = False
         Me.GroupBox15.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox15.Location = New System.Drawing.Point(13, 216)
+        Me.GroupBox15.Location = New System.Drawing.Point(13, 174)
         Me.GroupBox15.Name = "GroupBox15"
-        Me.GroupBox15.Size = New System.Drawing.Size(456, 337)
+        Me.GroupBox15.Size = New System.Drawing.Size(456, 379)
         Me.GroupBox15.TabIndex = 53
         Me.GroupBox15.TabStop = False
         Me.GroupBox15.Text = " TOTAL STUDENT PAYMENTS FOR THE SCHOOL YEAR"
@@ -1428,7 +1510,7 @@ Partial Class frm_SAccounts
         '
         Me.txtb_sStud_Bal.BackColor = System.Drawing.Color.White
         Me.txtb_sStud_Bal.Enabled = False
-        Me.txtb_sStud_Bal.Location = New System.Drawing.Point(328, 265)
+        Me.txtb_sStud_Bal.Location = New System.Drawing.Point(343, 346)
         Me.txtb_sStud_Bal.Name = "txtb_sStud_Bal"
         Me.txtb_sStud_Bal.Size = New System.Drawing.Size(102, 26)
         Me.txtb_sStud_Bal.TabIndex = 21
@@ -1437,7 +1519,7 @@ Partial Class frm_SAccounts
         '
         Me.txtb_sStud_TAmount.BackColor = System.Drawing.Color.White
         Me.txtb_sStud_TAmount.Enabled = False
-        Me.txtb_sStud_TAmount.Location = New System.Drawing.Point(328, 229)
+        Me.txtb_sStud_TAmount.Location = New System.Drawing.Point(343, 310)
         Me.txtb_sStud_TAmount.Name = "txtb_sStud_TAmount"
         Me.txtb_sStud_TAmount.Size = New System.Drawing.Size(102, 26)
         Me.txtb_sStud_TAmount.TabIndex = 21
@@ -1446,7 +1528,7 @@ Partial Class frm_SAccounts
         '
         Me.Label34.AutoSize = True
         Me.Label34.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label34.Location = New System.Drawing.Point(212, 270)
+        Me.Label34.Location = New System.Drawing.Point(227, 351)
         Me.Label34.Name = "Label34"
         Me.Label34.Size = New System.Drawing.Size(105, 21)
         Me.Label34.TabIndex = 19
@@ -1456,7 +1538,7 @@ Partial Class frm_SAccounts
         '
         Me.Label35.AutoSize = True
         Me.Label35.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label35.Location = New System.Drawing.Point(212, 234)
+        Me.Label35.Location = New System.Drawing.Point(227, 315)
         Me.Label35.Name = "Label35"
         Me.Label35.Size = New System.Drawing.Size(101, 21)
         Me.Label35.TabIndex = 19
@@ -1503,28 +1585,6 @@ Partial Class frm_SAccounts
         Me.dg_sFeesRec.Size = New System.Drawing.Size(505, 120)
         Me.dg_sFeesRec.TabIndex = 23
         '
-        'DataGridViewTextBoxColumn33
-        '
-        Me.DataGridViewTextBoxColumn33.DataPropertyName = "sfees_id"
-        Me.DataGridViewTextBoxColumn33.HeaderText = "Fees ID"
-        Me.DataGridViewTextBoxColumn33.Name = "DataGridViewTextBoxColumn33"
-        Me.DataGridViewTextBoxColumn33.ReadOnly = True
-        Me.DataGridViewTextBoxColumn33.Visible = False
-        '
-        'DataGridViewTextBoxColumn34
-        '
-        Me.DataGridViewTextBoxColumn34.DataPropertyName = "sfees_name"
-        Me.DataGridViewTextBoxColumn34.HeaderText = "Fees Type"
-        Me.DataGridViewTextBoxColumn34.Name = "DataGridViewTextBoxColumn34"
-        Me.DataGridViewTextBoxColumn34.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn35
-        '
-        Me.DataGridViewTextBoxColumn35.DataPropertyName = "sfees_amount"
-        Me.DataGridViewTextBoxColumn35.HeaderText = "Fees Amount"
-        Me.DataGridViewTextBoxColumn35.Name = "DataGridViewTextBoxColumn35"
-        Me.DataGridViewTextBoxColumn35.ReadOnly = True
-        '
         'txtb_sTFees
         '
         Me.txtb_sTFees.BackColor = System.Drawing.Color.White
@@ -1567,7 +1627,7 @@ Partial Class frm_SAccounts
         Me.GroupBox17.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!)
         Me.GroupBox17.Location = New System.Drawing.Point(13, 6)
         Me.GroupBox17.Name = "GroupBox17"
-        Me.GroupBox17.Size = New System.Drawing.Size(456, 191)
+        Me.GroupBox17.Size = New System.Drawing.Size(456, 162)
         Me.GroupBox17.TabIndex = 51
         Me.GroupBox17.TabStop = False
         Me.GroupBox17.Text = "STUDENT DETAILS"
@@ -1658,7 +1718,7 @@ Partial Class frm_SAccounts
         Me.jh_dept.Controls.Add(Me.GroupBox13)
         Me.jh_dept.Location = New System.Drawing.Point(4, 30)
         Me.jh_dept.Name = "jh_dept"
-        Me.jh_dept.Size = New System.Drawing.Size(1035, 559)
+        Me.jh_dept.Size = New System.Drawing.Size(1035, 576)
         Me.jh_dept.TabIndex = 2
         Me.jh_dept.Text = "Junior-High Dept"
         '
@@ -1708,20 +1768,20 @@ Partial Class frm_SAccounts
         '
         Me.dg_jStudAcctRec.AllowUserToAddRows = False
         Me.dg_jStudAcctRec.AllowUserToDeleteRows = False
-        DataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.dg_jStudAcctRec.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle10
+        DataGridViewCellStyle22.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.dg_jStudAcctRec.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle22
         Me.dg_jStudAcctRec.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dg_jStudAcctRec.BackgroundColor = System.Drawing.Color.Gainsboro
         Me.dg_jStudAcctRec.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dg_jStudAcctRec.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle11.BackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle11.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle11.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dg_jStudAcctRec.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle11
+        DataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle23.BackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle23.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle23.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dg_jStudAcctRec.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle23
         Me.dg_jStudAcctRec.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dg_jStudAcctRec.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn13, Me.DataGridViewTextBoxColumn14, Me.DataGridViewTextBoxColumn15, Me.DataGridViewTextBoxColumn16, Me.DataGridViewTextBoxColumn17, Me.DataGridViewTextBoxColumn18})
         Me.dg_jStudAcctRec.Dock = System.Windows.Forms.DockStyle.Fill
@@ -1739,54 +1799,9 @@ Partial Class frm_SAccounts
         Me.dg_jStudAcctRec.Size = New System.Drawing.Size(532, 253)
         Me.dg_jStudAcctRec.TabIndex = 0
         '
-        'DataGridViewTextBoxColumn13
-        '
-        Me.DataGridViewTextBoxColumn13.DataPropertyName = "jstud_id"
-        Me.DataGridViewTextBoxColumn13.HeaderText = "ID"
-        Me.DataGridViewTextBoxColumn13.Name = "DataGridViewTextBoxColumn13"
-        Me.DataGridViewTextBoxColumn13.ReadOnly = True
-        Me.DataGridViewTextBoxColumn13.Visible = False
-        '
-        'DataGridViewTextBoxColumn14
-        '
-        Me.DataGridViewTextBoxColumn14.DataPropertyName = "jtan"
-        Me.DataGridViewTextBoxColumn14.HeaderText = "OR No."
-        Me.DataGridViewTextBoxColumn14.Name = "DataGridViewTextBoxColumn14"
-        Me.DataGridViewTextBoxColumn14.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn15
-        '
-        Me.DataGridViewTextBoxColumn15.DataPropertyName = "jdate_paidamount"
-        DataGridViewCellStyle12.Format = "yyyy-MM-dd"
-        DataGridViewCellStyle12.NullValue = Nothing
-        Me.DataGridViewTextBoxColumn15.DefaultCellStyle = DataGridViewCellStyle12
-        Me.DataGridViewTextBoxColumn15.HeaderText = "DATE"
-        Me.DataGridViewTextBoxColumn15.Name = "DataGridViewTextBoxColumn15"
-        Me.DataGridViewTextBoxColumn15.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn16
-        '
-        Me.DataGridViewTextBoxColumn16.DataPropertyName = "jfees_name"
-        Me.DataGridViewTextBoxColumn16.HeaderText = "PARTICULARS"
-        Me.DataGridViewTextBoxColumn16.Name = "DataGridViewTextBoxColumn16"
-        Me.DataGridViewTextBoxColumn16.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn17
-        '
-        Me.DataGridViewTextBoxColumn17.DataPropertyName = "jpay_amount"
-        Me.DataGridViewTextBoxColumn17.HeaderText = "AMOUNT PAID"
-        Me.DataGridViewTextBoxColumn17.Name = "DataGridViewTextBoxColumn17"
-        Me.DataGridViewTextBoxColumn17.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn18
-        '
-        Me.DataGridViewTextBoxColumn18.DataPropertyName = "jbal_amount"
-        Me.DataGridViewTextBoxColumn18.HeaderText = "Balance"
-        Me.DataGridViewTextBoxColumn18.Name = "DataGridViewTextBoxColumn18"
-        Me.DataGridViewTextBoxColumn18.ReadOnly = True
-        '
         'GroupBox11
         '
+        Me.GroupBox11.Controls.Add(Me.Panel3)
         Me.GroupBox11.Controls.Add(Me.dg_jStudFees)
         Me.GroupBox11.Controls.Add(Me.txtb_jStudTBal)
         Me.GroupBox11.Controls.Add(Me.txtb_jStudTAmount)
@@ -1795,9 +1810,9 @@ Partial Class frm_SAccounts
         Me.GroupBox11.Controls.Add(Me.Label26)
         Me.GroupBox11.Enabled = False
         Me.GroupBox11.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox11.Location = New System.Drawing.Point(13, 216)
+        Me.GroupBox11.Location = New System.Drawing.Point(13, 177)
         Me.GroupBox11.Name = "GroupBox11"
-        Me.GroupBox11.Size = New System.Drawing.Size(456, 337)
+        Me.GroupBox11.Size = New System.Drawing.Size(456, 373)
         Me.GroupBox11.TabIndex = 53
         Me.GroupBox11.TabStop = False
         Me.GroupBox11.Text = " TOTAL STUDENT PAYMENTS FOR THE SCHOOL YEAR"
@@ -1812,36 +1827,17 @@ Partial Class frm_SAccounts
         Me.dg_jStudFees.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dg_jStudFees.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.jf_id, Me.DataGridViewTextBoxColumn19, Me.DataGridViewTextBoxColumn20})
         Me.dg_jStudFees.Enabled = False
-        Me.dg_jStudFees.Location = New System.Drawing.Point(18, 36)
+        Me.dg_jStudFees.Location = New System.Drawing.Point(18, 25)
         Me.dg_jStudFees.Name = "dg_jStudFees"
         Me.dg_jStudFees.RowHeadersVisible = False
         Me.dg_jStudFees.Size = New System.Drawing.Size(421, 177)
         Me.dg_jStudFees.TabIndex = 22
         '
-        'jf_id
-        '
-        Me.jf_id.DataPropertyName = "jfees_id"
-        Me.jf_id.HeaderText = "ID"
-        Me.jf_id.Name = "jf_id"
-        Me.jf_id.Visible = False
-        '
-        'DataGridViewTextBoxColumn19
-        '
-        Me.DataGridViewTextBoxColumn19.DataPropertyName = "jfees_name"
-        Me.DataGridViewTextBoxColumn19.HeaderText = "Fees Type"
-        Me.DataGridViewTextBoxColumn19.Name = "DataGridViewTextBoxColumn19"
-        '
-        'DataGridViewTextBoxColumn20
-        '
-        Me.DataGridViewTextBoxColumn20.DataPropertyName = "totalpay"
-        Me.DataGridViewTextBoxColumn20.HeaderText = "Fees Amount"
-        Me.DataGridViewTextBoxColumn20.Name = "DataGridViewTextBoxColumn20"
-        '
         'txtb_jStudTBal
         '
         Me.txtb_jStudTBal.BackColor = System.Drawing.Color.White
         Me.txtb_jStudTBal.Enabled = False
-        Me.txtb_jStudTBal.Location = New System.Drawing.Point(328, 265)
+        Me.txtb_jStudTBal.Location = New System.Drawing.Point(345, 342)
         Me.txtb_jStudTBal.Name = "txtb_jStudTBal"
         Me.txtb_jStudTBal.Size = New System.Drawing.Size(102, 26)
         Me.txtb_jStudTBal.TabIndex = 21
@@ -1850,7 +1846,7 @@ Partial Class frm_SAccounts
         '
         Me.txtb_jStudTAmount.BackColor = System.Drawing.Color.White
         Me.txtb_jStudTAmount.Enabled = False
-        Me.txtb_jStudTAmount.Location = New System.Drawing.Point(328, 229)
+        Me.txtb_jStudTAmount.Location = New System.Drawing.Point(345, 306)
         Me.txtb_jStudTAmount.Name = "txtb_jStudTAmount"
         Me.txtb_jStudTAmount.Size = New System.Drawing.Size(102, 26)
         Me.txtb_jStudTAmount.TabIndex = 21
@@ -1859,7 +1855,7 @@ Partial Class frm_SAccounts
         '
         Me.Label24.AutoSize = True
         Me.Label24.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label24.Location = New System.Drawing.Point(212, 270)
+        Me.Label24.Location = New System.Drawing.Point(229, 347)
         Me.Label24.Name = "Label24"
         Me.Label24.Size = New System.Drawing.Size(105, 21)
         Me.Label24.TabIndex = 19
@@ -1869,7 +1865,7 @@ Partial Class frm_SAccounts
         '
         Me.Label25.AutoSize = True
         Me.Label25.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label25.Location = New System.Drawing.Point(212, 234)
+        Me.Label25.Location = New System.Drawing.Point(229, 311)
         Me.Label25.Name = "Label25"
         Me.Label25.Size = New System.Drawing.Size(101, 21)
         Me.Label25.TabIndex = 19
@@ -1916,28 +1912,6 @@ Partial Class frm_SAccounts
         Me.dg_jFees.Size = New System.Drawing.Size(505, 120)
         Me.dg_jFees.TabIndex = 23
         '
-        'DataGridViewTextBoxColumn21
-        '
-        Me.DataGridViewTextBoxColumn21.DataPropertyName = "jfees_id"
-        Me.DataGridViewTextBoxColumn21.HeaderText = "Fees ID"
-        Me.DataGridViewTextBoxColumn21.Name = "DataGridViewTextBoxColumn21"
-        Me.DataGridViewTextBoxColumn21.ReadOnly = True
-        Me.DataGridViewTextBoxColumn21.Visible = False
-        '
-        'DataGridViewTextBoxColumn22
-        '
-        Me.DataGridViewTextBoxColumn22.DataPropertyName = "jfees_name"
-        Me.DataGridViewTextBoxColumn22.HeaderText = "Fees Type"
-        Me.DataGridViewTextBoxColumn22.Name = "DataGridViewTextBoxColumn22"
-        Me.DataGridViewTextBoxColumn22.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn23
-        '
-        Me.DataGridViewTextBoxColumn23.DataPropertyName = "jfees_amount"
-        Me.DataGridViewTextBoxColumn23.HeaderText = "Fees Amount"
-        Me.DataGridViewTextBoxColumn23.Name = "DataGridViewTextBoxColumn23"
-        Me.DataGridViewTextBoxColumn23.ReadOnly = True
-        '
         'txtb_jTFees
         '
         Me.txtb_jTFees.BackColor = System.Drawing.Color.White
@@ -1980,7 +1954,7 @@ Partial Class frm_SAccounts
         Me.GroupBox13.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 12.0!)
         Me.GroupBox13.Location = New System.Drawing.Point(13, 6)
         Me.GroupBox13.Name = "GroupBox13"
-        Me.GroupBox13.Size = New System.Drawing.Size(456, 191)
+        Me.GroupBox13.Size = New System.Drawing.Size(456, 162)
         Me.GroupBox13.TabIndex = 51
         Me.GroupBox13.TabStop = False
         Me.GroupBox13.Text = "STUDENT DETAILS"
@@ -2066,92 +2040,404 @@ Partial Class frm_SAccounts
         Me.sp_balance.HeaderText = "Balance"
         Me.sp_balance.Name = "sp_balance"
         '
-        'txtb_sAmnt
+        'Panel2
         '
-        Me.txtb_sAmnt.BackColor = System.Drawing.Color.White
-        Me.txtb_sAmnt.Enabled = False
-        Me.txtb_sAmnt.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtb_sAmnt.Location = New System.Drawing.Point(121, 46)
-        Me.txtb_sAmnt.Name = "txtb_sAmnt"
-        Me.txtb_sAmnt.Size = New System.Drawing.Size(104, 20)
-        Me.txtb_sAmnt.TabIndex = 25
+        Me.Panel2.Controls.Add(Me.TextBox4)
+        Me.Panel2.Controls.Add(Me.Label54)
+        Me.Panel2.Controls.Add(Me.TextBox5)
+        Me.Panel2.Controls.Add(Me.Label55)
+        Me.Panel2.Controls.Add(Me.Label56)
+        Me.Panel2.Controls.Add(Me.TextBox6)
+        Me.Panel2.Controls.Add(Me.Label57)
+        Me.Panel2.Location = New System.Drawing.Point(18, 219)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(290, 94)
+        Me.Panel2.TabIndex = 27
+        Me.Panel2.Visible = False
         '
-        'Label46
+        'TextBox4
         '
-        Me.Label46.AutoSize = True
-        Me.Label46.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label46.Location = New System.Drawing.Point(66, 0)
-        Me.Label46.Name = "Label46"
-        Me.Label46.Size = New System.Drawing.Size(158, 21)
-        Me.Label46.TabIndex = 24
-        Me.Label46.Text = "HAS AN ACTIVE SCHOLAR"
+        Me.TextBox4.BackColor = System.Drawing.Color.White
+        Me.TextBox4.Enabled = False
+        Me.TextBox4.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox4.Location = New System.Drawing.Point(192, 68)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(93, 20)
+        Me.TextBox4.TabIndex = 30
         '
-        'pnl_scholar
+        'Label54
         '
-        Me.pnl_scholar.Controls.Add(Me.txtb_sPaidAmnt)
-        Me.pnl_scholar.Controls.Add(Me.Label49)
-        Me.pnl_scholar.Controls.Add(Me.txtb_sType)
-        Me.pnl_scholar.Controls.Add(Me.Label48)
-        Me.pnl_scholar.Controls.Add(Me.Label47)
-        Me.pnl_scholar.Controls.Add(Me.txtb_sAmnt)
-        Me.pnl_scholar.Controls.Add(Me.Label46)
-        Me.pnl_scholar.Location = New System.Drawing.Point(11, 128)
-        Me.pnl_scholar.Name = "pnl_scholar"
-        Me.pnl_scholar.Size = New System.Drawing.Size(290, 94)
-        Me.pnl_scholar.TabIndex = 26
+        Me.Label54.AutoSize = True
+        Me.Label54.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label54.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label54.Location = New System.Drawing.Point(-1, 68)
+        Me.Label54.Name = "Label54"
+        Me.Label54.Size = New System.Drawing.Size(187, 18)
+        Me.Label54.TabIndex = 29
+        Me.Label54.Text = "TOTAL PAID BY SCHOLARSHIP"
         '
-        'Label47
+        'TextBox5
         '
-        Me.Label47.AutoSize = True
-        Me.Label47.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label47.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label47.Location = New System.Drawing.Point(12, 26)
-        Me.Label47.Name = "Label47"
-        Me.Label47.Size = New System.Drawing.Size(85, 18)
-        Me.Label47.TabIndex = 26
-        Me.Label47.Text = "SCHOLAR TYPE"
+        Me.TextBox5.BackColor = System.Drawing.Color.White
+        Me.TextBox5.Enabled = False
+        Me.TextBox5.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox5.Location = New System.Drawing.Point(121, 24)
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(104, 20)
+        Me.TextBox5.TabIndex = 28
         '
-        'Label48
+        'Label55
         '
-        Me.Label48.AutoSize = True
-        Me.Label48.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label48.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label48.Location = New System.Drawing.Point(12, 47)
-        Me.Label48.Name = "Label48"
-        Me.Label48.Size = New System.Drawing.Size(107, 18)
-        Me.Label48.TabIndex = 27
-        Me.Label48.Text = "SCHOLAR AMOUNT"
+        Me.Label55.AutoSize = True
+        Me.Label55.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label55.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label55.Location = New System.Drawing.Point(12, 47)
+        Me.Label55.Name = "Label55"
+        Me.Label55.Size = New System.Drawing.Size(107, 18)
+        Me.Label55.TabIndex = 27
+        Me.Label55.Text = "SCHOLAR AMOUNT"
         '
-        'txtb_sType
+        'Label56
         '
-        Me.txtb_sType.BackColor = System.Drawing.Color.White
-        Me.txtb_sType.Enabled = False
-        Me.txtb_sType.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtb_sType.Location = New System.Drawing.Point(121, 24)
-        Me.txtb_sType.Name = "txtb_sType"
-        Me.txtb_sType.Size = New System.Drawing.Size(104, 20)
-        Me.txtb_sType.TabIndex = 28
+        Me.Label56.AutoSize = True
+        Me.Label56.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label56.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label56.Location = New System.Drawing.Point(12, 26)
+        Me.Label56.Name = "Label56"
+        Me.Label56.Size = New System.Drawing.Size(85, 18)
+        Me.Label56.TabIndex = 26
+        Me.Label56.Text = "SCHOLAR TYPE"
         '
-        'Label49
+        'TextBox6
         '
-        Me.Label49.AutoSize = True
-        Me.Label49.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label49.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label49.Location = New System.Drawing.Point(-1, 68)
-        Me.Label49.Name = "Label49"
-        Me.Label49.Size = New System.Drawing.Size(187, 18)
-        Me.Label49.TabIndex = 29
-        Me.Label49.Text = "TOTAL PAID BY SCHOLARSHIP"
+        Me.TextBox6.BackColor = System.Drawing.Color.White
+        Me.TextBox6.Enabled = False
+        Me.TextBox6.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox6.Location = New System.Drawing.Point(121, 46)
+        Me.TextBox6.Name = "TextBox6"
+        Me.TextBox6.Size = New System.Drawing.Size(104, 20)
+        Me.TextBox6.TabIndex = 25
         '
-        'txtb_sPaidAmnt
+        'Label57
         '
-        Me.txtb_sPaidAmnt.BackColor = System.Drawing.Color.White
-        Me.txtb_sPaidAmnt.Enabled = False
-        Me.txtb_sPaidAmnt.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtb_sPaidAmnt.Location = New System.Drawing.Point(192, 68)
-        Me.txtb_sPaidAmnt.Name = "txtb_sPaidAmnt"
-        Me.txtb_sPaidAmnt.Size = New System.Drawing.Size(93, 20)
-        Me.txtb_sPaidAmnt.TabIndex = 30
+        Me.Label57.AutoSize = True
+        Me.Label57.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label57.Location = New System.Drawing.Point(66, 0)
+        Me.Label57.Name = "Label57"
+        Me.Label57.Size = New System.Drawing.Size(158, 21)
+        Me.Label57.TabIndex = 24
+        Me.Label57.Text = "HAS AN ACTIVE SCHOLAR"
+        '
+        'Panel3
+        '
+        Me.Panel3.Controls.Add(Me.TextBox7)
+        Me.Panel3.Controls.Add(Me.Label58)
+        Me.Panel3.Controls.Add(Me.TextBox8)
+        Me.Panel3.Controls.Add(Me.Label59)
+        Me.Panel3.Controls.Add(Me.Label60)
+        Me.Panel3.Controls.Add(Me.TextBox9)
+        Me.Panel3.Controls.Add(Me.Label61)
+        Me.Panel3.Location = New System.Drawing.Point(18, 208)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(290, 94)
+        Me.Panel3.TabIndex = 27
+        Me.Panel3.Visible = False
+        '
+        'TextBox7
+        '
+        Me.TextBox7.BackColor = System.Drawing.Color.White
+        Me.TextBox7.Enabled = False
+        Me.TextBox7.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox7.Location = New System.Drawing.Point(192, 68)
+        Me.TextBox7.Name = "TextBox7"
+        Me.TextBox7.Size = New System.Drawing.Size(93, 20)
+        Me.TextBox7.TabIndex = 30
+        '
+        'Label58
+        '
+        Me.Label58.AutoSize = True
+        Me.Label58.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label58.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label58.Location = New System.Drawing.Point(-1, 68)
+        Me.Label58.Name = "Label58"
+        Me.Label58.Size = New System.Drawing.Size(187, 18)
+        Me.Label58.TabIndex = 29
+        Me.Label58.Text = "TOTAL PAID BY SCHOLARSHIP"
+        '
+        'TextBox8
+        '
+        Me.TextBox8.BackColor = System.Drawing.Color.White
+        Me.TextBox8.Enabled = False
+        Me.TextBox8.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox8.Location = New System.Drawing.Point(121, 24)
+        Me.TextBox8.Name = "TextBox8"
+        Me.TextBox8.Size = New System.Drawing.Size(104, 20)
+        Me.TextBox8.TabIndex = 28
+        '
+        'Label59
+        '
+        Me.Label59.AutoSize = True
+        Me.Label59.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label59.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label59.Location = New System.Drawing.Point(12, 47)
+        Me.Label59.Name = "Label59"
+        Me.Label59.Size = New System.Drawing.Size(107, 18)
+        Me.Label59.TabIndex = 27
+        Me.Label59.Text = "SCHOLAR AMOUNT"
+        '
+        'Label60
+        '
+        Me.Label60.AutoSize = True
+        Me.Label60.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label60.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label60.Location = New System.Drawing.Point(12, 26)
+        Me.Label60.Name = "Label60"
+        Me.Label60.Size = New System.Drawing.Size(85, 18)
+        Me.Label60.TabIndex = 26
+        Me.Label60.Text = "SCHOLAR TYPE"
+        '
+        'TextBox9
+        '
+        Me.TextBox9.BackColor = System.Drawing.Color.White
+        Me.TextBox9.Enabled = False
+        Me.TextBox9.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox9.Location = New System.Drawing.Point(121, 46)
+        Me.TextBox9.Name = "TextBox9"
+        Me.TextBox9.Size = New System.Drawing.Size(104, 20)
+        Me.TextBox9.TabIndex = 25
+        '
+        'Label61
+        '
+        Me.Label61.AutoSize = True
+        Me.Label61.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label61.Location = New System.Drawing.Point(66, 0)
+        Me.Label61.Name = "Label61"
+        Me.Label61.Size = New System.Drawing.Size(158, 21)
+        Me.Label61.TabIndex = 24
+        Me.Label61.Text = "HAS AN ACTIVE SCHOLAR"
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "efees_id"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "Fees ID"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.ReadOnly = True
+        Me.DataGridViewTextBoxColumn1.Visible = False
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "feestype_name"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "Fees Type"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "efees_amount"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "Fees Amount"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn33
+        '
+        Me.DataGridViewTextBoxColumn33.DataPropertyName = "sfees_id"
+        Me.DataGridViewTextBoxColumn33.HeaderText = "Fees ID"
+        Me.DataGridViewTextBoxColumn33.Name = "DataGridViewTextBoxColumn33"
+        Me.DataGridViewTextBoxColumn33.ReadOnly = True
+        Me.DataGridViewTextBoxColumn33.Visible = False
+        '
+        'DataGridViewTextBoxColumn34
+        '
+        Me.DataGridViewTextBoxColumn34.DataPropertyName = "feestype_name"
+        Me.DataGridViewTextBoxColumn34.HeaderText = "Fees Type"
+        Me.DataGridViewTextBoxColumn34.Name = "DataGridViewTextBoxColumn34"
+        Me.DataGridViewTextBoxColumn34.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn35
+        '
+        Me.DataGridViewTextBoxColumn35.DataPropertyName = "sfees_amount"
+        Me.DataGridViewTextBoxColumn35.HeaderText = "Fees Amount"
+        Me.DataGridViewTextBoxColumn35.Name = "DataGridViewTextBoxColumn35"
+        Me.DataGridViewTextBoxColumn35.ReadOnly = True
+        '
+        'jf_id
+        '
+        Me.jf_id.DataPropertyName = "jfees_id"
+        Me.jf_id.HeaderText = "ID"
+        Me.jf_id.Name = "jf_id"
+        Me.jf_id.Visible = False
+        '
+        'DataGridViewTextBoxColumn19
+        '
+        Me.DataGridViewTextBoxColumn19.DataPropertyName = "feestype_name"
+        Me.DataGridViewTextBoxColumn19.HeaderText = "Fees Type"
+        Me.DataGridViewTextBoxColumn19.Name = "DataGridViewTextBoxColumn19"
+        '
+        'DataGridViewTextBoxColumn20
+        '
+        Me.DataGridViewTextBoxColumn20.DataPropertyName = "totalpay"
+        Me.DataGridViewTextBoxColumn20.HeaderText = "Fees Amount"
+        Me.DataGridViewTextBoxColumn20.Name = "DataGridViewTextBoxColumn20"
+        '
+        'DataGridViewTextBoxColumn7
+        '
+        Me.DataGridViewTextBoxColumn7.DataPropertyName = "estud_id"
+        Me.DataGridViewTextBoxColumn7.HeaderText = "ID"
+        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
+        Me.DataGridViewTextBoxColumn7.ReadOnly = True
+        Me.DataGridViewTextBoxColumn7.Visible = False
+        '
+        'DataGridViewTextBoxColumn8
+        '
+        Me.DataGridViewTextBoxColumn8.DataPropertyName = "etan"
+        Me.DataGridViewTextBoxColumn8.HeaderText = "OR No."
+        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
+        Me.DataGridViewTextBoxColumn8.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn9
+        '
+        Me.DataGridViewTextBoxColumn9.DataPropertyName = "edate_paidamount"
+        DataGridViewCellStyle18.Format = "yyyy-MM-dd"
+        DataGridViewCellStyle18.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn9.DefaultCellStyle = DataGridViewCellStyle18
+        Me.DataGridViewTextBoxColumn9.HeaderText = "DATE"
+        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
+        Me.DataGridViewTextBoxColumn9.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn10
+        '
+        Me.DataGridViewTextBoxColumn10.DataPropertyName = "feestype_name"
+        Me.DataGridViewTextBoxColumn10.HeaderText = "PARTICULARS"
+        Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
+        Me.DataGridViewTextBoxColumn10.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn11
+        '
+        Me.DataGridViewTextBoxColumn11.DataPropertyName = "epay_amount"
+        Me.DataGridViewTextBoxColumn11.HeaderText = "AMOUNT PAID"
+        Me.DataGridViewTextBoxColumn11.Name = "DataGridViewTextBoxColumn11"
+        Me.DataGridViewTextBoxColumn11.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn12
+        '
+        Me.DataGridViewTextBoxColumn12.DataPropertyName = "ebal_amount"
+        Me.DataGridViewTextBoxColumn12.HeaderText = "Balance"
+        Me.DataGridViewTextBoxColumn12.Name = "DataGridViewTextBoxColumn12"
+        Me.DataGridViewTextBoxColumn12.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn25
+        '
+        Me.DataGridViewTextBoxColumn25.DataPropertyName = "sstud_id"
+        Me.DataGridViewTextBoxColumn25.HeaderText = "ID"
+        Me.DataGridViewTextBoxColumn25.Name = "DataGridViewTextBoxColumn25"
+        Me.DataGridViewTextBoxColumn25.ReadOnly = True
+        Me.DataGridViewTextBoxColumn25.Visible = False
+        '
+        'DataGridViewTextBoxColumn26
+        '
+        Me.DataGridViewTextBoxColumn26.DataPropertyName = "stan"
+        Me.DataGridViewTextBoxColumn26.HeaderText = "OR No."
+        Me.DataGridViewTextBoxColumn26.Name = "DataGridViewTextBoxColumn26"
+        Me.DataGridViewTextBoxColumn26.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn27
+        '
+        Me.DataGridViewTextBoxColumn27.DataPropertyName = "sdate_paidamount"
+        DataGridViewCellStyle21.Format = "yyyy-MM-dd"
+        DataGridViewCellStyle21.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn27.DefaultCellStyle = DataGridViewCellStyle21
+        Me.DataGridViewTextBoxColumn27.HeaderText = "DATE"
+        Me.DataGridViewTextBoxColumn27.Name = "DataGridViewTextBoxColumn27"
+        Me.DataGridViewTextBoxColumn27.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn28
+        '
+        Me.DataGridViewTextBoxColumn28.DataPropertyName = "feestype_name"
+        Me.DataGridViewTextBoxColumn28.HeaderText = "PARTICULARS"
+        Me.DataGridViewTextBoxColumn28.Name = "DataGridViewTextBoxColumn28"
+        Me.DataGridViewTextBoxColumn28.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn29
+        '
+        Me.DataGridViewTextBoxColumn29.DataPropertyName = "spay_amount"
+        Me.DataGridViewTextBoxColumn29.HeaderText = "AMOUNT PAID"
+        Me.DataGridViewTextBoxColumn29.Name = "DataGridViewTextBoxColumn29"
+        Me.DataGridViewTextBoxColumn29.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn30
+        '
+        Me.DataGridViewTextBoxColumn30.DataPropertyName = "sbal_amount"
+        Me.DataGridViewTextBoxColumn30.HeaderText = "Balance"
+        Me.DataGridViewTextBoxColumn30.Name = "DataGridViewTextBoxColumn30"
+        Me.DataGridViewTextBoxColumn30.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn13
+        '
+        Me.DataGridViewTextBoxColumn13.DataPropertyName = "jstud_id"
+        Me.DataGridViewTextBoxColumn13.HeaderText = "ID"
+        Me.DataGridViewTextBoxColumn13.Name = "DataGridViewTextBoxColumn13"
+        Me.DataGridViewTextBoxColumn13.ReadOnly = True
+        Me.DataGridViewTextBoxColumn13.Visible = False
+        '
+        'DataGridViewTextBoxColumn14
+        '
+        Me.DataGridViewTextBoxColumn14.DataPropertyName = "jtan"
+        Me.DataGridViewTextBoxColumn14.HeaderText = "OR No."
+        Me.DataGridViewTextBoxColumn14.Name = "DataGridViewTextBoxColumn14"
+        Me.DataGridViewTextBoxColumn14.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn15
+        '
+        Me.DataGridViewTextBoxColumn15.DataPropertyName = "jdate_paidamount"
+        DataGridViewCellStyle24.Format = "yyyy-MM-dd"
+        DataGridViewCellStyle24.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn15.DefaultCellStyle = DataGridViewCellStyle24
+        Me.DataGridViewTextBoxColumn15.HeaderText = "DATE"
+        Me.DataGridViewTextBoxColumn15.Name = "DataGridViewTextBoxColumn15"
+        Me.DataGridViewTextBoxColumn15.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn16
+        '
+        Me.DataGridViewTextBoxColumn16.DataPropertyName = "feestype_name"
+        Me.DataGridViewTextBoxColumn16.HeaderText = "PARTICULARS"
+        Me.DataGridViewTextBoxColumn16.Name = "DataGridViewTextBoxColumn16"
+        Me.DataGridViewTextBoxColumn16.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn17
+        '
+        Me.DataGridViewTextBoxColumn17.DataPropertyName = "jpay_amount"
+        Me.DataGridViewTextBoxColumn17.HeaderText = "AMOUNT PAID"
+        Me.DataGridViewTextBoxColumn17.Name = "DataGridViewTextBoxColumn17"
+        Me.DataGridViewTextBoxColumn17.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn18
+        '
+        Me.DataGridViewTextBoxColumn18.DataPropertyName = "jbal_amount"
+        Me.DataGridViewTextBoxColumn18.HeaderText = "Balance"
+        Me.DataGridViewTextBoxColumn18.Name = "DataGridViewTextBoxColumn18"
+        Me.DataGridViewTextBoxColumn18.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn21
+        '
+        Me.DataGridViewTextBoxColumn21.DataPropertyName = "jfees_name"
+        Me.DataGridViewTextBoxColumn21.HeaderText = "Fees ID"
+        Me.DataGridViewTextBoxColumn21.Name = "DataGridViewTextBoxColumn21"
+        Me.DataGridViewTextBoxColumn21.ReadOnly = True
+        Me.DataGridViewTextBoxColumn21.Visible = False
+        '
+        'DataGridViewTextBoxColumn22
+        '
+        Me.DataGridViewTextBoxColumn22.DataPropertyName = "feestype_name"
+        Me.DataGridViewTextBoxColumn22.HeaderText = "Fees Type"
+        Me.DataGridViewTextBoxColumn22.Name = "DataGridViewTextBoxColumn22"
+        Me.DataGridViewTextBoxColumn22.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn23
+        '
+        Me.DataGridViewTextBoxColumn23.DataPropertyName = "jfees_amount"
+        Me.DataGridViewTextBoxColumn23.HeaderText = "Fees Amount"
+        Me.DataGridViewTextBoxColumn23.Name = "DataGridViewTextBoxColumn23"
+        Me.DataGridViewTextBoxColumn23.ReadOnly = True
         '
         'frm_SAccounts
         '
@@ -2172,6 +2458,8 @@ Partial Class frm_SAccounts
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
         CType(Me.dg_displayTotalFees, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnl_scholar.ResumeLayout(False)
+        Me.pnl_scholar.PerformLayout()
         Me.GroupBox5.ResumeLayout(False)
         CType(Me.dg_acctRec, System.ComponentModel.ISupportInitialize).EndInit()
         Me.elem_dept.ResumeLayout(False)
@@ -2181,6 +2469,8 @@ Partial Class frm_SAccounts
         CType(Me.dg_eStudAcctRec, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox8.ResumeLayout(False)
         Me.GroupBox8.PerformLayout()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         CType(Me.dg_eStudFees, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox7.ResumeLayout(False)
         Me.GroupBox7.PerformLayout()
@@ -2213,8 +2503,10 @@ Partial Class frm_SAccounts
         CType(Me.dg_jFees, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox13.ResumeLayout(False)
         Me.GroupBox13.PerformLayout()
-        Me.pnl_scholar.ResumeLayout(False)
-        Me.pnl_scholar.PerformLayout()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
+        Me.Panel3.ResumeLayout(False)
+        Me.Panel3.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -2223,10 +2515,6 @@ Partial Class frm_SAccounts
     Friend WithEvents btn_UpdateCacct As Bunifu.Framework.UI.BunifuThinButton2
     Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
     Friend WithEvents dg_studFeesType As System.Windows.Forms.DataGridView
-    Friend WithEvents fees_id As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents FeesType As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents FeesAmount As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents rpu_id As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents txtb_totalFees As System.Windows.Forms.TextBox
     Friend WithEvents Label12 As System.Windows.Forms.Label
     Friend WithEvents Label13 As System.Windows.Forms.Label
@@ -2286,12 +2574,6 @@ Partial Class frm_SAccounts
     Friend WithEvents Label22 As System.Windows.Forms.Label
     Friend WithEvents GroupBox9 As System.Windows.Forms.GroupBox
     Friend WithEvents dg_eStudAcctRec As Bunifu.Framework.UI.BunifuCustomDataGrid
-    Friend WithEvents stdacct_id As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents or_id As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents sa_date As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents sa_particulars As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents sa_amountPaid As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents sa_balance As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents TypeFees As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents AmountFees As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents jh_dept As System.Windows.Forms.TabPage
@@ -2345,30 +2627,80 @@ Partial Class frm_SAccounts
     Friend WithEvents GroupBox18 As GroupBox
     Friend WithEvents cbo_eSortSY As ComboBox
     Friend WithEvents Label44 As Label
-    Friend WithEvents DataGridViewTextBoxColumn7 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn8 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn9 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn10 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn11 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn12 As DataGridViewTextBoxColumn
     Friend WithEvents GroupBox19 As GroupBox
     Friend WithEvents cbo_sSortBY As ComboBox
     Friend WithEvents Label43 As Label
     Friend WithEvents GroupBox20 As GroupBox
     Friend WithEvents cbo_jSortBY As ComboBox
     Friend WithEvents Label45 As Label
+    Friend WithEvents ef_id As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
+    Friend WithEvents sfees_id As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn31 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn32 As DataGridViewTextBoxColumn
+    Friend WithEvents pnl_scholar As Panel
+    Friend WithEvents txtb_sType As TextBox
+    Friend WithEvents Label48 As Label
+    Friend WithEvents Label47 As Label
+    Friend WithEvents txtb_sAmnt As TextBox
+    Friend WithEvents Label46 As Label
+    Friend WithEvents txtb_sPaidAmnt As TextBox
+    Friend WithEvents Label49 As Label
+    Friend WithEvents fees_name As DataGridViewTextBoxColumn
+    Friend WithEvents fFeestype_name As DataGridViewTextBoxColumn
+    Friend WithEvents FeesAmount As DataGridViewTextBoxColumn
+    Friend WithEvents stdacct_id As DataGridViewTextBoxColumn
+    Friend WithEvents or_id As DataGridViewTextBoxColumn
+    Friend WithEvents sa_date As DataGridViewTextBoxColumn
+    Friend WithEvents sa_particulars As DataGridViewTextBoxColumn
+    Friend WithEvents sa_amountPaid As DataGridViewTextBoxColumn
+    Friend WithEvents sa_balance As DataGridViewTextBoxColumn
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Label50 As Label
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents Label51 As Label
+    Friend WithEvents Label52 As Label
+    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents Label53 As Label
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents Label54 As Label
+    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents Label55 As Label
+    Friend WithEvents Label56 As Label
+    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents Label57 As Label
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents TextBox7 As TextBox
+    Friend WithEvents Label58 As Label
+    Friend WithEvents TextBox8 As TextBox
+    Friend WithEvents Label59 As Label
+    Friend WithEvents Label60 As Label
+    Friend WithEvents TextBox9 As TextBox
+    Friend WithEvents Label61 As Label
     Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn33 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn34 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn35 As DataGridViewTextBoxColumn
+    Friend WithEvents jf_id As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn19 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn20 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn7 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn8 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn9 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn10 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn11 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn12 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn25 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn26 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn27 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn28 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn29 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn30 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn33 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn34 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn35 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn13 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn14 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn15 As DataGridViewTextBoxColumn
@@ -2378,21 +2710,4 @@ Partial Class frm_SAccounts
     Friend WithEvents DataGridViewTextBoxColumn21 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn22 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn23 As DataGridViewTextBoxColumn
-    Friend WithEvents ef_id As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
-    Friend WithEvents sfees_id As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn31 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn32 As DataGridViewTextBoxColumn
-    Friend WithEvents jf_id As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn19 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn20 As DataGridViewTextBoxColumn
-    Friend WithEvents pnl_scholar As Panel
-    Friend WithEvents txtb_sType As TextBox
-    Friend WithEvents Label48 As Label
-    Friend WithEvents Label47 As Label
-    Friend WithEvents txtb_sAmnt As TextBox
-    Friend WithEvents Label46 As Label
-    Friend WithEvents txtb_sPaidAmnt As TextBox
-    Friend WithEvents Label49 As Label
 End Class

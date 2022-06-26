@@ -10,7 +10,9 @@ Module lccsams
     'Public strConn = "server=192.168.254.114; user id=raldz;password=d74r3j93527;database=" 'Connecttion String
     'Public strConn = "server=206.189.80.59;Port=22284; user id=raldz;password=d74r3j93527;database=" 'Connecttion String
     Public da As MySqlDataAdapter ' A bridge between connection and Data
+    Public da2 As MySqlDataAdapter ' A bridge between connection and Data
     Public dt As DataTable  'opulate the records from Database
+    Public dt2 As DataTable  'opulate the records from Database
     Public dr As MySqlDataReader
     Public ds As DataSet
     Public current_menu As Integer = 0

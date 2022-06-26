@@ -313,6 +313,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>elem_ds.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Forms\coll_ds.vb">
+      <DependentUpon>coll_ds.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_processPayment.Designer.vb">
+      <DependentUpon>frm_processPayment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_processPayment.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\proceespayment.Designer.vb">
+      <DependentUpon>proceespayment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\proceespayment.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="manage_feesType.Designer.vb">
       <DependentUpon>manage_feesType.vb</DependentUpon>
     </Compile>
@@ -656,6 +671,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="dlg_updateYearLevel.resx">
       <DependentUpon>dlg_updateYearLevel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_processPayment.resx">
+      <DependentUpon>frm_processPayment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\proceespayment.resx">
+      <DependentUpon>proceespayment.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="manage_feesType.resx">
       <DependentUpon>manage_feesType.vb</DependentUpon>

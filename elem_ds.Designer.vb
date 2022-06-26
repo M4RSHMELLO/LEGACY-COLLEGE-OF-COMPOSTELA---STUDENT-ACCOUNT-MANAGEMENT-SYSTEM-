@@ -289,7 +289,7 @@ Partial Public Class elem_ds
         
         Private columnepay_amount As Global.System.Data.DataColumn
         
-        Private columnefees_name As Global.System.Data.DataColumn
+        Private columnfeestype_name As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
@@ -352,9 +352,9 @@ Partial Public Class elem_ds
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property efees_nameColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property feestype_nameColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnefees_name
+                Return Me.columnfeestype_name
             End Get
         End Property
         
@@ -395,9 +395,9 @@ Partial Public Class elem_ds
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overloads Function Addtbl_elem_accountsRow(ByVal etan As Integer, ByVal edate_paidamount As Date, ByVal epay_amount As Double, ByVal efees_name As String) As tbl_elem_accountsRow
+        Public Overloads Function Addtbl_elem_accountsRow(ByVal etan As Integer, ByVal edate_paidamount As Date, ByVal epay_amount As Double, ByVal feestype_name As String) As tbl_elem_accountsRow
             Dim rowtbl_elem_accountsRow As tbl_elem_accountsRow = CType(Me.NewRow,tbl_elem_accountsRow)
-            Dim columnValuesArray() As Object = New Object() {etan, edate_paidamount, epay_amount, efees_name}
+            Dim columnValuesArray() As Object = New Object() {etan, edate_paidamount, epay_amount, feestype_name}
             rowtbl_elem_accountsRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowtbl_elem_accountsRow)
             Return rowtbl_elem_accountsRow
@@ -423,7 +423,7 @@ Partial Public Class elem_ds
             Me.columnetan = MyBase.Columns("etan")
             Me.columnedate_paidamount = MyBase.Columns("edate_paidamount")
             Me.columnepay_amount = MyBase.Columns("epay_amount")
-            Me.columnefees_name = MyBase.Columns("efees_name")
+            Me.columnfeestype_name = MyBase.Columns("feestype_name")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -435,12 +435,12 @@ Partial Public Class elem_ds
             MyBase.Columns.Add(Me.columnedate_paidamount)
             Me.columnepay_amount = New Global.System.Data.DataColumn("epay_amount", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnepay_amount)
-            Me.columnefees_name = New Global.System.Data.DataColumn("efees_name", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnefees_name)
+            Me.columnfeestype_name = New Global.System.Data.DataColumn("feestype_name", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnfeestype_name)
             Me.columnetan.AllowDBNull = false
             Me.columnedate_paidamount.AllowDBNull = false
             Me.columnepay_amount.AllowDBNull = false
-            Me.columnefees_name.AllowDBNull = false
+            Me.columnfeestype_name.AllowDBNull = false
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -620,12 +620,12 @@ Partial Public Class elem_ds
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property efees_name() As String
+        Public Property feestype_name() As String
             Get
-                Return CType(Me(Me.tabletbl_elem_accounts.efees_nameColumn),String)
+                Return CType(Me(Me.tabletbl_elem_accounts.feestype_nameColumn),String)
             End Get
             Set
-                Me(Me.tabletbl_elem_accounts.efees_nameColumn) = value
+                Me(Me.tabletbl_elem_accounts.feestype_nameColumn) = value
             End Set
         End Property
     End Class
@@ -799,7 +799,7 @@ Namespace elem_dsTableAdapters
             tableMapping.ColumnMappings.Add("etan", "etan")
             tableMapping.ColumnMappings.Add("edate_paidamount", "edate_paidamount")
             tableMapping.ColumnMappings.Add("epay_amount", "epay_amount")
-            tableMapping.ColumnMappings.Add("efees_name", "efees_name")
+            tableMapping.ColumnMappings.Add("feestype_name", "feestype_name")
             Me._adapter.TableMappings.Add(tableMapping)
         End Sub
         
@@ -816,8 +816,8 @@ Namespace elem_dsTableAdapters
             Me._commandCollection = New Global.Devart.Data.MySql.MySqlCommand(0) {}
             Me._commandCollection(0) = New Global.Devart.Data.MySql.MySqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "Select sa.etan,sa.edate_paidamount,f.efees_name,sa.epay_amount from tbl_elem_acco"& _ 
-                "unts sa inner join tbl_elem_fees f on f.efees_id=sa.efees_id"
+            Me._commandCollection(0).CommandText = "Select sa.etan,sa.edate_paidamount,ft.feestype_name,sa.epay_amount from tbl_elem_"& _ 
+                "accounts sa inner join tbl_fees_type ft on ft.feestype_id=sa.efees_id"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         

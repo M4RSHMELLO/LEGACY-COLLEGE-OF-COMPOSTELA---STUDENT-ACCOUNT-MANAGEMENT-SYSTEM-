@@ -28,6 +28,7 @@ Public Class frm_slists
                 cbo_sem.SelectedIndex = -1
                 cbo_yearlevel.SelectedIndex = -1
                 cbo_course.SelectedIndex = -1
+                _loadToCombobox(student_type, cbo_studType)
                 cbo_studType.SelectedIndex = -1
                 _dbConnection("db_lccsams")
                 _displayRecords(sStudR, dg_studR)
@@ -46,7 +47,8 @@ Public Class frm_slists
                 cbo_eGradeLevel.SelectedIndex = -1
                 _displayRecords(eSelect_studRec, dg_eStudRecords)
                 cbo_eSearchBY.SelectedIndex = 1
-
+                _loadToCombobox(student_type, cbo_elemStudType)
+                cbo_elemStudType.SelectedIndex = -1
             Case 2
                 _dbConnection("db_lccsams")
                 _loadToCombobox(sSelect_SY, cbo_sSY)
@@ -58,7 +60,8 @@ Public Class frm_slists
                 cbo_sSY.SelectedIndex = -1
                 cbo_sGL.SelectedIndex = -1
                 _displayRecords(sSelect_studRec, dg_sStudRec)
-
+                _loadToCombobox(student_type, cbo_seniorStudType)
+                cbo_seniorStudType.SelectedIndex = -1
             Case 3
                 _loadToCombobox(jSelect_SY, cbo_jSY)
                 _loadToCombobox(jSelect_GL, cbo_jGL)
@@ -71,8 +74,8 @@ Public Class frm_slists
                 _dbConnection("db_lccsams")
                 _displayRecords(jSelect_studRec, dg_jStudRec)
 
-
-
+                _loadToCombobox(student_type, cbo_juniorStudType)
+                cbo_juniorStudType.SelectedIndex = -1
 
 
         End Select
@@ -131,9 +134,9 @@ Public Class frm_slists
                 ElseIf cbo_yearlevel.SelectedValue > 1 Then
 
                 End If
-                Dim querry1 = "insert into tbl_student (stud_id,stud_Fname,stud_Lname,stud_midI,crs_id,sem_id,yl_id,sy_id,educ_level,stype_id) values('" & randomNumber & "','" & txtb_studFname.Text & "','" & txtb_studLname.Text & "','" & txtb_studMI.Text & "','" & cbo_course.SelectedValue & "','" & cbo_sem.SelectedValue & "','" & cbo_yearlevel.SelectedValue & "','" & cbo_schyear.SelectedValue & "','" & 0 & "','" & cbo_studType.SelectedValue & "')"
+                Dim querry1 = "insert into tbl_student (stud_id,stud_Fname,stud_Lname,stud_midI,crs_id,sem_id,yl_id,sy_id,stype_id,no_units,rate_perunits) values('" & randomNumber & "','" & txtb_studFname.Text & "','" & txtb_studLname.Text & "','" & txtb_studMI.Text & "','" & cbo_course.SelectedValue & "','" & cbo_sem.SelectedValue & "','" & cbo_yearlevel.SelectedValue & "','" & cbo_schyear.SelectedValue & "','" & cbo_studType.SelectedValue & "','" & txtb_noUnits.Text & "','" & txtb_RpU.Text & "')"
                 _insertData(querry1)
-                _insertData(querry2)
+                '_insertData(querry2)
             End If
         Catch ex As Exception
             MessageBox.Show("Error: ", ex.Message)
@@ -172,12 +175,12 @@ Public Class frm_slists
                     btn_gotoAcct.Enabled = True
 
                 Case 2
-                    Dim querry3 = "update tbl_student set stud_Fname='" & txtb_studFname.Text & "',stud_Lname='" & txtb_studLname.Text & "',stud_midI='" & txtb_studMI.Text & "',crs_id='" & cbo_course.SelectedValue & "',sem_id='" & cbo_sem.SelectedValue & "',yl_id='" & cbo_yearlevel.SelectedValue & "',sy_id='" & cbo_schyear.SelectedValue & "' where stud_id='" & stud_id & "' "
+                    Dim querry3 = "update tbl_student set stud_Fname='" & txtb_studFname.Text & "',stud_Lname='" & txtb_studLname.Text & "',stud_midI='" & txtb_studMI.Text & "',crs_id='" & cbo_course.SelectedValue & "',sem_id='" & cbo_sem.SelectedValue & "',yl_id='" & cbo_yearlevel.SelectedValue & "',sy_id='" & cbo_schyear.SelectedValue & "',no_units='" & txtb_noUnits.Text & "',rate_perunits='" & txtb_RpU.Text & "' where stud_id='" & stud_id & "' "
                     Dim querry4 = "update tbl_studnounits set st_noUnits='" & txtb_noUnits.Text & "',st_rateperunit='" & txtb_RpU.Text & "',crs_id='" & cbo_course.SelectedValue & "',sem_id='" & cbo_sem.SelectedValue & "',yl_id='" & cbo_yearlevel.SelectedValue & "',sy_id='" & cbo_schyear.SelectedValue & "'  where stud_id='" & stud_id & "' "
                     _dbConnection("db_lccsams")
 
                     _updateData(querry3)
-                    _updateData(querry4)
+                    '_updateData(querry4)
                     UpdatedSuccessfully.ShowDialog()
                     _displayRecords(sStudR, dg_studR)
                     btn_updtStud.Enabled = True
@@ -203,6 +206,7 @@ Public Class frm_slists
             cbo_yearlevel.Enabled = True
             cbo_sem.Enabled = True
             cbo_course.Enabled = True
+            cbo_studType.Enabled = True
             btn_updtStud.Enabled = False
             btn_save.Enabled = True
             btn_addNstud.Enabled = False
@@ -212,12 +216,12 @@ Public Class frm_slists
             a = 2
 
 
-            cbo_course.Text = ""
+            cbo_course.SelectedIndex = -1
             cbo_yearlevel.Text = ""
             cbo_sem.Text = ""
             cbo_schyear.Text = ""
-            txtb_noUnits.Clear()
-            txtb_RpU.Clear()
+            'txtb_noUnits.Clear()
+            'txtb_RpU.Clear()
         End If
 
     End Sub
@@ -243,18 +247,18 @@ Public Class frm_slists
                 Dim querry2 As String = "Select y.yl_name from tbl_student s inner join tbl_year_level y on s.yl_id=y.yl_id where s.stud_id = '" & txtb_studId.Text & "'"
                 Dim querry3 As String = "Select sem.sem_name from tbl_student s inner join tbl_semester sem  on s.sem_id=sem.sem_id where s.stud_id = '" & txtb_studId.Text & "'"
                 Dim querry4 As String = "Select sy.sy_name from tbl_student s inner join tbl_sch_year sy  on s.sy_id=sy.sy_id where s.stud_id = '" & txtb_studId.Text & "' group by sy_name having count(*) > 0"
-                Dim querry6 As String = "select  st_rateperunit  from tbl_studnounits where stud_id = '" & stud_id & "' and sy_id='" & .Item("sy_id", i).Value & "' and sem_id='" & .Item("sem_id", i).Value & "' and yl_id='" & .Item("yl_id", i).Value & "' and  crs_id='" & .Item("crs_id", i).Value & "'"
+                Dim querry6 As String = "select  fees_amount  from tbl where stud_id = '" & stud_id & "' and sy_id='" & .Item("sy_id", i).Value & "' and sem_id='" & .Item("sem_id", i).Value & "' and yl_id='" & .Item("yl_id", i).Value & "' and  crs_id='" & .Item("crs_id", i).Value & "'"
                 Dim querry5 As String = "select  st_noUnits from tbl_studnounits where stud_id ='" & stud_id & "' and sy_id='" & .Item("sy_id", i).Value & "' and sem_id='" & .Item("sem_id", i).Value & "' and yl_id='" & .Item("yl_id", i).Value & "' and  crs_id='" & .Item("crs_id", i).Value & "'"
                 Dim querry7 As String = "select  st.stype_name from tbl_student_type st inner join tbl_student s on st.stype_id=s.stype_id  where s.stud_id ='" & stud_id & "'"
                 _dbConnection("db_lccsams")
                 txtb_studFname.Text = .Item("s_fName", i).Value
                 txtb_studLname.Text = .Item("s_lName", i).Value
                 txtb_studMI.Text = .Item("s_Midi", i).Value
-
-                txtb_noUnits.Clear()
-                txtb_RpU.Clear()
-                _loadToTextbox(querry5, txtb_noUnits)
-                _loadToTextbox(querry6, txtb_RpU)
+                txtb_noUnits.Text = .Item("noUnits", i).Value
+                txtb_RpU.Text = .Item("rate_perunits", i).Value
+                'txtb_RpU.Clear()
+                '_loadToTextbox(querry5, txtb_noUnits)
+                '_loadToTextbox(querry6, txtb_RpU)
 
                 _selectComboBoxText(querry, cbo_course)
                 _selectComboBoxText(querry2, cbo_yearlevel)
@@ -303,7 +307,7 @@ Public Class frm_slists
     Dim rpu_id As Integer = 1
     Private Sub cbo_course_SelectionChangeCommitted(sender As Object, e As EventArgs) Handles cbo_course.SelectionChangeCommitted
         txtb_RpU.Clear()
-        Dim querry2 As String = "Select fees_amount from tbl_coll_fees where sy_id='" & cbo_schyear.SelectedValue & "' and sem_id='" & cbo_sem.SelectedValue & "' and yl_id='" & cbo_yearlevel.SelectedValue & "' and  crs_id='" & cbo_course.SelectedValue & "' and tuition_rpu_id='" & rpu_id & "'"
+        Dim querry2 As String = "Select fees_amount from tbl_coll_fees where sy_id='" & cbo_schyear.SelectedValue & "' and sem_id='" & cbo_sem.SelectedValue & "' and yl_id='" & cbo_yearlevel.SelectedValue & "' and  crs_id='" & cbo_course.SelectedValue & "' and fees_name='" & 2 & "'"
         If cbo_sem.Text <> "" Then
             _dbConnection("db_lccsams")
             txtb_RpU.Clear()
@@ -362,6 +366,7 @@ Public Class frm_slists
         _displayRecords(sStudR, dg_studR)
         _loadToCombobox(slctSY, cbo_schyear)
         _loadToCombobox(student_type, cbo_studType)
+        cbo_studType.SelectedIndex = -1
         cbo_SearchBy.SelectedIndex = 1
         cbo_schyear.SelectedIndex = -1
         cbo_sem.SelectedIndex = -1
@@ -408,6 +413,7 @@ Public Class frm_slists
             txtb_estudMI.Enabled = False
             cbo_eGradeLevel.Enabled = False
             cbo_eSYName.Enabled = False
+            cbo_elemStudType.Enabled = False
             btn_eSave.Enabled = False
             btn_eViewAccount.Enabled = True
             btn_eAddNewStud.Enabled = True
@@ -416,13 +422,13 @@ Public Class frm_slists
 
             Select Case b
                 Case 1
-                    Dim insertStudData = "Insert into tbl_elem_students values ('" & txtb_eStudID.Text & "','" & txtb_eStudFname.Text & "','" & txtb_estudLname.Text & "','" & txtb_estudMI.Text & "','" & cbo_eSYName.SelectedValue & "','" & cbo_eGradeLevel.SelectedValue & "')"
+                    Dim insertStudData = "Insert into tbl_elem_students values ('" & txtb_eStudID.Text & "','" & txtb_eStudFname.Text & "','" & txtb_estudLname.Text & "','" & txtb_estudMI.Text & "','" & cbo_eSYName.SelectedValue & "','" & cbo_eGradeLevel.SelectedValue & "','" & cbo_elemStudType.SelectedValue & "')"
                     _dbConnection("db_lccsams")
                     _insertData(insertStudData)
                     dlg_savesuccessfully.ShowDialog()
                     _displayRecords(eSelect_studRec, dg_eStudRecords)
                 Case 2
-                    Dim querry2 = "update tbl_elem_students set estud_fname='" & txtb_eStudFname.Text & "',estud_lname='" & txtb_estudLname.Text & "',estud_mi='" & txtb_estudMI.Text & "',esy_id='" & cbo_eSYName.SelectedValue & "',egl_id='" & cbo_eGradeLevel.SelectedValue & "' where estud_id='" & txtb_eStudID.Text & "' "
+                    Dim querry2 = "update tbl_elem_students set estud_fname='" & txtb_eStudFname.Text & "',estud_lname='" & txtb_estudLname.Text & "',estud_mi='" & txtb_estudMI.Text & "',esy_id='" & cbo_eSYName.SelectedValue & "',egl_id='" & cbo_eGradeLevel.SelectedValue & "',stype_id='" & cbo_elemStudType.SelectedValue & "' where estud_id='" & txtb_eStudID.Text & "' "
                     _dbConnection("db_lccsams")
                     _updateData(querry2)
                     _displayRecords(eSelect_studRec, dg_eStudRecords)
@@ -437,6 +443,7 @@ Public Class frm_slists
             txtb_eStudFname.Enabled = True
             txtb_estudLname.Enabled = True
             txtb_estudMI.Enabled = True
+            cbo_elemStudType.Enabled = True
 
             cbo_eSYName.Enabled = True
             cbo_eGradeLevel.Enabled = True
@@ -469,6 +476,7 @@ Public Class frm_slists
             cbo_eSYName.Enabled = True
             cbo_eGradeLevel.Enabled = True
             dg_eStudRecords.Enabled = False
+            cbo_elemStudType.Enabled = True
 
             btn_eUpdateNewStud.Enabled = False
             btn_eSave.Enabled = True
@@ -488,6 +496,8 @@ Public Class frm_slists
         txtb_estudMI.Enabled = False
         cbo_eGradeLevel.Enabled = False
         cbo_eSYName.Enabled = False
+        cbo_elemStudType.Enabled = False
+
         'clear selection
         txtb_eStudFname.Clear()
         txtb_estudLname.Clear()
@@ -510,12 +520,13 @@ Public Class frm_slists
 
                 Dim querry As String = "Select esy_name from tbl_elem_sy where esy_id='" & .Item(4, i).Value & "'"
                 Dim querry2 As String = "Select egl_name from tbl_elem_gradelevel where egl_id='" & .Item(5, i).Value & "'"
+                Dim querry3 As String = "Select stype_name from tbl_student_type  where stype_id='" & .Item(6, i).Value & "'"
                 _dbConnection("db_lccsams")
                 eStud_id = .Item(0, i).Value
                 eStudname = .Item(1, i).Value.ToString.ToUpper + " " + .Item(2, i).Value.ToString.ToUpper + " " + .Item(3, i).Value.ToString.ToUpper
                 eStudSY = _selectComboBoxText(querry, cbo_eSYName)
                 eStudGL = _selectComboBoxText(querry2, cbo_eGradeLevel)
-
+                _selectComboBoxText(querry3, cbo_elemStudType)
                 txtb_eStudID.Text = .Item("col_estud_id", i).Value
                 txtb_eStudFname.Text = .Item("col_estud_fname", i).Value.ToString.ToUpper
                 txtb_estudLname.Text = .Item("col_estud_lname", i).Value.ToString.ToUpper
@@ -562,6 +573,7 @@ Public Class frm_slists
             txtb_sFname.Enabled = True
             txtb_sLname.Enabled = True
             txtb_smi.Enabled = True
+            cbo_seniorStudType.Enabled = True
 
             cbo_sSY.Enabled = True
             cbo_sGL.Enabled = True
@@ -594,6 +606,7 @@ Public Class frm_slists
             cbo_sSY.Enabled = True
             cbo_sGL.Enabled = True
             dg_sStudRec.Enabled = False
+            cbo_seniorStudType.Enabled = True
 
             btn_sUpdateStud.Enabled = False
             btn_sSave.Enabled = True
@@ -614,6 +627,7 @@ Public Class frm_slists
             txtb_smi.Enabled = False
             cbo_sSY.Enabled = False
             cbo_sGL.Enabled = False
+            cbo_seniorStudType.Enabled = False
 
 
             btn_sAddStud.Enabled = True
@@ -624,13 +638,13 @@ Public Class frm_slists
             btn_sSave.Enabled = False
             Select Case C
                 Case 1
-                    Dim shAddNewStud = "Insert into tbl_seniorhigh_students values('" & txtb_sStud_id.Text & "','" & txtb_sFname.Text & "','" & txtb_sLname.Text & "','" & txtb_smi.Text & "','" & cbo_sSY.SelectedValue & "','" & cbo_sGL.SelectedValue & "')"
+                    Dim shAddNewStud = "Insert into tbl_seniorhigh_students values('" & txtb_sStud_id.Text & "','" & txtb_sFname.Text & "','" & txtb_sLname.Text & "','" & txtb_smi.Text & "','" & cbo_sSY.SelectedValue & "','" & cbo_sGL.SelectedValue & "','" & cbo_seniorStudType.SelectedValue & "')"
                     _dbConnection("db_lccsams")
                     _insertData(shAddNewStud)
                     dlg_savesuccessfully.ShowDialog()
                     _displayRecords(sSelect_studRec, dg_sStudRec)
                 Case 2
-                    Dim querry3 = "update tbl_seniorhigh_students set sstud_fname='" & txtb_sFname.Text & "',sstud_lname='" & txtb_sLname.Text & "',sstud_mi='" & txtb_smi.Text & "',ssy_id='" & cbo_sSY.SelectedValue & "',sgl_id='" & cbo_sGL.SelectedValue & "' where sstud_id='" & txtb_sStud_id.Text & "' "
+                    Dim querry3 = "update tbl_seniorhigh_students set sstud_fname='" & txtb_sFname.Text & "',sstud_lname='" & txtb_sLname.Text & "',sstud_mi='" & txtb_smi.Text & "',ssy_id='" & cbo_sSY.SelectedValue & "',sgl_id='" & cbo_sGL.SelectedValue & "',stype_id='" & cbo_seniorStudType.SelectedValue & "' where sstud_id='" & txtb_sStud_id.Text & "' "
                     _dbConnection("db_lccsams")
                     _updateData(querry3)
                     _displayRecords(sSelect_studRec, dg_sStudRec)
@@ -646,6 +660,8 @@ Public Class frm_slists
         txtb_smi.Enabled = False
         cbo_sSY.Enabled = False
         cbo_sGL.Enabled = False
+        cbo_seniorStudType.Enabled = False
+
         'clear selection
         txtb_sFname.Clear()
         txtb_sLname.Clear()
@@ -668,11 +684,13 @@ Public Class frm_slists
 
                 Dim querry As String = "Select ssy_name from tbl_seniorhigh_sy where ssy_id='" & .Item("col_sSY", i).Value & "'"
                 Dim querry2 As String = "Select sgl_name from tbl_seniorhigh_gl where sgl_id='" & .Item("col_sGl", i).Value & "'"
+                Dim querry3 As String = "Select stype_name from tbl_student_type where stype_id='" & .Item(6, i).Value & "'"
                 _dbConnection("db_lccsams")
                 sStud_id = .Item("col_sStud_id", i).Value
                 sStudname = .Item("col_sStud_fname", i).Value.ToString.ToUpper + " " + .Item("col_sStud_mi", i).Value.ToString.ToUpper + " " + .Item("col_sStud_lname", i).Value.ToString.ToUpper
                 sStudSY = _selectComboBoxText(querry, cbo_sSY)
                 sStudGL = _selectComboBoxText(querry2, cbo_sGL)
+                _selectComboBoxText(querry3, cbo_seniorStudType)
 
                 txtb_sStud_id.Text = .Item("col_sStud_id", i).Value
                 txtb_sFname.Text = .Item("col_sStud_fname", i).Value.ToString.ToUpper
@@ -720,6 +738,7 @@ Public Class frm_slists
             txtb_jStudFname.Enabled = True
             txtb_jStudLname.Enabled = True
             txtb_jStudMI.Enabled = True
+            cbo_juniorStudType.Enabled = True
 
             cbo_jSY.Enabled = True
             cbo_jGL.Enabled = True
@@ -753,6 +772,7 @@ Public Class frm_slists
             cbo_jSY.Enabled = True
             cbo_jGL.Enabled = True
             dg_jStudRec.Enabled = False
+            cbo_juniorStudType.Enabled = False
 
             btn_jUpdateStud.Enabled = False
             btn_jSave.Enabled = True
@@ -775,6 +795,7 @@ Public Class frm_slists
             txtb_jStudMI.Enabled = False
             cbo_jSY.Enabled = False
             cbo_jGL.Enabled = False
+            cbo_juniorStudType.Enabled = False
 
 
             btn_jAddStud.Enabled = True
@@ -785,12 +806,12 @@ Public Class frm_slists
             btn_jSave.Enabled = False
             Select Case d
                 Case 1
-                    Dim jNewStud As String = "Insert into tbl_juniorhigh_students values ('" & txtb_jStud_id.Text & "','" & txtb_jStudFname.Text & "','" & txtb_jStudLname.Text & "','" & txtb_jStudMI.Text & "','" & cbo_jSY.SelectedValue & "','" & cbo_jGL.SelectedValue & "')"
+                    Dim jNewStud As String = "Insert into tbl_juniorhigh_students values ('" & txtb_jStud_id.Text & "','" & txtb_jStudFname.Text & "','" & txtb_jStudLname.Text & "','" & txtb_jStudMI.Text & "','" & cbo_jSY.SelectedValue & "','" & cbo_jGL.SelectedValue & "','" & cbo_juniorStudType.SelectedValue & "')"
                     _insertData(jNewStud)
                     dlg_savesuccessfully.ShowDialog()
                     _displayRecords(jSelect_studRec, dg_jStudRec)
                 Case 2
-                    Dim jUpdateStud = "Update tbl_juniorhigh_students set jstud_fname='" & txtb_jStudFname.Text & "',jstud_lname='" & txtb_jStudLname.Text & "',jstud_mi='" & txtb_jStudMI.Text & "',jsy_id='" & cbo_jSY.SelectedValue & "',jgl_id='" & cbo_jGL.SelectedValue & "' where jstud_id='" & txtb_jStud_id.Text & "' "
+                    Dim jUpdateStud = "Update tbl_juniorhigh_students set jstud_fname='" & txtb_jStudFname.Text & "',jstud_lname='" & txtb_jStudLname.Text & "',jstud_mi='" & txtb_jStudMI.Text & "',jsy_id='" & cbo_jSY.SelectedValue & "',jgl_id='" & cbo_jGL.SelectedValue & "',stype_id='" & cbo_juniorStudType.SelectedValue & "' where jstud_id='" & txtb_jStud_id.Text & "' "
                     _dbConnection("db_lccsams")
                     _updateData(jUpdateStud)
                     _displayRecords(jSelect_studRec, dg_jStudRec)
@@ -806,6 +827,8 @@ Public Class frm_slists
         txtb_jStudMI.Enabled = False
         cbo_jSY.Enabled = False
         cbo_jGL.Enabled = False
+        cbo_juniorStudType.Enabled = False
+
         'clear selection
         txtb_jStudFname.Clear()
         txtb_jStudLname.Clear()
@@ -828,11 +851,13 @@ Public Class frm_slists
 
                 Dim querry As String = "Select jsy_name from tbl_juniorhigh_sy where jsy_id='" & .Item(4, i).Value & "'"
                 Dim querry2 As String = "Select jgl_name from tbl_juniorhigh_gradelevel where jgl_id='" & .Item(5, i).Value & "'"
+                Dim querry3 As String = "Select stype_name from tbl_student_type where stype_id='" & .Item(6, i).Value & "'"
                 _dbConnection("db_lccsams")
                 jStud_id = .Item(0, i).Value
                 jStudname = .Item(1, i).Value.ToString.ToUpper + " " + .Item(2, i).Value.ToString.ToUpper + " " + .Item(3, i).Value.ToString.ToUpper
                 jStudSY = _selectComboBoxText(querry, cbo_jSY)
                 jStudGL = _selectComboBoxText(querry2, cbo_jGL)
+                _selectComboBoxText(querry3, cbo_juniorStudType)
 
                 txtb_jStud_id.Text = .Item(0, i).Value
                 txtb_jStudFname.Text = .Item(1, i).Value.ToString.ToUpper

@@ -231,19 +231,18 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="efees_name">
+                    <Textbox Name="feestype_name">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!efees_name.Value</Value>
+                              <Value>=Fields!feestype_name.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -252,7 +251,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>efees_name</rd:DefaultName>
+                      <rd:DefaultName>feestype_name</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -685,8 +684,8 @@
           <DataField>epay_amount</DataField>
           <rd:TypeName>System.Double</rd:TypeName>
         </Field>
-        <Field Name="efees_name">
-          <DataField>efees_name</DataField>
+        <Field Name="feestype_name">
+          <DataField>feestype_name</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>

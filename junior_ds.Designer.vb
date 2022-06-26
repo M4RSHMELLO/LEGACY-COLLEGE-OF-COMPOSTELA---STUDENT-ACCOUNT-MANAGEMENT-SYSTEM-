@@ -289,7 +289,7 @@ Partial Public Class junior_ds
         
         Private columnjpay_amount As Global.System.Data.DataColumn
         
-        Private columnjfees_name As Global.System.Data.DataColumn
+        Private columnfeestype_name As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
@@ -352,9 +352,9 @@ Partial Public Class junior_ds
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property jfees_nameColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property feestype_nameColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnjfees_name
+                Return Me.columnfeestype_name
             End Get
         End Property
         
@@ -395,9 +395,9 @@ Partial Public Class junior_ds
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overloads Function Addtbl_junior_accountsRow(ByVal jtan As String, ByVal jdate_paidamount As Date, ByVal jpay_amount As Double, ByVal jfees_name As String) As tbl_junior_accountsRow
+        Public Overloads Function Addtbl_junior_accountsRow(ByVal jtan As String, ByVal jdate_paidamount As Date, ByVal jpay_amount As Double, ByVal feestype_name As String) As tbl_junior_accountsRow
             Dim rowtbl_junior_accountsRow As tbl_junior_accountsRow = CType(Me.NewRow,tbl_junior_accountsRow)
-            Dim columnValuesArray() As Object = New Object() {jtan, jdate_paidamount, jpay_amount, jfees_name}
+            Dim columnValuesArray() As Object = New Object() {jtan, jdate_paidamount, jpay_amount, feestype_name}
             rowtbl_junior_accountsRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowtbl_junior_accountsRow)
             Return rowtbl_junior_accountsRow
@@ -423,7 +423,7 @@ Partial Public Class junior_ds
             Me.columnjtan = MyBase.Columns("jtan")
             Me.columnjdate_paidamount = MyBase.Columns("jdate_paidamount")
             Me.columnjpay_amount = MyBase.Columns("jpay_amount")
-            Me.columnjfees_name = MyBase.Columns("jfees_name")
+            Me.columnfeestype_name = MyBase.Columns("feestype_name")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -435,10 +435,11 @@ Partial Public Class junior_ds
             MyBase.Columns.Add(Me.columnjdate_paidamount)
             Me.columnjpay_amount = New Global.System.Data.DataColumn("jpay_amount", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnjpay_amount)
-            Me.columnjfees_name = New Global.System.Data.DataColumn("jfees_name", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnjfees_name)
+            Me.columnfeestype_name = New Global.System.Data.DataColumn("feestype_name", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnfeestype_name)
             Me.columnjtan.AllowDBNull = false
             Me.columnjdate_paidamount.AllowDBNull = false
+            Me.columnfeestype_name.AllowDBNull = false
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -622,16 +623,12 @@ Partial Public Class junior_ds
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property jfees_name() As String
+        Public Property feestype_name() As String
             Get
-                Try 
-                    Return CType(Me(Me.tabletbl_junior_accounts.jfees_nameColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'jfees_name' in table 'tbl_junior_accounts' is DBNull.", e)
-                End Try
+                Return CType(Me(Me.tabletbl_junior_accounts.feestype_nameColumn),String)
             End Get
             Set
-                Me(Me.tabletbl_junior_accounts.jfees_nameColumn) = value
+                Me(Me.tabletbl_junior_accounts.feestype_nameColumn) = value
             End Set
         End Property
         
@@ -645,18 +642,6 @@ Partial Public Class junior_ds
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub Setjpay_amountNull()
             Me(Me.tabletbl_junior_accounts.jpay_amountColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function Isjfees_nameNull() As Boolean
-            Return Me.IsNull(Me.tabletbl_junior_accounts.jfees_nameColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub Setjfees_nameNull()
-            Me(Me.tabletbl_junior_accounts.jfees_nameColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -829,7 +814,7 @@ Namespace junior_dsTableAdapters
             tableMapping.ColumnMappings.Add("jtan", "jtan")
             tableMapping.ColumnMappings.Add("jdate_paidamount", "jdate_paidamount")
             tableMapping.ColumnMappings.Add("jpay_amount", "jpay_amount")
-            tableMapping.ColumnMappings.Add("jfees_name", "jfees_name")
+            tableMapping.ColumnMappings.Add("feestype_name", "feestype_name")
             Me._adapter.TableMappings.Add(tableMapping)
         End Sub
         
@@ -846,8 +831,8 @@ Namespace junior_dsTableAdapters
             Me._commandCollection = New Global.Devart.Data.MySql.MySqlCommand(0) {}
             Me._commandCollection(0) = New Global.Devart.Data.MySql.MySqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "Select sa.jtan,sa.jdate_paidamount,f.jfees_name,sa.jpay_amount from tbl_junior_ac"& _ 
-                "counts sa inner join tbl_junior_fees f on f.jfees_id=sa.jfees_id"
+            Me._commandCollection(0).CommandText = "Select sa.jtan,sa.jdate_paidamount,ft.feestype_name,sa.jpay_amount from tbl_junio"& _ 
+                "r_accounts sa inner join tbl_fees_type ft on ft.feestype_id=sa.jfees_id"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
